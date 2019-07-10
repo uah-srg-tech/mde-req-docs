@@ -1,0 +1,264 @@
+<SSS name="SSSSample" id="SSS" issue="1" revision="1" date="04/04/2019">
+	<Introduction>
+		<subsection name="purpose">
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>Purpose</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>The purpose of this document is...</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+		<subsection name="content">
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>Content</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>The content of this document is...</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="EID-A: Solar Orbiter Experiment Interface Document, Part A" id="SOL-EST-RCD-0050" issue="5" revision="0" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book" id="SO-EPD-PO-IF-0001" date="11/2000" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="EPD">
+			<run>
+				<text>Energetic Particle Detector</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<GeneralDescription>
+		<ProductPerspective>
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>Product Perspective</text>
+					</run>
+				</paragraph>
+				<figureFromFile name="Fig1" referenceFile="prod_pers.jpg" caption="Product Perspective dummy figure" />
+			</body>
+		</ProductPerspective>
+		<GeneralCapabilities>
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>General Capabilities</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>As noted in </text>
+					</run>
+					<hyperlink reference="AD1">
+						<run>
+							<text>EID-A</text>
+						</run>
+					</hyperlink>
+					<run>
+						<text> and shown in </text>
+					</run>
+					<hyperlink reference="Fig1">
+						<run>
+							<text>previous image</text>
+						</run>
+					</hyperlink>
+				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Bullet item 1</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Bullet item 2</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+			</body>
+		</GeneralCapabilities>
+		<GeneralConstraints>
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>General Constraints</text>
+					</run>
+				</paragraph>
+				<enumerate>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Enum item 1</text>
+							</run>
+						</paragraph>
+						<sublist>
+							<enumerate>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Enum item 1.1</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</enumerate>
+						</sublist>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Enum item 2</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</enumerate>
+			</body>
+		</GeneralConstraints>
+		<OperationalEnvironment>
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>Operational Environment</text>
+					</run>
+				</paragraph>
+			</body>
+		</OperationalEnvironment>
+		<AssumptionsDependencies>
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>Assumptions and Dependencies</text>
+					</run>
+				</paragraph>
+				<basicTable name="Table1" caption="Assumptions and Dependencies table"> 
+					<row span="2">
+						<column span="3">
+							<cell>
+								<paragraph>
+									<run>
+										<text>Cell 1.1</text>
+									</run>
+								</paragraph>
+							</cell>
+							<cell>
+								<paragraph>
+									<run>
+										<text>Cell 1.2</text>
+									</run>
+								</paragraph>
+							</cell>
+							<cell>
+								<paragraph>
+									<run>
+										<text>Cell 1.3</text>
+									</run>
+								</paragraph>
+							</cell>
+						</column>
+						<column span="3">
+							<cell>
+								<paragraph>
+									<run>
+										<text>Cell 2.1</text>
+									</run>
+								</paragraph>
+							</cell>
+							<cell>
+								<paragraph>
+									<run>
+										<text>Cell 2.2</text>
+									</run>
+								</paragraph>
+							</cell>
+							<cell>
+								<paragraph>
+									<run>
+										<text>Cell 2.3</text>
+									</run>
+								</paragraph>
+							</cell>
+						</column>
+					</row>
+				</basicTable>
+			</body>
+		</AssumptionsDependencies>
+	</GeneralDescription>
+	<SpecificRequirements>
+		<GeneralRequirements>
+			<Item name="SampleItem-001" validationMethod="Analysis">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>Item description</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+				<extendedDescription>
+					<body>
+						<paragraph>
+							<run>
+								<text>Item extended description</text>
+							</run>
+						</paragraph>
+					</body>
+				</extendedDescription>
+			</Item>
+		</GeneralRequirements>
+		<CapabilitiesRequirements>
+		</CapabilitiesRequirements>
+		<SystemInterfaceRequirements>
+		</SystemInterfaceRequirements>
+		<VSSSAdaptationMissionizationRequirements>
+		</VSSSAdaptationMissionizationRequirements>
+		<ComputerResourceRequirements>
+		</ComputerResourceRequirements>
+		<SecurityRequirements>
+		</SecurityRequirements>
+		<SafetyRequirements>
+		</SafetyRequirements>
+		<ReliabiltyAvailabilityRequirements>
+		</ReliabiltyAvailabilityRequirements>
+		<QualityRequirements>
+		</QualityRequirements>
+		<DesignRequirements>
+		</DesignRequirements>
+		<SoftwareOperationsRequirements>
+		</SoftwareOperationsRequirements>
+		<SoftwareMaintenanceRequirements>
+		</SoftwareMaintenanceRequirements>
+		<SystemSoftwareObservabilityRequirements>
+		</SystemSoftwareObservabilityRequirements>
+	</SpecificRequirements>
+	<VerificationValidationIntegrationRequirements>
+		<VerificationValidationProcessRequirements>
+		</VerificationValidationProcessRequirements>
+		<ValidationApproach>
+		</ValidationApproach>
+		<ValidationRequirements>
+		</ValidationRequirements>
+		<VerificationRequirements>
+		</VerificationRequirements>
+	</VerificationValidationIntegrationRequirements>
+	<SystemModels>
+	</SystemModels>
+</SSS>

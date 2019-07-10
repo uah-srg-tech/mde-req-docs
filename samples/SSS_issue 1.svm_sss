@@ -1,0 +1,1073 @@
+<SSS name="SRG-EPD ICUSW Project" id="SRG-EPD-SSS-001" issue="1" revision="0" date="12/04/2019">
+	<Introduction>
+		<subsection name="Purpose">
+			<body>
+				<paragraph>
+					<run>
+						<text>The Software System Specification defines and describes the specification of the EPD ICU Software of the SRG Mission.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+		<subsection name="Scope">
+			<body>
+				<paragraph>
+					<run>
+						<text>This document applies to the EPD ICU Software of the SRG Mission. It does not provide information for the Ground Support Software (GSS), which is maintained separately as part of the Electronic Ground Support Equipment (EGSE). This document supplies information applicable to the Software System Specification.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="Software" id="ECSS-E-ST-40C" date="06/03/2009" />
+		<ApplicableDocument name="AD2" title="Software Product Assurance" id="ECSS-Q-ST-80C" date="06/03/2009" />
+		<ApplicableDocument name="AD3" title="SRG-EPD Software Product Assurance Plan" id="SRG-EPD-SPA-0001" />
+		<ApplicableDocument name="AD4" title="SRG-EPD Software Development Plan" id="SRG-EPD-SDP-0001" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book" id="SO-EPD-PO-IF-0001" date="11/2000" />
+		<ReferenceDocument name="RD2" title="Ground systems and operations - Telemetry and telecommand packet utilization" id="ECSS-E-70-41C" date="15/04/2016" />
+		<ReferenceDocument name="RD3" title="SpaceWire - Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
+		<ReferenceDocument name="RD4" title="SpaceWire - CCSDS packet transfer protocol" id="ECSS-E-ST-50-53C" />
+		<ReferenceDocument name="RD5" title="Space engineering. Electric and electronic" id="ECSS-E-20B" issue="Draft 8" revision="0" date="03/2007" />
+		<ReferenceDocument name="RD6" title="Spacecraft discrete interfaces" id="ECSS-E-ST-50-14C" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="AD">
+			<run>
+				<text>Applicable Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ASW">
+			<run>
+				<text>Application Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="BSW">
+			<run>
+				<text>Boot Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="C&amp;DH">
+			<run>
+				<text>Control and Data Handling</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="CDPU">
+			<run>
+				<text>Common Data Processing Unit</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EGSE">
+			<run>
+				<text>Electrical Ground Support Equipment</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EPD">
+			<run>
+				<text>Energetic Particle Detector</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="GSS">
+			<run>
+				<text>Ground Support System</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICU">
+			<run>
+				<text>Instrument Control Unit</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="IRQ">
+			<run>
+				<text>Interrupt Request</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="FPGA">
+			<run>
+				<text>Field Programmable Gate Array</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="LVPS">
+			<run>
+				<text>Low Voltage Power Supply</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OBDH">
+			<run>
+				<text>On-Board Data Handling</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="RAM">
+			<run>
+				<text>Random Access Memory</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="RD">
+			<run>
+				<text>Reference Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="S/C">
+			<run>
+				<text>Spacecraft</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SDRAM">
+			<run>
+				<text>Synchronous Dynamic RAM</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SVVP">
+			<run>
+				<text>Field Programmable Gate Array</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SW">
+			<run>
+				<text>Software Verification and Validation Plan</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBC">
+			<run>
+				<text>To Be Confirmed</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TC">
+			<run>
+				<text>Telecommand</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TM">
+			<run>
+				<text>Telemetry</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<GeneralDescription>
+		<ProductPerspective>
+			<body>
+				<paragraph>
+					<run>
+						<text>The SRG Mission has been conceived to study the effect of high energy particles in TBD environment. The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring TBD particles. SRG EPD ICU Software purpose is to provide support to EPD sensors.</text>
+					</run>
+				</paragraph>
+			</body>
+		</ProductPerspective>
+		<GeneralCapabilities>
+			<body>
+				<paragraph>
+					<run bold="true">
+						<text>The main capabilities of the SRG EPD ICU Software are the following:</text>
+					</run>
+				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To collect scientific data from the instruments periodically.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To accumulate high-cadence science data from the sensors to specified lower time resolution packages.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To collect housekeeping data from the four units.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To time tag the data if necessary.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To perform lossless compression of the data if necessary.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To format the data for transmission by the S/C.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To accept and syntactically check TC from the S/C.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To deliver these commands to the individual sensors for execution.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To accept and syntactica</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To deliver these commands to the individual sensors for execution.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To accept from the ground and distribute to the sensors tables and software.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>To handle the burst mode.</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+			</body>
+		</GeneralCapabilities>
+		<GeneralConstraints>
+			<body>
+				<paragraph>
+					<run>
+						<text>The read-only memory available for the storage of SRG EPD ICU Boot Software will be TBD MBytes.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>The non-volatile memory available for the storage of SRG EPD ICU persistent data and Application Software will be TBD MBytes.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>The memory available to SRG EPD ICU Software for sensor science storage will be limited to TBD MBytes.</text>
+					</run>
+				</paragraph>
+			</body>
+		</GeneralConstraints>
+		<OperationalEnvironment>
+			<body>
+				<paragraph>
+					<run>
+						<text>Figure 1 illustrates the EPD Instrument Control Unit operational environment.</text>
+					</run>
+				</paragraph>
+				<figureFromFile name="ICU IFs" referenceFile="icu_ifs.jpg" caption="ICU Interfaces" />
+				<paragraph>
+					<run>
+						<text>EPD's ICU provides the interface between the SRG Spacecraft C&amp;DH system and the EPD sensors. All information transfer between the EPD's sensors and the Spacecraft/Ground flows through the ICU, including telemetry, commands and status. The EPD's sensors communicate with the EPD's ICU over a dedicated serial interface.</text>
+					</run>
+				</paragraph>
+			</body>
+			<subsection name="Sensors Interface">
+				<body>
+					<paragraph>
+						<run>
+							<text>EPD ICU Software will send/receive telecommand/telemetry to/from the sensors. The telemetry information includes both scientific and housekeeping data. The telecommand information includes sensors tables, sensor software and ground commands delivered from the S/C to the EPD ICU.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+			<subsection name="S/C Interface">
+				<body>
+					<paragraph>
+						<run>
+							<text>EPD ICU is a remote terminal on the spacecraft SpaceWire link. The implementation will be compliant up to the RD2 and RD3. Two separate SpaceWire links in a hot redundant configuration will be employed. SpaceWire is the command and data interface with the S/C.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>EPD command messages are contained in CCSDS telecommand packets. EPD CDPU strips off the CCSDS packet headers and analyses the destination identifier. If the identifier is associated to the ICU, the telecommand is processed directly by the ICU. If the identifier is associated to any sensor, the ICU forward the command to the specific sensor. Command responses from the sensor are sent to the ICU that transmits them to the S/C in CCSDS telemetry packets format. Command responses generated by the ICU itself are also CCSDS formatted and transmitted to the S/C.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Transfer of data and command response from CDPU to the S/C shall take place according to the CCSDS recommendations defined in </text>
+						</run>
+						<hyperlink reference="RD1">
+						</hyperlink>
+						<run>
+							<text> and </text>
+						</run>
+						<hyperlink reference="RD2">
+						</hyperlink>
+						<run>
+							<text>.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+		</OperationalEnvironment>
+		<AssumptionsDependencies>
+			<body>
+				<paragraph>
+					<run>
+						<text>N/A</text>
+					</run>
+				</paragraph>
+			</body>
+		</AssumptionsDependencies>
+	</GeneralDescription>
+	<SpecificRequirements>
+		<body>
+			<paragraph>
+				<run>
+					<text>In the following paragraphs a lists of software specific requirements will be included. Every single requirement has the following format:</text>
+				</run>
+			</paragraph>
+			<basicTable name="SpecificRequirementsTable">
+				<row span="1">
+					<column span="2">
+						<cell>
+							<paragraph>
+								<run>
+									<text>Name</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>SSS-ICUSW XX-YYYY</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="2">
+						<cell>
+							<paragraph>
+								<run>
+									<text>Description</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Requirement Description</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="2">
+						<cell>
+							<paragraph>
+								<run>
+									<text>Validation</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Validation Approach</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+			</basicTable>
+			<paragraph>
+				<run bold="true">
+					<text>SSS-ICUSW XX-YYYY: </text>
+				</run>
+				<run>
+					<text>Identifies the specification requirement. XX is the type of specification requirement and YYYY is the number used to identify the requirement. Types of specification requirements are:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>GE. </text>
+						</run>
+						<run>
+							<text>General</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>CA. </text>
+						</run>
+						<run>
+							<text>Capabilities</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>IF. </text>
+						</run>
+						<run>
+							<text>System Interface</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>AM. </text>
+						</run>
+						<run>
+							<text>Adaptation and missionization</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>CR.</text>
+						</run>
+						<run>
+							<text>Computer resource requirements</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>SE. </text>
+						</run>
+						<run>
+							<text>Security</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>SA. </text>
+						</run>
+						<run>
+							<text>Safety</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>RA. </text>
+						</run>
+						<run>
+							<text>Reliability and availability</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>QU. </text>
+						</run>
+						<run>
+							<text>Quality</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>DC. </text>
+						</run>
+						<run>
+							<text>Design and Constraints</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>SO. </text>
+						</run>
+						<run>
+							<text>Software Operations</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>SM. </text>
+						</run>
+						<run>
+							<text>Software Maintenance</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>OB. </text>
+						</run>
+						<run>
+							<text>System and Software observability</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run>
+					<text>Examples:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>SSS-ICUSW CA-0025</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>SSS-ICUSW SO-0047</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run bold="true">
+					<text>Description: </text>
+				</run>
+				<run>
+					<text>is the text that describes the requirement.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run bold="true">
+					<text>Validation approach: </text>
+				</run>
+				<run>
+					<text>establishes how the requirement is verified:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>R. </text>
+						</run>
+						<run>
+							<text>Review </text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>A. </text>
+						</run>
+						<run>
+							<text>Analysis</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>I. </text>
+						</run>
+						<run>
+							<text>Inspection</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>T. </text>
+						</run>
+						<run>
+							<text>Test</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>S. </text>
+						</run>
+						<run>
+							<text>Similarity</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run>
+					<text>For each requirement type, subsections are provided when requirements apply only to boot software or to application software or they are common.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Other subsections or extended descriptions can be also added in order to better organize and clarify the requirements.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Extended descriptions and clarifications will be added using </text>
+				</run>
+				<run bold="true">
+					<text>D:</text>
+				</run>
+				<run>
+					<text>. Example:</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>D: The ICU SW shall handle the telecommand and telemetry according to the following requirements:</text>
+				</run>
+			</paragraph>
+		</body>
+		<GeneralRequirements>
+			<Item name="SSS-ICUSW-GE-010" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The ICU SW Development Process shall be compliant to a tailored version of the software standard </text>
+							</run>
+							<hyperlink reference="AD1">
+							</hyperlink>
+							<run>
+								<text>.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+		</GeneralRequirements>
+		<CapabilitiesRequirements>
+			<Item name="SSS-ICUSW-CA-010" validationMethod="Analysis">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The ICU-SW shall accept telecommands within an interval of 1 second after its reception.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+		</CapabilitiesRequirements>
+		<SystemInterfaceRequirements>
+			<Item name="SSS-ICUSW-IF-010" validationMethod="Testing">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The ICUSW shall support a simplified version of PUS service 1: Telecommand verification service.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+		</SystemInterfaceRequirements>
+		<VSSSAdaptationMissionizationRequirements>
+		</VSSSAdaptationMissionizationRequirements>
+		<ComputerResourceRequirements>
+		</ComputerResourceRequirements>
+		<SecurityRequirements>
+		</SecurityRequirements>
+		<SafetyRequirements>
+		</SafetyRequirements>
+		<ReliabiltyAvailabilityRequirements>
+		</ReliabiltyAvailabilityRequirements>
+		<QualityRequirements>
+		</QualityRequirements>
+		<DesignRequirements>
+		</DesignRequirements>
+		<SoftwareOperationsRequirements>
+		</SoftwareOperationsRequirements>
+		<SoftwareMaintenanceRequirements>
+		</SoftwareMaintenanceRequirements>
+		<SystemSoftwareObservabilityRequirements>
+		</SystemSoftwareObservabilityRequirements>
+	</SpecificRequirements>
+	<VerificationValidationIntegrationRequirements>
+		<body>
+			<paragraph>
+				<run>
+					<text>In the following paragraphs a lists of verification, validation and system integration requirements will be included. Every single requirement has the following format:</text>
+				</run>
+			</paragraph>
+			<basicTable name="SpecificRequirementsTable">
+				<row span="1">
+					<column span="2">
+						<cell>
+							<paragraph>
+								<run>
+									<text>Name</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>SSS-ICUSW XX-YYYY</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="2">
+						<cell>
+							<paragraph>
+								<run>
+									<text>Description</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text></text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="2">
+						<cell>
+							<paragraph>
+								<run>
+									<text>Validation</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Validation Approach</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+			</basicTable>
+			<paragraph>
+				<run bold="true">
+					<text>SSS-ICUSW XX-YYYY: </text>
+				</run>
+				<run>
+					<text>Identifies the specification requirement. XX is the type of specification requirement and YYYY is the number used to identify the requirement. Types of specification requirements are:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>VV. </text>
+						</run>
+						<run>
+							<text>Verification and validation process</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>VA. </text>
+						</run>
+						<run>
+							<text>Validation approach</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>VR. </text>
+						</run>
+						<run>
+							<text>Validation requirement</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>VE. </text>
+						</run>
+						<run>
+							<text>Verification approach</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			
+			<paragraph>
+				<run>
+					<text>Examples:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>SSS-ICUSW CA-0025</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>SSS-ICUSW SO-0047</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run bold="true">
+					<text>Description: </text>
+				</run>
+				<run>
+					<text>is the text that describes the requirement.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run bold="true">
+					<text>Validation: </text>
+				</run>
+				<run>
+					<text>Validation of these requirements will be by Review (</text>
+				</run>
+				<run bold="true">
+					<text>R</text>
+				</run>
+				<run>
+					<text>).</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>For each requirement type, subsections are provided when requirements apply only to boot software or to application software or they are common.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Other subsections or extended descriptions can be also added in order to better organize and clarify the requirements.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Extended descriptions and clarifications will be added using </text>
+				</run>
+				<run bold="true">
+					<text>D:</text>
+				</run>
+				<run>
+					<text>. Example:</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>D: The ICU SW shall handle the telecommand and telemetry according to the following requirements:</text>
+				</run>
+			</paragraph>
+		</body>
+		<VerificationValidationProcessRequirements>
+			<Item name="SSS-ICUSW-VV-010" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The ICU Software verification and validation activities shall be defined in a Software Validation and Verification Plan according to the software standard </text>
+							</run>
+							<hyperlink reference="AD1">
+								<run>
+									<text>ECSS-E-ST-40C</text>
+								</run>
+							</hyperlink>
+							<run>
+								<text>.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+		</VerificationValidationProcessRequirements>
+		<ValidationApproach>
+			<Item name="SSS-ICUSW-VA-010" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The SRG EPD ICU Software specification specific requirements shall be validated primarily by test or analysis, being the analysis the required method when the specific requirement imply the fulfillment of temporal restrictions.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+			<Item name="SSS-ICUSW-VA-020" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The unit and integration tests of the SRG EPD ICU Software shall be executed primarily on ICU engineering models or simulators of the ICU processor, so the object code behavior of the item under test can be tested.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+			<Item name="SSS-ICUSW-VA-030" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The validation tests of the SRG EPD ICU Software shall be executed primarily on the ICU EQM models, using emulators to replace the sensors that are connected to the ICU EQM interfaces. For fault tolerance tests, the use fault injection environments based on ICU emulators or simulators shall be also accepted under justification.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+			<Item name="SSS-ICUSW-VA-040" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The qualification tests of the SRG EPD ICU Software shall be executed primarily on the ICU EQM models, using qualification models of the sensors, and an S/C emulator. For fault tolerance tests, the use fault injection environments based on ICU emulators or simulators shall be also accepted under justification.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+			<Item name="SSS-ICUSW-VA-050" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The acceptance tests of the SRG EPD ICU Software shall be executed on the ICU PFM models, using PFM model of the sensors, and the PFM S/C.</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+		</ValidationApproach>
+		<ValidationRequirements>
+			<Item name="SSS-ICUSW-VR-010" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>The SRG EPD ICU Software specification specific requirement shall include a validation method from one of the following methods: Review, Analysis, Inspection, Test, Similarity</text>
+							</run>
+						</paragraph>
+					</body>
+				</description>
+			</Item>
+		</ValidationRequirements>
+		<VerificationRequirements>
+			<Item name="SSS-ICUSW-VE-010" validationMethod="Review">
+				<description>
+					<body>
+						<paragraph>
+							<run>
+								<text>Verification of the SRG EPD ICU Software shall include the following traceability matrices: </text>
+							</run>
+						</paragraph>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>specification requirements to software requirements</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>software requirements to software validation specification</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>software validation specification to software validation reports</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>software items under configuration to software unit/integration test</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>software unit/integration test to software unit/integration reports</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>TM/TC interface control document to software validation specification</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>FDIR EPD system requirement to software validation specification</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</description>
+			</Item>
+		</VerificationRequirements>
+	</VerificationValidationIntegrationRequirements>
+	<SystemModels>
+	</SystemModels>
+</SSS>
