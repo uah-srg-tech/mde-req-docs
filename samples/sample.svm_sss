@@ -151,21 +151,21 @@
 				<basicTable name="Table1" caption="Assumptions and Dependencies table"> 
 					<row span="2">
 						<column span="3">
-							<cell>
+							<cell span="1">
 								<paragraph>
 									<run>
 										<text>Cell 1.1</text>
 									</run>
 								</paragraph>
 							</cell>
-							<cell>
+							<cell span="1">
 								<paragraph>
 									<run>
 										<text>Cell 1.2</text>
 									</run>
 								</paragraph>
 							</cell>
-							<cell>
+							<cell span="1">
 								<paragraph>
 									<run>
 										<text>Cell 1.3</text>
@@ -174,21 +174,21 @@
 							</cell>
 						</column>
 						<column span="3">
-							<cell>
+							<cell span="1">
 								<paragraph>
 									<run>
 										<text>Cell 2.1</text>
 									</run>
 								</paragraph>
 							</cell>
-							<cell>
+							<cell span="1">
 								<paragraph>
 									<run>
 										<text>Cell 2.2</text>
 									</run>
 								</paragraph>
 							</cell>
-							<cell>
+							<cell span="1">
 								<paragraph>
 									<run>
 										<text>Cell 2.3</text>

@@ -342,14 +342,14 @@
 			<basicTable name="SpecificRequirementsTable">
 				<row span="1">
 					<column span="2">
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Name</text>
 								</run>
 							</paragraph>
 						</cell>
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>SSS-ICUSW XX-YYYY</text>
@@ -360,14 +360,14 @@
 				</row>
 				<row span="1">
 					<column span="2">
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Description</text>
 								</run>
 							</paragraph>
 						</cell>
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Requirement Description</text>
@@ -378,14 +378,14 @@
 				</row>
 				<row span="1">
 					<column span="2">
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Validation</text>
 								</run>
 							</paragraph>
 						</cell>
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Validation Approach</text>
@@ -726,14 +726,14 @@
 			<basicTable name="SpecificRequirementsTable">
 				<row span="1">
 					<column span="2">
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Name</text>
 								</run>
 							</paragraph>
 						</cell>
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>SSS-ICUSW XX-YYYY</text>
@@ -744,14 +744,14 @@
 				</row>
 				<row span="1">
 					<column span="2">
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Description</text>
 								</run>
 							</paragraph>
 						</cell>
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text></text>
@@ -762,14 +762,14 @@
 				</row>
 				<row span="1">
 					<column span="2">
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Validation</text>
 								</run>
 							</paragraph>
 						</cell>
-						<cell>
+						<cell span="1">
 							<paragraph>
 								<run>
 									<text>Validation Approach</text>
