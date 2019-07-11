@@ -228,8 +228,8 @@
 		</CapabilitiesRequirements>
 		<SystemInterfaceRequirements>
 		</SystemInterfaceRequirements>
-		<VSSSAdaptationMissionizationRequirements>
-		</VSSSAdaptationMissionizationRequirements>
+		<AdaptationMissionizationRequirements>
+		</AdaptationMissionizationRequirements>
 		<ComputerResourceRequirements>
 		</ComputerResourceRequirements>
 		<SecurityRequirements>

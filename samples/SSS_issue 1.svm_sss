@@ -695,8 +695,8 @@
 				</description>
 			</Item>
 		</SystemInterfaceRequirements>
-		<VSSSAdaptationMissionizationRequirements>
-		</VSSSAdaptationMissionizationRequirements>
+		<AdaptationMissionizationRequirements>
+		</AdaptationMissionizationRequirements>
 		<ComputerResourceRequirements>
 		</ComputerResourceRequirements>
 		<SecurityRequirements>
