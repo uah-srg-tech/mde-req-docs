@@ -1,0 +1,526 @@
+<SSS name="EID-A" id="SOL-EST-RCD-0050" issue="5" revision="0" date="16/03/2015">
+	<Introduction>
+		<subsection name="History">
+			<body>
+				<paragraph>
+					<run>
+						<text>The Solar Orbiter mission has its origins in a proposal called "Messenger" that was submitted by Richter et al. in 1982 in response to an ESA call for mission ideas. At the meeting "Crossroads for European Solar and Heliospheric Physics" held in Tenerife in March 1998, the Heliophysics community recommended to: "launch an ESA Solar Orbiter as ESA's next flexible mission, with possible international participation, for launch around 2007." The kick-off meeting for a preassessment study of the "ESA Solar Orbiter" concept was held at ESTEC on 25 March 1999.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>Solar Orbiter was subsequently proposed in 2000 by E. Marsch et al. and was selected by the Science Programme Committee (SPC) in October 2000 as a Flexi-mission for launch after BepiColombo, in the 2008- 2013 timeframe. A number of internal and industrial studies were then carried out, including parallel system level Assessment Studies performed in industry between April and December 2004. At its 107th meeting in June 2004 the SPC confirmed Solar Orbiter's place in the Horizon 2000+ programme with the goal of a launch in October 2013 and no later than May 2015.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>Work continued on the mission and payload definition throughout 2005 and 2006 and at its meeting in February 2007, SPC instructed the Executive to find ways to implement Solar Orbiter within a financial envelope of 300 M€ (at 2006 EC), while keeping a realistic contingency margin. In response to this request, a Joint Science and Technology Definition Team (JSTDT) comprising scientists and engineers appointed by ESA and NASA, studied the benefits to be gained by combining ESA's Solar Orbiter mission and NASA's Solar Sentinels into a joint programme.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>This study led to the release of an ESA Announcement of Opportunity (AO) for the Solar Orbiter Payload on 18 September 2007 and of a NASA Small Explorer Focused Opportunity for Solar Orbiter (SMEX/FOSO) AO on 22 October 2007. In total, 14 proposals were received by ESA in response to the Payload AO.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>The final report of the Payload Review Committee (PRC), giving a recommended payload for selection, was issued on 24 May 2008. Meanwhile, at its meeting in November 2007, SPC gave approval to start an 18-month industrial Phase B1 study lead by Astrium Ltd. (UK) which was kicked off in March 2008.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>A major change in the progress of Solar Orbiter occurred in November 2008, when the SPC decided to integrate Solar Orbiter into the first planning cycle of Cosmic Vision 2015-25 as an M mission candidate for the first launch opportunity in 2017. In addition, in view of NASA's high prioritization of Solar Probe Plus (SPP) in its Living With a Star programme, and the strong science synergies between Solar Orbiter and SPP, ESA called for an independent review of the PRC's recommended payload, now in the context of a joint Solar Orbiter-SPP scientific programme. The joint ESA-NASA review panel confirmed the validity of the recommended payload in its report of March 2009. As a result, the instrument selections, as recommended by the PRC in 2008 were formally announced on 20 March 2009. In parallel, NASA announced the results of the FOSO selection, and selected 2 instruments and portions of 2 instruments to be included in the Solar Orbiter payload. A Design Status Review, being the final review of the industrial Phase B1 study conducted by Astrium Ltd. (UK) as Prime Contractor, was held in ESTEC in June 2009.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>At its 128th meeting on 17th &amp; 18th February 2010, ESA's Science Programme Committee made a further programmatic change by endorsing a "fast track" approach for Solar Orbiter outlined in ESA/SPC(2010)3, rev. 1. This approach is based on the scientific viability of raising the minimum perihelion to 0.28 AU and on making maximum re-use of BepiColombo technologies and units. It calls for the start of a full spacecraft implementation (Phases B2/C/D) in early 2011, with mission confirmation by the SPC in Q2 2011.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+		<subsection name="Purpose">
+			<body>
+				<paragraph>
+					<run>
+						<text>The main purpose of the set of Experiment Interface Documents (one EID-A, common to all ten instruments and ten EID-Bs, one for each instrument) is to ensure that:</text>
+					</run>
+				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The Principal Investigators (PIs) design, procure, build, qualify, test and calibrate their instruments in line with the technical and programmatic requirements and constraints defined in the EID-A.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The Solar Orbiter Prime Contractor designs, builds and verifies the spacecraft such that the instruments can be successfully integrated and tested into the system, in line with the instrument interface definitions and resources provided in the EID-Bs.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The spacecraft can be successfully launched and operated to achieve the scientific objectives of the Solar Orbiter mission in line with the instrument driven requirements detailed in the EID-A.</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<paragraph>
+					<run>
+						<text>The EID-A, together with its Normative Documents, defines the interface, the design, the operational, the verification, the management and the programmatic requirements applicable to each instrument. The EID-A also specifies the spacecraft performance requirements and the resources allocated to each instrument. Specific instrument driven requirements applicable to the spacecraft, namely EMC, cleanliness and pointing requirements are also specified in the EID-A. D: Each EID-B, in response to the instrument technical requirements of the EID-A, specifies in detail the instrument interface information.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>Finally each EID-B defines the specific programmatic agreements between the ESA Solar Orbiter Project Office and each Solar Orbiter Principal Investigator. Once the EID-A and the EID-Bs have reached a satisfactory level of maturity, they will be placed under formal configuration and change control; the Prime Contractor will become the book-captain for them.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="NR-27" title="Solar Orbiter Operations Requirements Document" id="SO-ESC-RS-05001" issue="1" revision="8" />
+		<ApplicableDocument name="NR-28" title="Solar Orbiter TM/T- and Packet Structure ICD" id="SOL-S-ASTR-TN-0079" issue="7" revision="0" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="IR-06" title="Solar Orbiter Science Requirements Document" id="SOL-EST-RS-1858" issue="2" revision="0" /> 
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="EPD">
+			<run>
+				<text>Energetic Particle Detector</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EPT">
+			<run>
+				<text>Electron and Proton Telescope</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="FFT">
+			<run>
+				<text>Full Functional Test</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="FM">
+			<run>
+				<text>Flight Model</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="GSE">
+			<run>
+				<text>Ground Support Equipment</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="HET">
+			<run>
+				<text>High Energy Telescope</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="LISN">
+			<run>
+				<text>Line Impedance Stabilization Network</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="QM">
+			<run>
+				<text>Qualification Model</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="S/C">
+			<run>
+				<text>Spacecraft</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SpW">
+			<run>
+				<text>Space Wire</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="STEP">
+			<run>
+				<text>SupraThermal Electrons and Protons</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBC">
+			<run>
+				<text>To Be Confirmed</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBD">
+			<run>
+				<text>To Be Determined</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TC/TM">
+			<run>
+				<text>Telecommand / Telemetry</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TM">
+			<run>
+				<text>Telemetry</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<GeneralDescription>
+		<ProductPerspective>
+			<subsection name="Mission Objectives">
+				<body>
+					<paragraph>
+						<run>
+							<text>Solar Orbiter's mission is to address the central question of Heliophysics: How does the Sun create and control the heliosphere? This, in turn, is a fundamental part of the second science question of ESA's Cosmic Vision programme: "How does the solar system work?". Solar Orbiter is specifically designed to identify the origins and causes of the solar wind, the heliospheric magnetic field, the solar energetic particles, the transient interplanetary disturbances, and the Sun's magnetic field itself.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Over the past two decades, an international effort to understand the Sun and heliosphere has been undertaken with an array of spacecraft carrying out both remote observations at visible, UV, and X-ray wavelengths, as well as in-situ observations of interplanetary plasmas, particles, and fields. Combined and coordinated observations from missions such as Ulysses, Yohkoh, SOHO, TRACE, RHESSI, Hinode and STEREO have resulted in an enormous advance in our understanding of the Sun and heliosphere and have proven that critical progress in understanding the physics requires both remote and in-situ observations working together.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Although our vantage point at 1 AU is close by astrophysical measures, it has been long known that much of the crucial physics in the formation and activity of the heliosphere takes place much closer to the Sun and that by the time magnetic structures, shocks, energetic particles and solar wind pass by Earth they have already evolved and in many cases mixed so as to blur the signatures of their origin. Given the success of the missions cited above, it is clear that flying a spacecraft with a combined remote-sensing and in-situ payload into the inner solar system will critically advance our knowledge.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Solar Orbiter's scientific mission can be broken down into four top-level science objectives:</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>How and where do the solar wind plasma and magnetic field originate in the corona?</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>How do solar transients drive heliospheric variability?</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>How do solar eruptions produce energetic particle radiation that fills the heliosphere?</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>How does the solar dynamo work and drive connections between the Sun and the heliosphere?</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<paragraph>
+						<run>
+							<text>Common to all of these questions is the requirement that Solar Orbiter make in-situ measurements of the solar wind plasma, fields, waves, and energetic particles close enough to the Sun that they are still relatively pristine and have not had their properties modified by dynamical evolution during their propagation. Solar Orbiter must also relate these in-situ measurements back to their source regions and structures on the Sun through simultaneous, high-resolution imaging and spectroscopic observations both in and out of the ecliptic plane.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>The near-Sun part of the operational orbit will enable the spacecraft to approach the Sun as close as 0.28 AU during part of its orbit. The angular speed of a spacecraft at this distance approaches the rotation rate of the Sun, so that the remote sensing instruments will be able to observe a given point on the Sun's surface for many days.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>During the out-of-ecliptic part of the orbit, the spacecraft will reach higher solar latitudes (up to 34º close to the end of the mission), making detailed studies of the Sun's polar regions possible.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>The ESA document "Solar Orbiter Science Requirements Document" </text>
+						</run>
+						<hyperlink reference="IR-06">
+						</hyperlink>
+						<run>
+							<text>, provides a more detailed discussion of the top scientific goals of the Solar Orbiter mission, their translation into specific scientific questions and derived basic scientific requirements. The document addresses also the scientific synergies between Solar Orbiter and NASA's Solar Probe Plus mission.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+		</ProductPerspective>
+		<GeneralCapabilities>
+		</GeneralCapabilities>
+		<GeneralConstraints>
+		</GeneralConstraints>
+		<OperationalEnvironment>
+		</OperationalEnvironment>
+		<AssumptionsDependencies>
+		</AssumptionsDependencies>
+	</GeneralDescription>
+	<SpecificRequirements>
+		<GeneralRequirements>
+		</GeneralRequirements>
+		<CapabilitiesRequirements>
+		</CapabilitiesRequirements>
+		<SystemInterfaceRequirements>
+			<subsection name="Data Management Interface and Design">
+				<Item name="R-180" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that the instrument comply to the associated TM-/ TC-Packet Services specified as mandatory for the payload in </text>
+								</run>
+								<hyperlink reference="NR-28">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-2757</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The TM-/ TC-Packet Services consist of a minimum subsets for each service, which is mandatory, as well as optional generic service-extensions. Global requirements about applicability and use of these subsets for the Solar Orbiter spacecraft are given </text>
+								</run>
+								<hyperlink reference="NR-28">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The mandatory services are as follows:</text>
+								</run>
+							</paragraph>
+							<itemize>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 1: Telecommand Verification Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 3: Housekeeping and Diagnostic Data Reporting Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 5: Event Reporting Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 6: Memory Management Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 9: Time Management Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 17: Test Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 20: Information Distribution Service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Service 21: Science Data Transfer</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</itemize>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
+		</SystemInterfaceRequirements>
+		<AdaptationMissionizationRequirements>
+			<subsection name="Off-Line Operations">
+				<Item name="R-366" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall comply with the relevant requirements specified in the Solar Orbiter Operation Requirements Document </text>
+								</run>
+								<hyperlink reference="NR-27">
+								</hyperlink>
+								<run>
+									<text> on Spacecraft Control (Section 2.1) and referenced documents therein.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-333</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
+		</AdaptationMissionizationRequirements>
+		<ComputerResourceRequirements>
+		</ComputerResourceRequirements>
+		<SecurityRequirements>
+		</SecurityRequirements>
+		<SafetyRequirements>
+			<subsection name="Instrument Autonomy and FDIR">
+				<Item name="R-407" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall comply with the requirements regarding FDIR and Onboard Reconfiguration Handling as specified in the section 2.2.2 and section 2.2.3 of </text>
+								</run>
+								<hyperlink reference="NR-27">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3074</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-261" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall implement a connection test service (Service 17) according to the specifications given chapter 3 of </text>
+								</run>
+								<hyperlink reference="NR-27">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3076</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-264" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that anomaly Instrument reports, if any, are generated only once per anomaly occurrence even if the anomaly is detected during successive cycles.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3038</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
+		</SafetyRequirements>
+		<ReliabiltyAvailabilityRequirements>
+		</ReliabiltyAvailabilityRequirements>
+		<QualityRequirements>
+		</QualityRequirements>
+		<DesignRequirements>
+		</DesignRequirements>
+		<SoftwareOperationsRequirements>
+			<subsection name="Software Design and Interface">
+				<Item name="R-406" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall comply with the requirements regarding Onboard Processors, Software and Memory Management as specified in section 2.3.2 of </text>
+								</run>
+								<hyperlink reference="NR-27">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3079</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
+		</SoftwareOperationsRequirements>
+		<SoftwareMaintenanceRequirements>
+		</SoftwareMaintenanceRequirements>
+		<SystemSoftwareObservabilityRequirements>
+		</SystemSoftwareObservabilityRequirements>
+	</SpecificRequirements>
+	<VerificationValidationIntegrationRequirements>
+		<VerificationValidationProcessRequirements>
+		</VerificationValidationProcessRequirements>
+		<ValidationApproach>
+		</ValidationApproach>
+		<ValidationRequirements>
+		</ValidationRequirements>
+		<VerificationRequirements>
+		</VerificationRequirements>
+	</VerificationValidationIntegrationRequirements>
+	<SystemModels>
+	</SystemModels>
+</SSS>
