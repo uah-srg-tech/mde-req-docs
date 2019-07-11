@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_epd_5_1_4866_filter_level_2 {
+	//TM 5,1 HET1 IB Started
+	uri := es.uah.aut.srg.tm_epd_5_1_4866_filter_level_2;
+	version := v1;
+	formatFile := tm_epd_5_1_4866(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := NID00013_4866;
+		constantType := decimal;
+		FieldRef := NID00013;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 4866;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

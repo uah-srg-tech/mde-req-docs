@@ -1,0 +1,55 @@
+TMTCIFExportExport tc_epd_128_102_export_to_level_0 {
+	//TC 128,102 Send Msg Sequence
+	uri := es.uah.aut.srg.tc_epd_128_102_export_to_level_0;
+	version := v1;
+	from := EPD_PUS_TC(v1);
+	to := CCSDS_TC(v1);
+	TMTCIFExportSizes {
+		TMTCIFExportSizeInBits {
+			id := 0;
+			from := ApplicationData;
+			addSize := 5;
+			unit := bytes;
+		};
+	};
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromField {
+			fieldRef := SecondaryHeader;
+			toFieldRef := SecondaryHeader;
+		};
+		TMTCIFExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := VersionNumber;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := Type;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := DFHFlag;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 812;
+			toFieldRef := APID;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 3;
+			toFieldRef := SequenceFlag;
+		};
+		TMTCIFExportSettingFromSize {
+			sizeRef := 0;
+			toFieldRef := PacketLength;
+		};
+	};
+	TMTCIFExportActivateDICs {
+		TMTCIFExportDIC {
+			id := 0;
+			DICRef := CRC;
+		};
+	};
+};

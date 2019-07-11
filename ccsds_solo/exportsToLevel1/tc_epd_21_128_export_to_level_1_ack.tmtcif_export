@@ -1,0 +1,37 @@
+TMTCIFExportExport tc_epd_21_128_export_to_level_1_ack {
+	//TC 21,128 reset out buf
+	uri := es.uah.aut.srg.tc_epd_21_128_export_to_level_1_ack;
+	version := v1;
+	from := tc_epd_21_128(v1);
+	to := EPD_PUS_TC(v1);
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 21;
+			toFieldRef := ServiceType;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 128;
+			toFieldRef := ServiceSubtype;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

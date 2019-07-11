@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_sis_1_8_40716_filter_level_2 {
+	//1,8 HV Goal Greater Than Limit
+	uri := es.uah.aut.srg.tm_sis_1_8_40716_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_1_8_40716(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := NID10238_40716;
+		constantType := decimal;
+		FieldRef := NID10238;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 40716;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

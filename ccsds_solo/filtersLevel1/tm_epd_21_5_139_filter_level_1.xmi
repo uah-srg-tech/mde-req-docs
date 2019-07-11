@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_21_5_139_filter_level_1" uri="es.uah.aut.srg.tm_epd_21_5_139_filter_level_1" version="v1" description="TM 21,5 STEP Sci support HK PHA">
+  <formatFile href="../tmFormats/EPD_PUS_TM.xmi#/"/>
+  <BoolVar id="0" name="ServiceType_21" constantType="decimal">
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/EPD_PUS_TM.xmi#//@CSField.4"/>
+    <Op type="equal"/>
+    <Constant value="21"/>
+  </BoolVar>
+  <BoolVar id="1" name="ServiceSubtype_5" constantType="decimal">
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/EPD_PUS_TM.xmi#//@CSField.5"/>
+    <Op type="equal"/>
+    <Constant value="5"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+    <BoolVarRef idRef="1"/>
+  </Minterm>
+</tmtcif:TMTCIFFilterMintermFilter>

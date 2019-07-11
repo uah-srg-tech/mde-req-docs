@@ -1,0 +1,91 @@
+TMTCIFFormatFormat tm_sis_6_10 {
+	//YID52854: 6,10 Memory Check Report
+	uri := es.uah.aut.srg.tm_sis_6_10;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 12;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10234";
+		description := "Memory ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NID10235";
+		description := "Address";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NID10236";
+		description := "Length";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NID10237";
+		description := "Checksum";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 10;
+			bits := 0;
+		};
+	};
+};

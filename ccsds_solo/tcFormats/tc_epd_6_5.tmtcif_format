@@ -1,0 +1,74 @@
+TMTCIFFormatFormat tc_epd_6_5 {
+	//ZID52501: TC 6,5 Memory Dump
+	uri := es.uah.aut.srg.tc_epd_6_5;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 10;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00001";
+		description := "Mem Id";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "PID00002";
+		description := "Start Address";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "PID00003";
+		description := "Number of Bytes";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+	};
+};

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_5_2_8200" uri="es.uah.aut.srg.tm_epd_5_2_8200" version="v1" description="YID52142: TM 5,2 HET_EPT_2 Sensor TC ERROR" protocol="EPD_PUS" type="TM">
+  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="3" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID00052" description="RID_5_2" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID00103" description="CAU Error Type" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

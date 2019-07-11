@@ -1,0 +1,7 @@
+TMTCIFFormatFormat tc_epd_128_128 {
+	//ZID52504: TC 128,128 list params
+	uri := es.uah.aut.srg.tc_epd_128_128;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+};

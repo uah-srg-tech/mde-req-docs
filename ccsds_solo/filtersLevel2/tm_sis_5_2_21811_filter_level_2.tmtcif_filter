@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_sis_5_2_21811_filter_level_2 {
+	//5,2 Alarm Event: B Energy Temp Too Low
+	uri := es.uah.aut.srg.tm_sis_5_2_21811_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_5_2_21811(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := NID10245_21811;
+		constantType := decimal;
+		FieldRef := NID10245;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 21811;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

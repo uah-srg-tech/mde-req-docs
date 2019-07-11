@@ -1,0 +1,40 @@
+TMTCIFFormatFormat tm_sis_5_1_1057 {
+	//YID52969: 5,1 Progress Event: Iris B Move
+	uri := es.uah.aut.srg.tm_sis_5_1_1057;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10245";
+		description := "Event Id";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

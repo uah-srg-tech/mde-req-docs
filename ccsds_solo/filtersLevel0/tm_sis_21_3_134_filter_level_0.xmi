@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_21_3_134_filter_level_0" uri="es.uah.aut.srg.tm_sis_21_3_134_filter_level_0" version="v1" description="21,3 A Test Pulses">
+  <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
+  <BoolVar id="0" name="APID_828" constantType="decimal">
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.5"/>
+    <Op type="equal"/>
+    <Constant value="828"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+  </Minterm>
+</tmtcif:TMTCIFFilterMintermFilter>

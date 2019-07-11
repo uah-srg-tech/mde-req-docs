@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_sis_129_185" uri="es.uah.aut.srg.tc_sis_129_185" version="v1" description="ZID52349: 129,185 SIS_DAT_PRIORITY" protocol="EPD_PUS" type="TC">
+  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="6" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID10000" description="Macro?" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID10027" description="Telescope" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="PID10029" description="Events Priority0" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="PID10030" description="Events Priority1" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="3" bits="0"/>
+  </CSField>
+  <CSField name="PID10031" description="Events Overwrite" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="4" bits="0"/>
+  </CSField>
+  <CSField name="PID10032" description="Events" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="5" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

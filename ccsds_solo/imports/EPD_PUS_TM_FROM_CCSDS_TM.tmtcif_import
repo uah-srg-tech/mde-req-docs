@@ -1,0 +1,23 @@
+TMTCIFImportImport EPD_PUS_TM_FROM_CCSDS_TM {
+	//EPD_PUS_TM_FROM_CCSDS_TM
+	uri := es.uah.aut.srg.EPD_PUS_TM_FROM_CCSDS_TM;
+	version := v1;
+	from := CCSDS_TM(v1);
+	to := EPD_PUS_TM(v1);
+	TMTCIFImportDataSource {
+		FieldRef := SecondaryHeader;
+		leftTrim := 0;
+		rightTrim := 0;
+	};
+	TMTCIFImportDataSource {
+		FieldRef := SourceData;
+		leftTrim := 0;
+		rightTrim := 0;
+	};
+	TMTCIFImportVirtualSize {
+		FieldRef := PacketLength;
+		to := SourceDataLength;
+		addSize := -11;
+		unit := bytes;
+	};
+};

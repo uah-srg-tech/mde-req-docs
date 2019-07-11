@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_1_2_40007" uri="es.uah.aut.srg.tm_epd_1_2_40007" version="v1" description="YID52036: TM 1,2 Seq Flag" protocol="EPD_PUS" type="TM">
+  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="6" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID00001" description="TC ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID00002" description="TC Sequence Control" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="NID00003" description="Error Code TM 1,2" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="4" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

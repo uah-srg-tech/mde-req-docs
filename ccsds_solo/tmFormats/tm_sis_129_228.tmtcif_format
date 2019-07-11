@@ -1,0 +1,1111 @@
+TMTCIFFormatFormat tm_sis_129_228 {
+	//YID52860: 129,228 Parameters
+	uri := es.uah.aut.srg.tm_sis_129_228;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 116;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10260";
+		description := "MCP HV Clock";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NID10261";
+		description := "MCP HV Ramp Up Rate";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NID10262";
+		description := "MCP HV Ramp Down Rate";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NID10263";
+		description := "MCP HV Safe Limit";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 3;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 5;
+		pfid := 0;
+		name := "NID10264";
+		description := "SSD Bias Clock";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 6;
+		pfid := 0;
+		name := "NID10265";
+		description := "SSD Bias Ramp Up Rate";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 5;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 7;
+		pfid := 0;
+		name := "NID10266";
+		description := "SSD Bias Ramp Down Rate";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 8;
+		pfid := 0;
+		name := "NID10267";
+		description := "MCP HV Safe Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 7;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 9;
+		pfid := 0;
+		name := "NID10268";
+		description := "A He Hist Mass Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 8;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 10;
+		pfid := 0;
+		name := "NID10269";
+		description := "A He Hist Mass High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 10;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 11;
+		pfid := 0;
+		name := "NID10270";
+		description := "A He Hist Einc Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 12;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 12;
+		pfid := 0;
+		name := "NID10271";
+		description := "A He Hist Einc High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 14;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 13;
+		pfid := 0;
+		name := "NID10272";
+		description := "A UH Mass Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 16;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 14;
+		pfid := 0;
+		name := "NID10273";
+		description := "A UH Einc Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 18;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 15;
+		pfid := 0;
+		name := "NID10274";
+		description := "A UH PW Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 20;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 16;
+		pfid := 0;
+		name := "NID10275";
+		description := "A UH Ratio Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 22;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 17;
+		pfid := 0;
+		name := "NID10276";
+		description := "A UH Ratio High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 24;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 18;
+		pfid := 0;
+		name := "NID10277";
+		description := "A Pulser Energy Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 26;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 19;
+		pfid := 0;
+		name := "NID10278";
+		description := "A Pulser Energy High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 28;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 20;
+		pfid := 0;
+		name := "NID10279";
+		description := "A Pulser St1 Stp Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 30;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 21;
+		pfid := 0;
+		name := "NID10280";
+		description := "A Pulser St1Sp High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 32;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 22;
+		pfid := 0;
+		name := "NID10281";
+		description := "A Pulser St2Sp Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 34;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 23;
+		pfid := 0;
+		name := "NID10282";
+		description := "A Pulser St2Sp High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 36;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 24;
+		pfid := 0;
+		name := "NID10283";
+		description := "A Pulser St1St2 Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 38;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 25;
+		pfid := 0;
+		name := "NID10284";
+		description := "A Pulser St1St2 High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 40;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 26;
+		pfid := 0;
+		name := "NID10285";
+		description := "A Pulser Include";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 42;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 27;
+		pfid := 0;
+		name := "NID10286";
+		description := "A Burst Priority Sel";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 43;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 28;
+		pfid := 0;
+		name := "NID10287";
+		description := "A Burst Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 44;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 29;
+		pfid := 0;
+		name := "NID10288";
+		description := "B He Hist Mass Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 46;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 30;
+		pfid := 0;
+		name := "NID10289";
+		description := "B He Hist Mass High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 48;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 31;
+		pfid := 0;
+		name := "NID10290";
+		description := "B He Hist Einc Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 50;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 32;
+		pfid := 0;
+		name := "NID10291";
+		description := "B He Hist Einc High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 52;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 33;
+		pfid := 0;
+		name := "NID10292";
+		description := "B UH Mass Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 54;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 34;
+		pfid := 0;
+		name := "NID10293";
+		description := "B UH Einc Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 56;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 35;
+		pfid := 0;
+		name := "NID10294";
+		description := "B UH PW Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 58;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 36;
+		pfid := 0;
+		name := "NID10295";
+		description := "B UH Ratio Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 60;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 37;
+		pfid := 0;
+		name := "NID10296";
+		description := "B UH Ratio High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 62;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 38;
+		pfid := 0;
+		name := "NID10297";
+		description := "B Pulser Energy Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 64;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 39;
+		pfid := 0;
+		name := "NID10298";
+		description := "B Pulser Energy High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 66;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 40;
+		pfid := 0;
+		name := "NID10299";
+		description := "B Pulser St1Sp Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 68;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 41;
+		pfid := 0;
+		name := "NID10300";
+		description := "B Pulser St1Sp High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 70;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 42;
+		pfid := 0;
+		name := "NID10301";
+		description := "B Pulser St2Sp Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 72;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 43;
+		pfid := 0;
+		name := "NID10302";
+		description := "B Pulser St2Sp High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 74;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 44;
+		pfid := 0;
+		name := "NID10303";
+		description := "B Pulser St1St2 Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 76;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 45;
+		pfid := 0;
+		name := "NID10304";
+		description := "B Pulser St1St2 High";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 78;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 46;
+		pfid := 0;
+		name := "NID10305";
+		description := "B Pulser Include";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 80;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 47;
+		pfid := 0;
+		name := "NID10306";
+		description := "B Burst Priority Sel";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 81;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 48;
+		pfid := 0;
+		name := "NID10307";
+		description := "B Burst Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 82;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 49;
+		pfid := 0;
+		name := "NID10308";
+		description := "A Iris Min. Position";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 84;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 50;
+		pfid := 0;
+		name := "NID10309";
+		description := "A Iris Energy Counter";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 85;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 51;
+		pfid := 0;
+		name := "NID10310";
+		description := "A Iris Energy Thresh Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 86;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 52;
+		pfid := 0;
+		name := "NID10311";
+		description := "A Iris Energy Thresh Hi";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 90;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 53;
+		pfid := 0;
+		name := "NID10312";
+		description := "A Iris Open Time";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 94;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 54;
+		pfid := 0;
+		name := "NID10313";
+		description := "A Iris CFD Ratio";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 95;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 55;
+		pfid := 0;
+		name := "NID10314";
+		description := "A Iris CFD Ratio Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 96;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 56;
+		pfid := 0;
+		name := "NID10315";
+		description := "B Iris Min. Position";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 98;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 57;
+		pfid := 0;
+		name := "NID10316";
+		description := "B Iris Energy Counter";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 99;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 58;
+		pfid := 0;
+		name := "NID10317";
+		description := "B Iris Energy Thresh Low";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 100;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 59;
+		pfid := 0;
+		name := "NID10318";
+		description := "B Iris Energy Thresh Hi";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 104;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 60;
+		pfid := 0;
+		name := "NID10319";
+		description := "B Iris Open Time";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 108;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 61;
+		pfid := 0;
+		name := "NID10320";
+		description := "B Iris CFD Ratio";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 109;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 62;
+		pfid := 0;
+		name := "NID10321";
+		description := "B Iris CFD Ratio Thresh";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 110;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 63;
+		pfid := 0;
+		name := "NID10324";
+		description := "A Iris Open";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 112;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 64;
+		pfid := 0;
+		name := "NID10325";
+		description := "B Iris Open";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 114;
+			bits := 0;
+		};
+	};
+};

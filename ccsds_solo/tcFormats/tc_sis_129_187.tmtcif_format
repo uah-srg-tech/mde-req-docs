@@ -1,0 +1,91 @@
+TMTCIFFormatFormat tc_sis_129_187 {
+	//ZID52352: 129,187 SIS_DAT_TIME
+	uri := es.uah.aut.srg.tc_sis_129_187;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID10000";
+		description := "Macro?";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "PID10033";
+		description := "Integration Time";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "PID10034";
+		description := "Integration Mult. N1";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "PID10035";
+		description := "Integration Mult. N2";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 3;
+			bits := 0;
+		};
+	};
+};

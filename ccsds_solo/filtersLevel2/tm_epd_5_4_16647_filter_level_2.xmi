@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_5_4_16647_filter_level_2" uri="es.uah.aut.srg.tm_epd_5_4_16647_filter_level_2" version="v1" description="TM5,4 PARAM_ALARM6">
+  <formatFile href="../tmFormats/tm_epd_5_4_16647.xmi#/"/>
+  <BoolVar id="0" name="NID00054_16647" constantType="decimal">
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/tm_epd_5_4_16647.xmi#//@CSField.1"/>
+    <Op type="equal"/>
+    <Constant value="16647"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+  </Minterm>
+</tmtcif:TMTCIFFilterMintermFilter>

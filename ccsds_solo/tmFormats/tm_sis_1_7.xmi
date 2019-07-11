@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_1_7" uri="es.uah.aut.srg.tm_sis_1_7" version="v1" description="YID52701: 1,7 Execution Success Report" protocol="EPD_PUS" type="TM">
+  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID10238" description="Packet ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID10239" description="Packet Sequence" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

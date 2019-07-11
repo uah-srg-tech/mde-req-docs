@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_6_5" uri="es.uah.aut.srg.tc_epd_6_5" version="v1" description="ZID52501: TC 6,5 Memory Dump" protocol="EPD_PUS" type="TC">
+  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="10" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID00001" description="Mem Id" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID00002" description="Start Address" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="PID00003" description="Number of Bytes" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="6" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

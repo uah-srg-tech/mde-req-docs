@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_sis_6_2" uri="es.uah.aut.srg.tc_sis_6_2" version="v1" description="ZID52303: 6,2 SIS_PUS_MEM_LOAD" protocol="EPD_PUS" type="TC">
+  <CSField name="Memory ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID10009" description="Address" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="PID10015" description="LengthLoad PUS" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="6" bits="0"/>
+  </CSField>
+  <VSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <constSize bytes="10" bits="0"/>
+    <variableSize fidRef="3" unit="bytes"/>
+    <maxSize bytes="236" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </VSField>
+  <AField name="PID10015_block" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayDimension fidRef="3" maxItems="226"/>
+    <size bytes="0" bits="0"/>
+    <globalOffset bytes="10" bits="0"/>
+  </AField>
+  <AIField name="PID10056" description="Data" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="0" bits="0"/>
+  </AIField>
+</tmtcif:TMTCIFFormatFormat>

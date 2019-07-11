@@ -1,0 +1,40 @@
+TMTCIFFilterMintermFilter tm_sis_6_6_20485_filter_level_1 {
+	//6,6 Memory Dump Report
+	uri := es.uah.aut.srg.tm_sis_6_6_20485_filter_level_1;
+	version := v1;
+	formatFile := EPD_PUS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := ServiceType_6;
+		constantType := decimal;
+		FieldRef := ServiceType;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 6;
+		};
+	};
+	TMTCIFFilterBoolVar {
+		id := 1;
+		name := ServiceSubtype_6;
+		constantType := decimal;
+		FieldRef := ServiceSubtype;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 6;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+		TMTCIFFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

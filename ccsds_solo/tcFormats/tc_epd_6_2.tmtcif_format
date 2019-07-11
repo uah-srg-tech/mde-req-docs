@@ -1,0 +1,122 @@
+TMTCIFFormatFormat tc_epd_6_2 {
+	//ZID52500: TC 6,2 memory patch
+	uri := es.uah.aut.srg.tc_epd_6_2;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatConstSize {
+			bytes := 10;
+			bits := 0;
+		};
+		TMTCIFFormatVariableSize {
+			fidRef := 3;
+			unit := bytes;
+		};
+		TMTCIFFormatMaxSize {
+			bytes := 236;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00001";
+		description := "Mem ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "PID00002";
+		description := "Start Address";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "PID00003";
+		description := "Number of Bytes";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAField {
+		fid := 4;
+		pfid := 0;
+		name := "PID00003_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayDimension {
+			fidRef := 3;
+			maxItems := 226;
+		};
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 10;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAIField {
+		fid := 5;
+		pfid := 0;
+		name := "PID00004";
+		description := "Data";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayRef {
+			fidRef := 4;
+		};
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

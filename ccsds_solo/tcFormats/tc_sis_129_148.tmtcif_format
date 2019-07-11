@@ -1,0 +1,138 @@
+TMTCIFFormatFormat tc_sis_129_148 {
+	//ZID52331: 129,148 SIS_MEM_LOAD
+	uri := es.uah.aut.srg.tc_sis_129_148;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatConstSize {
+			bytes := 11;
+			bits := 0;
+		};
+		TMTCIFFormatVariableSize {
+			fidRef := 4;
+			unit := bytes;
+		};
+		TMTCIFFormatMaxSize {
+			bytes := 236;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID10000";
+		description := "Macro?";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "MemoryID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "PID10009";
+		description := "Address";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 3;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "PID10013";
+		description := "LengthLoad";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 7;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAField {
+		fid := 5;
+		pfid := 0;
+		name := "PID10013_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayDimension {
+			fidRef := 4;
+			maxItems := 225;
+		};
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 11;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAIField {
+		fid := 6;
+		pfid := 0;
+		name := "PID10056";
+		description := "Data";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayRef {
+			fidRef := 5;
+		};
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

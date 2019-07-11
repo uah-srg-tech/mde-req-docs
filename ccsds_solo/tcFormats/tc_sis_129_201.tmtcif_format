@@ -1,0 +1,57 @@
+TMTCIFFormatFormat tc_sis_129_201 {
+	//ZID52365: 129,201 SIS_IRIS_HOME
+	uri := es.uah.aut.srg.tc_sis_129_201;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID10000";
+		description := "Macro?";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "PID10027";
+		description := "Telescope";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+};

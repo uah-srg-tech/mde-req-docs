@@ -1,0 +1,105 @@
+TMTCIFFormatFormat tc_sis_129_129 {
+	//ZID52312: 129,129 SIS_CMD_TEXT_4CHAR
+	uri := es.uah.aut.srg.tc_sis_129_129;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatConstSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatVariableSize {
+			fidRef := 2;
+			unit := bytes;
+		};
+		TMTCIFFormatMaxSize {
+			bytes := 236;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID10000";
+		description := "Macro?";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "PID10011";
+		description := "Text Length";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAField {
+		fid := 3;
+		pfid := 0;
+		name := "PID10011_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayDimension {
+			fidRef := 2;
+			maxItems := 234;
+		};
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAIField {
+		fid := 4;
+		pfid := 0;
+		name := "PID10001";
+		description := "Text";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayRef {
+			fidRef := 3;
+		};
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

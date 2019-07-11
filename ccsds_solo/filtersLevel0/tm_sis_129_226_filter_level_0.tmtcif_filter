@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_sis_129_226_filter_level_0 {
+	//129,226 Macro Checksums
+	uri := es.uah.aut.srg.tm_sis_129_226_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := APID_872;
+		constantType := decimal;
+		FieldRef := APID;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 872;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

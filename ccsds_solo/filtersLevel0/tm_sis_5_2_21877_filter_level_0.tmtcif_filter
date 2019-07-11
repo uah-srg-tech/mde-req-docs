@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_sis_5_2_21877_filter_level_0 {
+	//5,2 Alarm Event: B Baffle Temp Too High
+	uri := es.uah.aut.srg.tm_sis_5_2_21877_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := APID_871;
+		constantType := decimal;
+		FieldRef := APID;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 871;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

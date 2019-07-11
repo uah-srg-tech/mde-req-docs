@@ -1,0 +1,7 @@
+TMTCIFFormatFormat tc_sis_17_1 {
+	//ZID52307: 17,1 SIS_PUS_CON_TST
+	uri := es.uah.aut.srg.tc_sis_17_1;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+};

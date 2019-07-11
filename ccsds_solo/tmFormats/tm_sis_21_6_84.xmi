@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_21_6_84" uri="es.uah.aut.srg.tm_sis_21_6_84" version="v1" description="YID52866: 21,6 A TOFxE Rates, Slow" protocol="EPD_PUS" type="TM">
+  <CSField name="NID10001" description="SID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NIDG1020" description="Global 21" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1105" description="Reserved" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="5"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1106" description="Burst Trigger" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="5"/>
+  </CSField>
+  <CSField name="NIDD1107" description="Iris Flag" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="6"/>
+  </CSField>
+  <CSField name="NIDD1108" description="Abort Flag" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="7"/>
+  </CSField>
+  <CSField name="NIDG1021" description="Global 22" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1109" description="Reserved" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="7"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1110" description="Iris Position" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="1"/>
+    <globalOffset bytes="2" bits="7"/>
+  </CSField>
+  <CSField name="NID10412" description="Int. Time" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="4" bits="0"/>
+  </CSField>
+  <CSField name="NID10422" description="A Aux. Counts, Slow" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="10" bits="0"/>
+    <globalOffset bytes="6" bits="0"/>
+  </CSField>
+  <CSField name="NID10423" description="A TOFxE Length, Slow" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="16" bits="0"/>
+  </CSField>
+  <VSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <constSize bytes="18" bits="0"/>
+    <variableSize fidRef="12" unit="bytes"/>
+    <maxSize bytes="4096" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </VSField>
+  <AField name="NID10423_block" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayDimension fidRef="12" maxItems="4078"/>
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="18" bits="0"/>
+  </AField>
+  <AIField name="NID10424" description="A TOFxE Counts, Slow" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="13"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="0" bits="0"/>
+  </AIField>
+</tmtcif:TMTCIFFormatFormat>

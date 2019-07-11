@@ -1,0 +1,40 @@
+TMTCIFFormatFormat tc_epd_128_15 {
+	//ZID52526: TC 128,15 check image
+	uri := es.uah.aut.srg.tc_epd_128_15;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00023";
+		description := "ASW ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

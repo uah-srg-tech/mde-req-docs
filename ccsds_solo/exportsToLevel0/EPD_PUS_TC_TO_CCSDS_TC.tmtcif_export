@@ -1,0 +1,49 @@
+TMTCIFExportExport EPD_PUS_TC_TO_CCSDS_TC {
+	//
+	uri := es.uah.aut.srg.EPD_PUS_TC_TO_CCSDS_TC;
+	version := v1;
+	from := EPD_PUS_TC(v1);
+	to := CCSDS_TC(v1);
+	TMTCIFExportSizes {
+		TMTCIFExportSizeInBits {
+			id := 0;
+			from := ApplicationData;
+			addSize := 5;
+			unit := bytes;
+		};
+	};
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromField {
+			fieldRef := SecondaryHeader;
+			toFieldRef := SecondaryHeader;
+		};
+		TMTCIFExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := VersionNumber;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := Type;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := DFHFlag;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 812;
+			toFieldRef := APID;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 3;
+			toFieldRef := SequenceFlag;
+		};
+		TMTCIFExportSettingFromSize {
+			sizeRef := 0;
+			toFieldRef := PacketLength;
+		};
+	};
+};

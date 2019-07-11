@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_epd_128_6_filter_level_0 {
+	//TM 128,6 Get data pool rep
+	uri := es.uah.aut.srg.tm_epd_128_6_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := APID_809;
+		constantType := decimal;
+		FieldRef := APID;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 809;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_5_1_4100" uri="es.uah.aut.srg.tm_epd_5_1_4100" version="v1" description="YID52017: TM 5,1 Trans2Safe event" protocol="EPD_PUS" type="TM">
+  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID00013" description="RID_5_1" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NIDG0034" description="Mode Info" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="NIDD0191" description="TransToOper" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="NIDD0190" description="TransToConf" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="2" bits="1"/>
+  </CSField>
+  <CSField name="NIDD0189" description="Target Mode" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="6"/>
+    <globalOffset bytes="2" bits="2"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

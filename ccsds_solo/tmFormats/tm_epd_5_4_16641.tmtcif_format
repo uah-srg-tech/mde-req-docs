@@ -1,0 +1,40 @@
+TMTCIFFormatFormat tm_epd_5_4_16641 {
+	//YID52066: TM5,4 Loss of service 20
+	uri := es.uah.aut.srg.tm_epd_5_4_16641;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00054";
+		description := "RID_54";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

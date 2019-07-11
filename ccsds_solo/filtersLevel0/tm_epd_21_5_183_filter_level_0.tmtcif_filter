@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_epd_21_5_183_filter_level_0 {
+	//TM 21,5 HE2 Sci support HK SCI
+	uri := es.uah.aut.srg.tm_epd_21_5_183_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := APID_812;
+		constantType := decimal;
+		FieldRef := APID;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 812;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

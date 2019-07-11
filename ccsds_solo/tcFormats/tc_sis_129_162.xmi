@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_sis_129_162" uri="es.uah.aut.srg.tc_sis_129_162" version="v1" description="ZID52343: 129,162 SIS_STAT_INT" protocol="EPD_PUS" type="TC">
+  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID10000" description="Macro?" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID10022" description="Interval" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="Pad" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="3" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

@@ -1,0 +1,40 @@
+TMTCIFFilterMintermFilter tm_epd_128_129_filter_level_1 {
+	//TM128,129 Monitoring list rep
+	uri := es.uah.aut.srg.tm_epd_128_129_filter_level_1;
+	version := v1;
+	formatFile := EPD_PUS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := ServiceType_128;
+		constantType := decimal;
+		FieldRef := ServiceType;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 128;
+		};
+	};
+	TMTCIFFilterBoolVar {
+		id := 1;
+		name := ServiceSubtype_129;
+		constantType := decimal;
+		FieldRef := ServiceSubtype;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 129;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+		TMTCIFFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

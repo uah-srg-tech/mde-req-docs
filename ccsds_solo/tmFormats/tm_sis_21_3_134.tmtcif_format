@@ -1,0 +1,210 @@
+TMTCIFFormatFormat tm_sis_21_3_134 {
+	//YID52868: 21,3 A Test Pulses
+	uri := es.uah.aut.srg.tm_sis_21_3_134;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 27;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10001";
+		description := "SID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NIDD1105";
+		description := "Reserved";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 5;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NIDG1020";
+		description := "Global 21";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NIDD1106";
+		description := "Burst Trigger";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 5;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 5;
+		pfid := 0;
+		name := "NIDD1107";
+		description := "Iris Flag";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 6;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 6;
+		pfid := 0;
+		name := "NIDD1108";
+		description := "Abort Flag";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 7;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 7;
+		pfid := 0;
+		name := "NIDG1021";
+		description := "Global 22";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 8;
+		pfid := 0;
+		name := "NIDD1109";
+		description := "Reserved";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 7;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 9;
+		pfid := 0;
+		name := "NIDD1110";
+		description := "Iris Position";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 7;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 10;
+		pfid := 0;
+		name := "NID10412";
+		description := "Int. Time";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 11;
+		pfid := 0;
+		name := "NID10426";
+		description := "A Test Pulse";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 18;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+	};
+};

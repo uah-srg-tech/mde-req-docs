@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_128_129" uri="es.uah.aut.srg.tm_epd_128_129" version="v1" description="YID52012: TM128,129 Monitoring list rep" protocol="EPD_PUS" type="TM">
+  <CSField name="NID00011" description="Overall Monitor Status" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID00012" description="Max Reporting Delay" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="NID00015" description="N" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="3" bits="0"/>
+  </CSField>
+  <VSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <constSize bytes="5" bits="0"/>
+    <variableSize fidRef="3" unit="string69"/>
+    <maxSize bytes="4076" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </VSField>
+  <AField name="NID00015_block" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayDimension fidRef="3" maxItems="59"/>
+    <size bytes="69" bits="0"/>
+    <globalOffset bytes="5" bits="0"/>
+  </AField>
+  <AIField name="NID00018" description="Parameter ID" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="0" bits="0"/>
+  </AIField>
+  <AIField name="NID00019" description="Monitoring Interval" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="2" bits="0"/>
+  </AIField>
+  <AIField name="NID00020" description="Monitoring Status" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="4" bits="0"/>
+  </AIField>
+  <AIField name="NID00021" description="NOL" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="5" bits="0"/>
+  </AIField>
+  <AIField name="NID00025" description="Low Limit" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="8" bits="0"/>
+    <localOffset bytes="6" bits="0"/>
+  </AIField>
+  <AIField name="NID00024" description="RID_NOL_LOW" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="14" bits="0"/>
+  </AIField>
+  <AIField name="NID00026" description="High Limit" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="8" bits="0"/>
+    <localOffset bytes="16" bits="0"/>
+  </AIField>
+  <AIField name="NID00043" description="RID NOL HIGH" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="24" bits="0"/>
+  </AIField>
+  <AIField name="NID00022" description="NOD" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="26" bits="0"/>
+  </AIField>
+  <AIField name="NID00027" description="Low Delta Threshold" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="8" bits="0"/>
+    <localOffset bytes="27" bits="0"/>
+  </AIField>
+  <AIField name="NID00044" description="RID NOD LOW" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="35" bits="0"/>
+  </AIField>
+  <AIField name="NID00028" description="High Delta Threshold" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="8" bits="0"/>
+    <localOffset bytes="37" bits="0"/>
+  </AIField>
+  <AIField name="NID00045" description="RID NOD HIGH" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="45" bits="0"/>
+  </AIField>
+  <AIField name="NID00023" description="NOE" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="47" bits="0"/>
+  </AIField>
+  <AIField name="NID00029" description="Expected Value" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="8" bits="0"/>
+    <localOffset bytes="49" bits="0"/>
+  </AIField>
+  <AIField name="NID00046" description="RID NOE" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="57" bits="0"/>
+  </AIField>
+  <AIField name="NID00145" description="NOB" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="59" bits="0"/>
+  </AIField>
+  <AIField name="NID00146" description="BitMask" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="60" bits="0"/>
+  </AIField>
+  <AIField name="NID00147" description="NOB_ExpectedValue" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="61" bits="0"/>
+  </AIField>
+  <AIField name="NID00148" description="RID_NOB" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="62" bits="0"/>
+  </AIField>
+  <AIField name="NID00149" description="NOF" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="64" bits="0"/>
+  </AIField>
+  <AIField name="NID00150" description="Bit Mask NOF" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="1" bits="0"/>
+    <localOffset bytes="66" bits="0"/>
+  </AIField>
+  <AIField name="NID00151" description="RID_NOF" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <arrayRef fidRef="4"/>
+    <size bytes="2" bits="0"/>
+    <localOffset bytes="67" bits="0"/>
+  </AIField>
+</tmtcif:TMTCIFFormatFormat>

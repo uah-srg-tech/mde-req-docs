@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_sis_17_1" uri="es.uah.aut.srg.tc_sis_17_1" version="v1" description="ZID52307: 17,1 SIS_PUS_CON_TST" protocol="EPD_PUS" type="TC"/>

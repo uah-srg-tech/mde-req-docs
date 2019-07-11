@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_17_2" uri="es.uah.aut.srg.tm_epd_17_2" version="v1" description="YID52006: TM 17,2 Connect test resp" protocol="EPD_PUS" type="TM"/>

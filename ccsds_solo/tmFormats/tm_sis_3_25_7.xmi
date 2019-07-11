@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_3_25_7" uri="es.uah.aut.srg.tm_sis_3_25_7" version="v1" description="YID52720: 3,25 Summary" protocol="EPD_PUS" type="TM">
+  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="8" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NID10000" description="SID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1089" description="Aliveness" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="NIDG1017" description="Global 18" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1090" description="Power Down" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="1"/>
+  </CSField>
+  <CSField name="NIDD1091" description="Reserved" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="2"/>
+    <globalOffset bytes="1" bits="2"/>
+  </CSField>
+  <CSField name="NIDD1092" description="SIS State" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="4"/>
+  </CSField>
+  <CSField name="NIDD1093" description="Burst Trigger" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="1" bits="5"/>
+  </CSField>
+  <CSField name="NIDD1094" description="Reserved" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="2"/>
+    <globalOffset bytes="1" bits="6"/>
+  </CSField>
+  <CSField name="NID10208" description="Alarm Id" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1095" description="Alarm Type" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
+    <globalOffset bytes="3" bits="0"/>
+  </CSField>
+  <CSField name="NIDG1016" description="Global 17" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="3" bits="0"/>
+  </CSField>
+  <CSField name="NIDD1096" description="Alarm Count" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="7"/>
+    <globalOffset bytes="3" bits="1"/>
+  </CSField>
+  <CSField name="NID10211" description="Cmd Exec" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="4" bits="0"/>
+  </CSField>
+  <CSField name="NID10212" description="Cmd Reject" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="5" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

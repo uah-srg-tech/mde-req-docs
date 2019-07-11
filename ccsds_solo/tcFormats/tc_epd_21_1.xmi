@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_21_1" uri="es.uah.aut.srg.tc_epd_21_1" version="v1" description="ZID52506: TC 21,1 Enable data" protocol="EPD_PUS" type="TC">
+  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID00006" description="Subsystem ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

@@ -1,0 +1,49 @@
+TMTCIFExportExport tc_epd_128_102_export_to_level_1_ack {
+	//TC 128,102 Send Msg Sequence
+	uri := es.uah.aut.srg.tc_epd_128_102_export_to_level_1_ack;
+	version := v1;
+	from := tc_epd_128_102(v1);
+	to := EPD_PUS_TC(v1);
+	TMTCIFExportSizes {
+		TMTCIFExportSizeInBits {
+			id := 0;
+			from := PID00075;
+			addSize := 4;
+			unit := bytes;
+		};
+	};
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 128;
+			toFieldRef := ServiceType;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 102;
+			toFieldRef := ServiceSubtype;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		TMTCIFExportSettingFromSize {
+			sizeRef := 0;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

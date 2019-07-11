@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_128_103" uri="es.uah.aut.srg.tc_epd_128_103" version="v1" description="ZID52541: TC 128,103 Sens Msg Block" protocol="EPD_PUS" type="TC">
+  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID00083" description="AllsensorID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </CSField>
+  <CSField name="PID00084" description="IndexTable" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="2"/>
+    <globalOffset bytes="1" bits="0"/>
+  </CSField>
+  <CSField name="PID00077" description="IndexBlock" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="6"/>
+    <globalOffset bytes="1" bits="2"/>
+  </CSField>
+</tmtcif:TMTCIFFormatFormat>

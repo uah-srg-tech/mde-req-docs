@@ -1,0 +1,108 @@
+TMTCIFFormatFormat tm_epd_128_6 {
+	//YID52014: TM 128,6 Get data pool rep
+	uri := es.uah.aut.srg.tm_epd_128_6;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatConstSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatVariableSize {
+			fidRef := 1;
+			unit := string10;
+		};
+		TMTCIFFormatMaxSize {
+			bytes := 4092;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00016";
+		description := "N_ITEMS";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAField {
+		fid := 2;
+		pfid := 0;
+		name := "NID00016_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayDimension {
+			fidRef := 1;
+			maxItems := 409;
+		};
+		TMTCIFFormatSize {
+			bytes := 10;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAIField {
+		fid := 3;
+		pfid := 0;
+		name := "NID00017";
+		description := "Parameter ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayRef {
+			fidRef := 2;
+		};
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAIField {
+		fid := 4;
+		pfid := 0;
+		name := "NID00032";
+		description := "Parameter Value";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayRef {
+			fidRef := 2;
+		};
+		TMTCIFFormatSize {
+			bytes := 8;
+			bits := 0;
+		};
+		TMTCIFFormatLocalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+};

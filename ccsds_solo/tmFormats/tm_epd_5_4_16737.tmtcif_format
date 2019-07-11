@@ -1,0 +1,142 @@
+TMTCIFFormatFormat tm_epd_5_4_16737 {
+	//YID52141: TM 5,4 READOUT_TABLE_CHECK_FAILED
+	uri := es.uah.aut.srg.tm_epd_5_4_16737;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 3;
+			bits := 5;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00054";
+		description := "RID_54";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NIDG0141";
+		description := "Report Rout Table";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NIDD0159";
+		description := "SIS Readout table check";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 3;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NIDD0158";
+		description := "STEP Readout table check";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 4;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 5;
+		pfid := 0;
+		name := "NIDD0157";
+		description := "HET2 Readout table check";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 5;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 6;
+		pfid := 0;
+		name := "NIDD0156";
+		description := "HET1 Readout table check";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 6;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 7;
+		pfid := 0;
+		name := "NIDD0155";
+		description := "Boot Readout table check";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 7;
+		};
+	};
+};

@@ -1,0 +1,41 @@
+TMTCIFExportExport tc_epd_19_4_export_to_level_1_ack {
+	//TC 19,4 Enable Action
+	uri := es.uah.aut.srg.tc_epd_19_4_export_to_level_1_ack;
+	version := v1;
+	from := tc_epd_19_4(v1);
+	to := EPD_PUS_TC(v1);
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 19;
+			toFieldRef := ServiceType;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 4;
+			toFieldRef := ServiceSubtype;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 2;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

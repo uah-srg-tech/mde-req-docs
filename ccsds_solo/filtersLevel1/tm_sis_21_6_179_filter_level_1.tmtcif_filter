@@ -1,0 +1,40 @@
+TMTCIFFilterMintermFilter tm_sis_21_6_179_filter_level_1 {
+	//21,6 B TOFxE Rates, Medium
+	uri := es.uah.aut.srg.tm_sis_21_6_179_filter_level_1;
+	version := v1;
+	formatFile := EPD_PUS_TM(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := ServiceType_21;
+		constantType := decimal;
+		FieldRef := ServiceType;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 21;
+		};
+	};
+	TMTCIFFilterBoolVar {
+		id := 1;
+		name := ServiceSubtype_6;
+		constantType := decimal;
+		FieldRef := ServiceSubtype;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 6;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+		TMTCIFFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

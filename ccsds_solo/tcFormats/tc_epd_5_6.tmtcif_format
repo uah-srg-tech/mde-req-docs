@@ -1,0 +1,88 @@
+TMTCIFFormatFormat tc_epd_5_6 {
+	//ZID52532: TC 5,6 Disable Event
+	uri := es.uah.aut.srg.tc_epd_5_6;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	TMTCIFFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatConstSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatVariableSize {
+			fidRef := 1;
+			unit := halfword;
+		};
+		TMTCIFFormatMaxSize {
+			bytes := 235;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00055";
+		description := "N RID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAField {
+		fid := 2;
+		pfid := 0;
+		name := "PID00055_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayDimension {
+			fidRef := 1;
+			maxItems := 117;
+		};
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatAIField {
+		fid := 3;
+		pfid := 0;
+		name := "PID00040";
+		description := "REPORT ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatArrayRef {
+			fidRef := 2;
+		};
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

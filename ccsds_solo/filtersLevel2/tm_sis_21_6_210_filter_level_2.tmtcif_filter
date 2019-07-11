@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_sis_21_6_210_filter_level_2 {
+	//21,6 A TOFxE Rates, Fast
+	uri := es.uah.aut.srg.tm_sis_21_6_210_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_21_6_210(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := NID10001_210;
+		constantType := decimal;
+		FieldRef := NID10001;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 210;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

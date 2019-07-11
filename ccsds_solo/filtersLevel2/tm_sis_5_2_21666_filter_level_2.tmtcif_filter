@@ -1,0 +1,25 @@
+TMTCIFFilterMintermFilter tm_sis_5_2_21666_filter_level_2 {
+	//5,2 Alarm Event: Out Of Macro Contexts
+	uri := es.uah.aut.srg.tm_sis_5_2_21666_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_5_2_21666(v1);
+	
+	TMTCIFFilterBoolVar {
+		id := 0;
+		name := NID10245_21666;
+		constantType := decimal;
+		FieldRef := NID10245;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 21666;
+		};
+	};
+	TMTCIFFilterMinterm { 
+		id := 0;
+		TMTCIFFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};
