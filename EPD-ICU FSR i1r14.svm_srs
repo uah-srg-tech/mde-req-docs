@@ -1,0 +1,1414 @@
+<SRS name="Flight Software Requirements Document" id="EPD-ICU FSR i1r14" issue="1" revision="14" date="22/04/2016">
+	<parent name="EID-A" />
+	<parent name="Solar Orbiter Operations Requirements Document" />
+	<Introduction>
+		<subsection name="Scope">
+			<body>
+				<paragraph>
+					<run>
+						<text>The Energetic Particle Detector (EPD) suite consists of four sensors measuring electrons, protons, and ions from helium to iron, and operating at partly overlapping energy ranges from 2 keV up to 200 MeV/n. The EPD sensors are:</text>
+					</run>
+				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SupraThermal Electrons, Ions, &amp; Neutrals (STEP)</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Suprathermal Ion Spectrograph (SIS)</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Electron Proton Telescope (EPT)</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>High Energy Telescope (HET)</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<paragraph>
+					<run>
+						<text>The EPD sensors share the Instrument Control Unit (ICU) that is composed by the Common Data Processing Unit and the Low Voltage Power Supply (CDPU/LVPS), which is the sole power and data interface of EPD to the spacecraft. In order to improve the reliability, the ICU is a redundant system working in a cold redundant configuration. This means that nominal or redundant ICU units are never switched ON simultaneously. CDPU shares information with the STIX, MAG and SWA investigation to allow synchronized high data rate burst-mode operations following on-board identification of predefined triggering events in the EPD data. The CDPU is designed to manage sensors control and monitoring, the sensors timing clock, and sensor data collection, compression, and packetization for telemetry. CDPU is also responsible of the S/C telecommand reception and delivery, if necessary, to the sensors. All sensors have their front-end electronics co-located with the instrument.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>STEP consists of a single unit having two view cones in opposite directions. SIS consists of two sensor heads with roughly opposite (160°) view directions sharing a common electronics box. EPT-HET has multiple view cones sharing a common electronics box. There are two identical EPT-HET units.</text>
+					</run>
+				</paragraph>
+				<paragraph>
+					<run>
+						<text>The overall energy coverage achieved with the EPD sensors is 0.002 MeV to 20 MeV for electrons, 0.003 MeV to 100 MeV for protons, 0.008 MeV/n to 200 MeV/n for heavy ions (species-dependent). This energy and species coverage well satisfies and for a large part exceeds the requirements defined for EPD in the Solar Orbiter Payload Definition Document and in the report of the Joint Science and Technology Definition Team (JSTDT) for the Solar Orbiter/Sentinels mission.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="EID-A:Solar Orbiter Experiment Interface Document, Part A" id="SOL-EST-RCD-0050" issue="5" date="03/2015" />
+		<ApplicableDocument name="AD2" title="EID-B: Solar Orbiter EPD Experiment Interface Document, Part B" id="SO-EPD-PO-IF-0001" issue="3" revision="3" />
+		<ApplicableDocument name="AD3" title="Interface Control Document (ICD)" id="SO-EPD-ICU-IF-0001" issue="4" revision="0" />
+		<ApplicableDocument name="AD4" title="Solar Orbiter Operations Requirements Document" id="SO-ESC-RS-05001" issue="1" revision="8" />
+		<ApplicableDocument name="AD5" title="Software" id="ECSS-E-ST-40C" date="06/03/2009" />
+		<ApplicableDocument name="AD6" title="Solar Orbiter (SOLO) Energetic Particle Detector (EPD) Instrument Control Unit (ICU)" id="SO-EPD-ICU-DD-004" issue="5" revision="0" />
+		<ApplicableDocument name="AD7" title="EPD Telemetry and Telecomand ICD" id="SO-EPD-PO-IF-0003" issue="2" revision="9" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book" id="CCSDS 102.0-B-5" date="11/2000" />
+		<ReferenceDocument name="RD2" title="Ground systems and operations - Telemetry and telecommand packet utilization" id="ECSS-E-70-41A" date="30/01/2003" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="AD">
+			<run>
+				<text>Applicable Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ASW">
+			<run>
+				<text>Application Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="BSW">
+			<run>
+				<text>Boot Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="C&amp;DH">
+			<run>
+				<text>Control and Data Handling</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="CDPU">
+			<run>
+				<text>Common Data Processing Unit</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EGSE">
+			<run>
+				<text>Electrical Ground Support Equipment</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EPD">
+			<run>
+				<text>Energetic Particle Detector</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="GSS">
+			<run>
+				<text>Ground Support System</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICU">
+			<run>
+				<text>Instrument Control Unit</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="IRQ">
+			<run>
+				<text>Interrupt Request</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="FPGA">
+			<run>
+				<text>Field Programmable Gate Array</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="LVPS">
+			<run>
+				<text>Low Voltage Power Supply</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OBDH">
+			<run>
+				<text>On-Board Data Handling</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="RAM">
+			<run>
+				<text>Random Access Memory</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="RD">
+			<run>
+				<text>Reference Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="S/C">
+			<run>
+				<text>Spacecraft</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SDRAM">
+			<run>
+				<text>Synchronous Dynamic RAM</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SVVP">
+			<run>
+				<text>Field Programmable Gate Array</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SW">
+			<run>
+				<text>Software Verification and Validation Plan</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBC">
+			<run>
+				<text>To Be Confirmed</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TC">
+			<run>
+				<text>Telecommand</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TM">
+			<run>
+				<text>Telemetry</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<SoftwareOverview>
+		<FunctionPurpose>
+			<subsection name="Purpose">
+				<body>
+					<paragraph>
+						<run>
+							<text>The EPD Software Requirements Document defines and describes the operations, interfaces, performance, and quality assurance requirements of the EPD's ICU software. The requirements described in this document are derived from </text>
+						</run>
+						<hyperlink reference="AD1">
+						</hyperlink>
+						<run>
+							<text>, </text>
+						</run>
+						<hyperlink reference="AD2">
+						</hyperlink>
+						<run>
+							<text>, </text>
+						</run>
+						<hyperlink reference="AD3">
+						</hyperlink>
+						<run>
+							<text> and </text>
+						</run>
+						<hyperlink reference="AD4">
+						</hyperlink>
+						<run>
+							<text> (EID-A, EID-B, Interface Control Document and Solar Orbiter Operations Requirements Document).</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+			<subsection name="Scope">
+				<body>
+					<paragraph>
+						<run>
+							<text>This document applies to the EPD's ICU software. It does not provide information for the Ground Support Software (GSS), which is maintained separately as part of the Electronic Ground Support Equipment (EGSE). This document supplies information applicable to the Software Requirements Specification.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+		</FunctionPurpose>
+		<EnvironmentalConsiderations>
+			<subsection name="General Description">
+				<body>
+					<paragraph>
+						<hyperlink reference="ICU_IF">
+						</hyperlink>
+						<run>
+							<text> illustrates the top-level interfaces to the ICU, which affect the Instrument Control Unit Software.</text>
+						</run>
+					</paragraph>
+					<figureFromFile name="ICU_IF" referenceFile="ICU_IF.png" caption="ICU interfaces" />
+					<paragraph>
+						<run>
+							<text>EPD's CDPU provides the interface between the Solar Orbiter Spacecraft C&amp;DH system and the EPD sensors (STEP, HET, EPT and SIS). All information transfer between the EPD sensors and the Spacecraft/Ground flows through the CDPU, including telemetry, commands and status. The sensors communicate with the CDPU over a dedicated serial interface.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+			<subsection name="Hardware Overview">
+				<body>
+					<paragraph>
+						<run>
+							<text>The ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF.</text>
+						</run>
+						<hyperlink reference="ICU_HW">
+						</hyperlink>
+						<run>
+							<text>shows the basic HW diagram of the ICU.</text>
+						</run>
+					</paragraph>
+					<figureFromFile name="ICU_HW" referenceFile="ICU_HW.png" caption="ICU hardware schema" />
+					<paragraph>
+						<run>
+							<text>As it can be observed, the design is based on a FPGA (the RTAX2000 from Actel) that includes a LEON2 soft processor, the UART-LVDS links with the sensors, the SpaceWire cores and the interfaces with the LVPS and the memory. The RAM memory uses the SDRAM 3DSD2G40VS5238MS (1.56 Gbits in a 40 bit configuration to implement the EDAC) part and the EEPROM memory uses the 3DEE8M32VS8094 (8 Mbits in a 32 bit configuration) part, both from 3Dplus.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>The LVPS provides +28v non-regulated power supply to the sensors. The switching and monitoring is performed by the CDPU. In </text>
+						</run>
+						<hyperlink reference="LVPS_HW">
+						</hyperlink>
+						<run>
+							<text> a simplified diagram of the LVPS hardware is shown.</text>
+						</run>
+					</paragraph>
+					<figureFromFile name="LVPS_HW" referenceFile="LVPS_HW.png" caption="LVPS hardware schema" />
+				</body>
+			</subsection>
+		</EnvironmentalConsiderations>
+		<RelationOtherSystems>
+			<subsection name="User Interfaces">
+				<body>
+					<paragraph>
+						<run>
+							<text>The EPD Instrument has no direct in-flight human user interfaces. The Mission Operation Center (MOC) manages all human interaction with EPD.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+			<subsection name="Hardware Interfaces">
+				<body>
+					<paragraph>
+						<run>
+							<text>The detailed EPD's ICU hardware to software interfaces are shown in </text>
+						</run>
+						<hyperlink reference="ICU_HW_IFs">
+						</hyperlink>
+						<run>
+							<text>.</text>
+						</run>
+					</paragraph>
+					<figureFromFile name="ICU_HW_IFs" referenceFile="ICU_HW_IFs.png" caption="ICU hardware interfaces" />
+				</body>
+			</subsection>
+			<subsection name="External Software Interfaces">
+				<body>
+					<paragraph>
+						<run>
+							<text>SRG EPD's ICU uses the RTEMS operating system to perform task control functions and provide some resource management services.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>ICU is planning on using the following capabilities of RTEMS:</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>A detailed list of each used function is provided in the SRG EPD ICU Software Detailed Design Document.</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Prioritized, preemptive task scheduler.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Inter-process communication.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Resource locks (semaphores).</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Timers.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</subsection>
+			<subsection name="Communication Interfaces">
+				<subsection name="Sensor Interface">
+					<body>
+						<paragraph>
+							<run>
+								<text>All EPD sensors commands and telemetry are communicated via UART protocol at 115200 bauds using Low-Voltage Differential Signalling (LVDS) according to the EPD Serial Data/Command Protocol shown in </text> 
+							</run>
+							<hyperlink reference="EPD_Serial">
+							</hyperlink>
+							<run>
+								<text> below. A cold redundant configuration will be used for data transmission/reception links between the CDPU and the sensors.</text>
+							</run>
+						</paragraph>
+						<figureFromFile name="EPD_Serial" referenceFile="EPD_Serial.png" caption="EPD Serial Data/Command Protocol" />
+						<paragraph>
+							<run>
+								<text>Data communication between the sensors and the CDPU is started every second by the CDPU that acts as a master. CDPU will provide a 1 Hz hardware clock (one pulse per second or 1PPS) to the sensors </text> 
+							</run>
+							<hyperlink reference="PPS_signal">
+							</hyperlink>
+							<run>
+								<text>). This 1PPS signal is generated by the CDPU and synchronized with the S/C through the time codes, according to </text>
+							</run>
+							<hyperlink reference="RD3">
+								<run>
+									<text>ECSS-E-50-12</text>
+								</run>
+							</hyperlink>
+							<run>
+								<text>, provided by SpaceWire. The CDPU drives the 1PPS signal directly to the sensors via a cabled hardware signal. A specific FPGA hardware entity, integrated in the CDPU, is in charge of generating the 1PPS signal synchronized with the time code reception. LVDS will be used to send 1PPS clock signal, in a cold redundant configuration, to the sensors. This approach eliminates the software latency and jitter of processor interrupt response and avoids the latency of UART transmission. Note that all the signals (transmission/reception and 1PPS clock) both, nominal and redundant are differential signals, so no common ground is needed in any case.</text>
+							</run>
+						</paragraph>
+						<figureFromFile name="PPS_signal" referenceFile="PPS_signal.png" caption="1PPS signal characteristics" />
+						<paragraph>
+							<run>
+								<text>Data is sent over the command and telemetry interfaces as a transaction. Each transaction contains a single Sensor Transfer Frame (STF). Each STF contains command or telemetry data. The general format of the STF is shown in </text> 
+							</run>
+							<hyperlink reference="STF">
+							</hyperlink>
+							<run>
+								<text>. Command and telemetry-specific formats are described below.</text>
+							</run>
+						</paragraph>
+						<tableFromFile name="STF" referenceFile="STF.png" caption="Sensor Transfer Frame (STF) Format" />
+					</body>
+				</subsection>
+				<subsection name="S/C Interface">
+					<body>
+						<paragraph>
+							<run>
+								<text>Each CDPU is a remote terminal on the spacecraft SpaceWire link. The implementation will be compliant up to the </text>
+							</run>
+							<hyperlink reference="RD2">
+							</hyperlink>
+							<run>
+								<text> and </text>
+							</run>
+							<hyperlink reference="RD3">
+							</hyperlink>
+							<run>
+								<text>. Two separate SpaceWire links in a hot redundant configuration will be employed. SpaceWire is the command and data interface with the S/C.</text>
+							</run>
+						</paragraph>
+						<paragraph>
+							<run>
+								<text>EPD command messages are contained in CCSDS telecommand packets. The spacecraft forwards CCSDS telecommand packets to the EPD when they contain any of the EPD identifiers (The EPD Process IDs are defined in </text>
+							</run>
+							<hyperlink reference="AD7">
+							</hyperlink>
+							<run>
+								<text>, section 10). EPD CDPU strips off the CCSDS packet headers and analyzes the destination identifier. If the identifier is associated to the CDPU, the telecommand is processed directly by the CDPU. If the identifier is associated to any sensor, the CDPU forward the command to the specific sensor. Command responses from the sensor are sent to the CDPU that transmits them to the S/C in CCSDS  telemetry packets format. Command responses generated by the CDPU itself are also CCSDS formatted and transmitted to the S/C.</text>
+							</run>
+						</paragraph>
+						<paragraph>
+							<run>
+								<text>The list of telecommands and telecommands responses are defined in </text>
+							</run>
+							<hyperlink reference="AD7">
+							</hyperlink>
+							<run>
+								<text>.</text>
+							</run>
+						</paragraph>
+						<paragraph>
+							<run>
+								<text>The data interface is used for transfer data (science &amp; housekeeping) and command response from EPD sensors to the CDPU and from CDPU to S/C. Transfer of data and command response from sensors to CDPU shall take place according to the Serial Data/Command Protocol described in Figure 5. Transfer of data and command response from CDPU to the S/C shall take place according to the CCSDS recommendations defined in </text>
+							</run>
+							<hyperlink reference="RD1">
+							</hyperlink>
+							<run>
+								<text> and </text>
+							</run>
+							<hyperlink reference="RD2">
+							</hyperlink>
+							<run>
+								<text>.</text>
+							</run>
+						</paragraph>
+					</body>
+				</subsection>
+				<subsection name="LVPS Interface">
+					<body>
+						<paragraph>
+							<run>
+								<text>The interface between the CDPU and the LVPS is an internal interface. It is used to switch ON/OFF the sensors and to monitor voltages and currents.</text>
+							</run>
+						</paragraph>
+					</body>
+				</subsection>
+			</subsection>
+			<subsection name="Time">
+				<body>
+					<paragraph>
+						<run>
+							<text>The Orbiter DMS maintains a time code pattern as Spacecraft Elapsed Time (SCET).</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>The SCET (see section 4.8.4 of </text>
+						</run>
+						<hyperlink reference="AD1">
+						</hyperlink>
+						<run>
+							<text>) is considered as the Central Time Reference (CTR) and it is used as on-board reference for the correlation of time on Ground. The Central Time Reference (CTR) is maintained at spacecraft level and distributed to the Instruments in order to synchronize instruments with the DMS and AOCS and allow instruments to time-stamp their telemetry packets. The CDPU receives the time from the S/C formatted as a CCSDS telecommand packet. The time format is spacecraft elapsed time, in seconds and fractions of a second. The received time corresponds to the next SpaceWire time code. The time packet must arrive at least 300 ms before the time code (see </text>
+						</run>
+						<hyperlink reference="AD1">
+						</hyperlink>
+						<run>
+							<text>: R-838).</text>
+						</run>
+					</paragraph>
+					<tableFromFile name="TimeTC" referenceFile="TimeTC.png" caption="Time Telecommand Packet Format" />
+				</body>
+			</subsection>
+		</RelationOtherSystems>
+		<Constraints>
+		</Constraints>
+	</SoftwareOverview>
+	<Requirements>
+		<body>
+			<paragraph>
+				<run>
+					<text>In the following paragraphs a lists of software requirements will be included. Every single requirement has the following format:</text>
+				</run>
+			</paragraph>
+			<basicTable name="RequirementsTable">
+				<row span="1">
+					<column span="3">
+						<cell span="1">
+							<paragraph>
+								<run>
+									<text>Name</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell span="1">
+							<paragraph>
+								<run>
+									<text>SRS-ICUSW XX-YYYY</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell span="1">
+							<paragraph>
+								<run>
+									<text>Modes</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="3">
+						<cell span="1">
+							<paragraph>
+								<run>
+									<text>Description</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell span="2">
+							<paragraph>
+								<run>
+									<text>Requirement Description</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="3">
+						<cell span="1">
+							<paragraph>
+								<run>
+									<text>Validation</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell span="2">
+							<paragraph>
+								<run>
+									<text>Validation Approach</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+				<row span="1">
+					<column span="3">
+						<cell span="1">
+							<paragraph>
+								<run>
+									<text>Parent</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell span="2">
+							<paragraph>
+								<run>
+									<text>Requirement Traceability</text>
+								</run>
+							</paragraph>
+						</cell>
+					</column>
+				</row>
+			</basicTable>
+			<paragraph>
+				<run bold="true">
+					<text>SRS-ICUSW XX-YYYY: </text>
+				</run>
+				<run>
+					<text>Identifies the requirement. XX is the type of requirement and YYYY is the number used to identify the requirement. Types of requirements are:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>GE. </text>
+						</run>
+						<run>
+							<text>General</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>FU. </text>
+						</run>
+						<run>
+							<text>Functional</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>PE. </text>
+						</run>
+						<run>
+							<text>Performance</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>IF. </text>
+						</run>
+						<run>
+							<text>Interface</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>OP. </text>
+						</run>
+						<run>
+							<text>Operational</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>RS. </text>
+						</run>
+						<run>
+							<text>Resources</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>DI. </text>
+						</run>
+						<run>
+							<text>Design and Implementation Constraints</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>SE. </text>
+						</run>
+						<run>
+							<text>Security</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>PO. </text>
+						</run>
+						<run>
+							<text>Portability</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>QU. </text>
+						</run>
+						<run>
+							<text>Quality</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>RE. </text>
+						</run>
+						<run>
+							<text>Reliability</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>MA. </text>
+						</run>
+						<run>
+							<text>Maintainability</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>SA. </text>
+						</run>
+						<run>
+							<text>Safety</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>CD. </text>
+						</run>
+						<run>
+							<text>Configuration and delivery</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>DD. </text>
+						</run>
+						<run>
+							<text>Data definition and database</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>AI. </text>
+						</run>
+						<run>
+							<text>Adaptation and installation</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run>
+					<text>Examples:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>SRS-ICUSW FU-0025</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>SRS-ICUSW PE R-0037</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run bold="true">
+					<text>Modes: </text>
+				</run>
+				<run>
+					<text>establishes the modes in which the requirement is available, namely:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>F. </text>
+						</run>
+						<run>
+							<text>Off</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>B. </text>
+						</run>
+						<run>
+							<text>Boot</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>S. </text>
+						</run>
+						<run>
+							<text>Safe</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>C. </text>
+						</run>
+						<run>
+							<text>Configuration</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>O. </text>
+						</run>
+						<run>
+							<text>Operational</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run bold="true">
+					<text>Description: </text>
+				</run>
+				<run>
+					<text>is the text that describes the requirement.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run bold="true">
+					<text>Validation approach: </text>
+				</run>
+				<run>
+					<text>establishes how the requirement is verified:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>R. </text>
+						</run>
+						<run>
+							<text>Review</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>A. </text>
+						</run>
+						<run>
+							<text>Analysis</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>I. </text>
+						</run>
+						<run>
+							<text>Inspection</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>T. </text>
+						</run>
+						<run>
+							<text>Test</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run bold="true">
+							<text>S. </text>
+						</run>
+						<run>
+							<text>Similarity</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run bold="true">
+					<text>Parent: </text>
+				</run>
+				<run>
+					<text>contains the list of "software specification" that are cover by the requirement.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>For each requirement type, subsections are provided when requirements apply only to boot software or to application software or they are common.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Other subsections or extended descriptions can be also added in order to better organize and clarify the requirements.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Extended descriptions will be added using </text>
+				</run>
+				<run bold="true">
+					<text>D:</text>
+				</run>
+				<run>
+					<text>. Example:</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>D: The ICU ASW shall handle the telecommand and telemetry according to the following requirements:</text>
+				</run>
+			</paragraph>
+		</body>
+		<GeneralRequirements>
+			<subsection name="Common software requirements">
+				<Item name="GE R-00010" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall comply with the requirements regarding Onboard Processors, Software and Memory Management as specified in section 2.3.2 and Section 3.6 of </text>
+								</run>
+								<hyperlink reference="AD4">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="R-406" />
+				</Item>
+				<Item name="GE R-00030" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall ensure that EPD complies to the associated TM-/TC-Packet Services specified as mandatory for the payload in the Operations Interface Requirements Document </text>
+								</run>
+								<hyperlink reference="AD4">
+								</hyperlink>
+								<run>
+									<text>chapter 3. These services are:</text>
+								</run>
+							</paragraph>
+							<itemize>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Telecommand Verification service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Housekeeping and Diagnostic Reporting service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Event Reporting service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Memory Management service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Time Management service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Test service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Information Distribution service</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>Science Data Transfer service</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</itemize>
+						</body>
+					</description>
+					<parentItem name="R-180" />
+				</Item>
+			</subsection>
+		</GeneralRequirements>
+		<FunctionalRequirements>
+			<subsection name="Common software requirements">
+				<Item name="FU R-00180" validationMethod="Testing">
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall provide the Telecommand Verification service (service 1) to allow adequate and unambiguous verification of acceptance, progress (where applicable) and execution of all telecommands sent from any source (sent from Ground for immediate, delayed or time-tagged execution, and sent from onboard applications).</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="TM-4" />
+					<parentItem name="R-366" />
+				</Item>
+				<Item name="FU R-00390" validationMethod="Testing">
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall provide an "are you alive" function for testing the end-to-end connection between Ground or Command &amp; Control Function and itself. This function implements the Telecommand "Perform Connection Test", service 17,1; and response Telemetry "Connection Test Report", service 17,2.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="FTS-1" />
+					<parentItem name="FTS-2" />
+				</Item>
+			</subsection>
+			<subsection name="Application software requirements">
+				<Item name="FU R-00370" validationMethod="Testing">
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall provide the service 3,129 in order to specify the frequency of generation of a specified housekeeping telemetry packet via Telecommand "Update HK Report Generation Period".</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The frequency accepted by the ICUSW must be &lt;= 1Hz.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="TM-4" />
+					<parentItem name="R-366" />
+				</Item>
+				<Item name="FU R-00380" validationMethod="Testing">
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW application software shall provide the services 3,5 and 3,6.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>Using these services, it will be possible to enable/disable by telecommand the generation of an existing housekeeping packet (and for more than one packet as part of the same command). Telecommands "Enable HK Parameter Report Generation", service 3,5; and "Disable HK Parameter Report Generation", service 3,6.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="PERP-12" />
+				</Item>
+			</subsection>
+		</FunctionalRequirements>
+		<PerformanceRequirements>
+		</PerformanceRequirements>
+		<InterfaceRequirements>
+			<subsection name="Common software requirements">
+				<Item name="IF R-00150" validationMethod="Testing">
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall implement the Telecommand Verification Service (service 1) of the PUS standard according to the requirements TCV-1 to TCV-7, stated as such in the Solar Orbiter Operations Requirement Document </text>
+								</run>
+								<hyperlink reference="AD4">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The telemetries related to this requirement is specified in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>his requirement does not apply to telecommand addressed to SIS.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="TCV-1" />
+					<parentItem name="TCV-2" />
+					<parentItem name="TCV-3" />
+					<parentItem name="TCV-4" />
+					<parentItem name="TCV-5" />
+					<parentItem name="TCV-6" />
+					<parentItem name="TCV-7" />
+				</Item>
+				<Item name="IF R-00160" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall implement the Housekeeping and Diagnostic Data Reporting Service (service 3) according to the requirements PERP-1 to PERP-3 stated as such in the Solar Orbiter Operations Requirement Document </text>
+								</run>
+								<hyperlink reference="AD4">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>For each ICUSW mode, the telemetries related to this requirement are specified in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="PERP-1" />
+					<parentItem name="PERP-2" />
+					<parentItem name="PERP-3" />
+				</Item>
+				<Item name="IF R-00170" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall implement the Event Reporting Service (service 5) according to the requirements EVRP-2, EVRP-3, EVRP-4, EVRP-5 and EVRP-7, stated as such in the Solar Orbiter Operations Requirement Document </text>
+								</run>
+								<hyperlink reference="AD4">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The complete set of events and telemetries related to this requirement is specified in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="EVRP-2" />
+					<parentItem name="EVRP-3" />
+					<parentItem name="EVRP-4" />
+					<parentItem name="EVRP-5" />
+					<parentItem name="EVRP-6" />
+					<parentItem name="EVRP-7" />
+				</Item>
+				<Item name="IF R-00180" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall implement support for event based reporting telemetry packets. For anomaly reports, 3 levels of criticality (low, medium and high) shall be distinguished. Telemetries "Nominal/Progress Report", service 5,1; "Error/Anomaly Report - Low Severity", service 5,2; "Error/Anomaly Report - Medium Severity", service 5,3; Error/Anomaly Report - High Severity", service 5,4.</text> 
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The assignment of events to the different service 5,x telemetries is specified in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="EVRP-1" />
+				</Item>
+				<Item name="IF R-00390" validationMethod="Testing">
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall implement a connection test service (Service 17) according to the specifications given chapter 3 of </text> 
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>This test service implies that the ICUSW will answer with a service 17,2 telemetry packet to a telecommand of service 17,1.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="R-261" />
+				</Item>
+			</subsection>
+		</InterfaceRequirements>
+		<OperationalRequirements>
+		</OperationalRequirements>
+		<ResourcesRequirements>
+			<subsection name="Application software requirements">
+				<body>
+					<paragraph>
+						<run>
+							<text>The ICUSW application software will handle the information about EPD status, houseeking and fault detection and recovery management according to the following design requirements:</text>
+						</run>
+					</paragraph>
+				</body>
+				<Item name="RE R-00070" validationMethod="Testing">
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW failure detection functions shall control the continuous production of service 5 report packets corresponding to the same anomaly by means of autonomously disabling individually the report packet generation after each reported anomaly.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The service 5,5 and 5,6 telecommands will be used to control the report packet generation.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The service 5 telemetry for anomaly reports is defined in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The service 5,5 and 5,6 telecommand that controls the report packet generation is defined in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7">
+								</hyperlink>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="R-264" />
+					<parentItem name="FDIR-14" />
+					<parentItem name="R-407" />
+					<parentItem name="EVRP-6" />
+				</Item>
+			</subsection>
+		</ResourcesRequirements>
+		<DesignRequirements>
+			<subsection name="Application software requirements">
+				<body>
+					<paragraph>
+						<run>
+							<text>The ICUSW application software will handle the information about EPD status, houseeking and fault detection and recovery management according to the following design requirements:</text>
+						</run>
+					</paragraph>
+				</body>
+				<Item name="DI R-00030" validationMethod="Testing">
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The application software of the ICUSW will provide the EPD status information in service 3 telemetry from direct measurements from operating units rather than from secondary effects.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="R-366" />
+				</Item>
+			</subsection>
+		</DesignRequirements>
+		<SecurityPrivacyRequirements>
+		</SecurityPrivacyRequirements>
+		<PortabilityRequirements>
+		</PortabilityRequirements>
+		<SWQualityRequirements>
+		</SWQualityRequirements>
+		<SWReliabiltyRequirements>
+		</SWReliabiltyRequirements>
+		<SWMaintainabilityRequirements>
+		</SWMaintainabilityRequirements>
+		<SWSafetyRequirements>
+		</SWSafetyRequirements>
+		<SWConfigurationDeliveryRequirements>
+		</SWConfigurationDeliveryRequirements>
+		<DataDefinitionDBRequirements>
+		</DataDefinitionDBRequirements>
+		<HumanFactorsRequirements>
+		</HumanFactorsRequirements>
+		<AdaptationInstallationRequirements>
+		</AdaptationInstallationRequirements>
+	</Requirements>
+	<LogicalModels>
+	</LogicalModels>	
+</SRS>
