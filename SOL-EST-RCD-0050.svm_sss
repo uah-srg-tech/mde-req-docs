@@ -84,7 +84,7 @@
 	</Introduction>
 	<ApplicableDocuments>
 		<ApplicableDocument name="NR-27" title="Solar Orbiter Operations Requirements Document" id="SO-ESC-RS-05001" issue="1" revision="8" />
-		<ApplicableDocument name="NR-28" title="Solar Orbiter TM/T- and Packet Structure ICD" id="SOL-S-ASTR-TN-0079" issue="7" revision="0" />
+		<ApplicableDocument name="NR-28" title="Solar Orbiter TM/T- and Packet Structure ICD" id="SOL-S-ASTR-TN-0079" issue="7" />
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="IR-06" title="Solar Orbiter Science Requirements Document" id="SOL-EST-RS-1858" issue="2" revision="0" /> 

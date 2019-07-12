@@ -19,6 +19,61 @@
 		<ReferenceDocument name="RD8" title="Solar Orbiter TM/TC and Packet Structure ICD" id="SOL-S-ASTR-TN-0079" />
 	</ReferenceDocuments>
 	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="APID">
+			<run>
+				<text>Application ID</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EQM">
+			<run>
+				<text>Engineering Qualification Model (of spacecraft)</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="HK">
+			<run>
+				<text>Housekeeping</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="IF">
+			<run>
+				<text>Interface</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OBT">
+			<run>
+				<text>Onboard Time</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="PFM">
+			<run>
+				<text>Proto Flight Model (of spacecraft)</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBD">
+			<run>
+				<text>To Be Defined</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBC">
+			<run>
+				<text>To Be Confirmed</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TC">
+			<run>
+				<text>Telecommand</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TM">
+			<run>
+				<text>Telemetry</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="UTC">
+			<run>
+				<text>Universal Time Coordinated</text>
+			</run>
+		</Abbreviation>
 	</TermsDefinitionsAbbreviations>
 	<GeneralDescription>
 		<ProductPerspective>
