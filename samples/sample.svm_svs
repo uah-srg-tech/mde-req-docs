@@ -50,7 +50,7 @@
 	<TestingSpecificationDesign>
 		<General>
 		</General>
-		<TestDesign name="Test design 1">
+		<TestDesign name="Sample design 1">
 			<General>
 			</General>
 			<FeaturesToBeTested>
@@ -62,7 +62,7 @@
 	<TestCases>
 		<General>
 		</General>
-		<TestCase name="Test case 1">
+		<TestCase name="Sample case 1">
 			<Identifier>
 			</Identifier>
 			<Inputs>
@@ -83,20 +83,20 @@
 	<TestProcedures>
 		<General>
 		</General>
-		<TestProcedure name="Test Procedure 1">
+		<TestProcedure name="Sample Procedure 1">
 			<Identifier>
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="Test case 1" />
+			<TestCase name="Sample case 1" />
 			<ProcedureSteps name="test_connection">
-					<step name="test_connection" id="5" mode="continuous">
-						<inputs>
-							<input_level_1 name="test_connection" ifRef="1" delay_value="110" delay_unit="miliseconds">
-								<app_to_level1 export="tc_sis_17_1_export_to_level_1_ack(v1)" />
-							</input_level_1>
-						</inputs>
-					</step>
+				<step name="test_connection" id="5" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="1" delay_value="110" delay_unit="miliseconds">
+							<app_to_level1 export="tc_sis_17_1_export_to_level_1_ack(v1)" />
+						</input_level_1>
+					</inputs>
+				</step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
