@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFExportExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/export" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_5_X_enable_disable_event_1002" uri="es.uah.aut.srg.tc_epd_5_X_enable_disable_event_1002" version="v1">
+  <from href="../../ccsds_solo/tcFormats/tc_epd_5_5.xmi#/"/>
+  <to href="../../ccsds_solo/tcFormats/tc_epd_5_5.xmi#/"/>
+  <settings>
+    <settingFromConst value="1">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/tc_epd_5_5.xmi#//@CSField.0"/>
+    </settingFromConst>
+    <settingAIFromConst value="0x1002" toArrayIndex="0">
+      <toFieldRef href="../../ccsds_solo/tcFormats/tc_epd_5_5.xmi#//@AIField.0"/>
+    </settingAIFromConst>
+  </settings>
+</tmtcif:TMTCIFExportExport>

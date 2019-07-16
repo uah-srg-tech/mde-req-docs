@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFExportExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/export" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_3_X_enable_disable_hk_sid_100" uri="es.uah.aut.srg.tc_epd_3_X_enable_disable_hk_sid_100" version="v1">
+  <from href="../../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
+  <to href="../../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
+  <settings>
+    <settingFromConst value="100">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/tc_epd_3_5.xmi#//@CSField.1"/>
+    </settingFromConst>
+  </settings>
+</tmtcif:TMTCIFExportExport>

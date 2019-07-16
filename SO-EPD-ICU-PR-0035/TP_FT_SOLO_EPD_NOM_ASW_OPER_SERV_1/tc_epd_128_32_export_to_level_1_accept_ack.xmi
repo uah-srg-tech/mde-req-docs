@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFExportExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/export" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_128_32_export_to_level_1_accept_ack" uri="es.uah.aut.srg.tc_epd_128_32_export_to_level_1_accept_ack" version="v1">
+  <from href="../../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
+  <to href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#/"/>
+  <settings>
+    <settingFromConst value="0">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@CSField.1"/>
+    </settingFromConst>
+    <settingFromConst value="1">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@CSField.2"/>
+    </settingFromConst>
+    <settingFromConst value="1">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@CSField.3"/>
+    </settingFromConst>
+    <settingFromConst value="128">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@CSField.4"/>
+    </settingFromConst>
+    <settingFromConst value="32">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@CSField.5"/>
+    </settingFromConst>
+    <settingFromConst value="120">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@CSField.6"/>
+    </settingFromConst>
+    <settingFromConst value="12">
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatVRFieldSize" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@VRFieldSize.0"/>
+    </settingFromConst>
+    <settingFromField>
+      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#//@VSField.0"/>
+      <fieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.0"/>
+    </settingFromField>
+  </settings>
+</tmtcif:TMTCIFExportExport>

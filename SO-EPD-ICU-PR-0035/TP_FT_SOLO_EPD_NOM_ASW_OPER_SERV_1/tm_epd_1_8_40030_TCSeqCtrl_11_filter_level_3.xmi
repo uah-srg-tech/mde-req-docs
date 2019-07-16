@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2" uri="es.uah.aut.srg.tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2" version="v1">
+  <formatFile href="../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#/"/>
+  <BoolVar id="0" name="NID00001_40030" constantType="decimal">
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@CSField.1"/>
+    <Op type="equal"/>
+    <Constant value="40030"/>
+  </BoolVar>
+  <BoolVar id="1" name="NID00002_C00B" constantType="hex">
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@CSField.2"/>
+    <Op type="equal"/>
+    <Constant value="0xC00B"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+    <BoolVarRef idRef="1"/>
+  </Minterm>
+</tmtcif:TMTCIFFilterMintermFilter>
