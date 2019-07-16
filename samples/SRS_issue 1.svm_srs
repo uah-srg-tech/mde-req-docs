@@ -38,7 +38,7 @@
 		<ReferenceDocument name="RD2" title="Ground systems and operations – Telemetry and telecommand packet utilization" id="ECSS-E-ST-70-41C" date="15/04/2016" />
 		<ReferenceDocument name="RD3" title="SpaceWire – Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
 		<ReferenceDocument name="RD4" title="SpaceWire – CCSDS packet transfer protocol" id="ECSS-E-ST-50-53C" />
-		<ReferenceDocument name="RD5" title="Space engineering. Electric and electronic" id="ECSS-E-20B" issue="Draft 8" revision="0" date="03/2007" />
+		<ReferenceDocument name="RD5" title="Space engineering. Electric and electronic" id="ECSS-E-20B" issue="8" revision="0" date="03/2007" />
 		<ReferenceDocument name="RD6" title="Spacecraft discrete interfaces" id="ECSS-E-ST-50-14C" />
 	</ReferenceDocuments>
 	<TermsDefinitionsAbbreviations>
