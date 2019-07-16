@@ -1,0 +1,40 @@
+TMTCIFExportExport tc_epd_128_32_export_to_level_1 {
+	uri := es.uah.aut.srg.tc_epd_128_32_export_to_level_1;
+	version := v1;
+	from := tc_epd_128_32(v1);
+	to := EPD_PUS_TC(v1);
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := ACK;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 128;
+			toFieldRef := ServiceType;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 32;
+			toFieldRef := ServiceSubtype;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 12;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

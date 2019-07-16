@@ -1,0 +1,1823 @@
+<SVS name="EPD ICU Application Software Functional Tests" id="SO-EPD-ICU-PR-0035" issue="1" revision="3" date="13/7/2016">
+	<parent name="Flight Software Requirements Document" />
+	<Introduction>
+		<subsection name="Purpose">
+			<body>
+				<paragraph>
+					<run>
+						<text>The purpose of this document is to define the tests needed to validate the functionality of the ICU Application Software of the EPD of Solar Orbiter.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="Flight Software Requirements Document, EPD (Energetic Particle Detector)" id="SO-EPD-ICU-RS-0002" issue="1" revision="15" />
+		<ApplicableDocument name="AD2" title="EPD TM/TC Interface Control Document" id="SO-EPD-PO-IF-0003" issue="2" revision="10" />
+		<ApplicableDocument name="AD3" title="EPD Sensors Data Interface Control Document" id="SO-EPD-PO-IF-0005" issue="1" revision="6" />
+		<ApplicableDocument name="AD4" title="ICU Software Validation & Verification Plan" id="SO-EPD-ICU-PL-0005" issue="1" revision="3" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="Space engineering - Software general requirements" id="ECSS-E-ST-40" issue="3" />
+		<ReferenceDocument name="RD2" title="Space product assurance – Software product assurance" id="ECSS-Q-ST-80" issue="3" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="ACK">
+			<run>
+				<text>Acknowledgement</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="AD">
+			<run>
+				<text>Applicable Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ASW">
+			<run>
+				<text>Application Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="BSW">
+			<run>
+				<text>Boot Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="CDPU">
+			<run>
+				<text>Common Data Processing Unit</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="CRC">
+			<run>
+				<text>Cyclic redundancy check</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EBB">
+			<run>
+				<text>Elegant Bread Board</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EPD">
+			<run>
+				<text>Energetic Particle Detector</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EM">
+			<run>
+				<text>Engineering Model</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="GSS">
+			<run>
+				<text>Ground Support Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="HW">
+			<run>
+				<text>Hardware</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICOR">
+			<run>
+				<text>Item Configured On Report</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICU">
+			<run>
+				<text>Instrument Control</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICUSW">
+			<run>
+				<text>Instrument Control Unit Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OSA">
+			<run>
+				<text>Operating System</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OSAPI">
+			<run>
+				<text>Operating System API</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="PC">
+			<run>
+				<text>Personal Computer</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="RD">
+			<run>
+				<text>Reference Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="S/C">
+			<run>
+				<text>Spacecraft</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SpW">
+			<run>
+				<text>SpaceWire</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SVN">
+			<run>
+				<text>Subversion version control system</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SW">
+			<run>
+				<text>Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBC">
+			<run>
+				<text>To Be Confirmed</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBD">
+			<run>
+				<text>To Be Defined</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBW">
+			<run>
+				<text>To Be Written</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TC">
+			<run>
+				<text>Telecommand</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TM">
+			<run>
+				<text>Telemetry</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="UART">
+			<run>
+				<text>Universal Asynchronous Receiver-Transmitter</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<SoftwareOverview>
+		<body>
+			<paragraph>
+				<run>
+					<text>This document applies to the ICU Software of the EPD of Solar Orbiter. This software consists on a set of items that will be configured on the report according to their version and the specific deployment platform. These elements, and any others that need to be configured during the validation process, will be identified using the acronym ICOR (Item Configured On Report) and numbered in order of appearance in the document.</text>
+				</run>
+			</paragraph>
+		</body>
+	</SoftwareOverview>
+	<TaskIdentification>
+		<TaskCriteria>
+			<body>
+				<paragraph>
+					<run>
+						<text>The elements that form the software are the following:</text>
+					</run>
+				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The Baseline ICU-ASW (ICOR-1)</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The Nominal ICU-ASW (ICOR-2).</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The ICU-BSW will be also necessary to deploy any of the ASW, so will be also configured during the test as (ICOR-3).</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<paragraph>
+					<run>
+						<text>The version and subversion of the Baseline ICU-ASW and the Nominal ICU-ASW must be different, in order to distinguish between both. In the last section of the document will be collected all of them in a table. This table should be used in each of the test reports to specify the particular setting of each of the elements used in each deployment platform.</text>
+					</run>
+				</paragraph>
+			</body>
+		</TaskCriteria>
+		<FeaturesToBeTested>
+			<body>
+				<paragraph>
+					<run>
+						<text>These tests tries to verify the correct functionality of the ICU ASW and the acceptance and correct execution of defined TC.</text>
+					</run>
+				</paragraph>
+			</body>
+		</FeaturesToBeTested>
+		<FeaturesNotToBeTested>
+		</FeaturesNotToBeTested>
+		<TestPassFailCriteria>
+			<subsection name="Acceptance/Rejection Criteria">
+				<body>
+					<paragraph>
+						<run>
+							<text>Every test case shall establish the general acceptance and rejection criteria for this test case. In each step of the associated procedure can be defined own criteria too.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+			<subsection name="Reporting Results">
+				<body>
+					<paragraph>
+						<run>
+							<text>In a result report for each test case shall be documented:</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run bold="true">
+									<text>Acceptance: </text>
+								</run>
+								<run>
+									<text>The output received is recorded and the acceptance criterion applied shall be registered.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run bold="true">
+									<text>Rejection: </text>
+								</run>
+								<run>
+									<text>The report is recorded in the step that has failed and the rejection criterion.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</subsection>
+		</TestPassFailCriteria>
+		<ItemsCanNotBeValidated>
+		</ItemsCanNotBeValidated>
+		<ManuallyAutoGeneratedCode>
+		</ManuallyAutoGeneratedCode>
+	</TaskIdentification>
+	<TestingSpecificationDesign>
+		<General>
+			<subsection name="Elements required for tests">
+				<subsection name="Required HW for tests">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>Model of the EPD. </text>
+									</run>
+									<run>
+										<text>Developed by Space Research Group from the University of Alcala. This HW element must be configured in the test report (ICOR-4)</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-1 sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-5). Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-2 sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-6). Required only in Scenario 1 and 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>STEP sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-7). Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SIS sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-8). Required only in Scenario 1, 4 and 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SUE: Sensor Unit Emulator. </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-9). Required only in Scenario 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>GSS Host Unit (Windows PC). </text>
+									</run>
+									<run>
+										<text>Computer connected to the ICU which can send telecommands and receive telemetry to/from using the GSS software.</text>
+									</run>
+								</paragraph>
+								<paragraph>
+									<run>
+										<text>Minimum Requirements:</text>
+									</run>
+								</paragraph>
+								<sublist>
+									<itemize>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>Intel Core 2 Quad CPU @2.50 GHz</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>2.00 GB RAM Memory</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>Windows XP Service Pack 3</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>5 USB Ports</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>Notepad++</text>
+												</run>
+											</paragraph>
+										</listItem>
+									</itemize>
+								</sublist>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 SpW-Brick: Star-Dundee SpaceWire-USB Brick Mk2. </text>
+									</run>
+									<run>
+										<text>Star-Dundee STAR-System v2.0 must be installed in Host Unit</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 SpW-cable: SpaceWire cable. </text>
+									</run>
+									<run>
+										<text>Wire that connects SpW-Brick to ICU.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 USB cable. </text>
+									</run>
+									<run>
+										<text>Wire that connects GSS Host Unit to SpW-Brick.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>STEP Harness</text>
+									</run>
+									<run>
+										<text>Wire that connects STEP sensor unit (or equivalent emulator) to ICU. Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-1 Harness</text>
+									</run>
+									<run>
+										<text>Wire that connects HET-EPT-1 sensor unit (or equivalent emulator) to ICU. Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-2 Harness</text>
+									</run>
+									<run>
+										<text>Wire that connects HET-EPT-2 sensor unit (or equivalent emulator) to ICU. Required only in Scenario 1 and 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SIS Harness</text>
+									</run>
+									<run>
+										<text>Wire that connects SIS sensor unit (or equivalent emulator) to ICU. Required only in Scenarios 1, 4 and 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SUE Harness</text>
+									</run>
+									<run>
+										<text>Wire that connects SUE to 3 ICU sensor unit interfaces (HET-EPT1, HET-EPT2 and STEP). Required only in Scenario 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>4 EPD Sensor Harness </text>
+									</run>
+									<run>
+										<text>Wires (UART-USB converters) that connects 4 GSS Host Unit sensor emulators to 4 ICU sensor unit interfaces. Required only in Scenario 2.</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+				<subsection name="SW items used to check tests rightness">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>ICUSW-GSS. </text>
+									</run>
+									<run>
+										<text>It runs in a Windows PC, and it must be configured in the test report (ICOR-10). It can send telecommands and monitor the telemetry received through SpaceWire or serial ports.</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+			</subsection>
+			<subsection name="Environmental needs">
+				<subsection name="Auxiliary HW">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>N/A</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+				<subsection name="Auxiliary devices used">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 Power Supply with integrated multimeter. </text>
+									</run>
+									<run>
+										<text>It must provide at least 26 V and 0.5 A</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>2 Power Supply wires (positive / negative)</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 Power Board</text>
+									</run>
+									<run>
+										<text>To provide the power-on pulse and the power to the ICU</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+			</subsection>
+			<subsection name="Definition of Test Scenarios">
+				<body>
+					<paragraph>
+						<run bold="true">
+							<text>Scenario 1</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Power Supply</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW USB-Brick connected to GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW cable connected to ICU and SpW-Brick</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>HET-EPT-2 sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SIS sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<figureFromFile name="Scenario1" referenceFile="Scenario1.png" caption="Test Scenario 1"/>
+					<paragraph>
+						<run bold="true">
+							<text>Scenario 2</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Power Supply</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW USB-Brick connected to GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW cable connected to ICU and SpW-Brick</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>4 UART cables to connect the ICU with the GSS Host Unit through the USB-Serial converters. The ICUSW GSS application emulates the sensor units behavior.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<figureFromFile name="Scenario2" referenceFile="Scenario2.png" caption="Test Scenario 2"/>
+					<paragraph>
+						<run bold="true">
+							<text>Scenario 3</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Same as scenario 2 but with different (wrong) configuration of SpW brick writing port.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<paragraph>
+						<run bold="true">
+							<text>Scenario 4</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Power Supply</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW USB-Brick connected to GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW cable connected to ICU and SpW-Brick</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>HET-EPT-1 sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>HET-EPT-2 sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>STEP sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SIS sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<figureFromFile name="Scenario4" referenceFile="Scenario4.png" caption="Test Scenario 4"/>
+					<paragraph>
+						<run bold="true">
+							<text>Scenario 5</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Power Supply</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW USB-Brick connected to GSS Host Unit</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SpW cable connected to ICU and SpW-Brick</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SUE</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SIS sensor unit or emulator</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<figureFromFile name="Scenario5" referenceFile="Scenario5.png" caption="Test Scenario 5"/>
+					<paragraph>
+						<run bold="true">
+							<text>Note: </text>
+						</run>
+						<run bold="true">
+							<text>Tests are only needed to be performed over Scenario 4 or Scenario 5.</text>
+						</run>
+					</paragraph>							
+				</body>
+			</subsection>
+		</General>
+		<TestDesign name="Solar Orbiter EPD Application Software Test Design">
+			<General>
+				<subsection name="Tests Identification">
+					<body>
+						<paragraph>
+							<run>
+								<text>Each test case will identify through the sequence FT_SOLO_EPD_ICU_ASW_XXXX_YYYY-NNN, where XXXX is the test identifier and YYYY is the test case identifier and NNN is a numeric identification field. Test procedures shall be identified with the sequence TP_FT_SOLO_EPD_ASW_XXXX_YYYY, with the same criterion.</text>
+							</run>
+						</paragraph>
+					</body>
+				</subsection>
+			</General>
+			<FeaturesToBeTested>
+			</FeaturesToBeTested>
+			<ApproachRefinements>
+			</ApproachRefinements>
+		</TestDesign>
+	</TestingSpecificationDesign>
+	<TestCases>
+		<General>
+		</General>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>A TC 17.1 is sent and a TM 17.2 is received.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text></text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00390" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00390" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For valid commands, 4 TC 17.1 are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not acceptable commands, 4 TC 128.6 (not valid subtype) are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not executable commands, 4 TC (128.3) with bad CRC are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if the HK TM is not received when disabled and received when enabled, and if the period is modified properly.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00150" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>All HK SIDs are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable HK TM SID100 and enable back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Change period of HK TM SID0 and restore period back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00370" />
+			<ValidatingItems name="FU R-00380" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00160" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Events are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable TRANSITION_TO_OPERATIONAL event TM and enable back .</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>o	The test is passed if the event is not received when disabled and received when enabled.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="RE R-00070" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00170" />
+			<ValidatingItems name="IF R-00180" />
+		</TestCase>
+	</TestCases>
+	<TestProcedures>
+		<General>
+		</General>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
+			<ProcedureSteps name="test_connection">
+				<step name="test_connection" id="5" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="1" delay_value="110" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="2" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
+			<ProcedureSteps name="test_connection">
+				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_0" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_1" id="2" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_accept_ack_flag" id="1" prev_step_idref="valid_tc_both_ack_flags" output_idref_from_prev_step="tm_1_7_seqCtrl_1" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_2" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_3" id="1" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_none_ack_flag" id="3" prev_step_idref="valid_tc_exec_ack_flag" output_idref_from_prev_step="tm_1_7_seqCtrl_3" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_4" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_accept_ack_flag" id="5" prev_step_idref="not_acceptable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_4" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_5" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_exec_ack_flag" id="6" prev_step_idref="not_acceptable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_5" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_acceptable_tc_none_ack_flag" id="7" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_both_ack_flags" id="8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_8" id="1" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_accept_ack_flag" id="9" prev_step_idref="not_executable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_8_9C5E_19_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_accept_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_none_ack_flag" id="10" prev_step_idref="not_executable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_1_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_exec_ack_flag" id="11" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_exec_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_11" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" />
+			<ProcedureSteps name="test_connection">
+				<step name="disable_hk_sid_100" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
+							<level2 format="tc_epd_3_6(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<enable_print id="2"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="enable_hk_sid_100" id="2" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_5(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="3" prev_step_idref="enable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_5_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<disable_print id="2"/>
+						<enable_print id="0"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="5" prev_step_idref="change_period_5_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_10_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="7" prev_step_idref="change_period_10_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="disable_print_sid_0" id="8" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="0" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+					<specialPackets>
+						<disable_print id="0"/>
+					</specialPackets>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320" />
+			<ProcedureSteps name="test_connection">
+				<step name="disable_event_1003" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_6(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_hk_sid_1003(v1)"/>
+							<level2_to_level1 export="tc_epd_5_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_asw_no_sensors_no_1003" id="1" prev_step_idref="disable_event_1003" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="enable_event_1003" id="2" prev_step_idref="reset_to_asw_no_sensors_no_1003" output_idref_from_prev_step="tm_5_1_readout_ended" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_5(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_hk_sid_1003(v1)"/>
+							<level2_to_level1 export="tc_epd_5_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_oper_no_sensors" id="3" prev_step_idref="enable_event_1003" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_oper_entry" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4099(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4099_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="11" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+	</TestProcedures>
+	<AnalysisInspectionReview>
+	</AnalysisInspectionReview>
+	<TestPlatformRequirements>
+	</TestPlatformRequirements>
+	<AdditionalInformation>
+	</AdditionalInformation>
+</SVS>
+			
+		
+		

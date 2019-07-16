@@ -1,0 +1,16 @@
+TMTCIFExportExport tc_epd_3_129_change_period_5_seconds_hk_sid_0 {
+	uri := es.uah.aut.srg.tc_epd_3_129_change_period_5_seconds_hk_sid_0;
+	version := v1;
+	from := tc_epd_3_129(v1);
+	to := tc_epd_3_129(v1);
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := PID00007;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 5;
+			toFieldRef := PID00097;
+		};
+	};
+};

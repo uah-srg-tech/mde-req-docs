@@ -1,0 +1,12 @@
+TMTCIFExportExport dummy_tc_export {
+	uri := es.uah.aut.srg.dummy_tc_export;
+	version := v1;
+	from := dummy_tc(v1);
+	to := dummy_tc(v1);
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := dummyField;
+		};
+	};
+};

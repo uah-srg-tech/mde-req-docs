@@ -1,0 +1,24 @@
+TMTCIFExportExport tc_epd_128_32_edac_mem_out_of_range_export_to_level_2 {
+	uri := es.uah.aut.srg.tc_epd_128_32_edac_mem_out_of_range_export_to_level_2;
+	version := v1;
+	from := tc_epd_128_32(v1);
+	to := tc_epd_128_32(v1);
+	TMTCIFExportSettings {
+		TMTCIFExportSettingFromConst {
+			value := 0x50000000;
+			toFieldRef := PID00052;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0;
+			toFieldRef := PID00053;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 60;
+			toFieldRef := PID00067;
+		};
+		TMTCIFExportSettingFromConst {
+			value := 0xf0a5;
+			toFieldRef := PID00068;
+		};
+	};
+};
