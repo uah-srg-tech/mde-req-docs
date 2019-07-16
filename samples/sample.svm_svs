@@ -89,11 +89,12 @@
 			<Purpose>
 			</Purpose>
 			<TestCase name="Sample case 1" />
-			<ProcedureSteps name="test_connection">
-				<step name="test_connection" id="5" mode="continuous">
+			<ProcedureSteps>
+				<step name="sample step 0" id="0" mode="continuous">
 					<inputs>
-						<input_level_1 name="test_connection" ifRef="1" delay_value="110" delay_unit="miliseconds">
-							<app_to_level1 export="tc_sis_17_1_export_to_level_1_ack(v1)" />
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
 						</input_level_1>
 					</inputs>
 				</step>

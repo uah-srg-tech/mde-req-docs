@@ -1,5 +1,5 @@
-TMTCIFExportExport tc_epd_5_X_enable_disable_event_1003 {
-	uri := es.uah.aut.srg.tc_epd_5_X_enable_disable_event_1003;
+TMTCIFExportExport tc_epd_5_X_enable_disable_event_1002 {
+	uri := es.uah.aut.srg.tc_epd_5_X_enable_disable_event_1002;
 	version := v1;
 	from := tc_epd_5_5(v1);
 	to := tc_epd_5_5(v1);
@@ -9,7 +9,7 @@ TMTCIFExportExport tc_epd_5_X_enable_disable_event_1003 {
 			toFieldRef := PID00055;
 		};
 		TMTCIFExportSettingAIFromConst {
-			value := 0x1003;
+			value := 0x1002;
 			toFieldRef := PID00040;
 			toArrayIndex := 0;
 		};

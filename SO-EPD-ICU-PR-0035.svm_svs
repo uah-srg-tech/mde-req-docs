@@ -15,7 +15,7 @@
 		<ApplicableDocument name="AD1" title="Flight Software Requirements Document, EPD (Energetic Particle Detector)" id="SO-EPD-ICU-RS-0002" issue="1" revision="15" />
 		<ApplicableDocument name="AD2" title="EPD TM/TC Interface Control Document" id="SO-EPD-PO-IF-0003" issue="2" revision="10" />
 		<ApplicableDocument name="AD3" title="EPD Sensors Data Interface Control Document" id="SO-EPD-PO-IF-0005" issue="1" revision="6" />
-		<ApplicableDocument name="AD4" title="ICU Software Validation & Verification Plan" id="SO-EPD-ICU-PL-0005" issue="1" revision="3" />
+		<ApplicableDocument name="AD4" title="ICU Software Validation &amp; Verification Plan" id="SO-EPD-ICU-PL-0005" issue="1" revision="3" />
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="Space engineering - Software general requirements" id="ECSS-E-ST-40" issue="3" />
@@ -1165,16 +1165,1024 @@
 			<ValidatingItems name="IF R-00170" />
 			<ValidatingItems name="IF R-00180" />
 		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>A TC 17.1 is sent and a TM 17.2 is received.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text></text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00390" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00390" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For valid commands, 4 TC 17.1 are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not acceptable commands, 4 TC 128.6 (not valid subtype) are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not executable commands, 4 TC (128.3) with bad CRC are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if the HK TM is not received when disabled and received when enabled, and if the period is modified properly.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00150" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>All HK SIDs are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable HK TM SID100 and enable back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Change period of HK TM SID0 and restore period back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00370" />
+			<ValidatingItems name="FU R-00380" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00160" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Events are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable TRANSITION_TO_CONFIGURATION event TM and enable back .</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>o	The test is passed if the event is not received when disabled and received when enabled.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="RE R-00070" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00170" />
+			<ValidatingItems name="IF R-00180" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>A TC 17.1 is sent and a TM 17.2 is received.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text></text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00390" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00390" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For valid commands, 4 TC 17.1 are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not acceptable commands, 4 TC 128.6 (not valid subtype) are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not executable commands, 4 TC (128.3) with bad CRC are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if the HK TM is not received when disabled and received when enabled, and if the period is modified properly.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00150" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>All HK SIDs are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable HK TM SID100 and enable back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Change period of HK TM SID0 and restore period back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00370" />
+			<ValidatingItems name="FU R-00380" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00160" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Events are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable TRANSITION_TO_CONFIGURATION event TM and enable back .</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>o	The test is passed if the event is not received when disabled and received when enabled.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="RE R-00070" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00170" />
+			<ValidatingItems name="IF R-00180" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>A TC 17.1 is sent and a TM 17.2 is received.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text></text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00390" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00390" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For valid commands, 4 TC 17.1 are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not acceptable commands, 4 TC 128.6 (not valid subtype) are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>For not executable commands, 4 TC (128.3) with bad CRC are sent, each one with a different ACK configuration: Both, only acceptance, only execution and none ACK.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if the HK TM is not received when disabled and received when enabled, and if the period is modified properly.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00150" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>All HK SIDs are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable HK TM SID100 and enable back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Change period of HK TM SID0 and restore period back.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="FU R-00370" />
+			<ValidatingItems name="FU R-00380" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00160" />
+		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Events are enabled by default.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable TRANSITION_TO_OPERATIONAL event TM and enable back .</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>o	The test is passed if the event is not received when disabled and received when enabled.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Scenario 1.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItems name="RE R-00070" />
+			<ValidatingItems name="GE R-00010" />
+			<ValidatingItems name="GE R-00030" />
+			<ValidatingItems name="IF R-00170" />
+			<ValidatingItems name="IF R-00180" />
+		</TestCase>
 	</TestCases>
 	<TestProcedures>
 		<General>
 		</General>
-		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17">
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
 			<Identifier>
 				<body>
 					<paragraph>
 						<run>
-							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17</text>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1182,10 +2190,10 @@
 			<Purpose>
 			</Purpose>
 			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
-			<ProcedureSteps name="test_connection">
-				<step name="test_connection" id="5" mode="continuous">
+			<ProcedureSteps>
+				<step name="test_connection" id="0" mode="continuous">
 					<inputs>
-						<input_level_1 name="test_connection" ifRef="1" delay_value="110" delay_unit="miliseconds">
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
 							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
 						</input_level_1>
@@ -1209,12 +2217,12 @@
 			<TestScript>
 			</TestScript>
 		</TestProcedure>
-		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1">
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
 			<Identifier>
 				<body>
 					<paragraph>
 						<run>
-							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1</text>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300</text>
 						</run>
 					</paragraph>
 					<paragraph>
@@ -1227,7 +2235,7 @@
 			<Purpose>
 			</Purpose>
 			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
-			<ProcedureSteps name="test_connection">
+			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
 					<inputs>
 						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
@@ -1440,12 +2448,12 @@
 			<TestScript>
 			</TestScript>
 		</TestProcedure>
-		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC">
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
 			<Identifier>
 				<body>
 					<paragraph>
 						<run>
-							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC</text>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1453,7 +2461,7 @@
 			<Purpose>
 			</Purpose>
 			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" />
-			<ProcedureSteps name="test_connection">
+			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
 					<inputs>
 						<input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
@@ -1583,12 +2591,12 @@
 			<TestScript>
 			</TestScript>
 		</TestProcedure>
-		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER">
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320">
 			<Identifier>
 				<body>
 					<paragraph>
 						<run>
-							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER</text>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1596,12 +2604,12 @@
 			<Purpose>
 			</Purpose>
 			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320" />
-			<ProcedureSteps name="test_connection">
+			<ProcedureSteps>
 				<step name="disable_event_1003" id="0" mode="continuous">
 					<inputs>
 						<input_level_2 name="disable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
 							<level2 format="tc_epd_5_6(v1)"/>
-							<app_to_level2 export="tc_epd_5_X_enable_disable_hk_sid_1003(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1003(v1)"/>
 							<level2_to_level1 export="tc_epd_5_6_export_to_level_1_ack(v1)"/>
 							<level1_to_level0 export="tc_epd_5_6_export_to_level_0(v1)"/>
 						</input_level_2>
@@ -1702,7 +2710,1930 @@
 					<inputs>
 						<input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
 							<level2 format="tc_epd_5_5(v1)"/>
-							<app_to_level2 export="tc_epd_5_X_enable_disable_hk_sid_1003(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1003(v1)"/>
+							<level2_to_level1 export="tc_epd_5_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_oper_no_sensors" id="3" prev_step_idref="enable_event_1003" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_oper_entry" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4099(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4099_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="11" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800" />
+			<ProcedureSteps>
+				<step name="test_connection" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="2" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" />
+			<ProcedureSteps>
+				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_0" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_1" id="2" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_accept_ack_flag" id="1" prev_step_idref="valid_tc_both_ack_flags" output_idref_from_prev_step="tm_1_7_seqCtrl_1" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_2" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_3" id="1" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_none_ack_flag" id="3" prev_step_idref="valid_tc_exec_ack_flag" output_idref_from_prev_step="tm_1_7_seqCtrl_3" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_4" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_accept_ack_flag" id="5" prev_step_idref="not_acceptable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_4" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_5" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_exec_ack_flag" id="6" prev_step_idref="not_acceptable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_5" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_acceptable_tc_none_ack_flag" id="7" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_both_ack_flags" id="8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_8" id="1" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_accept_ack_flag" id="9" prev_step_idref="not_executable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_8_9C5E_19_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_accept_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_none_ack_flag" id="10" prev_step_idref="not_executable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_1_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_exec_ack_flag" id="11" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_exec_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_11" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" />
+			<ProcedureSteps>
+				<step name="disable_hk_sid_100" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
+							<level2 format="tc_epd_3_6(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<enable_print id="2"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="enable_hk_sid_100" id="2" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_5(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="3" prev_step_idref="enable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_5_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<disable_print id="2"/>
+						<enable_print id="0"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="5" prev_step_idref="change_period_5_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_10_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="7" prev_step_idref="change_period_10_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="disable_print_sid_0" id="8" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="0" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+					<specialPackets>
+						<disable_print id="0"/>
+					</specialPackets>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" />
+			<ProcedureSteps>
+				<step name="disable_event_1002" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_event_1002" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_6(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1002(v1)"/>
+							<level2_to_level1 export="tc_epd_5_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_asw_no_sensors_no_1002" id="1" prev_step_idref="disable_event_1002" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="enable_event_1002" id="2" prev_step_idref="reset_to_asw_no_sensors_no_1002" output_idref_from_prev_step="tm_5_1_readout_ended" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_event_1002" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_5(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1002(v1)"/>
+							<level2_to_level1 export="tc_epd_5_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_oper_no_sensors" id="3" prev_step_idref="enable_event_1002" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_conf_entry" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4098(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4098_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="11" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" />
+			<ProcedureSteps>
+				<step name="test_connection" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="2" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" />
+			<ProcedureSteps>
+				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_0" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_1" id="2" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_accept_ack_flag" id="1" prev_step_idref="valid_tc_both_ack_flags" output_idref_from_prev_step="tm_1_7_seqCtrl_1" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_2" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_3" id="1" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_none_ack_flag" id="3" prev_step_idref="valid_tc_exec_ack_flag" output_idref_from_prev_step="tm_1_7_seqCtrl_3" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_4" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_accept_ack_flag" id="5" prev_step_idref="not_acceptable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_4" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_5" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_exec_ack_flag" id="6" prev_step_idref="not_acceptable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_5" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_acceptable_tc_none_ack_flag" id="7" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_both_ack_flags" id="8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_8" id="1" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_accept_ack_flag" id="9" prev_step_idref="not_executable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_8_9C5E_19_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_accept_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_none_ack_flag" id="10" prev_step_idref="not_executable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_1_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_exec_ack_flag" id="11" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_exec_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_11" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" />
+			<ProcedureSteps>
+				<step name="disable_hk_sid_100" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
+							<level2 format="tc_epd_3_6(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<enable_print id="2"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="enable_hk_sid_100" id="2" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_5(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="3" prev_step_idref="enable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_5_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<disable_print id="2"/>
+						<enable_print id="0"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="5" prev_step_idref="change_period_5_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_10_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="7" prev_step_idref="change_period_10_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="disable_print_sid_0" id="8" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="0" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+					<specialPackets>
+						<disable_print id="0"/>
+					</specialPackets>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" />
+			<ProcedureSteps>
+				<step name="disable_event_1002" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_event_1002" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_6(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1002(v1)"/>
+							<level2_to_level1 export="tc_epd_5_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_asw_no_sensors_no_1002" id="1" prev_step_idref="disable_event_1002" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="enable_event_1002" id="2" prev_step_idref="reset_to_asw_no_sensors_no_1002" output_idref_from_prev_step="tm_5_1_readout_ended" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_event_1002" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_5(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1002(v1)"/>
+							<level2_to_level1 export="tc_epd_5_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_oper_no_sensors" id="3" prev_step_idref="enable_event_1002" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_conf_entry" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4098(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4098_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="11" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" />
+			<ProcedureSteps>
+				<step name="test_connection" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="2" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" />
+			<ProcedureSteps>
+				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_0" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_1" id="2" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_accept_ack_flag" id="1" prev_step_idref="valid_tc_both_ack_flags" output_idref_from_prev_step="tm_1_7_seqCtrl_1" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_2" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+						<output_level_2 name="tm_1_7_seqCtrl_3" id="1" ifRef="0">
+							<level2 format="tm_epd_1_7(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="valid_tc_none_ack_flag" id="3" prev_step_idref="valid_tc_exec_ack_flag" output_idref_from_prev_step="tm_1_7_seqCtrl_3" mode="continuous">
+					<inputs>
+						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_17_1_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_4" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_accept_ack_flag" id="5" prev_step_idref="not_acceptable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_4" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_accept_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_2_9C44_seqCtrl_5" id="0" ifRef="0">
+							<level2 format="tm_epd_1_2_40004(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_acceptable_tc_exec_ack_flag" id="6" prev_step_idref="not_acceptable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_5" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1_exec_ack(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_acceptable_tc_none_ack_flag" id="7" mode="continuous">
+					<inputs>
+						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_6_export_to_level_1(v1)" />
+							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_both_ack_flags" id="8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_1(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
+						</output_level_2>
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_8" id="1" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_accept_ack_flag" id="9" prev_step_idref="not_executable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_8_9C5E_19_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_accept_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="not_executable_tc_none_ack_flag" id="10" prev_step_idref="not_executable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_1_seqCtrl_8" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+				</step>
+				<step name="not_executable_tc_exec_ack_flag" id="11" mode="continuous">
+					<inputs>
+						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<level2 format="tc_epd_128_32(v1)"/>
+							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
+							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_exec_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_11" id="0" ifRef="0">
+							<level2 format="tm_epd_1_8_40030(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" />
+			<ProcedureSteps>
+				<step name="disable_hk_sid_100" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
+							<level2 format="tc_epd_3_6(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<enable_print id="2"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="enable_hk_sid_100" id="2" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_5(v1)"/>
+							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
+							<level2_to_level1 export="tc_epd_3_5_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_5_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="3" prev_step_idref="enable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_5_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+					<specialPackets>
+						<disable_print id="2"/>
+						<enable_print id="0"/>
+					</specialPackets>
+				</step>
+				<step name="30_seconds_wait" id="5" prev_step_idref="change_period_5_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
+					<inputs>
+						<input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_3_129(v1)"/>
+							<app_to_level2 export="tc_epd_3_129_change_period_10_seconds_hk_sid_0(v1)"/>
+							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="30_seconds_wait" id="7" prev_step_idref="change_period_10_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+				</step>
+				<step name="disable_print_sid_0" id="8" mode="continuous">
+					<inputs>
+						<input_level_0 name="dummy_packet" ifRef="1" delay_value="0" delay_unit="seconds">
+							<app_to_level0 export="dummy_tc_export(v1)"/>
+						</input_level_0>
+					</inputs>
+					<specialPackets>
+						<disable_print id="0"/>
+					</specialPackets>
+				</step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" />
+			<ProcedureSteps>
+				<step name="disable_event_1003" id="0" mode="continuous">
+					<inputs>
+						<input_level_2 name="disable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_6(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1003(v1)"/>
+							<level2_to_level1 export="tc_epd_5_6_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_5_6_export_to_level_0(v1)"/>
+						</input_level_2>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+					</outputs>
+				</step>
+				<step name="reset_to_asw_no_sensors_no_1003" id="1" prev_step_idref="disable_event_1003" output_idref_from_prev_step="tm_1_7" mode="continuous">
+					<inputs>
+						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
+							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
+						</input_level_1>
+					</inputs>
+					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<output_level_1 name="tm_1_1" id="0" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_1 name="tm_1_7" id="1" ifRef="0">
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
+						</output_level_1>
+						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+							<level2 format="tm_epd_5_1_4354(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+							<level2 format="tm_epd_5_1_4097(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+							<level2 format="tm_epd_5_1_4101(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+							<level2 format="tm_epd_5_1_4360(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+							<level2 format="tm_epd_5_1_4361(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+							<level2 format="tm_epd_5_1_4362(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+							<level2 format="tm_epd_5_1_4363(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
+						</output_level_2>
+						<output_level_2 name="tm_5_1_readout_ended" id="10" ifRef="0">
+							<level2 format="tm_epd_5_1_4364(v1)"/>
+							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
+							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
+							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
+							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
+						</output_level_2>
+					</outputs>
+				</step>
+				<step name="enable_event_1003" id="2" prev_step_idref="reset_to_asw_no_sensors_no_1003" output_idref_from_prev_step="tm_5_1_readout_ended" mode="continuous">
+					<inputs>
+						<input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
+							<level2 format="tc_epd_5_5(v1)"/>
+							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1003(v1)"/>
 							<level2_to_level1 export="tc_epd_5_5_export_to_level_1_ack(v1)"/>
 							<level1_to_level0 export="tc_epd_5_5_export_to_level_0(v1)"/>
 						</input_level_2>
@@ -1818,6 +4749,3 @@
 	<AdditionalInformation>
 	</AdditionalInformation>
 </SVS>
-			
-		
-		
