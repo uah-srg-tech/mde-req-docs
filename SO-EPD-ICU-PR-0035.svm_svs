@@ -2189,7 +2189,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
 					<inputs>
@@ -2234,7 +2234,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
 					<inputs>
@@ -2460,7 +2460,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
 					<inputs>
@@ -2603,7 +2603,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320" />
 			<ProcedureSteps>
 				<step name="disable_event_1003" id="0" mode="continuous">
 					<inputs>
@@ -2830,7 +2830,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
 					<inputs>
@@ -2875,7 +2875,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
 					<inputs>
@@ -3101,7 +3101,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
 					<inputs>
@@ -3244,7 +3244,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" />
 			<ProcedureSteps>
 				<step name="disable_event_1002" id="0" mode="continuous">
 					<inputs>
@@ -3471,7 +3471,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
 					<inputs>
@@ -3516,7 +3516,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
 					<inputs>
@@ -3742,7 +3742,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
 					<inputs>
@@ -3885,7 +3885,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" />
 			<ProcedureSteps>
 				<step name="disable_event_1002" id="0" mode="continuous">
 					<inputs>
@@ -4112,7 +4112,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
 					<inputs>
@@ -4157,7 +4157,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
 					<inputs>
@@ -4383,7 +4383,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
 					<inputs>
@@ -4526,7 +4526,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
-			<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" />
 			<ProcedureSteps>
 				<step name="disable_event_1003" id="0" mode="continuous">
 					<inputs>
