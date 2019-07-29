@@ -77,7 +77,7 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItems name="SampleItem-001" />
+			<ValidatingItem name="SampleItem-001" />
 		</TestCase>
 	</TestCases>
 	<TestProcedures>

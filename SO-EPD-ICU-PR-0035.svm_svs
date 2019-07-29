@@ -892,10 +892,10 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00390" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00390" />
+			<ValidatingItem name="FU R-00390" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00390" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
 			<Identifier>
@@ -981,9 +981,9 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00150" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00150" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
 			<Identifier>
@@ -1069,11 +1069,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00370" />
-			<ValidatingItems name="FU R-00380" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00160" />
+			<ValidatingItem name="FU R-00370" />
+			<ValidatingItem name="FU R-00380" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00160" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320">
 			<Identifier>
@@ -1152,11 +1152,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="RE R-00070" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00170" />
-			<ValidatingItems name="IF R-00180" />
+			<ValidatingItem name="RE R-00070" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00170" />
+			<ValidatingItem name="IF R-00180" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
 			<Identifier>
@@ -1221,10 +1221,10 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00390" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00390" />
+			<ValidatingItem name="FU R-00390" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00390" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
 			<Identifier>
@@ -1310,9 +1310,9 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00150" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00150" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
 			<Identifier>
@@ -1398,11 +1398,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00370" />
-			<ValidatingItems name="FU R-00380" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00160" />
+			<ValidatingItem name="FU R-00370" />
+			<ValidatingItem name="FU R-00380" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00160" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920">
 			<Identifier>
@@ -1481,11 +1481,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="RE R-00070" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00170" />
-			<ValidatingItems name="IF R-00180" />
+			<ValidatingItem name="RE R-00070" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00170" />
+			<ValidatingItem name="IF R-00180" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
 			<Identifier>
@@ -1550,10 +1550,10 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00390" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00390" />
+			<ValidatingItem name="FU R-00390" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00390" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
 			<Identifier>
@@ -1639,9 +1639,9 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00150" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00150" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
 			<Identifier>
@@ -1727,11 +1727,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00370" />
-			<ValidatingItems name="FU R-00380" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00160" />
+			<ValidatingItem name="FU R-00370" />
+			<ValidatingItem name="FU R-00380" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00160" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420">
 			<Identifier>
@@ -1810,11 +1810,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="RE R-00070" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00170" />
-			<ValidatingItems name="IF R-00180" />
+			<ValidatingItem name="RE R-00070" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00170" />
+			<ValidatingItem name="IF R-00180" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
 			<Identifier>
@@ -1879,10 +1879,10 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00390" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00390" />
+			<ValidatingItem name="FU R-00390" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00390" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
 			<Identifier>
@@ -1968,9 +1968,9 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00150" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00150" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">
 			<Identifier>
@@ -2056,11 +2056,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="FU R-00370" />
-			<ValidatingItems name="FU R-00380" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00160" />
+			<ValidatingItem name="FU R-00370" />
+			<ValidatingItem name="FU R-00380" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00160" />
 		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920">
 			<Identifier>
@@ -2139,11 +2139,11 @@
 					</paragraph>
 				</body>
 			</InterfaceDependencies>
-			<ValidatingItems name="RE R-00070" />
-			<ValidatingItems name="GE R-00010" />
-			<ValidatingItems name="GE R-00030" />
-			<ValidatingItems name="IF R-00170" />
-			<ValidatingItems name="IF R-00180" />
+			<ValidatingItem name="RE R-00070" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00170" />
+			<ValidatingItem name="IF R-00180" />
 		</TestCase>
 	</TestCases>
 	<TestProcedures>
