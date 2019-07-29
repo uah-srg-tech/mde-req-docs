@@ -46,4 +46,10 @@ TMTCIFExportExport EPD_PUS_TC_TO_CCSDS_TC {
 			toFieldRef := PacketLength;
 		};
 	};
+	TMTCIFExportActivateDICs {
+		TMTCIFExportDIC {
+			id := 0;
+			DICRef := CRC;
+		};
+	};
 };

@@ -33,4 +33,7 @@
       <fieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../tcFormats/EPD_PUS_TC.xmi#//@VSField.0"/>
     </settingFromField>
   </settings>
+  <activateDICs>
+    <DIC id="0" DICRef="CRC"/>
+  </activateDICs>
 </tmtcif:TMTCIFExportExport>
