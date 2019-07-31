@@ -1,0 +1,6 @@
+portConfig dummy_port {
+	uri := es.uah.aut.srg.dummy_port;
+	version := v1;
+	dummyPort {
+	};
+};

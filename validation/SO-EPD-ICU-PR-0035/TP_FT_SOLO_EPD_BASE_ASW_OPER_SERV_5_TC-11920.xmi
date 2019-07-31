@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gss:GSSTestProcTestProc xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/test_proc" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" uri="es.uah.aut.srg.TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" version="v1">
+      <step name="disable_event_1003" id="0" mode="continuous">
+        <inputs>
+          <input_level_2 name="disable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_5_TC/tc_epd_5_X_enable_disable_event_1003.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_5_6_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_5_6_export_to_level_0.xmi#/"/>
+          </input_level_2>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+      </step>
+      <step name="reset_to_asw_no_sensors_no_1003" id="1" mode="continuous" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output_level_1.1">
+        <inputs>
+          <input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level1 href="SO-EPD-ICU-PR-0035/common_tcs/tc_epd_128_3_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_128_3_export_to_level_0.xmi#/"/>
+          </input_level_1>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4354_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4354_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4354_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4101_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4097_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4097_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4097_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4101_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4360_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4360_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4360_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4361_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4361_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4361_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4362_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4362_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4362_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4363_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4363_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4363_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_readout_ended" id="10" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4364_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4364_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4364_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+      </step>
+      <step name="enable_event_1003" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_1.10">
+        <inputs>
+          <input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_5_TC/tc_epd_5_X_enable_disable_event_1003.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_5_5_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_5_5_export_to_level_0.xmi#/"/>
+          </input_level_2>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+      </step>
+      <step name="reset_to_oper_no_sensors" id="3" mode="continuous" prev_step_idref="//@step.2" output_idref_from_prev_step="//@step.2/@outputs/@output_level_1.1">
+        <inputs>
+          <input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level1 href="SO-EPD-ICU-PR-0035/common_tcs/tc_epd_128_3_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_128_3_export_to_level_0.xmi#/"/>
+          </input_level_1>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4354_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4354_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4354_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4101_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4097_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4097_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4097_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4101_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_oper_entry" id="6" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4099_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4099_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4099_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4360_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4360_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4360_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4361_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4361_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4361_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4362_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4362_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4362_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4363_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4363_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4363_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_2 name="tm_5_1_readout_ended" id="11" ifRef="0">
+            <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.xmi#/"/>
+            <level2_filter apply_def_filter="no">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4364_filter_level_2.xmi#/"/>
+            </level2_filter>
+            <level2_from_level1 href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_5_1_4364_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4364_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_2>
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+      </step>
+</gss:GSSTestProcTestProc>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gss:GSSCampaignCampaign xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/campaign" name="SO-EPD-ICU-PR-0035" uri="es.uah.aut.srg.SO-EPD-ICU-PR-0035" version="v1">
+	<Scenario>
+		<environment href="epd.xmi#/"/>
+		<scenarioId href="epd.xmi#//@scenario.0"/>
+	</Scenario>
+	<Tests>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920.xmi#/"/>
+		</TestCase>
+	</Tests>
+</gss:GSSCampaignCampaign>

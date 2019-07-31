@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSIfacePortConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/iface" name="dummy_port" uri="es.uah.aut.srg.dummy_port" version="v1">
+  <portConfig xsi:type="gss:GSSIfaceDummyPort"/>
+</gss:GSSIfacePortConfig>

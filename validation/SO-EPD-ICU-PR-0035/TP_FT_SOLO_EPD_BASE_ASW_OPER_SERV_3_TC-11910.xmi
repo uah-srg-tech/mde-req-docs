@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gss:GSSTestProcTestProc xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/test_proc" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" uri="es.uah.aut.srg.TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" version="v1">
+      <step name="disable_hk_sid_100" id="0" mode="continuous">
+        <inputs>
+          <input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
+            <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_X_enable_disable_hk_sid_100.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_6_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_6_export_to_level_0.xmi#/"/>
+          </input_level_2>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+        <specialPackets>
+          <enable_print id="2"/>
+        </specialPackets>
+      </step>
+      <step name="30_seconds_wait" id="1" mode="continuous" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output_level_1.1">
+        <inputs>
+          <input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+            <app_to_level0 href="SO-EPD-ICU-PR-0035/common_tcs/dummy_tc_export.xmi#/"/>
+          </input_level_0>
+        </inputs>
+      </step>
+      <step name="enable_hk_sid_100" id="2" mode="continuous">
+        <inputs>
+          <input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_X_enable_disable_hk_sid_100.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_5_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_5_export_to_level_0.xmi#/"/>
+          </input_level_2>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+      </step>
+      <step name="30_seconds_wait" id="3" mode="continuous" prev_step_idref="//@step.2" output_idref_from_prev_step="//@step.2/@outputs/@output_level_1.1">
+        <inputs>
+          <input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+            <app_to_level0 href="SO-EPD-ICU-PR-0035/common_tcs/dummy_tc_export.xmi#/"/>
+          </input_level_0>
+        </inputs>
+      </step>
+      <step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
+        <inputs>
+          <input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_129_change_period_5_seconds_hk_sid_0.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_129_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_129_export_to_level_0.xmi#/"/>
+          </input_level_2>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+        <specialPackets>
+          <enable_print id="0"/>
+          <disable_print id="2"/>
+        </specialPackets>
+      </step>
+      <step name="30_seconds_wait" id="5" mode="continuous" prev_step_idref="//@step.4" output_idref_from_prev_step="//@step.4/@outputs/@output_level_1.1">
+        <inputs>
+          <input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+            <app_to_level0 href="SO-EPD-ICU-PR-0035/common_tcs/dummy_tc_export.xmi#/"/>
+          </input_level_0>
+        </inputs>
+      </step>
+      <step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
+        <inputs>
+          <input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_129_change_period_10_seconds_hk_sid_0.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_129_export_to_level_1_ack.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_129_export_to_level_0.xmi#/"/>
+          </input_level_2>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output_level_1 name="tm_1_1" id="0" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+          <output_level_1 name="tm_1_7" id="1" ifRef="0">
+            <level1_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
+            </level1_filter>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
+            </level0_filter>
+          </output_level_1>
+        </outputs>
+      </step>
+      <step name="30_seconds_wait" id="7" mode="continuous" prev_step_idref="//@step.6" output_idref_from_prev_step="//@step.6/@outputs/@output_level_1.1">
+        <inputs>
+          <input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
+            <app_to_level0 href="SO-EPD-ICU-PR-0035/common_tcs/dummy_tc_export.xmi#/"/>
+          </input_level_0>
+        </inputs>
+      </step>
+      <step name="disable_print_sid_0" id="8" mode="continuous">
+        <inputs>
+          <input_level_0 name="dummy_packet" ifRef="1" delay_value="0" delay_unit="seconds">
+            <app_to_level0 href="SO-EPD-ICU-PR-0035/common_tcs/dummy_tc_export.xmi#/"/>
+          </input_level_0>
+        </inputs>
+        <specialPackets>
+          <disable_print id="0"/>
+        </specialPackets>
+      </step>
+</gss:GSSTestProcTestProc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSProtocolPacketsProtocolPackets xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/protocol_packets" name="protocol_packets" uri="es.uah.aut.srg.protocol_packets" version="v1">
+  <ProtocolPacket name="17.1" ifRef="0" levelRef="2">
+    <export href="../ccsds_solo/exportsToLevel1/tc_epd_17_1_export_to_level_1_ack.xmi#/"/>
+    <format href="../ccsds_solo/tcFormats/tc_epd_17_1.xmi#/"/>
+  </ProtocolPacket>
+  <ProtocolPacket name="128.1" ifRef="0" levelRef="2">
+    <export href="../ccsds_solo/exportsToLevel1/tc_epd_128_1_export_to_level_1_ack.xmi#/"/>
+    <format href="../ccsds_solo/tcFormats/tc_epd_128_1.xmi#/"/>
+  </ProtocolPacket>
+  <ProtocolPacket name="128.4" ifRef="0" levelRef="2">
+    <export href="../ccsds_solo/exportsToLevel1/tc_epd_128_4_export_to_level_1_ack.xmi#/"/>
+    <format href="../ccsds_solo/tcFormats/tc_epd_128_4.xmi#/"/>
+  </ProtocolPacket>
+  <ProtocolPacket name="128.5" ifRef="0" levelRef="2">
+    <export href="../ccsds_solo/exportsToLevel1/tc_epd_128_5_export_to_level_1_ack.xmi#/"/>
+    <format href="../ccsds_solo/tcFormats/tc_epd_128_5.xmi#/"/>
+  </ProtocolPacket>
+</gss:GSSProtocolPacketsProtocolPackets>

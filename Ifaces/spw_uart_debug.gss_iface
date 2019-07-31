@@ -1,0 +1,29 @@
+portConfig spw_uart_debug {
+	uri := es.uah.aut.srg.spw_uart_debug;
+	version := v1;
+	uartPort {
+		number :=  5;
+		baudRate := 115200bauds;
+		parity := NO;
+		dataBits := 8bits;
+		stopBits := 1bit;
+		inputQueueSize := 512;
+		outputQueueSize := -1;
+		uartProtocol {
+			unit := bytes;
+			power := no;
+			constSize {
+				bytes := 7;
+				bits := 0;
+			};
+			sizeFieldOffset {
+				bytes := 4;
+				bits := 0;
+			};
+			sizeFieldTrim {
+				bytes := 2;
+				bits := 0;
+			};
+		};
+	};
+};
