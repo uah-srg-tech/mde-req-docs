@@ -4,7 +4,7 @@ TMTCIFFilterMintermFilter tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2 {
 	formatFile := tm_epd_1_2_40004(v1);
 	
 	TMTCIFFilterBoolVar {
-		id := 1;
+		id := 0;
 		name := NID00002_C005;
 		constantType := hex;
 		FieldRef := NID00002;
@@ -16,7 +16,7 @@ TMTCIFFilterMintermFilter tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2 {
 		};
 	};
 	TMTCIFFilterBoolVar {
-		id := 0;
+		id := 1;
 		name := NID00003_40004;
 		constantType := decimal;
 		FieldRef := NID00003;
