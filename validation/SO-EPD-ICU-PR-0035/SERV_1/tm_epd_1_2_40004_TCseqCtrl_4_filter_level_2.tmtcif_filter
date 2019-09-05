@@ -5,18 +5,6 @@ TMTCIFFilterMintermFilter tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2 {
 	
 	TMTCIFFilterBoolVar {
 		id := 0;
-		name := NID00001_40004;
-		constantType := decimal;
-		FieldRef := NID00001;
-		TMTCIFFilterFieldOp {
-			type := equal;
-		};
-		TMTCIFFilterConstant {
-			value := 40004;
-		};
-	};
-	TMTCIFFilterBoolVar {
-		id := 1;
 		name := NID00002_C004;
 		constantType := hex;
 		FieldRef := NID00002;
@@ -25,6 +13,18 @@ TMTCIFFilterMintermFilter tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2 {
 		};
 		TMTCIFFilterConstant {
 			value := 0xC004;
+		};
+	};
+	TMTCIFFilterBoolVar {
+		id := 1;
+		name := NID00003_40004;
+		constantType := decimal;
+		FieldRef := NID00003;
+		TMTCIFFilterFieldOp {
+			type := equal;
+		};
+		TMTCIFFilterConstant {
+			value := 40004;
 		};
 	};
 	TMTCIFFilterMinterm { 
