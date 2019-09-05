@@ -3,6 +3,7 @@
       <step name="disable_hk_sid_100" id="0" mode="continuous">
         <inputs>
           <input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
+            <level2 href="../ccsds_solo/tcFormats/tc_epd_3_6.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_X_enable_disable_hk_sid_100.xmi#/"/>
             <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_6_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_6_export_to_level_0.xmi#/"/>
@@ -27,7 +28,7 @@
           </output_level_1>
         </outputs>
         <specialPackets>
-          <enable_print id="2"/>
+          <enable_print id="1"/>
         </specialPackets>
       </step>
       <step name="30_seconds_wait" id="1" mode="continuous" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output_level_1.1">
@@ -40,6 +41,7 @@
       <step name="enable_hk_sid_100" id="2" mode="continuous">
         <inputs>
           <input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <level2 href="../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_X_enable_disable_hk_sid_100.xmi#/"/>
             <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_5_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_5_export_to_level_0.xmi#/"/>
@@ -74,6 +76,7 @@
       <step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
         <inputs>
           <input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <level2 href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_129_change_period_5_seconds_hk_sid_0.xmi#/"/>
             <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_129_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_129_export_to_level_0.xmi#/"/>
@@ -99,7 +102,7 @@
         </outputs>
         <specialPackets>
           <enable_print id="0"/>
-          <disable_print id="2"/>
+          <disable_print id="1"/>
         </specialPackets>
       </step>
       <step name="30_seconds_wait" id="5" mode="continuous" prev_step_idref="//@step.4" output_idref_from_prev_step="//@step.4/@outputs/@output_level_1.1">
@@ -112,6 +115,7 @@
       <step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
         <inputs>
           <input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <level2 href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_3_TC/tc_epd_3_129_change_period_10_seconds_hk_sid_0.xmi#/"/>
             <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_3_129_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_3_129_export_to_level_0.xmi#/"/>
