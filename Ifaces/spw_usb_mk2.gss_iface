@@ -1,0 +1,15 @@
+portConfig spw_mk2 {
+	uri := es.uah.aut.srg.spw_mk2;
+	version := v1;
+	spwPort {
+		type := mk2;
+		link := 1;
+		writingPort := 0x48;
+		readingPort {
+			port := 0x38;
+			};
+		readingPort {
+			port := 0x49;
+		};
+	};
+};
