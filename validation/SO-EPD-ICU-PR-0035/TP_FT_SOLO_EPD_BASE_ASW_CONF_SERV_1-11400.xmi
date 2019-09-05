@@ -52,7 +52,7 @@
           </input_level_1>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output_level_2 name="tm_1_1_seqCtrl_2" id="0" ifRef="0">
+          <output_level_2 name="tm_1_1_seqCtrl_1" id="0" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="SO-EPD-ICU-PR-0035/SERV_1/tm_epd_1_X_TCSeqCtrl_1_filter_level_2.xmi#/"/>
