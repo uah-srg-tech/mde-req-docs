@@ -2454,7 +2454,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<enable_print id="2"/>
+						<enable_print id="1"/>
 					</specialPackets>
 				</step>
 				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
@@ -2511,7 +2511,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<disable_print id="2"/>
+						<disable_print id="1"/>
 						<enable_print id="0"/>
 					</specialPackets>
 				</step>
@@ -3095,7 +3095,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<enable_print id="2"/>
+						<enable_print id="1"/>
 					</specialPackets>
 				</step>
 				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
@@ -3152,7 +3152,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<disable_print id="2"/>
+						<disable_print id="1"/>
 						<enable_print id="0"/>
 					</specialPackets>
 				</step>
@@ -3736,7 +3736,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<enable_print id="2"/>
+						<enable_print id="1"/>
 					</specialPackets>
 				</step>
 				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
@@ -3793,7 +3793,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<disable_print id="2"/>
+						<disable_print id="1"/>
 						<enable_print id="0"/>
 					</specialPackets>
 				</step>
@@ -4377,7 +4377,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<enable_print id="2"/>
+						<enable_print id="1"/>
 					</specialPackets>
 				</step>
 				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
@@ -4434,7 +4434,7 @@
 						</output_level_1>
 					</outputs>
 					<specialPackets>
-						<disable_print id="2"/>
+						<disable_print id="1"/>
 						<enable_print id="0"/>
 					</specialPackets>
 				</step>
