@@ -1928,6 +1928,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output_level_2 name="tm_1_1_seqCtrl_9" id="&quot;0&quot;" ifRef="&quot;0&quot;">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_1_1.tmtcif_format#//@element"/>
+>>>>>>> branch 'master' of git@github.com:uah-srg-tech/mde-req-docs.git
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="SO-EPD-ICU-PR-0035/SERV_1/tm_epd_1_X_TCSeqCtrl_9_filter_level_2.tmtcif_filter#//@element"/>
             </level2_filter>
