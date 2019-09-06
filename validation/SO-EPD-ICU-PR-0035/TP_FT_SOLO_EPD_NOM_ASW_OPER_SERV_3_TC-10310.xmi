@@ -28,7 +28,7 @@
           </output_level_1>
         </outputs>
         <specialPackets>
-          <enable_print id="1"/>
+          <enable_print id="2"/>
         </specialPackets>
       </step>
       <step name="30_seconds_wait" id="1" mode="continuous" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output_level_1.1">
@@ -102,7 +102,7 @@
         </outputs>
         <specialPackets>
           <enable_print id="0"/>
-          <disable_print id="1"/>
+          <disable_print id="2"/>
         </specialPackets>
       </step>
       <step name="30_seconds_wait" id="5" mode="continuous" prev_step_idref="//@step.4" output_idref_from_prev_step="//@step.4/@outputs/@output_level_1.1">
