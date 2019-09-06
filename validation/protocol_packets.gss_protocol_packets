@@ -1,0 +1,32 @@
+GSSProtocolPacketsProtocolPackets protocol_packets {
+	version := v1;
+	uri := es.uah.aut.srg.protocol_packets;
+	GSSProtocolPacketsProtocolPacket {
+		name := "17.1";
+		ifRef := 0;
+		levelRef := 2;
+		export := tc_epd_17_1_export_to_level_1_ack(v1);
+		format := tc_epd_17_1(v1);
+	};
+	GSSProtocolPacketsProtocolPacket {
+		name := "128.1";
+		ifRef := 0;
+		levelRef := 2;
+		export := tc_epd_128_1_export_to_level_1_ack(v1);
+		format := tc_epd_128_1(v1);
+	};
+	GSSProtocolPacketsProtocolPacket {
+		name := "128.4";
+		ifRef := 0;
+		levelRef := 2;
+		export := tc_epd_128_4_export_to_level_1_ack(v1);
+		format := tc_epd_128_4(v1);
+	};
+	GSSProtocolPacketsProtocolPacket {
+		name := "128.5";
+		ifRef := 0;
+		levelRef := 2;
+		export := tc_epd_128_5_export_to_level_1_ack(v1);
+		format := tc_epd_128_5(v1);
+	};
+};
