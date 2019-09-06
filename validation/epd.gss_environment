@@ -1,0 +1,193 @@
+GSSEnvironmentEnvironment epd {
+	uri := es.uah.aut.srg.epd;
+	version := v1;
+	GSSEnvironmentScenario scenario1 {
+		GSSEnvironmentOptions {
+			GSSEnvironmentInfo { 
+				test_campaign := "epd_any_model";
+				version := 3.4;
+				date := 2019/02/11; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSEnvironmentInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSEnvironmentPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSEnvironmentDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSEnvironmentProtocols {
+			GSSEnvironmentProtocol {
+				id := 0;
+				name := CCSDS;
+				typeLevel := 1;
+				typeOffset := 7;
+				subtypeOffset := 8;
+			};
+		};
+		GSSEnvironmentInterfaces {
+			ProtocolPacketsFile := protocol_packets(v1);
+			GSSEnvironmentMainInterface {
+				id := 0;
+				name := "SpW"; 
+				ifType := uart;
+				ifConfig := spw_uart_debug(v1); 
+				ioType := in_out;
+				protocolID := CCSDS;
+				GSSEnvironmentLevelInOut {
+					id := 0;
+					name := "CCSDS";
+					TMformat := CCSDS_TM(v1);
+					TCformat := CCSDS_TC(v1);
+					inputFilter := EPD_CCSDS_TM(v1);
+				};
+				GSSEnvironmentLevelInOut {
+					id := 1;
+					name := "EPD-PUS";
+					TMformat := EPD_PUS_TM(v1);
+					TCformat := EPD_PUS_TC(v1);
+					inputFilter := EPD_PUS_TM(v1);
+					export_to_prev_Level := EPD_PUS_TC_TO_CCSDS_TC(v1);
+					import_from_prev_Level := EPD_PUS_TM_FROM_CCSDS_TM(v1);
+				};
+			};
+			GSSEnvironmentInterface {
+				id := 1;
+				name := "dummy";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSEnvironmentLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := DUMMY(v1);
+				};
+			};
+		};
+		GSSEnvironmentSpecialPackets {
+			GSSEnvironmentSpecialPacket {
+				status := enabled;
+				name := "3.25 SID0";
+				id := 0;
+				ifRef := 0;
+				levels := 3;
+				levelRef := 1;
+				inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+				GSSEnvironmentUpperLevels {
+					GSSEnvironmentUpperLevel {
+						level := _2;
+						TMformat := tm_epd_3_25_0_formulas(v1);
+						inputFilter := tm_epd_3_25_0_filter_level_2(v1);
+						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+					};
+				};
+				GSSEnvironmentPrintingData {
+					printStatus := disabled;
+					GSSEnvironmentStructuredData {
+						levelRef := 2;
+						firstField := 1;
+					};
+				};
+				GSSEnvironmentPeriod {
+					min_value := 9900;
+					min_unit := miliseconds;
+					max_value := 10100;
+					max_unit := miliseconds;  
+				};
+			};
+		};
+		GSSEnvironmentPeriodicTCs {
+			GSSEnvironmentPeriodicTCLevel1 {
+				name := "periodic_test_connection";
+				id := 0;
+				ifRef := 0;
+				period_value := 1500;
+				period_unit := miliseconds;
+				app_to_level1 := tc_epd_17_1_export_to_level_1_ack(v1);
+				level1_to_level0 := tc_epd_17_1_export_to_level_0(v1);
+			};
+		};
+		GSSEnvironmentGlobalVars { 
+			GSSEnvironmentGlobalVar {
+				name := "sequence_number";
+				id := 0;
+				type := uint;
+				initial_value := 0;
+				GSSEnvironmentReferenceField {
+					type := tc;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 11; 
+					offset := 0;
+					size := 0;
+				};
+			};
+			GSSEnvironmentGlobalVar {
+				name := "enter_mode";
+				id := 1;
+				type := uint;
+				initial_value := 0;
+				GSSEnvironmentReferenceField {
+					type := tm;
+					ifRef := 0;
+					level := 1;
+					fieldRef := 11; 
+					offset := 0;
+					size := 4;
+				};
+			};
+			GSSEnvironmentGlobalVar {
+				name := "dummy_field";
+				id := 2;
+				type := uint;
+				initial_value := 0;
+				GSSEnvironmentReferenceField {
+					type := tc;
+					ifRef := 1;
+					level := 0;
+					fieldRef := 0; 
+					offset := 0;
+					size := 0;
+				};
+			};
+		};
+		GSSEnvironmentMonitors {
+			GSSEnvironmentModify {
+				name := "IncSequenceNumber";
+				type := increment;
+				value := 1;
+				GSSEnvironmentGVFiltered {
+					GlobalVarRef := "sequence_number";
+				};
+			};
+			GSSEnvironmentAlarmVal {
+				name := "TransTo";
+				type := alarm1;
+				GSSEnvironmentGVFiltered {
+					GlobalVarRef := "enter_mode";
+					filter := tm_epd_5_1_transition_to(v1);
+				};
+			};
+			GSSEnvironmentAlarmMsg {
+				name := "DummyMessage1";
+				type := alarm1;
+				text := "Off+On ICU";
+				GSSEnvironmentGVFiltered {
+					GlobalVarRef := "dummy_field";
+					filter := dummy_message_1(v1);
+				};
+			};
+		};
+	};
+};

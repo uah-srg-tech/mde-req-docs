@@ -1,0 +1,293 @@
+TMTCIFFormatFormat tm_epd_3_25_0_formulas {
+	//YID52041: TM 3,25 HK SID0 to OBC
+	uri := es.uah.aut.srg.tm_epd_3_25_0_formulas;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	TMTCIFFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 22;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00030";
+		description := "Structure ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NID00068";
+		description := "EPD Mode and LCL";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 3;
+		pfid := 0;
+		name := "NID00069";
+		description := "Current S1";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096/11.067*1000";
+			intercept := "-0.093/11.067*1000"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 4;
+		pfid := 0;
+		name := "NID00070";
+		description := "Current S2";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096/6.243*1000";
+			intercept := "-0.003/6.243*1000"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 5;
+		pfid := 0;
+		name := "NID00071";
+		description := "Current S3";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096/11.067*1000";
+			intercept := "-0.093/11.067*1000"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 6;
+		pfid := 0;
+		name := "NID00072";
+		description := "Current S4";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 8;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096/11.067*1000";
+			intercept := "-0.093/11.067*1000"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 7;
+		pfid := 0;
+		name := "NID00080";
+		description := "Voltage S1";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 10;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096*(30100+5110)/(5110*1.0095)";
+			intercept := "0"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 8;
+		pfid := 0;
+		name := "NID00081";
+		description := "Voltage S2";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 12;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096*(30100+5110)/(5110*1.0095)";
+			intercept := "0"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 9;
+		pfid := 0;
+		name := "NID00082";
+		description := "Voltage S3";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 14;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096*(30100+5110)/(5110*1.0095)";
+			intercept := "0"; 
+		};
+	};
+	TMTCIFFormatCSFormulaField {
+		fid := 10;
+		pfid := 0;
+		name := "NID00083";
+		description := "Voltage S4";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 16;
+			bits := 0;
+		};
+		TMTCIFFormatFormula {
+			slope := "4.91/4096*(30100+5110)/(5110*1.0095)";
+			intercept := "0"; 
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 11;
+		pfid := 0;
+		name := "NID00051";
+		description := "SpW Errors";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 18;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 12;
+		pfid := 0;
+		name := "NID00108";
+		description := "TC Errors";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 19;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 13;
+		pfid := 0;
+		name := "NID00061";
+		description := "Burst Flags";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 20;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 14;
+		pfid := 0;
+		name := "NID00112";
+		description := "TC accepted";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 21;
+			bits := 0;
+		};
+	};
+};

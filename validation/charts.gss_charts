@@ -1,0 +1,10 @@
+GSSChartsCharts charts {
+	uri := es.uah.aut.srg.charts;
+	version := v1;
+	GSSChartsChart {
+		id := 0;
+		name := "Voltage0";
+		y_units := volts;
+		y_max := 30;
+	};
+};

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSChartsCharts xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/charts" name="charts" uri="es.uah.aut.srg.charts" version="v1">
+  <Chart name="Voltage0" id="0" y_units="volts" y_max="30"/>
+</gss:GSSChartsCharts>

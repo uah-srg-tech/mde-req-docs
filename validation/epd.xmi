@@ -49,48 +49,6 @@
         </printingData>
         <period min_value="9900" min_unit="miliseconds" max_value="10100" max_unit="miliseconds"/>
       </SpecialPacket>
-      <SpecialPacket status="enabled" name="3.25 SID100" id="1" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_3_25_100_filter_level_1.xmi#/"/>
-        <UpperLevels>
-          <UpperLevel level="_2">
-            <TMformat href="../ccsds_solo/tmFormats/tm_epd_3_25_100.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_3_25_100_filter_level_2.xmi#/"/>
-            <import_from_prev_Level href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
-          </UpperLevel>
-        </UpperLevels>
-        <printingData>
-          <structuredData levelRef="2" firstField="1"/>
-        </printingData>
-        <period min_value="900" min_unit="miliseconds" max_value="1100" max_unit="miliseconds"/>
-      </SpecialPacket>
-      <SpecialPacket status="enabled" name="3.25 SID101" id="2" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_3_25_101_filter_level_1.xmi#/"/>
-        <UpperLevels>
-          <UpperLevel level="_2">
-            <TMformat href="../ccsds_solo/tmFormats/tm_epd_3_25_101.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_3_25_101_filter_level_2.xmi#/"/>
-            <import_from_prev_Level href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
-          </UpperLevel>
-        </UpperLevels>
-        <printingData>
-          <structuredData levelRef="2" firstField="1"/>
-        </printingData>
-        <period min_value="59400" min_unit="miliseconds" max_value="60600" max_unit="miliseconds"/>
-      </SpecialPacket>
-      <SpecialPacket status="enabled" name="3.25 SID110" id="3" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_3_25_110_filter_level_1.xmi#/"/>
-        <UpperLevels>
-          <UpperLevel level="_2">
-            <TMformat href="../ccsds_solo/tmFormats/tm_epd_3_25_110.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_3_25_110_filter_level_2.xmi#/"/>
-            <import_from_prev_Level href="../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
-          </UpperLevel>
-        </UpperLevels>
-        <printingData>
-          <structuredData levelRef="2" firstField="1"/>
-        </printingData>
-        <period min_value="59400" min_unit="miliseconds" max_value="60600" max_unit="miliseconds"/>
-      </SpecialPacket>
     </SpecialPackets>
     <PeriodicTCs>
       <PeriodicTC_level_1 name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
