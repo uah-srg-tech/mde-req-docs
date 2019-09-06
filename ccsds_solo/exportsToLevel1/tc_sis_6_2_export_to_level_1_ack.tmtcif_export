@@ -8,7 +8,7 @@ TMTCIFExportExport tc_sis_6_2_export_to_level_1_ack {
 		TMTCIFExportSizeInBits {
 			id := 0;
 			from := ApplicationData;
-			addSize := 5;
+			addSize := 0;
 			unit := bytes;
 		};
 	};

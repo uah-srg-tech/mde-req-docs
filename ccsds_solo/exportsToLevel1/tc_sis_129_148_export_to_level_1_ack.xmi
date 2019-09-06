@@ -3,7 +3,7 @@
   <from href="../tcFormats/tc_sis_129_148.xmi#/"/>
   <to href="../tcFormats/EPD_PUS_TC.xmi#/"/>
   <Sizes>
-    <sizeInBits id="0" addSize="5" unit="bytes" from="ApplicationData"/>
+    <sizeInBits id="0" addSize="0" unit="bytes" from="ApplicationData"/>
   </Sizes>
   <settings>
     <settingFromConst value="0">
