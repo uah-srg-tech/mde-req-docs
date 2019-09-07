@@ -106,6 +106,126 @@ GSSEnvironmentEnvironment epd {
 					max_unit := miliseconds;  
 				};
 			};
+			GSSEnvironmentSpecialPacket {
+				status := enabled;
+				name := "3.25 SID10";
+				id := 1;
+				ifRef := 0;
+				levels := 3;
+				levelRef := 1;
+				inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+				GSSEnvironmentUpperLevels {
+					GSSEnvironmentUpperLevel {
+						level := _2;
+						TMformat := tm_epd_3_25_10(v1);
+						inputFilter := tm_epd_3_25_10_filter_level_2(v1);
+						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+					};
+				};
+				GSSEnvironmentPrintingData {
+					printStatus := disabled;
+					GSSEnvironmentStructuredData {
+						levelRef := 2;
+						firstField := 1;
+					};
+				};
+				GSSEnvironmentPeriod {
+					min_value := 3599;
+					min_unit := seconds;
+					max_value := 3600;
+					max_unit := seconds;  
+				};
+			};
+			GSSEnvironmentSpecialPacket {
+				status := enabled;
+				name := "3.25 SID100";
+				id := 2;
+				ifRef := 0;
+				levels := 3;
+				levelRef := 1;
+				inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+				GSSEnvironmentUpperLevels {
+					GSSEnvironmentUpperLevel {
+						level := _2;
+						TMformat := tm_epd_3_25_100(v1);
+						inputFilter := tm_epd_3_25_100_filter_level_2(v1);
+						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+					};
+				};
+				GSSEnvironmentPrintingData {
+					printStatus := disabled;
+					GSSEnvironmentStructuredData {
+						levelRef := 2;
+						firstField := 1;
+					};
+				};
+				GSSEnvironmentPeriod {
+					min_value := 900;
+					min_unit := miliseconds;
+					max_value := 1100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSEnvironmentSpecialPacket {
+				status := enabled;
+				name := "3.25 SID101";
+				id := 3;
+				ifRef := 0;
+				levels := 3;
+				levelRef := 1;
+				inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+				GSSEnvironmentUpperLevels {
+					GSSEnvironmentUpperLevel {
+						level := _2;
+						TMformat := tm_epd_3_25_101(v1);
+						inputFilter := tm_epd_3_25_101_filter_level_2(v1);
+						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+					};
+				};
+				GSSEnvironmentPrintingData {
+					printStatus := disabled;
+					GSSEnvironmentStructuredData {
+						levelRef := 2;
+						firstField := 1;
+					};
+				};
+				GSSEnvironmentPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSEnvironmentSpecialPacket {
+				status := enabled;
+				name := "3.25 SID110";
+				id := 4;
+				ifRef := 0;
+				levels := 3;
+				levelRef := 1;
+				inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+				GSSEnvironmentUpperLevels {
+					GSSEnvironmentUpperLevel {
+						level := _2;
+						TMformat := tm_epd_3_25_110(v1);
+						inputFilter := tm_epd_3_25_110_filter_level_2(v1);
+						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+					};
+				};
+				GSSEnvironmentPrintingData {
+					printStatus := disabled;
+					GSSEnvironmentStructuredData {
+						levelRef := 2;
+						firstField := 1;
+					};
+				};
+				GSSEnvironmentPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
 		};
 		GSSEnvironmentPeriodicTCs {
 			GSSEnvironmentPeriodicTCLevel1 {
