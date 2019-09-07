@@ -1,18 +1,18 @@
-TMTCIFFormatFormat tm_sis_129_224 {
-	//YID52856: 129,224 Command Echo BOOT
-	uri := es.uah.aut.srg.tm_sis_129_224;
+TMTCIFFormatFormat tc_sis_129_152_w {
+	//ZID52377: 129,152 SIS_MEM_STR_LD_1W
+	uri := es.uah.aut.srg.tc_sis_129_152_w;
 	version := v1;
 	protocol := EPD_PUS;
-	type := TM;
+	type := TC;
 	TMTCIFFormatCSField {
 		fid := 0;
 		pfid := 0;
-		name := "SourceData";
+		name := "ApplicationData";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		TMTCIFFormatSize {
-			bytes := 13;
+			bytes := 8;
 			bits := 0;
 		};
 		TMTCIFFormatGlobalOffset {
@@ -23,14 +23,14 @@ TMTCIFFormatFormat tm_sis_129_224 {
 	TMTCIFFormatCSField {
 		fid := 1;
 		pfid := 0;
-		name := "NIDD1097";
+		name := "PID10000";
 		description := "Macro?";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		TMTCIFFormatSize {
-			bytes := 0;
-			bits := 1;
+			bytes := 1;
+			bits := 0;
 		};
 		TMTCIFFormatGlobalOffset {
 			bytes := 0;
@@ -40,8 +40,8 @@ TMTCIFFormatFormat tm_sis_129_224 {
 	TMTCIFFormatCSField {
 		fid := 2;
 		pfid := 0;
-		name := "NIDG1018";
-		description := "Global 19";
+		name := "PID10018";
+		description := "Struct. Id";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
@@ -50,32 +50,14 @@ TMTCIFFormatFormat tm_sis_129_224 {
 			bits := 0;
 		};
 		TMTCIFFormatGlobalOffset {
-			bytes := 0;
+			bytes := 1;
 			bits := 0;
 		};
 	};
 	TMTCIFFormatCSField {
 		fid := 3;
 		pfid := 0;
-		name := "NIDD1098";
-		description := "Result";
-		type := structured;
-		byteOrder := big_endian;
-		firstBit := MSB;
-		TMTCIFFormatSize {
-			bytes := 0;
-			bits := 7;
-		};
-		TMTCIFFormatGlobalOffset {
-			bytes := 0;
-			bits := 1;
-		};
-	};
-	TMTCIFFormatCSField {
-		fid := 4;
-		pfid := 0;
-		name := "NID10250";
-		description := "Opcode";
+		name := "Length Struct. Load";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
@@ -84,24 +66,57 @@ TMTCIFFormatFormat tm_sis_129_224 {
 			bits := 0;
 		};
 		TMTCIFFormatGlobalOffset {
-			bytes := 1;
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "PID10019";
+		description := "Offset";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 3;
 			bits := 0;
 		};
 	};
 	TMTCIFFormatCSField {
 		fid := 5;
 		pfid := 0;
-		name := "NID10251";
-		description := "Arguments";
+		name := "PID10058";
+		description := "Data16";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		TMTCIFFormatSize {
-			bytes := 10;
+			bytes := 2;
 			bits := 0;
 		};
 		TMTCIFFormatGlobalOffset {
-			bytes := 2;
+			bytes := 5;
+			bits := 0;
+		};
+	};
+	TMTCIFFormatCSField {
+		fid := 6;
+		pfid := 0;
+		name := "Pad";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		TMTCIFFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		TMTCIFFormatGlobalOffset {
+			bytes := 7;
 			bits := 0;
 		};
 	};

@@ -1,6 +1,6 @@
-TMTCIFFormatFormat tm_sis_129_224 {
-	//YID52856: 129,224 Command Echo BOOT
-	uri := es.uah.aut.srg.tm_sis_129_224;
+TMTCIFFormatFormat tm_sis_129_224_asw {
+	//YID52970: 129,224 Command Echo ASW
+	uri := es.uah.aut.srg.tm_sis_129_224_asw;
 	version := v1;
 	protocol := EPD_PUS;
 	type := TM;
