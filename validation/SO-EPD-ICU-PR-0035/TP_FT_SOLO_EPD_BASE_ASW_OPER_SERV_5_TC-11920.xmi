@@ -170,7 +170,7 @@
           </output_level_1>
         </outputs>
       </step>
-      <step name="enable_event_1003" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_1.10">
+      <step name="enable_event_1003" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_2.8">
         <inputs>
           <input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_5_TC/tc_epd_5_X_enable_disable_event_1003.xmi#/"/>

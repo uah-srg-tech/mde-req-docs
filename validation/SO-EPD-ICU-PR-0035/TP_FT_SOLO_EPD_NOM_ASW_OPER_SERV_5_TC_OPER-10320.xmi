@@ -35,7 +35,7 @@
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_128_3_export_to_level_0.xmi#/"/>
           </input_level_1>
         </inputs>
-        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds"> 
           <output_level_1 name="tm_1_1" id="0" ifRef="0">
             <level1_filter apply_def_filter="yes">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
@@ -171,7 +171,7 @@
           </output_level_2>
         </outputs>
       </step>
-      <step name="enable_event_1003" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_2.10">
+      <step name="enable_event_1003" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_2.8">
         <inputs>
           <input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
             <level2 href="../ccsds_solo/tcFormats/tc_epd_5_5.xmi#/"/>

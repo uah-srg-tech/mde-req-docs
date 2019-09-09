@@ -44,7 +44,7 @@
           </output_level_1>
         </outputs>
       </step>
-      <step name="valid_tc_accept_ack_flag" id="1" mode="continuous" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output_level_1.2">
+      <step name="valid_tc_accept_ack_flag" id="1" mode="continuous" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output_level_2.1">
         <inputs>
           <input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_17_1_export_to_level_1_accept_ack.xmi#/"/>
@@ -75,7 +75,7 @@
           </output_level_1>
         </outputs>
       </step>
-      <step name="valid_tc_exec_ack_flag" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_1.1">
+      <step name="valid_tc_exec_ack_flag" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_1.0">
         <inputs>
           <input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_17_1_export_to_level_1_exec_ack.xmi#/"/>
@@ -106,7 +106,7 @@
           </output_level_1>
         </outputs>
       </step>
-      <step name="valid_tc_none_ack_flag" id="3" mode="continuous" prev_step_idref="//@step.2" output_idref_from_prev_step="//@step.2/@outputs/@output_level_1.1">
+      <step name="valid_tc_none_ack_flag" id="3" mode="continuous" prev_step_idref="//@step.2" output_idref_from_prev_step="//@step.2/@outputs/@output_level_2.0">
         <inputs>
           <input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_17_1_export_to_level_1.xmi#/"/>
