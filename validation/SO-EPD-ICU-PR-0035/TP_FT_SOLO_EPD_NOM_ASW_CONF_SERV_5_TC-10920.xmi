@@ -3,6 +3,7 @@
       <step name="disable_event_1002" id="0" mode="continuous">
         <inputs>
           <input_level_2 name="disable_event_1002" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <level2 href="../ccsds_solo/tcFormats/tc_epd_5_6.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_5_TC/tc_epd_5_X_enable_disable_event_1002.xmi#/"/>
             <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_5_6_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_5_6_export_to_level_0.xmi#/"/>
@@ -173,8 +174,9 @@
       <step name="enable_event_1002" id="2" mode="continuous" prev_step_idref="//@step.1" output_idref_from_prev_step="//@step.1/@outputs/@output_level_2.8">
         <inputs>
           <input_level_2 name="enable_event_1002" ifRef="0" delay_value="0" delay_unit="miliseconds">
+            <level2 href="../ccsds_solo/tcFormats/tc_epd_5_5.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_5_TC/tc_epd_5_X_enable_disable_event_1002.xmi#/"/>
-            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_5_5_export_to_level_1_ack.xmi#/"/>
+           <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_5_5_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_5_5_export_to_level_0.xmi#/"/>
           </input_level_2>
         </inputs>
