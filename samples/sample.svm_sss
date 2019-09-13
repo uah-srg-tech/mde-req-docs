@@ -1,29 +1,37 @@
 <SSS name="SSSSample" id="SSS" issue="1" revision="1" date="04/04/2019">
 	<Introduction>
-		<subsection name="purpose">
+		<subsection name="Purpose">
 			<body>
 				<paragraph>
-					<run bold="true">
-						<text>Purpose</text>
-					</run>
-				</paragraph>
-				<paragraph>
 					<run>
-						<text>The purpose of this document is...</text>
+						<text>The </text>
+					</run>
+					<run bold="true">
+						<text>purpose</text>
+					</run>
+					<run>
+						<text> of this </text>
+					</run>
+					<run underline="true">
+						<text>document</text>
+					</run>
+					<run>
+						<text> is...</text>
 					</run>
 				</paragraph>
 			</body>
 		</subsection>
-		<subsection name="content">
+		<subsection name="Content">
 			<body>
 				<paragraph>
-					<run bold="true">
-						<text>Content</text>
-					</run>
-				</paragraph>
-				<paragraph>
 					<run>
-						<text>The content of this document is...</text>
+						<text>The </text>
+					</run>
+					<run italics="true">
+						<text>content</text>
+					</run>
+					<run>
+						<text>of this document is...</text>
 					</run>
 				</paragraph>
 			</body>
@@ -45,21 +53,11 @@
 	<GeneralDescription>
 		<ProductPerspective>
 			<body>
-				<paragraph>
-					<run bold="true">
-						<text>Product Perspective</text>
-					</run>
-				</paragraph>
 				<figureFromFile name="Fig1" referenceFile="prod_pers.jpg" caption="Product Perspective dummy figure" />
 			</body>
 		</ProductPerspective>
 		<GeneralCapabilities>
 			<body>
-				<paragraph>
-					<run bold="true">
-						<text>General Capabilities</text>
-					</run>
-				</paragraph>
 				<paragraph>
 					<run>
 						<text>As noted in </text>
@@ -78,31 +76,10 @@
 						</run>
 					</hyperlink>
 				</paragraph>
-				<itemize>
-					<listItem>
-						<paragraph>
-							<run>
-								<text>Bullet item 1</text>
-							</run>
-						</paragraph>
-					</listItem>
-					<listItem>
-						<paragraph>
-							<run>
-								<text>Bullet item 2</text>
-							</run>
-						</paragraph>
-					</listItem>
-				</itemize>
 			</body>
 		</GeneralCapabilities>
 		<GeneralConstraints>
 			<body>
-				<paragraph>
-					<run bold="true">
-						<text>General Constraints</text>
-					</run>
-				</paragraph>
 				<enumerate>
 					<listItem>
 						<paragraph>
@@ -134,20 +111,26 @@
 		</GeneralConstraints>
 		<OperationalEnvironment>
 			<body>
-				<paragraph>
-					<run bold="true">
-						<text>Operational Environment</text>
-					</run>
-				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Bullet item 1</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Bullet item 2</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
 			</body>
 		</OperationalEnvironment>
 		<AssumptionsDependencies>
 			<body>
-				<paragraph>
-					<run bold="true">
-						<text>Assumptions and Dependencies</text>
-					</run>
-				</paragraph>
 				<basicTable name="Table1" caption="Assumptions and Dependencies table"> 
 					<row span="2">
 						<column span="3">
