@@ -637,77 +637,69 @@
 				</run>
 			</paragraph>
 			<basicTable name="RequirementsTable">
-				<row span="1">
-					<column span="2">
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Name</text>
-								</run>
-							</paragraph>
-						</cell>
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>SRS-ICUSW XX-YYYY</text>
-								</run>
-							</paragraph>
-						</cell>
-					</column>
+				<row>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Name</text>
+							</run>
+						</paragraph>
+					</cell>
+					<cell>
+						<paragraph>
+							<run>
+								<text>SRS-ICUSW XX-YYYY</text>
+							</run>
+						</paragraph>
+					</cell>
 				</row>
-				<row span="1">
-					<column span="2">
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Description</text>
-								</run>
-							</paragraph>
-						</cell>
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Requirement Description</text>
-								</run>
-							</paragraph>
-						</cell>
-					</column>
+				<row>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Description</text>
+							</run>
+						</paragraph>
+					</cell>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Requirement Description</text>
+							</run>
+						</paragraph>
+					</cell>
 				</row>
-				<row span="1">
-					<column span="2">
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Validation</text>
-								</run>
-							</paragraph>
-						</cell>
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Validation Approach</text>
-								</run>
-							</paragraph>
-						</cell>
-					</column>
+				<row>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Validation</text>
+							</run>
+						</paragraph>
+					</cell>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Validation Approach</text>
+							</run>
+						</paragraph>
+					</cell>
 				</row>
-				<row span="1">
-					<column span="2">
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Parent</text>
-								</run>
-							</paragraph>
-						</cell>
-						<cell span="1">
-							<paragraph>
-								<run>
-									<text>Requirement Traceability</text>
-								</run>
-							</paragraph>
-						</cell>
-					</column>
+				<row>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Parent</text>
+							</run>
+						</paragraph>
+					</cell>
+					<cell>
+						<paragraph>
+							<run>
+								<text>Requirement Traceability</text>
+							</run>
+						</paragraph>
+					</cell>
 				</row>
 			</basicTable>
 			<paragraph>

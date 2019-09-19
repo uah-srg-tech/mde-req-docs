@@ -31,7 +31,13 @@
 						<text>content</text>
 					</run>
 					<run>
-						<text>of this document is...</text>
+						<text> of this </text>
+					</run>
+					<run bold="true" italics="true" underline="true">
+						<text>document</text>
+					</run>
+					<run>
+						<text> is...</text>
 					</run>
 				</paragraph>
 			</body>
@@ -80,105 +86,103 @@
 		</GeneralCapabilities>
 		<GeneralConstraints>
 			<body>
-				<enumerate>
-					<listItem>
-						<paragraph>
-							<run>
-								<text>Enum item 1</text>
-							</run>
-						</paragraph>
-						<sublist>
-							<enumerate>
-								<listItem>
-									<paragraph>
-										<run>
-											<text>Enum item 1.1</text>
-										</run>
-									</paragraph>
-								</listItem>
-							</enumerate>
-						</sublist>
-					</listItem>
-					<listItem>
-						<paragraph>
-							<run>
-								<text>Enum item 2</text>
-							</run>
-						</paragraph>
-					</listItem>
-				</enumerate>
+			<enumerate>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Enum item 1</text>
+						</run>
+					</paragraph>
+					<sublist>
+						<enumerate>
+							<listItem>
+								<paragraph>
+									<run>
+										<text>Enum item 1.1</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</enumerate>
+					</sublist>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Enum item 2</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</enumerate>
 			</body>
 		</GeneralConstraints>
 		<OperationalEnvironment>
 			<body>
-				<itemize>
-					<listItem>
-						<paragraph>
-							<run>
-								<text>Bullet item 1</text>
-							</run>
-						</paragraph>
-					</listItem>
-					<listItem>
-						<paragraph>
-							<run>
-								<text>Bullet item 2</text>
-							</run>
-						</paragraph>
-					</listItem>
-				</itemize>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Bullet item 1</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Bullet item 2</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
 			</body>
 		</OperationalEnvironment>
 		<AssumptionsDependencies>
 			<body>
 				<basicTable name="Table1" caption="Assumptions and Dependencies table"> 
-					<row span="2">
-						<column span="3">
-							<cell span="1">
-								<paragraph>
-									<run>
-										<text>Cell 1.1</text>
-									</run>
-								</paragraph>
-							</cell>
-							<cell span="1">
-								<paragraph>
-									<run>
-										<text>Cell 1.2</text>
-									</run>
-								</paragraph>
-							</cell>
-							<cell span="1">
-								<paragraph>
-									<run>
-										<text>Cell 1.3</text>
-									</run>
-								</paragraph>
-							</cell>
-						</column>
-						<column span="3">
-							<cell span="1">
-								<paragraph>
-									<run>
-										<text>Cell 2.1</text>
-									</run>
-								</paragraph>
-							</cell>
-							<cell span="1">
-								<paragraph>
-									<run>
-										<text>Cell 2.2</text>
-									</run>
-								</paragraph>
-							</cell>
-							<cell span="1">
-								<paragraph>
-									<run>
-										<text>Cell 2.3</text>
-									</run>
-								</paragraph>
-							</cell>
-						</column>
+					<row>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Cell 1.1</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Cell 1.2</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Cell 1.3</text>
+								</run>
+							</paragraph>
+						</cell>
+					</row>
+					<row>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Cell 2.1</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Cell 2.2</text>
+								</run>
+							</paragraph>
+						</cell>
+						<cell>
+							<paragraph>
+								<run>
+									<text>Cell 2.3</text>
+								</run>
+							</paragraph>
+						</cell>
 					</row>
 				</basicTable>
 			</body>

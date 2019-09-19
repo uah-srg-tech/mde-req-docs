@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+	<w:body>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>Introduction</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>Purpose</w:t>
+			</w:r>
+		</w:p>
+		<w:p>
+			<w:r>
+				<w:t xml:space="preserve">The </w:t>
+			</w:r>
+			<w:r><w:rPr><w:b/></w:rPr>
+				<w:t>purpose</w:t>
+			</w:r>
+			<w:r>
+				<w:t xml:space="preserve"> of this </w:t>
+			</w:r>
+			<w:r><w:rPr><w:u w:val="single"/></w:rPr>
+				<w:t>document</w:t>
+			</w:r>
+			<w:r>
+				<w:t xml:space="preserve"> is...</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>Content</w:t>
+			</w:r>
+		</w:p>
+		<w:p>
+			<w:r>
+				<w:t xml:space="preserve">The </w:t>
+			</w:r>
+			<w:r><w:rPr><w:i/></w:rPr>
+				<w:t>content</w:t>
+			</w:r>
+			<w:r>
+				<w:t xml:space="preserve"> of this </w:t>
+			</w:r>
+			<w:r><w:rPr><w:b/><w:i/><w:u w:val="single"/></w:rPr>
+				<w:t>document</w:t>
+			</w:r>
+			<w:r>
+				<w:t xml:space="preserve"> is...</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>ApplicableDocuments</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:ind w:left="700" w:hanging="700"/></w:pPr>
+			<w:bookmarkStart w:id="0" w:name="AD1"/>
+			<w:r>
+				<w:t>AD1</w:t>
+			</w:r>
+			<w:bookmarkEnd w:id="0"/>
+			<w:r>
+				<w:tab/>
+			</w:r>
+			<w:r>
+				<w:t>EID-A: Solar Orbiter Experiment Interface Document, Part A. SOL-EST-RCD-0050 issue 5 rev 0</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>ReferenceDocuments</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:ind w:left="700" w:hanging="700"/></w:pPr>
+			<w:bookmarkStart w:id="1" w:name="RD1"/>
+			<w:r>
+				<w:t>RD1</w:t>
+			</w:r>
+			<w:bookmarkEnd w:id="1"/>
+			<w:r>
+				<w:tab/>
+			</w:r>
+			<w:r>
+				<w:t>CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book. SO-EPD-PO-IF-0001. 11/2000</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>TermsDefinitionsAbbreviations</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:ind w:left="1000" w:hanging="1000"/></w:pPr>
+			<w:r>
+				<w:t>EPD</w:t>
+			</w:r>
+			<w:r>
+				<w:tab/>
+			</w:r>
+			<w:r>
+				<w:t>Energetic Particle Detector</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>GeneralDescription</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>ProductPerspective</w:t>
+			</w:r>
+		</w:p>
+		<w:p>
+			<w:bookmarkStart w:id="2" w:name="Fig1"/>
+			<w:r>
+				<w:drawing>
+					<wp:inline distT="0" distB="0" distL="0" distR="0">
+						<wp:extent cx="2402006" cy="1453408"/>
+						<wp:docPr id="1" name="Imagen 1"/>
+							<a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+								<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+									<pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+									<pic:nvPicPr>
+										<pic:cNvPr id="1" name="prod_pers.jpg"/>
+										<pic:cNvPicPr/>
+									</pic:nvPicPr>
+									<pic:blipFill>
+										<a:blip r:embed="rId6"></a:blip>
+										<a:stretch><a:fillRect/></a:stretch>
+									</pic:blipFill>
+									<pic:spPr>
+										<a:xfrm>
+											<a:off x="0" y="0"/>
+											<a:ext cx="2418243" cy="1463233"/>
+										</a:xfrm>
+										<a:prstGeom prst="rect"><a:avLst/></a:prstGeom>
+									</pic:spPr>
+								</pic:pic>
+							</a:graphicData>
+						</a:graphic>
+					</wp:inline>
+				</w:drawing>
+			</w:r>
+			<w:bookmarkEnd w:id="2"/>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Caption"/></w:pPr>
+			<w:r>
+				<w:t>Figure 1: Product Perspective dummy figure</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>GeneralCapabilities</w:t>
+			</w:r>
+		</w:p>
+		<w:p>
+			<w:r>
+				<w:t xml:space="preserve">As noted in </w:t>
+			</w:r>
+			<w:hyperlink w:anchor="AD1">
+				<w:r>
+					<w:t>EID-A</w:t>
+				</w:r>
+			</w:hyperlink>
+			<w:r>
+				<w:t xml:space="preserve"> and shown in </w:t>
+			</w:r>
+			<w:hyperlink w:anchor="Fig1">
+				<w:r>
+					<w:t>previous image</w:t>
+				</w:r>
+			</w:hyperlink>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>GeneralConstraints</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr>
+			<w:r>
+				<w:t>Enum item 1</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:ilvl w:val="1"/><w:numId w:val="1"/></w:numPr></w:pPr>
+			<w:r>
+				<w:t>Enum item 1.1</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr>
+			<w:r>
+				<w:t>Enum item 2</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>OperationalEnvironment</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:ilvl w:val="0"/><w:numId w:val="2"/></w:numPr></w:pPr>
+			<w:r>
+				<w:t>Bullet item 1</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="ListParagraph"/><w:numPr><w:ilvl w:val="0"/><w:numId w:val="2"/></w:numPr></w:pPr>
+			<w:r>
+				<w:t>Bullet item 2</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>AssumptionsDependencies</w:t>
+			</w:r>
+		</w:p>
+		<w:tbl>
+			<w:bookmarkStart w:id="3" w:name="Table1"/>
+			<w:tblPr>
+				<w:tblStyle w:val="TableGrid"/>
+				<w:tblW w:w="0" w:type="auto"/>
+			</w:tblPr>
+			<w:tr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2833" w:type="dxa"/>
+					</w:tcPr>
+					<w:p>
+						<w:r>
+							<w:t>Cell 1.1</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2833" w:type="dxa"/>
+					</w:tcPr>
+					<w:p>
+						<w:r>
+							<w:t>Cell 1.2</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2833" w:type="dxa"/>
+					</w:tcPr>
+					<w:p>
+						<w:r>
+							<w:t>Cell 1.3</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2833" w:type="dxa"/>
+					</w:tcPr>
+					<w:p>
+						<w:r>
+							<w:t>Cell 2.1</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2833" w:type="dxa"/>
+					</w:tcPr>
+					<w:p>
+						<w:r>
+							<w:t>Cell 2.2</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="2833" w:type="dxa"/>
+					</w:tcPr>
+					<w:p>
+						<w:r>
+							<w:t>Cell 2.3</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:bookmarkEnd w:id="3"/>
+		</w:tbl>
+		<w:p><w:pPr><w:pStyle w:val="Caption"/></w:pPr>
+			<w:r>
+				<w:t>Table 1: Assumptions and Dependencies table</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>SpecificRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>GeneralRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:tbl>
+			<w:tblPr>
+				<w:tblStyle w:val="TableGrid"/>
+				<w:tblW w:w="5000" w:type="pct"/>
+			</w:tblPr>
+			<w:tr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1000" w:type="pct"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D8D8D8" />
+					</w:tcPr>
+					<w:p>
+						<w:r><w:rPr><w:b/></w:rPr>
+							<w:t>Name</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:tcPr>
+						<w:shd w:val="clear" w:color="auto" w:fill="D8D8D8" />
+					</w:tcPr>
+					<w:p>
+						<w:r><w:rPr><w:b/></w:rPr>
+							<w:t>SampleItem-001</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1000" w:type="pct"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D8D8D8" />
+					</w:tcPr>
+					<w:p>
+						<w:r><w:rPr><w:b/></w:rPr>
+							<w:t>Description</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:p>
+						<w:r>
+							<w:t>Item description</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+			<w:tr>
+				<w:tc>
+					<w:tcPr>
+						<w:tcW w:w="1000" w:type="pct"/>
+						<w:shd w:val="clear" w:color="auto" w:fill="D8D8D8" />
+					</w:tcPr>
+					<w:p>
+						<w:r><w:rPr><w:b/></w:rPr>
+							<w:t>Validation Method</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+				<w:tc>
+					<w:p>
+						<w:r>
+							<w:t>Analysis</w:t>
+						</w:r>
+					</w:p>
+				</w:tc>
+			</w:tr>
+		</w:tbl>
+		<w:p>
+			<w:pPr><w:spacing w:before="0" w:after="120"/></w:pPr>
+			<w:r>
+				<w:t>Item extended description</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>CapabilitiesRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>SystemInterfaceRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>AdaptationMissionizationRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>ComputerResourceRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>SecurityRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>SafetyRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>ReliabiltyAvailabilityRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>QualityRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>DesignRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>SoftwareOperationsRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>SoftwareMaintenanceRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>SystemSoftwareObservabilityRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>VerificationValidationIntegrationRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>VerificationValidationProcessRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>ValidationApproach</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>ValidationRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading2"/></w:pPr>
+			<w:r>
+				<w:t>VerificationRequirements</w:t>
+			</w:r>
+		</w:p>
+		<w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr>
+			<w:r>
+				<w:t>SystemModels</w:t>
+			</w:r>
+		</w:p>
+	</w:body>
+</w:document>
