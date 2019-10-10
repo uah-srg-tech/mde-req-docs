@@ -367,7 +367,7 @@
 					<cell>
 						<paragraph>
 							<run>
-								<text>Requirement Description</text>
+								<text></text>
 							</run>
 						</paragraph>
 					</cell>
@@ -697,8 +697,8 @@
 		</SecurityRequirements>
 		<SafetyRequirements>
 		</SafetyRequirements>
-		<ReliabiltyAvailabilityRequirements>
-		</ReliabiltyAvailabilityRequirements>
+		<ReliabilityAvailabilityRequirements>
+		</ReliabilityAvailabilityRequirements>
 		<QualityRequirements>
 		</QualityRequirements>
 		<DesignRequirements>
@@ -996,8 +996,6 @@
 									</run>
 								</paragraph>
 							</listItem>
-						</itemize>
-						<itemize>
 							<listItem>
 								<paragraph>
 									<run>
@@ -1005,8 +1003,6 @@
 									</run>
 								</paragraph>
 							</listItem>
-						</itemize>
-						<itemize>
 							<listItem>
 								<paragraph>
 									<run>
@@ -1014,8 +1010,6 @@
 									</run>
 								</paragraph>
 							</listItem>
-						</itemize>
-						<itemize>
 							<listItem>
 								<paragraph>
 									<run>
@@ -1023,8 +1017,6 @@
 									</run>
 								</paragraph>
 							</listItem>
-						</itemize>
-						<itemize>
 							<listItem>
 								<paragraph>
 									<run>
@@ -1032,8 +1024,6 @@
 									</run>
 								</paragraph>
 							</listItem>
-						</itemize>
-						<itemize>
 							<listItem>
 								<paragraph>
 									<run>
@@ -1041,8 +1031,6 @@
 									</run>
 								</paragraph>
 							</listItem>
-						</itemize>
-						<itemize>
 							<listItem>
 								<paragraph>
 									<run>
