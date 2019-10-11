@@ -46,7 +46,7 @@
 				</paragraph>
 				<paragraph>
 					<run>
-						<text>STEP consists of a single unit having two view cones in opposite directions. SIS consists of two sensor heads with roughly opposite (160°) view directions sharing a common electronics box. EPT-HET has multiple view cones sharing a common electronics box. There are two identical EPT-HET units.</text>
+						<text>STEP consists of a single unit having two view cones in opposite directions. SIS consists of two sensor heads with roughly opposite (160Â°) view directions sharing a common electronics box. EPT-HET has multiple view cones sharing a common electronics box. There are two identical EPT-HET units.</text>
 					</run>
 				</paragraph>
 				<paragraph>
@@ -64,7 +64,9 @@
 		<ApplicableDocument name="AD4" title="Solar Orbiter Operations Requirements Document" id="SO-ESC-RS-05001" issue="1" revision="8" />
 		<ApplicableDocument name="AD5" title="Software" id="ECSS-E-ST-40C" date="06/03/2009" />
 		<ApplicableDocument name="AD6" title="Solar Orbiter (SOLO) Energetic Particle Detector (EPD) Instrument Control Unit (ICU)" id="SO-EPD-ICU-DD-004" issue="5" revision="0" />
-		<ApplicableDocument name="AD7" title="EPD Telemetry and Telecomand ICD" id="SO-EPD-PO-IF-0003" issue="2" revision="9" />
+		<ApplicableDocument name="AD7" title="EPD Telemetry and Telecommand ICD" id="SO-EPD-PO-IF-0003" issue="2" revision="9" />
+		<ApplicableDocument name="AD11" title="Requirements and clarifications on software development and qualification for Solar Orbiter instruments" id="SOL-EST-RS-3188" issue="1" revision="0" />
+		<ApplicableDocument name="AD12" title="EPD Sensors Data Interface Control Document" id="SO-EPD-PO-IF-0005" issue="1" revision="6" />
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book" id="CCSDS 102.0-B-5" date="11/2000" />
@@ -270,6 +272,112 @@
 						</run>
 					</paragraph>
 					<figureFromFile name="LVPS_HW" referenceFile="LVPS_HW.png" caption="LVPS hardware schema" />
+				</body>
+			</subsection>
+			<subsection name="Modes">
+				<body>
+					<paragraph>
+						<run>
+							<text>In </text>
+						</run>
+						<hyperlink reference="ICU_SW_Op_modes">
+						</hyperlink>
+						<run>
+							<text> the modes of operation of ICUSW are represented.</text>
+						</run>
+					</paragraph>
+					<figureFromFile name="ICU_SW_Op_modes" referenceFile="ICU_SW_Op_modes.png" caption="ICU SW operation modes" />
+					<paragraph>
+						<run>
+							<text>The ICUSW shall be able to support the following modes:</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>OFF: The ICU is not powered.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>BOOT: The ICU is just switched on, a soft reset from other mode has been performed, or a mode transition TC has been received. This mode is in charge of the initial ICU configuration and checking. It also tries to load the application software and pass control to it. The boot software of the ICUSW shall implement the BOOT mode.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SAFE: is a mode in which EPD is powered but in a safe configuration, which can be maintained indefinitely (e.g. main control unit powered but sensors are off). In this mode EPD will generate only non-science telemetry. The configuration of the instrument in SAFE mode will be unambiguous (i.e. only one defined configuration). The boot software of the ICUSW shall implement the SAFE mode, and it will trigger a transition from BOOT mode to SAFE mode when application software can not be executed. In SAFE mode the damaged application software images stored in EEPROM can be restored by means of patch telecommands-</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>CONFIGURATION: this mode shall be used for required operations to activate or configure the instrument. In this mode non-science data may be generated, depending on the instrument configuration (e.g. sensors activated or not).</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>OPERATIONAL: this mode is the mode in which EPD is fully operative and generates non-science as well as science data.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+					<paragraph>
+						<run>
+							<text>Autonomous transitions are the following:</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>BOOT to CONFIGURATION. This transition is triggered autonomously after a reset when application software is correctly loaded, the target mode is CONFIGURATION, and the control is passed to it.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>BOOT to OPERATIONAL. This transition is triggered autonomously after a reset when application software is correctly loaded, the target mode is OPERATIONAL, and the control is passed to it.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>BOOT to SAFE. This transition is triggered when application software can not be loaded and the boot software remains in control of the ICU.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>SAFE to BOOT. This transition is triggered by a soft reset (fatal error detected such as bus error, memory access error, etc.) or a TC.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>CONFIGURATION to BOOT. This transition is triggered by a soft reset (fatal error detected such as bus error, memory access error, etc.), by a recovery action (minor error detected such as driver or controller error etc.) or a TC.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>OPERATIONAL to BOOT. This transition is triggered by a soft reset (fatal error detected such as bus error, memory access error, etc.), by a recovery action (minor error detected such as driver or controller error etc.) or a TC.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
 				</body>
 			</subsection>
 		</EnvironmentalConsiderations>
@@ -488,6 +596,279 @@
 	</SoftwareOverview>
 	<Requirements>
 		<body>
+			<paragraph>
+				<run>
+					<text>Each of the EPD sensors has some data processing capabilities either by software running in the sensor DPUs/microcontrollers or by logic functions. The main software, however, is running in the CDPU. The principal functions of the CDPU software are:</text>
+				</run>
+			</paragraph>
+			<itemize>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To collect scientific data from the instruments periodically 1 Hz. </text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To accumulate high-cadence science data from the sensors to specified lower time resolution packages.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To collect housekeeping data from the four units.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To time tag the data if necessary.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To perform lossless compression of the data if necessary.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To format the data for transmission by the S/C.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To accept and syntactically check TC from the S/C.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To deliver these commands to the individual sensors for execution.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To accept from the ground and distribute to the sensors tables and software.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>To handle the burst mode.</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</itemize>
+			<paragraph>
+				<run>
+					<text>A Real-Time Operating System is proposed to provide the basic facilities such as multitasking, timing and semaphore/mutex synchronization. A high-level software development tool (UML2, ROOM or similar) could be employed in the software design process.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>All software will comply with the requirements defined in the section 4.9.1 of the </text>
+				</run>
+				<hyperlink reference="AD1">
+					<run>
+						<text>EID-A</text>
+					</run>
+				</hyperlink>
+				<run>
+					<text>, namely:</text>
+				</run>
+			</paragraph>
+			<enumerate>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>All on-board software will comply with the software standard ECSS-E-40 by </text>
+						</run>
+						<hyperlink reference="AD5">
+						</hyperlink>
+						<run>
+							<text>tailored by</text>
+						</run>
+						<hyperlink reference="AD11">
+						</hyperlink>
+						<run>
+							<text>.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Different areas of memory will be employed to store code, fixed constants and variable parameters of the in-flight software.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>The PROM memory will include minimum boot software able to manage EEPROM updates and hardware test functions.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Independent software module memory updates will be supported. </text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Blocking the instrument due to S/W maintenance will be avoided. In case of blocking it can be cleared by a power cycling of the instrument.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Instrument safety hazard will be avoided in the software design process.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>On-board software will acquire, store and telemeter the employed resources, including memory usage, central processor unit (CPU) usage and I/O usage.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Before enabling the on-board software a mechanism to verify its integrity will be provided.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>A single telecommand will be used to enable the on-board software.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>Telecommand and telemetry source packets will be the only means to communicate ground and on-board software.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If a processor reset is detected, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If a processor overload condition is detected, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If an unexpected arithmetic overflow condition is detected, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If an illegal program instruction is encountered during execution of a program code, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If a data bus error is detected by software, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If a memory corruption is detected by an EDAC, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>If a checksum error is detected, an event report will be generated.</text>
+						</run>
+					</paragraph>
+				</listItem>
+				<listItem>
+					<paragraph>
+						<run>
+							<text>A modularized structure will be employed in the software design process.</text>
+						</run>
+					</paragraph>
+				</listItem>
+			</enumerate>
+			<paragraph>
+				<run>
+					<text>The ICU shall acquire science data from the sensors every 1 s. The information provided by every sensor shall be stored in a ring buffer of 10 minutes length with 1 s resolution. Every sensor unit will have its own independent ring buffer. According to </text>
+				</run>
+				<hyperlink reference="AD12">
+				</hyperlink>
+				<run>
+					<text> 9.5.2, after a programmable number of seconds the received packets with 1 s resolution shall be transformed in one packet. This transformation requires some specific data integration that depends on every sensor. The integrated packet shall be time-tagged with the time of the last integrated packet.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>Burst trigger is a per-sensor process, not all EPD sensors shall be in burst mode at the same time. The burst can be triggered internally (by an EPD sensor as is defined in </text>
+				</run>
+				<hyperlink reference="AD12">
+				</hyperlink>
+				<run>
+					<text>] 10.3), that it will be reported to the spacecraft by a PUS service 3 Telemetry, or externally (by events detected in other(s) Solar Orbiter instrument). The EPD can associate the external trigger of Burst mode to the reception of a specific data on the PUS CCSDS service 20 packet according to </text>
+				</run>
+				<hyperlink reference="AD12">
+				</hyperlink>
+				<run>
+					<text> 10.2. This packet will be sent from spacecraft to the EPD at a maximum rate of 8Hz.</text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>The ICUSW shall also manage a specific set of telemetry generated by the sensor units called Quick Look Data Telemetry. This telemetry will be forwarded to the S/C using a different APID. </text>
+				</run>
+			</paragraph>
+			<paragraph>
+				<run>
+					<text>The transmission rate of the Bust mode telemetries and Quick Look Data Telemetry shall be programmed specifically by means of table stored in EEPROM as is defined in </text>
+				</run>
+				<hyperlink reference="AD12">
+				</hyperlink>
+				<run>
+					<text> 9.5.2.</text>
+				</run>
+			</paragraph>
 			<paragraph>
 				<run>
 					<text>In the following paragraphs a lists of software requirements will be included. Every single requirement has the following format:</text>
@@ -1303,7 +1684,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The ICUSW application software will handle the information about EPD status, houseeking and fault detection and recovery management according to the following design requirements:</text>
+							<text>The ICUSW application software will handle the information about EPD status, housekeeping and fault detection and recovery management according to the following design requirements:</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1360,7 +1741,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The ICUSW application software will handle the information about EPD status, houseeking and fault detection and recovery management according to the following design requirements:</text>
+							<text>The ICUSW application software will handle the information about EPD status, housekeepingand fault detection and recovery management according to the following design requirements:</text>
 						</run>
 					</paragraph>
 				</body>
