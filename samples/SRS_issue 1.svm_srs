@@ -35,9 +35,9 @@
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="SRG-EPD Software System Specification" id="SRG-EPD-SSS-0001" />
-		<ReferenceDocument name="RD2" title="Ground systems and operations – Telemetry and telecommand packet utilization" id="ECSS-E-ST-70-41C" date="15/04/2016" />
-		<ReferenceDocument name="RD3" title="SpaceWire – Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
-		<ReferenceDocument name="RD4" title="SpaceWire – CCSDS packet transfer protocol" id="ECSS-E-ST-50-53C" />
+		<ReferenceDocument name="RD2" title="Ground systems and operations - Telemetry and telecommand packet utilization" id="ECSS-E-ST-70-41C" date="15/04/2016" />
+		<ReferenceDocument name="RD3" title="SpaceWire - Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
+		<ReferenceDocument name="RD4" title="SpaceWire - CCSDS packet transfer protocol" id="ECSS-E-ST-50-53C" />
 		<ReferenceDocument name="RD5" title="Space engineering. Electric and electronic" id="ECSS-E-20B" issue="8" revision="0" date="03/2007" />
 		<ReferenceDocument name="RD6" title="Spacecraft discrete interfaces" id="ECSS-E-ST-50-14C" />
 	</ReferenceDocuments>
@@ -349,7 +349,7 @@
 							<text> the modes of operation of SRG EPD ICUSW are represented.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_SW_modes" referenceFile="ICU_SW_modes.jpg" caption="ICU SW operation modes" />
+					<figureFromFile name="ICU_SW_modes" referenceFile="ICU_SW_modes.png" caption="ICU SW operation modes" />
 					<paragraph>
 						<run>
 							<text>The ICUSW shall be able to support the following modes:</text>
@@ -459,10 +459,10 @@
 						<hyperlink reference="ICU_IF">
 						</hyperlink>
 						<run>
-							<text>Illustrates the top-level interfaces that affect the EPD Instrument Control Unit Software.</text>
+							<text> illustrates the top-level interfaces that affect the EPD Instrument Control Unit Software.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_IF" referenceFile="ICU_IF.jpg" caption="ICU interfaces" />
+					<figureFromFile name="ICU_IF" referenceFile="ICU_IF.png" caption="ICU interfaces" />
 					<paragraph>
 						<run>
 							<text>EPD ICU provides the interface between the SRG Spacecraft C&amp;DH system and the EPD sensors. All information transfer between the EPD sensors and the Spacecraft/Ground flows through the ICU, including telemetry, commands and status. The EPD sensors communicate with the EPD ICU over a dedicated serial interface.</text>
@@ -474,7 +474,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The EPD ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF.</text>
+							<text>The EPD ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF. </text>
 						</run>
 						<hyperlink reference="ICU_HW_schema">
 						</hyperlink>
@@ -482,7 +482,7 @@
 							<text> shows the basic HW diagram of the EPD's ICU.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW_schema" referenceFile="ICU_HW_schema.jpg" caption="ICU hardware schema" />
+					<figureFromFile name="ICU_HW_schema" referenceFile="ICU_HW_schema.png" caption="ICU hardware schema" />
 					<paragraph>
 						<run>
 							<text>As it can be observed, the design is based on a FPGA that includes a LEON2 soft processor, the UART-LVDS links with the sensors, the SpaceWire cores and the interfaces with the LVPS and the memory.</text>
@@ -513,7 +513,7 @@
 							<text>.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW_IFs" referenceFile="ICU_HW_IFs.jpg" caption="ICU hardware interfaces" />
+					<figureFromFile name="ICU_HW_IFs" referenceFile="ICU_HW_IFs.png" caption="ICU hardware interfaces" />
 				</body>
 			</subsection>
 			<subsection name="External Software Interfaces">
@@ -966,7 +966,7 @@
 					<text>Parent: </text>
 				</run>
 				<run>
-					<text>contains the list of “software specification” that are cover by the requirement.</text>
+					<text>contains the list of "software specification" that are cover by the requirement.</text>
 				</run>
 			</paragraph>
 			<paragraph>
@@ -1133,8 +1133,8 @@
 		</PortabilityRequirements>
 		<SWQualityRequirements>
 		</SWQualityRequirements>
-		<SWReliabiltyRequirements>
-		</SWReliabiltyRequirements>
+		<SWReliabilityRequirements>
+		</SWReliabilityRequirements>
 		<SWMaintainabilityRequirements>
 		</SWMaintainabilityRequirements>
 		<SWSafetyRequirements>

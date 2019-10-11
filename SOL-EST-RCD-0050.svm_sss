@@ -471,8 +471,8 @@
 				</Item>
 			</subsection>
 		</SafetyRequirements>
-		<ReliabiltyAvailabilityRequirements>
-		</ReliabiltyAvailabilityRequirements>
+		<ReliabilityAvailabilityRequirements>
+		</ReliabilityAvailabilityRequirements>
 		<QualityRequirements>
 		</QualityRequirements>
 		<DesignRequirements>

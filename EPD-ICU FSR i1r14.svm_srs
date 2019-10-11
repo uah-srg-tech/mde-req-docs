@@ -1386,8 +1386,8 @@
 		</PortabilityRequirements>
 		<SWQualityRequirements>
 		</SWQualityRequirements>
-		<SWReliabiltyRequirements>
-		</SWReliabiltyRequirements>
+		<SWReliabilityRequirements>
+		</SWReliabilityRequirements>
 		<SWMaintainabilityRequirements>
 		</SWMaintainabilityRequirements>
 		<SWSafetyRequirements>
