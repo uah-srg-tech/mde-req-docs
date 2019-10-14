@@ -19,7 +19,7 @@
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="Space engineering - Software general requirements" id="ECSS-E-ST-40" issue="3" />
-		<ReferenceDocument name="RD2" title="Space product assurance – Software product assurance" id="ECSS-Q-ST-80" issue="3" />
+		<ReferenceDocument name="RD2" title="Space product assurance â€“ Software product assurance" id="ECSS-Q-ST-80" issue="3" />
 	</ReferenceDocuments>
 	<TermsDefinitionsAbbreviations>
 		<Abbreviation name="ACK">
@@ -421,7 +421,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>STEP Harness</text>
+										<text>STEP Harness. </text>
 									</run>
 									<run>
 										<text>Wire that connects STEP sensor unit (or equivalent emulator) to ICU. Required only in Scenario 4.</text>
@@ -431,7 +431,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>HET-EPT-1 Harness</text>
+										<text>HET-EPT-1 Harness. </text>
 									</run>
 									<run>
 										<text>Wire that connects HET-EPT-1 sensor unit (or equivalent emulator) to ICU. Required only in Scenario 4.</text>
@@ -441,7 +441,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>HET-EPT-2 Harness</text>
+										<text>HET-EPT-2 Harness. </text>
 									</run>
 									<run>
 										<text>Wire that connects HET-EPT-2 sensor unit (or equivalent emulator) to ICU. Required only in Scenario 1 and 4.</text>
@@ -451,7 +451,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>SIS Harness</text>
+										<text>SIS Harness. </text>
 									</run>
 									<run>
 										<text>Wire that connects SIS sensor unit (or equivalent emulator) to ICU. Required only in Scenarios 1, 4 and 5.</text>
@@ -461,7 +461,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>SUE Harness</text>
+										<text>SUE Harness. </text>
 									</run>
 									<run>
 										<text>Wire that connects SUE to 3 ICU sensor unit interfaces (HET-EPT1, HET-EPT2 and STEP). Required only in Scenario 5.</text>
@@ -471,7 +471,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>4 EPD Sensor Harness </text>
+										<text>4 EPD Sensor Harness. </text>
 									</run>
 									<run>
 										<text>Wires (UART-USB converters) that connects 4 GSS Host Unit sensor emulators to 4 ICU sensor unit interfaces. Required only in Scenario 2.</text>
@@ -535,7 +535,7 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>1 Power Board</text>
+										<text>1 Power Board. </text>
 									</run>
 									<run>
 										<text>To provide the power-on pulse and the power to the ICU</text>
@@ -979,6 +979,11 @@
 							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200.</text>
 						</run>
 					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
 				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="GE R-00010" />
@@ -1306,6 +1311,11 @@
 					<paragraph>
 						<run>
 							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800.</text>
+						</run>
+					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1637,6 +1647,11 @@
 							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300.</text>
 						</run>
 					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
 				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="GE R-00010" />
@@ -1966,6 +1981,11 @@
 							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800.</text>
 						</run>
 					</paragraph>
+					<paragraph>
+						<run>
+							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
+						</run>
+					</paragraph>
 				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="GE R-00010" />
@@ -2175,7 +2195,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_1>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2195,11 +2215,6 @@
 					<paragraph>
 						<run>
 							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300</text>
-						</run>
-					</paragraph>
-					<paragraph>
-						<run>
-							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -2223,7 +2238,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2251,7 +2266,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2265,7 +2280,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2286,7 +2301,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2613,14 +2628,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -2634,35 +2649,35 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="6" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -2714,14 +2729,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -2735,7 +2750,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -2749,28 +2764,28 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="10" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -2816,7 +2831,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_1>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2836,11 +2851,6 @@
 					<paragraph>
 						<run>
 							<text>TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900</text>
-						</run>
-					</paragraph>
-					<paragraph>
-						<run>
-							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -2864,7 +2874,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2892,7 +2902,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2906,7 +2916,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2927,7 +2937,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3254,14 +3264,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3275,35 +3285,35 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="6" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3355,14 +3365,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3376,7 +3386,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3390,28 +3400,28 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="10" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3457,7 +3467,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_1>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3477,11 +3487,6 @@
 					<paragraph>
 						<run>
 							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400</text>
-						</run>
-					</paragraph>
-					<paragraph>
-						<run>
-							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -3505,7 +3510,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3533,7 +3538,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3547,7 +3552,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3568,7 +3573,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3895,14 +3900,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3916,35 +3921,35 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="6" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -3996,14 +4001,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4017,7 +4022,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4031,28 +4036,28 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4098_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="10" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4098,7 +4103,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_1>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -4118,11 +4123,6 @@
 					<paragraph>
 						<run>
 							<text>TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900</text>
-						</run>
-					</paragraph>
-					<paragraph>
-						<run>
-							<text>Before starting test, "Reset Global Variables" button must clicked on the interface to reset the sequence control.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -4146,7 +4146,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -4174,7 +4174,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_2>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -4188,7 +4188,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -4209,7 +4209,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -4536,14 +4536,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4557,35 +4557,35 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="6" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4637,14 +4637,14 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
 						</output_level_1>
-						<output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
 							<level2 format="tm_epd_5_1_4354(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4658,7 +4658,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
 							<level2 format="tm_epd_5_1_4101(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
@@ -4672,28 +4672,28 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+						<output_level_2 name="tm_5_1_STEP_off" id="7" ifRef="0">
 							<level2 format="tm_epd_5_1_4360(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+						<output_level_2 name="tm_5_1_SIS_off" id="8" ifRef="0">
 							<level2 format="tm_epd_5_1_4361(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="9" ifRef="0">
 							<level2 format="tm_epd_5_1_4362(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
 						</output_level_2>
-						<output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="10" ifRef="0">
 							<level2 format="tm_epd_5_1_4363(v1)"/>
 							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
 							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
