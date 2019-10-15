@@ -36,7 +36,7 @@
           </input_level_1>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+          <output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4354_filter_level_2.xmi#/"/>
@@ -49,7 +49,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4354_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+          <output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
@@ -75,7 +75,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4097_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+          <output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
@@ -88,7 +88,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_step_off" id="6" ifRef="0">
+          <output_level_2 name="tm_5_1_STEP_off" id="6" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4360_filter_level_2.xmi#/"/>
@@ -101,7 +101,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4360_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_sis_off" id="7" ifRef="0">
+          <output_level_2 name="tm_5_1_SIS_off" id="7" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4361_filter_level_2.xmi#/"/>
@@ -114,7 +114,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4361_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_het_ept_1_off" id="8" ifRef="0">
+          <output_level_2 name="tm_5_1_HET_EPT_1_off" id="8" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4362_filter_level_2.xmi#/"/>
@@ -127,7 +127,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4362_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_het_ept_2_off" id="9" ifRef="0">
+          <output_level_2 name="tm_5_1_HET_EPT_2_off" id="9" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4363_filter_level_2.xmi#/"/>
@@ -207,7 +207,7 @@
           </input_level_1>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output_level_2 name="tm_5_1_sis_in_safe_state" id="2" ifRef="0">
+          <output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4354_filter_level_2.xmi#/"/>
@@ -220,7 +220,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4354_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_spw_ready" id="3" ifRef="0">
+          <output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
@@ -246,7 +246,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4097_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_spw_ready" id="5" ifRef="0">
+          <output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4101_filter_level_2.xmi#/"/>
@@ -272,7 +272,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4099_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_step_off" id="7" ifRef="0">
+          <output_level_2 name="tm_5_1_STEP_off" id="7" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4360_filter_level_2.xmi#/"/>
@@ -285,7 +285,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4360_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_sis_off" id="8" ifRef="0">
+          <output_level_2 name="tm_5_1_SIS_off" id="8" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4361_filter_level_2.xmi#/"/>
@@ -298,7 +298,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4361_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_het_ept_1_off" id="9" ifRef="0">
+          <output_level_2 name="tm_5_1_HET_EPT_1_off" id="9" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4362_filter_level_2.xmi#/"/>
@@ -311,7 +311,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_5_1_4362_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_2>
-          <output_level_2 name="tm_5_1_het_ept_2_off" id="10" ifRef="0">
+          <output_level_2 name="tm_5_1_HET_EPT_2_off" id="10" ifRef="0">
             <level2 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.xmi#/"/>
             <level2_filter apply_def_filter="no">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel2/tm_epd_5_1_4363_filter_level_2.xmi#/"/>

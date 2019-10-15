@@ -16,7 +16,7 @@
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
             </level0_filter>
           </output_level_1>
-          <output_level_1 name="test_connection_report" id="1" ifRef="0">
+          <output_level_1 name="test_connection_report_17_2" id="1" ifRef="0">
             <level1_filter apply_def_filter="yes">
               <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_17_2_filter_level_1.xmi#/"/>
             </level1_filter>
