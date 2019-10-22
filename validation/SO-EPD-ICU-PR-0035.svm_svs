@@ -2195,7 +2195,7 @@
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
 						</output_level_1>
-						<output_level_1 name="test_connection_report_17_2" id="1" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2272,7 +2272,7 @@
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
@@ -2280,7 +2280,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2301,13 +2301,13 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
@@ -2908,7 +2908,7 @@
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
@@ -2916,7 +2916,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -2937,13 +2937,13 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
@@ -3544,7 +3544,7 @@
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
@@ -3552,7 +3552,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -3573,13 +3573,13 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
@@ -4180,7 +4180,7 @@
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
@@ -4188,7 +4188,7 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
@@ -4209,13 +4209,13 @@
 						</input_level_1>
 					</inputs>
 					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_17_2" id="0" ifRef="0">
+						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
 							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
 							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
 						</output_level_1>
 					</outputs>
 				</step>
-				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report" mode="continuous">
+				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
 					<inputs>
 						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
 							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
