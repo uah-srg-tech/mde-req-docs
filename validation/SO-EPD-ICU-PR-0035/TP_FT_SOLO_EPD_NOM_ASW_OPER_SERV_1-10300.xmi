@@ -191,7 +191,7 @@
           <input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <level2 href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_128_32_edac_mem_out_of_range_export_to_level_2.xmi#/"/>
-           <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_128_32_export_to_level_1_ack.xmi#/"/>
+            <level2_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_128_32_export_to_level_1_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_128_32_export_to_level_0.xmi#/"/>
           </input_level_2>
         </inputs>
@@ -264,7 +264,7 @@
           <input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <level2 href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
             <app_to_level2 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_128_32_edac_mem_out_of_range_export_to_level_2.xmi#/"/>
-        <level2_to_level1 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_128_32_export_to_level_1_exec_ack.xmi#/"/>
+            <level2_to_level1 href="SO-EPD-ICU-PR-0035/SERV_1/tc_epd_128_32_export_to_level_1_exec_ack.xmi#/"/>
             <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_128_32_export_to_level_0.xmi#/"/>
           </input_level_2>
         </inputs>
