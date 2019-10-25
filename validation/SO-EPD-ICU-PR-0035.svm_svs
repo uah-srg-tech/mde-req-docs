@@ -546,13 +546,10 @@
 					</body>
 				</subsection>
 			</subsection>
-			<subsection name="Definition of Test Scenarios">
+		</General>
+		<Scenarios>
+			<Scenario name="Scenario 1" id="0">
 				<body>
-					<paragraph>
-						<run bold="true">
-							<text>Scenario 1</text>
-						</run>
-					</paragraph>
 					<itemize>
 						<listItem>
 							<paragraph>
@@ -605,11 +602,10 @@
 						</listItem>
 					</itemize>
 					<figureFromFile name="Scenario1" referenceFile="Scenario1.png" caption="Test Scenario 1"/>
-					<paragraph>
-						<run bold="true">
-							<text>Scenario 2</text>
-						</run>
-					</paragraph>
+				</body>
+			</Scenario>
+			<Scenario name="Scenario 2" id="1">
+				<body>
 					<itemize>
 						<listItem>
 							<paragraph>
@@ -655,11 +651,10 @@
 						</listItem>
 					</itemize>
 					<figureFromFile name="Scenario2" referenceFile="Scenario2.png" caption="Test Scenario 2"/>
-					<paragraph>
-						<run bold="true">
-							<text>Scenario 3</text>
-						</run>
-					</paragraph>
+				</body>
+			</Scenario>
+			<Scenario name="Scenario 3" id="2">
+				<body>
 					<itemize>
 						<listItem>
 							<paragraph>
@@ -669,11 +664,10 @@
 							</paragraph>
 						</listItem>
 					</itemize>
-					<paragraph>
-						<run bold="true">
-							<text>Scenario 4</text>
-						</run>
-					</paragraph>
+				</body>
+			</Scenario>
+			<Scenario name="Scenario 4" id="3">
+				<body>
 					<itemize>
 						<listItem>
 							<paragraph>
@@ -740,11 +734,10 @@
 						</listItem>
 					</itemize>
 					<figureFromFile name="Scenario4" referenceFile="Scenario4.png" caption="Test Scenario 4"/>
-					<paragraph>
-						<run bold="true">
-							<text>Scenario 5</text>
-						</run>
-					</paragraph>
+				</body>
+			</Scenario>
+			<Scenario name="Scenario 5" id="4">
+				<body>
 					<itemize>
 						<listItem>
 							<paragraph>
@@ -806,8 +799,8 @@
 						</run>
 					</paragraph>							
 				</body>
-			</subsection>
-		</General>
+			</Scenario>
+		</Scenarios>
 		<TestDesign name="Solar Orbiter EPD Application Software Test Design">
 			<General>
 				<subsection name="Tests Identification">
@@ -2181,6 +2174,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
@@ -2221,6 +2215,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
@@ -2447,6 +2442,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
@@ -2590,6 +2586,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320" />
 			<ProcedureSteps>
 				<step name="disable_event_1003" id="0" mode="continuous">
@@ -2817,6 +2814,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
@@ -2857,6 +2855,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
@@ -3083,6 +3082,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
@@ -3226,6 +3226,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" />
 			<ProcedureSteps>
 				<step name="disable_event_1002" id="0" mode="continuous">
@@ -3453,6 +3454,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
@@ -3493,6 +3495,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
@@ -3719,6 +3722,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
@@ -3862,6 +3866,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" />
 			<ProcedureSteps>
 				<step name="disable_event_1002" id="0" mode="continuous">
@@ -4089,6 +4094,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" />
 			<ProcedureSteps>
 				<step name="test_connection" id="0" mode="continuous">
@@ -4129,6 +4135,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" />
 			<ProcedureSteps>
 				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
@@ -4355,6 +4362,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" />
 			<ProcedureSteps>
 				<step name="disable_hk_sid_100" id="0" mode="continuous">
@@ -4498,6 +4506,7 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" />
 			<ProcedureSteps>
 				<step name="disable_event_1003" id="0" mode="continuous">
