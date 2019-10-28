@@ -865,20 +865,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -947,20 +938,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1040,20 +1022,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1123,20 +1096,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1199,20 +1163,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1281,20 +1236,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1374,20 +1320,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1457,20 +1394,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1533,20 +1461,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1615,20 +1534,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1708,20 +1618,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1755,7 +1656,7 @@
 						<listItem>
 							<paragraph>
 								<run>
-									<text>Disable TRANSITION_TO_CONFIGURATION event TM and enable back .</text>
+									<text>Disable TRANSITION_TO_CONFIGURATION event TM and enable back.</text>
 								</run>
 							</paragraph>
 						</listItem>
@@ -1784,27 +1685,18 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>o	The test is passed if the event is not received when disabled and received when enabled.</text>
+							<text>The test is passed if the event is not received when disabled and received when enabled.</text>
 						</run>
 					</paragraph>
 				</body>
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1867,20 +1759,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -1949,20 +1832,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -2042,20 +1916,11 @@
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
@@ -2089,7 +1954,7 @@
 						<listItem>
 							<paragraph>
 								<run>
-									<text>Disable TRANSITION_TO_OPERATIONAL event TM and enable back .</text>
+									<text>Disable TRANSITION_TO_OPERATIONAL event TM and enable back.</text>
 								</run>
 							</paragraph>
 						</listItem>
@@ -2118,27 +1983,18 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>o	The test is passed if the event is not received when disabled and received when enabled.</text>
+							<text>The test is passed if the event is not received when disabled and received when enabled.</text>
 						</run>
 					</paragraph>
 				</body>
 			</PassFailCriteria>
 			<EnvironmentalNeeds>
 				<body>
-					<itemize>
-						<listItem>
-							<paragraph>
-								<run>
-									<text>Scenario 1.</text>
-								</run>
-							</paragraph>
-							<paragraph>
-								<run>
-									<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
-								</run>
-							</paragraph>
-						</listItem>
-					</itemize>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+						</run>
+					</paragraph>
 				</body>
 			</EnvironmentalNeeds>
 			<SpecialConstraints>
