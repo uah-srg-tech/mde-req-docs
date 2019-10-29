@@ -42,6 +42,7 @@ mapping vcdt::VCDTItems::GenerateParentItems() : vcdt::VCDTParentItems {
 			if k > result.parentItem->size() then {
 				//sssItem don't exist
 				var item := object VCDTParentItem {};
+				item.parentDoc := self.item->at(i).parentRefItem->at(j).parentDoc;
 				item.name := self.item->at(i).parentRefItem->at(j).name;
 				item.refItem += self.item->at(i).GetSRSRefItems();
 				result.parentItem += item;
@@ -59,6 +60,7 @@ mapping tdm::VTraceableDocumentAbstractItem::GetItems() : vcdt::VCDTItem {
 
 helper tdm::VTraceableDocumentAbstractItem::GetParentRefItems() : vcdt::VCDTParentRefItem {
 	var item := object VCDTParentRefItem {};
+	item.parentDoc := self.group.doc.id;
 	item.name := self.name;
 	return item;
 }
