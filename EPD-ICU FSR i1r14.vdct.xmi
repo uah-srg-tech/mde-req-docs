@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<micobs.svm:VCDTList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:micobs.svm="http://srg.aut.uah.es/micobs/svm/vcdt" doc="EPD-ICU FSR i1r14">
+  <items>
+    <item name="GE R-00010">
+      <parentRefItem name="R-406"/>
+    </item>
+    <item name="GE R-00030">
+      <parentRefItem name="R-180"/>
+    </item>
+    <item name="FU R-00180">
+      <parentRefItem name="TM-4"/>
+      <parentRefItem name="R-366"/>
+    </item>
+    <item name="FU R-00390">
+      <parentRefItem name="FTS-1"/>
+      <parentRefItem name="FTS-2"/>
+    </item>
+    <item name="FU R-00370">
+      <parentRefItem name="TM-4"/>
+      <parentRefItem name="R-366"/>
+    </item>
+    <item name="FU R-00380">
+      <parentRefItem name="PERP-12"/>
+    </item>
+    <item name="IF R-00150">
+      <parentRefItem name="TCV-1"/>
+      <parentRefItem name="TCV-2"/>
+      <parentRefItem name="TCV-3"/>
+      <parentRefItem name="TCV-4"/>
+      <parentRefItem name="TCV-5"/>
+      <parentRefItem name="TCV-6"/>
+      <parentRefItem name="TCV-7"/>
+    </item>
+    <item name="IF R-00160">
+      <parentRefItem name="PERP-1"/>
+      <parentRefItem name="PERP-2"/>
+      <parentRefItem name="PERP-3"/>
+    </item>
+    <item name="IF R-00170">
+      <parentRefItem name="EVRP-2"/>
+      <parentRefItem name="EVRP-3"/>
+      <parentRefItem name="EVRP-4"/>
+      <parentRefItem name="EVRP-5"/>
+      <parentRefItem name="EVRP-6"/>
+      <parentRefItem name="EVRP-7"/>
+    </item>
+    <item name="IF R-00180">
+      <parentRefItem name="EVRP-1"/>
+    </item>
+    <item name="IF R-00390">
+      <parentRefItem name="R-261"/>
+    </item>
+    <item name="RE R-00070">
+      <parentRefItem name="R-264"/>
+      <parentRefItem name="FDIR-14"/>
+      <parentRefItem name="R-407"/>
+      <parentRefItem name="EVRP-6"/>
+    </item>
+    <item name="DI R-00030">
+      <parentRefItem name="R-366"/>
+    </item>
+  </items>
+  <parentItems>
+    <parentItem name="R-406">
+      <refItem name="GE R-00010"/>
+    </parentItem>
+    <parentItem name="R-180">
+      <refItem name="GE R-00030"/>
+    </parentItem>
+    <parentItem name="TM-4">
+      <refItem name="FU R-00180"/>
+      <refItem name="FU R-00370"/>
+    </parentItem>
+    <parentItem name="R-366">
+      <refItem name="FU R-00180"/>
+      <refItem name="FU R-00370"/>
+      <refItem name="DI R-00030"/>
+    </parentItem>
+    <parentItem name="FTS-1">
+      <refItem name="FU R-00390"/>
+    </parentItem>
+    <parentItem name="FTS-2">
+      <refItem name="FU R-00390"/>
+    </parentItem>
+    <parentItem name="TM-4">
+      <refItem name="FU R-00370"/>
+    </parentItem>
+    <parentItem name="R-366">
+      <refItem name="FU R-00370"/>
+      <refItem name="DI R-00030"/>
+    </parentItem>
+    <parentItem name="PERP-12">
+      <refItem name="FU R-00380"/>
+    </parentItem>
+    <parentItem name="TCV-1">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="TCV-2">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="TCV-3">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="TCV-4">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="TCV-5">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="TCV-6">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="TCV-7">
+      <refItem name="IF R-00150"/>
+    </parentItem>
+    <parentItem name="PERP-1">
+      <refItem name="IF R-00160"/>
+    </parentItem>
+    <parentItem name="PERP-2">
+      <refItem name="IF R-00160"/>
+    </parentItem>
+    <parentItem name="PERP-3">
+      <refItem name="IF R-00160"/>
+    </parentItem>
+    <parentItem name="EVRP-2">
+      <refItem name="IF R-00170"/>
+    </parentItem>
+    <parentItem name="EVRP-3">
+      <refItem name="IF R-00170"/>
+    </parentItem>
+    <parentItem name="EVRP-4">
+      <refItem name="IF R-00170"/>
+    </parentItem>
+    <parentItem name="EVRP-5">
+      <refItem name="IF R-00170"/>
+    </parentItem>
+    <parentItem name="EVRP-6">
+      <refItem name="IF R-00170"/>
+      <refItem name="RE R-00070"/>
+    </parentItem>
+    <parentItem name="EVRP-7">
+      <refItem name="IF R-00170"/>
+    </parentItem>
+    <parentItem name="EVRP-1">
+      <refItem name="IF R-00180"/>
+    </parentItem>
+    <parentItem name="R-261">
+      <refItem name="IF R-00390"/>
+    </parentItem>
+    <parentItem name="R-264">
+      <refItem name="RE R-00070"/>
+    </parentItem>
+    <parentItem name="FDIR-14">
+      <refItem name="RE R-00070"/>
+    </parentItem>
+    <parentItem name="R-407">
+      <refItem name="RE R-00070"/>
+    </parentItem>
+    <parentItem name="EVRP-6">
+      <refItem name="RE R-00070"/>
+    </parentItem>
+    <parentItem name="R-366">
+      <refItem name="DI R-00030"/>
+    </parentItem>
+  </parentItems>
+</micobs.svm:VCDTList>
