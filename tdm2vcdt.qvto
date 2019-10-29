@@ -1,13 +1,13 @@
 modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
-modeltype vcdt uses "http://srg.aut.uah.es/micobs/svm/vcdt";
+modeltype vcd uses "http://srg.aut.uah.es/micobs/svm/vcd";
 
-transformation generateVCDT(in input : tdm, out output : vcdt);
+transformation generateVCDT(in input : tdm, out output : vcd);
 
 main() {
-	input.objects()![tdm::VTraceableDocument]->map GenerateVCDT();
+	input.objects()![tdm::VTraceableDocument]->map GenerateVCD();
 }
 
-mapping tdm::VTraceableDocument::GenerateVCDT() : vcdt::VCDTList {
+mapping tdm::VTraceableDocument::GenerateVCD() : vcd::VVCDList {
 	result.doc := self.id;
 	
 	result.items := self.map GenerateItems();
@@ -15,7 +15,7 @@ mapping tdm::VTraceableDocument::GenerateVCDT() : vcdt::VCDTList {
 	
 }
 
-mapping tdm::VTraceableDocument::GenerateItems() : vcdt::VCDTItems {
+mapping tdm::VTraceableDocument::GenerateItems() : vcd::VVCDItems {
 	var i : Integer := 1;
 	while (i <= self.groups->size()) {
 		result.item += self.groups->at(i).items.map GetItems();
@@ -23,7 +23,7 @@ mapping tdm::VTraceableDocument::GenerateItems() : vcdt::VCDTItems {
 	};
 }
 
-mapping vcdt::VCDTItems::GenerateParentItems() : vcdt::VCDTParentItems {
+mapping vcd::VVCDItems::GenerateParentItems() : vcd::VVCDParentItems {
 	var i : Integer := 1;
 	while (i <= self.item->size()) {
 	
@@ -34,17 +34,17 @@ mapping vcdt::VCDTItems::GenerateParentItems() : vcdt::VCDTParentItems {
 			while (k <= result.parentItem->size()) {
 				if self.item->at(i).parentRefItem->at(j).name = result.parentItem->at(k).name then {
 					//sssItem already exists
-					result.parentItem->at(k).refItem += self.item->at(i).GetSRSRefItems();
+					result.parentItem->at(k).refItem += self.item->at(i).GetRefItems();
 				}endif;
 				k := k + 1;
 				
 			};
 			if k > result.parentItem->size() then {
 				//sssItem don't exist
-				var item := object VCDTParentItem {};
+				var item := object VVCDParentItem {};
 				item.parentDoc := self.item->at(i).parentRefItem->at(j).parentDoc;
 				item.name := self.item->at(i).parentRefItem->at(j).name;
-				item.refItem += self.item->at(i).GetSRSRefItems();
+				item.refItem += self.item->at(i).GetRefItems();
 				result.parentItem += item;
 			}endif;
 			j := j + 1;
@@ -53,20 +53,20 @@ mapping vcdt::VCDTItems::GenerateParentItems() : vcdt::VCDTParentItems {
 	};
 }
 
-mapping tdm::VTraceableDocumentAbstractItem::GetItems() : vcdt::VCDTItem {
+mapping tdm::VTraceableDocumentAbstractItem::GetItems() : vcd::VVCDItem {
 	result.name := self.name;
 	result.parentRefItem += self.parentItem.GetParentRefItems();
 }
 
-helper tdm::VTraceableDocumentAbstractItem::GetParentRefItems() : vcdt::VCDTParentRefItem {
-	var item := object VCDTParentRefItem {};
+helper tdm::VTraceableDocumentAbstractItem::GetParentRefItems() : vcd::VVCDParentRefItem {
+	var item := object VVCDParentRefItem {};
 	item.parentDoc := self.group.doc.id;
 	item.name := self.name;
 	return item;
 }
 
-helper vcdt::VCDTItem::GetSRSRefItems() : vcdt::VCDTRefItem {
-	var item := object VCDTRefItem {};
+helper vcd::VVCDItem::GetRefItems() : vcd::VVCDRefItem {
+	var item := object VVCDRefItem {};
 	item.name := self.name;
 	return item;
 }

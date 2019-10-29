@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<micobs.svm:VCDTList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:micobs.svm="http://srg.aut.uah.es/micobs/svm/vcdt" doc="EPD-ICU FSR i1r14">
+<micobs.svm:VVCDList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:micobs.svm="http://srg.aut.uah.es/micobs/svm/vcd" doc="EPD-ICU FSR i1r14">
   <items>
     <item name="GE R-00010">
       <parentRefItem name="R-406" parentDoc="SOL-EST-RCD-0050"/>
@@ -163,4 +163,4 @@
       <refItem name="DI R-00030"/>
     </parentItem>
   </parentItems>
-</micobs.svm:VCDTList>
+</micobs.svm:VVCDList>
