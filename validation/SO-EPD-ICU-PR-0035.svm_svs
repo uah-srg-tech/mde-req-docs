@@ -601,7 +601,7 @@
 							</paragraph>
 						</listItem>
 					</itemize>
-					<figureFromFile name="Scenario1" referenceFile="SVS_images/Scenario1.png" caption="Test Scenario 1"/>
+					<figureFromFile name="Scenario1" referenceFile="SVS_images/Scenario1.png" width="919" height="535" caption="Test Scenario 1"/>
 				</body>
 			</Scenario>
 			<Scenario name="Scenario 2" id="1">
@@ -650,7 +650,7 @@
 							</paragraph>
 						</listItem>
 					</itemize>
-					<figureFromFile name="Scenario2" referenceFile="SVS_images/Scenario2.png" caption="Test Scenario 2"/>
+					<figureFromFile name="Scenario2" referenceFile="SVS_images/Scenario2.png" width="964" height="567" caption="Test Scenario 2"/>
 				</body>
 			</Scenario>
 			<Scenario name="Scenario 3" id="2">
@@ -733,7 +733,7 @@
 							</paragraph>
 						</listItem>
 					</itemize>
-					<figureFromFile name="Scenario4" referenceFile="SVS_images/Scenario4.png" caption="Test Scenario 4"/>
+					<figureFromFile name="Scenario4" referenceFile="SVS_images/Scenario4.png" width="916" height="645" caption="Test Scenario 4"/>
 				</body>
 			</Scenario>
 			<Scenario name="Scenario 5" id="4">
@@ -789,7 +789,7 @@
 							</paragraph>
 						</listItem>
 					</itemize>
-					<figureFromFile name="Scenario5" referenceFile="SVS_images/Scenario5.png" caption="Test Scenario 5"/>
+					<figureFromFile name="Scenario5" referenceFile="SVS_images/Scenario5.png" width="915" height="559" caption="Test Scenario 5"/>
 					<paragraph>
 						<run bold="true">
 							<text>Note: </text>

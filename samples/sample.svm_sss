@@ -59,7 +59,7 @@
 	<GeneralDescription>
 		<ProductPerspective>
 			<body>
-				<figureFromFile name="Fig1" referenceFile="prod_pers.jpg" caption="Product Perspective dummy figure" />
+				<figureFromFile name="Fig1" referenceFile="prod_pers.jpg" width="100" height="100" caption="Product Perspective dummy figure" />
 			</body>
 		</ProductPerspective>
 		<GeneralCapabilities>

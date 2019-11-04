@@ -235,7 +235,7 @@
 							<text> illustrates the top-level interfaces to the ICU, which affect the Instrument Control Unit Software.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_IF" referenceFile="FSR_images/ICU_IF.png" caption="ICU interfaces" />
+					<figureFromFile name="ICU_IF" referenceFile="FSR_images/ICU_IF.png" width="849" height="641" caption="ICU interfaces" />
 					<paragraph>
 						<run>
 							<text>EPD's CDPU provides the interface between the Solar Orbiter Spacecraft C&amp;DH system and the EPD sensors (STEP, HET, EPT and SIS). All information transfer between the EPD sensors and the Spacecraft/Ground flows through the CDPU, including telemetry, commands and status. The sensors communicate with the CDPU over a dedicated serial interface.</text>
@@ -255,7 +255,7 @@
 							<text>shows the basic HW diagram of the ICU.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW" referenceFile="FSR_images/ICU_HW.png" caption="ICU hardware schema" />
+					<figureFromFile name="ICU_HW" referenceFile="FSR_images/ICU_HW.png" width="922" height="615" caption="ICU hardware schema" />
 					<paragraph>
 						<run>
 							<text>As it can be observed, the design is based on a FPGA (the RTAX2000 from Actel) that includes a LEON2 soft processor, the UART-LVDS links with the sensors, the SpaceWire cores and the interfaces with the LVPS and the memory. The RAM memory uses the SDRAM 3DSD2G40VS5238MS (1.56 Gbits in a 40 bit configuration to implement the EDAC) part and the EEPROM memory uses the 3DEE8M32VS8094 (8 Mbits in a 32 bit configuration) part, both from 3Dplus.</text>
@@ -271,7 +271,7 @@
 							<text> a simplified diagram of the LVPS hardware is shown.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="LVPS_HW" referenceFile="FSR_images/LVPS_HW.png" caption="LVPS hardware schema" />
+					<figureFromFile name="LVPS_HW" referenceFile="FSR_images/LVPS_HW.png" width="911" height="604" caption="LVPS hardware schema" />
 				</body>
 			</subsection>
 			<subsection name="Modes">
@@ -286,7 +286,7 @@
 							<text> the modes of operation of ICUSW are represented.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_SW_Op_modes" referenceFile="FSR_images/ICU_SW_Op_modes.png" caption="ICU SW operation modes" />
+					<figureFromFile name="ICU_SW_Op_modes" referenceFile="FSR_images/ICU_SW_Op_modes.png" width="1148" height="686" caption="ICU SW operation modes" />
 					<paragraph>
 						<run>
 							<text>The ICUSW shall be able to support the following modes:</text>
@@ -403,7 +403,7 @@
 							<text>.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW_IFs" referenceFile="FSR_images/ICU_HW_IFs.png" caption="ICU hardware interfaces" />
+					<figureFromFile name="ICU_HW_IFs" referenceFile="FSR_images/ICU_HW_IFs.png" width="613" height="322" caption="ICU hardware interfaces" />
 				</body>
 			</subsection>
 			<subsection name="External Software Interfaces">
@@ -468,7 +468,7 @@
 								<text> below. A cold redundant configuration will be used for data transmission/reception links between the CDPU and the sensors.</text>
 							</run>
 						</paragraph>
-						<figureFromFile name="EPD_Serial" referenceFile="FSR_images/EPD_Serial.png" caption="EPD Serial Data/Command Protocol" />
+						<figureFromFile name="EPD_Serial" referenceFile="FSR_images/EPD_Serial.png" width="517" height="134" caption="EPD Serial Data/Command Protocol" />
 						<paragraph>
 							<run>
 								<text>Data communication between the sensors and the CDPU is started every second by the CDPU that acts as a master. CDPU will provide a 1 Hz hardware clock (one pulse per second or 1PPS) to the sensors </text> 
@@ -487,7 +487,7 @@
 								<text>, provided by SpaceWire. The CDPU drives the 1PPS signal directly to the sensors via a cabled hardware signal. A specific FPGA hardware entity, integrated in the CDPU, is in charge of generating the 1PPS signal synchronized with the time code reception. LVDS will be used to send 1PPS clock signal, in a cold redundant configuration, to the sensors. This approach eliminates the software latency and jitter of processor interrupt response and avoids the latency of UART transmission. Note that all the signals (transmission/reception and 1PPS clock) both, nominal and redundant are differential signals, so no common ground is needed in any case.</text>
 							</run>
 						</paragraph>
-						<figureFromFile name="PPS_signal" referenceFile="FSR_images/PPS_signal.png" caption="1PPS signal characteristics" />
+						<figureFromFile name="PPS_signal" referenceFile="FSR_images/PPS_signal.png" width="613" height="127" caption="1PPS signal characteristics" />
 						<paragraph>
 							<run>
 								<text>Data is sent over the command and telemetry interfaces as a transaction. Each transaction contains a single Sensor Transfer Frame (STF). Each STF contains command or telemetry data. The general format of the STF is shown in </text> 
@@ -498,7 +498,7 @@
 								<text>. Command and telemetry-specific formats are described below.</text>
 							</run>
 						</paragraph>
-						<tableFromFile name="STF" referenceFile="FSR_images/STF.png" caption="Sensor Transfer Frame (STF) Format" />
+						<tableFromFile name="STF" referenceFile="FSR_images/STF.png" width="983" height="356" caption="Sensor Transfer Frame (STF) Format" />
 					</body>
 				</subsection>
 				<subsection name="S/C Interface">
@@ -587,7 +587,7 @@
 							<text>: R-838).</text>
 						</run>
 					</paragraph>
-					<tableFromFile name="TimeTC" referenceFile="FSR_images/TimeTC.png" caption="Time Telecommand Packet Format" />
+					<tableFromFile name="TimeTC" referenceFile="FSR_images/TimeTC.png" width="983" height="709" caption="Time Telecommand Packet Format" />
 				</body>
 			</subsection>
 		</RelationOtherSystems>
