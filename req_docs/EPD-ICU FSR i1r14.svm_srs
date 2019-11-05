@@ -403,7 +403,7 @@
 							<text>.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW_IFs" referenceFile="FSR_images/ICU_HW_IFs.png" width="613" height="322" caption="ICU hardware interfaces" />
+					<figureFromFile name="ICU_HW_IFs" referenceFile="FSR_images/ICU_HW_IFs.png" width="613" height="322" alignment="center" caption="ICU hardware interfaces" />
 				</body>
 			</subsection>
 			<subsection name="External Software Interfaces">
@@ -874,23 +874,23 @@
 					<text>In the following paragraphs a lists of software requirements will be included. Every single requirement has the following format:</text>
 				</run>
 			</paragraph>
-			<basicTable name="RequirementsTable">
+			<basicTable name="RequirementsTable" width="100">
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
-							<run>
+							<run bold="true">
 								<text>Name</text>
 							</run>
 						</paragraph>
 					</cell>
-					<cell>
+					<cell width="64" shadow="D8D8D8">
 						<paragraph>
-							<run>
+							<run bold="true">
 								<text>SRS-ICUSW XX-YYYY</text>
 							</run>
 						</paragraph>
 					</cell>
-					<cell>
+					<cell width="16" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Modes</text>
@@ -899,9 +899,9 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
-							<run>
+							<run bold="true">
 								<text>Description</text>
 							</run>
 						</paragraph>
@@ -915,10 +915,10 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
-							<run>
-								<text>Validation</text>
+							<run bold="true">
+								<text>Validation Method</text>
 							</run>
 						</paragraph>
 					</cell>
@@ -931,9 +931,9 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
-							<run>
+							<run bold="true">
 								<text>Parent</text>
 							</run>
 						</paragraph>
@@ -1741,7 +1741,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The ICUSW application software will handle the information about EPD status, housekeepingand fault detection and recovery management according to the following design requirements:</text>
+							<text>The ICUSW application software will handle the information about EPD status, housekeeping and fault detection and recovery management according to the following design requirements:</text>
 						</run>
 					</paragraph>
 				</body>

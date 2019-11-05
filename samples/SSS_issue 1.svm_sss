@@ -276,7 +276,7 @@
 						<text>Figure 1 illustrates the EPD Instrument Control Unit operational environment.</text>
 					</run>
 				</paragraph>
-				<figureFromFile name="ICU IFs" referenceFile="icu_ifs.png" caption="ICU Interfaces" />
+				<figureFromFile name="ICU IFs" referenceFile="icu_ifs.png" width="100" height="100" caption="ICU Interfaces"/>
 				<paragraph>
 					<run>
 						<text>EPD's ICU provides the interface between the SRG Spacecraft C&amp;DH system and the EPD sensors. All information transfer between the EPD's sensors and the Spacecraft/Ground flows through the ICU, including telemetry, commands and status. The EPD's sensors communicate with the EPD's ICU over a dedicated serial interface.</text>
