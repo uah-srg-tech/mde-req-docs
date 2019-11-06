@@ -129,12 +129,12 @@
 		</Abbreviation>
 		<Abbreviation name="SVVP">
 			<run>
-				<text>Field Programmable Gate Array</text>
+				<text>Software Verification and Validation Plan</text>
 			</run>
 		</Abbreviation>
 		<Abbreviation name="SW">
 			<run>
-				<text>Software Verification and Validation Plan</text>
+				<text>Software</text>
 			</run>
 		</Abbreviation>
 		<Abbreviation name="TBC">
