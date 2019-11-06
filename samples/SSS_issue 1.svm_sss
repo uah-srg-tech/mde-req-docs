@@ -276,7 +276,7 @@
 						<text>Figure 1 illustrates the EPD Instrument Control Unit operational environment.</text>
 					</run>
 				</paragraph>
-				<figureFromFile name="ICU IFs" referenceFile="icu_ifs.png" width="100" height="100" caption="ICU Interfaces"/>
+				<figureFromFile name="ICU IFs" referenceFile="SSS_images/icu_ifs.png" width="790" height="512" caption="ICU Interfaces"/>
 				<paragraph>
 					<run>
 						<text>EPD's ICU provides the interface between the SRG Spacecraft C&amp;DH system and the EPD sensors. All information transfer between the EPD's sensors and the Spacecraft/Ground flows through the ICU, including telemetry, commands and status. The EPD's sensors communicate with the EPD's ICU over a dedicated serial interface.</text>
@@ -339,16 +339,16 @@
 					<text>In the following paragraphs a lists of software specific requirements will be included. Every single requirement has the following format:</text>
 				</run>
 			</paragraph>
-			<basicTable name="SpecificRequirementsTable">
+			<basicTable name="SpecificRequirementsTable" width="100">
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Name</text>
 							</run>
 						</paragraph>
 					</cell>
-					<cell>
+					<cell width="80" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>SSS-ICUSW XX-YYYY</text>
@@ -357,7 +357,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Description</text>
@@ -373,7 +373,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Validation</text>
@@ -717,16 +717,16 @@
 					<text>In the following paragraphs a lists of verification, validation and system integration requirements will be included. Every single requirement has the following format:</text>
 				</run>
 			</paragraph>
-			<basicTable name="SpecificRequirementsTable">
+			<basicTable name="SpecificRequirementsTable" width="100">
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Name</text>
 							</run>
 						</paragraph>
 					</cell>
-					<cell>
+					<cell width="80" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>SSS-ICUSW XX-YYYY</text>
@@ -735,7 +735,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Description</text>
@@ -751,7 +751,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Validation</text>

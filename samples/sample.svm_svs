@@ -1,5 +1,5 @@
 <SVS name="SVS Sample" id="SVS-001" issue="1" revision="0" date="06/06/2019">
-	<parent name="SSSSample" />
+	<parent name="SRG-EPD ICUSW Project"/>
 	<Introduction>
 		<subsection name="Purpose">
 			<body>
@@ -77,7 +77,7 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItem name="SampleItem-001" />
+			<ValidatingItem name="SSS-ICUSW-GE-010" />
 		</TestCase>
 	</TestCases>
 	<TestProcedures>

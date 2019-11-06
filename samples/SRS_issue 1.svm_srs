@@ -349,7 +349,7 @@
 							<text> the modes of operation of SRG EPD ICUSW are represented.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_SW_modes" referenceFile="ICU_SW_modes.png" width="100" height="100" caption="ICU SW operation modes" />
+					<figureFromFile name="ICU_SW_modes" referenceFile="SRS_images/ICU_SW_modes.png" width="914" height="587" caption="ICU SW operation modes" />
 					<paragraph>
 						<run>
 							<text>The ICUSW shall be able to support the following modes:</text>
@@ -462,7 +462,7 @@
 							<text> illustrates the top-level interfaces that affect the EPD Instrument Control Unit Software.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_IF" referenceFile="ICU_IF.png" width="100" height="100" caption="ICU interfaces" />
+					<figureFromFile name="ICU_IF" referenceFile="SRS_images/ICU_IF.png" width="790" height="512" caption="ICU interfaces" />
 					<paragraph>
 						<run>
 							<text>EPD ICU provides the interface between the SRG Spacecraft C&amp;DH system and the EPD sensors. All information transfer between the EPD sensors and the Spacecraft/Ground flows through the ICU, including telemetry, commands and status. The EPD sensors communicate with the EPD ICU over a dedicated serial interface.</text>
@@ -482,7 +482,7 @@
 							<text> shows the basic HW diagram of the EPD's ICU.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW_schema" referenceFile="ICU_HW_schema.png" width="100" height="100" caption="ICU hardware schema" />
+					<figureFromFile name="ICU_HW_schema" referenceFile="SRS_images/ICU_HW_schema.png" width="677" height="498" caption="ICU hardware schema" />
 					<paragraph>
 						<run>
 							<text>As it can be observed, the design is based on a FPGA that includes a LEON2 soft processor, the UART-LVDS links with the sensors, the SpaceWire cores and the interfaces with the LVPS and the memory.</text>
@@ -513,7 +513,7 @@
 							<text>.</text>
 						</run>
 					</paragraph>
-					<figureFromFile name="ICU_HW_IFs" referenceFile="ICU_HW_IFs.png" width="100" height="100" caption="ICU hardware interfaces" />
+					<figureFromFile name="ICU_HW_IFs" referenceFile="SRS_images/ICU_HW_IFs.png" width="613" height="322" caption="ICU hardware interfaces" />
 				</body>
 			</subsection>
 			<subsection name="External Software Interfaces">
@@ -636,16 +636,16 @@
 					<text>In the following paragraphs a lists of software requirements will be included. Every single requirement has the following format:</text>
 				</run>
 			</paragraph>
-			<basicTable name="RequirementsTable">
+			<basicTable name="RequirementsTable" width="100">
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Name</text>
 							</run>
 						</paragraph>
 					</cell>
-					<cell>
+					<cell width="80" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>SRS-ICUSW XX-YYYY</text>
@@ -654,7 +654,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Description</text>
@@ -670,7 +670,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Validation</text>
@@ -686,7 +686,7 @@
 					</cell>
 				</row>
 				<row>
-					<cell>
+					<cell width="20" shadow="D8D8D8">
 						<paragraph>
 							<run>
 								<text>Parent</text>
