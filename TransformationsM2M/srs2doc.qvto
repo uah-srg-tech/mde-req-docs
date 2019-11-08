@@ -1,0 +1,520 @@
+modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
+modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype srs uses "http://srg.aut.uah.es/micobs/svm/srs";
+modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
+
+transformation generateDoc(in input : srs, out output : doc);
+
+main() {
+	input.objects()![srs::VSRSDocument]->map GenerateDoc();
+}
+
+mapping srs::VSRSDocument::GenerateDoc() : doc::DDocument {
+	result.name := self.name;
+	result.id := self.id;
+	result.issue := self.issue;
+	result.revision := self.revision;
+	result.date := self.date;
+	
+	result.section += self.introductionSection.map GenerateIntroductionSection();
+	result.section += self.applicableDocumentsSection.map GenerateApplicableDocumentsSection();
+	result.section += self.referenceDocumentsSection.map GenerateReferenceDocumentsSection();
+	result.section += self.termsDefinitionsAbbreviationsSection.map GenerateTDASection();
+	result.section += self.softwareOverviewSection.map GenerateSoftwareOverviewSection();
+	result.section += self.requirementsSection.map GenerateRequirementsSection();
+	result.section += self.logicalModelsSection.map GenerateLogicalModelsSection();
+}
+
+mapping srs::VSRSIntroduction::GenerateIntroductionSection() : doc::DDSection {
+	result.name := "Introduction";
+	
+	result.sectionContent += self.srsInstatiableSubsections.GenerateInstatiableSubsection();
+}
+
+mapping srs::VSRSApplicableDocuments::GenerateApplicableDocumentsSection() : doc::DDSection {
+	result.name := "Applicable Documents";
+	
+	result.sectionContent := self.applicableDocuments.GenerateADRDs();
+}
+
+mapping srs::VSRSReferenceDocuments::GenerateReferenceDocumentsSection() : doc::DDSection {
+	result.name := "Reference Documents";
+	
+	result.sectionContent := self.referenceDocuments.GenerateADRDs();
+}
+
+helper doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
+	return object DDBody {
+		bodyContent := object DParagraph {
+			style := "ADRD";
+			paragraphContent += object DRun {
+				text := object DText {
+					content := self.name;
+				};
+			};
+			paragraphContent += object DRun {
+				tab := object DTab {};
+				text := object DText {
+					content := self.title;
+				};
+			};
+		};
+	};	
+}
+
+mapping srs::VSRSTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSection {
+	result.name := "Terms, Definitions & Abbreviations";
+	
+	result.sectionContent := object DDBody {
+		var i : Integer := 1;
+		while (i <= self.terms->size()) {
+			bodyContent += object DParagraph {
+				style := "TDA";
+				paragraphContent += object DRun {
+					text := object DText {
+						content := self.terms->at(i).name;
+					};
+				};
+				paragraphContent += self.terms->at(i).description.GenerateRun();
+			};
+			i := i + 1;
+		};
+		
+		i := 1;
+		while (i <= self.definitions->size()) {
+			bodyContent += object DParagraph {
+				style := "TDA";
+				paragraphContent += object DRun {
+					text := object DText {
+						content := self.definitions->at(i).name;
+					};
+				};
+				paragraphContent += self.definitions->at(i).description.GenerateRun();
+			};
+			i := i + 1;
+		};
+		
+		i := 1;
+		while (i <= self.abbreviations->size()) {
+			bodyContent += object DParagraph {
+				style := "TDA";
+				paragraphContent += object DRun {
+					text := object DText {
+						content := self.abbreviations->at(i).name;
+					};
+				};
+				paragraphContent += self.abbreviations->at(i).description.GenerateRun();
+			};
+			i := i + 1;
+		};
+	};
+}
+
+mapping srs::VSRSSoftwareOverview::GenerateSoftwareOverviewSection() : doc::DDSection {
+	result.name := "Software Overview";
+	
+	result.sectionContent += self.functionPurpose.GenerateSoftwareOverviewSubsections("Function and Purpose");
+	result.sectionContent += self.environmentalConsiderations.GenerateSoftwareOverviewSubsections("Environmental Considerations");
+	result.sectionContent += self.relationOtherSystems.GenerateSoftwareOverviewSubsections("Relation with other Systems");
+	result.sectionContent += self.constraints.GenerateSoftwareOverviewSubsections("Constraints");
+}
+
+helper srs::VSRSFixedSection::GenerateSoftwareOverviewSubsections(in sectionName : String) : doc::DDSection {
+	return object DDSection {
+		name := sectionName;
+		sectionContent += self.body.GenerateDBody();
+		sectionContent += self.allSubobjectsOfType(VSRSInstantiableSection).GenerateInstatiableSubsection();
+	};
+}
+
+mapping srs::VSRSRequirements::GenerateRequirementsSection() : doc::DDSection {
+	result.name := "Requirements";
+	
+	result.sectionContent += self.sectionDescription.GenerateDBody();
+	
+	result.sectionContent += self.general.GenerateRequirementSubsection("General");
+	result.sectionContent += self.performance.GenerateRequirementSubsection("Performance");
+	result.sectionContent += self.interface.GenerateRequirementSubsection("Interface");
+	result.sectionContent += self.functional.GenerateRequirementSubsection("Functional");
+	result.sectionContent += self.operational.GenerateRequirementSubsection("Operational");
+	result.sectionContent += self.resources.GenerateRequirementSubsection("Resources");
+	result.sectionContent += self.design.GenerateRequirementSubsection("Design");
+	result.sectionContent += self.securityPrivacy.GenerateRequirementSubsection("Security and Privacy");
+	result.sectionContent += self.portability.GenerateRequirementSubsection("Portability");
+	result.sectionContent += self.swQuality.GenerateRequirementSubsection("Software Quality");
+	result.sectionContent += self.swReliability.GenerateRequirementSubsection("Software Reliability");
+	result.sectionContent += self.swMaintainability.GenerateRequirementSubsection("Software Maintainability");
+	result.sectionContent += self.swSafety.GenerateRequirementSubsection("Software Safety");
+	result.sectionContent += self.swConfigurationDelivery.GenerateRequirementSubsection("Software Configuration Delivery");
+	result.sectionContent += self.dataDefinitionDB.GenerateRequirementSubsection("Data Definition Database");
+	result.sectionContent += self.humanFactors.GenerateRequirementSubsection("Human Factors");
+	result.sectionContent += self.adaptationInstallation.GenerateRequirementSubsection("Adaptation Installation");
+}
+
+helper srs::VSRSAbstractRequirementSection::GenerateRequirementSubsection(in reqSectionName : String) : doc::DDSection {
+	return object DDSection {
+		name := reqSectionName;
+		sectionContent += self.sectionDescription.GenerateDBody();
+		var i : Integer := 1;
+		while (i <= self.srsItems->size()) {
+			sectionContent += self.srsItems->at(i).GenerateReqItem();
+			i := i + 1;
+		};
+		sectionContent += self.srsRequirementSubsections.GenerateReqSubsection();
+	};
+}
+
+helper srs::VSRSDocumentItem::GenerateReqItem() : doc::DDBody {
+	return object DDBody {
+		bodyContent += self.GenerateReqItemTable();
+		var i : Integer := 1;
+		while (i <= self.extendedDescription.bodyContent->size()) {
+			bodyContent += self.extendedDescription.bodyContent.map GenerateBodyContent();
+			i := i + 1;
+		};
+	};
+}
+
+helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
+	return object DBasicTable {
+		style := "TableGridFirstRowColummShadow";
+		width := "100";
+		rows += object DRow {
+			cells += object DCell {
+				width := "20";
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := true;
+						text := object DText {
+							content := "Name";
+						};
+					};
+				};
+			};
+			cells += object DCell {
+				if(self.mode->size() <> 0) {
+					width := "64";
+				};
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := true;
+						text := object DText {
+							content := self.name;
+						};
+					};
+				};
+			};
+			if(self.mode->size() <> 0) {
+				var modesText : String;
+				var i : Integer := 1;
+				while (i <= self.mode->size()) {
+					var modeText : String;
+					switch {
+						case(self.mode->at(i) = srs::VSRSDocumentItemModes::Off) {
+							modeText := "F";
+						};
+						case(self.mode->at(i) = srs::VSRSDocumentItemModes::Boot) {
+							modeText := "B";
+						};
+						case(self.mode->at(i) = srs::VSRSDocumentItemModes::Safe) {
+							modeText := "S";
+						};
+						case(self.mode->at(i) = srs::VSRSDocumentItemModes::Configuration) {
+							modeText := "C";
+						};
+						case(self.mode->at(i) = srs::VSRSDocumentItemModes::Operational) {
+							modeText := "O";
+						};
+					};
+					if(modesText.size() = 0) {
+						modesText := modeText;
+					} else {
+						modesText := modesText + (", ") + modeText;
+					};
+					i := i + 1;
+				};
+				cells += object DCell {
+					width := "16";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := modesText;
+							};
+						};
+					};
+				};
+			};
+		};
+		rows += object DRow {
+			cells += object DCell {
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := true;
+						text := object DText {
+							content := "Description";
+						};
+					};
+				};
+			};
+			cells += object DCell {
+				if(self.mode->size() <> 0) {
+					width := "80";
+					colSpan := "2";
+				};
+				var i : Integer := 1;
+				while (i <= self.description.bodyContent->size()) {
+					bodyContent += self.description.bodyContent.map GenerateBodyContent();
+					i := i + 1;
+				};
+			};
+		};
+		rows += object DRow {
+			cells += object DCell {
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := true;
+						text := object DText {
+							content := "Validation Method";
+						};
+					};
+				};
+			};
+			cells += object DCell {
+				if(self.mode->size() <> 0) {
+					width := "80";
+					colSpan := "2";
+				};
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := true;
+						text := object DText {
+							content := self.validationMethod.toString();
+						};
+					};
+				};
+			};
+		};
+		if(self.parentItem->size() <> 0) {
+			rows += object DRow {
+				cells += object DCell {
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := true;
+							text := object DText {
+								content := "Parent";
+							};
+						};
+					};
+				};
+				cells += object DCell {
+					if(self.mode->size() <> 0) {
+						width := "80";
+						colSpan := "2";
+					};
+					var parentText : String;
+					var i : Integer := 1;
+					while (i <= self.parentItem->size()) {
+						if(parentText.size() = 0) {
+							parentText := self.parentItem->at(i).name;
+						} else {
+							parentText := parentText + (", ") + self.parentItem->at(i).name;
+						};
+						i := i + 1;
+					};
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := parentText;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+}
+
+helper srs::VSRSInstantiableRequirementSection::GenerateReqSubsection() : doc::DDSectionContent {
+	return object DDSection {
+		name := self.name;
+		
+		sectionContent += self.sectionDescription.GenerateDBody();
+		var i : Integer := 1;
+		while (i <= self.srsItems->size()) {
+			sectionContent += self.srsItems->at(i).GenerateReqItem();
+			i := i + 1;
+		};
+	};
+}
+
+mapping srs::VSRSLogicalModels::GenerateLogicalModelsSection() : doc::DDSection {
+	result.name := "Logical Models";
+	
+	result.sectionContent += self.logicalModels.GenerateLogicalModel();
+}
+
+helper srs::VSRSLogicalModel::GenerateLogicalModel() : doc::DDSectionContent {
+	return object DDSection {};
+}
+
+helper srs::VSRSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
+	return object DDSection {
+		name := self.name;
+		sectionContent += self.body.GenerateDBody();
+	};
+}
+
+helper doctpl::DBody::GenerateDBody() : doc::DDBody {
+	return object DDBody {
+		var i : Integer := 1;
+		while (i <= self.bodyContent->size()) {
+			bodyContent += self.bodyContent.map GenerateBodyContent();
+			i := i + 1;
+		};
+	};
+}
+
+mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
+	init {
+		if(self.metaClassName() = "DParagraph") {
+			result := self.oclAsType(DParagraph).GenerateParagraph();
+		}
+		else if(self.metaClassName() = "DFigureFromFile") {
+			result := self.oclAsType(DFigureFromFile).GenerateFigureFromFile();
+		}
+		else if(self.metaClassName() = "DTableFromFile") {
+			result := self.oclAsType(DTableFromFile).GenerateTableFromFile();
+		}
+		else if(self.metaClassName() = "DBasicTable") {
+			result := self.oclAsType(DBasicTable).GenerateBasicTable();
+		}
+		else if(self.metaClassName() = "DEnumerate") {
+			result := self.oclAsType(DEnumerate).GenerateEnumerate();
+		}
+		else if(self.metaClassName() = "DItemize") {
+			result := self.oclAsType(DItemize).GenerateItemize();
+		};
+	}
+}
+
+helper doctpl::DParagraph::GenerateParagraph() : doctpl::DParagraph {
+	return object DParagraph {
+		style := self.style;
+		alignment := self.alignment;
+		
+		var i : Integer := 1;
+		while (i <= self.paragraphContent->size()) {
+			if(self.paragraphContent->at(i).metaClassName() = "DRun") {
+				paragraphContent += self.paragraphContent->at(i).oclAsType(DRun).GenerateRun();
+			}
+			else if(self.paragraphContent->at(i).metaClassName() = "DHyperlink") {
+				paragraphContent += self.paragraphContent->at(i).oclAsType(DHyperlink).GenerateHyperlink();
+			};
+			i := i + 1;
+		};
+	};
+}
+
+helper doctpl::DRun::GenerateRun() : doctpl::DRun {
+	return object DRun {
+		bold := self.bold;
+		italics := self.italics;
+		underline := self.underline;
+		if(self.tab <> null) {
+			tab := object DTab {};
+		};
+		text := object DText {
+			content := self.text.content.substring(7, self.text.content.size()-7);
+		};
+	};
+}
+
+helper doctpl::DHyperlink::GenerateHyperlink() : doctpl::DHyperlink {
+	return object DHyperlink {
+		reference := self.reference;
+		if(self.run = null) {
+			run := object DRun {
+				text := object DText {
+					content := self.reference.name;
+				};
+			};
+		} else {
+			run := self.run.GenerateRun();
+		};
+	};
+}
+
+helper doctpl::DFigureFromFile::GenerateFigureFromFile() : doctpl::DFigureFromFile {
+	return  object DFigureFromFile {
+		alignment := self.alignment;
+		name := self.name;
+		referenceFile := self.referenceFile;
+		width := self.width;
+		height := self.height;
+		caption := self.caption;
+	};
+}
+
+helper doctpl::DTableFromFile::GenerateTableFromFile() : doctpl::DTableFromFile {
+	return object DTableFromFile {
+		alignment := self.alignment;
+		name := self.name;
+		referenceFile := self.referenceFile;
+		width := self.width;
+		height := self.height;
+		caption := self.caption;
+	};
+}
+
+helper doctpl::DBasicTable::GenerateBasicTable() : doctpl::DBasicTable { 
+	return object DBasicTable {
+		alignment := self.alignment;
+		name := self.name;
+		width := self.width;
+		caption := self.caption;
+		rows += self.rows.GenerateRows();
+	};
+}
+
+helper doctpl::DRow::GenerateRows() : doctpl::DRow {
+	return object DRow {
+		cells += self.cells.GenerateCells();
+	};
+}
+
+helper doctpl::DCell::GenerateCells() : doctpl::DCell {
+	return object DCell {
+		colSpan := self.colSpan;
+		rowSpan := self.rowSpan;
+		width := self.width;
+		shadow := self.shadow;
+		
+		var i : Integer := 1;
+		while (i <= self.bodyContent->size()) {
+			bodyContent += self.bodyContent.map GenerateBodyContent();
+			i := i + 1;
+		};
+	};
+}
+
+helper doctpl::DListContent::GenerateEnumerate() : doctpl::DListContent {
+	return object DEnumerate {
+		alignment := self.alignment;
+		items += self.items.GenerateItems();
+	};
+}
+
+helper doctpl::DListContent::GenerateItemize() : doctpl::DListContent {
+	return object DItemize {
+		alignment := self.alignment;
+		items += self.items.GenerateItems();
+	};
+}
+
+helper doctpl::DListItem::GenerateItems() : doctpl::DListItem {
+	return object DListItem {
+		paragraph := self.paragraph.GenerateParagraph();
+		sublist.alignment := self.sublist.alignment;
+		sublist.items := self.sublist.items.GenerateItems();
+	};
+}
