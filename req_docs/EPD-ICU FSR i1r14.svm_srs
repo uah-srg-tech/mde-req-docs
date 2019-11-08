@@ -1468,8 +1468,7 @@
 							</paragraph>
 						</body>
 					</extendedDescription>
-					<parentItem name="TM-4" />
-					<parentItem name="R-366" />
+					<parentItem name="PERP-7" />
 				</Item>
 				<Item name="FU R-00380" validationMethod="Testing">
 					<mode name="Configuration" />
