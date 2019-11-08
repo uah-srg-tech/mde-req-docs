@@ -1,5 +1,6 @@
 <SRS name="SRG-EPD ICU Software Requirements Specification" id="SRG-EPD-SRS-001" issue="1" revision="0" date="12/04/2019">
-	<parent name="SRG-EPD ICUSW Project" />
+	<parent document="SRG-EPD ICUSW Project">
+	</parent>
 	<Introduction>
 		<subsection name="Purpose">
 			<body>

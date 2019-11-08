@@ -259,6 +259,58 @@
 	</GeneralDescription>
 	<SpecificRequirements>
 		<GeneralRequirements>
+			<subsection name="Lifetime Requirements">
+				<Item name="R-006" validationMethod="Analysis">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that the instrument HW has a nominal life time of 7.1 years in space.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-1657</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>Nominal life time starts at launch and finishes after VGAM-4, which defines the end of the nominal science mission phase.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-007" validationMethod="Analysis">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that the overall instrument design is compatible with a shelflife time of two years due to a possible launch delay from the nominal launch date.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-1659</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The PI should ensure that the overall instrument design is compatible with an extended lifetime of 10.2 years. This extended lifetime includes the nominal lifetime and ends after VGAM-6.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
 		</GeneralRequirements>
 		<CapabilitiesRequirements>
 		</CapabilitiesRequirements>

@@ -1,6 +1,10 @@
 <SRS name="Flight Software Requirements Document" id="EPD-ICU FSR i1r14" issue="1" revision="14" date="22/04/2016">
-	<parent name="EID-A" />
-	<parent name="Solar Orbiter Operations Requirements Document" />
+	<parent document="EID-A">
+		<notApplicableItem item="R-006"/>
+		<notApplicableItem item="R-007"/>
+	</parent>
+	<parent document="Solar Orbiter Operations Requirements Document">
+	</parent>
 	<Introduction>
 		<subsection name="Scope">
 			<body>
@@ -906,7 +910,7 @@
 							</run>
 						</paragraph>
 					</cell>
-					<cell gridSpan="2">
+					<cell colSpan="2">
 						<paragraph>
 							<run>
 								<text>Requirement Description</text>
@@ -922,7 +926,7 @@
 							</run>
 						</paragraph>
 					</cell>
-					<cell gridSpan="2">
+					<cell colSpan="2">
 						<paragraph>
 							<run>
 								<text>Validation Approach</text>
@@ -938,7 +942,7 @@
 							</run>
 						</paragraph>
 					</cell>
-					<cell gridSpan="2">
+					<cell colSpan="2">
 						<paragraph>
 							<run>
 								<text>Requirement Traceability</text>
