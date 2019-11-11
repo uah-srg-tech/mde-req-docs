@@ -2,36 +2,36 @@
 <gss:GSSTestProcTestProc xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/test_proc" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" uri="es.uah.aut.srg.TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" version="v1">
     <step name="test_connection" id="0" mode="continuous">
       <inputs>
-        <input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
+        <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
           <app_to_level1 href="../ccsds_solo/exportsToLevel1/tc_epd_17_1_export_to_level_1_ack.xmi#/"/>
           <level1_to_level0 href="../ccsds_solo/exportsToLevel0/tc_epd_17_1_export_to_level_0.xmi#/"/>
-        </input_level_1>
+        </input>
       </inputs>
       <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-        <output_level_1 name="tm_1_1" id="0" ifRef="0">
+        <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="tm_1_1" id="0" ifRef="0">
           <level1_filter apply_def_filter="yes">
             <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_1_filter_level_1.xmi#/"/>
           </level1_filter>
           <level0_filter apply_def_filter="yes">
             <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_1_filter_level_0.xmi#/"/>
           </level0_filter>
-        </output_level_1>
-        <output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
+        </output>
+        <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="test_connection_report_(17_2)" id="1" ifRef="0">
           <level1_filter apply_def_filter="yes">
             <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_17_2_filter_level_1.xmi#/"/>
           </level1_filter>
           <level0_filter apply_def_filter="yes">
             <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_17_2_filter_level_0.xmi#/"/>
           </level0_filter>
-        </output_level_1>
-        <output_level_1 name="tm_1_7" id="2" ifRef="0">
+        </output>
+        <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="tm_1_7" id="2" ifRef="0">
           <level1_filter apply_def_filter="yes">
             <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel1/tm_epd_1_7_filter_level_1.xmi#/"/>
           </level1_filter>
           <level0_filter apply_def_filter="yes">
             <extra_filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../ccsds_solo/filtersLevel0/tm_epd_1_7_filter_level_0.xmi#/"/>
           </level0_filter>
-        </output_level_1>
+        </output>
       </outputs>
     </step>
 </gss:GSSTestProcTestProc>
