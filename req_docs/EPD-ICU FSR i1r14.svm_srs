@@ -62,7 +62,7 @@
 		</subsection>
 	</Introduction>
 	<ApplicableDocuments>
-		<ApplicableDocument name="AD1" title="EID-A:Solar Orbiter Experiment Interface Document, Part A" id="SOL-EST-RCD-0050" issue="5" date="03/2015" />
+		<ApplicableDocument name="AD1" title="EID-A: Solar Orbiter Experiment Interface Document, Part A" id="SOL-EST-RCD-0050" issue="5" date="03/2015" />
 		<ApplicableDocument name="AD2" title="EID-B: Solar Orbiter EPD Experiment Interface Document, Part B" id="SO-EPD-PO-IF-0001" issue="3" revision="3" />
 		<ApplicableDocument name="AD3" title="Interface Control Document (ICD)" id="SO-EPD-ICU-IF-0001" issue="4" revision="0" />
 		<ApplicableDocument name="AD4" title="Solar Orbiter Operations Requirements Document" id="SO-ESC-RS-05001" issue="1" revision="8" />
@@ -251,12 +251,12 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF.</text>
+							<text>The ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF. </text>
 						</run>
 						<hyperlink reference="ICU_HW">
 						</hyperlink>
 						<run>
-							<text>shows the basic HW diagram of the ICU.</text>
+							<text> shows the basic HW diagram of the ICU.</text>
 						</run>
 					</paragraph>
 					<figureFromFile name="ICU_HW" referenceFile="FSR_images/ICU_HW.png" width="922" height="615" caption="ICU hardware schema" />
@@ -704,7 +704,7 @@
 						<hyperlink reference="AD5">
 						</hyperlink>
 						<run>
-							<text>tailored by</text>
+							<text> tailored by </text>
 						</run>
 						<hyperlink reference="AD11">
 						</hyperlink>
@@ -850,7 +850,7 @@
 				<hyperlink reference="AD12">
 				</hyperlink>
 				<run>
-					<text>] 10.3), that it will be reported to the spacecraft by a PUS service 3 Telemetry, or externally (by events detected in other(s) Solar Orbiter instrument). The EPD can associate the external trigger of Burst mode to the reception of a specific data on the PUS CCSDS service 20 packet according to </text>
+					<text> 10.3), that it will be reported to the spacecraft by a PUS service 3 Telemetry, or externally (by events detected in other(s) Solar Orbiter instrument). The EPD can associate the external trigger of Burst mode to the reception of a specific data on the PUS CCSDS service 20 packet according to </text>
 				</run>
 				<hyperlink reference="AD12">
 				</hyperlink>
@@ -1687,7 +1687,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The ICUSW application software will handle the information about EPD status, housekeeping and fault detection and recovery management according to the following design requirements:</text>
+							<text>The resources related to the management  links between the ICU and the sensor units for ICUSW execution are enumerated in the following requirements:</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1744,7 +1744,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The ICUSW application software will handle the information about EPD status, housekeeping and fault detection and recovery management according to the following design requirements:</text>
+							<text>The ICUSW application software will handle the information about EPD status, houseeking and fault detection and recovery management according to the following design requirements:</text>
 						</run>
 					</paragraph>
 				</body>
