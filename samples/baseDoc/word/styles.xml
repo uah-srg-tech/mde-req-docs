@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:styles xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+	<w:docDefaults>
+		<w:rPrDefault>
+			<w:rPr>
+				<w:rFonts w:asciiTheme="majorHAnsi" w:eastAsiaTheme="majorHAnsi" w:hAnsiTheme="majorHAnsi" w:cstheme="minorBidi"/>
+				<w:sz w:val="22"/>
+				<w:szCs w:val="22"/>
+				<w:lang w:val="en"/>
+			</w:rPr>
+		</w:rPrDefault>
+		<w:pPrDefault>
+			<w:pPr>
+				<w:spacing w:before="0" w:after="40"/>
+			</w:pPr>
+		</w:pPrDefault>
+	</w:docDefaults>
+	<w:style w:type="paragraph" w:default="1" w:styleId="Normal">
+		<w:name w:val="Normal"/>
+		<w:qFormat/>
+	</w:style>
+	<w:style w:type="table" w:default="1" w:styleId="TableNormal">
+		<w:name w:val="Normal Table"/>
+		<w:semiHidden/>
+		<w:unhideWhenUsed/>
+		<w:tblPr>
+			<w:tblInd w:w="0" w:type="dxa"/>
+			<w:tblCellMar>
+				<w:top w:w="0" w:type="dxa"/>
+				<w:left w:w="108" w:type="dxa"/>
+				<w:bottom w:w="0" w:type="dxa"/>
+				<w:right w:w="108" w:type="dxa"/>
+			</w:tblCellMar>
+		</w:tblPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="Heading1">
+		<w:name w:val="heading 1"/>
+		<w:basedOn w:val="Normal"/>
+		<w:next w:val="Normal"/>
+		<w:pPr>
+			<w:keepNext/>
+			<w:keepLines/>
+			<w:spacing w:before="240" w:after="0"/>
+			<w:outlineLvl w:val="0"/>
+		</w:pPr>
+		<w:rPr>
+			<w:color w:val="2F5496" w:themeColor="accent1" w:themeShade="BF"/>
+			<w:sz w:val="32"/>
+			<w:szCs w:val="32"/>
+		</w:rPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="Heading2">
+		<w:name w:val="heading 2"/>
+		<w:basedOn w:val="Normal"/>
+		<w:next w:val="Normal"/>
+		<w:pPr>
+			<w:keepNext/>
+			<w:keepLines/>
+			<w:spacing w:before="40" w:after="0"/>
+			<w:outlineLvl w:val="1"/>
+		</w:pPr>
+		<w:rPr>
+			<w:color w:val="2F5496" w:themeColor="accent1" w:themeShade="BF"/>
+			<w:sz w:val="26"/>
+			<w:szCs w:val="26"/>
+		</w:rPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="Heading3">
+		<w:name w:val="heading 3"/>
+		<w:basedOn w:val="Normal"/>
+		<w:next w:val="Normal"/>
+		<w:pPr>
+			<w:keepNext/>
+			<w:keepLines/>
+			<w:spacing w:before="40" w:after="0"/>
+			<w:outlineLvl w:val="1"/>
+		</w:pPr>
+		<w:rPr>
+			<w:color w:val="2F5496" w:themeColor="accent1" w:themeShade="BF"/>
+			<w:sz w:val="24"/>
+			<w:szCs w:val="24"/>
+		</w:rPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="Heading4">
+		<w:name w:val="heading 4"/>
+		<w:basedOn w:val="Normal"/>
+		<w:next w:val="Normal"/>
+		<w:pPr>
+			<w:keepNext/>
+			<w:keepLines/>
+			<w:spacing w:before="40" w:after="0"/>
+			<w:outlineLvl w:val="1"/>
+		</w:pPr>
+		<w:rPr>
+			<w:color w:val="2F5496" w:themeColor="accent1" w:themeShade="BF"/>
+			<w:sz w:val="22"/>
+			<w:szCs w:val="22"/>
+		</w:rPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="ListParagraph">
+		<w:name w:val="List Paragraph"/>
+		<w:basedOn w:val="Normal"/>
+		<w:pPr>
+			<w:ind w:left="720"/>
+			<w:contextualSpacing/>
+		</w:pPr>
+	</w:style>
+	<w:style w:type="table" w:styleId="TableGrid">
+		<w:name w:val="Table Grid"/>
+		<w:basedOn w:val="TableNormal"/>
+		<w:pPr>
+			<w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+		</w:pPr>
+		<w:tblPr>
+			<w:tblBorders>
+				<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+				<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+				<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+				<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+				<w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+				<w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+			</w:tblBorders>
+		</w:tblPr>
+	</w:style>
+	<w:style w:type="table" w:styleId="TableGridFirstRowShadow">
+		<w:name w:val="Table Grid First Row Shadow"/>
+		<w:basedOn w:val="TableGrid"/>
+		<w:tblStylePr w:type="firstRow">
+		<w:rPr>
+			<w:b/>
+			<w:bCs/>
+		</w:rPr>
+		<w:tcPr>
+			<w:shd w:val="clear" w:color="auto" w:fill="D8D8D8"/>
+		</w:tcPr>
+		</w:tblStylePr>
+	</w:style>
+	<w:style w:type="table" w:styleId="TableGridFirstRowColummShadow">
+		<w:name w:val="Table Grid First Row Columm Shadow"/>
+		<w:basedOn w:val="TableGridFirstRowShadow"/>
+		<w:tblStylePr w:type="firstCol">
+		<w:rPr>
+			<w:b/>
+			<w:bCs/>
+		</w:rPr>
+		<w:tcPr>
+			<w:shd w:val="clear" w:color="auto" w:fill="D8D8D8"/>
+		</w:tcPr>
+		</w:tblStylePr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="Caption">
+		<w:name w:val="caption"/>
+		<w:basedOn w:val="Normal"/>
+		<w:next w:val="Normal"/>
+		<w:pPr>
+			<w:spacing w:after="200" w:line="240" w:lineRule="auto"/>
+		</w:pPr>
+		<w:rPr>
+		<w:i/>
+		<w:iCs/>
+		<w:color w:val="44546A" w:themeColor="text2"/>
+			<w:sz w:val="18"/>
+			<w:szCs w:val="18"/>
+		</w:rPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="ADRD">
+		<w:name w:val="AD + RD"/>
+		<w:basedOn w:val="Normal"/>
+		<w:pPr>
+			<w:ind w:left="700" w:hanging="700"/>
+		</w:pPr>
+	</w:style>
+	<w:style w:type="paragraph" w:styleId="TDA">
+		<w:name w:val="TermsDefinitionsAbbreviations"/>
+		<w:basedOn w:val="Normal"/>
+		<w:pPr>
+			<w:ind w:left="1000" w:hanging="1000"/>
+		</w:pPr>
+	</w:style>
+</w:styles>
