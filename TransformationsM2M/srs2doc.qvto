@@ -56,7 +56,13 @@ helper doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
 			paragraphContent += object DRun {
 				tab := object DTab {};
 				text := object DText {
-					content := self.title;
+					content := self.title + ". " + self.id;
+					if(self.issue <> null)
+						content := content + " issue " + self.issue.toString();
+					if(self.revision <> null)
+						content := content + " rev " + self.revision.toString();
+					if(self.date <> null)
+						content := content + ". " + self.date;
 				};
 			};
 		};
@@ -64,53 +70,43 @@ helper doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
 }
 
 mapping srs::VSRSTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSection {
-	result.name := "Terms, Definitions & Abbreviations";
+	result.name := "Terms, Definitions and Abbreviations";
 	
 	result.sectionContent := object DDBody {
 		var i : Integer := 1;
 		while(i <= self.terms->size()) {
-			bodyContent += object DParagraph {
-				style := "TDA";
-				paragraphContent += object DRun {
-					text := object DText {
-						content := self.terms->at(i).name;
-					};
-				};
-				paragraphContent += self.terms->at(i).description.GenerateRun();
-			};
+			bodyContent += self.terms->at(i).GenerateTDA();
 			i := i + 1;
 		};
 		
 		i := 1;
 		while(i <= self.definitions->size()) {
-			bodyContent += object DParagraph {
-				style := "TDA";
-				paragraphContent += object DRun {
-					text := object DText {
-						content := self.definitions->at(i).name;
-					};
-				};
-				paragraphContent += self.definitions->at(i).description.GenerateRun();
-			};
+			bodyContent += self.definitions->at(i).GenerateTDA();
 			i := i + 1;
 		};
 		
 		i := 1;
 		while(i <= self.abbreviations->size()) {
-			bodyContent += object DParagraph {
-				style := "TDA";
-				paragraphContent += object DRun {
-					text := object DText {
-						content := self.abbreviations->at(i).name;
-					};
-				};
-				paragraphContent += self.abbreviations->at(i).description.GenerateRun();
-			};
+			bodyContent += self.abbreviations->at(i).GenerateTDA();
 			i := i + 1;
 		};
 	};
 }
 
+helper srs::VSRSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
+	return object DParagraph{
+		style := "TDA";
+		paragraphContent += object DRun {
+			text := object DText {
+				content := self.name;
+			};
+		};
+		var description := self.description.GenerateRun();
+		description.tab := object DTab {};
+		paragraphContent += description;
+	};
+}
+	
 mapping srs::VSRSSoftwareOverview::GenerateSoftwareOverviewSection() : doc::DDSection {
 	result.name := "Software Overview";
 	
@@ -124,7 +120,12 @@ helper srs::VSRSFixedSection::GenerateSoftwareOverviewSubsections(in sectionName
 	return object DDSection {
 		name := sectionName;
 		sectionContent += self.body.GenerateDBody();
-		sectionContent += self.allSubobjectsOfType(VSRSInstantiableSection).GenerateInstatiableSubsection();
+		
+		var i : Integer := 1;
+		while(i <= self.srsInstatiableSubsections->size()) {
+		sectionContent += self.srsInstatiableSubsections->at(i).GenerateInstatiableSubsection();
+			i := i + 1;
+		};
 	};
 }
 
@@ -155,25 +156,53 @@ mapping srs::VSRSRequirements::GenerateRequirementsSection() : doc::DDSection {
 helper srs::VSRSAbstractRequirementSection::GenerateRequirementSubsection(in reqSectionName : String) : doc::DDSection {
 	return object DDSection {
 		name := reqSectionName;
-		sectionContent += self.sectionDescription.GenerateDBody();
+		
+		var body := object DDBody {}; 
 		var i : Integer := 1;
-		while(i <= self.srsItems->size()) {
-			sectionContent += self.srsItems->at(i).GenerateReqItem();
+		while(i <= self.sectionDescription.bodyContent->size()) {
+			body.bodyContent += self.sectionDescription.bodyContent->at(i).map GenerateBodyContent();
 			i := i + 1;
 		};
+		i := 1;
+		while(i <= self.srsItems->size()) {
+			body.bodyContent += self.srsItems->at(i).GenerateReqItem();
+			i := i + 1;
+		};
+		sectionContent := body;
+		
 		sectionContent += self.srsRequirementSubsections.GenerateReqSubsection();
 	};
 }
 
-helper srs::VSRSDocumentItem::GenerateReqItem() : doc::DDBody {
-	return object DDBody {
-		bodyContent += self.GenerateReqItemTable();
+helper srs::VSRSInstantiableRequirementSection::GenerateReqSubsection() : doc::DDSectionContent {
+	return object DDSection {
+		name := self.name;
+		
+		var body := object DDBody {}; 
 		var i : Integer := 1;
-		while(i <= self.extendedDescription.bodyContent->size()) {
-			bodyContent += self.extendedDescription.bodyContent.map GenerateBodyContent();
+		while(i <= self.sectionDescription.bodyContent->size()) {
+			body.bodyContent += self.sectionDescription.bodyContent->at(i).map GenerateBodyContent();
 			i := i + 1;
 		};
+		i := 1;
+		while(i <= self.srsItems->size()) {
+			body.bodyContent += self.srsItems->at(i).GenerateReqItem();
+			i := i + 1;
+		};
+		sectionContent := body;
 	};
+}
+
+helper srs::VSRSDocumentItem::GenerateReqItem() : OrderedSet(doctpl::DBodyContent) {
+	var bodyContents := object OrderedSet(DBodyContent) {};
+	
+	bodyContents += self.GenerateReqItemTable();
+	var i : Integer := 1;
+	while(i <= self.extendedDescription.bodyContent->size()) {
+		bodyContents += self.extendedDescription.bodyContent.map GenerateBodyContent();
+		i := i + 1;
+	};
+	return bodyContents;
 }
 
 helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
@@ -185,7 +214,7 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 				width := "20";
 				bodyContent += object DParagraph {
 					paragraphContent += object DRun {
-						bold := true;
+						bold := DRunAttributes::TRUE;
 						text := object DText {
 							content := "Name";
 						};
@@ -198,7 +227,7 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 				};
 				bodyContent += object DParagraph {
 					paragraphContent += object DRun {
-						bold := true;
+						bold := DRunAttributes::TRUE;
 						text := object DText {
 							content := self.name;
 						};
@@ -250,7 +279,7 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 			cells += object DCell {
 				bodyContent += object DParagraph {
 					paragraphContent += object DRun {
-						bold := true;
+						bold := DRunAttributes::TRUE;
 						text := object DText {
 							content := "Description";
 						};
@@ -273,7 +302,7 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 			cells += object DCell {
 				bodyContent += object DParagraph {
 					paragraphContent += object DRun {
-						bold := true;
+						bold := DRunAttributes::TRUE;
 						text := object DText {
 							content := "Validation Method";
 						};
@@ -287,7 +316,7 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 				};
 				bodyContent += object DParagraph {
 					paragraphContent += object DRun {
-						bold := true;
+						bold := DRunAttributes::TRUE;
 						text := object DText {
 							content := self.validationMethod.toString();
 						};
@@ -300,7 +329,7 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 				cells += object DCell {
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "Parent";
 							};
@@ -335,19 +364,6 @@ helper srs::VSRSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
 	};
 }
 
-helper srs::VSRSInstantiableRequirementSection::GenerateReqSubsection() : doc::DDSectionContent {
-	return object DDSection {
-		name := self.name;
-		
-		sectionContent += self.sectionDescription.GenerateDBody();
-		var i : Integer := 1;
-		while(i <= self.srsItems->size()) {
-			sectionContent += self.srsItems->at(i).GenerateReqItem();
-			i := i + 1;
-		};
-	};
-}
-
 mapping srs::VSRSLogicalModels::GenerateLogicalModelsSection() : doc::DDSection {
 	result.name := "Logical Models";
 	
@@ -362,6 +378,12 @@ helper srs::VSRSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSe
 	return object DDSection {
 		name := self.name;
 		sectionContent += self.body.GenerateDBody();
+		
+		var i : Integer := 1;
+		while(i <= self.srsInstatiableSubsections->size()) {
+		sectionContent += self.srsInstatiableSubsections->at(i).GenerateInstatiableSubsection();
+			i := i + 1;
+		};
 	};
 }
 
@@ -396,12 +418,16 @@ mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
 			result := self.oclAsType(DItemize).GenerateItemize();
 		};
 	}
+	if(self.style <> null) {
+		result.style := self.style;
+	};
+	if(self.alignment <> doctpl::DAlignment::left) {
+		result.alignment := self.alignment;
+	};
 }
 
 helper doctpl::DParagraph::GenerateParagraph() : doctpl::DParagraph {
 	return object DParagraph {
-		style := self.style;
-		alignment := self.alignment;
 		
 		var i : Integer := 1;
 		while(i <= self.paragraphContent->size()) {
@@ -446,8 +472,7 @@ helper doctpl::DHyperlink::GenerateHyperlink() : doctpl::DHyperlink {
 }
 
 helper doctpl::DFigureFromFile::GenerateFigureFromFile() : doctpl::DFigureFromFile {
-	return  object DFigureFromFile {
-		alignment := self.alignment;
+	return object DFigureFromFile {
 		name := self.name;
 		referenceFile := self.referenceFile;
 		width := self.width;
@@ -458,7 +483,6 @@ helper doctpl::DFigureFromFile::GenerateFigureFromFile() : doctpl::DFigureFromFi
 
 helper doctpl::DTableFromFile::GenerateTableFromFile() : doctpl::DTableFromFile {
 	return object DTableFromFile {
-		alignment := self.alignment;
 		name := self.name;
 		referenceFile := self.referenceFile;
 		width := self.width;
@@ -469,7 +493,6 @@ helper doctpl::DTableFromFile::GenerateTableFromFile() : doctpl::DTableFromFile 
 
 helper doctpl::DBasicTable::GenerateBasicTable() : doctpl::DBasicTable { 
 	return object DBasicTable {
-		alignment := self.alignment;
 		name := self.name;
 		width := self.width;
 		caption := self.caption;
@@ -485,10 +508,14 @@ helper doctpl::DRow::GenerateRows() : doctpl::DRow {
 
 helper doctpl::DCell::GenerateCells() : doctpl::DCell {
 	return object DCell {
-		colSpan := self.colSpan;
-		rowSpan := self.rowSpan;
-		width := self.width;
-		shadow := self.shadow;
+		if(self.colSpan <> null)
+			colSpan := self.colSpan;
+		if(self.rowSpan <> null)
+			rowSpan := self.rowSpan;
+		if(self.width <> null)
+			width := self.width;
+		if(self.shadow <> null)
+			shadow := self.shadow;
 		
 		var i : Integer := 1;
 		while(i <= self.bodyContent->size()) {
@@ -500,14 +527,24 @@ helper doctpl::DCell::GenerateCells() : doctpl::DCell {
 
 helper doctpl::DListContent::GenerateEnumerate() : doctpl::DListContent {
 	return object DEnumerate {
-		alignment := self.alignment;
+		if(self.style <> null) {
+			style := self.style;
+		};
+		if(self.alignment <> doctpl::DAlignment::left) {
+			alignment := self.alignment;
+		};
 		items += self.items.GenerateItems();
 	};
 }
 
 helper doctpl::DListContent::GenerateItemize() : doctpl::DListContent {
 	return object DItemize {
-		alignment := self.alignment;
+		if(self.style <> null) {
+			style := self.style;
+		};
+		if(self.alignment <> doctpl::DAlignment::left) {
+			alignment := self.alignment;
+		};
 		items += self.items.GenerateItems();
 	};
 }
@@ -515,7 +552,12 @@ helper doctpl::DListContent::GenerateItemize() : doctpl::DListContent {
 helper doctpl::DListItem::GenerateItems() : doctpl::DListItem {
 	return object DListItem {
 		paragraph := self.paragraph.GenerateParagraph();
-		sublist.alignment := self.sublist.alignment;
+		if(self.sublist.style <> null) {
+			sublist.style := self.sublist.style;
+		};
+		if(self.sublist.alignment <> doctpl::DAlignment::left) {
+			sublist.alignment := self.sublist.alignment;
+		};
 		sublist.items := self.sublist.items.GenerateItems();
 	};
 }
@@ -545,7 +587,7 @@ helper srs::VSRSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 					width := "37";
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SRS Item";
 							};
@@ -556,7 +598,7 @@ helper srs::VSRSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 					width := "26";
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SSS document";
 							};
@@ -567,7 +609,7 @@ helper srs::VSRSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 					width := "37";
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SSS Item";
 							};
@@ -656,7 +698,7 @@ helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 					width := "37";
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SSS Item";
 							};
@@ -667,7 +709,7 @@ helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 					width := "26";
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SSS document";
 							};
@@ -678,7 +720,7 @@ helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 					width := "37";
 					bodyContent += object DParagraph {
 						paragraphContent += object DRun {
-							bold := true;
+							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SRS Item";
 							};
@@ -756,9 +798,9 @@ helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 									bodyContent += object DParagraph {
 										paragraphContent += object DRun {
 											if(itemRefNum = 0) {
-												bold := true;
-												italics := true;
-												underline := true;
+												bold := DRunAttributes::TRUE;
+												italics := DRunAttributes::TRUE;
+												underline := DRunAttributes::TRUE;
 												color := "FF0000";
 											};
 											text := object DText {
