@@ -3,9 +3,18 @@ library docptl2doc;
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
 modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
 
-helper doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
-	return object DDBody {
-		bodyContent := object DParagraph {
+mapping doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
+	init {
+		result := object DDBody {
+			bodyContent += self.map GenerateADRD();
+		};
+	}
+}
+
+mapping doctpl::DAbstractRelatedDocument::GenerateADRD() : doctpl::DBodyContent {
+	init {
+		result := object DParagraph {
+			name := self.name;
 			style := "ADRD";
 			paragraphContent += object DRun {
 				text := object DText {
@@ -25,32 +34,26 @@ helper doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
 				};
 			};
 		};
-	};	
+	}
 }
 
-helper doctpl::DBody::GenerateDBody() : doc::DDBody {
-	return object DDBody {
-		var i : Integer := 1;
-		while(i <= self.bodyContent->size()) {
-			bodyContent += self.bodyContent.map GenerateBodyContent();
-			i := i + 1;
-		};
-	};
+mapping doctpl::DBody::GenerateBody() : doc::DDBody {
+	result.bodyContent += self.bodyContent->map GenerateBodyContent();
 }
 
 mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
 	init {
 		if(self.metaClassName() = "DParagraph") {
-			result := self.oclAsType(DParagraph).GenerateParagraph();
+			result := self.oclAsType(DParagraph).map GenerateParagraph();
 		}
 		else if(self.metaClassName() = "DFigureFromFile") {
-			result := self.oclAsType(DFigureFromFile).GenerateFigureFromFile();
+			result := self.oclAsType(DFigureFromFile).map GenerateFigureFromFile();
 		}
 		else if(self.metaClassName() = "DTableFromFile") {
-			result := self.oclAsType(DTableFromFile).GenerateTableFromFile();
+			result := self.oclAsType(DTableFromFile).map GenerateTableFromFile();
 		}
 		else if(self.metaClassName() = "DBasicTable") {
-			result := self.oclAsType(DBasicTable).GenerateBasicTable();
+			result := self.oclAsType(DBasicTable).map GenerateBasicTable();
 		}
 		else if(self.metaClassName() = "DEnumerate") {
 			result := self.oclAsType(DEnumerate).GenerateEnumerate();
@@ -67,139 +70,130 @@ mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
 	};
 }
 
-helper doctpl::DParagraph::GenerateParagraph() : doctpl::DParagraph {
-	return object DParagraph {
-		
-		var i : Integer := 1;
-		while(i <= self.paragraphContent->size()) {
-			if(self.paragraphContent->at(i).metaClassName() = "DRun") {
-				paragraphContent += self.paragraphContent->at(i).oclAsType(DRun).GenerateRun();
-			}
-			else if(self.paragraphContent->at(i).metaClassName() = "DHyperlink") {
-				paragraphContent += self.paragraphContent->at(i).oclAsType(DHyperlink).GenerateHyperlink();
+mapping doctpl::DParagraph::GenerateParagraph() : doctpl::DParagraph {
+	if(self.name <> null) {
+		result.name := self.name;	
+	};
+	var i : Integer := 1;
+	while(i <= self.paragraphContent->size()) {
+		if(self.paragraphContent->at(i).metaClassName() = "DRun") {
+			result.paragraphContent += self.paragraphContent->at(i).oclAsType(DRun).map GenerateRun();
+		}
+		else if(self.paragraphContent->at(i).metaClassName() = "DHyperlink") {
+			result.paragraphContent += self.paragraphContent->at(i).oclAsType(DHyperlink).map GenerateHyperlink();
+		};
+		i := i + 1;
+	};
+}
+
+mapping doctpl::DRun::GenerateRun() : doctpl::DRun {
+	result.bold := self.bold;
+	result.italics := self.italics;
+	result.underline := self.underline;
+	if(self.tab <> null) {
+		result.tab := object DTab {};
+	};
+	result.text := object DText {
+		content := self.text.content.substring(7, self.text.content.size()-7);
+	};
+}
+
+mapping doctpl::DHyperlink::GenerateHyperlink() : doctpl::DHyperlink {
+	result.reference := self.reference.late resolveone(DReferenceableObject);
+	if(self.run = null) {
+		result.run := object DRun {
+			text := object DText {
+				content := self.reference.name;
 			};
-			i := i + 1;
 		};
+	} else {
+		result.run := self.run.map GenerateRun();
 	};
+	result.run.italics := DRunAttributes::TRUE;
 }
 
-helper doctpl::DRun::GenerateRun() : doctpl::DRun {
-	return object DRun {
-		bold := self.bold;
-		italics := self.italics;
-		underline := self.underline;
-		if(self.tab <> null) {
-			tab := object DTab {};
-		};
-		text := object DText {
-			content := self.text.content.substring(7, self.text.content.size()-7);
-		};
-	};
+mapping doctpl::DFigureFromFile::GenerateFigureFromFile() : doctpl::DFigureFromFile {
+	result.name := self.name;
+	result.referenceFile := self.referenceFile;
+	result.width := self.width;
+	result.height := self.height;
+	result.caption := self.caption;
 }
 
-helper doctpl::DHyperlink::GenerateHyperlink() : doctpl::DHyperlink {
-	return object DHyperlink {
-		reference := self.reference;
-		if(self.run = null) {
-			run := object DRun {
-				text := object DText {
-					content := self.reference.name;
-				};
-			};
-		} else {
-			run := self.run.GenerateRun();
-		};
-	};
+mapping doctpl::DTableFromFile::GenerateTableFromFile() : doctpl::DTableFromFile {
+	result.name := self.name;
+	result.referenceFile := self.referenceFile;
+	result.width := self.width;
+	result.height := self.height;
+	result.caption := self.caption;
 }
 
-helper doctpl::DFigureFromFile::GenerateFigureFromFile() : doctpl::DFigureFromFile {
-	return object DFigureFromFile {
-		name := self.name;
-		referenceFile := self.referenceFile;
-		width := self.width;
-		height := self.height;
-		caption := self.caption;
-	};
+mapping doctpl::DBasicTable::GenerateBasicTable() : doctpl::DBasicTable { 
+	result.name := self.name;
+	result.width := self.width;
+	result.caption := self.caption;
+	result.rows += self.rows.map GenerateRows();
 }
 
-helper doctpl::DTableFromFile::GenerateTableFromFile() : doctpl::DTableFromFile {
-	return object DTableFromFile {
-		name := self.name;
-		referenceFile := self.referenceFile;
-		width := self.width;
-		height := self.height;
-		caption := self.caption;
-	};
+mapping doctpl::DRow::GenerateRows() : doctpl::DRow {
+	result.cells += self.cells.map GenerateCells();
 }
 
-helper doctpl::DBasicTable::GenerateBasicTable() : doctpl::DBasicTable { 
-	return object DBasicTable {
-		name := self.name;
-		width := self.width;
-		caption := self.caption;
-		rows += self.rows.GenerateRows();
-	};
-}
-
-helper doctpl::DRow::GenerateRows() : doctpl::DRow {
-	return object DRow {
-		cells += self.cells.GenerateCells();
-	};
-}
-
-helper doctpl::DCell::GenerateCells() : doctpl::DCell {
-	return object DCell {
-		if(self.colSpan <> null)
-			colSpan := self.colSpan;
-		if(self.rowSpan <> null)
-			rowSpan := self.rowSpan;
-		if(self.width <> null)
-			width := self.width;
-		if(self.shadow <> null)
-			shadow := self.shadow;
-		
-		var i : Integer := 1;
-		while(i <= self.bodyContent->size()) {
-			bodyContent += self.bodyContent.map GenerateBodyContent();
-			i := i + 1;
-		};
+mapping doctpl::DCell::GenerateCells() : doctpl::DCell {
+	if(self.colSpan <> null)
+		result.colSpan := self.colSpan;
+	if(self.rowSpan <> null)
+		result.rowSpan := self.rowSpan;
+	if(self.width <> null)
+		result.width := self.width;
+	if(self.shadow <> null)
+		result.shadow := self.shadow;
+	
+	var i : Integer := 1;
+	while(i <= self.bodyContent->size()) {
+		result.bodyContent += self.bodyContent.map GenerateBodyContent();
+		i := i + 1;
 	};
 }
 
 helper doctpl::DListContent::GenerateEnumerate() : doctpl::DListContent {
 	return object DEnumerate {
+		if(self.name <> null) {
+			name := self.name;	
+		};
 		if(self.style <> null) {
 			style := self.style;
 		};
 		if(self.alignment <> doctpl::DAlignment::left) {
 			alignment := self.alignment;
 		};
-		items += self.items.GenerateItems();
+		items += self.items.map GenerateItems();
 	};
 }
 
 helper doctpl::DListContent::GenerateItemize() : doctpl::DListContent {
 	return object DItemize {
+		if(self.name <> null) {
+			name := self.name;	
+		};
 		if(self.style <> null) {
 			style := self.style;
 		};
 		if(self.alignment <> doctpl::DAlignment::left) {
 			alignment := self.alignment;
 		};
-		items += self.items.GenerateItems();
+		items += self.items.map GenerateItems();
 	};
 }
 
-helper doctpl::DListItem::GenerateItems() : doctpl::DListItem {
-	return object DListItem {
-		paragraph := self.paragraph.GenerateParagraph();
-		if(self.sublist.style <> null) {
-			sublist.style := self.sublist.style;
-		};
-		if(self.sublist.alignment <> doctpl::DAlignment::left) {
-			sublist.alignment := self.sublist.alignment;
-		};
-		sublist.items := self.sublist.items.GenerateItems();
+mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
+	result.paragraph := self.paragraph.map GenerateParagraph();
+	if(self.sublist.style <> null) {
+		result.sublist.style := self.sublist.style;
 	};
+	if(self.sublist.alignment <> doctpl::DAlignment::left) {
+		result.sublist.alignment := self.sublist.alignment;
+	};
+	result.sublist.items := self.sublist.items.map GenerateItems();
 }
 

@@ -27,24 +27,25 @@ mapping srs::VSRSDocument::GenerateDoc() : doc::DDocument {
 	result.section += self.requirementsSection.map GenerateRequirementsSection();
 	result.section += self.logicalModelsSection.map GenerateLogicalModelsSection();
 	result.section += self.map GenerateTraceabilityMatricesSection();
+
 }
 
 mapping srs::VSRSIntroduction::GenerateIntroductionSection() : doc::DDSection {
 	result.name := "Introduction";
 	
-	result.sectionContent += self.srsInstatiableSubsections.GenerateInstatiableSubsection();
+	result.sectionContent += self.srsInstatiableSubsections.map GenerateInstatiableSubsection();
 }
 
 mapping srs::VSRSApplicableDocuments::GenerateApplicableDocumentsSection() : doc::DDSection {
 	result.name := "Applicable Documents";
 	
-	result.sectionContent := self.applicableDocuments.GenerateADRDs();
+	result.sectionContent := self.applicableDocuments.map GenerateADRDs();
 }
 
 mapping srs::VSRSReferenceDocuments::GenerateReferenceDocumentsSection() : doc::DDSection {
 	result.name := "Reference Documents";
 	
-	result.sectionContent := self.referenceDocuments.GenerateADRDs();
+	result.sectionContent := self.referenceDocuments.map GenerateADRDs();
 }
 
 mapping srs::VSRSTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSection {
@@ -79,7 +80,7 @@ helper srs::VSRSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
 				content := self.name;
 			};
 		};
-		var description := self.description.GenerateRun();
+		var description := self.description.map GenerateRun();
 		description.tab := object DTab {};
 		paragraphContent += description;
 	};
@@ -88,29 +89,38 @@ helper srs::VSRSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
 mapping srs::VSRSSoftwareOverview::GenerateSoftwareOverviewSection() : doc::DDSection {
 	result.name := "Software Overview";
 	
-	result.sectionContent += self.functionPurpose.GenerateSoftwareOverviewSubsections("Function and Purpose");
-	result.sectionContent += self.environmentalConsiderations.GenerateSoftwareOverviewSubsections("Environmental Considerations");
-	result.sectionContent += self.relationOtherSystems.GenerateSoftwareOverviewSubsections("Relation with other Systems");
-	result.sectionContent += self.constraints.GenerateSoftwareOverviewSubsections("Constraints");
+	result.sectionContent += self.functionPurpose.map GenerateFixedSection("Function and Purpose");
+	result.sectionContent += self.environmentalConsiderations.map GenerateFixedSection("Environmental Considerations");
+	result.sectionContent += self.relationOtherSystems.map GenerateFixedSection("Relation with other Systems");
+	result.sectionContent += self.constraints.map GenerateFixedSection("Constraints");
 }
 
-helper srs::VSRSFixedSection::GenerateSoftwareOverviewSubsections(in sectionName : String) : doc::DDSection {
-	return object DDSection {
-		name := sectionName;
-		sectionContent += self.body.GenerateDBody();
-		
-		var i : Integer := 1;
-		while(i <= self.srsInstatiableSubsections->size()) {
-		sectionContent += self.srsInstatiableSubsections->at(i).GenerateInstatiableSubsection();
-			i := i + 1;
-		};
+mapping srs::VSRSFixedSection::GenerateFixedSection(in sectionName : String) : doc::DDSection {
+	result.name := sectionName;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.srsInstatiableSubsections->size()) {
+	result.sectionContent += self.srsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	};
+}
+
+mapping srs::VSRSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
+	result.name := self.name;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.srsInstatiableSubsections->size()) {
+	result.sectionContent += self.srsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
 	};
 }
 
 mapping srs::VSRSRequirements::GenerateRequirementsSection() : doc::DDSection {
 	result.name := "Requirements";
 	
-	result.sectionContent += self.sectionDescription.GenerateDBody();
+	result.sectionContent += self.sectionDescription.map GenerateBody();
 	
 	result.sectionContent += self.general.GenerateRequirementSubsection("General");
 	result.sectionContent += self.performance.GenerateRequirementSubsection("Performance");
@@ -350,19 +360,6 @@ mapping srs::VSRSLogicalModels::GenerateLogicalModelsSection() : doc::DDSection 
 
 helper srs::VSRSLogicalModel::GenerateLogicalModel() : doc::DDSectionContent {
 	return object DDSection {};
-}
-
-helper srs::VSRSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
-	return object DDSection {
-		name := self.name;
-		sectionContent += self.body.GenerateDBody();
-		
-		var i : Integer := 1;
-		while(i <= self.srsInstatiableSubsections->size()) {
-		sectionContent += self.srsInstatiableSubsections->at(i).GenerateInstatiableSubsection();
-			i := i + 1;
-		};
-	};
 }
 
 mapping srs::VSRSDocument::GenerateTraceabilityMatricesSection() : doc::DDSection {
