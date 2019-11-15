@@ -1,0 +1,206 @@
+library inverseMatrixSVS;
+
+modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
+modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
+modeltype svs uses "http://srg.aut.uah.es/micobs/svm/svs";
+
+helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
+	return object DDBody {
+		var notFoundItems : OrderedSet(VTraceableDocumentAbstractItem);
+		bodyContent += object DBasicTable {
+			style := "TableGridFirstRowShadow";
+			width := "100";
+			
+			rows += object DRow {
+				cells += object DCell {
+					width := "15";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "SSS Item";
+							};
+						};
+					};
+				};
+				cells += object DCell {
+					width := "26";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "SSS document";
+							};
+						};
+					};
+				};
+				cells += object DCell {
+					width := "59";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "SRS Item";
+							};
+						};
+					};
+				};
+			};
+			var i : Integer := 1;
+			while(i <= self.parents->size()) {
+				var j : Integer := 1;
+				while(j <= self.parents->at(i).groups->size()) {
+					var k : Integer := 1;
+					while(k <= self.parents->at(i).groups->at(j).items->size()) {
+						var itemName : String := self.parents->at(i).groups->at(j).items->at(k).name;
+						//look for items which reference current item
+						var itemRefNum : Integer := 0;
+						var itemRefNames : OrderedSet(String);
+							
+						var x : Integer := 1;
+						while(x <= self.groups->size()) {
+							var y : Integer := 1;
+							while(y <= self.groups->at(x).items->size()) {
+								var z : Integer := 1;
+								while(z <= self.groups->at(x).items->at(y).validatingItem->size()) {
+									if(self.groups->at(x).items->at(y).validatingItem->at(z).name = itemName) {
+										itemRefNum := itemRefNum + 1;
+										itemRefNames += self.groups->at(x).items->at(y).name;
+									};
+									z := z + 1;
+								};
+								y := y + 1;
+							};
+							x := x + 1;
+						};
+						
+						if(itemRefNum = 0) {
+							notFoundItems += self.parents->at(i).groups->at(j).items->at(k);
+						} else {
+							//then write all ref items found in table
+							rows += object DRow {
+								cells += object DCell {
+									if(itemRefNum > 1) {
+										rowSpan := itemRefNum.toString();
+									};
+									bodyContent += object DParagraph {
+										paragraphContent += object DRun {
+											text := object DText {
+												content := itemName;
+											};
+										};
+									};
+								};
+								cells += object DCell {
+									if(itemRefNum > 1) {
+										rowSpan := itemRefNum.toString();
+									};
+									bodyContent += object DParagraph {
+										paragraphContent += object DRun {
+											text := object DText {
+												content := self.parents->at(i).id;
+											};
+										};
+									};
+								};
+								cells += object DCell {
+									bodyContent += object DParagraph {
+										paragraphContent += object DRun {
+											text := object DText {
+												content := itemRefNames->at(1);
+											};
+										};
+									};
+								};
+							};
+							if(itemRefNum > 1) {
+								x := 2;
+								while(x <= itemRefNum) {
+									rows += object DRow {
+										cells += object DCell {
+											bodyContent += object DParagraph {
+												paragraphContent += object DRun {
+													text := object DText {
+														content := itemRefNames->at(x);
+													};
+												};
+											};
+										};
+									};
+									x := x + 1;
+								};
+							};
+						};
+						k := k + 1;
+					};
+					j := j + 1;
+				};
+				i := i + 1;
+			};
+		};
+		if(notFoundItems->size() <> 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Items Not Found";
+					};
+				};
+			};
+			bodyContent += object DBasicTable {
+				style := "TableGridFirstRowShadow";
+				width := "100";
+				
+				rows += object DRow {
+					cells += object DCell {
+						width := "50";
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "SSS Item";
+								};
+							};
+						};
+					};
+					cells += object DCell {
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "SSS document";
+								};
+							};
+						};
+					};
+				};
+				var i : Integer := 1;
+				while(i <= notFoundItems->size()) {
+					rows += object DRow {
+						cells += object DCell {
+							width := "50";
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := notFoundItems->at(i).name;
+									};
+								};
+							};
+						};
+						cells += object DCell {
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := notFoundItems->at(i).group.doc.id;
+									};
+								};
+							};
+						};
+					};
+					i := i + 1; 
+				};
+			};
+		};
+	};
+}
