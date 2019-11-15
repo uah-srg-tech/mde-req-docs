@@ -187,13 +187,15 @@ helper doctpl::DListContent::GenerateItemize() : doctpl::DListContent {
 }
 
 mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
-	result.paragraph := self.paragraph.map GenerateParagraph();
-	if(self.sublist.style <> null) {
-		result.sublist.style := self.sublist.style;
+	if(self.paragraph <> null) {
+		result.paragraph := self.paragraph.map GenerateParagraph();
 	};
-	if(self.sublist.alignment <> doctpl::DAlignment::left) {
-		result.sublist.alignment := self.sublist.alignment;
+	if(self.sublist <> null) {
+		if(self.sublist.metaClassName() = "DItemize") {
+			result.sublist := self.oclAsType(DItemize).GenerateItemize();
+		}else if(self.sublist.metaClassName() = "DEnumerate") {
+			result.sublist := self.oclAsType(DEnumerate).GenerateEnumerate();
+		};
 	};
-	result.sublist.items := self.sublist.items.map GenerateItems();
 }
 
