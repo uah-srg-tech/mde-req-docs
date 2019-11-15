@@ -62,12 +62,11 @@ mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
 			result := self.oclAsType(DItemize).GenerateItemize();
 		};
 	}
-	if(self.style <> null) {
-		result.style := self.style;
-	};
+	result.style := self.style;
 	if(self.alignment <> doctpl::DAlignment::left) {
 		result.alignment := self.alignment;
 	};
+	result.indent := self.indent;
 }
 
 mapping doctpl::DParagraph::GenerateParagraph() : doctpl::DParagraph {
@@ -198,4 +197,3 @@ mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
 		};
 	};
 }
-
