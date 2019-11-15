@@ -2,10 +2,12 @@ library inverseMatrixSRS;
 
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
 modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
 modeltype srs uses "http://srg.aut.uah.es/micobs/svm/srs";
 
 helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 	return object DDBody {
+		var notFoundItems : OrderedSet(VTraceableDocumentAbstractItem);
 		bodyContent += object DBasicTable {
 			style := "TableGridFirstRowShadow";
 			width := "100";
@@ -85,67 +87,61 @@ helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 								x := x + 1;
 							};
 							
-							//then write all ref items found in table
-							rows += object DRow {
-								cells += object DCell {
-									if(itemRefNum > 1) {
-										rowSpan := itemRefNum.toString();
-									};
-									bodyContent += object DParagraph {
-										paragraphContent += object DRun {
-											text := object DText {
-												content := itemName;
+							if(itemRefNum = 0) {
+								notFoundItems += self.parents->at(i).document.groups->at(j).items->at(k);
+							} else {
+								//then write all ref items found in table
+								rows += object DRow {
+									cells += object DCell {
+										if(itemRefNum > 1) {
+											rowSpan := itemRefNum.toString();
+										};
+										bodyContent += object DParagraph {
+											paragraphContent += object DRun {
+												text := object DText {
+													content := itemName;
+												};
 											};
 										};
 									};
-								};
-								cells += object DCell {
-									if(itemRefNum > 1) {
-										rowSpan := itemRefNum.toString();
-									};
-									bodyContent += object DParagraph {
-										paragraphContent += object DRun {
-											text := object DText {
-												content := self.parents->at(i).document.id;
+									cells += object DCell {
+										if(itemRefNum > 1) {
+											rowSpan := itemRefNum.toString();
+										};
+										bodyContent += object DParagraph {
+											paragraphContent += object DRun {
+												text := object DText {
+													content := self.parents->at(i).document.id;
+												};
 											};
 										};
 									};
-								};
-								cells += object DCell {
-									bodyContent += object DParagraph {
-										paragraphContent += object DRun {
-											if(itemRefNum = 0) {
-												bold := DRunAttributes::TRUE;
-												italics := DRunAttributes::TRUE;
-												underline := DRunAttributes::TRUE;
-												color := "FF0000";
-											};
-											text := object DText {
-												if(itemRefNum = 0) {
-													content := "Not Found";
-												} else {
+									cells += object DCell {
+										bodyContent += object DParagraph {
+											paragraphContent += object DRun {
+												text := object DText {
 													content := itemRefNames->at(1);
 												};
 											};
 										};
 									};
 								};
-							};
-							if(itemRefNum > 1) {
-								x := 2;
-								while(x <= itemRefNum) {
-									rows += object DRow {
-										cells += object DCell {
-											bodyContent += object DParagraph {
-												paragraphContent += object DRun {
-													text := object DText {
-														content := itemRefNames->at(x);
+								if(itemRefNum > 1) {
+									x := 2;
+									while(x <= itemRefNum) {
+										rows += object DRow {
+											cells += object DCell {
+												bodyContent += object DParagraph {
+													paragraphContent += object DRun {
+														text := object DText {
+															content := itemRefNames->at(x);
+														};
 													};
 												};
 											};
 										};
+										x := x + 1;
 									};
-									x := x + 1;
 								};
 							};
 						};
@@ -154,6 +150,69 @@ helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 					j := j + 1;
 				};
 				i := i + 1;
+			};
+		};
+		if(notFoundItems->size() <> 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Items Not Found";
+					};
+				};
+			};
+			bodyContent += object DBasicTable {
+				style := "TableGridFirstRowShadow";
+				width := "100";
+				
+				rows += object DRow {
+					cells += object DCell {
+						width := "50";
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "SSS Item";
+								};
+							};
+						};
+					};
+					cells += object DCell {
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "SSS document";
+								};
+							};
+						};
+					};
+				};
+				var i : Integer := 1;
+				while(i <= notFoundItems->size()) {
+					rows += object DRow {
+						cells += object DCell {
+							width := "50";
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := notFoundItems->at(i).name;
+									};
+								};
+							};
+						};
+						cells += object DCell {
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := notFoundItems->at(i).group.doc.id;
+									};
+								};
+							};
+						};
+					};
+					i := i + 1; 
+				};
 			};
 		};
 	};
