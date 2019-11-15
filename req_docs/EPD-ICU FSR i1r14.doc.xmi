@@ -3,52 +3,52 @@
   <section name="Introduction">
     <sectionContent xsi:type="micobs.doc:DDSection" name="Scope">
       <sectionContent xsi:type="micobs.doc:DDBody">
-        <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
             <text content="The Energetic Particle Detector (EPD) suite consists of four sensors measuring electrons, protons, and ions from helium to iron, and operating at partly overlapping energy ranges from 2 keV up to 200 MeV/n. The EPD sensors are:"/>
           </paragraphContent>
         </bodyContent>
-        <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
           <items>
-            <paragraph alignment="left">
+            <paragraph>
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="SupraThermal Electrons, Ions, &amp;amp; Neutrals (STEP)"/>
               </paragraphContent>
             </paragraph>
           </items>
           <items>
-            <paragraph alignment="left">
+            <paragraph>
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="Suprathermal Ion Spectrograph (SIS)"/>
               </paragraphContent>
             </paragraph>
           </items>
           <items>
-            <paragraph alignment="left">
+            <paragraph>
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="Electron Proton Telescope (EPT)"/>
               </paragraphContent>
             </paragraph>
           </items>
           <items>
-            <paragraph alignment="left">
+            <paragraph>
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="High Energy Telescope (HET)"/>
               </paragraphContent>
             </paragraph>
           </items>
         </bodyContent>
-        <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
             <text content="The EPD sensors share the Instrument Control Unit (ICU) that is composed by the Common Data Processing Unit and the Low Voltage Power Supply (CDPU/LVPS), which is the sole power and data interface of EPD to the spacecraft. In order to improve the reliability, the ICU is a redundant system working in a cold redundant configuration. This means that nominal or redundant ICU units are never switched ON simultaneously. CDPU shares information with the STIX, MAG and SWA investigation to allow synchronized high data rate burst-mode operations following on-board identification of predefined triggering events in the EPD data. The CDPU is designed to manage sensors control and monitoring, the sensors timing clock, and sensor data collection, compression, and packetization for telemetry. CDPU is also responsible of the S/C telecommand reception and delivery, if necessary, to the sensors. All sensors have their front-end electronics co-located with the instrument."/>
           </paragraphContent>
         </bodyContent>
-        <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
             <text content="STEP consists of a single unit having two view cones in opposite directions. SIS consists of two sensor heads with roughly opposite (160Â°) view directions sharing a common electronics box. EPT-HET has multiple view cones sharing a common electronics box. There are two identical EPT-HET units."/>
           </paragraphContent>
         </bodyContent>
-        <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
             <text content="The overall energy coverage achieved with the EPD sensors is 0.002 MeV to 20 MeV for electrons, 0.003 MeV to 100 MeV for protons, 0.008 MeV/n to 200 MeV/n for heavy ions (species-dependent). This energy and species coverage well satisfies and for a large part exceeds the requirements defined for EPD in the Solar Orbiter Payload Definition Document and in the report of the Joint Science and Technology Definition Team (JSTDT) for the Solar Orbiter/Sentinels mission."/>
           </paragraphContent>
@@ -58,136 +58,137 @@
   </section>
   <section name="Applicable Documents">
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD1">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD1"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="EID-A:Solar Orbiter Experiment Interface Document, Part A"/>
+          <text content="EID-A: Solar Orbiter Experiment Interface Document, Part A. SOL-EST-RCD-0050 issue &quot;5&quot;. 03/2015"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD2">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD2"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="EID-B: Solar Orbiter EPD Experiment Interface Document, Part B"/>
+          <text content="EID-B: Solar Orbiter EPD Experiment Interface Document, Part B. SO-EPD-PO-IF-0001 issue &quot;3&quot; rev &quot;3&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD3">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD3"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Interface Control Document (ICD)"/>
+          <text content="Interface Control Document (ICD). SO-EPD-ICU-IF-0001 issue &quot;4&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD4">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD4"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Solar Orbiter Operations Requirements Document"/>
+          <text content="Solar Orbiter Operations Requirements Document. SO-ESC-RS-05001 issue &quot;1&quot; rev &quot;8&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD5">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD5"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Software"/>
+          <text content="Software. ECSS-E-ST-40C. 06/03/2009"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD6">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD6"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Solar Orbiter (SOLO) Energetic Particle Detector (EPD) Instrument Control Unit (ICU)"/>
+          <text content="Solar Orbiter (SOLO) Energetic Particle Detector (EPD) Instrument Control Unit (ICU). SO-EPD-ICU-DD-004 issue &quot;5&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD7">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD7"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="EPD Telemetry and Telecommand ICD"/>
+          <text content="EPD Telemetry and Telecommand ICD. SO-EPD-PO-IF-0003 issue &quot;2&quot; rev &quot;9&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD11">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD11"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Requirements and clarifications on software development and qualification for Solar Orbiter instruments"/>
+          <text content="Requirements and clarifications on software development and qualification for Solar Orbiter instruments. SOL-EST-RS-3188 issue &quot;1&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD12">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD12"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="EPD Sensors Data Interface Control Document"/>
+          <text content="EPD Sensors Data Interface Control Document. SO-EPD-PO-IF-0005 issue &quot;1&quot; rev &quot;6&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
   </section>
   <section name="Reference Documents">
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD1">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD1"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book"/>
+          <text content="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book. CCSDS 102.0-B-5. 11/2000"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD2">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD2"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Ground systems and operations - Telemetry and telecommand packet utilization"/>
+          <text content="Ground systems and operations - Telemetry and telecommand packet utilization. ECSS-E-70-41A. 30/01/2003"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
   </section>
-  <section name="Terms, Definitions &amp; Abbreviations">
+  <section name="Terms, Definitions and Abbreviations">
     <sectionContent xsi:type="micobs.doc:DDBody">
       <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Applicable Document"/>
         </paragraphContent>
       </bodyContent>
@@ -196,6 +197,7 @@
           <text content="ASW"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Application Software"/>
         </paragraphContent>
       </bodyContent>
@@ -204,6 +206,7 @@
           <text content="BSW"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Boot Software"/>
         </paragraphContent>
       </bodyContent>
@@ -212,6 +215,7 @@
           <text content="C&amp;amp;DH"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Control and Data Handling"/>
         </paragraphContent>
       </bodyContent>
@@ -220,6 +224,7 @@
           <text content="CDPU"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Common Data Processing Unit"/>
         </paragraphContent>
       </bodyContent>
@@ -228,6 +233,7 @@
           <text content="EGSE"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Electrical Ground Support Equipment"/>
         </paragraphContent>
       </bodyContent>
@@ -236,6 +242,7 @@
           <text content="EPD"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Energetic Particle Detector"/>
         </paragraphContent>
       </bodyContent>
@@ -244,6 +251,7 @@
           <text content="GSS"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Ground Support System"/>
         </paragraphContent>
       </bodyContent>
@@ -252,6 +260,7 @@
           <text content="ICU"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Instrument Control Unit"/>
         </paragraphContent>
       </bodyContent>
@@ -260,6 +269,7 @@
           <text content="IRQ"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Interrupt Request"/>
         </paragraphContent>
       </bodyContent>
@@ -268,6 +278,7 @@
           <text content="FPGA"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Field Programmable Gate Array"/>
         </paragraphContent>
       </bodyContent>
@@ -276,6 +287,7 @@
           <text content="LVPS"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Low Voltage Power Supply"/>
         </paragraphContent>
       </bodyContent>
@@ -284,6 +296,7 @@
           <text content="OBDH"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="On-Board Data Handling"/>
         </paragraphContent>
       </bodyContent>
@@ -292,6 +305,7 @@
           <text content="RAM"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Random Access Memory"/>
         </paragraphContent>
       </bodyContent>
@@ -300,6 +314,7 @@
           <text content="RD"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Reference Document"/>
         </paragraphContent>
       </bodyContent>
@@ -308,6 +323,7 @@
           <text content="S/C"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Spacecraft"/>
         </paragraphContent>
       </bodyContent>
@@ -316,6 +332,7 @@
           <text content="SDRAM"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Synchronous Dynamic RAM"/>
         </paragraphContent>
       </bodyContent>
@@ -324,6 +341,7 @@
           <text content="SVVP"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Field Programmable Gate Array"/>
         </paragraphContent>
       </bodyContent>
@@ -332,6 +350,7 @@
           <text content="SW"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Software Verification and Validation Plan"/>
         </paragraphContent>
       </bodyContent>
@@ -340,6 +359,7 @@
           <text content="TBC"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="To Be Confirmed"/>
         </paragraphContent>
       </bodyContent>
@@ -348,6 +368,7 @@
           <text content="TC"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Telecommand"/>
         </paragraphContent>
       </bodyContent>
@@ -356,6 +377,7 @@
           <text content="TM"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
           <text content="Telemetry"/>
         </paragraphContent>
       </bodyContent>
@@ -365,42 +387,38 @@
     <sectionContent xsi:type="micobs.doc:DDSection" name="Function and Purpose">
       <sectionContent xsi:type="micobs.doc:DDSection" name="Purpose">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The EPD Software Requirements Document defines and describes the operations, interfaces, performance, and quality assurance requirements of the EPD's ICU software. The requirements described in this document are derived from "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+              <run italics="true">
                 <text content="AD1"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.0"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content=", "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.1/@bodyContent.0">
+              <run italics="true">
                 <text content="AD2"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.1"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content=", "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.2/@bodyContent.0">
+              <run italics="true">
                 <text content="AD3"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.2"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content=" and "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.3/@bodyContent.0">
+              <run italics="true">
                 <text content="AD4"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.3"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content=" (EID-A, EID-B, Interface Control Document and Solar Orbiter Operations Requirements Document)."/>
@@ -410,7 +428,7 @@
       </sectionContent>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Scope">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="This document applies to the EPD's ICU software. It does not provide information for the Ground Support Software (GSS), which is maintained separately as part of the Electronic Ground Support Equipment (EGSE). This document supplies information applicable to the Software Requirements Specification."/>
             </paragraphContent>
@@ -421,127 +439,162 @@
     <sectionContent xsi:type="micobs.doc:DDSection" name="Environmental Considerations">
       <sectionContent xsi:type="micobs.doc:DDSection" name="General Description">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.1/@sectionContent.0/@sectionContent.0/@bodyContent.1">
+              <run italics="true">
                 <text content="ICU_IF"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@environmentalConsiderations/@srsInstatiableSubsections.0/@body/@bodyContent.1"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content=" illustrates the top-level interfaces to the ICU, which affect the Instrument Control Unit Software."/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" alignment="left" name="ICU_IF" caption="ICU interfaces" referenceFile="FSR_images/ICU_IF.png" width="&quot;849&quot;" height="&quot;641&quot;"/>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="ICU_IF" caption="ICU interfaces" referenceFile="FSR_images/ICU_IF.png" width="&quot;849&quot;" height="&quot;641&quot;"/>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="EPD's CDPU provides the interface between the Solar Orbiter Spacecraft C&amp;amp;DH system and the EPD sensors (STEP, HET, EPT and SIS). All information transfer between the EPD sensors and the Spacecraft/Ground flows through the CDPU, including telemetry, commands and status. The sensors communicate with the CDPU over a dedicated serial interface."/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
       </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Hardware Overview">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.1/@sectionContent.1/@sectionContent.0/@bodyContent.1">
+              <run italics="true">
+                <text content="ICU_HW"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=" shows the basic HW diagram of the ICU."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="ICU_HW" caption="ICU hardware schema" referenceFile="FSR_images/ICU_HW.png" width="&quot;922&quot;" height="&quot;615&quot;"/>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="As it can be observed, the design is based on a FPGA (the RTAX2000 from Actel) that includes a LEON2 soft processor, the UART-LVDS links with the sensors, the SpaceWire cores and the interfaces with the LVPS and the memory. The RAM memory uses the SDRAM 3DSD2G40VS5238MS (1.56 Gbits in a 40 bit configuration to implement the EDAC) part and the EEPROM memory uses the 3DEE8M32VS8094 (8 Mbits in a 32 bit configuration) part, both from 3Dplus."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The LVPS provides +28v non-regulated power supply to the sensors. The switching and monitoring is performed by the CDPU. In "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.1/@sectionContent.1/@sectionContent.0/@bodyContent.4">
+              <run italics="true">
+                <text content="LVPS_HW"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=" a simplified diagram of the LVPS hardware is shown."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="LVPS_HW" caption="LVPS hardware schema" referenceFile="FSR_images/LVPS_HW.png" width="&quot;911&quot;" height="&quot;604&quot;"/>
+        </sectionContent>
+      </sectionContent>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Modes">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="In "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.1/@sectionContent.2/@sectionContent.0/@bodyContent.1">
+              <run italics="true">
                 <text content="ICU_SW_Op_modes"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@environmentalConsiderations/@srsInstatiableSubsections.2/@body/@bodyContent.1"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content=" the modes of operation of ICUSW are represented."/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" alignment="left" name="ICU_SW_Op_modes" caption="ICU SW operation modes" referenceFile="FSR_images/ICU_SW_Op_modes.png" width="&quot;1148&quot;" height="&quot;686&quot;"/>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="ICU_SW_Op_modes" caption="ICU SW operation modes" referenceFile="FSR_images/ICU_SW_Op_modes.png" width="&quot;1148&quot;" height="&quot;686&quot;"/>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The ICUSW shall be able to support the following modes:"/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DItemize">
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="OFF: The ICU is not powered."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="BOOT: The ICU is just switched on, a soft reset from other mode has been performed, or a mode transition TC has been received. This mode is in charge of the initial ICU configuration and checking. It also tries to load the application software and pass control to it. The boot software of the ICUSW shall implement the BOOT mode."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="SAFE: is a mode in which EPD is powered but in a safe configuration, which can be maintained indefinitely (e.g. main control unit powered but sensors are off). In this mode EPD will generate only non-science telemetry. The configuration of the instrument in SAFE mode will be unambiguous (i.e. only one defined configuration). The boot software of the ICUSW shall implement the SAFE mode, and it will trigger a transition from BOOT mode to SAFE mode when application software can not be executed. In SAFE mode the damaged application software images stored in EEPROM can be restored by means of patch telecommands-"/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="CONFIGURATION: this mode shall be used for required operations to activate or configure the instrument. In this mode non-science data may be generated, depending on the instrument configuration (e.g. sensors activated or not)."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="OPERATIONAL: this mode is the mode in which EPD is fully operative and generates non-science as well as science data."/>
                 </paragraphContent>
               </paragraph>
             </items>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Autonomous transitions are the following:"/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DItemize">
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="BOOT to CONFIGURATION. This transition is triggered autonomously after a reset when application software is correctly loaded, the target mode is CONFIGURATION, and the control is passed to it."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="BOOT to OPERATIONAL. This transition is triggered autonomously after a reset when application software is correctly loaded, the target mode is OPERATIONAL, and the control is passed to it."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="BOOT to SAFE. This transition is triggered when application software can not be loaded and the boot software remains in control of the ICU."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="SAFE to BOOT. This transition is triggered by a soft reset (fatal error detected such as bus error, memory access error, etc.) or a TC."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="CONFIGURATION to BOOT. This transition is triggered by a soft reset (fatal error detected such as bus error, memory access error, etc.), by a recovery action (minor error detected such as driver or controller error etc.) or a TC."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="OPERATIONAL to BOOT. This transition is triggered by a soft reset (fatal error detected such as bus error, memory access error, etc.), by a recovery action (minor error detected such as driver or controller error etc.) or a TC."/>
                 </paragraphContent>
@@ -550,246 +603,27 @@
           </bodyContent>
         </sectionContent>
       </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="Hardware Overview">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF."/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="ICU_HW"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@environmentalConsiderations/@srsInstatiableSubsections.1/@body/@bodyContent.1"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="shows the basic HW diagram of the ICU."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" alignment="left" name="ICU_HW" caption="ICU hardware schema" referenceFile="FSR_images/ICU_HW.png" width="&quot;922&quot;" height="&quot;615&quot;"/>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="As it can be observed, the design is based on a FPGA (the RTAX2000 from Actel) that includes a LEON2 soft processor, the UART-LVDS links with the sensors, the SpaceWire cores and the interfaces with the LVPS and the memory. The RAM memory uses the SDRAM 3DSD2G40VS5238MS (1.56 Gbits in a 40 bit configuration to implement the EDAC) part and the EEPROM memory uses the 3DEE8M32VS8094 (8 Mbits in a 32 bit configuration) part, both from 3Dplus."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The LVPS provides +28v non-regulated power supply to the sensors. The switching and monitoring is performed by the CDPU. In "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="LVPS_HW"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@environmentalConsiderations/@srsInstatiableSubsections.1/@body/@bodyContent.4"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=" a simplified diagram of the LVPS hardware is shown."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" alignment="left" name="LVPS_HW" caption="LVPS hardware schema" referenceFile="FSR_images/LVPS_HW.png" width="&quot;911&quot;" height="&quot;604&quot;"/>
-        </sectionContent>
-      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Relation with other Systems">
-      <sectionContent xsi:type="micobs.doc:DDSection" name="S/C Interface">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Each CDPU is a remote terminal on the spacecraft SpaceWire link. The implementation will be compliant up to the "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="RD2"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@referenceDocumentsSection/@referenceDocuments.1"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=" and "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="RD3"/>
-              </run>
-              <reference href="../samples/SSS_issue%201.svm_sss#//@referenceDocumentsSection/@referenceDocuments.2"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=". Two separate SpaceWire links in a hot redundant configuration will be employed. SpaceWire is the command and data interface with the S/C."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="EPD command messages are contained in CCSDS telecommand packets. The spacecraft forwards CCSDS telecommand packets to the EPD when they contain any of the EPD identifiers (The EPD Process IDs are defined in "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="AD7"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=", section 10). EPD CDPU strips off the CCSDS packet headers and analyzes the destination identifier. If the identifier is associated to the CDPU, the telecommand is processed directly by the CDPU. If the identifier is associated to any sensor, the CDPU forward the command to the specific sensor. Command responses from the sensor are sent to the CDPU that transmits them to the S/C in CCSDS  telemetry packets format. Command responses generated by the CDPU itself are also CCSDS formatted and transmitted to the S/C."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The list of telecommands and telecommands responses are defined in "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="AD7"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The data interface is used for transfer data (science &amp;amp; housekeeping) and command response from EPD sensors to the CDPU and from CDPU to S/C. Transfer of data and command response from sensors to CDPU shall take place according to the Serial Data/Command Protocol described in Figure 5. Transfer of data and command response from CDPU to the S/C shall take place according to the CCSDS recommendations defined in "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="RD1"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@referenceDocumentsSection/@referenceDocuments.0"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=" and "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="RD2"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@referenceDocumentsSection/@referenceDocuments.1"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="."/>
-            </paragraphContent>
-          </bodyContent>
-        </sectionContent>
-      </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="Sensor Interface">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="All EPD sensors commands and telemetry are communicated via UART protocol at 115200 bauds using Low-Voltage Differential Signalling (LVDS) according to the EPD Serial Data/Command Protocol shown in "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="EPD_Serial"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@relationOtherSystems/@srsInstatiableSubsections.3/@srsInstatiableSubsections.0/@body/@bodyContent.1"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=" below. A cold redundant configuration will be used for data transmission/reception links between the CDPU and the sensors."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" alignment="left" name="EPD_Serial" caption="EPD Serial Data/Command Protocol" referenceFile="FSR_images/EPD_Serial.png" width="&quot;517&quot;" height="&quot;134&quot;"/>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Data communication between the sensors and the CDPU is started every second by the CDPU that acts as a master. CDPU will provide a 1 Hz hardware clock (one pulse per second or 1PPS) to the sensors "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="PPS_signal"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@relationOtherSystems/@srsInstatiableSubsections.3/@srsInstatiableSubsections.0/@body/@bodyContent.3"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="). This 1PPS signal is generated by the CDPU and synchronized with the S/C through the time codes, according to "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="ECSS-E-50-12"/>
-              </run>
-              <reference href="../samples/SSS_issue%201.svm_sss#//@referenceDocumentsSection/@referenceDocuments.2"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=", provided by SpaceWire. The CDPU drives the 1PPS signal directly to the sensors via a cabled hardware signal. A specific FPGA hardware entity, integrated in the CDPU, is in charge of generating the 1PPS signal synchronized with the time code reception. LVDS will be used to send 1PPS clock signal, in a cold redundant configuration, to the sensors. This approach eliminates the software latency and jitter of processor interrupt response and avoids the latency of UART transmission. Note that all the signals (transmission/reception and 1PPS clock) both, nominal and redundant are differential signals, so no common ground is needed in any case."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" alignment="left" name="PPS_signal" caption="1PPS signal characteristics" referenceFile="FSR_images/PPS_signal.png" width="&quot;613&quot;" height="&quot;127&quot;"/>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Data is sent over the command and telemetry interfaces as a transaction. Each transaction contains a single Sensor Transfer Frame (STF). Each STF contains command or telemetry data. The general format of the STF is shown in "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="STF"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@relationOtherSystems/@srsInstatiableSubsections.3/@srsInstatiableSubsections.0/@body/@bodyContent.5"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=". Command and telemetry-specific formats are described below."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DTableFromFile" alignment="left" name="STF" caption="Sensor Transfer Frame (STF) Format" referenceFile="FSR_images/STF.png" width="&quot;983&quot;" height="&quot;356&quot;"/>
-        </sectionContent>
-      </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="Time">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The Orbiter DMS maintains a time code pattern as Spacecraft Elapsed Time (SCET)."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The SCET (see section 4.8.4 of "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="AD1"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.0"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=") is considered as the Central Time Reference (CTR) and it is used as on-board reference for the correlation of time on Ground. The Central Time Reference (CTR) is maintained at spacecraft level and distributed to the Instruments in order to synchronize instruments with the DMS and AOCS and allow instruments to time-stamp their telemetry packets. The CDPU receives the time from the S/C formatted as a CCSDS telecommand packet. The time format is spacecraft elapsed time, in seconds and fractions of a second. The received time corresponds to the next SpaceWire time code. The time packet must arrive at least 300 ms before the time code (see "/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
-                <text content="AD1"/>
-              </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.0"/>
-            </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content=": R-838)."/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DTableFromFile" alignment="left" name="TimeTC" caption="Time Telecommand Packet Format" referenceFile="FSR_images/TimeTC.png" width="&quot;983&quot;" height="&quot;709&quot;"/>
-        </sectionContent>
-      </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="Communication Interfaces"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="User Interfaces">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The EPD Instrument has no direct in-flight human user interfaces. The Mission Operation Center (MOC) manages all human interaction with EPD."/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
       </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="LVPS Interface">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The interface between the CDPU and the LVPS is an internal interface. It is used to switch ON/OFF the sensors and to monitor voltages and currents."/>
-            </paragraphContent>
-          </bodyContent>
-        </sectionContent>
-      </sectionContent>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Hardware Interfaces">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The detailed EPD's ICU hardware to software interfaces are shown in "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.2/@sectionContent.1/@sectionContent.0/@bodyContent.1">
+              <run italics="true">
                 <text content="ICU_HW_IFs"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@softwareOverviewSection/@relationOtherSystems/@srsInstatiableSubsections.1/@body/@bodyContent.1"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
@@ -800,45 +634,45 @@
       </sectionContent>
       <sectionContent xsi:type="micobs.doc:DDSection" name="External Software Interfaces">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="SRG EPD's ICU uses the RTEMS operating system to perform task control functions and provide some resource management services."/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="ICU is planning on using the following capabilities of RTEMS:"/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="A detailed list of each used function is provided in the SRG EPD ICU Software Detailed Design Document."/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DItemize">
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="Prioritized, preemptive task scheduler."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="Inter-process communication."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="Resource locks (semaphores)."/>
                 </paragraphContent>
               </paragraph>
             </items>
             <items>
-              <paragraph alignment="left">
+              <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="Timers."/>
                 </paragraphContent>
@@ -847,127 +681,292 @@
           </bodyContent>
         </sectionContent>
       </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Communication Interfaces">
+        <sectionContent xsi:type="micobs.doc:DDSection" name="Sensor Interface">
+          <sectionContent xsi:type="micobs.doc:DDBody">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="All EPD sensors commands and telemetry are communicated via UART protocol at 115200 bauds using Low-Voltage Differential Signalling (LVDS) according to the EPD Serial Data/Command Protocol shown in "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.2/@sectionContent.3/@sectionContent.0/@sectionContent.0/@bodyContent.1">
+                <run italics="true">
+                  <text content="EPD_Serial"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=" below. A cold redundant configuration will be used for data transmission/reception links between the CDPU and the sensors."/>
+              </paragraphContent>
+            </bodyContent>
+            <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="EPD_Serial" caption="EPD Serial Data/Command Protocol" referenceFile="FSR_images/EPD_Serial.png" width="&quot;517&quot;" height="&quot;134&quot;"/>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Data communication between the sensors and the CDPU is started every second by the CDPU that acts as a master. CDPU will provide a 1 Hz hardware clock (one pulse per second or 1PPS) to the sensors "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.2/@sectionContent.3/@sectionContent.0/@sectionContent.0/@bodyContent.3">
+                <run italics="true">
+                  <text content="PPS_signal"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="). This 1PPS signal is generated by the CDPU and synchronized with the S/C through the time codes, according to "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.2/@sectionContent.3/@sectionContent.0/@sectionContent.0/@bodyContent.3">
+                <run italics="true">
+                  <text content="ECSS-E-50-12"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=", provided by SpaceWire. The CDPU drives the 1PPS signal directly to the sensors via a cabled hardware signal. A specific FPGA hardware entity, integrated in the CDPU, is in charge of generating the 1PPS signal synchronized with the time code reception. LVDS will be used to send 1PPS clock signal, in a cold redundant configuration, to the sensors. This approach eliminates the software latency and jitter of processor interrupt response and avoids the latency of UART transmission. Note that all the signals (transmission/reception and 1PPS clock) both, nominal and redundant are differential signals, so no common ground is needed in any case."/>
+              </paragraphContent>
+            </bodyContent>
+            <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="PPS_signal" caption="1PPS signal characteristics" referenceFile="FSR_images/PPS_signal.png" width="&quot;613&quot;" height="&quot;127&quot;"/>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Data is sent over the command and telemetry interfaces as a transaction. Each transaction contains a single Sensor Transfer Frame (STF). Each STF contains command or telemetry data. The general format of the STF is shown in "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.2/@sectionContent.3/@sectionContent.0/@sectionContent.0/@bodyContent.5">
+                <run italics="true">
+                  <text content="STF"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Command and telemetry-specific formats are described below."/>
+              </paragraphContent>
+            </bodyContent>
+            <bodyContent xsi:type="micobs.doctpl:DTableFromFile" name="STF" caption="Sensor Transfer Frame (STF) Format" referenceFile="FSR_images/STF.png" width="&quot;983&quot;" height="&quot;356&quot;"/>
+          </sectionContent>
+        </sectionContent>
+        <sectionContent xsi:type="micobs.doc:DDSection" name="S/C Interface">
+          <sectionContent xsi:type="micobs.doc:DDBody">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Each CDPU is a remote terminal on the spacecraft SpaceWire link. The implementation will be compliant up to the "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.1/@bodyContent.0">
+                <run italics="true">
+                  <text content="RD2"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=" and "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.4/@sectionContent.2/@sectionContent.3/@sectionContent.0/@sectionContent.0/@bodyContent.3">
+                <run italics="true">
+                  <text content="RD3"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Two separate SpaceWire links in a hot redundant configuration will be employed. SpaceWire is the command and data interface with the S/C."/>
+              </paragraphContent>
+            </bodyContent>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="EPD command messages are contained in CCSDS telecommand packets. The spacecraft forwards CCSDS telecommand packets to the EPD when they contain any of the EPD identifiers (The EPD Process IDs are defined in "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+                <run italics="true">
+                  <text content="AD7"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=", section 10). EPD CDPU strips off the CCSDS packet headers and analyzes the destination identifier. If the identifier is associated to the CDPU, the telecommand is processed directly by the CDPU. If the identifier is associated to any sensor, the CDPU forward the command to the specific sensor. Command responses from the sensor are sent to the CDPU that transmits them to the S/C in CCSDS  telemetry packets format. Command responses generated by the CDPU itself are also CCSDS formatted and transmitted to the S/C."/>
+              </paragraphContent>
+            </bodyContent>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="The list of telecommands and telecommands responses are defined in "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+                <run italics="true">
+                  <text content="AD7"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="."/>
+              </paragraphContent>
+            </bodyContent>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="The data interface is used for transfer data (science &amp;amp; housekeeping) and command response from EPD sensors to the CDPU and from CDPU to S/C. Transfer of data and command response from sensors to CDPU shall take place according to the Serial Data/Command Protocol described in Figure 5. Transfer of data and command response from CDPU to the S/C shall take place according to the CCSDS recommendations defined in "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.0/@bodyContent.0">
+                <run italics="true">
+                  <text content="RD1"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=" and "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.1/@bodyContent.0">
+                <run italics="true">
+                  <text content="RD2"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="."/>
+              </paragraphContent>
+            </bodyContent>
+          </sectionContent>
+        </sectionContent>
+        <sectionContent xsi:type="micobs.doc:DDSection" name="LVPS Interface">
+          <sectionContent xsi:type="micobs.doc:DDBody">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="The interface between the CDPU and the LVPS is an internal interface. It is used to switch ON/OFF the sensors and to monitor voltages and currents."/>
+              </paragraphContent>
+            </bodyContent>
+          </sectionContent>
+        </sectionContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Time">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The Orbiter DMS maintains a time code pattern as Spacecraft Elapsed Time (SCET)."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The SCET (see section 4.8.4 of "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+              <run italics="true">
+                <text content="AD1"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=") is considered as the Central Time Reference (CTR) and it is used as on-board reference for the correlation of time on Ground. The Central Time Reference (CTR) is maintained at spacecraft level and distributed to the Instruments in order to synchronize instruments with the DMS and AOCS and allow instruments to time-stamp their telemetry packets. The CDPU receives the time from the S/C formatted as a CCSDS telecommand packet. The time format is spacecraft elapsed time, in seconds and fractions of a second. The received time corresponds to the next SpaceWire time code. The time packet must arrive at least 300 ms before the time code (see "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+              <run italics="true">
+                <text content="AD1"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=": R-838)."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DTableFromFile" name="TimeTC" caption="Time Telecommand Packet Format" referenceFile="FSR_images/TimeTC.png" width="&quot;983&quot;" height="&quot;709&quot;"/>
+        </sectionContent>
+      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Constraints"/>
   </section>
   <section name="Requirements">
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Each of the EPD sensors has some data processing capabilities either by software running in the sensor DPUs/microcontrollers or by logic functions. The main software, however, is running in the CDPU. The principal functions of the CDPU software are:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To collect scientific data from the instruments periodically 1 Hz. "/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To accumulate high-cadence science data from the sensors to specified lower time resolution packages."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To collect housekeeping data from the four units."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To time tag the data if necessary."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To perform lossless compression of the data if necessary."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To format the data for transmission by the S/C."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To accept and syntactically check TC from the S/C."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To deliver these commands to the individual sensors for execution."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To accept from the ground and distribute to the sensors tables and software."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="To handle the burst mode."/>
             </paragraphContent>
           </paragraph>
         </items>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="A Real-Time Operating System is proposed to provide the basic facilities such as multitasking, timing and semaphore/mutex synchronization. A high-level software development tool (UML2, ROOM or similar) could be employed in the software design process."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="All software will comply with the requirements defined in the section 4.9.1 of the "/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-          <run>
+        <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+          <run italics="true">
             <text content="EID-A"/>
           </run>
-          <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.0"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=", namely:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DEnumerate" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DEnumerate">
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="All on-board software will comply with the software standard ECSS-E-40 by "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.4/@bodyContent.0">
+              <run italics="true">
                 <text content="AD5"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.4"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="tailored by"/>
+              <text content=" tailored by "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.7/@bodyContent.0">
+              <run italics="true">
                 <text content="AD11"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.7"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
@@ -975,280 +974,267 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Different areas of memory will be employed to store code, fixed constants and variable parameters of the in-flight software."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The PROM memory will include minimum boot software able to manage EEPROM updates and hardware test functions."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Independent software module memory updates will be supported. "/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Blocking the instrument due to S/W maintenance will be avoided. In case of blocking it can be cleared by a power cycling of the instrument."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Instrument safety hazard will be avoided in the software design process."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="On-board software will acquire, store and telemeter the employed resources, including memory usage, central processor unit (CPU) usage and I/O usage."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Before enabling the on-board software a mechanism to verify its integrity will be provided."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="A single telecommand will be used to enable the on-board software."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Telecommand and telemetry source packets will be the only means to communicate ground and on-board software."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If a processor reset is detected, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If a processor overload condition is detected, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If an unexpected arithmetic overflow condition is detected, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If an illegal program instruction is encountered during execution of a program code, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If a data bus error is detected by software, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If a memory corruption is detected by an EDAC, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="If a checksum error is detected, an event report will be generated."/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="A modularized structure will be employed in the software design process."/>
             </paragraphContent>
           </paragraph>
         </items>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="The ICU shall acquire science data from the sensors every 1 s. The information provided by every sensor shall be stored in a ring buffer of 10 minutes length with 1 s resolution. Every sensor unit will have its own independent ring buffer. According to "/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-          <run>
+        <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.8/@bodyContent.0">
+          <run italics="true">
             <text content="AD12"/>
           </run>
-          <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.8"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=" 9.5.2, after a programmable number of seconds the received packets with 1 s resolution shall be transformed in one packet. This transformation requires some specific data integration that depends on every sensor. The integrated packet shall be time-tagged with the time of the last integrated packet."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Burst trigger is a per-sensor process, not all EPD sensors shall be in burst mode at the same time. The burst can be triggered internally (by an EPD sensor as is defined in "/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-          <run>
+        <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.8/@bodyContent.0">
+          <run italics="true">
             <text content="AD12"/>
           </run>
-          <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.8"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content="] 10.3), that it will be reported to the spacecraft by a PUS service 3 Telemetry, or externally (by events detected in other(s) Solar Orbiter instrument). The EPD can associate the external trigger of Burst mode to the reception of a specific data on the PUS CCSDS service 20 packet according to "/>
+          <text content=" 10.3), that it will be reported to the spacecraft by a PUS service 3 Telemetry, or externally (by events detected in other(s) Solar Orbiter instrument). The EPD can associate the external trigger of Burst mode to the reception of a specific data on the PUS CCSDS service 20 packet according to "/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-          <run>
+        <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.8/@bodyContent.0">
+          <run italics="true">
             <text content="AD12"/>
           </run>
-          <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.8"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=" 10.2. This packet will be sent from spacecraft to the EPD at a maximum rate of 8Hz."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="The ICUSW shall also manage a specific set of telemetry generated by the sensor units called Quick Look Data Telemetry. This telemetry will be forwarded to the S/C using a different APID. "/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="The transmission rate of the Bust mode telemetries and Quick Look Data Telemetry shall be programmed specifically by means of table stored in EEPROM as is defined in "/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-          <run>
+        <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.8/@bodyContent.0">
+          <run italics="true">
             <text content="AD12"/>
           </run>
-          <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.8"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=" 9.5.2."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="In the following paragraphs a lists of software requirements will be included. Every single requirement has the following format:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DBasicTable" alignment="left" name="RequirementsTable" width="&quot;100&quot;">
+      <bodyContent xsi:type="micobs.doctpl:DBasicTable" name="RequirementsTable" width="&quot;100&quot;">
         <rows>
           <cells width="&quot;20&quot;" shadow="D8D8D8">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-              <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                 <text content="Name"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
           <cells width="&quot;64&quot;" shadow="D8D8D8">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-              <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                 <text content="SRS-ICUSW XX-YYYY"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
           <cells width="&quot;16&quot;" shadow="D8D8D8">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="Modes"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
         </rows>
         <rows>
           <cells width="&quot;20&quot;" shadow="D8D8D8">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-              <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                 <text content="Description"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
           <cells colSpan="&quot;2&quot;">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="Requirement Description"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
         </rows>
         <rows>
           <cells width="&quot;20&quot;" shadow="D8D8D8">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-              <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                 <text content="Validation Method"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
           <cells colSpan="&quot;2&quot;">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="Validation Approach"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
         </rows>
         <rows>
           <cells width="&quot;20&quot;" shadow="D8D8D8">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-              <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                 <text content="Parent"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
           <cells colSpan="&quot;2&quot;">
-            <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="Requirement Traceability"/>
               </paragraphContent>
             </bodyContent>
-            <rowSpan xsi:nil="true"/>
           </cells>
         </rows>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
           <text content="SRS-ICUSW XX-YYYY: "/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Identifies the requirement. XX is the type of requirement and YYYY is the number used to identify the requirement. Types of requirements are:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="GE. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1257,8 +1243,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="FU. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1267,8 +1253,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="PE. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1277,8 +1263,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="IF. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1287,8 +1273,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="OP. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1297,8 +1283,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="RS. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1307,8 +1293,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="DI. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1317,8 +1303,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="SE. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1327,8 +1313,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="PO. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1337,8 +1323,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="QU. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1347,8 +1333,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="RE. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1357,8 +1343,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="MA. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1367,8 +1353,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="SA. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1377,8 +1363,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="CD. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1387,8 +1373,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="DD. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1397,8 +1383,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="AI. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1407,39 +1393,39 @@
           </paragraph>
         </items>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Examples:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="SRS-ICUSW FU-0025"/>
             </paragraphContent>
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
+          <paragraph>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="SRS-ICUSW PE R-0037"/>
             </paragraphContent>
           </paragraph>
         </items>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
           <text content="Modes: "/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="establishes the modes in which the requirement is available, namely:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="F. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1448,8 +1434,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="B. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1458,8 +1444,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="S. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1468,8 +1454,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="C. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1478,8 +1464,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="O. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1488,26 +1474,26 @@
           </paragraph>
         </items>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
           <text content="Description: "/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="is the text that describes the requirement."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
           <text content="Validation approach: "/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="establishes how the requirement is verified:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="R. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1516,8 +1502,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="A. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1526,8 +1512,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="I. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1536,8 +1522,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="T. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1546,8 +1532,8 @@
           </paragraph>
         </items>
         <items>
-          <paragraph alignment="left">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
               <text content="S. "/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -1556,42 +1542,43 @@
           </paragraph>
         </items>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
           <text content="Parent: "/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="contains the list of &quot;software specification&quot; that are cover by the requirement."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="For each requirement type, subsections are provided when requirements apply only to boot software or to application software or they are common."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Other subsections or extended descriptions can be also added in order to better organize and clarify the requirements."/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Extended descriptions will be added using "/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
           <text content="D:"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=". Example:"/>
         </paragraphContent>
       </bodyContent>
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="D: The ICU ASW shall handle the telecommand and telemetry according to the following requirements:"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="General">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Common software requirements">
         <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
@@ -1627,15 +1614,14 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall comply with the requirements regarding Onboard Processors, Software and Memory Management as specified in section 2.3.2 and Section 3.6 of "/>
                   </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-                    <run>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.3/@bodyContent.0">
+                    <run italics="true">
                       <text content="AD4"/>
                     </run>
-                    <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.3"/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="."/>
@@ -1676,8 +1662,6 @@
               </cells>
             </rows>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -1711,72 +1695,71 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall ensure that EPD complies to the associated TM-/TC-Packet Services specified as mandatory for the payload in the Operations Interface Requirements Document "/>
                   </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-                    <run>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.3/@bodyContent.0">
+                    <run italics="true">
                       <text content="AD4"/>
                     </run>
-                    <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.3"/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="chapter 3. These services are:"/>
                   </paragraphContent>
                 </bodyContent>
-                <bodyContent xsi:type="micobs.doctpl:DItemize" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DItemize">
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Telecommand Verification service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Housekeeping and Diagnostic Reporting service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Event Reporting service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Memory Management service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Time Management service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Test service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Information Distribution service"/>
                       </paragraphContent>
                     </paragraph>
                   </items>
                   <items>
-                    <paragraph alignment="left">
+                    <paragraph>
                       <paragraphContent xsi:type="micobs.doctpl:DRun">
                         <text content="Science Data Transfer service"/>
                       </paragraphContent>
@@ -1821,8 +1804,11 @@
         </sectionContent>
       </sectionContent>
     </sectionContent>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Performance"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Performance">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Interface">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Common software requirements">
         <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
@@ -1858,15 +1844,14 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall implement the Telecommand Verification Service (service 1) of the PUS standard according to the requirements TCV-1 to TCV-7, stated as such in the Solar Orbiter Operations Requirement Document "/>
                   </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-                    <run>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.3/@bodyContent.0">
+                    <run italics="true">
                       <text content="AD4"/>
                     </run>
-                    <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.3"/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="."/>
@@ -1907,27 +1892,24 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The telemetries related to this requirement is specified in the EPD Telemetry and Telecommand Document "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+              <run italics="true">
                 <text content="AD7"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="his requirement does not apply to telecommand addressed to SIS."/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -1961,15 +1943,14 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall implement the Housekeeping and Diagnostic Data Reporting Service (service 3) according to the requirements PERP-1 to PERP-3 stated as such in the Solar Orbiter Operations Requirement Document "/>
                   </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-                    <run>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.3/@bodyContent.0">
+                    <run italics="true">
                       <text content="AD4"/>
                     </run>
-                    <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.3"/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="."/>
@@ -2010,22 +1991,19 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="For each ICUSW mode, the telemetries related to this requirement are specified in the EPD Telemetry and Telecommand Document "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+              <run italics="true">
                 <text content="AD7"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2059,15 +2037,14 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall implement the Event Reporting Service (service 5) according to the requirements EVRP-2, EVRP-3, EVRP-4, EVRP-5 and EVRP-7, stated as such in the Solar Orbiter Operations Requirement Document "/>
                   </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-                    <run>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.3/@bodyContent.0">
+                    <run italics="true">
                       <text content="AD4"/>
                     </run>
-                    <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.3"/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="."/>
@@ -2102,28 +2079,25 @@
               <cells colSpan="2" width="80">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content="EVRP-2, EVRP-3, EVRP-4, EVRP-5, EVRP-6, EVRP-7"/>
+                    <text content="EVRP-5, EVRP-6, EVRP-7"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The complete set of events and telemetries related to this requirement is specified in the EPD Telemetry and Telecommand Document "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+              <run italics="true">
                 <text content="AD7"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2157,7 +2131,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall implement support for event based reporting telemetry packets. For anomaly reports, 3 levels of criticality (low, medium and high) shall be distinguished. Telemetries &quot;Nominal/Progress Report&quot;, service 5,1; &quot;Error/Anomaly Report - Low Severity&quot;, service 5,2; &quot;Error/Anomaly Report - Medium Severity&quot;, service 5,3; Error/Anomaly Report - High Severity&quot;, service 5,4."/>
                   </paragraphContent>
@@ -2197,22 +2171,19 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The assignment of events to the different service 5,x telemetries is specified in the EPD Telemetry and Telecommand Document "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+              <run italics="true">
                 <text content="AD7"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2246,7 +2217,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall implement a connection test service (Service 17) according to the specifications given chapter 3 of "/>
                   </paragraphContent>
@@ -2286,7 +2257,7 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="This test service implies that the ICUSW will answer with a service 17,2 telemetry packet to a telecommand of service 17,1."/>
             </paragraphContent>
@@ -2295,6 +2266,7 @@
       </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Functional">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Common software requirements">
         <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
@@ -2330,7 +2302,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall provide the Telecommand Verification service (service 1) to allow adequate and unambiguous verification of acceptance, progress (where applicable) and execution of all telecommands sent from any source (sent from Ground for immediate, delayed or time-tagged execution, and sent from onboard applications)."/>
                   </paragraphContent>
@@ -2370,8 +2342,6 @@
               </cells>
             </rows>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2405,7 +2375,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall provide an &quot;are you alive&quot; function for testing the end-to-end connection between Ground or Command &amp;amp; Control Function and itself. This function implements the Telecommand &quot;Perform Connection Test&quot;, service 17,1; and response Telemetry &quot;Connection Test Report&quot;, service 17,2."/>
                   </paragraphContent>
@@ -2482,7 +2452,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW shall provide the service 3,129 in order to specify the frequency of generation of a specified housekeeping telemetry packet via Telecommand &quot;Update HK Report Generation Period&quot;."/>
                   </paragraphContent>
@@ -2522,13 +2492,11 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The frequency accepted by the ICUSW must be &amp;lt;= 1Hz."/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2562,7 +2530,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW application software shall provide the services 3,5 and 3,6."/>
                   </paragraphContent>
@@ -2602,7 +2570,7 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="Using these services, it will be possible to enable/disable by telecommand the generation of an existing housekeeping packet (and for more than one packet as part of the same command). Telecommands &quot;Enable HK Parameter Report Generation&quot;, service 3,5; and &quot;Disable HK Parameter Report Generation&quot;, service 3,6."/>
             </paragraphContent>
@@ -2610,17 +2578,18 @@
         </sectionContent>
       </sectionContent>
     </sectionContent>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Operational"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Operational">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Resources">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Application software requirements">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The ICUSW application software will handle the information about EPD status, housekeeping and fault detection and recovery management according to the following design requirements:"/>
+              <text content="The resources related to the management  links between the ICU and the sensor units for ICUSW execution are enumerated in the following requirements:"/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2654,12 +2623,12 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The ICUSW failure detection functions shall control the continuous production of service 5 report packets corresponding to the same anomaly by means of autonomously disabling individually the report packet generation after each reported anomaly."/>
                   </paragraphContent>
                 </bodyContent>
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The service 5,5 and 5,6 telecommands will be used to control the report packet generation."/>
                   </paragraphContent>
@@ -2699,29 +2668,27 @@
               </cells>
             </rows>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The service 5 telemetry for anomaly reports is defined in the EPD Telemetry and Telecommand Document "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+              <run italics="true">
                 <text content="AD7"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
             </paragraphContent>
           </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The service 5,5 and 5,6 telecommand that controls the report packet generation is defined in the EPD Telemetry and Telecommand Document "/>
             </paragraphContent>
-            <paragraphContent xsi:type="micobs.doctpl:DHyperlink">
-              <run>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.6/@bodyContent.0">
+              <run italics="true">
                 <text content="AD7"/>
               </run>
-              <reference href="EPD-ICU%20FSR%20i1r14.svm_srs#//@applicableDocumentsSection/@applicableDocuments.6"/>
             </paragraphContent>
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="."/>
@@ -2731,15 +2698,14 @@
       </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Design">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Application software requirements">
         <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The ICUSW application software will handle the information about EPD status, housekeeping and fault detection and recovery management according to the following design requirements:"/>
+              <text content="The ICUSW application software will handle the information about EPD status, houseeking and fault detection and recovery management according to the following design requirements:"/>
             </paragraphContent>
           </bodyContent>
-        </sectionContent>
-        <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
             <rows>
               <cells width="20">
@@ -2773,7 +2739,7 @@
                 </bodyContent>
               </cells>
               <cells colSpan="2" width="80">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph" alignment="left">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
                     <text content="The application software of the ICUSW will provide the EPD status information in service 3 telemetry from direct measurements from operating units rather than from secondary effects."/>
                   </paragraphContent>
@@ -2816,16 +2782,36 @@
         </sectionContent>
       </sectionContent>
     </sectionContent>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Security and Privacy"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Portability"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Quality"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Reliability"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintainability"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Safety"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Configuration Delivery"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Data Definition Database"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Human Factors"/>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Adaptation Installation"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Security and Privacy">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Portability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Quality">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Reliability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintainability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Safety">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Configuration Delivery">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Data Definition Database">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Human Factors">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Adaptation Installation">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
   </section>
   <section name="Logical Models"/>
   <section name="Traceability Matrices">
@@ -3200,61 +3186,13 @@
             </cells>
           </rows>
           <rows>
-            <cells rowSpan="6">
+            <cells rowSpan="3">
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="IF R-00170"/>
                 </paragraphContent>
               </bodyContent>
             </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SOL-ESC-RS-05001"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="EVRP-2"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-          </rows>
-          <rows>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SOL-ESC-RS-05001"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="EVRP-3"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-          </rows>
-          <rows>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SOL-ESC-RS-05001"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="EVRP-4"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-          </rows>
-          <rows>
             <cells>
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
@@ -3967,75 +3905,6 @@
             <cells>
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="EVRP-2"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SOL-ESC-RS-05001"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="IF R-00170"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-          </rows>
-          <rows>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="EVRP-3"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SOL-ESC-RS-05001"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="IF R-00170"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-          </rows>
-          <rows>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="EVRP-4"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SOL-ESC-RS-05001"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="IF R-00170"/>
-                </paragraphContent>
-              </bodyContent>
-            </cells>
-          </rows>
-          <rows>
-            <cells>
-              <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="EVRP-5"/>
                 </paragraphContent>
               </bodyContent>
@@ -4152,6 +4021,77 @@
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="FU R-00390"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Items Not Found"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS Item"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS document"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="EVRP-2"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="SOL-ESC-RS-05001"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="EVRP-3"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="SOL-ESC-RS-05001"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="EVRP-4"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="SOL-ESC-RS-05001"/>
                 </paragraphContent>
               </bodyContent>
             </cells>
