@@ -75,6 +75,7 @@
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book" id="CCSDS 102.0-B-5" date="11/2000" />
 		<ReferenceDocument name="RD2" title="Ground systems and operations - Telemetry and telecommand packet utilization" id="ECSS-E-70-41A" date="30/01/2003" />
+		<ReferenceDocument name="RD3" title="SpaceWire - Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
 	</ReferenceDocuments>
 	<TermsDefinitionsAbbreviations>
 		<Abbreviation name="AD">
