@@ -76,7 +76,18 @@
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <tab/>
-          <text content="Space product assurance â€“ Software product assurance. ECSS-Q-ST-80 issue &quot;3&quot;"/>
+          <text content="Space product assurance - Software product assurance. ECSS-Q-ST-80 issue &quot;3&quot;"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD3">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD3"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SpaceWire - Links, nodes, routers and networks. ECSS-E-ST-50-12A. 24/01/2003"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -707,7 +718,15 @@
             <items>
               <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="SpW USB-Brick connected to GSS Host Unit"/>
+                  <text content="SpW USB-Brick (compliant with "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.2/@bodyContent.0">
+                  <run italics="true">
+                    <text content="RD3"/>
+                  </run>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content=") connected to GSS Host Unit "/>
                 </paragraphContent>
               </paragraph>
             </items>

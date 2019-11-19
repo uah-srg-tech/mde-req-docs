@@ -19,7 +19,8 @@
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="Space engineering - Software general requirements" id="ECSS-E-ST-40" issue="3" />
-		<ReferenceDocument name="RD2" title="Space product assurance – Software product assurance" id="ECSS-Q-ST-80" issue="3" />
+		<ReferenceDocument name="RD2" title="Space product assurance - Software product assurance" id="ECSS-Q-ST-80" issue="3" />
+		<ReferenceDocument name="RD3" title="SpaceWire - Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
 	</ReferenceDocuments>
 	<TermsDefinitionsAbbreviations>
 		<Abbreviation name="ACK">
@@ -575,7 +576,12 @@
 						<listItem>
 							<paragraph>
 								<run>
-									<text>SpW USB-Brick connected to GSS Host Unit</text>
+									<text>SpW USB-Brick (compliant with </text>
+								</run>
+								<hyperlink reference="RD3">
+								</hyperlink>
+								<run>
+									<text>) connected to GSS Host Unit </text>
 								</run>
 							</paragraph>
 						</listItem>
