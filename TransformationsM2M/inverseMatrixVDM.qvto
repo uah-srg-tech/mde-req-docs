@@ -1,11 +1,11 @@
-library inverseMatrixSVS;
+library inverseMatrixVDM;
 
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
 modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
 modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
-modeltype svs uses "http://srg.aut.uah.es/micobs/svm/svs";
+modeltype vdm uses "http://srg.aut.uah.es/micobs/svm/vdm";
 
-helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
+helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 	return object DDBody {
 		var notFoundItems : OrderedSet(VTraceableDocumentAbstractItem);
 		bodyContent += object DBasicTable {
@@ -19,7 +19,7 @@ helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 						paragraphContent += object DRun {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
-								content := "SSS Item";
+								content := "SRS Item";
 							};
 						};
 					};
@@ -30,7 +30,7 @@ helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 						paragraphContent += object DRun {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
-								content := "SSS document";
+								content := "SRS document";
 							};
 						};
 					};
@@ -41,7 +41,7 @@ helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 						paragraphContent += object DRun {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
-								content := "SRS Item";
+								content := "SVS Test Case";
 							};
 						};
 					};
@@ -159,7 +159,7 @@ helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 							paragraphContent += object DRun {
 								bold := DRunAttributes::TRUE;
 								text := object DText {
-									content := "SSS Item";
+									content := "SRS Item";
 								};
 							};
 						};
@@ -169,7 +169,7 @@ helper svs::VSVSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 							paragraphContent += object DRun {
 								bold := DRunAttributes::TRUE;
 								text := object DText {
-									content := "SSS document";
+									content := "SRS document";
 								};
 							};
 						};

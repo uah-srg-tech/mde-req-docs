@@ -1,4 +1,4 @@
-import inverseMatrixSRS;
+import inverseMatrixTDM;
 import docptl2doc;
 
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";

@@ -1,4 +1,4 @@
-import inverseMatrixSVS;
+import inverseMatrixVDM;
 import docptl2doc;
 
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
@@ -410,7 +410,7 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 						paragraphContent += object DRun {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
-								content := "SRS Item";
+								content := "SVS Test Case";
 							};
 						};
 					};
@@ -421,7 +421,7 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 						paragraphContent += object DRun {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
-								content := "SSS document";
+								content := "SRS document";
 							};
 						};
 					};
@@ -432,7 +432,7 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 						paragraphContent += object DRun {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
-								content := "SSS Item";
+								content := "SRS Item";
 							};
 						};
 					};

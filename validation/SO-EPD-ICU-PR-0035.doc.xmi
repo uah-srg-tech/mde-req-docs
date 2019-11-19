@@ -4361,21 +4361,21 @@
               <cells width="59">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SRS Item"/>
+                    <text content="SVS Test Case"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
               <cells width="26">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SSS document"/>
+                    <text content="SRS document"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
               <cells width="15">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SSS Item"/>
+                    <text content="SRS Item"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
@@ -5590,21 +5590,21 @@
               <cells width="15">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SSS Item"/>
+                    <text content="SRS Item"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
               <cells width="26">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SSS document"/>
+                    <text content="SRS document"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
               <cells width="59">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SRS Item"/>
+                    <text content="SVS Test Case"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
@@ -6386,14 +6386,14 @@
               <cells width="50">
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SSS Item"/>
+                    <text content="SRS Item"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
               <cells>
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="SSS document"/>
+                    <text content="SRS document"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>

@@ -1,11 +1,10 @@
-library inverseMatrixSRS;
+library inverseMatrixTDM;
 
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
 modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
 modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
-modeltype srs uses "http://srg.aut.uah.es/micobs/svm/srs";
 
-helper srs::VSRSDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
+helper tdm::VTraceableDocument::GenerateInverseTraceabilityMatrix() : doc::DDBody {
 	return object DDBody {
 		var notFoundItems : OrderedSet(VTraceableDocumentAbstractItem);
 		bodyContent += object DBasicTable {
