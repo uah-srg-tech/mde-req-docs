@@ -1,0 +1,315 @@
+import docptl2doc;
+
+modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
+modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype sss uses "http://srg.aut.uah.es/micobs/svm/sss";
+modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
+
+transformation generateDoc(in input : sss, out output : doc);
+
+main() {
+	input.objects()![sss::VSSSDocument]->map GenerateDoc();
+}
+
+mapping sss::VSSSDocument::GenerateDoc() : doc::DDocument {
+	result.name := self.name;
+	result.id := self.id;
+	result.issue := self.issue;
+	result.revision := self.revision;
+	result.date := self.date;
+	
+	result.section += self.introductionSection.map GenerateIntroductionSection();
+	result.section += self.applicableDocumentsSection.map GenerateApplicableDocumentsSection();
+	result.section += self.referenceDocumentsSection.map GenerateReferenceDocumentsSection();
+	result.section += self.termsDefinitionsAbbreviationsSection.map GenerateTDASection();
+	result.section += self.generalDescriptionSection.map GenerateGeneralDescriptionSection();
+	result.section += self.specificRequirementsSection.map GenerateSpecificRequirementsSection();
+	result.section += self.verificationValidationIntegrationSection.map GenerateVerificationValidationIntegrationRequirementsSection();
+	result.section += self.systemModelsSection.map GenerateSystemModelsSection();
+
+}
+
+mapping sss::VSSSIntroduction::GenerateIntroductionSection() : doc::DDSection {
+	result.name := "Introduction";
+	
+	result.sectionContent += self.sssInstatiableSubsections.map GenerateInstatiableSubsection();
+}
+
+mapping sss::VSSSApplicableDocuments::GenerateApplicableDocumentsSection() : doc::DDSection {
+	result.name := "Applicable Documents";
+	
+	result.sectionContent := self.applicableDocuments.map GenerateADRDs();
+}
+
+mapping sss::VSSSReferenceDocuments::GenerateReferenceDocumentsSection() : doc::DDSection {
+	result.name := "Reference Documents";
+	
+	result.sectionContent := self.referenceDocuments.map GenerateADRDs();
+}
+
+mapping sss::VSSSTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSection {
+	result.name := "Terms, Definitions and Abbreviations";
+	
+	result.sectionContent := object DDBody {
+		var i : Integer := 1;
+		while(i <= self.terms->size()) {
+			bodyContent += self.terms->at(i).GenerateTDA();
+			i := i + 1;
+		};
+		
+		i := 1;
+		while(i <= self.definitions->size()) {
+			bodyContent += self.definitions->at(i).GenerateTDA();
+			i := i + 1;
+		};
+		
+		i := 1;
+		while(i <= self.abbreviations->size()) {
+			bodyContent += self.abbreviations->at(i).GenerateTDA();
+			i := i + 1;
+		};
+	};
+}
+
+helper sss::VSSSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
+	return object DParagraph{
+		style := "TDA";
+		paragraphContent += object DRun {
+			text := object DText {
+				content := self.name;
+			};
+		};
+		var description := self.description.map GenerateRun();
+		description.tab := object DTab {};
+		paragraphContent += description;
+	};
+}
+	
+mapping sss::VSSSGeneralDescription::GenerateGeneralDescriptionSection() : doc::DDSection {
+	result.name := "Software Overview";
+	
+	result.sectionContent += self.productPerspective.map GenerateFixedSection("Product Perspective");
+	result.sectionContent += self.generalCapabilities.map GenerateFixedSection("General Capabilities");
+	result.sectionContent += self.generalConstraints.map GenerateFixedSection("General Constraints");
+	result.sectionContent += self.operationalEnvironment.map GenerateFixedSection("Operational Environment");
+	result.sectionContent += self.assumptionsDependencies.map GenerateFixedSection("Assumptions and Dependencies");
+}
+
+mapping sss::VSSSFixedSection::GenerateFixedSection(in sectionName : String) : doc::DDSection {
+	result.name := sectionName;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.sssInstatiableSubsections->size()) {
+	result.sectionContent += self.sssInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	};
+}
+
+mapping sss::VSSSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
+	result.name := self.name;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.sssInstatiableSubsections->size()) {
+	result.sectionContent += self.sssInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	};
+}
+
+mapping sss::VSSSSpecificRequirements::GenerateSpecificRequirementsSection() : doc::DDSection {
+	result.name := "Specific Requirements";
+	
+	result.sectionContent += self.sectionDescription.map GenerateBody();
+	
+	result.sectionContent += self.general.GenerateRequirementSubsection("General");
+	result.sectionContent += self.capabilities.GenerateRequirementSubsection("Capabilities");
+	result.sectionContent += self.systemInterface.GenerateRequirementSubsection("System Interface");
+	result.sectionContent += self.adaptationMissionization.GenerateRequirementSubsection("Adaptation and Missionization");
+	result.sectionContent += self.computerResource.GenerateRequirementSubsection("Computer Resource");
+	result.sectionContent += self.security.GenerateRequirementSubsection("Security");
+	result.sectionContent += self.safety.GenerateRequirementSubsection("Safety");
+	result.sectionContent += self.reliabilityAvailability.GenerateRequirementSubsection("Reliability and Availability");
+	result.sectionContent += self.quality.GenerateRequirementSubsection("Quality");
+	result.sectionContent += self.design.GenerateRequirementSubsection("Design");
+	result.sectionContent += self.softwareOperations.GenerateRequirementSubsection("Software Operations");
+	result.sectionContent += self.softwareMaintenance.GenerateRequirementSubsection("Software Maintenance");
+	result.sectionContent += self.systemSoftwareObservability.GenerateRequirementSubsection("System Software Observability");
+}
+
+mapping sss::VSSSVerificationValidationIntegrationRequirements::GenerateVerificationValidationIntegrationRequirementsSection() : doc::DDSection {
+	result.name := "Specific Requirements";
+	
+	result.sectionContent += self.sectionDescription.map GenerateBody();
+	
+	result.sectionContent += self.verificationValidationProcess.GenerateRequirementSubsection("Verification and Validation Process");
+	result.sectionContent += self.validationApproach.GenerateRequirementSubsection("Validation Approach");
+	result.sectionContent += self.validation.GenerateRequirementSubsection("Validation");
+	result.sectionContent += self.verification.GenerateRequirementSubsection("Verification");
+}
+
+helper sss::VSSSAbstractRequirementSection::GenerateRequirementSubsection(in reqSectionName : String) : doc::DDSection {
+	return object DDSection {
+		name := reqSectionName;
+		
+		var body := object DDBody {}; 
+		var i : Integer := 1;
+		while(i <= self.sectionDescription.bodyContent->size()) {
+			body.bodyContent += self.sectionDescription.bodyContent->at(i).map GenerateBodyContent();
+			i := i + 1;
+		};
+		i := 1;
+		while(i <= self.sssItems->size()) {
+			body.bodyContent += self.sssItems->at(i).GenerateReqItem();
+			i := i + 1;
+		};
+		sectionContent := body;
+		
+		sectionContent += self.sssRequirementSubsections.GenerateReqSubsection();
+	};
+}
+
+helper sss::VSSSInstantiableRequirementSection::GenerateReqSubsection() : doc::DDSectionContent {
+	return object DDSection {
+		name := self.name;
+		
+		var body := object DDBody {}; 
+		var i : Integer := 1;
+		while(i <= self.sectionDescription.bodyContent->size()) {
+			body.bodyContent += self.sectionDescription.bodyContent->at(i).map GenerateBodyContent();
+			i := i + 1;
+		};
+		i := 1;
+		while(i <= self.sssItems->size()) {
+			body.bodyContent += self.sssItems->at(i).GenerateReqItem();
+			i := i + 1;
+		};
+		sectionContent := body;
+	};
+}
+
+helper sss::VSSSDocumentItem::GenerateReqItem() : OrderedSet(doctpl::DBodyContent) {
+	var bodyContents := object OrderedSet(DBodyContent) {};
+	
+	bodyContents += self.GenerateReqItemTable();
+	var i : Integer := 1;
+	while(i <= self.extendedDescription.bodyContent->size()) {
+		bodyContents += self.extendedDescription.bodyContent.map GenerateBodyContent();
+		i := i + 1;
+	};
+	return bodyContents;
+}
+
+helper sss::VSSSDocumentItem::GenerateReqItemTable() : doctpl::DBodyContent {
+	return object DBasicTable {
+		style := "TableGridFirstRowColummShadow";
+		width := "100";
+		rows += object DRow {
+			cells += object DCell {
+				width := "20";
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := DRunAttributes::TRUE;
+						text := object DText {
+							content := "Name";
+						};
+					};
+				};
+			};
+			cells += object DCell {
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := DRunAttributes::TRUE;
+						text := object DText {
+							content := self.name;
+						};
+					};
+				};
+			};
+		};
+		rows += object DRow {
+			cells += object DCell {
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := DRunAttributes::TRUE;
+						text := object DText {
+							content := "Description";
+						};
+					};
+				};
+			};
+			cells += object DCell {
+				var i : Integer := 1;
+				while(i <= self.description.bodyContent->size()) {
+					bodyContent += self.description.bodyContent.map GenerateBodyContent();
+					i := i + 1;
+				};
+			};
+		};
+		rows += object DRow {
+			cells += object DCell {
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := DRunAttributes::TRUE;
+						text := object DText {
+							content := "Validation Method";
+						};
+					};
+				};
+			};
+			cells += object DCell {
+				bodyContent += object DParagraph {
+					paragraphContent += object DRun {
+						bold := DRunAttributes::TRUE;
+						text := object DText {
+							content := self.validationMethod.toString();
+						};
+					};
+				};
+			};
+		};
+		if(self.parentItem->size() <> 0) {
+			rows += object DRow {
+				cells += object DCell {
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "Parent";
+							};
+						};
+					};
+				};
+				cells += object DCell {
+					var parentText : String;
+					var i : Integer := 1;
+					while(i <= self.parentItem->size()) {
+						if(parentText.size() = 0) {
+							parentText := self.parentItem->at(i).name;
+						} else {
+							parentText := parentText + (", ") + self.parentItem->at(i).name;
+						};
+						i := i + 1;
+					};
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := parentText;
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+}
+
+mapping sss::VSSSSystemModels::GenerateSystemModelsSection() : doc::DDSection {
+	result.name := "Logical Models";
+	
+	result.sectionContent += self.systemModels.GenerateSystemModel();
+}
+
+helper sss::VSSSSystemModel::GenerateSystemModel() : doc::DDSectionContent {
+	return object DDSection {};
+}

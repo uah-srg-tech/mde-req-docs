@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<micobs.doc:DDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:micobs.doc="http://srg.aut.uah.es/micobs/doc/doc" xmlns:micobs.doctpl="http://srg.aut.uah.es/micobs/doctpl/doctpl" name="EID-A" id="SOL-EST-RCD-0050" issue="&quot;5&quot;" revision="&quot;0&quot;" date="16/03/2015">
+  <section name="Introduction">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="History">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The Solar Orbiter mission has its origins in a proposal called &quot;Messenger&quot; that was submitted by Richter et al. in 1982 in response to an ESA call for mission ideas. At the meeting &quot;Crossroads for European Solar and Heliospheric Physics&quot; held in Tenerife in March 1998, the Heliophysics community recommended to: &quot;launch an ESA Solar Orbiter as ESA's next flexible mission, with possible international participation, for launch around 2007.&quot; The kick-off meeting for a preassessment study of the &quot;ESA Solar Orbiter&quot; concept was held at ESTEC on 25 March 1999."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Solar Orbiter was subsequently proposed in 2000 by E. Marsch et al. and was selected by the Science Programme Committee (SPC) in October 2000 as a Flexi-mission for launch after BepiColombo, in the 2008- 2013 timeframe. A number of internal and industrial studies were then carried out, including parallel system level Assessment Studies performed in industry between April and December 2004. At its 107th meeting in June 2004 the SPC confirmed Solar Orbiter's place in the Horizon 2000+ programme with the goal of a launch in October 2013 and no later than May 2015."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Work continued on the mission and payload definition throughout 2005 and 2006 and at its meeting in February 2007, SPC instructed the Executive to find ways to implement Solar Orbiter within a financial envelope of 300 Mâ‚¬ (at 2006 EC), while keeping a realistic contingency margin. In response to this request, a Joint Science and Technology Definition Team (JSTDT) comprising scientists and engineers appointed by ESA and NASA, studied the benefits to be gained by combining ESA's Solar Orbiter mission and NASA's Solar Sentinels into a joint programme."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This study led to the release of an ESA Announcement of Opportunity (AO) for the Solar Orbiter Payload on 18 September 2007 and of a NASA Small Explorer Focused Opportunity for Solar Orbiter (SMEX/FOSO) AO on 22 October 2007. In total, 14 proposals were received by ESA in response to the Payload AO."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The final report of the Payload Review Committee (PRC), giving a recommended payload for selection, was issued on 24 May 2008. Meanwhile, at its meeting in November 2007, SPC gave approval to start an 18-month industrial Phase B1 study lead by Astrium Ltd. (UK) which was kicked off in March 2008."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="A major change in the progress of Solar Orbiter occurred in November 2008, when the SPC decided to integrate Solar Orbiter into the first planning cycle of Cosmic Vision 2015-25 as an M mission candidate for the first launch opportunity in 2017. In addition, in view of NASA's high prioritization of Solar Probe Plus (SPP) in its Living With a Star programme, and the strong science synergies between Solar Orbiter and SPP, ESA called for an independent review of the PRC's recommended payload, now in the context of a joint Solar Orbiter-SPP scientific programme. The joint ESA-NASA review panel confirmed the validity of the recommended payload in its report of March 2009. As a result, the instrument selections, as recommended by the PRC in 2008 were formally announced on 20 March 2009. In parallel, NASA announced the results of the FOSO selection, and selected 2 instruments and portions of 2 instruments to be included in the Solar Orbiter payload. A Design Status Review, being the final review of the industrial Phase B1 study conducted by Astrium Ltd. (UK) as Prime Contractor, was held in ESTEC in June 2009."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="At its 128th meeting on 17th &amp;amp; 18th February 2010, ESA's Science Programme Committee made a further programmatic change by endorsing a &quot;fast track&quot; approach for Solar Orbiter outlined in ESA/SPC(2010)3, rev. 1. This approach is based on the scientific viability of raising the minimum perihelion to 0.28 AU and on making maximum re-use of BepiColombo technologies and units. It calls for the start of a full spacecraft implementation (Phases B2/C/D) in early 2011, with mission confirmation by the SPC in Q2 2011."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Purpose">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The main purpose of the set of Experiment Interface Documents (one EID-A, common to all ten instruments and ten EID-Bs, one for each instrument) is to ensure that:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="The Principal Investigators (PIs) design, procure, build, qualify, test and calibrate their instruments in line with the technical and programmatic requirements and constraints defined in the EID-A."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="The Solar Orbiter Prime Contractor designs, builds and verifies the spacecraft such that the instruments can be successfully integrated and tested into the system, in line with the instrument interface definitions and resources provided in the EID-Bs."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="The spacecraft can be successfully launched and operated to achieve the scientific objectives of the Solar Orbiter mission in line with the instrument driven requirements detailed in the EID-A."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The EID-A, together with its Normative Documents, defines the interface, the design, the operational, the verification, the management and the programmatic requirements applicable to each instrument. The EID-A also specifies the spacecraft performance requirements and the resources allocated to each instrument. Specific instrument driven requirements applicable to the spacecraft, namely EMC, cleanliness and pointing requirements are also specified in the EID-A. D: Each EID-B, in response to the instrument technical requirements of the EID-A, specifies in detail the instrument interface information."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Finally each EID-B defines the specific programmatic agreements between the ESA Solar Orbiter Project Office and each Solar Orbiter Principal Investigator. Once the EID-A and the EID-Bs have reached a satisfactory level of maturity, they will be placed under formal configuration and change control; the Prime Contractor will become the book-captain for them."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Applicable Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="NR-27">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="NR-27"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Solar Orbiter Operations Requirements Document. SO-ESC-RS-05001 issue &quot;1&quot; rev &quot;8&quot;"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="NR-28">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="NR-28"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Solar Orbiter TM/T- and Packet Structure ICD. SOL-S-ASTR-TN-0079 issue &quot;7&quot;"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Reference Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="IR-06">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="IR-06"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Solar Orbiter Science Requirements Document. SOL-EST-RS-1858 issue &quot;2&quot; rev &quot;0&quot;"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Terms, Definitions and Abbreviations">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="EPD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Energetic Particle Detector"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="EPT"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Electron and Proton Telescope"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="FFT"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Full Functional Test"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="FM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Flight Model"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="GSE"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Ground Support Equipment"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="HET"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="High Energy Telescope"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="LISN"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Line Impedance Stabilization Network"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="QM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Qualification Model"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="S/C"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Spacecraft"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SpW"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Space Wire"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="STEP"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SupraThermal Electrons and Protons"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TBC"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="To Be Confirmed"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TBD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="To Be Determined"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TC/TM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Telecommand / Telemetry"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Telemetry"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Software Overview">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Product Perspective">
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Mission Objectives">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Solar Orbiter's mission is to address the central question of Heliophysics: How does the Sun create and control the heliosphere? This, in turn, is a fundamental part of the second science question of ESA's Cosmic Vision programme: &quot;How does the solar system work?&quot;. Solar Orbiter is specifically designed to identify the origins and causes of the solar wind, the heliospheric magnetic field, the solar energetic particles, the transient interplanetary disturbances, and the Sun's magnetic field itself."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Over the past two decades, an international effort to understand the Sun and heliosphere has been undertaken with an array of spacecraft carrying out both remote observations at visible, UV, and X-ray wavelengths, as well as in-situ observations of interplanetary plasmas, particles, and fields. Combined and coordinated observations from missions such as Ulysses, Yohkoh, SOHO, TRACE, RHESSI, Hinode and STEREO have resulted in an enormous advance in our understanding of the Sun and heliosphere and have proven that critical progress in understanding the physics requires both remote and in-situ observations working together."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Although our vantage point at 1 AU is close by astrophysical measures, it has been long known that much of the crucial physics in the formation and activity of the heliosphere takes place much closer to the Sun and that by the time magnetic structures, shocks, energetic particles and solar wind pass by Earth they have already evolved and in many cases mixed so as to blur the signatures of their origin. Given the success of the missions cited above, it is clear that flying a spacecraft with a combined remote-sensing and in-situ payload into the inner solar system will critically advance our knowledge."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Solar Orbiter's scientific mission can be broken down into four top-level science objectives:"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DItemize">
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="How and where do the solar wind plasma and magnetic field originate in the corona?"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="How do solar transients drive heliospheric variability?"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="How do solar eruptions produce energetic particle radiation that fills the heliosphere?"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="How does the solar dynamo work and drive connections between the Sun and the heliosphere?"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Common to all of these questions is the requirement that Solar Orbiter make in-situ measurements of the solar wind plasma, fields, waves, and energetic particles close enough to the Sun that they are still relatively pristine and have not had their properties modified by dynamical evolution during their propagation. Solar Orbiter must also relate these in-situ measurements back to their source regions and structures on the Sun through simultaneous, high-resolution imaging and spectroscopic observations both in and out of the ecliptic plane."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The near-Sun part of the operational orbit will enable the spacecraft to approach the Sun as close as 0.28 AU during part of its orbit. The angular speed of a spacecraft at this distance approaches the rotation rate of the Sun, so that the remote sensing instruments will be able to observe a given point on the Sun's surface for many days."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="During the out-of-ecliptic part of the orbit, the spacecraft will reach higher solar latitudes (up to 34Âº close to the end of the mission), making detailed studies of the Sun's polar regions possible."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The ESA document &quot;Solar Orbiter Science Requirements Document&quot; "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.0/@bodyContent.0">
+              <run italics="true">
+                <text content="IR-06"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=", provides a more detailed discussion of the top scientific goals of the Solar Orbiter mission, their translation into specific scientific questions and derived basic scientific requirements. The document addresses also the scientific synergies between Solar Orbiter and NASA's Solar Probe Plus mission."/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General Capabilities"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General Constraints"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Operational Environment"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Assumptions and Dependencies"/>
+  </section>
+  <section name="Specific Requirements">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Lifetime Requirements">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-006"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that the instrument HW has a nominal life time of 7.1 years in space."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="A"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-1657"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Nominal life time starts at launch and finishes after VGAM-4, which defines the end of the nominal science mission phase."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-007"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that the overall instrument design is compatible with a shelf-life time of two years due to a possible launch delay from the nominal launch date."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="A"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-1659"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The PI should ensure that the overall instrument design is compatible with an extended lifetime of 10.2 years. This extended lifetime includes the nominal lifetime and ends after VGAM-6."/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Capabilities">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="System Interface">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Data Management Interface and Design">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-180"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that the instrument comply to the associated TM-/ TC-Packet Services specified as mandatory for the payload in "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.1/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-28"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-2757"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The TM-/ TC-Packet Services consist of a minimum subsets for each service, which is mandatory, as well as optional generic service-extensions. Global requirements about applicability and use of these subsets for the Solar Orbiter spacecraft are given "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.1/@bodyContent.0">
+              <run italics="true">
+                <text content="NR-28"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The mandatory services are as follows:"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DItemize">
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 1: Telecommand Verification Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 3: Housekeeping and Diagnostic Data Reporting Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 5: Event Reporting Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 6: Memory Management Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 9: Time Management Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 17: Test Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 20: Information Distribution Service"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+            <items>
+              <paragraph>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Service 21: Science Data Transfer"/>
+                </paragraphContent>
+              </paragraph>
+            </items>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Adaptation and Missionization">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Off-Line Operations">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-366"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall comply with the relevant requirements specified in the Solar Orbiter Operation Requirements Document "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-27"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content=" on Spacecraft Control (Section 2.1) and referenced documents therein."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-333"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Computer Resource">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Security">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Safety">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Instrument Autonomy and FDIR">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-407"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall comply with the requirements regarding FDIR and Onboard Reconfiguration Handling as specified in the section 2.2.2 and section 2.2.3 of "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-27"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3074"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-261"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall implement a connection test service (Service 17) according to the specifications given chapter 3 of "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-27"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3076"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-264"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that anomaly Instrument reports, if any, are generated only once per anomaly occurrence even if the anomaly is detected during successive cycles."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3038"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Reliability and Availability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Quality">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Design">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Operations">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Software Design and Interface">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-406"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall comply with the requirements regarding Onboard Processors, Software and Memory Management as specified in section 2.3.2 of "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-27"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3079"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintenance">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="System Software Observability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+  </section>
+  <section name="Specific Requirements">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Verification and Validation Process">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Validation Approach">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Validation">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Verification">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+  </section>
+  <section name="Logical Models"/>
+</micobs.doc:DDocument>
