@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<micobs.doc:DDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:micobs.doc="http://srg.aut.uah.es/micobs/doc/doc" xmlns:micobs.doctpl="http://srg.aut.uah.es/micobs/doctpl/doctpl" name="SRG-EPD ICUSW Project" id="SRG-EPD-SSS-001" issue="&quot;1&quot;" revision="&quot;0&quot;" date="12/04/2019">
+  <section name="Introduction">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Purpose">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The Software System Specification defines and describes the specification of the EPD ICU Software of the SRG Mission."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scope">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This document applies to the EPD ICU Software of the SRG Mission. It does not provide information for the Ground Support Software (GSS), which is maintained separately as part of the Electronic Ground Support Equipment (EGSE). This document supplies information applicable to the Software System Specification."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Applicable Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Software. ECSS-E-ST-40C. 06/03/2009"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD2">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD2"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Software Product Assurance. ECSS-Q-ST-80C. 06/03/2009"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD3">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD3"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SRG-EPD Software Product Assurance Plan. SRG-EPD-SPA-0001"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD4">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD4"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SRG-EPD Software Development Plan. SRG-EPD-SDP-0001"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Reference Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book. SO-EPD-PO-IF-0001. 11/2000"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD2">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD2"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Ground systems and operations - Telemetry and telecommand packet utilization. ECSS-E-70-41C. 15/04/2016"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD3">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD3"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SpaceWire - Links, nodes, routers and networks. ECSS-E-ST-50-12A. 24/01/2003"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD4">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD4"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SpaceWire - CCSDS packet transfer protocol. ECSS-E-ST-50-53C"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD5">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD5"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Space engineering. Electric and electronic. ECSS-E-20B issue &quot;8&quot; rev &quot;0&quot;. 03/2007"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD6">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD6"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Spacecraft discrete interfaces. ECSS-E-ST-50-14C"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Terms, Definitions and Abbreviations">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Applicable Document"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="ASW"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Application Software"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="BSW"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Boot Software"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="C&amp;amp;DH"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Control and Data Handling"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="CDPU"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Common Data Processing Unit"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="EGSE"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Electrical Ground Support Equipment"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="EPD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Energetic Particle Detector"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="GSS"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Ground Support System"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="ICU"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Instrument Control Unit"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="IRQ"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Interrupt Request"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="FPGA"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Field Programmable Gate Array"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="LVPS"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Low Voltage Power Supply"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="OBDH"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="On-Board Data Handling"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RAM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Random Access Memory"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Reference Document"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="S/C"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Spacecraft"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SDRAM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Synchronous Dynamic RAM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SVVP"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Field Programmable Gate Array"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SW"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Software Verification and Validation Plan"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TBC"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="To Be Confirmed"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TC"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Telecommand"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Telemetry"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Software Overview">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Product Perspective">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The SRG Mission has been conceived to study the effect of high energy particles in TBD environment. The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring TBD particles. SRG EPD ICU Software purpose is to provide support to EPD sensors."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General Capabilities">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="The main capabilities of the SRG EPD ICU Software are the following:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To collect scientific data from the instruments periodically."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To accumulate high-cadence science data from the sensors to specified lower time resolution packages."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To collect housekeeping data from the four units."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To time tag the data if necessary."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To perform lossless compression of the data if necessary."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To format the data for transmission by the S/C."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To accept and syntactically check TC from the S/C."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To deliver these commands to the individual sensors for execution."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To accept and syntactica"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To deliver these commands to the individual sensors for execution."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To accept from the ground and distribute to the sensors tables and software."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="To handle the burst mode."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General Constraints">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The read-only memory available for the storage of SRG EPD ICU Boot Software will be TBD MBytes."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The non-volatile memory available for the storage of SRG EPD ICU persistent data and Application Software will be TBD MBytes."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="The memory available to SRG EPD ICU Software for sensor science storage will be limited to TBD MBytes."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Operational Environment">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Figure 1 illustrates the EPD Instrument Control Unit operational environment."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="ICU IFs" caption="ICU Interfaces" referenceFile="SSS_images/icu_ifs.png" width="&quot;790&quot;" height="&quot;512&quot;"/>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="EPD's ICU provides the interface between the SRG Spacecraft C&amp;amp;DH system and the EPD sensors. All information transfer between the EPD's sensors and the Spacecraft/Ground flows through the ICU, including telemetry, commands and status. The EPD's sensors communicate with the EPD's ICU over a dedicated serial interface."/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Sensors Interface">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EPD ICU Software will send/receive telecommand/telemetry to/from the sensors. The telemetry information includes both scientific and housekeeping data. The telecommand information includes sensors tables, sensor software and ground commands delivered from the S/C to the EPD ICU."/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="S/C Interface">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EPD ICU is a remote terminal on the spacecraft SpaceWire link. The implementation will be compliant up to the RD2 and RD3. Two separate SpaceWire links in a hot redundant configuration will be employed. SpaceWire is the command and data interface with the S/C."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EPD command messages are contained in CCSDS telecommand packets. EPD CDPU strips off the CCSDS packet headers and analyses the destination identifier. If the identifier is associated to the ICU, the telecommand is processed directly by the ICU. If the identifier is associated to any sensor, the ICU forward the command to the specific sensor. Command responses from the sensor are sent to the ICU that transmits them to the S/C in CCSDS telemetry packets format. Command responses generated by the ICU itself are also CCSDS formatted and transmitted to the S/C."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Transfer of data and command response from CDPU to the S/C shall take place according to the CCSDS recommendations defined in "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.0/@bodyContent.0">
+              <run italics="true">
+                <text content="RD1"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=" and "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.2/@sectionContent.1/@bodyContent.0">
+              <run italics="true">
+                <text content="RD2"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="."/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Assumptions and Dependencies">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="N/A"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Specific Requirements">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="In the following paragraphs a lists of software specific requirements will be included. Every single requirement has the following format:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DBasicTable" name="SpecificRequirementsTable" width="&quot;100&quot;">
+        <rows>
+          <cells width="&quot;20&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Name"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+          <cells width="&quot;80&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SSS-ICUSW XX-YYYY"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+        </rows>
+        <rows>
+          <cells width="&quot;20&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Description"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+          <cells>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+        </rows>
+        <rows>
+          <cells width="&quot;20&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Validation"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+          <cells>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Validation Approach"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+        </rows>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SSS-ICUSW XX-YYYY: "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Identifies the specification requirement. XX is the type of specification requirement and YYYY is the number used to identify the requirement. Types of specification requirements are:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="GE. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="General"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="CA. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Capabilities"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="IF. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="System Interface"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="AM. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Adaptation and missionization"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="CR."/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Computer resource requirements"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="SE. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Security"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="SA. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Safety"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="RA. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Reliability and availability"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="QU. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Quality"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="DC. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Design and Constraints"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="SO. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Software Operations"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="SM. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Software Maintenance"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="OB. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="System and Software observability"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Examples:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="SSS-ICUSW CA-0025"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="SSS-ICUSW SO-0047"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="Description: "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="is the text that describes the requirement."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="Validation approach: "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="establishes how the requirement is verified:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="R. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Review "/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="A. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Analysis"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="I. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Inspection"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="T. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Test"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="S. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Similarity"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="For each requirement type, subsections are provided when requirements apply only to boot software or to application software or they are common."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Other subsections or extended descriptions can be also added in order to better organize and clarify the requirements."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Extended descriptions and clarifications will be added using "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="D:"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Example:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="D: The ICU SW shall handle the telecommand and telemetry according to the following requirements:"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-GE-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The ICU SW Development Process shall be compliant to a tailored version of the software standard "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                  <run italics="true">
+                    <text content="AD1"/>
+                  </run>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Capabilities">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-CA-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The ICU-SW shall accept telecommands within an interval of 1 second after its reception."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="A"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="System Interface">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-IF-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The ICUSW shall support a simplified version of PUS service 1: Telecommand verification service."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="T"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Adaptation and Missionization">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Computer Resource">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Security">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Safety">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Reliability and Availability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Quality">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Design">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Operations">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintenance">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="System Software Observability">
+      <sectionContent xsi:type="micobs.doc:DDBody"/>
+    </sectionContent>
+  </section>
+  <section name="Specific Requirements">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="In the following paragraphs a lists of verification, validation and system integration requirements will be included. Every single requirement has the following format:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DBasicTable" name="SpecificRequirementsTable" width="&quot;100&quot;">
+        <rows>
+          <cells width="&quot;20&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Name"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+          <cells width="&quot;80&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SSS-ICUSW XX-YYYY"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+        </rows>
+        <rows>
+          <cells width="&quot;20&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Description"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+          <cells>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+        </rows>
+        <rows>
+          <cells width="&quot;20&quot;" shadow="D8D8D8">
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Validation"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+          <cells>
+            <bodyContent xsi:type="micobs.doctpl:DParagraph">
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Validation Approach"/>
+              </paragraphContent>
+            </bodyContent>
+          </cells>
+        </rows>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SSS-ICUSW XX-YYYY: "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Identifies the specification requirement. XX is the type of specification requirement and YYYY is the number used to identify the requirement. Types of specification requirements are:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="VV. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Verification and validation process"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="VA. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Validation approach"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="VR. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Validation requirement"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="VE. "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Verification approach"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Examples:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DItemize">
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="SSS-ICUSW CA-0025"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+        <items>
+          <paragraph>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="SSS-ICUSW SO-0047"/>
+            </paragraphContent>
+          </paragraph>
+        </items>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="Description: "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="is the text that describes the requirement."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="Validation: "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Validation of these requirements will be by Review ("/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="R"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=")."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="For each requirement type, subsections are provided when requirements apply only to boot software or to application software or they are common."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Other subsections or extended descriptions can be also added in order to better organize and clarify the requirements."/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Extended descriptions and clarifications will be added using "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="D:"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Example:"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="D: The ICU SW shall handle the telecommand and telemetry according to the following requirements:"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Verification and Validation Process">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VV-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The ICU Software verification and validation activities shall be defined in a Software Validation and Verification Plan according to the software standard "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                  <run italics="true">
+                    <text content="ECSS-E-ST-40C"/>
+                  </run>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Validation Approach">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VA-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The SRG EPD ICU Software specification specific requirements shall be validated primarily by test or analysis, being the analysis the required method when the specific requirement imply the fulfillment of temporal restrictions."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VA-020"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The unit and integration tests of the SRG EPD ICU Software shall be executed primarily on ICU engineering models or simulators of the ICU processor, so the object code behavior of the item under test can be tested."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VA-030"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The validation tests of the SRG EPD ICU Software shall be executed primarily on the ICU EQM models, using emulators to replace the sensors that are connected to the ICU EQM interfaces. For fault tolerance tests, the use fault injection environments based on ICU emulators or simulators shall be also accepted under justification."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VA-040"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The qualification tests of the SRG EPD ICU Software shall be executed primarily on the ICU EQM models, using qualification models of the sensors, and an S/C emulator. For fault tolerance tests, the use fault injection environments based on ICU emulators or simulators shall be also accepted under justification."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VA-050"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The acceptance tests of the SRG EPD ICU Software shall be executed on the ICU PFM models, using PFM model of the sensors, and the PFM S/C."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Validation">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VR-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="The SRG EPD ICU Software specification specific requirement shall include a validation method from one of the following methods: Review, Analysis, Inspection, Test, Similarity"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Verification">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+          <rows>
+            <cells width="20">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Name"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SSS-ICUSW-VE-010"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Description"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Verification of the SRG EPD ICU Software shall include the following traceability matrices: "/>
+                </paragraphContent>
+              </bodyContent>
+              <bodyContent xsi:type="micobs.doctpl:DItemize">
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="specification requirements to software requirements"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="software requirements to software validation specification"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="software validation specification to software validation reports"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="software items under configuration to software unit/integration test"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="software unit/integration test to software unit/integration reports"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="TM/TC interface control document to software validation specification"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+                <items>
+                  <paragraph>
+                    <paragraphContent xsi:type="micobs.doctpl:DRun">
+                      <text content="FDIR EPD system requirement to software validation specification"/>
+                    </paragraphContent>
+                  </paragraph>
+                </items>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Validation Method"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="R"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Logical Models"/>
+</micobs.doc:DDocument>

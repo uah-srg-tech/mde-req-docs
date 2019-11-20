@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<micobs.doc:DDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:micobs.doc="http://srg.aut.uah.es/micobs/doc/doc" xmlns:micobs.doctpl="http://srg.aut.uah.es/micobs/doctpl/doctpl" name="SVS Sample" id="SVS-001" issue="&quot;1&quot;" revision="&quot;0&quot;" date="06/06/2019">
+  <section name="Introduction">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Purpose">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Introduction Purpose text"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Applicable Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SRG-EPD Software System Specification. SRG-EPD-SSS-0001"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Reference Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="SRG-EPD Software System Specification. SRG-EPD-SSS-0001"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Terms, Definitions and Abbreviations">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="TDA">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <tab/>
+          <text content="Applicable Document"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Software Overview">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Software Overview text"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Task Identification">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Task Criteria"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Features to be Tested"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Features not to be Tested"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Test Pass Fail Criteria"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Items that can not be Validated"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Manually Automatic Generated Code"/>
+  </section>
+  <section name="Testing Specification Design">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Sample design 1">
+      <sectionContent xsi:type="micobs.doc:DDSection" name="General"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Features to be Tested"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Approach Refinements"/>
+    </sectionContent>
+  </section>
+  <section name="Test Cases">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Sample case 1">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Validating Items"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="SSS-ICUSW-GE-010"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Test Procedures">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="General"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Sample Procedure 1">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Test Cases"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Sample case 1"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Procedure Steps">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Step &quot;0&quot;: Sample test connection 0"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Send Test connection"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Receive TM 1.1, Test connection report and TM 1.7"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Step &quot;1&quot;: Sample test connection 1"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Send Test connection"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Sample Procedure 2">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Test Cases"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Sample case 1"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Procedure Steps">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Step &quot;0&quot;: Sample test connection 2"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Send Test connection"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Receive TM 1.1 2, Test connection report 2 and TM 1.7 2"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Step &quot;1&quot;: Sample test connection 3"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Send Test connection"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Analysis, Inspection and Review"/>
+  <section name="Test Platform Requirements"/>
+  <section name="Additional Information">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Traceability Matrices">
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Direct Traceability Matrix">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
+            <rows>
+              <cells width="59">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SVS Test Case"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells width="26">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SRS document"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells width="15">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SRS Item"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="Sample case 1"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-GE-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Inverse Traceability Matrix">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
+            <rows>
+              <cells width="15">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SRS Item"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells width="26">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SRS document"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells width="59">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SVS Test Case"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-GE-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="Sample case 1"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Items Not Found"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SRS Item"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="SRS document"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-CA-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-IF-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VV-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VA-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VA-020"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VA-030"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VA-040"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VA-050"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VR-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells width="50">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SSS-ICUSW-VE-010"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="SRG-EPD-SSS-001"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+</micobs.doc:DDocument>

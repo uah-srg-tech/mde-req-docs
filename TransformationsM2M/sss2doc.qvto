@@ -138,7 +138,7 @@ mapping sss::VSSSSpecificRequirements::GenerateSpecificRequirementsSection() : d
 }
 
 mapping sss::VSSSVerificationValidationIntegrationRequirements::GenerateVerificationValidationIntegrationRequirementsSection() : doc::DDSection {
-	result.name := "Specific Requirements";
+	result.name := "Verification, Validation and Integration Requirements";
 	
 	result.sectionContent += self.sectionDescription.map GenerateBody();
 	
