@@ -50,6 +50,46 @@
 	<TestingSpecificationDesign>
 		<General>
 		</General>
+		<Interfaces>
+			<Interface name="DummyIF 1">
+				<run>
+					<text>This is a dummy IF</text>
+				</run>
+			</Interface>
+			<Interface name="DummyIF 2">
+				<run>
+					<text>This is another dummy IF</text>
+				</run>
+			</Interface>
+			<Interface name="DummyIF 3">
+				<run>
+					<text>This is another dummy IF</text>
+				</run>
+			</Interface>
+		</Interfaces>
+		<Scenarios>
+			<Scenario name="Scenario Dummy 1">
+				<Interface ref="DummyIF 1"/>
+				<Interface ref="DummyIF 3"/>
+				<body>
+					<paragraph>
+						<run>
+							<text>This is a dummy Scenario</text>
+						</run>
+					</paragraph>
+				</body>
+			</Scenario>
+			<Scenario name="Scenario Dummy 2">
+				<Interface ref="DummyIF 2"/>
+				<body>
+					<paragraph>
+						<run>
+							<text>This is another dummy Scenario</text>
+						</run>
+					</paragraph>
+				</body>
+			</Scenario>
+		</Scenarios>
 		<TestDesign name="Sample design 1">
 			<General>
 			</General>
@@ -88,38 +128,24 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario Dummy 1" />
 			<TestCase ref="Sample case 1" />
 			<ProcedureSteps>
-				<step name="Sample test_connection 0" id="0" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_1 name="test_connection_report" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="2" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="Sample test_connection 1" id="1" prev_step_idref="Sample test_connection 0" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-				</step>
+				<Step name="Sample Test connection 0">
+					<Inputs>
+						<Input name="Test connection" interface="DummyIF 1" delay_value="120" delay_unit="miliseconds"/>
+					</Inputs>
+					<Outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Output name="TM (1_1) 1" interface="DummyIF 1"/>
+						<Output name="Test Connection Report TM (17_2) 1" interface="DummyIF 1"/>
+						<Output name="TM (1_7) 1" interface="DummyIF 1"/>
+					</Outputs>
+				</Step>
+				<Step name="Sample Test Connection 1" prev_step_idref="Sample Test connection 0" output_idref_from_prev_step="TM (1_7) 1">
+					<Inputs>
+						<Input name="Test connection" interface="DummyIF 3" delay_value="120" delay_unit="miliseconds"/>
+					</Inputs>
+				</Step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
@@ -129,38 +155,24 @@
 			</Identifier>
 			<Purpose>
 			</Purpose>
+			<Scenario ref="Scenario Dummy 2" />
 			<TestCase ref="Sample case 1" />
 			<ProcedureSteps>
-				<step name="Sample test_connection 2" id="0" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1 2" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_1 name="test_connection_report 2" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_1 name="tm_1_7 2" id="2" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="Sample test_connection 3" id="1" prev_step_idref="Sample test_connection 2" output_idref_from_prev_step="tm_1_7 2" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-				</step>
+				<Step name="Sample Test Connection 2" >
+					<Inputs>
+						<Input name="Test connection" interface="DummyIF 2" delay_value="120" delay_unit="miliseconds"/>
+					</Inputs>
+					<Outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Output name="TM (1_1) 2" interface="DummyIF 2"/>
+						<Output name="Test Connection Report TM (17_2) 2" interface="DummyIF 2"/>
+						<Output name="TM (1_7) 2" interface="DummyIF 2"/>
+					</Outputs>
+				</Step>
+				<Step name="Sample Test Connection 3" prev_step_idref="Sample Test Connection 2" output_idref_from_prev_step="TM (1_7) 2">
+					<Inputs>
+						<Input name="Test connection" interface="DummyIF 2" delay_value="120" delay_unit="miliseconds"/>
+					</Inputs>
+				</Step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
