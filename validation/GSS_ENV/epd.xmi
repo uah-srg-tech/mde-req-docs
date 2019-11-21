@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSEnvironmentEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/environment" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" name="epd" uri="es.uah.aut.srg.epd" version="v1">
-  <scenario name="scenario1">
+  <scenario name="Scenario 1">
     <gss_options>
       <gss_info test_campaign="epd_any_model" version="3.4" date="2019/02/11" version_control_url="http://srg.aut.uah.es/repository/"/>
       <gss_info_print mainLog="enabled" portLogs="enabled" rawLog="enabled"/>

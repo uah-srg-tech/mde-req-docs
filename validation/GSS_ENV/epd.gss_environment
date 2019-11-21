@@ -1,7 +1,7 @@
 GSSEnvironmentEnvironment epd {
 	uri := es.uah.aut.srg.epd;
 	version := v1;
-	GSSEnvironmentScenario scenario1 {
+	GSSEnvironmentScenario "Scenario 1" {
 		GSSEnvironmentOptions {
 			GSSEnvironmentInfo { 
 				test_campaign := "epd_any_model";

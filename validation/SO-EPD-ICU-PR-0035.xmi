@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSTestCampaignTestCampaign xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/test_campaign" xmlns:gss_1="http://srg.aut.uah.es/gss/test_proc" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" name="SO-EPD-ICU-PR-0035">
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" scenario="Scenario 1">
     <step name="test_connection" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -36,7 +36,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" scenario="Scenario 1">
     <step name="valid_tc_both_ack_flags" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -322,7 +322,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" scenario="Scenario 1">
     <step name="disable_hk_sid_100" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_hk_sid_100" ifRef="&quot;0&quot;" delay_value="&quot;3&quot;" delay_unit="seconds">
@@ -481,7 +481,7 @@
       </specialPackets>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320" scenario="Scenario 1">
     <step name="disable_event_1003" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_event_1003" ifRef="&quot;0&quot;" delay_value="&quot;0&quot;" delay_unit="miliseconds">
@@ -838,7 +838,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800" scenario="Scenario 1">
     <step name="test_connection" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -874,7 +874,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" scenario="Scenario 1">
     <step name="valid_tc_both_ack_flags" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -1160,7 +1160,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" scenario="Scenario 1">
     <step name="disable_hk_sid_100" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_hk_sid_100" ifRef="&quot;0&quot;" delay_value="&quot;3&quot;" delay_unit="seconds">
@@ -1319,7 +1319,7 @@
       </specialPackets>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" scenario="Scenario 1">
     <step name="disable_event_1002" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_event_1002" ifRef="&quot;0&quot;" delay_value="&quot;0&quot;" delay_unit="miliseconds">
@@ -1676,7 +1676,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300" scenario="Scenario 1">
     <step name="test_connection" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -1712,7 +1712,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" scenario="Scenario 1">
     <step name="valid_tc_both_ack_flags" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -1998,7 +1998,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" scenario="Scenario 1">
     <step name="disable_hk_sid_100" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_hk_sid_100" ifRef="&quot;0&quot;" delay_value="&quot;3&quot;" delay_unit="seconds">
@@ -2157,7 +2157,7 @@
       </specialPackets>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" scenario="Scenario 1">
     <step name="disable_event_1002" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_event_1002" ifRef="&quot;0&quot;" delay_value="&quot;0&quot;" delay_unit="miliseconds">
@@ -2514,7 +2514,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" scenario="Scenario 1">
     <step name="test_connection" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -2550,7 +2550,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" scenario="Scenario 1">
     <step name="valid_tc_both_ack_flags" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel1" name="test_connection" ifRef="&quot;0&quot;" delay_value="&quot;120&quot;" delay_unit="miliseconds">
@@ -2836,7 +2836,7 @@
       </outputs>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" scenario="Scenario 1">
     <step name="disable_hk_sid_100" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_hk_sid_100" ifRef="&quot;0&quot;" delay_value="&quot;3&quot;" delay_unit="seconds">
@@ -2995,7 +2995,7 @@
       </specialPackets>
     </step>
   </test_proc>
-  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" scenarioId="&quot;0&quot;">
+  <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" scenario="Scenario 1">
     <step name="disable_event_1003" id="&quot;0&quot;" mode="continuous">
       <inputs>
         <input xsi:type="gss_1:GSSTestProcInputLevel2" name="disable_event_1003" ifRef="&quot;0&quot;" delay_value="&quot;0&quot;" delay_unit="miliseconds">
