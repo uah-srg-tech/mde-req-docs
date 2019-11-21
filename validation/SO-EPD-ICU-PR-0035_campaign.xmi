@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSCampaignCampaign xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/campaign" name="SO-EPD-ICU-PR-0035" uri="es.uah.aut.srg.SO-EPD-ICU-PR-0035" version="v1">
 	<Scenario>
-		<environment href="epd.xmi#/"/>
-		<scenarioId href="epd.xmi#//@scenario.0"/>
+		<environment href="GSS_COMMON/epd.xmi#/"/>
+		<scenarioId href="GSS_COMMON/epd.xmi#//@scenario.0"/>
 	</Scenario>
 	<Tests>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">

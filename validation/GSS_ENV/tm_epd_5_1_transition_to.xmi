@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="ASCII"?>
 <tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_5_1_transition_to" uri="es.uah.aut.srg.tm_epd_5_1_transition_to" version="v1">
-  <formatFile href="../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#/"/>
+  <formatFile href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#/"/>
   <BoolVar id="0" name="ServiceType_5" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@CSField.4"/>
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@CSField.4"/>
     <Op type="equal"/>
     <Constant value="5"/>
   </BoolVar>
   <BoolVar id="1" name="ServiceSubtype_1" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@CSField.5"/>
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@CSField.5"/>
     <Op type="equal"/>
     <Constant value="1"/>
   </BoolVar>
   <BoolVar id="2" name="SourceData_Safe" constantType="hex">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@VSField.0"/>
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@VSField.0"/>
     <Op type="equal"/>
     <Constant value="0x100400" mask="0xFFFF00"/>
   </BoolVar>
   <BoolVar id="3" name="SourceData_Config" constantType="hex">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@VSField.0"/>
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@VSField.0"/>
     <Op type="equal"/>
     <Constant value="0x10020000" mask="0xFFFF0000"/>
   </BoolVar>
   <BoolVar id="4" name="SourceData_Oper" constantType="hex">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@VSField.0"/>
+    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#//@VSField.0"/>
     <Op type="equal"/>
     <Constant value="0x10030000" mask="0xFFFF0000"/>
   </BoolVar>
