@@ -102,8 +102,29 @@ mapping svs::VSVSTaskIdentification::GenerateTaskIdentificationSection() : doc::
 mapping svs::VSVSTestingSpecificationDesign::GenerateTestingSpecificationDesignSection() : doc::DDSection {
 	result.name := "Testing Specification Design";
 	result.sectionContent += self.general.map GenerateFixedSection("General");
+	result.sectionContent += self.interfaces.map GenerateInterfacesSection();
 	result.sectionContent += self.scenarios.map GenerateScenariosSection();
 	result.sectionContent += self.testDesigns.map GenerateTestDesign();
+}
+
+mapping svs::VSVSInterfacesSection::GenerateInterfacesSection() : doc::DDSection {
+	result.name := "Interfaces";
+	result.sectionContent += self.interfaces.map GenerateInterface();
+}
+	
+mapping svs::VSVSInterface::GenerateInterface() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			};
+		};
+	};
+	result.bodyContent += object DParagraph {
+		paragraphContent += self.description.map GenerateRun();
+	};
 }
 
 mapping svs::VSVSScenariosSection::GenerateScenariosSection() : doc::DDSection {
@@ -262,30 +283,21 @@ helper svs::VSVSProcedureSteps::GenerateProcedureSteps(in infoName : String) : d
 		sectionContent := object DDBody {
 			var i : Integer := 1;
 			while(i <= self.step->size()) {
-				bodyContent += self.step->at(i).GenerateProcedureStep();
+				bodyContent += self.step->at(i).GenerateProcedureStep(i-1);
 				i := i + 1;
 			};
 		};
 	};
 }
 
-helper svs::VSVSProcedureStep::GenerateProcedureStep() : OrderedSet(doctpl::DBodyContent) {
+helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedSet(doctpl::DBodyContent) {
 	var bodyContent := object OrderedSet(doctpl::DBodyContent) {};
 	bodyContent += object DParagraph {
 		indent := "1.25";
 		paragraphContent += object DRun {
 			text := object DText {
 				bold := DRunAttributes::TRUE;
-				content := "Step " + self.id + ": " + self.name.SanitizeTP();
-			};
-		};
-	};
-	if(self.description <> null) {
-		bodyContent += object DParagraph {
-			paragraphContent += object DRun {
-				text := object DText {
-					content := self.description.SanitizeTP();
-				};
+				content := "Step " + id.toString() + ": " + self.name;
 			};
 		};
 	};
@@ -302,7 +314,7 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep() : OrderedSet(doctpl::DBod
 			        else if(i <> 1) {
 			            content := content + ", ";
 			        };
-					content := content + self.inputs.input->at(i).name.SanitizeTP();
+					content := content + self.inputs.input->at(i).name.SanitizeIO();
 					i := i + 1;
 				};
 			};
@@ -322,7 +334,7 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep() : OrderedSet(doctpl::DBod
 			        	else if(i <> 1) {
 				            content := content + ", ";
 				        };
-						content := content + self.outputs.output->at(i).name.SanitizeTP();
+						content := content + self.outputs.output->at(i).name.SanitizeIO();
 						i := i + 1;
 					};
 				};
@@ -332,8 +344,8 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep() : OrderedSet(doctpl::DBod
 	return bodyContent;
 }
 
-helper String::SanitizeTP() : String {
-	var substrings := self.replaceAll("tc", "TC").replaceAll("tm", "TM").replaceAll("hk", "HK").replaceAll("sid", "SID").replaceAll("ack", "ACK").replaceAll("asw", "ASW").firstToUpper().tokenize("_");
+helper String::SanitizeIO() : String {
+	var substrings := self.tokenize("_");
 	var retString : String;
 	var lastChar : Integer;
 	var i : Integer := 1;
