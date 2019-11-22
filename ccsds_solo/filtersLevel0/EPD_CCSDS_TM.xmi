@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="EPD_CCSDS_TM" uri="es.uah.aut.srg.EPD_CCSDS_TM" version="v1" description="EPD_CCSDS_TM">
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="EPD_CCSDS_TM" uri="es.uah.aut.srg.EPD_CCSDS_TM" version="v1" description="EPD_CCSDS_TM">
   <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
   <BoolVar id="0" name="VersionNumber_0" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.2"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.2"/>
     <Op type="equal"/>
     <Constant value="0"/>
   </BoolVar>
@@ -14,4 +14,4 @@
     <BoolVarRef idRef="0"/>
     <BoolVarRef idRef="1"/>
   </Minterm>
-</tmtcif:TMTCIFFilterMintermFilter>
+</gss:GSSFilterMintermFilter>

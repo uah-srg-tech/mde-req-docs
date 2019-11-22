@@ -1,0 +1,40 @@
+GSSFilterMintermFilter tm_sis_5_2_21883_filter_level_1 {
+	//5,2 Alarm Event: SSD BV V Too High
+	uri := es.uah.aut.srg.tm_sis_5_2_21883_filter_level_1;
+	version := v1;
+	formatFile := EPD_PUS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := ServiceType_5;
+		constantType := decimal;
+		FieldRef := ServiceType;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 5;
+		};
+	};
+	GSSFilterBoolVar {
+		id := 1;
+		name := ServiceSubtype_2;
+		constantType := decimal;
+		FieldRef := ServiceSubtype;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 2;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

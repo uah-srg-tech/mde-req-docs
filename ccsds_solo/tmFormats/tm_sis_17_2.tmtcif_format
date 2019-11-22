@@ -1,7 +1,0 @@
-TMTCIFFormatFormat tm_sis_17_2 {
-	//YID52855: 17,2 Connection Test Report
-	uri := es.uah.aut.srg.tm_sis_17_2;
-	version := v1;
-	protocol := EPD_PUS;
-	type := TM;
-};

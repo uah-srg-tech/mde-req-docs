@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_1_8_40010_filter_level_1" uri="es.uah.aut.srg.tm_epd_1_8_40010_filter_level_1" version="v1" description="TM 1,8 Time Update Error">
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_1_8_40010_filter_level_1" uri="es.uah.aut.srg.tm_epd_1_8_40010_filter_level_1" version="v1" description="TM 1,8 Time Update Error">
   <formatFile href="../tmFormats/EPD_PUS_TM.xmi#/"/>
   <BoolVar id="0" name="ServiceType_1" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/EPD_PUS_TM.xmi#//@CSField.4"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/EPD_PUS_TM.xmi#//@CSField.4"/>
     <Op type="equal"/>
     <Constant value="1"/>
   </BoolVar>
   <BoolVar id="1" name="ServiceSubtype_8" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/EPD_PUS_TM.xmi#//@CSField.5"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/EPD_PUS_TM.xmi#//@CSField.5"/>
     <Op type="equal"/>
     <Constant value="8"/>
   </BoolVar>
@@ -15,4 +15,4 @@
     <BoolVarRef idRef="0"/>
     <BoolVarRef idRef="1"/>
   </Minterm>
-</tmtcif:TMTCIFFilterMintermFilter>
+</gss:GSSFilterMintermFilter>

@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_21_5_179_filter_level_2 {
+	//TM 21,5 HE2 Sci support HK STF
+	uri := es.uah.aut.srg.tm_epd_21_5_179_filter_level_2;
+	version := v1;
+	formatFile := tm_epd_21_5_179(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00142_179;
+		constantType := decimal;
+		FieldRef := NID00142;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 179;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

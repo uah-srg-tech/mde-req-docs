@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_21_6_179_filter_level_2" uri="es.uah.aut.srg.tm_sis_21_6_179_filter_level_2" version="v1" description="21,6 B TOFxE Rates, Medium">
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_21_6_179_filter_level_2" uri="es.uah.aut.srg.tm_sis_21_6_179_filter_level_2" version="v1" description="21,6 B TOFxE Rates, Medium">
   <formatFile href="../tmFormats/tm_sis_21_6_179.xmi#/"/>
   <BoolVar id="0" name="NID10001_179" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/tm_sis_21_6_179.xmi#//@CSField.0"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_21_6_179.xmi#//@CSField.0"/>
     <Op type="equal"/>
     <Constant value="179"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>
   </Minterm>
-</tmtcif:TMTCIFFilterMintermFilter>
+</gss:GSSFilterMintermFilter>

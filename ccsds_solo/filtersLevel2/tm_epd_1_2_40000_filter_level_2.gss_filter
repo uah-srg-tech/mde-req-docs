@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_1_2_40000_filter_level_2 {
+	//TM 1,2 Illegal APID
+	uri := es.uah.aut.srg.tm_epd_1_2_40000_filter_level_2;
+	version := v1;
+	formatFile := tm_epd_1_2_40000(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00001_40000;
+		constantType := decimal;
+		FieldRef := NID00001;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40000;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

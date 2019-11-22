@@ -1,0 +1,138 @@
+GSSFormatFormat tc_sis_129_148 {
+	//ZID52331: 129,148 SIS_MEM_LOAD
+	uri := es.uah.aut.srg.tc_sis_129_148;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	GSSFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 11;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 4;
+			unit := bytes;
+		};
+		GSSFormatMaxSize {
+			bytes := 236;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID10000";
+		description := "Macro?";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "MemoryID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "PID10009";
+		description := "Address";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 3;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "PID10013";
+		description := "LengthLoad";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 7;
+			bits := 0;
+		};
+	};
+	GSSFormatAField {
+		fid := 5;
+		pfid := 0;
+		name := "PID10013_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayDimension {
+			fidRef := 4;
+			maxItems := 225;
+		};
+		GSSFormatSize {
+			bytes := 0;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 11;
+			bits := 0;
+		};
+	};
+	GSSFormatAIField {
+		fid := 6;
+		pfid := 0;
+		name := "PID10056";
+		description := "Data";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayRef {
+			fidRef := 5;
+		};
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

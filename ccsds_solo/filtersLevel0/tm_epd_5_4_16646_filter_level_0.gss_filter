@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_5_4_16646_filter_level_0 {
+	//TM5,4 PARAM_ALARM5
+	uri := es.uah.aut.srg.tm_epd_5_4_16646_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := APID_807;
+		constantType := decimal;
+		FieldRef := APID;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 807;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

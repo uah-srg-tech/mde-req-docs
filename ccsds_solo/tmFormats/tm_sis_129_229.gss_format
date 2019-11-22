@@ -1,0 +1,88 @@
+GSSFormatFormat tm_sis_129_229 {
+	//YID52861: 129,229 Text 4char
+	uri := es.uah.aut.srg.tm_sis_129_229;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	GSSFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 1;
+			unit := bytes;
+		};
+		GSSFormatMaxSize {
+			bytes := 4096;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10322";
+		description := "Text Length";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatAField {
+		fid := 2;
+		pfid := 0;
+		name := "NID10322_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayDimension {
+			fidRef := 1;
+			maxItems := 4095;
+		};
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	GSSFormatAIField {
+		fid := 3;
+		pfid := 0;
+		name := "NID10323";
+		description := "Text";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayRef {
+			fidRef := 2;
+		};
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

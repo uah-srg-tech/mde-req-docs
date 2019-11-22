@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSEnvironmentEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/environment" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" name="epd" uri="es.uah.aut.srg.epd" version="v1">
+<gss:GSSEnvironmentEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/environment" xmlns:gss_1="http://srg.aut.uah.es/gss/filter" name="epd" uri="es.uah.aut.srg.epd" version="v1">
   <scenario name="Scenario 1">
     <gss_options>
       <gss_info test_campaign="epd_any_model" version="3.4" date="2019/02/11" version_control_url="http://srg.aut.uah.es/repository/"/>
@@ -17,12 +17,12 @@
         <LevelInOut id="0" name="CCSDS">
           <TMformat href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#/"/>
           <TCformat href="../../ccsds_solo/tcFormats/CCSDS_TC.xmi#/"/>
-          <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel0/EPD_CCSDS_TM.xmi#/"/>
+          <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel0/EPD_CCSDS_TM.xmi#/"/>
         </LevelInOut>
         <LevelInOut id="1" name="EPD-PUS">
           <TMformat href="../../ccsds_solo/tmFormats/EPD_PUS_TM.xmi#/"/>
           <TCformat href="../../ccsds_solo/tcFormats/EPD_PUS_TC.xmi#/"/>
-          <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/EPD_PUS_TM.xmi#/"/>
+          <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/EPD_PUS_TM.xmi#/"/>
           <export_to_prev_Level href="../../ccsds_solo/exportsToLevel0/EPD_PUS_TC_TO_CCSDS_TC.xmi#/"/>
           <import_from_prev_Level href="../../ccsds_solo/imports/EPD_PUS_TM_FROM_CCSDS_TM.xmi#/"/>
         </LevelInOut>
@@ -36,11 +36,11 @@
     </Interfaces>
     <SpecialPackets>
       <SpecialPacket status="enabled" name="3.25 SID0" id="0" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_0_filter_level_1.xmi#/"/>
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_0_filter_level_1.xmi#/"/>
         <UpperLevels>
           <UpperLevel level="_2">
             <TMformat href="tm_epd_3_25_0_formulas.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_0_filter_level_2.xmi#/"/>
+            <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_0_filter_level_2.xmi#/"/>
             <import_from_prev_Level href="../../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
           </UpperLevel>
         </UpperLevels>
@@ -50,11 +50,11 @@
         <period min_value="9900" min_unit="miliseconds" max_value="10100" max_unit="miliseconds"/>
       </SpecialPacket>
       <SpecialPacket status="enabled" name="3.25 SID10" id="1" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_10_filter_level_1.xmi#/"/>
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_10_filter_level_1.xmi#/"/>
         <UpperLevels>
           <UpperLevel level="_2">
             <TMformat href="../../ccsds_solo/tmFormats/tm_epd_3_25_10.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_10_filter_level_2.xmi#/"/>
+            <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_10_filter_level_2.xmi#/"/>
             <import_from_prev_Level href="../../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
           </UpperLevel>
         </UpperLevels>
@@ -64,11 +64,11 @@
         <period min_value="3599" min_unit="seconds" max_value="3600" max_unit="seconds"/>
       </SpecialPacket>
       <SpecialPacket status="enabled" name="3.25 SID100" id="2" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_100_filter_level_1.xmi#/"/>
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_100_filter_level_1.xmi#/"/>
         <UpperLevels>
           <UpperLevel level="_2">
             <TMformat href="../../ccsds_solo/tmFormats/tm_epd_3_25_100.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_100_filter_level_2.xmi#/"/>
+            <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_100_filter_level_2.xmi#/"/>
             <import_from_prev_Level href="../../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
           </UpperLevel>
         </UpperLevels>
@@ -78,11 +78,11 @@
         <period min_value="900" min_unit="miliseconds" max_value="1100" max_unit="miliseconds"/>
       </SpecialPacket>
       <SpecialPacket status="enabled" name="3.25 SID101" id="3" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_101_filter_level_1.xmi#/"/>
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_101_filter_level_1.xmi#/"/>
         <UpperLevels>
           <UpperLevel level="_2">
             <TMformat href="../../ccsds_solo/tmFormats/tm_epd_3_25_101.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_101_filter_level_2.xmi#/"/>
+            <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_101_filter_level_2.xmi#/"/>
             <import_from_prev_Level href="../../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
           </UpperLevel>
         </UpperLevels>
@@ -92,11 +92,11 @@
         <period min_value="59400" min_unit="miliseconds" max_value="60600" max_unit="miliseconds"/>
       </SpecialPacket>
       <SpecialPacket status="enabled" name="3.25 SID110" id="4" ifRef="0" levels="3" levelRef="1">
-        <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_110_filter_level_1.xmi#/"/>
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel1/tm_epd_3_25_110_filter_level_1.xmi#/"/>
         <UpperLevels>
           <UpperLevel level="_2">
             <TMformat href="../../ccsds_solo/tmFormats/tm_epd_3_25_110.xmi#/"/>
-            <inputFilter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_110_filter_level_2.xmi#/"/>
+            <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersLevel2/tm_epd_3_25_110_filter_level_2.xmi#/"/>
             <import_from_prev_Level href="../../ccsds_solo/imports/EPD_PUS_DATA_TM_FROM_EPD_PUS_TM.xmi#/"/>
           </UpperLevel>
         </UpperLevels>
@@ -126,7 +126,7 @@
     <Monitors>
       <alarmMsg name="DummyMessage1" type="alarm1" text="Off+On ICU">
         <GVFiltered GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.2">
-          <filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
         </GVFiltered>
       </alarmMsg>
       <modify name="IncSequenceNumber" type="increment" value="1">
@@ -134,7 +134,7 @@
       </modify>
       <alarmVal name="TransTo" type="alarm1">
         <GVFiltered GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.1">
-          <filter xsi:type="tmtcif:TMTCIFFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
         </GVFiltered>
       </alarmVal>
     </Monitors>

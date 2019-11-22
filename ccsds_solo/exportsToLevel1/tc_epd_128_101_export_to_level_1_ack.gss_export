@@ -1,0 +1,49 @@
+GSSExportExport tc_epd_128_101_export_to_level_1_ack {
+	//TC 128,101 Store Msg Sequence
+	uri := es.uah.aut.srg.tc_epd_128_101_export_to_level_1_ack;
+	version := v1;
+	from := tc_epd_128_101(v1);
+	to := EPD_PUS_TC(v1);
+	GSSExportSizes {
+		GSSExportSizeInBits {
+			id := 0;
+			from := PID00075;
+			addSize := 6;
+			unit := bytes;
+		};
+	};
+	GSSExportSettings {
+		GSSExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		GSSExportSettingFromConst {
+			value := 128;
+			toFieldRef := ServiceType;
+		};
+		GSSExportSettingFromConst {
+			value := 101;
+			toFieldRef := ServiceSubtype;
+		};
+		GSSExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		GSSExportSettingFromSize {
+			sizeRef := 0;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

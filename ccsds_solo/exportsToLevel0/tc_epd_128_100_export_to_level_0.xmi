@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFExportExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/export" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_128_100_export_to_level_0" uri="es.uah.aut.srg.tc_epd_128_100_export_to_level_0" version="v1" description="TC 128,100 Send Msg Seq Table">
+<gss:GSSExportExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tc_epd_128_100_export_to_level_0" uri="es.uah.aut.srg.tc_epd_128_100_export_to_level_0" version="v1" description="TC 128,100 Send Msg Seq Table">
   <from href="../tcFormats/EPD_PUS_TC.xmi#/"/>
   <to href="../tcFormats/CCSDS_TC.xmi#/"/>
   <Sizes>
@@ -7,33 +7,33 @@
   </Sizes>
   <settings>
     <settingFromConst value="0">
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.2"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.2"/>
     </settingFromConst>
     <settingFromConst value="1">
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.3"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.3"/>
     </settingFromConst>
     <settingFromConst value="1">
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.4"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.4"/>
     </settingFromConst>
     <settingFromConst value="812">
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.5"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.5"/>
     </settingFromConst>
     <settingFromConst value="3">
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.9"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.9"/>
     </settingFromConst>
     <settingFromSize sizeRef="0">
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.11"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.11"/>
     </settingFromSize>
     <settingFromField>
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.12"/>
-      <fieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tcFormats/EPD_PUS_TC.xmi#//@CSField.0"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.12"/>
+      <fieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/EPD_PUS_TC.xmi#//@CSField.0"/>
     </settingFromField>
     <settingFromField>
-      <toFieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../tcFormats/CCSDS_TC.xmi#//@VSField.2"/>
-      <fieldRef xsi:type="tmtcif_1:TMTCIFFormatVSField" href="../tcFormats/EPD_PUS_TC.xmi#//@VSField.0"/>
+      <toFieldRef xsi:type="gss_1:GSSFormatVSField" href="../tcFormats/CCSDS_TC.xmi#//@VSField.2"/>
+      <fieldRef xsi:type="gss_1:GSSFormatVSField" href="../tcFormats/EPD_PUS_TC.xmi#//@VSField.0"/>
     </settingFromField>
   </settings>
   <activateDICs>
     <DIC id="0" DICRef="CRC"/>
   </activateDICs>
-</tmtcif:TMTCIFExportExport>
+</gss:GSSExportExport>

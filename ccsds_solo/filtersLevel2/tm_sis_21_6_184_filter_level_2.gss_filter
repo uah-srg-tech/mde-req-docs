@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_21_6_184_filter_level_2 {
+	//21,6 B Raw Events
+	uri := es.uah.aut.srg.tm_sis_21_6_184_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_21_6_184(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10001_184;
+		constantType := decimal;
+		FieldRef := NID10001;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 184;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

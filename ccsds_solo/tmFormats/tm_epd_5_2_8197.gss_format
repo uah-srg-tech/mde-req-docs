@@ -1,0 +1,57 @@
+GSSFormatFormat tm_epd_5_2_8197 {
+	//YID52009: TM5,2 SIS TC Length Error
+	uri := es.uah.aut.srg.tm_epd_5_2_8197;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 3;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00052";
+		description := "RID_5_2";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NID00102";
+		description := "SIS Error Type";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+};

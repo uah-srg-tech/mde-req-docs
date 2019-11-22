@@ -1,0 +1,74 @@
+GSSFormatFormat tc_epd_128_20 {
+	//ZID52529: TC 128,20 Burst ON
+	uri := es.uah.aut.srg.tc_epd_128_20;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 8;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00030";
+		description := "Source ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "PID00031";
+		description := "Activation";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "PID00078";
+		description := "Activation Time";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 6;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+};

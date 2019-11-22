@@ -1,0 +1,258 @@
+GSSFormatFormat tm_sis_21_6_184 {
+	//YID52879: 21,6 B Raw Events
+	uri := es.uah.aut.srg.tm_sis_21_6_184;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	GSSFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 7;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 11;
+			unit := bytes;
+		};
+		GSSFormatMaxSize {
+			bytes := 4088;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10001";
+		description := "SID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NIDG1020";
+		description := "Global 21";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NIDD1105";
+		description := "Reserved";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 5;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NIDD1106";
+		description := "Burst Trigger";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 5;
+		};
+	};
+	GSSFormatCSField {
+		fid := 5;
+		pfid := 0;
+		name := "NIDD1107";
+		description := "Iris Flag";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 6;
+		};
+	};
+	GSSFormatCSField {
+		fid := 6;
+		pfid := 0;
+		name := "NIDD1108";
+		description := "Abort Flag";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 7;
+		};
+	};
+	GSSFormatCSField {
+		fid := 7;
+		pfid := 0;
+		name := "NIDG1021";
+		description := "Global 22";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 8;
+		pfid := 0;
+		name := "NIDD1109";
+		description := "Reserved";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 7;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 9;
+		pfid := 0;
+		name := "NIDD1110";
+		description := "Iris Position";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 7;
+		};
+	};
+	GSSFormatCSField {
+		fid := 10;
+		pfid := 0;
+		name := "NID10412";
+		description := "Int. Time";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 11;
+		pfid := 0;
+		name := "NID10446";
+		description := "B Raw Event Length";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
+		};
+	};
+	GSSFormatAField {
+		fid := 12;
+		pfid := 0;
+		name := "NID10446_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayDimension {
+			fidRef := 11;
+			maxItems := 371;
+		};
+		GSSFormatSize {
+			bytes := 11;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 7;
+			bits := 0;
+		};
+	};
+	GSSFormatAIField {
+		fid := 13;
+		pfid := 0;
+		name := "NID10447";
+		description := "B Raw Events";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayRef {
+			fidRef := 12;
+		};
+		GSSFormatSize {
+			bytes := 11;
+			bits := 0;
+		};
+		GSSFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

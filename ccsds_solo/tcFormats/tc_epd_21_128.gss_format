@@ -1,0 +1,7 @@
+GSSFormatFormat tc_epd_21_128 {
+	//ZID52519: TC 21,128 reset out buf
+	uri := es.uah.aut.srg.tc_epd_21_128;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+};

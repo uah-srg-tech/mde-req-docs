@@ -1,0 +1,7 @@
+GSSFormatFormat tm_epd_17_2 {
+	//YID52006: TM 17,2 Connect test resp
+	uri := es.uah.aut.srg.tm_epd_17_2;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+};

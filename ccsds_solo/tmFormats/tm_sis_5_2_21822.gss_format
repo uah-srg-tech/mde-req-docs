@@ -1,0 +1,108 @@
+GSSFormatFormat tm_sis_5_2_21822 {
+	//YID52912: 5,2 Alarm Event: Common HV V Too Low
+	uri := es.uah.aut.srg.tm_sis_5_2_21822;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 6;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID10245";
+		description := "Event Id";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NID10246";
+		description := "Type";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NID10247";
+		description := "Value";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 3;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NID10248";
+		description := "Auxiliary";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 5;
+		pfid := 0;
+		name := "NID10249";
+		description := "Reserved";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 5;
+			bits := 0;
+		};
+	};
+};

@@ -11,7 +11,7 @@ GSSTestProcTestProc nombre {
 				ifRef := 0;
 				delay_value := 120;
 				delay_unit := miliseconds;
-				app_to_level1 := tc_epd_17_1_export_to_level_1(v1);
+				app_to_level1 := tc_epd_17_1_export_to_level_1_ack(v1);
 				level1_to_level0 := tc_epd_17_1_export_to_level_0(v1);
 			};
 		};
@@ -72,7 +72,7 @@ GSSTestProcTestProc nombre {
 				ifRef := 0;
 				delay_value := 120;
 				delay_unit := miliseconds;
-				app_to_level1 := tc_epd_17_1_export_to_level_1(v1);
+				app_to_level1 := tc_epd_17_1_export_to_level_1_ack(v1);
 				level1_to_level0 := tc_epd_17_1_export_to_level_0(v1);
 			};
 		};

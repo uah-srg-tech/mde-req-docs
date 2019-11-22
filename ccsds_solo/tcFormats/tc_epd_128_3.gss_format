@@ -1,0 +1,7 @@
+GSSFormatFormat tc_epd_128_3 {
+	//ZID52522: TC 128,3 request a reset
+	uri := es.uah.aut.srg.tc_epd_128_3;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+};

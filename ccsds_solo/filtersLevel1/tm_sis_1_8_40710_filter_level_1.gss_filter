@@ -1,0 +1,40 @@
+GSSFilterMintermFilter tm_sis_1_8_40710_filter_level_1 {
+	//1,8 Cannot Load Memory
+	uri := es.uah.aut.srg.tm_sis_1_8_40710_filter_level_1;
+	version := v1;
+	formatFile := EPD_PUS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := ServiceType_1;
+		constantType := decimal;
+		FieldRef := ServiceType;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 1;
+		};
+	};
+	GSSFilterBoolVar {
+		id := 1;
+		name := ServiceSubtype_8;
+		constantType := decimal;
+		FieldRef := ServiceSubtype;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 8;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

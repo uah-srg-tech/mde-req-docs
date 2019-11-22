@@ -1,0 +1,74 @@
+GSSFormatFormat tm_epd_1_2_40003 {
+	//YID52032: TM 1,2 Wrong Type
+	uri := es.uah.aut.srg.tm_epd_1_2_40003;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 6;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00001";
+		description := "TC ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NID00002";
+		description := "TC Sequence Control";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NID00003";
+		description := "Error Code TM 1,2";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+	};
+};

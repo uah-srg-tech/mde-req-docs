@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_5_2_21828" uri="es.uah.aut.srg.tm_sis_5_2_21828" version="v1" description="YID52918: 5,2 Alarm Event: A Start2 MCP HV V Too Low" protocol="EPD_PUS" type="TM">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_5_2_21828" uri="es.uah.aut.srg.tm_sis_5_2_21828" version="v1" description="YID52918: 5,2 Alarm Event: A Start2 MCP HV V Too Low" protocol="EPD_PUS" type="TM">
   <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="6" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
@@ -24,4 +24,4 @@
     <size bytes="1" bits="0"/>
     <globalOffset bytes="5" bits="0"/>
   </CSField>
-</tmtcif:TMTCIFFormatFormat>
+</gss:GSSFormatFormat>

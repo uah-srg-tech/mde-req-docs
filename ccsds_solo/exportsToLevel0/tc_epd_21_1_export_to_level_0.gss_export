@@ -1,0 +1,55 @@
+GSSExportExport tc_epd_21_1_export_to_level_0 {
+	//TC 21,1 Enable data
+	uri := es.uah.aut.srg.tc_epd_21_1_export_to_level_0;
+	version := v1;
+	from := EPD_PUS_TC(v1);
+	to := CCSDS_TC(v1);
+	GSSExportSizes {
+		GSSExportSizeInBits {
+			id := 0;
+			from := ApplicationData;
+			addSize := 5;
+			unit := bytes;
+		};
+	};
+	GSSExportSettings {
+		GSSExportSettingFromField {
+			fieldRef := SecondaryHeader;
+			toFieldRef := SecondaryHeader;
+		};
+		GSSExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := VersionNumber;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := Type;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := DFHFlag;
+		};
+		GSSExportSettingFromConst {
+			value := 812;
+			toFieldRef := APID;
+		};
+		GSSExportSettingFromConst {
+			value := 3;
+			toFieldRef := SequenceFlag;
+		};
+		GSSExportSettingFromSize {
+			sizeRef := 0;
+			toFieldRef := PacketLength;
+		};
+	};
+	GSSExportActivateDICs {
+		GSSExportDIC {
+			id := 0;
+			DICRef := CRC;
+		};
+	};
+};

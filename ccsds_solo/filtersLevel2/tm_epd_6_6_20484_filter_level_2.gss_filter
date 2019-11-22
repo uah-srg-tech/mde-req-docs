@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_6_6_20484_filter_level_2 {
+	//TM 6.6 Dump RAM
+	uri := es.uah.aut.srg.tm_epd_6_6_20484_filter_level_2;
+	version := v1;
+	formatFile := tm_epd_6_6_20484(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00006_20484;
+		constantType := decimal;
+		FieldRef := NID00006;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 20484;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

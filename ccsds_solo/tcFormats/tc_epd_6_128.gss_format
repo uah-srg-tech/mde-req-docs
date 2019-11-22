@@ -1,0 +1,40 @@
+GSSFormatFormat tc_epd_6_128 {
+	//ZID52542: TC 6,128 Apply patches to memory
+	uri := es.uah.aut.srg.tc_epd_6_128;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00079";
+		description := "Npatches";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 4;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

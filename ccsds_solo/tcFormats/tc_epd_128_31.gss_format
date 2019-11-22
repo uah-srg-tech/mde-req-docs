@@ -1,0 +1,40 @@
+GSSFormatFormat tc_epd_128_31 {
+	//ZID52536: TC 128,31 Sw-on Unit
+	uri := es.uah.aut.srg.tc_epd_128_31;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00048";
+		description := "Unit ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_1_2_40002_filter_level_0" uri="es.uah.aut.srg.tm_epd_1_2_40002_filter_level_0" version="v1" description="TM 1,2 wrong CRC">
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_1_2_40002_filter_level_0" uri="es.uah.aut.srg.tm_epd_1_2_40002_filter_level_0" version="v1" description="TM 1,2 wrong CRC">
   <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
   <BoolVar id="0" name="APID_801" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.5"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.5"/>
     <Op type="equal"/>
     <Constant value="801"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>
   </Minterm>
-</tmtcif:TMTCIFFilterMintermFilter>
+</gss:GSSFilterMintermFilter>

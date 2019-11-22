@@ -1,0 +1,41 @@
+GSSExportExport tc_sis_129_151_export_to_level_1 {
+	//129,151 SIS_MEM_RUN
+	uri := es.uah.aut.srg.tc_sis_129_151_export_to_level_1;
+	version := v1;
+	from := tc_sis_129_151(v1);
+	to := EPD_PUS_TC(v1);
+	GSSExportSettings {
+		GSSExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := ApplicationData;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := ACK;
+		};
+		GSSExportSettingFromConst {
+			value := 129;
+			toFieldRef := ServiceType;
+		};
+		GSSExportSettingFromConst {
+			value := 151;
+			toFieldRef := ServiceSubtype;
+		};
+		GSSExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		GSSExportSettingFromConst {
+			value := 6;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

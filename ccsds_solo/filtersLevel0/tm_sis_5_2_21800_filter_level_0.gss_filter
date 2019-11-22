@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_5_2_21800_filter_level_0 {
+	//5,2 Alarm Event: A TOF +3.3V V Too Low
+	uri := es.uah.aut.srg.tm_sis_5_2_21800_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := APID_871;
+		constantType := decimal;
+		FieldRef := APID;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 871;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

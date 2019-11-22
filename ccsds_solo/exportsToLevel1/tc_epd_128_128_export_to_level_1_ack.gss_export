@@ -1,0 +1,37 @@
+GSSExportExport tc_epd_128_128_export_to_level_1_ack {
+	//TC 128,128 list params
+	uri := es.uah.aut.srg.tc_epd_128_128_export_to_level_1_ack;
+	version := v1;
+	from := tc_epd_128_128(v1);
+	to := EPD_PUS_TC(v1);
+	GSSExportSettings {
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDSSecondaryHeaderFlag;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUSVersion;
+		};
+		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		GSSExportSettingFromConst {
+			value := 128;
+			toFieldRef := ServiceType;
+		};
+		GSSExportSettingFromConst {
+			value := 128;
+			toFieldRef := ServiceSubtype;
+		};
+		GSSExportSettingFromConst {
+			value := 120;
+			toFieldRef := SourceID;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := AppDataLength;
+		};
+	};
+};

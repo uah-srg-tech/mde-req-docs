@@ -1,0 +1,24 @@
+GSSFilterMintermFilter dummy_message_1 {
+	uri := es.uah.aut.srg.dummy_message_1;
+	version := v1;
+	formatFile := DUMMY(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := dummyField1;
+		constantType := decimal;
+		FieldRef := dummyField;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 1;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

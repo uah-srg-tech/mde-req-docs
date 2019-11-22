@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_3_25_100" uri="es.uah.aut.srg.tm_epd_3_25_100" version="v1" description="YID52007: TM 3,25 HK SID100 to OBC" protocol="EPD_PUS" type="TM">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_100" uri="es.uah.aut.srg.tm_epd_3_25_100" version="v1" description="YID52007: TM 3,25 HK SID100 to OBC" protocol="EPD_PUS" type="TM">
   <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="31" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
@@ -44,4 +44,4 @@
     <size bytes="2" bits="0"/>
     <globalOffset bytes="27" bits="0"/>
   </CSField>
-</tmtcif:TMTCIFFormatFormat>
+</gss:GSSFormatFormat>

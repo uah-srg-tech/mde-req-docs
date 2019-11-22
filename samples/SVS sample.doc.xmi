@@ -69,6 +69,64 @@
   </section>
   <section name="Testing Specification Design">
     <sectionContent xsi:type="micobs.doc:DDSection" name="General"/>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Interfaces">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="DummyIF 1"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This is a dummy IF"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="DummyIF 2"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This is another dummy IF"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="DummyIF 3"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This is another dummy IF"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scenarios">
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario Dummy 1">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="This is a dummy Scenario"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario Dummy 2">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="This is another dummy Scenario"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Sample design 1">
       <sectionContent xsi:type="micobs.doc:DDSection" name="General"/>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Features to be Tested"/>
@@ -98,47 +156,14 @@
       <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-            <text content="Test Cases"/>
+            <text content="Scenario"/>
           </paragraphContent>
         </bodyContent>
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="Sample case 1"/>
+            <text content="Scenario Dummy 1"/>
           </paragraphContent>
         </bodyContent>
-      </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="Procedure Steps">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
-            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-              <text content="Step &quot;0&quot;: Sample test connection 0"/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Send Test connection"/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Receive TM 1.1, Test connection report and TM 1.7"/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
-            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-              <text content="Step &quot;1&quot;: Sample test connection 1"/>
-            </paragraphContent>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Send Test connection"/>
-            </paragraphContent>
-          </bodyContent>
-        </sectionContent>
-      </sectionContent>
-    </sectionContent>
-    <sectionContent xsi:type="micobs.doc:DDSection" name="Sample Procedure 2">
-      <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
             <text content="Test Cases"/>
@@ -154,7 +179,7 @@
         <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-              <text content="Step &quot;0&quot;: Sample test connection 2"/>
+              <text content="Step 0: Sample Test connection 0"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
@@ -164,12 +189,65 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="Receive TM 1.1 2, Test connection report 2 and TM 1.7 2"/>
+              <text content="Receive TM (1_1) 1, Test Connection Report TM (17_2) 1 and TM (1_7) 1"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-              <text content="Step &quot;1&quot;: Sample test connection 3"/>
+              <text content="Step 1: Sample Test Connection 1"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Send Test connection"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Sample Procedure 2">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Scenario"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Scenario Dummy 2"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Test Cases"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="Sample case 1"/>
+          </paragraphContent>
+        </bodyContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Procedure Steps">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Step 0: Sample Test Connection 2"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Send Test connection"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="Receive TM (1_1) 2, Test Connection Report TM (17_2) 2 and TM (1_7) 2"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
+            <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+              <text content="Step 1: Sample Test Connection 3"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="2.5">

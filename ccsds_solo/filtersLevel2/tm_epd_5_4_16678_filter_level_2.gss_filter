@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_5_4_16678_filter_level_2 {
+	//TM5,4 PARAM_ALARM37
+	uri := es.uah.aut.srg.tm_epd_5_4_16678_filter_level_2;
+	version := v1;
+	formatFile := tm_epd_5_4_16678(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00054_16678;
+		constantType := decimal;
+		FieldRef := NID00054;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 16678;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_6_9" uri="es.uah.aut.srg.tc_epd_6_9" version="v1" description="ZID52502: TC 6,9 memory check" protocol="EPD_PUS" type="TC">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_6_9" uri="es.uah.aut.srg.tc_epd_6_9" version="v1" description="ZID52502: TC 6,9 memory check" protocol="EPD_PUS" type="TC">
   <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="10" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
@@ -16,4 +16,4 @@
     <size bytes="4" bits="0"/>
     <globalOffset bytes="6" bits="0"/>
   </CSField>
-</tmtcif:TMTCIFFormatFormat>
+</gss:GSSFormatFormat>

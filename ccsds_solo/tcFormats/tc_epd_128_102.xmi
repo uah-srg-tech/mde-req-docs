@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tc_epd_128_102" uri="es.uah.aut.srg.tc_epd_128_102" version="v1" description="ZID52540: TC 128,102 Send Msg Sequence" protocol="EPD_PUS" type="TC">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_128_102" uri="es.uah.aut.srg.tc_epd_128_102" version="v1" description="ZID52540: TC 128,102 Send Msg Sequence" protocol="EPD_PUS" type="TC">
   <CSField name="PID00069" description="SensorID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
@@ -25,4 +25,4 @@
     <globalOffset bytes="4" bits="0"/>
   </VSField>
   <VRFieldSize name="PID00075_length" fid="5" pfid="4"/>
-</tmtcif:TMTCIFFormatFormat>
+</gss:GSSFormatFormat>

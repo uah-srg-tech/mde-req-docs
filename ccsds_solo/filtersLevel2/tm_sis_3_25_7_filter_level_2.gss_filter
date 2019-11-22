@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_3_25_7_filter_level_2 {
+	//3,25 Summary
+	uri := es.uah.aut.srg.tm_sis_3_25_7_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_3_25_7(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10000_7;
+		constantType := decimal;
+		FieldRef := NID10000;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 7;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

@@ -1,0 +1,40 @@
+GSSFilterMintermFilter tm_epd_5_1_4366_filter_level_1 {
+	//TM 5,1 Burst Mode Activation Ends
+	uri := es.uah.aut.srg.tm_epd_5_1_4366_filter_level_1;
+	version := v1;
+	formatFile := EPD_PUS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := ServiceType_5;
+		constantType := decimal;
+		FieldRef := ServiceType;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 5;
+		};
+	};
+	GSSFilterBoolVar {
+		id := 1;
+		name := ServiceSubtype_1;
+		constantType := decimal;
+		FieldRef := ServiceSubtype;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 1;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

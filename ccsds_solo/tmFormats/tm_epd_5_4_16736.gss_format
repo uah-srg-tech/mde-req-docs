@@ -1,0 +1,108 @@
+GSSFormatFormat tm_epd_5_4_16736 {
+	//YID52140: TM 5,4 READOUT_FAILED
+	uri := es.uah.aut.srg.tm_epd_5_4_16736;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TM;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 3;
+			bits := 3;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "NID00054";
+		description := "RID_54";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 2;
+		pfid := 0;
+		name := "NIDG0140";
+		description := "Report ReadOut";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 0;
+		name := "NIDD0152";
+		description := "STEP ReadOut Status";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 5;
+		};
+	};
+	GSSFormatCSField {
+		fid := 4;
+		pfid := 0;
+		name := "NIDD0153";
+		description := "EPT_HET_1 ReadOut Status";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 6;
+		};
+	};
+	GSSFormatCSField {
+		fid := 5;
+		pfid := 0;
+		name := "NIDD0154";
+		description := "EPT_HET_2 ReadOut Status";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 1;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 7;
+		};
+	};
+};

@@ -1,0 +1,22 @@
+GSSFormatFormat DUMMY {
+	uri := es.uah.aut.srg.DUMMY;
+	version := v1;
+	protocol := DUMMY;
+	type := TC;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "dummyField";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

@@ -1,0 +1,36 @@
+GSSFormatFormat EPD_PUS_TM_DATA {
+	//EPD_PUS_TM_DATA
+	uri := es.uah.aut.srg.EPD_PUS_TM_DATA;
+	version := v1;
+	protocol := PUS_DATA;
+	type := TM;
+	GSSFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "SourceData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 0;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 1;
+			unit := bytes;
+		};
+		GSSFormatMaxSize {
+			bytes := 4096;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 10;
+			bits := 0;
+		};
+	};
+	GSSFormatVRFieldSize {
+		fid := 1;
+		pfid := 0;
+		name := "SourceDataLength";
+	};
+};

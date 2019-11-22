@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/filter" xmlns:tmtcif_1="http://srg.aut.uah.es/tmtcif/format" name="tm_epd_3_25_0_filter_level_2" uri="es.uah.aut.srg.tm_epd_3_25_0_filter_level_2" version="v1" description="TM 3,25 HK SID0 to OBC">
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_0_filter_level_2" uri="es.uah.aut.srg.tm_epd_3_25_0_filter_level_2" version="v1" description="TM 3,25 HK SID0 to OBC">
   <formatFile href="../tmFormats/tm_epd_3_25_0.xmi#/"/>
   <BoolVar id="0" name="NID00030_0" constantType="decimal">
-    <FieldRef xsi:type="tmtcif_1:TMTCIFFormatCSField" href="../tmFormats/tm_epd_3_25_0.xmi#//@CSField.1"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_epd_3_25_0.xmi#//@CSField.1"/>
     <Op type="equal"/>
     <Constant value="0"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>
   </Minterm>
-</tmtcif:TMTCIFFilterMintermFilter>
+</gss:GSSFilterMintermFilter>

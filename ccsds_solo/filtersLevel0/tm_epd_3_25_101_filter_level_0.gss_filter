@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_3_25_101_filter_level_0 {
+	//TM 3,25 HK SID101 to SSMM
+	uri := es.uah.aut.srg.tm_epd_3_25_101_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := APID_884;
+		constantType := decimal;
+		FieldRef := APID;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 884;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

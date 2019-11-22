@@ -1,0 +1,88 @@
+GSSFormatFormat tc_epd_5_5 {
+	//ZID52531: TC 5,5 Enable Event
+	uri := es.uah.aut.srg.tc_epd_5_5;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+	GSSFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "ApplicationData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 1;
+			unit := halfword;
+		};
+		GSSFormatMaxSize {
+			bytes := 235;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "PID00055";
+		description := "N RID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatAField {
+		fid := 2;
+		pfid := 0;
+		name := "PID00055_block";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayDimension {
+			fidRef := 1;
+			maxItems := 117;
+		};
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 1;
+			bits := 0;
+		};
+	};
+	GSSFormatAIField {
+		fid := 3;
+		pfid := 0;
+		name := "PID00040";
+		description := "Report ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatArrayRef {
+			fidRef := 2;
+		};
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatLocalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

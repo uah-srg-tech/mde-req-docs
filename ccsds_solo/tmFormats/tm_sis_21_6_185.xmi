@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="tm_sis_21_6_185" uri="es.uah.aut.srg.tm_sis_21_6_185" version="v1" description="YID52880: 21,6 B Priority Events" protocol="EPD_PUS" type="TM">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_21_6_185" uri="es.uah.aut.srg.tm_sis_21_6_185" version="v1" description="YID52880: 21,6 B Priority Events" protocol="EPD_PUS" type="TM">
   <CSField name="NID10001" description="SID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
@@ -60,4 +60,4 @@
     <size bytes="7" bits="0"/>
     <localOffset bytes="0" bits="0"/>
   </AIField>
-</tmtcif:TMTCIFFormatFormat>
+</gss:GSSFormatFormat>

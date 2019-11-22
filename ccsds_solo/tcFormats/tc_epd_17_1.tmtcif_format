@@ -1,7 +1,0 @@
-TMTCIFFormatFormat tc_epd_17_1 {
-	//ZID52505: TC 17,1 connection test
-	uri := es.uah.aut.srg.tc_epd_17_1;
-	version := v1;
-	protocol := EPD_PUS;
-	type := TC;
-};

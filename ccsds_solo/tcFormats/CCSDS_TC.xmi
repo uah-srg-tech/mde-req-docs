@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="CCSDS_TC" uri="es.uah.aut.srg.CCSDS_TC" version="v1" description="CCSDS_TC" protocol="CCSDS" type="TC">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="CCSDS_TC" uri="es.uah.aut.srg.CCSDS_TC" version="v1" description="CCSDS_TC" protocol="CCSDS" type="TC">
   <CSField name="PacketHeader" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="6" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
@@ -79,4 +79,4 @@
       <fieldToCheck fidRef="15"/>
     </sortedFieldsToCheck>
   </FDICField>
-</tmtcif:TMTCIFFormatFormat>
+</gss:GSSFormatFormat>

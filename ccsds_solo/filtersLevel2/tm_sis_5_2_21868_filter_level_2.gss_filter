@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_5_2_21868_filter_level_2 {
+	//5,2 Alarm Event: A TOF Temp Too High
+	uri := es.uah.aut.srg.tm_sis_5_2_21868_filter_level_2;
+	version := v1;
+	formatFile := tm_sis_5_2_21868(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10245_21868;
+		constantType := decimal;
+		FieldRef := NID10245;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 21868;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};
