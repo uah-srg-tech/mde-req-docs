@@ -56,10 +56,10 @@ mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
 			result := self.oclAsType(DBasicTable).map GenerateBasicTable();
 		}
 		else if(self.metaClassName() = "DEnumerate") {
-			result := self.oclAsType(DEnumerate).GenerateEnumerate();
+			result := self.oclAsType(DEnumerate).map GenerateEnumerate();
 		}
 		else if(self.metaClassName() = "DItemize") {
-			result := self.oclAsType(DItemize).GenerateItemize();
+			result := self.oclAsType(DItemize).map GenerateItemize();
 		};
 	}
 	result.style := self.style;
@@ -155,34 +155,30 @@ mapping doctpl::DCell::GenerateCells() : doctpl::DCell {
 	};
 }
 
-helper doctpl::DListContent::GenerateEnumerate() : doctpl::DListContent {
-	return object DEnumerate {
-		if(self.name <> null) {
-			name := self.name;	
-		};
-		if(self.style <> null) {
-			style := self.style;
-		};
-		if(self.alignment <> doctpl::DAlignment::left) {
-			alignment := self.alignment;
-		};
-		items += self.items.map GenerateItems();
+mapping doctpl::DEnumerate::GenerateEnumerate() : doctpl::DEnumerate {
+	if(self.name <> null) {
+		result.name := self.name;	
 	};
+	if(self.style <> null) {
+		result.style := self.style;
+	};
+	if(self.alignment <> doctpl::DAlignment::left) {
+		result.alignment := self.alignment;
+	};
+	result.items += self.items.map GenerateItems();
 }
 
-helper doctpl::DListContent::GenerateItemize() : doctpl::DListContent {
-	return object DItemize {
-		if(self.name <> null) {
-			name := self.name;	
-		};
-		if(self.style <> null) {
-			style := self.style;
-		};
-		if(self.alignment <> doctpl::DAlignment::left) {
-			alignment := self.alignment;
-		};
-		items += self.items.map GenerateItems();
+mapping doctpl::DItemize::GenerateItemize() : doctpl::DItemize {
+	if(self.name <> null) {
+		result.name := self.name;	
 	};
+	if(self.style <> null) {
+		result.style := self.style;
+	};
+	if(self.alignment <> doctpl::DAlignment::left) {
+		result.alignment := self.alignment;
+	};
+	result.items += self.items.map GenerateItems();
 }
 
 mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
@@ -190,10 +186,10 @@ mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
 		result.paragraph := self.paragraph.map GenerateParagraph();
 	};
 	if(self.sublist <> null) {
-		if(self.sublist.metaClassName() = "DItemize") {
-			result.sublist := self.oclAsType(DItemize).GenerateItemize();
-		}else if(self.sublist.metaClassName() = "DEnumerate") {
-			result.sublist := self.oclAsType(DEnumerate).GenerateEnumerate();
+		if(self.sublist.metaClassName() = "DEnumerate") { 
+			result.sublist := self.sublist.oclAsType(DEnumerate).map GenerateEnumerate();
+		} else if(self.sublist.metaClassName() = "DItemize") {
+			result.sublist := self.sublist.oclAsType(DItemize).map GenerateItemize();
 		};
 	};
 }
