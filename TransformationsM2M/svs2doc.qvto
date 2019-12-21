@@ -5,6 +5,7 @@ modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
 modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
 modeltype svs uses "http://srg.aut.uah.es/micobs/svm/svs";
 modeltype vdm uses "http://srg.aut.uah.es/micobs/svm/vdm";
+modeltype fieldvalue uses "http://srg.aut.uah.es/tmtcif/fieldvalue";
 
 transformation generateDoc(in input : svs, out output : doc);
 
@@ -71,8 +72,8 @@ mapping svs::VSVSTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSe
 		while(i <= self.abbreviations->size()) {
 			bodyContent += self.abbreviations->at(i).GenerateTDA();
 			i := i + 1;
-		};
-	};
+		}
+	}
 }
 
 helper svs::VSVSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
@@ -81,12 +82,12 @@ helper svs::VSVSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
 		paragraphContent += object DRun {
 			text := object DText {
 				content := self.name;
-			};
+			}
 		};
 		var description := self.description.map GenerateRun();
 		description.tab := object DTab {};
 		paragraphContent += description;
-	};
+	}
 }
 
 mapping svs::VSVSTaskIdentification::GenerateTaskIdentificationSection() : doc::DDSection {
@@ -103,6 +104,8 @@ mapping svs::VSVSTestingSpecificationDesign::GenerateTestingSpecificationDesignS
 	result.name := "Testing Specification Design";
 	result.sectionContent += self.general.map GenerateFixedSection("General");
 	result.sectionContent += self.interfaces.map GenerateInterfacesSection();
+	result.sectionContent += self.configurations.map GenerateConfigurationsSection();
+	result.sectionContent += self.actions.map GenerateActionsSection();
 	result.sectionContent += self.scenarios.map GenerateScenariosSection();
 	result.sectionContent += self.testDesigns.map GenerateTestDesign();
 }
@@ -119,12 +122,60 @@ mapping svs::VSVSInterface::GenerateInterface() : doc::DDBody {
 			bold := DRunAttributes::TRUE;
 			text := object DText {
 				content := self.name;
-			};
+			}
 		};
+		paragraphContent += object DRun {
+			text := object DText {
+				content := ". Headers: " + self.tcHeader.name + ", " + self.tmHeader.name;
+			}
+		}
 	};
 	result.bodyContent += object DParagraph {
 		paragraphContent += self.description.map GenerateRun();
+	}
+}
+
+mapping svs::VSVSPacketConfigurationsSection::GenerateConfigurationsSection() : doc::DDSection {
+	result.name := "Packet Configurations";
+	result.sectionContent += self.packetConfigurations.map GenerateConfiguration();
+}
+	
+mapping svs::VSVSPacketConfiguration::GenerateConfiguration() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			}
+		}
 	};
+	result.bodyContent += object DParagraph {
+		paragraphContent += self.description.map GenerateRun();
+	}
+}
+
+mapping svs::VSVSActionsSection::GenerateActionsSection() : doc::DDSection {
+	result.name := "Actions";
+	result.sectionContent += self.action.map GenerateAction();
+}
+	
+mapping svs::VSVSAction::GenerateAction() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			}
+		};
+		paragraphContent += object DRun {
+			text := object DText {
+				content := ". Type: " + self.type.toString();
+			}
+		}
+	};
+	result.bodyContent += self.description.bodyContent.map GenerateBodyContent();
 }
 
 mapping svs::VSVSScenariosSection::GenerateScenariosSection() : doc::DDSection {
@@ -134,7 +185,106 @@ mapping svs::VSVSScenariosSection::GenerateScenariosSection() : doc::DDSection {
 	
 mapping svs::VSVSScenarioSection::GenerateScenarioSection() : doc::DDSection {
 	result.name := self.name;
-	result.sectionContent += self.body.map GenerateBody();
+	result.sectionContent := object DDBody {
+		bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+		bodyContent += self.body.bodyContent.map GenerateBodyContent();
+		
+		bodyContent += object DParagraph {
+			paragraphContent += object DRun {
+				bold := DRunAttributes::TRUE;
+				text := object DText {
+					content := "Interfaces:";
+				}
+			}
+		};
+		bodyContent += object DItemize {
+			items := object OrderedSet(doctpl::DListItem) {};
+			var i : Integer := 1;
+			while(i <= self.supportedInterface->size()) {
+				items += object DListItem {
+					paragraph := object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := self.supportedInterface->at(i).name;
+							}
+						}
+					}
+				};
+				i := i + 1;
+			}
+		};
+		
+		if(self.selectedConfiguration->size() != 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Selected configurations: ";
+					};
+				};
+			};
+			bodyContent += object DItemize {
+				items := object OrderedSet(doctpl::DListItem) {};
+				var i : Integer := 1;
+				while(i <= self.selectedConfiguration->size()) {
+					items += object DListItem {
+						paragraph := object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := self.selectedConfiguration->at(i)._configuration.name +
+										". Filter Status: ";
+								}
+							};
+							paragraphContent += object DRun {
+								italics := DRunAttributes::TRUE;
+								text := object DText {
+									content := self.selectedConfiguration->at(i).defaultFilterStatus.toString();
+								}
+							};
+							paragraphContent += object DRun {
+								text := object DText {
+									content := ". Print status: ";
+								}
+							};
+							paragraphContent += object DRun {
+								italics := DRunAttributes::TRUE;
+								text := object DText {
+									content := self.selectedConfiguration->at(i).defaultPrintStatus.toString();
+								}
+							}
+						}
+					};
+					i := i + 1;
+				}
+			}
+		};
+		if(self.supportedAction->size() != 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Supported actions: ";
+					}
+				}
+			};
+			bodyContent += object DItemize {
+				items := object OrderedSet(doctpl::DListItem) {};
+				var i : Integer := 1;
+				while(i <= self.supportedAction->size()) {
+					items += object DListItem {
+						paragraph := object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := self.supportedAction->at(i).name;
+								}
+							}
+						}
+					};
+					i := i + 1;
+				}
+			}
+		}
+	}
 }
 
 mapping svs::VSVSTestDesign::GenerateTestDesign() : doc::DDSection {
@@ -161,7 +311,7 @@ mapping svs::VSVSTestCase::GenerateTestCase() : doc::DDSection {
 		bodyContent += self.specialConstraints.GenerateTestInfo("Special Constraints");
 		bodyContent += self.interfaceDependencies.GenerateTestInfo("Interface Dependencies");
 		bodyContent += self.GenerateValidatingItems("Validating Items");
-	};
+	}
 }
 
 helper svs::VSVSTestInfo::GenerateTestInfo(in infoName : String) : OrderedSet(doctpl::DBodyContent) {
@@ -172,8 +322,8 @@ helper svs::VSVSTestInfo::GenerateTestInfo(in infoName : String) : OrderedSet(do
 				bold := DRunAttributes::TRUE;
 				text := object DText {
 					content := infoName;
-				};
-			};
+				}
+			}
 		};
 		bodyContent += self.body.bodyContent.map GenerateBodyContent();
 	};
@@ -187,8 +337,8 @@ helper svs::VSVSTestCase::GenerateValidatingItems(in infoName : String) : Ordere
 			bold := DRunAttributes::TRUE;
 			text := object DText {
 				content := infoName;
-			};
-		};
+			}
+		}
 	};
 	bodyContent += object DParagraph {
 		paragraphContent += object DRun {
@@ -196,18 +346,23 @@ helper svs::VSVSTestCase::GenerateValidatingItems(in infoName : String) : Ordere
 				var i : Integer := 1;
 				while(i <= self.validatingItem->size()) {
 					if(content = null) {
-						content := self.validatingItem->at(i).name.toString();
+						content := self.validatingItem->at(i).name;
 					} else {
-						content := content + ", " + self.validatingItem->at(i).name.toString();
+					    if((self.validatingItem->size() <> 1) and (i = self.validatingItem->size())) {
+				            content := content + " and ";
+				        } else if(i <> 1) {
+				            content := content + ", ";
+				        };
+						content := content + self.validatingItem->at(i).name;
 					};
 					i := i + 1;
-				};
-			};
-		};
+				}
+			}
+		}
 	};
 	return bodyContent;
 }
-
+						
 mapping svs::VSVSTestProcedures::GenerateTestProceduresSection() : doc::DDSection {
 	result.name := "Test Procedures";
 	
@@ -235,16 +390,16 @@ helper svs::VSVSScenarioSection::GenerateTestInfoScenario(in infoName : String) 
 				bold := DRunAttributes::TRUE;
 				text := object DText {
 					content := infoName;
-				};
-			};
+				}
+			}
 		};
 		bodyContent += object DParagraph {
 			paragraphContent += object DRun {
 				text := object DText {
 					content := self.name;
-				};
-			};
-		};
+				}
+			}
+		}
 	};
 	return bodyContent;
 }
@@ -256,8 +411,8 @@ helper svs::VSVSTestProcedure::GenerateProcedureTestCases(in infoName : String) 
 			bold := DRunAttributes::TRUE;
 			text := object DText {
 				content := infoName;
-			};
-		};
+			}
+		}
 	};
 	bodyContent += object DParagraph {
 		paragraphContent += object DRun {
@@ -265,14 +420,14 @@ helper svs::VSVSTestProcedure::GenerateProcedureTestCases(in infoName : String) 
 				var i : Integer := 1;
 				while(i <= self.testCase->size()) {
 					if(content = null) {
-						content := self.testCase->at(i).name.toString();
+						content := self.testCase->at(i).name;
 					} else {
-						content := content + ", " + self.testCase->at(i).name.toString();
+						content := content + ", " + self.testCase->at(i).name;
 					};
 					i := i + 1;
-				};
-			};
-		};
+				}
+			}
+		}
 	};
 	return bodyContent;
 }
@@ -298,53 +453,300 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 			text := object DText {
 				bold := DRunAttributes::TRUE;
 				content := "Step " + id.toString() + ": " + self.name;
-			};
-		};
+			}
+		}
 	};
-	bodyContent += object DParagraph {
-		indent := "2.5";
-		paragraphContent += object DRun {
-			text := object DText {
-				content := "Send ";
-				var i : Integer := 1;
-				while(i <= self.inputs.input->size()) {
-				    if((self.inputs.input->size() <> 1) and (i = self.inputs.input->size())) {
-			            content := content + " and ";
-			        }
-			        else if(i <> 1) {
-			            content := content + ", ";
-			        };
-					content := content + self.inputs.input->at(i).name.SanitizeIO();
-					i := i + 1;
-				};
-			};
-		};
-	};
-	if(self.outputs.output->size() <> 0) {
+	if(self.configurations != null) {
 		bodyContent += object DParagraph {
+			indent := "1.25";
+				paragraphContent += object DRun {
+				text := object DText {
+					content := "Packet configurations ";
+				}
+			}
+		};
+		bodyContent += object DItemize {
 			indent := "2.5";
+			items := object OrderedSet(doctpl::DListItem) {};
+			var i : Integer := 1;
+			while(i <= self.configurations._configuration->size()) {
+				items += object DListItem {
+					paragraph := object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := self.configurations._configuration->at(i)._configuration.name;
+							}
+						};
+						if(self.configurations._configuration->at(i).filterStatus != VSVSConfigurationStatus::not_set) {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := ". Filter Status: ";
+								};
+							};
+							paragraphContent += object DRun {
+								text := object DText {
+									italics := DRunAttributes::TRUE;
+									content := self.configurations._configuration->at(i).filterStatus.toString();
+								}
+							};
+						};
+						if(self.configurations._configuration->at(i).printStatus != VSVSConfigurationStatus::not_set) {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := ". Print Status: ";
+								}
+							};
+							paragraphContent += object DRun {
+								text := object DText {
+									italics := DRunAttributes::TRUE;
+									content := self.configurations._configuration->at(i).printStatus.toString();
+								}
+							}
+						}
+					}
+				};
+				i := i + 1;
+			}
+		}
+	};
+	if(self.inputs.metaClassName() = "VSVSStepTelecommandSequence") {
+		var tcSeq = self.inputs.oclAsType(VSVSStepTelecommandSequence);
+		bodyContent += object DParagraph {
+			indent := "1.25";
+				paragraphContent += object DRun {
+				text := object DText {
+					content := "Send ";
+				}
+			}
+		};
+		bodyContent += object DItemize {
+			indent := "2.5";
+			items := object OrderedSet(doctpl::DListItem) {};
+			var i : Integer := 1;
+			while(i <= tcSeq.telecommand->size()) {
+				items += object DListItem {
+					paragraph := object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := tcSeq.telecommand->at(i).name.SanitizeTMTC() +
+										" via " + tcSeq.telecommand->at(i).interface.name;
+								if(tcSeq.telecommand->at(i).delay_value != null) {
+									content := content + " after " + tcSeq.telecommand->at(i).delay_value +
+											" " + tcSeq.telecommand->at(i).delay_unit.toString();
+								}
+							}
+						}
+					};
+					if((tcSeq.telecommand->at(i).tcData.tcTemplate.fields->size() != 0) or 
+							(tcSeq.telecommand->at(i).tcData.fields->size() != 0) or
+							(tcSeq.telecommand->at(i).tcHeader.fields->size() != 0)) {
+						sublist := object DItemize {
+							indent := "3.75";
+							items := object OrderedSet(doctpl::DListItem) {};
+							var j : Integer := 1;
+							while(j <= tcSeq.telecommand->at(i).tcData.tcTemplate.fields->size()) {
+								var field := tcSeq.telecommand->at(i).tcData.tcTemplate.fields->at(j);
+								items += object DListItem {
+									paragraph := object DParagraph {
+										paragraphContent += object DRun {
+											text := object DText {
+												content := field.fieldRef.name + ": " + field.value.GetFieldValue();
+											}
+										}
+									}
+								};
+								j := j + 1;
+							};
+							j := 1;
+							while(j <= tcSeq.telecommand->at(i).tcData.fields->size()) {
+								var field := tcSeq.telecommand->at(i).tcData.fields->at(j);
+								items += object DListItem {
+									paragraph := object DParagraph {
+										paragraphContent += object DRun {
+											text := object DText {
+												content := field.fieldRef.name + ": " + field.value.GetFieldValue();
+											}
+										}
+									}
+								};
+								j := j + 1;
+							};
+							if(tcSeq.telecommand->at(i).tcHeader.fields->size() != 0) {
+								items += object DListItem {
+									paragraph := object DParagraph {
+										paragraphContent += object DRun {
+											italics := DRunAttributes::TRUE;
+											text := object DText {
+												content := "Header modifications: ";
+											}
+										}
+									};
+									sublist := object DItemize {
+										indent := "5.0";
+										items := object OrderedSet(doctpl::DListItem) {};
+										j := 1;
+										while(j <= tcSeq.telecommand->at(i).tcHeader.fields->size()) {
+											var headerField := tcSeq.telecommand->at(i).tcHeader.fields->at(j);
+											items += object DListItem {
+												paragraph := object DParagraph {
+													paragraphContent += object DRun {
+														text := object DText {
+															content := headerField.fieldRef.name + ": " + headerField.value.GetFieldValue();
+														}
+													}
+												}
+											};
+											j := j + 1;
+										}
+									}
+								}
+							}
+						}
+					}
+				};
+				i := i + 1;
+			}
+		}
+	} else if(self.inputs.metaClassName() = "VSVSStepAction") {
+		var action = self.inputs.oclAsType(VSVSStepAction);
+		bodyContent += object DParagraph {
+			indent := "1.25";
 			paragraphContent += object DRun {
 				text := object DText {
-					content := "Receive ";
-					var i : Integer := 1;
-					while(i <= (self.outputs.output->size())) {
-				        if((self.outputs.output->size() <> 1) and (i = self.outputs.output->size())) {
-				            content := content + " and ";
-				        }
-			        	else if(i <> 1) {
-				            content := content + ", ";
-				        };
-						content := content + self.outputs.output->at(i).name.SanitizeIO();
-						i := i + 1;
+					content := "Action: ";
+					if(action.selectedAction.type = VSVSActionType::checking) {
+						content := content + "Check ";
+					} else {
+						content := content + "Perform ";
 					};
-				};
+					content := content + action.selectedAction.name;
+					if(action.delay_value != null) {
+						content := content + " after " + action.delay_value +
+								" " + action.delay_unit.toString();
+					};
+					if(action.span_value != null) {
+						content := content + " for " + action.span_value +
+								" " + action.span_unit.toString();
+					}
+				}
+			}
+		}
+	};
+	if(self.outputs != null) {
+		if(self.outputs.metaClassName() = "VSVSStepTelemetrySet") {
+			var tmSet = self.outputs.oclAsType(VSVSStepTelemetrySet);
+			bodyContent += object DParagraph {
+				indent := "1.25";
+				paragraphContent += object DRun {
+					text := object DText {
+						content := "Receive " + tmSet.checkmode.toString() +
+									" within " + tmSet.valid_time_interval_value + " " +
+									tmSet.valid_time_interval_unit.toString() + " ";
+					}
+				}
 			};
-		};
+			bodyContent += object DItemize {
+				indent := "2.5";
+				items := object OrderedSet(doctpl::DListItem) {};
+				var i : Integer := 1;
+				while(i <= tmSet.telemetry->size()) {
+					items += object DListItem {
+						paragraph := object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := tmSet.telemetry->at(i).name.SanitizeTMTC() + " via " +
+										tmSet.telemetry->at(i).interface.name;
+								}
+							}
+						};
+						if((tmSet.telemetry->at(i).tmData.tmTemplate.fields->size() != 0) or 
+								(tmSet.telemetry->at(i).tmData.fields->size() != 0) or
+								(tmSet.telemetry->at(i).tmHeader.fields->size() != 0)) {
+							sublist := object DItemize {
+								indent := "3.75";
+								items := object OrderedSet(doctpl::DListItem) {};
+								var j : Integer := 1;
+								while(j <= tmSet.telemetry->at(i).tmData.tmTemplate.fields->size()) {
+									var field := tmSet.telemetry->at(i).tmData.tmTemplate.fields->at(j);
+									items += object DListItem {
+										paragraph := object DParagraph {
+											paragraphContent += object DRun {
+												text := object DText {
+													content := field.fieldRef.name + ": " + field.value.GetFieldValue();
+												}
+											}
+										}
+									};
+									j := j + 1;
+								};
+								j := 1;
+								while(j <= tmSet.telemetry->at(i).tmData.fields->size()) {
+									var field := tmSet.telemetry->at(i).tmData.fields->at(j);
+									items += object DListItem {
+										paragraph := object DParagraph {
+											paragraphContent += object DRun {
+												text := object DText {
+													content := field.fieldRef.name + ": " + field.value.GetFieldValue();
+												}
+											}
+										}
+									};
+									j := j + 1;
+								};
+								if(tmSet.telemetry->at(i).tmHeader.fields->size() != 0) {
+									items += object DListItem {
+										paragraph := object DParagraph {
+											paragraphContent += object DRun {
+												italics := DRunAttributes::TRUE;
+												text := object DText {
+													content := "Header filters: ";
+												}
+											}
+										};
+										sublist := object DItemize {
+											indent := "5.0";
+											items := object OrderedSet(doctpl::DListItem) {};
+											j := 1;
+											while(j <= tmSet.telemetry->at(i).tmHeader.fields->size()) {
+												var headerField := tmSet.telemetry->at(i).tmHeader.fields->at(j);
+												items += object DListItem {
+													paragraph := object DParagraph {
+														paragraphContent += object DRun {
+															text := object DText {
+																content := headerField.fieldRef.name + ": " + headerField.value.GetFieldValue();
+															}
+														}
+													}
+												};
+												j := j + 1;
+											}
+										}
+									}
+								}
+							}
+						}
+					};
+					i := i + 1;
+				}
+			}
+		}
 	};
 	return bodyContent;
 }
 
-helper String::SanitizeIO() : String {
+helper TMTCIFFieldValue::GetFieldValue() : String {
+	var textContent : String := null;
+	if(self.metaClassName() = "TMTCIFFieldValueRaw") {
+		textContent := self.oclAsType(TMTCIFFieldValueRaw).value;
+	} else if(self.metaClassName() = "TMTCIFFieldValueFile") {
+		textContent := self.oclAsType(TMTCIFFieldValueFile).filename;
+	} else if(self.metaClassName() = "TMTCIFFieldValueEnum") {
+		textContent := self.oclAsType(TMTCIFFieldValueEnum).valueRef.raw;
+	};
+	return textContent;
+}
+	
+helper String::SanitizeTMTC() : String {
 	var substrings := self.tokenize("_");
 	var retString : String;
 	var lastChar : Integer;
@@ -358,7 +760,7 @@ helper String::SanitizeIO() : String {
 				retString := retString + " " + substrings->at(i);
 			} else {
 				retString := retString + "." + substrings->at(i);
-			};
+			}
 		};
 		lastChar := substrings->at(i).at(substrings->at(i).size()).toInteger();
 		i := i + 1;
@@ -381,7 +783,7 @@ mapping svs::VSVSFixedSection::GenerateFixedSection(in sectionName : String) : d
 	while(i <= self.svsInstatiableSubsections->size()) {
 	result.sectionContent += self.svsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
 		i := i + 1;
-	};
+	}
 }
 
 mapping svs::VSVSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
@@ -392,7 +794,7 @@ mapping svs::VSVSInstantiableSection::GenerateInstatiableSubsection() : doc::DDS
 	while(i <= self.svsInstatiableSubsections->size()) {
 	result.sectionContent += self.svsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
 		i := i + 1;
-	};
+	}
 }
 
 mapping svs::VSVSDocument::GenerateTraceabilityMatricesSection() : doc::DDSection {
@@ -406,7 +808,7 @@ mapping svs::VSVSDocument::GenerateTraceabilityMatricesSection() : doc::DDSectio
 	result.sectionContent += object DDSection {
 		name := "Inverse Traceability Matrix";
 		sectionContent += self.GenerateInverseTraceabilityMatrix();
-	};
+	}
 }
 
 helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
@@ -423,9 +825,9 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SVS Test Case";
-							};
-						};
-					};
+							}
+						}
+					}
 				};
 				cells += object DCell {
 					width := "26";
@@ -434,9 +836,9 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SRS document";
-							};
-						};
-					};
+							}
+						}
+					}
 				};
 				cells += object DCell {
 					width := "15";
@@ -445,10 +847,10 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SRS Item";
-							};
-						};
-					};
-				};
+							}
+						}
+					}
+				}
 			};
 			var i : Integer := 1;
 			while(i <= self.groups->size()) {
@@ -463,28 +865,28 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 								paragraphContent += object DRun {
 									text := object DText {
 										content := self.groups->at(i).items->at(j).name;
-									};
-								};
-							};
+									}
+								}
+							}
 						};
 						cells += object DCell {
 							bodyContent += object DParagraph {
 								paragraphContent += object DRun {
 									text := object DText {
 										content := self.groups->at(i).items->at(j).validatingItem->at(1).group.doc.id;
-									};
-								};
-							};
+									}
+								}
+							}
 						};
 						cells += object DCell {
 							bodyContent += object DParagraph {
 								paragraphContent += object DRun {
 									text := object DText {
 										content := self.groups->at(i).items->at(j).validatingItem->at(1).name;
-									};
-								};
-							};
-						};
+									}
+								}
+							}
+						}
 					};
 					if(self.groups->at(i).items->at(j).validatingItem->size() > 1) {
 						var k : Integer := 2;
@@ -495,27 +897,27 @@ helper svs::VSVSDocument::GenerateDirectTraceabilityMatrix() : doc::DDBody {
 										paragraphContent += object DRun {
 											text := object DText {
 												content := self.groups->at(i).items->at(j).validatingItem->at(k).group.doc.id;
-											};
-										};
-									};
+											}
+										}
+									}
 								};
 								cells += object DCell {
 									bodyContent += object DParagraph {
 										paragraphContent += object DRun {
 											text := object DText {
 												content := self.groups->at(i).items->at(j).validatingItem->at(k).name;
-											};
-										};
-									};
-								};
+											}
+										}
+									}
+								}
 							};
 							k := k + 1;
-						};
+						}
 					};
 					j := j + 1;
 				};
 				i := i + 1;
-			};
-		};
-	};
+			}
+		}
+	}
 }
