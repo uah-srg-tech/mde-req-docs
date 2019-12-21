@@ -1,0 +1,25 @@
+<GSSTMOutput name="tm_epd_3_25_10" type="3" subtype="25" pi1_val="10" levels="2">
+	<level1_format file="tm_epd_3_25_10(v1)"/>
+	<level1_filter file="tm_epd_3_25_10_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_3_25_10_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Cpu Usage" gssField="tm_epd_3_25_10(v1).NID00073"/>
+		<OutputField name="Daily HK Bytes" gssField="tm_epd_3_25_10(v1).NID00074"/>
+		<OutputField name="DailyScienceBytes" gssField="tm_epd_3_25_10(v1).NID00075"/>
+		<OutputField name="HK Bytes Avg" gssField="tm_epd_3_25_10(v1).NID00076"/>
+		<OutputField name="Science Bytes Avg" gssField="tm_epd_3_25_10(v1).NID00077"/>
+		<OutputField name="AvgSTEPBuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0171"/>
+		<OutputField name="DescFlagStep" gssField="tm_epd_3_25_10(v1).NIDD0185"/>
+		<OutputField name="BufferUseSTEP" gssField="tm_epd_3_25_10(v1).NIDD0181"/>
+		<OutputField name="AvgSISBuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0172"/>
+		<OutputField name="DescFlagSIS" gssField="tm_epd_3_25_10(v1).NIDD0186"/>
+		<OutputField name="BufferUseSIS" gssField="tm_epd_3_25_10(v1).NIDD0182"/>
+		<OutputField name="AvgHET1BuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0173"/>
+		<OutputField name="DescFlagHET1" gssField="tm_epd_3_25_10(v1).NIDD0187"/>
+		<OutputField name="BufferUseHET1" gssField="tm_epd_3_25_10(v1).NIDD0183"/>
+		<OutputField name="DescFlagHET2" gssField="tm_epd_3_25_10(v1).NIDD0188"/>
+		<OutputField name="AvgHET2BuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0174"/>
+		<OutputField name="BufferUseHET2" gssField="tm_epd_3_25_10(v1).NIDD0184"/>
+	</fields>
+</GSSTMOutput>

@@ -1,0 +1,16 @@
+<GSSTMOutput name="tm_epd_5_4_16896" type="5" subtype="4" pi1_val="16896" levels="2">
+	<level1_format file="tm_epd_5_4_16896(v1)"/>
+	<level1_filter file="tm_epd_5_4_16896_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_5_4_16896_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="SPW Error Code" gssField="tm_epd_5_4_16896(v1).NID00104"/>
+		<OutputField name="BAD Logical Addr" gssField="tm_epd_5_4_16896(v1).NIDD0160"/>
+		<OutputField name="SPW FLAGS" gssField="tm_epd_5_4_16896(v1).NIDG0053"/>
+		<OutputField name="Parity Error" gssField="tm_epd_5_4_16896(v1).NIDD0161"/>
+		<OutputField name="Disconn error" gssField="tm_epd_5_4_16896(v1).NIDD0162"/>
+		<OutputField name="Escape Error" gssField="tm_epd_5_4_16896(v1).NIDD0163"/>
+		<OutputField name="Credit Error" gssField="tm_epd_5_4_16896(v1).NIDD0164"/>
+		<OutputField name="TickOut error" gssField="tm_epd_5_4_16896(v1).NIDD0165"/>
+	</fields>
+</GSSTMOutput>

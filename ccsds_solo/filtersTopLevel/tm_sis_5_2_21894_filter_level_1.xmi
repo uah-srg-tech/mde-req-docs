@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_5_2_21894_filter_level_1" uri="es.uah.aut.srg.tm_sis_5_2_21894_filter_level_1" version="v1" description="5,2 Alarm Event: A Stop MCP HV I Too High">
+  <formatFile href="../tmFormats/tm_sis_5_2_21894.xmi#/"/>
+  <BoolVar id="0" name="NID10245_21894" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_5_2_21894.xmi#//@CSField.1"/>
+    <Op type="equal"/>
+    <Constant value="21894"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

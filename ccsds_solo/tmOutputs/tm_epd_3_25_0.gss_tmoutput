@@ -1,0 +1,21 @@
+<GSSTMOutput name="tm_epd_3_25_0" type="3" subtype="25" pi1_val="0" levels="2">
+	<level1_format file="tm_epd_3_25_0(v1)"/>
+	<level1_filter file="tm_epd_3_25_0_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_3_25_0_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="EPD Mode and LCL" gssField="tm_epd_3_25_0(v1).NID00068"/>
+		<OutputField name="Current S1" gssField="tm_epd_3_25_0(v1).NID00069"/>
+		<OutputField name="Current S2" gssField="tm_epd_3_25_0(v1).NID00070"/>
+		<OutputField name="Current S3" gssField="tm_epd_3_25_0(v1).NID00071"/>
+		<OutputField name="Current S4" gssField="tm_epd_3_25_0(v1).NID00072"/>
+		<OutputField name="Voltage S1" gssField="tm_epd_3_25_0(v1).NID00080"/>
+		<OutputField name="Voltage S2" gssField="tm_epd_3_25_0(v1).NID00081"/>
+		<OutputField name="Voltage S3" gssField="tm_epd_3_25_0(v1).NID00082"/>
+		<OutputField name="Voltage S4" gssField="tm_epd_3_25_0(v1).NID00083"/>
+		<OutputField name="SpW Errors" gssField="tm_epd_3_25_0(v1).NID00051"/>
+		<OutputField name="TC Errors" gssField="tm_epd_3_25_0(v1).NID00108"/>
+		<OutputField name="Burst Flags" gssField="tm_epd_3_25_0(v1).NID00061"/>
+		<OutputField name="TC accepted" gssField="tm_epd_3_25_0(v1).NID00112"/>
+	</fields>
+</GSSTMOutput>

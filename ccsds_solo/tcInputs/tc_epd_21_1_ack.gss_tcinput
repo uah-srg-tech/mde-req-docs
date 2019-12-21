@@ -1,0 +1,7 @@
+<GSSTCInput name="tc_epd_21_1_ack" type="21" subtype="1" levels="2">
+	<level1_format file="tc_epd_21_1(v1)"/>
+	<to_level0_export file="tc_epd_21_1_export_ack(v1)"/>
+	<fields>
+		<InputField name="Subsystem ID" gssField="tc_epd_21_1(v1).PID00006"/>
+	</fields>
+</GSSTCInput>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_21_3_192_filter_level_1" uri="es.uah.aut.srg.tm_sis_21_3_192_filter_level_1" version="v1" description="21,3 A Basic Rates, Fast">
+  <formatFile href="../tmFormats/tm_sis_21_3_192.xmi#/"/>
+  <BoolVar id="0" name="NID10001_192" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_21_3_192.xmi#//@CSField.1"/>
+    <Op type="equal"/>
+    <Constant value="192"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

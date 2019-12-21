@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_5_2_21824_filter_level_1 {
+	//5,2 Alarm Event: A Stop MCP HV V Too Low
+	uri := es.uah.aut.srg.tm_sis_5_2_21824_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_5_2_21824(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10245_21824;
+		constantType := decimal;
+		FieldRef := NID10245;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 21824;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

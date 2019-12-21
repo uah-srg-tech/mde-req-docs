@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_1_8_40704_filter_level_1 {
+	//1,8 Cannot Run Macro
+	uri := es.uah.aut.srg.tm_sis_1_8_40704_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_1_8_40704(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10238_40704;
+		constantType := decimal;
+		FieldRef := NID10238;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40704;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

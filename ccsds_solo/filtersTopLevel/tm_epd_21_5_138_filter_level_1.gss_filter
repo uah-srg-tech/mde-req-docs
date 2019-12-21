@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_21_5_138_filter_level_1 {
+	//TM 21,5 STEP SelDL PHA
+	uri := es.uah.aut.srg.tm_epd_21_5_138_filter_level_1;
+	version := v1;
+	formatFile := tm_epd_21_5_138(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00142_138;
+		constantType := decimal;
+		FieldRef := NID00142;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 138;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

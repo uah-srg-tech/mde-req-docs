@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_3_25_6_filter_level_1 {
+	//3,25 Boot Status
+	uri := es.uah.aut.srg.tm_sis_3_25_6_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_3_25_6(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10000_6;
+		constantType := decimal;
+		FieldRef := NID10000;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 6;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

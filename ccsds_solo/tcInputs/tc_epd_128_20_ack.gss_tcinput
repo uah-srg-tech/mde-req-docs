@@ -1,0 +1,9 @@
+<GSSTCInput name="tc_epd_128_20_ack" type="128" subtype="20" levels="2">
+	<level1_format file="tc_epd_128_20(v1)"/>
+	<to_level0_export file="tc_epd_128_20_export_ack(v1)"/>
+	<fields>
+		<InputField name="Source ID" gssField="tc_epd_128_20(v1).PID00030"/>
+		<InputField name="Activation" gssField="tc_epd_128_20(v1).PID00031"/>
+		<InputField name="Activation Time" gssField="tc_epd_128_20(v1).PID00078"/>
+	</fields>
+</GSSTCInput>

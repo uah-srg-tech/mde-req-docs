@@ -1,0 +1,67 @@
+GSSExportExport tc_epd_6_128_export_ack {
+	//TC 6,128 Apply patches to memory
+	uri := es.uah.aut.srg.tc_epd_6_128_export_ack;
+	version := v1;
+	from := tc_epd_6_128(v1);
+	to := CCSDS_TC(v1);
+	GSSExportSettings {
+		GSSExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := Application_Data;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDS_SHF;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUS_Version;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := Type;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := Version_Number;
+		};
+		GSSExportSettingFromConst {
+			value := 3;
+			toFieldRef := Segmentation_Flags;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := Source_ID;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := Data_Field_Header_Flag;
+		};
+		GSSExportSettingFromConst {
+			value := 812;
+			toFieldRef := Application_Process_ID;
+		};
+		GSSExportSettingFromConst {
+			value := 6;
+			toFieldRef := Packet_Type;
+		};
+		GSSExportSettingFromConst {
+			value := 128;
+			toFieldRef := Packet_Subtype;
+		};
+		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := Packet_Length;
+		};
+	};
+	GSSExportActivateDICs {
+		GSSExportDIC {
+			id := 0;
+			DICRef := CRC;
+		};
+	};
+};

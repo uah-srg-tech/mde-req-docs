@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_1_2_40006_filter_level_1 {
+	//TM 1,2 PUS version
+	uri := es.uah.aut.srg.tm_epd_1_2_40006_filter_level_1;
+	version := v1;
+	formatFile := tm_epd_1_2_40006(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00001_40006;
+		constantType := decimal;
+		FieldRef := NID00001;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40006;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

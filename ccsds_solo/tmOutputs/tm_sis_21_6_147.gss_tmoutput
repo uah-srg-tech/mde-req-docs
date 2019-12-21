@@ -1,0 +1,21 @@
+<GSSTMOutput name="tm_sis_21_6_147" type="21" subtype="6" pi1_val="147" levels="2">
+	<level1_format file="tm_sis_21_6_147(v1)"/>
+	<level1_filter file="tm_sis_21_6_147_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_21_6_147_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Global 21" gssField="tm_sis_21_6_147(v1).NIDG1020"/>
+		<OutputField name="Reserved" gssField="tm_sis_21_6_147(v1).NIDD1105"/>
+		<OutputField name="Burst Trigger" gssField="tm_sis_21_6_147(v1).NIDD1106"/>
+		<OutputField name="Iris Flag" gssField="tm_sis_21_6_147(v1).NIDD1107"/>
+		<OutputField name="Abort Flag" gssField="tm_sis_21_6_147(v1).NIDD1108"/>
+		<OutputField name="Global 22" gssField="tm_sis_21_6_147(v1).NIDG1021"/>
+		<OutputField name="Reserved" gssField="tm_sis_21_6_147(v1).NIDD1109"/>
+		<OutputField name="Iris Position" gssField="tm_sis_21_6_147(v1).NIDD1110"/>
+		<OutputField name="Int. Time" gssField="tm_sis_21_6_147(v1).NID10412"/>
+		<OutputField name="A Aux. Counts, Medium" gssField="tm_sis_21_6_147(v1).NID10419"/>
+		<OutputField name="A TOFxE Length, Medium" gssField="tm_sis_21_6_147(v1).NID10420"/>
+		<OutputField name="NID10420_block" gssField="tm_sis_21_6_147(v1).NID10420_block"/>
+		<OutputField name="A TOFxE Counts, Medium" gssField="tm_sis_21_6_147(v1).NID10421"/>
+	</fields>
+</GSSTMOutput>

@@ -1,0 +1,8 @@
+<GSSTCInput name="tc_sis_3_5_ack" type="3" subtype="5" levels="2">
+	<level1_format file="tc_sis_3_5(v1)"/>
+	<to_level0_export file="tc_sis_3_5_export_ack(v1)"/>
+	<fields>
+		<InputField name="SID" gssField="tc_sis_3_5(v1).SID"/>
+		<InputField name="Pad" gssField="tc_sis_3_5(v1).Pad"/>
+	</fields>
+</GSSTCInput>

@@ -1,0 +1,9 @@
+<GSSTMOutput name="tm_epd_5_1_4354" type="5" subtype="1" pi1_val="4354" levels="2">
+	<level1_format file="tm_epd_5_1_4354(v1)"/>
+	<level1_filter file="tm_epd_5_1_4354_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_5_1_4354_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="SIS State" gssField="tm_epd_5_1_4354(v1).NID00101"/>
+	</fields>
+</GSSTMOutput>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_21_5_138_filter_level_0" uri="es.uah.aut.srg.tm_epd_21_5_138_filter_level_0" version="v1" description="TM 21,5 STEP SelDL PHA">
+  <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
+  <BoolVar id="0" name="Application_Process_ID_1612" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.4"/>
+    <Op type="equal"/>
+    <Constant value="1612"/>
+  </BoolVar>
+  <BoolVar id="1" name="Packet_Type_21" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.11"/>
+    <Op type="equal"/>
+    <Constant value="21"/>
+  </BoolVar>
+  <BoolVar id="2" name="Packet_Subtype_5" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.12"/>
+    <Op type="equal"/>
+    <Constant value="5"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+    <BoolVarRef idRef="1"/>
+    <BoolVarRef idRef="2"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

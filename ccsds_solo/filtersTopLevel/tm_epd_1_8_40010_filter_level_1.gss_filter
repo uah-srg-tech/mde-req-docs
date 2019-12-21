@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_1_8_40010_filter_level_1 {
+	//TM 1,8 Time Update Error
+	uri := es.uah.aut.srg.tm_epd_1_8_40010_filter_level_1;
+	version := v1;
+	formatFile := tm_epd_1_8_40010(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00001_40010;
+		constantType := decimal;
+		FieldRef := NID00001;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40010;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

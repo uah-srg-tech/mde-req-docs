@@ -1,0 +1,7 @@
+GSSFormatFormat tc_epd_0_0 {
+	//WrongPacket: Packet with wrong type and subtype
+	uri := es.uah.aut.srg.tc_epd_0_0;
+	version := v1;
+	protocol := EPD_PUS;
+	type := TC;
+};

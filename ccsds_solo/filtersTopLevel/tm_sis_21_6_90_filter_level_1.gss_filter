@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_21_6_90_filter_level_1 {
+	//21,6 A Ultra-Heavy Events
+	uri := es.uah.aut.srg.tm_sis_21_6_90_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_21_6_90(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10001_90;
+		constantType := decimal;
+		FieldRef := NID10001;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 90;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

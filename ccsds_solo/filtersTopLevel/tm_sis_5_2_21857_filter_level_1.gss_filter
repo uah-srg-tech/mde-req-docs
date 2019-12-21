@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_5_2_21857_filter_level_1 {
+	//5,2 Alarm Event: +1.5V I Too High
+	uri := es.uah.aut.srg.tm_sis_5_2_21857_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_5_2_21857(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10245_21857;
+		constantType := decimal;
+		FieldRef := NID10245;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 21857;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

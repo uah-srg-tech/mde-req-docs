@@ -1,0 +1,11 @@
+<GSSTMOutput name="tm_epd_21_5_167" type="21" subtype="5" pi1_val="167" levels="2">
+	<level1_format file="tm_epd_21_5_167(v1)"/>
+	<level1_filter file="tm_epd_21_5_167_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_21_5_167_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="N_Data" gssField="tm_epd_21_5_167(v1).NID00143"/>
+		<OutputField name="NID00143_block" gssField="tm_epd_21_5_167(v1).NID00143_block"/>
+		<OutputField name="Science_Data" gssField="tm_epd_21_5_167(v1).NID00144"/>
+	</fields>
+</GSSTMOutput>

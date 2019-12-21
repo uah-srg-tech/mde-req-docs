@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_5_2_8198_filter_level_1 {
+	//TM5,2 STEP Sensor TC ERROR
+	uri := es.uah.aut.srg.tm_epd_5_2_8198_filter_level_1;
+	version := v1;
+	formatFile := tm_epd_5_2_8198(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00052_8198;
+		constantType := decimal;
+		FieldRef := NID00052;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 8198;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

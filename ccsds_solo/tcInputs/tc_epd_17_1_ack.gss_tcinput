@@ -1,0 +1,3 @@
+<GSSTCInput name="tc_epd_17_1_ack" type="17" subtype="1" levels="1">
+	<to_level0_export file="tc_epd_17_1_export_ack(v1)"/>
+</GSSTCInput>

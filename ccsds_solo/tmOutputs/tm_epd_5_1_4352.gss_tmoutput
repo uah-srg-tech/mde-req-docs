@@ -1,0 +1,19 @@
+<GSSTMOutput name="tm_epd_5_1_4352" type="5" subtype="1" pi1_val="4352" levels="2">
+	<level1_format file="tm_epd_5_1_4352(v1)"/>
+	<level1_filter file="tm_epd_5_1_4352_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_5_1_4352_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="BurstDisabled" gssField="tm_epd_5_1_4352(v1).NID00099"/>
+		<OutputField name="L1 Burst bits Ev1" gssField="tm_epd_5_1_4352(v1).NID00195"/>
+		<OutputField name="L1 Burst bits Ev2" gssField="tm_epd_5_1_4352(v1).NID00196"/>
+		<OutputField name="L1 Burst bits Ev3" gssField="tm_epd_5_1_4352(v1).NID00197"/>
+		<OutputField name="L2BurstBits" gssField="tm_epd_5_1_4352(v1).NID00175"/>
+		<OutputField name="Activation Mode" gssField="tm_epd_5_1_4352(v1).NID00098"/>
+		<OutputField name="Activation Value" gssField="tm_epd_5_1_4352(v1).NID00176"/>
+		<OutputField name="MinDuration" gssField="tm_epd_5_1_4352(v1).NID00177"/>
+		<OutputField name="MaxDuration" gssField="tm_epd_5_1_4352(v1).NID00178"/>
+		<OutputField name="BufferTime" gssField="tm_epd_5_1_4352(v1).NID00179"/>
+		<OutputField name="IdleTime" gssField="tm_epd_5_1_4352(v1).NID00180"/>
+	</fields>
+</GSSTMOutput>

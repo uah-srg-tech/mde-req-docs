@@ -1,0 +1,67 @@
+GSSExportExport tc_sis_129_200_export_ack {
+	//129,200 SIS_IRIS_AUTO
+	uri := es.uah.aut.srg.tc_sis_129_200_export_ack;
+	version := v1;
+	from := tc_sis_129_200(v1);
+	to := CCSDS_TC(v1);
+	GSSExportSettings {
+		GSSExportSettingFromField {
+			fieldRef := ApplicationData;
+			toFieldRef := Application_Data;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := CCSDS_SHF;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := PUS_Version;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := Type;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := Version_Number;
+		};
+		GSSExportSettingFromConst {
+			value := 3;
+			toFieldRef := Segmentation_Flags;
+		};
+		GSSExportSettingFromConst {
+			value := 0;
+			toFieldRef := Source_ID;
+		};
+		GSSExportSettingFromConst {
+			value := 1;
+			toFieldRef := Data_Field_Header_Flag;
+		};
+		GSSExportSettingFromConst {
+			value := 876;
+			toFieldRef := Application_Process_ID;
+		};
+		GSSExportSettingFromConst {
+			value := 129;
+			toFieldRef := Packet_Type;
+		};
+		GSSExportSettingFromConst {
+			value := 200;
+			toFieldRef := Packet_Subtype;
+		};
+		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := ACK;
+		};
+		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := Packet_Length;
+		};
+	};
+	GSSExportActivateDICs {
+		GSSExportDIC {
+			id := 0;
+			DICRef := CRC;
+		};
+	};
+};

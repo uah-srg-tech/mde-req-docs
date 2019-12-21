@@ -1,0 +1,51 @@
+GSSFilterMintermFilter EPD_CCSDS_TM {
+	//EPD_CCSDS_TM
+	uri := es.uah.aut.srg.EPD_CCSDS_TM;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := Version_Number_0;
+		constantType := decimal;
+		FieldRef := Version_Number;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 0;
+		};
+	};
+	GSSFilterBoolVar {
+		id := 1;
+		name := PUS_Version_1;
+		constantType := decimal;
+		FieldRef := PUS_Version;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 1;
+		};
+	};
+	GSSFilterBoolVarFDIC {
+		id := 2;
+		name := CRC;
+		FieldRef := CRC;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 1;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 2;
+		};
+	};
+};

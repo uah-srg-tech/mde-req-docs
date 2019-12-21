@@ -1,0 +1,11 @@
+<GSSTCInput name="tc_sis_6_2_ack" type="6" subtype="2" levels="2">
+	<level1_format file="tc_sis_6_2(v1)"/>
+	<to_level0_export file="tc_sis_6_2_export_ack(v1)"/>
+	<fields>
+		<InputField name="Memory ID" gssField="tc_sis_6_2(v1).Memory ID"/>
+		<InputField name="Address" gssField="tc_sis_6_2(v1).PID10009"/>
+		<InputField name="LengthLoad PUS" gssField="tc_sis_6_2(v1).PID10015"/>
+		<InputField name="PID10015_block" gssField="tc_sis_6_2(v1).PID10015_block"/>
+		<InputField name="Data" gssField="tc_sis_6_2(v1).PID10056"/>
+	</fields>
+</GSSTCInput>

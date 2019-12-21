@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_5_2_21863_filter_level_0" uri="es.uah.aut.srg.tm_sis_5_2_21863_filter_level_0" version="v1" description="5,2 Alarm Event: +6V V Too High">
+  <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
+  <BoolVar id="0" name="Application_Process_ID_871" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.4"/>
+    <Op type="equal"/>
+    <Constant value="871"/>
+  </BoolVar>
+  <BoolVar id="1" name="Packet_Type_5" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.11"/>
+    <Op type="equal"/>
+    <Constant value="5"/>
+  </BoolVar>
+  <BoolVar id="2" name="Packet_Subtype_2" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.12"/>
+    <Op type="equal"/>
+    <Constant value="2"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+    <BoolVarRef idRef="1"/>
+    <BoolVarRef idRef="2"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

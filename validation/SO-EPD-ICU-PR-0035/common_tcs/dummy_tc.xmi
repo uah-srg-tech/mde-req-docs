@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<tmtcif:TMTCIFFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tmtcif="http://srg.aut.uah.es/tmtcif/format" name="dummy_tc" uri="es.uah.aut.srg.dummy_tc" version="v1" protocol="dummy" type="TC">
-  <CSField name="dummyField" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
-    <globalOffset bytes="0" bits="0"/>
-  </CSField>
-</tmtcif:TMTCIFFormatFormat>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_21_5_186_filter_level_1" uri="es.uah.aut.srg.tm_epd_21_5_186_filter_level_1" version="v1" description="TM 21,5 HE2 SelDL PHA">
+  <formatFile href="../tmFormats/tm_epd_21_5_186.xmi#/"/>
+  <BoolVar id="0" name="NID00142_186" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_epd_21_5_186.xmi#//@CSField.0"/>
+    <Op type="equal"/>
+    <Constant value="186"/>
+  </BoolVar>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

@@ -1,0 +1,28 @@
+<GSSTCInput name="tc_epd_128_127_ack" type="128" subtype="127" levels="2">
+	<level1_format file="tc_epd_128_127(v1)"/>
+	<to_level0_export file="tc_epd_128_127_export_ack(v1)"/>
+	<fields>
+		<InputField name="ParameterId" gssField="tc_epd_128_127(v1).PID00012"/>
+		<InputField name="Monitoring Interval" gssField="tc_epd_128_127(v1).PID00013"/>
+		<InputField name="NOL" gssField="tc_epd_128_127(v1).PID00014"/>
+		<InputField name="Low Limit" gssField="tc_epd_128_127(v1).PID00017"/>
+		<InputField name="RID_NOL_LOW" gssField="tc_epd_128_127(v1).PID00025"/>
+		<InputField name="High Limit" gssField="tc_epd_128_127(v1).PID00026"/>
+		<InputField name="RID_NOL_HIGH" gssField="tc_epd_128_127(v1).PID00041"/>
+		<InputField name="NOD" gssField="tc_epd_128_127(v1).PID00015"/>
+		<InputField name="Low Delta Threshold" gssField="tc_epd_128_127(v1).PID00027"/>
+		<InputField name="RID_NOD_LOW" gssField="tc_epd_128_127(v1).PID00042"/>
+		<InputField name="High Delta Threshold" gssField="tc_epd_128_127(v1).PID00028"/>
+		<InputField name="RID_NOD_HIGH" gssField="tc_epd_128_127(v1).PID00043"/>
+		<InputField name="NOE" gssField="tc_epd_128_127(v1).PID00016"/>
+		<InputField name="Expected Value" gssField="tc_epd_128_127(v1).PID00029"/>
+		<InputField name="RID_NOE" gssField="tc_epd_128_127(v1).PID00044"/>
+		<InputField name="NOB" gssField="tc_epd_128_127(v1).PID00035"/>
+		<InputField name="Bit Mask" gssField="tc_epd_128_127(v1).PID00036"/>
+		<InputField name="Expected Value" gssField="tc_epd_128_127(v1).PID00037"/>
+		<InputField name="RID_NOB" gssField="tc_epd_128_127(v1).PID00045"/>
+		<InputField name="NOF" gssField="tc_epd_128_127(v1).PID00038"/>
+		<InputField name="Bit Mask NOF" gssField="tc_epd_128_127(v1).PID00049"/>
+		<InputField name="RID_NOF" gssField="tc_epd_128_127(v1).PID00046"/>
+	</fields>
+</GSSTCInput>

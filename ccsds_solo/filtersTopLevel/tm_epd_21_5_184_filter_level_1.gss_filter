@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_21_5_184_filter_level_1 {
+	//TM 21,5 HE2 LLD PHA
+	uri := es.uah.aut.srg.tm_epd_21_5_184_filter_level_1;
+	version := v1;
+	formatFile := tm_epd_21_5_184(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00142_184;
+		constantType := decimal;
+		FieldRef := NID00142;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 184;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

@@ -1,0 +1,9 @@
+<GSSTMOutput name="tm_epd_5_2_8200" type="5" subtype="2" pi1_val="8200" levels="2">
+	<level1_format file="tm_epd_5_2_8200(v1)"/>
+	<level1_filter file="tm_epd_5_2_8200_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_5_2_8200_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="CAU Error Type" gssField="tm_epd_5_2_8200(v1).NID00103"/>
+	</fields>
+</GSSTMOutput>

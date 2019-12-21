@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_1_8_40709_filter_level_1 {
+	//1,8 Cannot Restore Macros
+	uri := es.uah.aut.srg.tm_sis_1_8_40709_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_1_8_40709(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10238_40709;
+		constantType := decimal;
+		FieldRef := NID10238;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40709;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

@@ -1,0 +1,26 @@
+<GSSTMOutput name="tm_sis_3_25_6" type="3" subtype="25" pi1_val="6" levels="2">
+	<level1_format file="tm_sis_3_25_6(v1)"/>
+	<level1_filter file="tm_sis_3_25_6_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_3_25_6_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Sw. Version" gssField="tm_sis_3_25_6(v1).NID10214"/>
+		<OutputField name="Status Int." gssField="tm_sis_3_25_6(v1).NID10215"/>
+		<OutputField name="Tlm Vol." gssField="tm_sis_3_25_6(v1).NID10216"/>
+		<OutputField name="Watch Addr." gssField="tm_sis_3_25_6(v1).NID10217"/>
+		<OutputField name="Watch Mem" gssField="tm_sis_3_25_6(v1).NID10218"/>
+		<OutputField name="Watch Data" gssField="tm_sis_3_25_6(v1).NID10219"/>
+		<OutputField name="Alarm Id" gssField="tm_sis_3_25_6(v1).NID10220"/>
+		<OutputField name="Global 1" gssField="tm_sis_3_25_6(v1).NIDG1000"/>
+		<OutputField name="Alarm Type" gssField="tm_sis_3_25_6(v1).NIDD1000"/>
+		<OutputField name="Alarm Count" gssField="tm_sis_3_25_6(v1).NIDD1001"/>
+		<OutputField name="Cmd Exec" gssField="tm_sis_3_25_6(v1).NID10223"/>
+		<OutputField name="Cmd Reject" gssField="tm_sis_3_25_6(v1).NID10224"/>
+		<OutputField name="Global 2" gssField="tm_sis_3_25_6(v1).NIDG1001"/>
+		<OutputField name="Cause" gssField="tm_sis_3_25_6(v1).NIDD1002"/>
+		<OutputField name="Write Enb" gssField="tm_sis_3_25_6(v1).NIDD1003"/>
+		<OutputField name="Echo Enb" gssField="tm_sis_3_25_6(v1).NIDD1004"/>
+		<OutputField name="Reserved" gssField="tm_sis_3_25_6(v1).NIDD1005"/>
+		<OutputField name="Code Ram" gssField="tm_sis_3_25_6(v1).NIDD1006"/>
+	</fields>
+</GSSTMOutput>

@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_1_8_40706_filter_level_1 {
+	//1,8 Macro Compilation Error
+	uri := es.uah.aut.srg.tm_sis_1_8_40706_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_1_8_40706(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10238_40706;
+		constantType := decimal;
+		FieldRef := NID10238;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40706;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

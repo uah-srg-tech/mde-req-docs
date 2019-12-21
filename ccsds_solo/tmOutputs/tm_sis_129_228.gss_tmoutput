@@ -1,0 +1,71 @@
+<GSSTMOutput name="tm_sis_129_228" type="129" subtype="228"  levels="2">
+	<level1_format file="tm_sis_129_228(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_129_228_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="MCP HV Clock" gssField="tm_sis_129_228(v1).NID10260"/>
+		<OutputField name="MCP HV Ramp Up Rate" gssField="tm_sis_129_228(v1).NID10261"/>
+		<OutputField name="MCP HV Ramp Down Rate" gssField="tm_sis_129_228(v1).NID10262"/>
+		<OutputField name="MCP HV Safe Limit" gssField="tm_sis_129_228(v1).NID10263"/>
+		<OutputField name="SSD Bias Clock" gssField="tm_sis_129_228(v1).NID10264"/>
+		<OutputField name="SSD Bias Ramp Up Rate" gssField="tm_sis_129_228(v1).NID10265"/>
+		<OutputField name="SSD Bias Ramp Down Rate" gssField="tm_sis_129_228(v1).NID10266"/>
+		<OutputField name="MCP HV Safe Thresh" gssField="tm_sis_129_228(v1).NID10267"/>
+		<OutputField name="A He Hist Mass Low" gssField="tm_sis_129_228(v1).NID10268"/>
+		<OutputField name="A He Hist Mass High" gssField="tm_sis_129_228(v1).NID10269"/>
+		<OutputField name="A He Hist Einc Low" gssField="tm_sis_129_228(v1).NID10270"/>
+		<OutputField name="A He Hist Einc High" gssField="tm_sis_129_228(v1).NID10271"/>
+		<OutputField name="A UH Mass Thresh" gssField="tm_sis_129_228(v1).NID10272"/>
+		<OutputField name="A UH Einc Thresh" gssField="tm_sis_129_228(v1).NID10273"/>
+		<OutputField name="A UH PW Thresh" gssField="tm_sis_129_228(v1).NID10274"/>
+		<OutputField name="A UH Ratio Low" gssField="tm_sis_129_228(v1).NID10275"/>
+		<OutputField name="A UH Ratio High" gssField="tm_sis_129_228(v1).NID10276"/>
+		<OutputField name="A Pulser Energy Low" gssField="tm_sis_129_228(v1).NID10277"/>
+		<OutputField name="A Pulser Energy High" gssField="tm_sis_129_228(v1).NID10278"/>
+		<OutputField name="A Pulser St1 Stp Low" gssField="tm_sis_129_228(v1).NID10279"/>
+		<OutputField name="A Pulser St1Sp High" gssField="tm_sis_129_228(v1).NID10280"/>
+		<OutputField name="A Pulser St2Sp Low" gssField="tm_sis_129_228(v1).NID10281"/>
+		<OutputField name="A Pulser St2Sp High" gssField="tm_sis_129_228(v1).NID10282"/>
+		<OutputField name="A Pulser St1St2 Low" gssField="tm_sis_129_228(v1).NID10283"/>
+		<OutputField name="A Pulser St1St2 High" gssField="tm_sis_129_228(v1).NID10284"/>
+		<OutputField name="A Pulser Include" gssField="tm_sis_129_228(v1).NID10285"/>
+		<OutputField name="A Burst Priority Sel" gssField="tm_sis_129_228(v1).NID10286"/>
+		<OutputField name="A Burst Thresh" gssField="tm_sis_129_228(v1).NID10287"/>
+		<OutputField name="B He Hist Mass Low" gssField="tm_sis_129_228(v1).NID10288"/>
+		<OutputField name="B He Hist Mass High" gssField="tm_sis_129_228(v1).NID10289"/>
+		<OutputField name="B He Hist Einc Low" gssField="tm_sis_129_228(v1).NID10290"/>
+		<OutputField name="B He Hist Einc High" gssField="tm_sis_129_228(v1).NID10291"/>
+		<OutputField name="B UH Mass Thresh" gssField="tm_sis_129_228(v1).NID10292"/>
+		<OutputField name="B UH Einc Thresh" gssField="tm_sis_129_228(v1).NID10293"/>
+		<OutputField name="B UH PW Thresh" gssField="tm_sis_129_228(v1).NID10294"/>
+		<OutputField name="B UH Ratio Low" gssField="tm_sis_129_228(v1).NID10295"/>
+		<OutputField name="B UH Ratio High" gssField="tm_sis_129_228(v1).NID10296"/>
+		<OutputField name="B Pulser Energy Low" gssField="tm_sis_129_228(v1).NID10297"/>
+		<OutputField name="B Pulser Energy High" gssField="tm_sis_129_228(v1).NID10298"/>
+		<OutputField name="B Pulser St1Sp Low" gssField="tm_sis_129_228(v1).NID10299"/>
+		<OutputField name="B Pulser St1Sp High" gssField="tm_sis_129_228(v1).NID10300"/>
+		<OutputField name="B Pulser St2Sp Low" gssField="tm_sis_129_228(v1).NID10301"/>
+		<OutputField name="B Pulser St2Sp High" gssField="tm_sis_129_228(v1).NID10302"/>
+		<OutputField name="B Pulser St1St2 Low" gssField="tm_sis_129_228(v1).NID10303"/>
+		<OutputField name="B Pulser St1St2 High" gssField="tm_sis_129_228(v1).NID10304"/>
+		<OutputField name="B Pulser Include" gssField="tm_sis_129_228(v1).NID10305"/>
+		<OutputField name="B Burst Priority Sel" gssField="tm_sis_129_228(v1).NID10306"/>
+		<OutputField name="B Burst Thresh" gssField="tm_sis_129_228(v1).NID10307"/>
+		<OutputField name="A Iris Min. Position" gssField="tm_sis_129_228(v1).NID10308"/>
+		<OutputField name="A Iris Energy Counter" gssField="tm_sis_129_228(v1).NID10309"/>
+		<OutputField name="A Iris Energy Thresh Low" gssField="tm_sis_129_228(v1).NID10310"/>
+		<OutputField name="A Iris Energy Thresh Hi" gssField="tm_sis_129_228(v1).NID10311"/>
+		<OutputField name="A Iris Open Time" gssField="tm_sis_129_228(v1).NID10312"/>
+		<OutputField name="A Iris CFD Ratio" gssField="tm_sis_129_228(v1).NID10313"/>
+		<OutputField name="A Iris CFD Ratio Thresh" gssField="tm_sis_129_228(v1).NID10314"/>
+		<OutputField name="B Iris Min. Position" gssField="tm_sis_129_228(v1).NID10315"/>
+		<OutputField name="B Iris Energy Counter" gssField="tm_sis_129_228(v1).NID10316"/>
+		<OutputField name="B Iris Energy Thresh Low" gssField="tm_sis_129_228(v1).NID10317"/>
+		<OutputField name="B Iris Energy Thresh Hi" gssField="tm_sis_129_228(v1).NID10318"/>
+		<OutputField name="B Iris Open Time" gssField="tm_sis_129_228(v1).NID10319"/>
+		<OutputField name="B Iris CFD Ratio" gssField="tm_sis_129_228(v1).NID10320"/>
+		<OutputField name="B Iris CFD Ratio Thresh" gssField="tm_sis_129_228(v1).NID10321"/>
+		<OutputField name="A Iris Open" gssField="tm_sis_129_228(v1).NID10324"/>
+		<OutputField name="B Iris Open" gssField="tm_sis_129_228(v1).NID10325"/>
+	</fields>
+</GSSTMOutput>

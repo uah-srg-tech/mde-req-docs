@@ -1,0 +1,3 @@
+<GSSTCInput name="tc_epd_128_3" type="128" subtype="3" levels="1">
+	<to_level0_export file="tc_epd_128_3_export(v1)"/>
+</GSSTCInput>

@@ -1,0 +1,9 @@
+<GSSTMOutput name="tm_sis_1_7" type="1" subtype="7"  levels="2">
+	<level1_format file="tm_sis_1_7(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_1_7_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Packet ID" gssField="tm_sis_1_7(v1).NID10238"/>
+		<OutputField name="Packet Sequence" gssField="tm_sis_1_7(v1).NID10239"/>
+	</fields>
+</GSSTMOutput>

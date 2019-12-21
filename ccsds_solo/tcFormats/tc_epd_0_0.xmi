@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_0_0" uri="es.uah.aut.srg.tc_epd_0_0" version="v1" description="WrongPacket: Packet with wrong type and subtype" protocol="EPD_PUS" type="TC"/>

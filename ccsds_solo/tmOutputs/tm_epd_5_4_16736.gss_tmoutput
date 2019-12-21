@@ -1,0 +1,12 @@
+<GSSTMOutput name="tm_epd_5_4_16736" type="5" subtype="4" pi1_val="16736" levels="2">
+	<level1_format file="tm_epd_5_4_16736(v1)"/>
+	<level1_filter file="tm_epd_5_4_16736_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_5_4_16736_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Report ReadOut" gssField="tm_epd_5_4_16736(v1).NIDG0140"/>
+		<OutputField name="STEP ReadOut Status" gssField="tm_epd_5_4_16736(v1).NIDD0152"/>
+		<OutputField name="EPT_HET_1 ReadOut Status" gssField="tm_epd_5_4_16736(v1).NIDD0153"/>
+		<OutputField name="EPT_HET_2 ReadOut Status" gssField="tm_epd_5_4_16736(v1).NIDD0154"/>
+	</fields>
+</GSSTMOutput>

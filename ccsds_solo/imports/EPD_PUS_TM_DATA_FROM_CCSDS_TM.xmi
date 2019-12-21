@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSImportImport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/import" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="EPD_PUS_TM_DATA_FROM_CCSDS_TM" uri="es.uah.aut.srg.EPD_PUS_TM_DATA_FROM_CCSDS_TM" version="v1" description="EPD_PUS_TM_DATA_FROM_CCSDS_TM">
+  <from href="../tmFormats/CCSDS_TM.xmi#/"/>
+  <to href="../tmFormats/EPD_PUS_TM_DATA.xmi#/"/>
+  <dataSource leftTrim="0" rightTrim="0">
+    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../tmFormats/CCSDS_TM.xmi#//@VSField.0"/>
+  </dataSource>
+</gss:GSSImportImport>

@@ -1,0 +1,34 @@
+<GSSTMOutput name="tm_epd_128_129" type="128" subtype="129"  levels="2">
+	<level1_format file="tm_epd_128_129(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_128_129_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Overall Monitor Status" gssField="tm_epd_128_129(v1).NID00011"/>
+		<OutputField name="Max Reporting Delay" gssField="tm_epd_128_129(v1).NID00012"/>
+		<OutputField name="N" gssField="tm_epd_128_129(v1).NID00015"/>
+		<OutputField name="NID00015_block" gssField="tm_epd_128_129(v1).NID00015_block"/>
+		<OutputField name="Parameter ID" gssField="tm_epd_128_129(v1).NID00018"/>
+		<OutputField name="Monitoring Interval" gssField="tm_epd_128_129(v1).NID00019"/>
+		<OutputField name="Monitoring Status" gssField="tm_epd_128_129(v1).NID00020"/>
+		<OutputField name="NOL" gssField="tm_epd_128_129(v1).NID00021"/>
+		<OutputField name="Low Limit" gssField="tm_epd_128_129(v1).NID00025"/>
+		<OutputField name="RID_NOL_LOW" gssField="tm_epd_128_129(v1).NID00024"/>
+		<OutputField name="High Limit" gssField="tm_epd_128_129(v1).NID00026"/>
+		<OutputField name="RID NOL HIGH" gssField="tm_epd_128_129(v1).NID00043"/>
+		<OutputField name="NOD" gssField="tm_epd_128_129(v1).NID00022"/>
+		<OutputField name="Low Delta Threshold" gssField="tm_epd_128_129(v1).NID00027"/>
+		<OutputField name="RID NOD LOW" gssField="tm_epd_128_129(v1).NID00044"/>
+		<OutputField name="High Delta Threshold" gssField="tm_epd_128_129(v1).NID00028"/>
+		<OutputField name="RID NOD HIGH" gssField="tm_epd_128_129(v1).NID00045"/>
+		<OutputField name="NOE" gssField="tm_epd_128_129(v1).NID00023"/>
+		<OutputField name="Expected Value" gssField="tm_epd_128_129(v1).NID00029"/>
+		<OutputField name="RID NOE" gssField="tm_epd_128_129(v1).NID00046"/>
+		<OutputField name="NOB" gssField="tm_epd_128_129(v1).NID00145"/>
+		<OutputField name="BitMask" gssField="tm_epd_128_129(v1).NID00146"/>
+		<OutputField name="NOB_ExpectedValue" gssField="tm_epd_128_129(v1).NID00147"/>
+		<OutputField name="RID_NOB" gssField="tm_epd_128_129(v1).NID00148"/>
+		<OutputField name="NOF" gssField="tm_epd_128_129(v1).NID00149"/>
+		<OutputField name="Bit Mask NOF" gssField="tm_epd_128_129(v1).NID00150"/>
+		<OutputField name="RID_NOF" gssField="tm_epd_128_129(v1).NID00151"/>
+	</fields>
+</GSSTMOutput>

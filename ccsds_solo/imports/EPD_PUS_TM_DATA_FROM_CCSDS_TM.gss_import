@@ -1,0 +1,12 @@
+GSSImportImport EPD_PUS_TM_DATA_FROM_CCSDS_TM {
+	//EPD_PUS_TM_DATA_FROM_CCSDS_TM
+	uri := es.uah.aut.srg.EPD_PUS_TM_DATA_FROM_CCSDS_TM;
+	version := v1;
+	from := CCSDS_TM(v1);
+	to := EPD_PUS_TM_DATA(v1);
+	GSSImportDataSource {
+		FieldRef := CCSDS_Packet;
+		leftTrim := 0;
+		rightTrim := 0;
+	};
+};

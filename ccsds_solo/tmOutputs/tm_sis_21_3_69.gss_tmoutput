@@ -1,0 +1,18 @@
+<GSSTMOutput name="tm_sis_21_3_69" type="21" subtype="3" pi1_val="69" levels="2">
+	<level1_format file="tm_sis_21_3_69(v1)"/>
+	<level1_filter file="tm_sis_21_3_69_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_21_3_69_filter_level_0(v1)"/>
+	<fields>
+		<OutputField name="Global 21" gssField="tm_sis_21_3_69(v1).NIDG1020"/>
+		<OutputField name="Reserved" gssField="tm_sis_21_3_69(v1).NIDD1105"/>
+		<OutputField name="Burst Trigger" gssField="tm_sis_21_3_69(v1).NIDD1106"/>
+		<OutputField name="Iris Flag" gssField="tm_sis_21_3_69(v1).NIDD1107"/>
+		<OutputField name="Abort Flag" gssField="tm_sis_21_3_69(v1).NIDD1108"/>
+		<OutputField name="Reserved" gssField="tm_sis_21_3_69(v1).NIDD1109"/>
+		<OutputField name="Global 22" gssField="tm_sis_21_3_69(v1).NIDG1021"/>
+		<OutputField name="Iris Position" gssField="tm_sis_21_3_69(v1).NIDD1110"/>
+		<OutputField name="Int. Time" gssField="tm_sis_21_3_69(v1).NID10412"/>
+		<OutputField name="A He Histogram" gssField="tm_sis_21_3_69(v1).NID10425"/>
+	</fields>
+</GSSTMOutput>

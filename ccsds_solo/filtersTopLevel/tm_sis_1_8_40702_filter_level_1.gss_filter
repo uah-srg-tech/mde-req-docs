@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_1_8_40702_filter_level_1 {
+	//1,8 Unknown Opcode
+	uri := es.uah.aut.srg.tm_sis_1_8_40702_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_1_8_40702(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10238_40702;
+		constantType := decimal;
+		FieldRef := NID10238;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 40702;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

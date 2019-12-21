@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="EPD_CCSDS_TM" uri="es.uah.aut.srg.EPD_CCSDS_TM" version="v1" description="EPD_CCSDS_TM">
+  <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
+  <BoolVar id="0" name="Version_Number_0" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.1"/>
+    <Op type="equal"/>
+    <Constant value="0"/>
+  </BoolVar>
+  <BoolVar id="1" name="PUS_Version_1" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.9"/>
+    <Op type="equal"/>
+    <Constant value="1"/>
+  </BoolVar>
+  <BoolVarFDIC id="2" name="CRC">
+    <FieldRef href="../tmFormats/CCSDS_TM.xmi#//@FDICField.0"/>
+    <Op type="equal"/>
+  </BoolVarFDIC>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+    <BoolVarRef idRef="1"/>
+    <BoolVarRef idRef="2"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_epd_5_1_4882_filter_level_1 {
+	//TM 5,1 HET1 IB Ended
+	uri := es.uah.aut.srg.tm_epd_5_1_4882_filter_level_1;
+	version := v1;
+	formatFile := tm_epd_5_1_4882(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID00013_4882;
+		constantType := decimal;
+		FieldRef := NID00013;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 4882;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

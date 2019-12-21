@@ -1,0 +1,10 @@
+<GSSTCInput name="tc_epd_128_18_ack" type="128" subtype="18" levels="2">
+	<level1_format file="tc_epd_128_18(v1)"/>
+	<to_level0_export file="tc_epd_128_18_export_ack(v1)"/>
+	<fields>
+		<InputField name="N_Desc" gssField="tc_epd_128_18(v1).PID00051"/>
+		<InputField name="PID00051_block" gssField="tc_epd_128_18(v1).PID00051_block"/>
+		<InputField name="DescIndex" gssField="tc_epd_128_18(v1).PID00065"/>
+		<InputField name="Descriptor" gssField="tc_epd_128_18(v1).PID00066"/>
+	</fields>
+</GSSTCInput>

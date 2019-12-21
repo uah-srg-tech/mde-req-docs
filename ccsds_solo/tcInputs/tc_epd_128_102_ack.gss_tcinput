@@ -1,0 +1,10 @@
+<GSSTCInput name="tc_epd_128_102_ack" type="128" subtype="102" levels="2">
+	<level1_format file="tc_epd_128_102(v1)"/>
+	<to_level0_export file="tc_epd_128_102_export_ack(v1)"/>
+	<fields>
+		<InputField name="SensorID" gssField="tc_epd_128_102(v1).PID00069"/>
+		<InputField name="Flags102" gssField="tc_epd_128_102(v1).PID00085"/>
+		<InputField name="Nmesg102" gssField="tc_epd_128_102(v1).PID00086"/>
+		<InputField name="Messages" gssField="tc_epd_128_102(v1).PID00075"/>
+	</fields>
+</GSSTCInput>

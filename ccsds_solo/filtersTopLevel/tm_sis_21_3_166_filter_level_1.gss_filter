@@ -1,0 +1,25 @@
+GSSFilterMintermFilter tm_sis_21_3_166_filter_level_1 {
+	//21,3 B Test Pulses
+	uri := es.uah.aut.srg.tm_sis_21_3_166_filter_level_1;
+	version := v1;
+	formatFile := tm_sis_21_3_166(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := NID10001_166;
+		constantType := decimal;
+		FieldRef := NID10001;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 166;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+	};
+};

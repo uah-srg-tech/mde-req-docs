@@ -57,7 +57,7 @@ GSSFormatFormat tc_sis_129_152 {
 	GSSFormatCSField {
 		fid := 3;
 		pfid := 0;
-		name := "Legth Struct. Load";
+		name := "Legth Struct_ Load";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;

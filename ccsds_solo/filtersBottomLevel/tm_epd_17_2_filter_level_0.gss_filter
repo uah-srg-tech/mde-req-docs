@@ -1,0 +1,55 @@
+GSSFilterMintermFilter tm_epd_17_2_filter_level_0 {
+	//TM 17,2 Connect test resp
+	uri := es.uah.aut.srg.tm_epd_17_2_filter_level_0;
+	version := v1;
+	formatFile := CCSDS_TM(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := Application_Process_ID_807;
+		constantType := decimal;
+		FieldRef := Application_Process_ID;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 807;
+		};
+	};
+	GSSFilterBoolVar {
+		id := 1;
+		name := Packet_Type_17;
+		constantType := decimal;
+		FieldRef := Packet_Type;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 17;
+		};
+	};
+	GSSFilterBoolVar {
+		id := 2;
+		name := Packet_Subtype_2;
+		constantType := decimal;
+		FieldRef := Packet_Subtype;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 2;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 1;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 2;
+		};
+	};
+};
