@@ -341,12 +341,7 @@
 										<text>GSS Host Unit (Windows PC). </text>
 									</run>
 									<run>
-										<text>Computer connected to the ICU which can send telecommands and receive telemetry to/from using the GSS software.</text>
-									</run>
-								</paragraph>
-								<paragraph>
-									<run>
-										<text>Minimum Requirements:</text>
+										<text>Computer connected to the ICU which can send telecommands and receive telemetry to/from using the GSS software. Minimum Requirements:</text>
 									</run>
 								</paragraph>
 								<sublist>
@@ -392,16 +387,6 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>1 SpW-Brick: Star-Dundee SpaceWire-USB Brick Mk2. </text>
-									</run>
-									<run>
-										<text>Star-Dundee STAR-System v2.0 must be installed in Host Unit</text>
-									</run>
-								</paragraph>
-							</listItem>
-							<listItem>
-								<paragraph>
-									<run bold="true">
 										<text>1 SpW-cable: SpaceWire cable. </text>
 									</run>
 									<run>
@@ -416,6 +401,16 @@
 									</run>
 									<run>
 										<text>Wire that connects GSS Host Unit to SpW-Brick.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 SpW-Brick: Star-Dundee SpaceWire-USB Brick Mk2. </text>
+									</run>
+									<run>
+										<text>Star-Dundee STAR-System v2.0 must be installed in Host Unit</text>
 									</run>
 								</paragraph>
 							</listItem>
@@ -548,8 +543,122 @@
 				</subsection>
 			</subsection>
 		</General>
+		<Interfaces>
+			<Interface name="SpW" id="0" tcHeader="CCSDS_TC" tmHeader="CCSDS_TM">
+				<run>
+					<text>SpaceWire Interface</text>
+				</run>
+			</Interface>
+			<Interface name="SpW TC" id="1" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+				<run>
+					<text>SpaceWire timecodes Interface</text>
+				</run>
+			</Interface>
+			<Interface name="Manual" id="2" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+				<run>
+					<text>Manual Interface used for manual steps</text>
+				</run>
+			</Interface>
+			<Interface name="STEP" id="3" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+				<run>
+					<text>STEP (sensor 1)</text>
+				</run>
+			</Interface>
+			<Interface name="SIS" id="4" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+				<run>
+					<text>SIS (sensor 2)</text>
+				</run>
+			</Interface>
+			<Interface name="HET-EPT1" id="5" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+				<run>
+					<text>HET-EPT1 (sensor 3)</text>
+				</run>
+			</Interface>
+			<Interface name="HET-EPT2" id="6" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+				<run>
+					<text>HET-EPT2 (sensor 4)</text>
+				</run>
+			</Interface>
+		</Interfaces>
+		<PacketConfigurations>
+			<PacketConfiguration name="HK SID0" id="0">
+				<run>
+					<text>TM(3.25) HK SID0 must be filtered during all test campaign unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+				</run>
+			</PacketConfiguration>
+			<PacketConfiguration name="HK SID10" id="1">
+				<run>
+					<text>TM(3.25) HK SID10 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+				</run>
+			</PacketConfiguration>
+			<PacketConfiguration name="HK SID100" id="2">
+				<run>
+					<text>TM(3.25) HK SID100 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+				</run>
+			</PacketConfiguration>
+			<PacketConfiguration name="HK SID101" id="3">
+				<run>
+					<text>TM(3.25) HK SID101 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+				</run>
+			</PacketConfiguration>
+			<PacketConfiguration name="HK SID110" id="4">
+				<run>
+					<text>TM(3.25) HK SID110 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+				</run>
+			</PacketConfiguration>
+		</PacketConfigurations>
+		<Actions>
+			<Action name="SID100 counter is not increased" type="checking">
+				<body>
+					<paragraph>
+						<run>
+							<text>Check TM(3.25) HK SID 100 counter is not increased</text>
+						</run>
+					</paragraph>
+				</body>
+			</Action>
+			<Action name="SID100 counter is increased" type="checking">
+				<body>
+					<paragraph>
+						<run>
+							<text>Check TM(3.25) HK SID 100 counter is increased for 30 seconds</text>
+						</run>
+					</paragraph>
+				</body>
+			</Action>
+			<Action name="SID0 period is 5 seconds" type="checking">
+				<body>
+					<paragraph>
+						<run>
+							<text>Check TM(3.25) HK SID 0 period for 5 seconds for 30 seconds</text>
+						</run>
+					</paragraph>
+				</body>
+			</Action>
+			<Action name="SID0 period is 10 seconds" type="checking">
+				<body>
+					<paragraph>
+						<run>
+							<text>Check TM(3.25) HK SID 0 period is 10 seconds for 30 seconds</text>
+						</run>
+					</paragraph>
+				</body>
+			</Action>
+		</Actions>
 		<Scenarios>
-			<Scenario name="Scenario 1" id="0">
+			<Scenario name="Scenario 1">
+				<Interface ref="SpW"/>
+				<Interface ref="SpW TC"/>
+				<Interface ref="Manual"/>
+				<Configuration ref="HK SID0" defaultFilterStatus="on" defaultPrintStatus="off"/>
+				<Configuration ref="HK SID10" defaultFilterStatus="on" defaultPrintStatus="off"/>
+				<Configuration ref="HK SID100" defaultFilterStatus="on" defaultPrintStatus="off"/>
+				<Configuration ref="HK SID101" defaultFilterStatus="on" defaultPrintStatus="off"/>
+				<Configuration ref="HK SID110" defaultFilterStatus="on" defaultPrintStatus="off"/>
+				<Action ref="SID100 counter is not increased"/>
+				<Action ref="SID100 counter is increased"/>
+				<Action ref="SID0 period is 5 seconds"/>
+				<Action ref="SID0 period is 10 seconds"/>
 				<body>
 					<itemize>
 						<listItem>
@@ -610,7 +719,14 @@
 					<figureFromFile name="Scenario1" referenceFile="SVS_images/Scenario1.png" width="919" height="535" caption="Test Scenario 1"/>
 				</body>
 			</Scenario>
-			<Scenario name="Scenario 2" id="1">
+			<Scenario name="Scenario 2">
+				<Interface ref="SpW"/>
+				<Interface ref="SpW TC"/>
+				<Interface ref="Manual"/>
+				<Interface ref="STEP"/>
+				<Interface ref="SIS"/>
+				<Interface ref="HET-EPT1"/>
+				<Interface ref="HET-EPT2"/>
 				<body>
 					<itemize>
 						<listItem>
@@ -659,7 +775,14 @@
 					<figureFromFile name="Scenario2" referenceFile="SVS_images/Scenario2.png" width="964" height="567" caption="Test Scenario 2"/>
 				</body>
 			</Scenario>
-			<Scenario name="Scenario 3" id="2">
+			<Scenario name="Scenario 3">
+				<Interface ref="SpW"/>
+				<Interface ref="SpW TC"/>
+				<Interface ref="Manual"/>
+				<Interface ref="STEP"/>
+				<Interface ref="SIS"/>
+				<Interface ref="HET-EPT1"/>
+				<Interface ref="HET-EPT2"/>
 				<body>
 					<itemize>
 						<listItem>
@@ -672,7 +795,14 @@
 					</itemize>
 				</body>
 			</Scenario>
-			<Scenario name="Scenario 4" id="3">
+			<Scenario name="Scenario 4">
+				<Interface ref="SpW"/>
+				<Interface ref="SpW TC"/>
+				<Interface ref="Manual"/>
+				<Interface ref="STEP"/>
+				<Interface ref="SIS"/>
+				<Interface ref="HET-EPT1"/>
+				<Interface ref="HET-EPT2"/>
 				<body>
 					<itemize>
 						<listItem>
@@ -742,7 +872,14 @@
 					<figureFromFile name="Scenario4" referenceFile="SVS_images/Scenario4.png" width="916" height="645" caption="Test Scenario 4"/>
 				</body>
 			</Scenario>
-			<Scenario name="Scenario 5" id="4">
+			<Scenario name="Scenario 5">
+				<Interface ref="SpW"/>
+				<Interface ref="SpW TC"/>
+				<Interface ref="Manual"/>
+				<Interface ref="STEP"/>
+				<Interface ref="SIS"/>
+				<Interface ref="HET-EPT1"/>
+				<Interface ref="HET-EPT2"/>
 				<body>
 					<itemize>
 						<listItem>
@@ -2039,28 +2176,24 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
 			<ProcedureSteps>
-				<step name="test_connection" id="0" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="2" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
-						</output_level_1>
-					</outputs>
-				</step>
+				<Step name="Test Connection">
+					<TelecommandSequence>
+						<Telecommand name="TC(17_1) Test Connection" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(17_2) Test Connection Report" interface="SpW">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
@@ -2080,214 +2213,245 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
 			<ProcedureSteps>
-				<step name="valid_tc_both_ack_flags" id="0" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_1_seqCtrl_0" id="0" ifRef="0">
-							<level2 format="tm_epd_1_1(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_2>
-						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_2 name="tm_1_7_seqCtrl_1" id="2" ifRef="0">
-							<level2 format="tm_epd_1_7(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_0_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="valid_tc_accept_ack_flag" id="1" prev_step_idref="valid_tc_both_ack_flags" output_idref_from_prev_step="tm_1_7_seqCtrl_1" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_accept_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_1_seqCtrl_1" id="0" ifRef="0">
-							<level2 format="tm_epd_1_1(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_1_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_2>
-						<output_level_1 name="test_connection_report_(17_2)" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="valid_tc_exec_ack_flag" id="2" prev_step_idref="valid_tc_accept_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1_exec_ack(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-						<output_level_2 name="tm_1_7_seqCtrl_2" id="1" ifRef="0">
-							<level2 format="tm_epd_1_7(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_2_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)" />
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="valid_tc_none_ack_flag" id="3" prev_step_idref="valid_tc_exec_ack_flag" output_idref_from_prev_step="tm_1_7_seqCtrl_2" mode="continuous">
-					<inputs>
-						<input_level_1 name="test_connection" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_17_1_export_to_level_1(v1)" />
-							<level1_to_level0 export="tc_epd_17_1_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="test_connection_report_(17_2)" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_17_2_filter_level_0(v1)" />
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="not_acceptable_tc_both_ack_flags" id="4" prev_step_idref="valid_tc_none_ack_flag" output_idref_from_prev_step="test_connection_report_(17_2)" mode="continuous">
-					<inputs>
-						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_128_6_export_to_level_1_ack(v1)" />
-							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_2_9C44_seqCtrl_4" id="0" ifRef="0">
-							<level2 format="tm_epd_1_2_40004(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_4_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="not_acceptable_tc_accept_ack_flag" id="5" prev_step_idref="not_acceptable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_4" mode="continuous">
-					<inputs>
-						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_128_6_export_to_level_1_accept_ack(v1)" />
-							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_2_9C44_seqCtrl_5" id="0" ifRef="0">
-							<level2 format="tm_epd_1_2_40004(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_2_40004_TCseqCtrl_5_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_2_40004_filter_level_0(v1)"/>
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="not_acceptable_tc_exec_ack_flag" id="6" prev_step_idref="not_acceptable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_2_9C44_seqCtrl_5" mode="continuous">
-					<inputs>
-						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_128_6_export_to_level_1_exec_ack(v1)" />
-							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-				</step>
-				<step name="not_acceptable_tc_none_ack_flag" id="7" mode="continuous">
-					<inputs>
-						<input_level_1 name="tc_128_6" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_128_6_export_to_level_1(v1)" />
-							<level1_to_level0 export="tc_epd_128_6_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-				</step>
-				<step name="not_executable_tc_both_ack_flags" id="8" mode="continuous">
-					<inputs>
-						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<level2 format="tc_epd_128_32(v1)"/>
-							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
-							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_1_seqCtrl_8" id="0" ifRef="0">
-							<level2 format="tm_epd_1_1(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_8_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_2>
-						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_8" id="1" ifRef="0">
-							<level2 format="tm_epd_1_8_40030(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_8_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="not_executable_tc_accept_ack_flag" id="9" prev_step_idref="not_executable_tc_both_ack_flags" output_idref_from_prev_step="tm_1_8_9C5E_19_seqCtrl_8" mode="continuous">
-					<inputs>
-						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<level2 format="tc_epd_128_32(v1)"/>
-							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
-							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_accept_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_1_seqCtrl_9" id="0" ifRef="0">
-							<level2 format="tm_epd_1_1(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_X_TCSeqCtrl_9_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)" />
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)" />
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="not_executable_tc_none_ack_flag" id="10" prev_step_idref="not_executable_tc_accept_ack_flag" output_idref_from_prev_step="tm_1_1_seqCtrl_9" mode="continuous">
-					<inputs>
-						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<level2 format="tc_epd_128_32(v1)"/>
-							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
-							<level2_to_level1 export="tc_epd_128_32_export_to_level_1(v1)"/>
-							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-				</step>
-				<step name="not_executable_tc_exec_ack_flag" id="11" mode="continuous">
-					<inputs>
-						<input_level_2 name="exec_exception_reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<level2 format="tc_epd_128_32(v1)"/>
-							<app_to_level2 export="tc_epd_128_32_edac_mem_out_of_range_export_to_level_2(v1)"/>
-							<level2_to_level1 export="tc_epd_128_32_export_to_level_1_exec_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_128_32_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_2 name="tm_1_8_9C5E_19_seqCtrl_11" id="0" ifRef="0">
-							<level2 format="tm_epd_1_8_40030(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_1_8_40030_TCSeqCtrl_11_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_8_40030_filter_level_0(v1)"/>
-						</output_level_2>
-					</outputs>
-				</step>
+				<Step name="Valid TC both ACK flags">
+					<TelecommandSequence>
+						<Telecommand name="TC(17_1) Test Connection both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1) seqCtrl 0" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="0"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+						<Telemetry name="TM(17_2) Test Connection Report" interface="SpW">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+						<Telemetry name="TM(1_7) seqCtrl 0" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="0"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Valid TC accept ACK" prev_step="Valid TC both ACK flags" prev_tm_from_prev_step="TM(1_7) seqCtrl 0">
+					<TelecommandSequence>
+						<Telecommand name="TC(17_1) Test Connection accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="1"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1) seqCtrl 1" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="1"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+						<Telemetry name="TM(17_2) Test Connection Report" interface="SpW">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Valid TC exec ACK flag" prev_step="Valid TC accept ACK" prev_tm_from_prev_step="TM(17_2) Test Connection Report">
+					<TelecommandSequence>
+						<Telecommand name="TC(17_1) Test Connection exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="8"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(17_2) Test Connection Report" interface="SpW">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+						<Telemetry name="TM(1_7) seqCtrl 2" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="2"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Valid TC none ACK flags" prev_step="Valid TC exec ACK flag" prev_tm_from_prev_step="TM(1_7) seqCtrl 2">
+					<TelecommandSequence>
+						<Telecommand name="TC(17_1) Test Connection no ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="0"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(17_2) Test Connection Report" interface="SpW" >
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Not acceptable TC both ACK flags" prev_step="Valid TC none ACK flags" prev_tm_from_prev_step="TM(17_2) Test Connection Report">
+					<TelecommandSequence>
+						<Telecommand name="Wrong TC both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_wrong_type_subtype" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_2) Error 9C44 seqCtrl 4" interface="SpW">
+							<TelemetryData template="tm_1_2_9C44" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="4"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="TM(1_2) Error 9C44 seqCtrl 4">
+					<TelecommandSequence>
+						<Telecommand name="Wrong TC accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_wrong_type_subtype" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="1"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_2) Error 9C44 seqCtrl 5" interface="SpW">
+							<TelemetryData template="tm_1_2_9C44" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="5"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="TM(1_2) Error 9C44 seqCtrl 5">
+					<TelecommandSequence>
+						<Telecommand name="Wrong TC exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_wrong_type_subtype" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="8"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+				</Step>
+				<Step name="Not acceptable TC none ACK flags">
+					<TelecommandSequence>
+						<Telecommand name="Wrong TC no ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_wrong_type_subtype" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="0"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+				</Step>
+				<Step name="Not executable TC both ACK flags">
+					<TelecommandSequence>
+						<Telecommand name="TC(128_32) Exec exception both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_32"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1) seqCtrl 8" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="8"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+						<Telemetry name="TM(1_8) Error 9C5E 19 seqCtrl 8" interface="SpW">
+							<TelemetryData template="tm_1_8_9C5E" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="8"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Not executable TC accept ACK flags" prev_step="Not executable TC both ACK flags" prev_tm_from_prev_step="TM(1_8) Error 9C5E 19 seqCtrl 8">
+					<TelecommandSequence>
+						<Telecommand name="TC(128_32) Exec exception accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_32" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="1"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1) seqCtrl 9" interface="SpW" >
+							<TelemetryData template="tm_1_1" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="9"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Not executable TC none ACK flags" prev_step="Not executable TC accept ACK flags" prev_tm_from_prev_step="TM(1_1) seqCtrl 9">
+					<TelecommandSequence>
+						<Telecommand name="TC(128_32) Exec exception no ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_32" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="0"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+				</Step>
+				<Step name="Not executable TC exec ACK flags" prev_step="Not executable TC both ACK flags" prev_tm_from_prev_step="TM(1_8) Error 9C5E 19 seqCtrl 8">
+					<TelecommandSequence>
+						<Telecommand name="TC(128_32) Exec exception exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_32" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="8"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_8) Error 9C5E 19 seqCtrl 11" interface="SpW">
+							<TelemetryData template="tm_1_8_9C5E" />
+							<TelemetryHeader>
+								<HeaderField fieldRef="Source_Sequence_Count">
+									<FieldValueRaw value="11"/>
+								</HeaderField>
+							</TelemetryHeader>
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
@@ -2307,131 +2471,90 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" />
 			<ProcedureSteps>
-				<step name="disable_hk_sid_100" id="0" mode="continuous">
-					<inputs>
-						<input_level_2 name="disable_hk_sid_100" ifRef="0" delay_value="3" delay_unit="seconds">
-							<level2 format="tc_epd_3_6(v1)"/>
-							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
-							<level2_to_level1 export="tc_epd_3_6_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_3_6_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-					</outputs>
-					<specialPackets>
-						<enable_print id="2"/>
-					</specialPackets>
-				</step>
-				<step name="30_seconds_wait" id="1" prev_step_idref="disable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
-							<app_to_level0 export="dummy_tc_export(v1)"/>
-						</input_level_0>
-					</inputs>
-				</step>
-				<step name="enable_hk_sid_100" id="2" mode="continuous">
-					<inputs>
-						<input_level_2 name="enable_hk_sid_100" ifRef="0" delay_value="0" delay_unit="miliseconds">
-							<level2 format="tc_epd_3_5(v1)"/>
-							<app_to_level2 export="tc_epd_3_X_enable_disable_hk_sid_100(v1)"/>
-							<level2_to_level1 export="tc_epd_3_5_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_3_5_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="30_seconds_wait" id="3" prev_step_idref="enable_hk_sid_100" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
-							<app_to_level0 export="dummy_tc_export(v1)"/>
-						</input_level_0>
-					</inputs>
-				</step>
-				<step name="change_period_5_seconds_hk_sid_0" id="4" mode="continuous">
-					<inputs>
-						<input_level_2 name="change_period_5_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
-							<level2 format="tc_epd_3_129(v1)"/>
-							<app_to_level2 export="tc_epd_3_129_change_period_5_seconds_hk_sid_0(v1)"/>
-							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-					</outputs>
-					<specialPackets>
-						<disable_print id="2"/>
-						<enable_print id="0"/>
-					</specialPackets>
-				</step>
-				<step name="30_seconds_wait" id="5" prev_step_idref="change_period_5_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
-							<app_to_level0 export="dummy_tc_export(v1)"/>
-						</input_level_0>
-					</inputs>
-				</step>
-				<step name="change_period_10_seconds_hk_sid_0" id="6" mode="continuous">
-					<inputs>
-						<input_level_2 name="change_period_10_seconds_hk_sid_0" ifRef="0" delay_value="0" delay_unit="miliseconds">
-							<level2 format="tc_epd_3_129(v1)"/>
-							<app_to_level2 export="tc_epd_3_129_change_period_10_seconds_hk_sid_0(v1)"/>
-							<level2_to_level1 export="tc_epd_3_129_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_3_129_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="30_seconds_wait" id="7" prev_step_idref="change_period_10_seconds_hk_sid_0" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_0 name="dummy_packet" ifRef="1" delay_value="30" delay_unit="seconds">
-							<app_to_level0 export="dummy_tc_export(v1)"/>
-						</input_level_0>
-					</inputs>
-				</step>
-				<step name="disable_print_sid_0" id="8" mode="continuous">
-					<inputs>
-						<input_level_0 name="dummy_packet" ifRef="1" delay_value="0" delay_unit="seconds">
-							<app_to_level0 export="dummy_tc_export(v1)"/>
-						</input_level_0>
-					</inputs>
-					<specialPackets>
-						<disable_print id="0"/>
-					</specialPackets>
-				</step>
+				<Step name="Disable HK SID 100">
+					<TelecommandSequence>
+						<Telecommand name="TC(3_5) Disable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_3_6_disable_SID100" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Check HK SID 100 is disabled" prev_step="Disable HK SID 100" prev_tm_from_prev_step="TM(1_7)">
+					<Configurations>
+						<Configuration ref="HK SID100" printStatus="on"/>
+					</Configurations>
+					<Action selectedAction="SID100 counter is not increased" span_value="30" span_unit="seconds"/>
+				</Step>
+				<Step name="Enable HK SID 100">
+					<TelecommandSequence>
+						<Telecommand name="TC(3_5) Enable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_3_5_enable_SID100" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Check HK SID 100 is enabled back" prev_step="Enable HK SID 100" prev_tm_from_prev_step="TM(1_7)">
+					<Configurations>
+						<Configuration ref="HK SID100" printStatus="on"/>
+					</Configurations>
+					<Action selectedAction="SID100 counter is increased" span_value="30" span_unit="seconds"/>
+				</Step>
+				<Step name="Change HK SID 0 period to 5 seconds">
+					<TelecommandSequence>
+						<Telecommand name="TC(3_129) Change HK SID 0 period to 5 seconds" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_3_129_period_5s_SID0" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Check HK SID 0 period is 5 seconds now" prev_step="Change HK SID 0 period to 5 seconds" prev_tm_from_prev_step="TM(1_7)">
+					<Configurations>
+						<Configuration ref="HK SID0" printStatus="on"/>
+					</Configurations>
+					<Action selectedAction="SID0 period is 5 seconds" span_value="30" span_unit="seconds"/>
+				</Step>
+				<Step name="Change back HK SID 0 period to 10 seconds">
+					<TelecommandSequence>
+						<Telecommand name="TC(3_129) Change period to 10 seconds HK SID 10" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_3_129_period_10s_SID0" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Check HK SID 0 period is 10 seconds again" prev_step="Change back HK SID 0 period to 10 seconds" prev_tm_from_prev_step="TM(1_7)">
+					<Configurations>
+						<Configuration ref="HK SID0" printStatus="on"/>
+					</Configurations>
+					<Action selectedAction="SID0 period is 10 seconds" span_value="30" span_unit="seconds"/>
+				</Step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
@@ -2451,220 +2574,138 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320" />
 			<ProcedureSteps>
-				<step name="disable_event_1003" id="0" mode="continuous">
-					<inputs>
-						<input_level_2 name="disable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
-							<level2 format="tc_epd_5_6(v1)"/>
-							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1003(v1)"/>
-							<level2_to_level1 export="tc_epd_5_6_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_5_6_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="reset_to_asw_no_sensors_no_1003" id="1" prev_step_idref="disable_event_1003" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
-							<level2 format="tm_epd_5_1_4354(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
-							<level2 format="tm_epd_5_1_4101(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
-							<level2 format="tm_epd_5_1_4097(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
-							<level2 format="tm_epd_5_1_4101(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_STEP_off" id="6" ifRef="0">
-							<level2 format="tm_epd_5_1_4360(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_SIS_off" id="7" ifRef="0">
-							<level2 format="tm_epd_5_1_4361(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="8" ifRef="0">
-							<level2 format="tm_epd_5_1_4362(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="9" ifRef="0">
-							<level2 format="tm_epd_5_1_4363(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_readout_ended" id="10" ifRef="0">
-							<level2 format="tm_epd_5_1_4364(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
-						</output_level_2>
-					</outputs>
-				</step>
-				<step name="enable_event_1003" id="2" prev_step_idref="reset_to_asw_no_sensors_no_1003" output_idref_from_prev_step="tm_5_1_readout_ended" mode="continuous">
-					<inputs>
-						<input_level_2 name="enable_event_1003" ifRef="0" delay_value="0" delay_unit="miliseconds">
-							<level2 format="tc_epd_5_5(v1)"/>
-							<app_to_level2 export="tc_epd_5_X_enable_disable_event_1003(v1)"/>
-							<level2_to_level1 export="tc_epd_5_5_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_5_5_export_to_level_0(v1)"/>
-						</input_level_2>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-					</outputs>
-				</step>
-				<step name="reset_to_oper_no_sensors" id="3" prev_step_idref="enable_event_1003" output_idref_from_prev_step="tm_1_7" mode="continuous">
-					<inputs>
-						<input_level_1 name="reset" ifRef="0" delay_value="120" delay_unit="miliseconds">
-							<app_to_level1 export="tc_epd_128_3_export_to_level_1_ack(v1)"/>
-							<level1_to_level0 export="tc_epd_128_3_export_to_level_0(v1)"/>
-						</input_level_1>
-					</inputs>
-					<outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<output_level_1 name="tm_1_1" id="0" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_1_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_1 name="tm_1_7" id="1" ifRef="0">
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_1_7_filter_level_0(v1)"/>
-						</output_level_1>
-						<output_level_2 name="tm_5_1_SIS_in_safe_state" id="2" ifRef="0">
-							<level2 format="tm_epd_5_1_4354(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4354_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4354_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_SpW_ready" id="3" ifRef="0">
-							<level2 format="tm_epd_5_1_4101(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_boot_mode_entry" id="4" ifRef="0">
-							<level2 format="tm_epd_5_1_4097(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4097_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4097_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_SpW_ready" id="5" ifRef="0">
-							<level2 format="tm_epd_5_1_4101(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4101_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4101_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_oper_entry" id="6" ifRef="0">
-							<level2 format="tm_epd_5_1_4099(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4099_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4099_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_STEP_off" id="7" ifRef="0">
-							<level2 format="tm_epd_5_1_4360(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4360_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4360_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_SIS_off" id="8" ifRef="0">
-							<level2 format="tm_epd_5_1_4361(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4361_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4361_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_HET_EPT_1_off" id="9" ifRef="0">
-							<level2 format="tm_epd_5_1_4362(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4362_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4362_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_HET_EPT_2_off" id="10" ifRef="0">
-							<level2 format="tm_epd_5_1_4363(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4363_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4363_filter_level_0(v1)"/>
-						</output_level_2>
-						<output_level_2 name="tm_5_1_readout_ended" id="11" ifRef="0">
-							<level2 format="tm_epd_5_1_4364(v1)"/>
-							<level2_filter apply_def_filter="no" extra_filter="tm_epd_5_1_4364_filter_level_2(v1)"/>
-							<level2_from_level1 import="EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1)"/>
-							<level1_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_1(v1)"/>
-							<level0_filter apply_def_filter="yes" extra_filter="tm_epd_5_1_4364_filter_level_0(v1)"/>
-						</output_level_2>
-					</outputs>
-				</step>
+				<Step name="Disable Event 0x1003">
+					<TelecommandSequence>
+						<Telecommand name="TC(5_6) Disable Event 0x1003" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_5_6_disable_event_1003_ack" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Reset to ASW no sensors no 0x1003" prev_step="Disable Event 0x1003" prev_tm_from_prev_step="TM(1_7)">
+					<TelecommandSequence>
+						<Telecommand name="TC(128_3) Reset" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_3" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="9"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SIS in Safe state" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_in_Safe_state" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) Boot Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_boot_mode_entry" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) STEP off" interface="SpW">
+							<TelemetryData template="tm_5_1_STEP_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SIS off" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) HET-EPT1 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_1_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) HET-EPT2 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_2_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) Readout Ended" interface="SpW">
+							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Enable Event 0x1003" prev_step="Reset to ASW no sensors no 0x1003" prev_tm_from_prev_step="TM(5_1) Readout Ended">
+					<TelecommandSequence>
+						<Telecommand name="TC(5_5) Enable Event 0x1003" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_5_5_enable_event_1003_ack" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+				<Step name="Reset to ASW no sensors no 0x1003" prev_step="Enable Event 0x1003" prev_tm_from_prev_step="TM(1_7)">
+					<TelecommandSequence>
+						<Telecommand name="TC(128_3) Reset" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_3" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="9"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM(1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="TM(1_7)" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SIS in Safe state" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_in_Safe_state" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) Boot Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_boot_mode_entry" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) Oper Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_oper_entry" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) STEP off" interface="SpW">
+							<TelemetryData template="tm_5_1_STEP_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) SIS off" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) HET-EPT1 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_1_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) HET-EPT2 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_2_off" />
+						</Telemetry>
+						<Telemetry name="TM(5_1) Readout Ended" interface="SpW">
+							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
 		</TestProcedure>
-		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
+		/*<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
 			<Identifier>
 				<body>
 					<paragraph>
@@ -4583,7 +4624,7 @@
 			</ProcedureSteps>
 			<TestScript>
 			</TestScript>
-		</TestProcedure>
+		</TestProcedure>*/
 	</TestProcedures>
 	<AnalysisInspectionReview>
 	</AnalysisInspectionReview>

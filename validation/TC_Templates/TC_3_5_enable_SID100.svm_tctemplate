@@ -1,0 +1,8 @@
+<TCTemplate name="tc_3_5_enable_SID100" tcInput="tc_epd_3_5_ack">
+	<Fields>
+		<Field>
+			<fieldRef name="SID"/>
+			<FieldValueRaw value="100"/>
+		</Field>
+	</Fields>
+</TCTemplate>

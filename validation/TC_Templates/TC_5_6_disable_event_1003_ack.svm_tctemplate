@@ -1,0 +1,12 @@
+<TCTemplate name="tc_5_6_disable_event_1003_ack" tcInput="tc_epd_5_6_ack">
+	<Fields>
+		<Field>
+			<fieldRef name="N RID"/>
+			<FieldValueRaw value="1"/>
+		</Field>
+		<Field>
+			<fieldRef name="REPORT ID"/>
+			<FieldValueRaw value="0x1003"/>
+		</Field>
+	</Fields>
+</TCTemplate>
