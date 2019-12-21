@@ -51,26 +51,50 @@
 		<General>
 		</General>
 		<Interfaces>
-			<Interface name="DummyIF 1">
+			<Interface name="DummyIF 0" id="0" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
 				<run>
 					<text>This is a dummy IF</text>
 				</run>
 			</Interface>
-			<Interface name="DummyIF 2">
+			<Interface name="DummyIF 1" id="1" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
 				<run>
 					<text>This is another dummy IF</text>
 				</run>
 			</Interface>
-			<Interface name="DummyIF 3">
+			<Interface name="DummyIF 2" id="2" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
 				<run>
 					<text>This is another dummy IF</text>
 				</run>
 			</Interface>
 		</Interfaces>
+		<PacketConfigurations>
+			<PacketConfiguration name="DummyConf 0" id="0">
+				<run>
+					<text>This is a dummy Configuration</text>
+				</run>
+			</PacketConfiguration>
+			<PacketConfiguration name="DummyConf 1" id="1">
+				<run>
+					<text>This is another dummy Configuration</text>
+				</run>
+			</PacketConfiguration>
+		</PacketConfigurations>
+		<Actions>
+			<Action name="DummyAction" type="instruction">
+				<body>
+					<paragraph>
+						<run>
+							<text>This is a dummy Action</text>
+						</run>
+					</paragraph>
+				</body>
+			</Action>
+		</Actions>
 		<Scenarios>
 			<Scenario name="Scenario Dummy 1">
+				<Interface ref="DummyIF 0"/>
 				<Interface ref="DummyIF 1"/>
-				<Interface ref="DummyIF 3"/>
+				<Configuration ref="DummyConf 0" defaultFilterStatus="on" defaultPrintStatus="off"/>
 				<body>
 					<paragraph>
 						<run>
@@ -81,6 +105,7 @@
 			</Scenario>
 			<Scenario name="Scenario Dummy 2">
 				<Interface ref="DummyIF 2"/>
+				<Configuration ref="DummyConf 1" defaultFilterStatus="on" defaultPrintStatus="off"/>
 				<body>
 					<paragraph>
 						<run>
@@ -132,19 +157,32 @@
 			<TestCase ref="Sample case 1" />
 			<ProcedureSteps>
 				<Step name="Sample Test connection 0">
-					<Inputs>
-						<Input name="Test connection" interface="DummyIF 1" delay_value="120" delay_unit="miliseconds"/>
-					</Inputs>
-					<Outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Output name="TM (1_1) 1" interface="DummyIF 1"/>
-						<Output name="Test Connection Report TM (17_2) 1" interface="DummyIF 1"/>
-						<Output name="TM (1_7) 1" interface="DummyIF 1"/>
-					</Outputs>
+					<Configurations>
+						<Configuration ref="DummyConf 0" filterStatus="off" />
+					</Configurations>
+					<TelecommandSequence>
+						<Telecommand name="Test connection" interface="DummyIF 0" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM (1_1)" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Test Connection Report TM(17_2)" interface="SpW">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+						<Telemetry name="TM (1_7) 1" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
 				</Step>
-				<Step name="Sample Test Connection 1" prev_step_idref="Sample Test connection 0" output_idref_from_prev_step="TM (1_7) 1">
-					<Inputs>
-						<Input name="Test connection" interface="DummyIF 3" delay_value="120" delay_unit="miliseconds"/>
-					</Inputs>
+				<Step name="Sample Test Connection 1" prev_step="Sample Test connection 0" prev_tm_from_prev_step="TM (1_7) 1">
+					<TelecommandSequence>
+						<Telecommand name="Test connection" interface="DummyIF 1" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1"/>
+						</Telecommand>
+					</TelecommandSequence>
 				</Step>
 			</ProcedureSteps>
 			<TestScript>
@@ -158,20 +196,33 @@
 			<Scenario ref="Scenario Dummy 2" />
 			<TestCase ref="Sample case 1" />
 			<ProcedureSteps>
-				<Step name="Sample Test Connection 2" >
-					<Inputs>
-						<Input name="Test connection" interface="DummyIF 2" delay_value="120" delay_unit="miliseconds"/>
-					</Inputs>
-					<Outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Output name="TM (1_1) 2" interface="DummyIF 2"/>
-						<Output name="Test Connection Report TM (17_2) 2" interface="DummyIF 2"/>
-						<Output name="TM (1_7) 2" interface="DummyIF 2"/>
-					</Outputs>
+				<Step name="Sample Test Connection 2">
+					<TelecommandSequence>
+						<Telecommand name="Test connection" interface="DummyIF 2" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="TM (1_1) 2" interface="DummyIF 2">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Test Connection Report TM (17_2) 2" interface="DummyIF 2">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+						<Telemetry name="TM (1_7) 2" interface="DummyIF 2">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
 				</Step>
-				<Step name="Sample Test Connection 3" prev_step_idref="Sample Test Connection 2" output_idref_from_prev_step="TM (1_7) 2">
-					<Inputs>
-						<Input name="Test connection" interface="DummyIF 2" delay_value="120" delay_unit="miliseconds"/>
-					</Inputs>
+				<Step name="Sample Test Connection 3" prev_step="Sample Test Connection 2" prev_tm_from_prev_step="TM (1_7) 2">
+					<Configurations>
+						<Configuration ref="DummyConf 1" filterStatus="off" />
+					</Configurations>
+					<TelecommandSequence>
+						<Telecommand name="Test connection" interface="DummyIF 2" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1"/>
+						</Telecommand>
+					</TelecommandSequence>
 				</Step>
 			</ProcedureSteps>
 			<TestScript>

@@ -31,7 +31,7 @@ GSSEnvironmentEnvironment epd {
 			GSSEnvironmentProtocol {
 				id := 0;
 				name := CCSDS;
-				typeLevel := 1;
+				typeLevel := 0;
 				typeOffset := 7;
 				subtypeOffset := 8;
 			};
@@ -51,15 +51,6 @@ GSSEnvironmentEnvironment epd {
 					TMformat := CCSDS_TM(v1);
 					TCformat := CCSDS_TC(v1);
 					inputFilter := EPD_CCSDS_TM(v1);
-				};
-				GSSEnvironmentLevelInOut {
-					id := 1;
-					name := "EPD-PUS";
-					TMformat := EPD_PUS_TM(v1);
-					TCformat := EPD_PUS_TC(v1);
-					inputFilter := EPD_PUS_TM(v1);
-					export_to_prev_Level := EPD_PUS_TC_TO_CCSDS_TC(v1);
-					import_from_prev_Level := EPD_PUS_TM_FROM_CCSDS_TM(v1);
 				};
 			};
 			GSSEnvironmentInterface {
@@ -81,21 +72,21 @@ GSSEnvironmentEnvironment epd {
 				name := "3.25 SID0";
 				id := 0;
 				ifRef := 0;
-				levels := 3;
-				levelRef := 1;
-				inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_0_filter_level_0(v1);
 				GSSEnvironmentUpperLevels {
 					GSSEnvironmentUpperLevel {
-						level := _2;
+						level := _1;
 						TMformat := tm_epd_3_25_0_formulas(v1);
-						inputFilter := tm_epd_3_25_0_filter_level_2(v1);
-						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+						inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
 				GSSEnvironmentPrintingData {
 					printStatus := disabled;
 					GSSEnvironmentStructuredData {
-						levelRef := 2;
+						levelRef := 1;
 						firstField := 1;
 					};
 				};
@@ -111,21 +102,21 @@ GSSEnvironmentEnvironment epd {
 				name := "3.25 SID10";
 				id := 1;
 				ifRef := 0;
-				levels := 3;
-				levelRef := 1;
-				inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_10_filter_level_0(v1);
 				GSSEnvironmentUpperLevels {
 					GSSEnvironmentUpperLevel {
-						level := _2;
+						level := _1;
 						TMformat := tm_epd_3_25_10(v1);
-						inputFilter := tm_epd_3_25_10_filter_level_2(v1);
-						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+						inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
 				GSSEnvironmentPrintingData {
 					printStatus := disabled;
 					GSSEnvironmentStructuredData {
-						levelRef := 2;
+						levelRef := 1;
 						firstField := 1;
 					};
 				};
@@ -141,21 +132,21 @@ GSSEnvironmentEnvironment epd {
 				name := "3.25 SID100";
 				id := 2;
 				ifRef := 0;
-				levels := 3;
-				levelRef := 1;
-				inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_100_filter_level_0(v1);
 				GSSEnvironmentUpperLevels {
 					GSSEnvironmentUpperLevel {
-						level := _2;
+						level := _1;
 						TMformat := tm_epd_3_25_100(v1);
-						inputFilter := tm_epd_3_25_100_filter_level_2(v1);
-						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+						inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
 				GSSEnvironmentPrintingData {
 					printStatus := disabled;
 					GSSEnvironmentStructuredData {
-						levelRef := 2;
+						levelRef := 1;
 						firstField := 1;
 					};
 				};
@@ -171,21 +162,21 @@ GSSEnvironmentEnvironment epd {
 				name := "3.25 SID101";
 				id := 3;
 				ifRef := 0;
-				levels := 3;
-				levelRef := 1;
-				inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_101_filter_level_0(v1);
 				GSSEnvironmentUpperLevels {
 					GSSEnvironmentUpperLevel {
-						level := _2;
+						level := _1;
 						TMformat := tm_epd_3_25_101(v1);
-						inputFilter := tm_epd_3_25_101_filter_level_2(v1);
-						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+						inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
 				GSSEnvironmentPrintingData {
 					printStatus := disabled;
 					GSSEnvironmentStructuredData {
-						levelRef := 2;
+						levelRef := 1;
 						firstField := 1;
 					};
 				};
@@ -201,21 +192,21 @@ GSSEnvironmentEnvironment epd {
 				name := "3.25 SID110";
 				id := 4;
 				ifRef := 0;
-				levels := 3;
-				levelRef := 1;
-				inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_110_filter_level_0(v1);
 				GSSEnvironmentUpperLevels {
 					GSSEnvironmentUpperLevel {
-						level := _2;
+						level := _1;
 						TMformat := tm_epd_3_25_110(v1);
-						inputFilter := tm_epd_3_25_110_filter_level_2(v1);
-						import_from_prev_Level := EPD_PUS_DATA_TM_FROM_EPD_PUS_TM(v1);
+						inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
 				GSSEnvironmentPrintingData {
 					printStatus := disabled;
 					GSSEnvironmentStructuredData {
-						levelRef := 2;
+						levelRef := 1;
 						firstField := 1;
 					};
 				};
@@ -228,14 +219,13 @@ GSSEnvironmentEnvironment epd {
 			};
 		};
 		GSSEnvironmentPeriodicTCs {
-			GSSEnvironmentPeriodicTCLevel1 {
+			GSSEnvironmentPeriodicTCLevel0 {
 				name := "periodic_test_connection";
 				id := 0;
 				ifRef := 0;
 				period_value := 1500;
 				period_unit := miliseconds;
-				app_to_level1 := tc_epd_17_1_export_to_level_1_ack(v1);
-				level1_to_level0 := tc_epd_17_1_export_to_level_0(v1);
+				app_to_level0 := tc_epd_17_1_export_ack(v1);
 			};
 		};
 		GSSEnvironmentGlobalVars { 
@@ -261,8 +251,8 @@ GSSEnvironmentEnvironment epd {
 				GSSEnvironmentReferenceField {
 					type := tm;
 					ifRef := 0;
-					level := 1;
-					fieldRef := 11; 
+					level := 0;
+					fieldRef := 19; 
 					offset := 0;
 					size := 4;
 				};

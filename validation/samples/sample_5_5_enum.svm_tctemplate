@@ -1,0 +1,12 @@
+<TCTemplate name="sample_5_5_enum" tcInput="tc_epd_5_5_ack">
+	<Fields>
+		<Field>
+			<fieldRef name="N RID"/>
+			<FieldValueRaw value="1"/>
+		</Field>
+		<Field>
+			<fieldRef name="Report ID"/>
+			<FieldValueEnum enumRef="transition" valueRef="Oper"/>
+		</Field>
+	</Fields>
+</TCTemplate>
