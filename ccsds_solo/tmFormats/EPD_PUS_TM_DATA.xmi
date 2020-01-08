@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="EPD_PUS_TM_DATA" uri="es.uah.aut.srg.EPD_PUS_TM_DATA" version="v1" description="EPD_PUS_TM_DATA" protocol="PUS_DATA" type="TM">
-  <VSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  <VSField name="Source_Data" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <constSize bytes="0" bits="0"/>
     <variableSize fidRef="1" unit="bytes"/>
     <maxSize bytes="4096" bits="0"/>
     <globalOffset bytes="10" bits="0"/>
   </VSField>
-  <VRFieldSize name="SourceDataLength" fid="1" pfid="0"/>
+  <VRFieldSize name="Source_Data_Length" fid="1" pfid="0"/>
 </gss:GSSFormatFormat>

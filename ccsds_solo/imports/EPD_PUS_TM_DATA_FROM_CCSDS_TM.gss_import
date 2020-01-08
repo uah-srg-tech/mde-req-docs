@@ -5,7 +5,7 @@ GSSImportImport EPD_PUS_TM_DATA_FROM_CCSDS_TM {
 	from := CCSDS_TM(v1);
 	to := EPD_PUS_TM_DATA(v1);
 	GSSImportDataSource {
-		FieldRef := CCSDS_Packet;
+		FieldRef := Source_Data;
 		leftTrim := 0;
 		rightTrim := 0;
 	};

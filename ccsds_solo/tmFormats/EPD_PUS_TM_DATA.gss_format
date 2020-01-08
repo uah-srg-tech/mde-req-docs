@@ -7,7 +7,7 @@ GSSFormatFormat EPD_PUS_TM_DATA {
 	GSSFormatVSField {
 		fid := 0;
 		pfid := 0;
-		name := "SourceData";
+		name := "Source_Data";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
@@ -31,6 +31,6 @@ GSSFormatFormat EPD_PUS_TM_DATA {
 	GSSFormatVRFieldSize {
 		fid := 1;
 		pfid := 0;
-		name := "SourceDataLength";
+		name := "Source_Data_Length";
 	};
 };
