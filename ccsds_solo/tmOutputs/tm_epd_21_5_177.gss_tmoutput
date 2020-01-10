@@ -1,8 +1,9 @@
-<GSSTMOutput name="tm_epd_21_5_177" type="21" subtype="5" pi1_val="177" levels="2">
+<GSSTMOutput name="tm_epd_21_5_177" type="21" subtype="5" levels="2">
 	<level1_format file="tm_epd_21_5_177(v1)"/>
 	<level1_filter file="tm_epd_21_5_177_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_epd_21_5_177_filter_level_0(v1)"/>
+	<OutputPI1 name="SDID" val="177" gssField="tm_epd_21_5_177(v1).NID00142"/>
 	<fields>
 		<OutputField name="N_Data" gssField="tm_epd_21_5_177(v1).NID00143"/>
 		<OutputField name="NID00143_block" gssField="tm_epd_21_5_177(v1).NID00143_block"/>

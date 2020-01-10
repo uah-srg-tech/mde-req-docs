@@ -1,8 +1,9 @@
-<GSSTMOutput name="tm_sis_3_25_6" type="3" subtype="25" pi1_val="6" levels="2">
+<GSSTMOutput name="tm_sis_3_25_6" type="3" subtype="25" levels="2">
 	<level1_format file="tm_sis_3_25_6(v1)"/>
 	<level1_filter file="tm_sis_3_25_6_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_3_25_6_filter_level_0(v1)"/>
+	<OutputPI1 name="SID" val="6" gssField="tm_sis_3_25_6(v1).NID10000"/>
 	<fields>
 		<OutputField name="Sw. Version" gssField="tm_sis_3_25_6(v1).NID10214"/>
 		<OutputField name="Status Int." gssField="tm_sis_3_25_6(v1).NID10215"/>

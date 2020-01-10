@@ -1,8 +1,9 @@
-<GSSTMOutput name="tm_epd_5_4_16657" type="5" subtype="4" pi1_val="16657" levels="2">
+<GSSTMOutput name="tm_epd_5_4_16657" type="5" subtype="4" levels="2">
 	<level1_format file="tm_epd_5_4_16657(v1)"/>
 	<level1_filter file="tm_epd_5_4_16657_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_epd_5_4_16657_filter_level_0(v1)"/>
+	<OutputPI1 name="RID_54" val="16657" gssField="tm_epd_5_4_16657(v1).NID00054"/>
 	<fields>
 		<OutputField name="Monitoring Param" gssField="tm_epd_5_4_16657(v1).NID00105"/>
 		<OutputField name="Monitoring Type" gssField="tm_epd_5_4_16657(v1).NID00106"/>

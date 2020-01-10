@@ -1,8 +1,9 @@
-<GSSTMOutput name="tm_epd_6_6_20483" type="6" subtype="6" pi1_val="20483" levels="2">
+<GSSTMOutput name="tm_epd_6_6_20483" type="6" subtype="6" levels="2">
 	<level1_format file="tm_epd_6_6_20483(v1)"/>
 	<level1_filter file="tm_epd_6_6_20483_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_epd_6_6_20483_filter_level_0(v1)"/>
+	<OutputPI1 name="Mem ID" val="20483" gssField="tm_epd_6_6_20483(v1).NID00006"/>
 	<fields>
 		<OutputField name="Start Address" gssField="tm_epd_6_6_20483(v1).NID00007"/>
 		<OutputField name="Number of Bytes" gssField="tm_epd_6_6_20483(v1).NID00008"/>

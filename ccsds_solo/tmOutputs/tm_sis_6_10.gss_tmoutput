@@ -1,4 +1,4 @@
-<GSSTMOutput name="tm_sis_6_10" type="6" subtype="10"  levels="2">
+<GSSTMOutput name="tm_sis_6_10" type="6" subtype="10" levels="2">
 	<level1_format file="tm_sis_6_10(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_6_10_filter_level_0(v1)"/>

@@ -1,8 +1,9 @@
-<GSSTMOutput name="tm_sis_21_3_101" type="21" subtype="3" pi1_val="101" levels="2">
+<GSSTMOutput name="tm_sis_21_3_101" type="21" subtype="3" levels="2">
 	<level1_format file="tm_sis_21_3_101(v1)"/>
 	<level1_filter file="tm_sis_21_3_101_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_21_3_101_filter_level_0(v1)"/>
+	<OutputPI1 name="SID" val="101" gssField="tm_sis_21_3_101(v1).NID10001"/>
 	<fields>
 		<OutputField name="Global 21" gssField="tm_sis_21_3_101(v1).NIDG1020"/>
 		<OutputField name="Reserved" gssField="tm_sis_21_3_101(v1).NIDD1105"/>

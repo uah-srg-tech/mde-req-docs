@@ -1,8 +1,9 @@
-<GSSTMOutput name="tm_sis_3_25_5" type="3" subtype="25" pi1_val="5" levels="2">
+<GSSTMOutput name="tm_sis_3_25_5" type="3" subtype="25" levels="2">
 	<level1_format file="tm_sis_3_25_5(v1)"/>
 	<level1_filter file="tm_sis_3_25_5_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_3_25_5_filter_level_0(v1)"/>
+	<OutputPI1 name="SID" val="5" gssField="tm_sis_3_25_5(v1).NID10000"/>
 	<fields>
 		<OutputField name="Global 3" gssField="tm_sis_3_25_5(v1).NIDG1002"/>
 		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1007"/>
