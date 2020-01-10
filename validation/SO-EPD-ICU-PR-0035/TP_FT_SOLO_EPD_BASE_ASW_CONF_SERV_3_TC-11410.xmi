@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <step name="Disable HK SID 100" id="0" mode="continuous">
         <inputs xsi:type="GSSTestProcInputs">
           <input xsi:type="GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="120" delay_unit="miliseconds">
@@ -27,7 +27,7 @@
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/0@step.0" output_idref_from_prev_step="/0@step.0/@outputs/@output.1">
+      <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/00/@step.0" output_idref_from_prev_step="/00/@step.0/@outputs/@output.1">
         <inputs xsi:type="GSSTestProcAction" message="SID100 counter is not increased" actionType="instruction" span_value="30" span_unit="seconds"/>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
@@ -57,7 +57,7 @@
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 100 is enabled back" id="3" mode="action" prev_step_idref="/0@step.2" output_idref_from_prev_step="/0@step.2/@outputs/@output.1">
+      <step name="Check HK SID 100 is enabled back" id="3" mode="action" prev_step_idref="/00/@step.2" output_idref_from_prev_step="/00/@step.2/@outputs/@output.1">
         <inputs xsi:type="GSSTestProcAction" message="SID100 counter is increased" actionType="instruction" span_value="30" span_unit="seconds"/>
       </step>
       <step name="Change HK SID 0 period to 5 seconds" id="4" mode="continuous">
@@ -87,7 +87,7 @@
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/0@step.4" output_idref_from_prev_step="/0@step.4/@outputs/@output.1">
+      <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/00/@step.4" output_idref_from_prev_step="/00/@step.4/@outputs/@output.1">
         <inputs xsi:type="GSSTestProcAction" message="SID0 period is 5 seconds" actionType="instruction" span_value="30" span_unit="seconds"/>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
@@ -117,7 +117,7 @@
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/0@step.6" output_idref_from_prev_step="/0@step.6/@outputs/@output.1">
+      <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/00/@step.6" output_idref_from_prev_step="/00/@step.6/@outputs/@output.1">
         <inputs xsi:type="GSSTestProcAction" message="SID0 period is 10 seconds" actionType="instruction" span_value="30" span_unit="seconds"/>
       </step>
 </test_proc>

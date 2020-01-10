@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MintermFilter name="Event HET-EPT1 off_app_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <formatFile href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.xmi#/"/>
+    <BoolVar id="0" name="RID_5_1_4362" constantType="decimal">
+      <FieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.xmi#//@CSField.1"/>
+      <Op type="equal"/>
+      <Constant value="4362"/>
+    </BoolVar>
+    <Minterm id="0">
+      <BoolVarRef idRef="0"/>
+    </Minterm>
+</MintermFilter>

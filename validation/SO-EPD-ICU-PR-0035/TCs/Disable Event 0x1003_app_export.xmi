@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export name="Disable Event 0x1003_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <to href="../ccsds_solo/tcFormats/tc_epd_5_6.xmi#/"/>
+    <settings>
+      <settingFromConst value="1">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_5_6.xmi#//@CSField.0"/>
+      </settingFromConst>
+      <settingAIFromConst value="0x1003" toArrayIndex="0">
+        <toFieldRef href="../ccsds_solo/tcFormats/tc_epd_5_6.xmi#//@AIField.0"/>
+      </settingAIFromConst>
+    </settings>
+</Export>

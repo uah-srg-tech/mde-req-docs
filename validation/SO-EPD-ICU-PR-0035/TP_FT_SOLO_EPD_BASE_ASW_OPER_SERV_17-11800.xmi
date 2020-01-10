@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <step name="Test Connection" id="0" mode="continuous">
         <inputs xsi:type="GSSTestProcInputs">
           <input xsi:type="GSSTestProcInputLevel0" name="Test Connection" ifRef="0" delay_value="120" delay_unit="miliseconds">

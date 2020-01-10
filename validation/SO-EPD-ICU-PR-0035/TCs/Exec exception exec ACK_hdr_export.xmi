@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export name="Exec exception exec ACK_hdr_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <settings>
+      <settingFromConst value="8">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
+      </settingFromConst>
+    </settings>
+</Export>

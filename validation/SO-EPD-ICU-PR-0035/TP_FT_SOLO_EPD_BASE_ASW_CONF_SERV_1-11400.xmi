@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <step name="Valid TC both ACK flags" id="0" mode="continuous">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Test Connection both ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="../ccsds_solo/exports/tc_epd_17_1_export_ack.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 0" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+            <level1_filter apply_def_filter="no"/>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Accept ACK seqCtrl 0_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+          <output xsi:type="GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="0">
+            <level0_filter apply_def_filter="no"/>
+          </output>
+          <output xsi:type="GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+            <level1_filter apply_def_filter="no"/>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Exec ACK seqCtrl 0_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+      <step name="Valid TC accept ACK" id="1" mode="continuous" prev_step_idref="/0@step.0" output_idref_from_prev_step="/0@step.0/@outputs/@output.2">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/Test Connection accept ACK_hdr_export.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 1" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+            <level1_filter apply_def_filter="no"/>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Accept ACK seqCtrl 1_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+          <output xsi:type="GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="0">
+            <level0_filter apply_def_filter="no"/>
+          </output>
+        </outputs>
+      </step>
+      <step name="Valid TC exec ACK flag" id="2" mode="continuous" prev_step_idref="/0@step.1" output_idref_from_prev_step="/0@step.1/@outputs/@output.1">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/Test Connection exec ACK_hdr_export.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
+            <level0_filter apply_def_filter="no"/>
+          </output>
+          <output xsi:type="GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+            <level1_filter apply_def_filter="no"/>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Exec ACK seqCtrl 2_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+      <step name="Valid TC none ACK flags" id="3" mode="continuous" prev_step_idref="/0@step.2" output_idref_from_prev_step="/0@step.2/@outputs/@output.1">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/Test Connection no ACK_hdr_export.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
+            <level0_filter apply_def_filter="no"/>
+          </output>
+        </outputs>
+      </step>
+      <step name="Not acceptable TC both ACK flags" id="4" mode="continuous" prev_step_idref="/0@step.3" output_idref_from_prev_step="/0@step.3/@outputs/@output.0">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Wrong TC both ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="../ccsds_solo/exports/tc_epd_0_0_export_ack.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Error 9C44 seqCtrl 4" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.xmi#/"/>
+            <level1_filter apply_def_filter="no">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C44 seqCtrl 4_app_filter.xmi#/"/>
+            </level1_filter>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C44 seqCtrl 4_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+      <step name="Not acceptable TC accept ACK flags" id="5" mode="continuous" prev_step_idref="/0@step.4" output_idref_from_prev_step="/0@step.4/@outputs/@output.0">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/Wrong TC accept ACK_hdr_export.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Error 9C44 seqCtrl 5" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.xmi#/"/>
+            <level1_filter apply_def_filter="no">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C44 seqCtrl 5_app_filter.xmi#/"/>
+            </level1_filter>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C44 seqCtrl 5_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+      <step name="Not acceptable TC exec ACK flags" id="6" mode="continuous" prev_step_idref="/0@step.5" output_idref_from_prev_step="/0@step.5/@outputs/@output.0">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/Wrong TC exec ACK_hdr_export.xmi#/"/>
+          </input>
+        </inputs>
+      </step>
+      <step name="Not acceptable TC none ACK flags" id="7" mode="continuous">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/Wrong TC no ACK_hdr_export.xmi#/"/>
+          </input>
+        </inputs>
+      </step>
+      <step name="Not executable TC both ACK flags" id="8" mode="continuous">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level1 href="TCs/Exec exception both ACK_app_export.xmi#/"/>
+            <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
+            <level1_to_level0 href="../ccsds_solo/exports/tc_epd_128_32_export_ack.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 8" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+            <level1_filter apply_def_filter="no"/>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Accept ACK seqCtrl 8_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+          <output xsi:type="GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 8" id="1" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#/"/>
+            <level1_filter apply_def_filter="no">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C5E 19 seqCtrl 8_app_filter.xmi#/"/>
+            </level1_filter>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C5E 19 seqCtrl 8_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+      <step name="Not executable TC accept ACK flags" id="9" mode="continuous" prev_step_idref="/0@step.8" output_idref_from_prev_step="/0@step.8/@outputs/@output.1">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level1 href="TCs/Exec exception accept ACK_app_export.xmi#/"/>
+            <level1_to_level0 href="TCs/Exec exception accept ACK_hdr_export.xmi#/"/>
+            <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 9" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+            <level1_filter apply_def_filter="no"/>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Accept ACK seqCtrl 9_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+      <step name="Not executable TC none ACK flags" id="10" mode="continuous" prev_step_idref="/0@step.9" output_idref_from_prev_step="/0@step.9/@outputs/@output.0">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level1 href="TCs/Exec exception no ACK_app_export.xmi#/"/>
+            <level1_to_level0 href="TCs/Exec exception no ACK_hdr_export.xmi#/"/>
+            <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
+          </input>
+        </inputs>
+      </step>
+      <step name="Not executable TC exec ACK flags" id="11" mode="continuous" prev_step_idref="/0@step.8" output_idref_from_prev_step="/0@step.8/@outputs/@output.1">
+        <inputs xsi:type="GSSTestProcInputs">
+          <input xsi:type="GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="120" delay_unit="miliseconds">
+            <app_to_level1 href="TCs/Exec exception exec ACK_app_export.xmi#/"/>
+            <level1_to_level0 href="TCs/Exec exception exec ACK_hdr_export.xmi#/"/>
+            <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
+          </input>
+        </inputs>
+        <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+          <output xsi:type="GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 11" id="0" ifRef="0">
+            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#/"/>
+            <level1_filter apply_def_filter="no">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C5E 19 seqCtrl 11_app_filter.xmi#/"/>
+            </level1_filter>
+            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="GSSFilterMintermFilter" href="TMs/Error 9C5E 19 seqCtrl 11_hdr_filter.xmi#/"/>
+            </level0_filter>
+          </output>
+        </outputs>
+      </step>
+</test_proc>

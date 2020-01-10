@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MintermFilter name="Error 9C44 seqCtrl 4_app_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <formatFile href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.xmi#/"/>
+    <BoolVar id="0" name="TC ID_40004" constantType="decimal">
+      <FieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.xmi#//@CSField.1"/>
+      <Op type="equal"/>
+      <Constant value="40004"/>
+    </BoolVar>
+    <Minterm id="0">
+      <BoolVarRef idRef="0"/>
+    </Minterm>
+</MintermFilter>

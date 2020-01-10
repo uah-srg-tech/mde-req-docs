@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export name="Wrong TC accept ACK_hdr_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <settings>
+      <settingFromConst value="1">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
+      </settingFromConst>
+      <settingFromConst value="0">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.8"/>
+      </settingFromConst>
+      <settingFromConst value="1">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.9"/>
+      </settingFromConst>
+      <settingFromConst value="1">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.2"/>
+      </settingFromConst>
+      <settingFromConst value="0">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.1"/>
+      </settingFromConst>
+      <settingFromConst value="3">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.5"/>
+      </settingFromConst>
+      <settingFromConst value="0">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.13"/>
+      </settingFromConst>
+      <settingFromConst value="1">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.3"/>
+      </settingFromConst>
+      <settingFromConst value="812">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.4"/>
+      </settingFromConst>
+      <settingFromConst value="0">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.11"/>
+      </settingFromConst>
+      <settingFromConst value="0">
+        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.12"/>
+      </settingFromConst>
+    </settings>
+</Export>

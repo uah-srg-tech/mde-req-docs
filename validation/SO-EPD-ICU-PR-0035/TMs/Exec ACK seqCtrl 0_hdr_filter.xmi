@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MintermFilter name="Exec ACK seqCtrl 0_hdr_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <BoolVar id="0" name="Source_Sequence_Count_0" constantType="decimal">
+      <FieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@CSField.6"/>
+      <Op type="equal"/>
+      <Constant value="0"/>
+    </BoolVar>
+    <Minterm id="0">
+      <BoolVarRef idRef="0"/>
+    </Minterm>
+</MintermFilter>
