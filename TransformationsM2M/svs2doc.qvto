@@ -528,7 +528,9 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 					paragraph := object DParagraph {
 						paragraphContent += object DRun {
 							text := object DText {
-								content := tcSeq.telecommand->at(i).name.SanitizeTMTC() +
+								content := "TC(" + tcSeq.telecommand->at(i).tcData.tcTemplate.tcInput.type + "."
+										+ tcSeq.telecommand->at(i).tcData.tcTemplate.tcInput.subtype + ") " +
+										tcSeq.telecommand->at(i).name +
 										" via " + tcSeq.telecommand->at(i).interface.name;
 								if(tcSeq.telecommand->at(i).delay_value != null) {
 									content := content + " after " + tcSeq.telecommand->at(i).delay_value +
@@ -654,18 +656,33 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 						paragraph := object DParagraph {
 							paragraphContent += object DRun {
 								text := object DText {
-									content := tmSet.telemetry->at(i).name.SanitizeTMTC() + " via " +
-										tmSet.telemetry->at(i).interface.name;
+								content := "TM(" + tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.type + "."
+										+ tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.subtype + ") " +
+										tmSet.telemetry->at(i).name +
+										" via " + tmSet.telemetry->at(i).interface.name;
 								}
 							}
 						};
-						if((tmSet.telemetry->at(i).tmData.tmTemplate.fields->size() != 0) or 
+						if((tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1 != null) or
+							(tmSet.telemetry->at(i).tmData.tmTemplate.fields->size() != 0) or 
 								(tmSet.telemetry->at(i).tmData.fields->size() != 0) or
 								(tmSet.telemetry->at(i).tmHeader.fields->size() != 0)) {
 							sublist := object DItemize {
 								indent := "3.75";
 								items := object OrderedSet(doctpl::DListItem) {};
 								var j : Integer := 1;
+								if(tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1 != null) {
+									items += object DListItem {
+										paragraph := object DParagraph {
+											paragraphContent += object DRun {
+												text := object DText {
+													content := tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1.name + ": " +
+															tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1.val;
+												}
+											}
+										}
+									}
+								};
 								while(j <= tmSet.telemetry->at(i).tmData.tmTemplate.fields->size()) {
 									var field := tmSet.telemetry->at(i).tmData.tmTemplate.fields->at(j);
 									items += object DListItem {
@@ -744,29 +761,6 @@ helper TMTCIFFieldValue::GetFieldValue() : String {
 		textContent := self.oclAsType(TMTCIFFieldValueEnum).valueRef.raw;
 	};
 	return textContent;
-}
-	
-helper String::SanitizeTMTC() : String {
-	var substrings := self.tokenize("_");
-	var retString : String;
-	var lastChar : Integer;
-	var i : Integer := 1;
-	while(i <= substrings->size()) {
-		if(i = 1) {
-			retString := substrings->at(1);
-		} else {
-			var firstChar := substrings->at(i).at(1).toInteger();
-			if((firstChar.oclIsInvalid()) or (lastChar.oclIsInvalid())) {
-				retString := retString + " " + substrings->at(i);
-			} else {
-				retString := retString + "." + substrings->at(i);
-			}
-		};
-		lastChar := substrings->at(i).at(substrings->at(i).size()).toInteger();
-		i := i + 1;
-	};
-	
-	return retString;
 }
 
 mapping svs::VSVSDocument::GenerateAdditionalInformationSection() : doc::DDSection {
