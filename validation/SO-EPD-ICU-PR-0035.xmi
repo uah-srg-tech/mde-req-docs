@@ -18,7 +18,9 @@
             </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -46,7 +48,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/1"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -68,7 +72,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/4"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -78,7 +84,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -94,7 +102,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -583,7 +593,9 @@
             </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -611,7 +623,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/55"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -633,7 +647,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/58"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -643,7 +659,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -659,7 +677,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -1148,7 +1168,9 @@
             </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -1176,7 +1198,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/109"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -1198,7 +1222,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/112"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -1208,7 +1234,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -1224,7 +1252,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -1713,7 +1743,9 @@
             </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -1741,7 +1773,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/163"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -1763,7 +1797,9 @@
             <level0_filter apply_def_filter="yes" extra_filter="/166"/>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="1" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
@@ -1773,7 +1809,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="&quot;0&quot;">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
@@ -1789,7 +1827,9 @@
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="&quot;0&quot;">
-            <level0_filter apply_def_filter="no"/>
+            <level0_filter apply_def_filter="yes">
+              <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_17_2_filter_level_0.gss_filter#//@element"/>
+            </level0_filter>
           </output>
         </outputs>
       </step>
