@@ -32,8 +32,14 @@ GSSEnvironmentEnvironment epd {
 				id := 0;
 				name := CCSDS;
 				typeLevel := 0;
-				typeOffset := 7;
-				subtypeOffset := 8;
+				GSSEnvironmentProtocolType {
+					name := "ServiceType";
+					offset := 7;
+				};
+				GSSEnvironmentProtocolSubtype {
+					name := "ServiceSubtype";
+					offset := 8;
+				};
 			};
 		};
 		GSSEnvironmentInterfaces {
