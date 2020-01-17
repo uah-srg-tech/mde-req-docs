@@ -4,6 +4,7 @@ import docptl2doc;
 modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
 modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
 modeltype svs uses "http://srg.aut.uah.es/micobs/svm/svs";
+modeltype testsetup uses "http://srg.aut.uah.es/micobs/svm/testsetup";
 modeltype vdm uses "http://srg.aut.uah.es/micobs/svm/vdm";
 modeltype fieldvalue uses "http://srg.aut.uah.es/tmtcif/fieldvalue";
 
@@ -103,19 +104,24 @@ mapping svs::VSVSTaskIdentification::GenerateTaskIdentificationSection() : doc::
 mapping svs::VSVSTestingSpecificationDesign::GenerateTestingSpecificationDesignSection() : doc::DDSection {
 	result.name := "Testing Specification Design";
 	result.sectionContent += self.general.map GenerateFixedSection("General");
+	result.sectionContent += self.testSetup.map GenerateTestSetupSection();
+	result.sectionContent += self.testDesigns.map GenerateTestDesign();
+}
+
+mapping testsetup::VTestSetupTestSetup::GenerateTestSetupSection() : doc::DDSection {
+	result.name := "Testing Specification Design";
 	result.sectionContent += self.interfaces.map GenerateInterfacesSection();
 	result.sectionContent += self.configurations.map GenerateConfigurationsSection();
 	result.sectionContent += self.actions.map GenerateActionsSection();
 	result.sectionContent += self.scenarios.map GenerateScenariosSection();
-	result.sectionContent += self.testDesigns.map GenerateTestDesign();
 }
 
-mapping svs::VSVSInterfacesSection::GenerateInterfacesSection() : doc::DDSection {
+mapping testsetup::VTestSetupInterfacesSection::GenerateInterfacesSection() : doc::DDSection {
 	result.name := "Interfaces";
 	result.sectionContent += self.interfaces.map GenerateInterface();
 }
 	
-mapping svs::VSVSInterface::GenerateInterface() : doc::DDBody {
+mapping testsetup::VTestSetupInterface::GenerateInterface() : doc::DDBody {
 	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
 	result.bodyContent += object DParagraph {
 		paragraphContent += object DRun {
@@ -135,12 +141,12 @@ mapping svs::VSVSInterface::GenerateInterface() : doc::DDBody {
 	}
 }
 
-mapping svs::VSVSPacketConfigurationsSection::GenerateConfigurationsSection() : doc::DDSection {
+mapping testsetup::VTestSetupPacketConfigurationsSection::GenerateConfigurationsSection() : doc::DDSection {
 	result.name := "Packet Configurations";
 	result.sectionContent += self.packetConfigurations.map GenerateConfiguration();
 }
 	
-mapping svs::VSVSPacketConfiguration::GenerateConfiguration() : doc::DDBody {
+mapping testsetup::VTestSetupPacketConfiguration::GenerateConfiguration() : doc::DDBody {
 	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
 	result.bodyContent += object DParagraph {
 		paragraphContent += object DRun {
@@ -155,12 +161,12 @@ mapping svs::VSVSPacketConfiguration::GenerateConfiguration() : doc::DDBody {
 	}
 }
 
-mapping svs::VSVSActionsSection::GenerateActionsSection() : doc::DDSection {
+mapping testsetup::VTestSetupActionsSection::GenerateActionsSection() : doc::DDSection {
 	result.name := "Actions";
 	result.sectionContent += self.action.map GenerateAction();
 }
 	
-mapping svs::VSVSAction::GenerateAction() : doc::DDBody {
+mapping testsetup::VTestSetupAction::GenerateAction() : doc::DDBody {
 	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
 	result.bodyContent += object DParagraph {
 		paragraphContent += object DRun {
@@ -178,12 +184,12 @@ mapping svs::VSVSAction::GenerateAction() : doc::DDBody {
 	result.bodyContent += self.description.bodyContent.map GenerateBodyContent();
 }
 
-mapping svs::VSVSScenariosSection::GenerateScenariosSection() : doc::DDSection {
+mapping testsetup::VTestSetupScenariosSection::GenerateScenariosSection() : doc::DDSection {
 	result.name := "Scenarios";
 	result.sectionContent += self.scenarios.map GenerateScenarioSection();
 }
 	
-mapping svs::VSVSScenarioSection::GenerateScenarioSection() : doc::DDSection {
+mapping testsetup::VTestSetupScenarioSection::GenerateScenarioSection() : doc::DDSection {
 	result.name := self.name;
 	result.sectionContent := object DDBody {
 		bodyContent := object OrderedSet(doctpl::DBodyContent) {};
@@ -382,7 +388,7 @@ mapping svs::VSVSTestProcedure::GenerateTestProcedure() : doc::DDSection {
 	result.sectionContent += self.procedureSteps.GenerateProcedureSteps("Procedure Steps");
 };
 
-helper svs::VSVSScenarioSection::GenerateTestInfoScenario(in infoName : String) : OrderedSet(doctpl::DBodyContent) {
+helper testsetup::VTestSetupScenarioSection::GenerateTestInfoScenario(in infoName : String) : OrderedSet(doctpl::DBodyContent) {
 	var bodyContent := object OrderedSet(doctpl::DBodyContent) {};
 		if(self.body <> null) {
 		bodyContent += object DParagraph {
@@ -477,7 +483,7 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 								content := self.configurations._configuration->at(i)._configuration.name;
 							}
 						};
-						if(self.configurations._configuration->at(i).filterStatus != VSVSConfigurationStatus::not_set) {
+						if(self.configurations._configuration->at(i).filterStatus != VTestSetupConfigurationStatus::not_set) {
 							paragraphContent += object DRun {
 								text := object DText {
 									content := ". Filter Status: ";
@@ -490,7 +496,7 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 								}
 							};
 						};
-						if(self.configurations._configuration->at(i).printStatus != VSVSConfigurationStatus::not_set) {
+						if(self.configurations._configuration->at(i).printStatus != VTestSetupConfigurationStatus::not_set) {
 							paragraphContent += object DRun {
 								text := object DText {
 									content := ". Print Status: ";
@@ -616,7 +622,7 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 			paragraphContent += object DRun {
 				text := object DText {
 					content := "Action: ";
-					if(action.selectedAction.type = VSVSActionType::checking) {
+					if(action.selectedAction.type = VTestSetupActionType::checking) {
 						content := content + "Check ";
 					} else {
 						content := content + "Perform ";
