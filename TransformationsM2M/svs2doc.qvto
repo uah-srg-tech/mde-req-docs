@@ -764,7 +764,8 @@ helper TMTCIFFieldValue::GetFieldValue() : String {
 	} else if(self.metaClassName() = "TMTCIFFieldValueFile") {
 		textContent := self.oclAsType(TMTCIFFieldValueFile).filename;
 	} else if(self.metaClassName() = "TMTCIFFieldValueEnum") {
-		textContent := self.oclAsType(TMTCIFFieldValueEnum).valueRef.raw;
+		textContent := self.oclAsType(TMTCIFFieldValueEnum).valueRef.name + " (" +
+			self.oclAsType(TMTCIFFieldValueEnum).valueRef.raw + ")";
 	};
 	return textContent;
 }
