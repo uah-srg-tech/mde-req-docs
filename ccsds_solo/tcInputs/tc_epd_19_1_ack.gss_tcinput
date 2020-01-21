@@ -2,9 +2,9 @@
 	<level1_format file="tc_epd_19_1(v1)"/>
 	<to_level0_export file="tc_epd_19_1_export_ack(v1)"/>
 	<fields>
-		<InputField name="RID" gssField="tc_epd_19_1(v1).PID00010"/>
-		<InputField name="Action SensorID" gssField="tc_epd_19_1(v1).PID00011"/>
-		<InputField name="Action Code" gssField="tc_epd_19_1(v1).PID00081"/>
+		<InputField name="RID" gssField="tc_epd_19_1(v1).PID00010" enumRef="CIDT0012TC"/>
+		<InputField name="Action SensorID" gssField="tc_epd_19_1(v1).PID00011" enumRef="CIDT0002TC"/>
+		<InputField name="Action Code" gssField="tc_epd_19_1(v1).PID00081" enumRef="CIDT0024TC"/>
 		<InputField name="Parameter" gssField="tc_epd_19_1(v1).PID00082"/>
 	</fields>
 </GSSTCInput>

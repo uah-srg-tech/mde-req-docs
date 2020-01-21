@@ -227,14 +227,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 13;
 		pfid := 0;
-		name := "NIDD1014";
-		description := "Reserved";
+		name := "NIDG1003";
+		description := "Global 4";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 1;
-			bits := 1;
+			bytes := 2;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 8;
@@ -244,14 +244,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 14;
 		pfid := 0;
-		name := "NIDG1003";
-		description := "Global 4";
+		name := "NIDD1014";
+		description := "Reserved";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 2;
-			bits := 0;
+			bytes := 1;
+			bits := 1;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 8;
@@ -329,14 +329,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 19;
 		pfid := 0;
-		name := "NIDG1004";
-		description := "Global 5";
+		name := "NIDD1019";
+		description := "A Coin End";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 2;
-			bits := 0;
+			bytes := 0;
+			bits := 5;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 10;
@@ -346,14 +346,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 20;
 		pfid := 0;
-		name := "NIDD1019";
-		description := "A Coin End";
+		name := "NIDG1004";
+		description := "Global 5";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 5;
+			bytes := 2;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 10;
@@ -567,14 +567,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 33;
 		pfid := 0;
-		name := "NIDG1005";
-		description := "Global 6";
+		name := "NIDD1027";
+		description := "Reserved";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 2;
-			bits := 0;
+			bytes := 1;
+			bits := 1;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 22;
@@ -584,14 +584,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 34;
 		pfid := 0;
-		name := "NIDD1027";
-		description := "Reserved";
+		name := "NIDG1005";
+		description := "Global 6";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 1;
-			bits := 1;
+			bytes := 2;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 22;
@@ -856,14 +856,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 50;
 		pfid := 0;
-		name := "NIDD1040";
-		description := "Reserved";
+		name := "NIDG1007";
+		description := "Global 8";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 5;
+			bytes := 2;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 30;
@@ -873,14 +873,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 51;
 		pfid := 0;
-		name := "NIDG1007";
-		description := "Global 8";
+		name := "NIDD1040";
+		description := "Reserved";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 2;
-			bits := 0;
+			bytes := 0;
+			bits := 5;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 30;
@@ -958,14 +958,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 56;
 		pfid := 0;
-		name := "NIDG1008";
-		description := "Global 9";
+		name := "NIDD1045";
+		description := "Reserved";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 2;
-			bits := 0;
+			bytes := 0;
+			bits := 4;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 32;
@@ -975,14 +975,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 57;
 		pfid := 0;
-		name := "NIDD1045";
-		description := "Reserved";
+		name := "NIDG1008";
+		description := "Global 9";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 4;
+			bytes := 2;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 32;
@@ -3440,14 +3440,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 202;
 		pfid := 0;
-		name := "NIDD1079";
-		description := "A TOFxE Rates TOF";
+		name := "NIDG1013";
+		description := "Global 14";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 2;
+			bytes := 1;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 199;
@@ -3457,14 +3457,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 203;
 		pfid := 0;
-		name := "NIDG1013";
-		description := "Global 14";
+		name := "NIDD1079";
+		description := "A TOFxE Rates TOF";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 1;
-			bits := 0;
+			bytes := 0;
+			bits := 2;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 199;
@@ -3678,14 +3678,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 216;
 		pfid := 0;
-		name := "NIDD1099";
-		description := "Reserved";
+		name := "NIDG1019";
+		description := "Global 20";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 3;
+			bytes := 2;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 206;
@@ -3695,14 +3695,14 @@ GSSFormatFormat tm_sis_3_25_5 {
 	GSSFormatCSField {
 		fid := 217;
 		pfid := 0;
-		name := "NIDG1019";
-		description := "Global 20";
+		name := "NIDD1099";
+		description := "Reserved";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 2;
-			bits := 0;
+			bytes := 0;
+			bits := 3;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 206;

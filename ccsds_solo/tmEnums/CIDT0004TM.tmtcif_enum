@@ -1,0 +1,4 @@
+<Enum name="CIDT0004TM">
+	<Value name="DISABLED">0</Value>
+	<Value name="ENABLED">1</Value>
+</Enum>

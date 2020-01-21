@@ -1,0 +1,5 @@
+<Enum name="CIDT1016TC">
+	<Value name="Event Board Heat">0</Value>
+	<Value name="LVPS Heater 1">1</Value>
+	<Value name="LVPS Heater 2">2</Value>
+</Enum>

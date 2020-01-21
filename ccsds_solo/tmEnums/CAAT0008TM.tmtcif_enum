@@ -1,0 +1,4 @@
+<Enum name="CAAT0008TM">
+	<Value name="RelaySwClosed">0</Value>
+	<Value name="Relay_Sw_Open">1</Value>
+</Enum>

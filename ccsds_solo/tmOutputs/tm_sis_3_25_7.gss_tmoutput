@@ -5,8 +5,8 @@
 	<level0_filter file="tm_sis_3_25_7_filter_level_0(v1)"/>
 	<OutputPI1 name="SID" val="7" gssField="tm_sis_3_25_7(v1).NID10000"/>
 	<fields>
-		<OutputField name="Aliveness" gssField="tm_sis_3_25_7(v1).NIDD1089"/>
 		<OutputField name="Global 18" gssField="tm_sis_3_25_7(v1).NIDG1017"/>
+		<OutputField name="Aliveness" gssField="tm_sis_3_25_7(v1).NIDD1089"/>
 		<OutputField name="Power Down" gssField="tm_sis_3_25_7(v1).NIDD1090"/>
 		<OutputField name="Reserved" gssField="tm_sis_3_25_7(v1).NIDD1091"/>
 		<OutputField name="SIS State" gssField="tm_sis_3_25_7(v1).NIDD1092"/>

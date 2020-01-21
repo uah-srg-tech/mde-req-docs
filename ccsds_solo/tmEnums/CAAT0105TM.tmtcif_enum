@@ -1,0 +1,4 @@
+<Enum name="CAAT0105TM">
+	<Value name="No_ServRequest">0</Value>
+	<Value name="ServRequested">1</Value>
+</Enum>

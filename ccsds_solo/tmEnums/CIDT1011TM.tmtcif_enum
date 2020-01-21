@@ -1,0 +1,4 @@
+<Enum name="CIDT1011TM">
+	<Value name="Manual">0</Value>
+	<Value name="Automatic">1</Value>
+</Enum>

@@ -16,14 +16,14 @@
 		<OutputField name="A Start1 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10008"/>
 		<OutputField name="A Start2 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10009"/>
 		<OutputField name="A Stop CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10010"/>
-		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1014"/>
 		<OutputField name="Global 4" gssField="tm_sis_3_25_5(v1).NIDG1003"/>
+		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1014"/>
 		<OutputField name="A PW Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1015"/>
 		<OutputField name="A CFD Pulse Width" gssField="tm_sis_3_25_5(v1).NIDD1016"/>
 		<OutputField name="A TOF Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1017"/>
 		<OutputField name="A CFD Select" gssField="tm_sis_3_25_5(v1).NIDD1018"/>
-		<OutputField name="Global 5" gssField="tm_sis_3_25_5(v1).NIDG1004"/>
 		<OutputField name="A Coin End" gssField="tm_sis_3_25_5(v1).NIDD1019"/>
+		<OutputField name="Global 5" gssField="tm_sis_3_25_5(v1).NIDG1004"/>
 		<OutputField name="A Coin Begin" gssField="tm_sis_3_25_5(v1).NIDD1020"/>
 		<OutputField name="A High-gain Energy Req" gssField="tm_sis_3_25_5(v1).NIDD1021"/>
 		<OutputField name="A Low-gain Energy Req" gssField="tm_sis_3_25_5(v1).NIDD1022"/>
@@ -36,8 +36,8 @@
 		<OutputField name="B Start1 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10026"/>
 		<OutputField name="B Start2 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10027"/>
 		<OutputField name="B Stop CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10028"/>
-		<OutputField name="Global 6" gssField="tm_sis_3_25_5(v1).NIDG1005"/>
 		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1027"/>
+		<OutputField name="Global 6" gssField="tm_sis_3_25_5(v1).NIDG1005"/>
 		<OutputField name="B PW Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1028"/>
 		<OutputField name="B CFD Pulse Width" gssField="tm_sis_3_25_5(v1).NIDD1029"/>
 		<OutputField name="B TOF Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1030"/>
@@ -53,14 +53,14 @@
 		<OutputField name="B St1-Sp TOF Req" gssField="tm_sis_3_25_5(v1).NIDD1039"/>
 		<OutputField name="B Low-gain Energy Thresh" gssField="tm_sis_3_25_5(v1).NID10042"/>
 		<OutputField name="B Highgain Energy Thresh" gssField="tm_sis_3_25_5(v1).NID10043"/>
-		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1040"/>
 		<OutputField name="Global 8" gssField="tm_sis_3_25_5(v1).NIDG1007"/>
+		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1040"/>
 		<OutputField name="Pulse External" gssField="tm_sis_3_25_5(v1).NIDD1041"/>
 		<OutputField name="Pulse Rate" gssField="tm_sis_3_25_5(v1).NIDD1042"/>
 		<OutputField name="Pulse St2-Sp Delay" gssField="tm_sis_3_25_5(v1).NIDD1043"/>
 		<OutputField name="Pulse St1-St2 Delay" gssField="tm_sis_3_25_5(v1).NIDD1044"/>
-		<OutputField name="Global 9" gssField="tm_sis_3_25_5(v1).NIDG1008"/>
 		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1045"/>
+		<OutputField name="Global 9" gssField="tm_sis_3_25_5(v1).NIDG1008"/>
 		<OutputField name="B Pulse Energy Enb" gssField="tm_sis_3_25_5(v1).NIDD1046"/>
 		<OutputField name="B Pulse Stop Enb" gssField="tm_sis_3_25_5(v1).NIDD1047"/>
 		<OutputField name="B Pulse Start2 Enb" gssField="tm_sis_3_25_5(v1).NIDD1048"/>
@@ -205,8 +205,8 @@
 		<OutputField name="Integration Time" gssField="tm_sis_3_25_5(v1).NID10187"/>
 		<OutputField name="Integration Mult. N1" gssField="tm_sis_3_25_5(v1).NID10188"/>
 		<OutputField name="Integration Mult. N2" gssField="tm_sis_3_25_5(v1).NID10189"/>
-		<OutputField name="A TOFxE Rates TOF" gssField="tm_sis_3_25_5(v1).NIDD1079"/>
 		<OutputField name="Global 14" gssField="tm_sis_3_25_5(v1).NIDG1013"/>
+		<OutputField name="A TOFxE Rates TOF" gssField="tm_sis_3_25_5(v1).NIDD1079"/>
 		<OutputField name="A He Hist TOF" gssField="tm_sis_3_25_5(v1).NIDD1080"/>
 		<OutputField name="B TOFxE Rates TOF" gssField="tm_sis_3_25_5(v1).NIDD1081"/>
 		<OutputField name="B He Hist TOF" gssField="tm_sis_3_25_5(v1).NIDD1082"/>
@@ -219,8 +219,8 @@
 		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1087"/>
 		<OutputField name="B Iris Step" gssField="tm_sis_3_25_5(v1).NIDD1088"/>
 		<OutputField name="LUT Checksum" gssField="tm_sis_3_25_5(v1).NID10200"/>
-		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1099"/>
 		<OutputField name="Global 20" gssField="tm_sis_3_25_5(v1).NIDG1019"/>
+		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1099"/>
 		<OutputField name="Event Board Heater" gssField="tm_sis_3_25_5(v1).NIDD1100"/>
 		<OutputField name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1101"/>
 		<OutputField name="LVPS Heater 2" gssField="tm_sis_3_25_5(v1).NIDD1102"/>

@@ -1,0 +1,4 @@
+<Enum name="CIDT1008TM">
+	<Value name="Not learning">0</Value>
+	<Value name="Learning">1</Value>
+</Enum>

@@ -1,0 +1,9 @@
+<Enum name="CIDT1016TM">
+	<Value name="Page 1">1</Value>
+	<Value name="Page 2">2</Value>
+	<Value name="Page 3">3</Value>
+	<Value name="Page 4">4</Value>
+	<Value name="Page 5">5</Value>
+	<Value name="Page 6">6</Value>
+	<Value name="Page 7">7</Value>
+</Enum>

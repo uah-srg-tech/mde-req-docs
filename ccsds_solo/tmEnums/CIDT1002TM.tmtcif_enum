@@ -1,0 +1,10 @@
+<Enum name="CIDT1002TM">
+	<Value name="8.2ns">0</Value>
+	<Value name="External">1</Value>
+	<Value name="3.9ns">2</Value>
+	<Value name="14.5ns">3</Value>
+	<Value name="5.4ns">4</Value>
+	<Value name="20.0ns">5</Value>
+	<Value name="2.4ns">6</Value>
+	<Value name="10.6ns">7</Value>
+</Enum>

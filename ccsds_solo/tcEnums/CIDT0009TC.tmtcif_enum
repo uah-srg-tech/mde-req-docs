@@ -1,0 +1,4 @@
+<Enum name="CIDT0009TC">
+	<Value name="BASELINE ASW">0</Value>
+	<Value name="NOMINAL ASW">1</Value>
+</Enum>

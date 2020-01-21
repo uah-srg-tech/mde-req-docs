@@ -40,14 +40,14 @@ GSSFormatFormat tm_sis_21_3_224 {
 	GSSFormatCSField {
 		fid := 2;
 		pfid := 0;
-		name := "NIDG1020";
-		description := "Global 21";
+		name := "NIDD1105";
+		description := "Reserved";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 1;
-			bits := 0;
+			bytes := 0;
+			bits := 5;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 1;
@@ -57,14 +57,14 @@ GSSFormatFormat tm_sis_21_3_224 {
 	GSSFormatCSField {
 		fid := 3;
 		pfid := 0;
-		name := "NIDD1105";
-		description := "Reserved";
+		name := "NIDG1020";
+		description := "Global 21";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 5;
+			bytes := 1;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 1;

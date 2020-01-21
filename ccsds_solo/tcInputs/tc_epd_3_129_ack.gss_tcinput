@@ -2,7 +2,7 @@
 	<level1_format file="tc_epd_3_129(v1)"/>
 	<to_level0_export file="tc_epd_3_129_export_ack(v1)"/>
 	<fields>
-		<InputField name="SID" gssField="tc_epd_3_129(v1).PID00007"/>
+		<InputField name="SID" gssField="tc_epd_3_129(v1).PID00007" enumRef="CIDT0003TC"/>
 		<InputField name="Seconds" gssField="tc_epd_3_129(v1).PID00097"/>
 	</fields>
 </GSSTCInput>

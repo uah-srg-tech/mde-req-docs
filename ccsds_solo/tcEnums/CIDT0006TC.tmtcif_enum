@@ -1,0 +1,13 @@
+<Enum name="CIDT0006TC">
+	<Value name="NOTHING DONE">0</Value>
+	<Value name="ALL_TABLES_RECUR">1</Value>
+	<Value name="HET2_TABLE">10</Value>
+	<Value name="STEP_TABLE">11</Value>
+	<Value name="BOOT_TABLE_UPDT">12</Value>
+	<Value name="HET1_TABLE_UPDT">13</Value>
+	<Value name="HET2_TABLE_UPDT">14</Value>
+	<Value name="STEP_TABLE_UPDT">15</Value>
+	<Value name="TABLE_AT_ADDR_R">4</Value>
+	<Value name="BOOT_TABLE">8</Value>
+	<Value name="HET1_TABLE">9</Value>
+</Enum>

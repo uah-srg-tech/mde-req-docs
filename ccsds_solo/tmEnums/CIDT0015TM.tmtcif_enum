@@ -1,0 +1,9 @@
+<Enum name="CIDT0015TM">
+	<Value name="TC_LIMIT10">8193</Value>
+	<Value name="SIS_POWEROFF">8195</Value>
+	<Value name="SIS_ALIVENESS">8196</Value>
+	<Value name="SIS_TC_ERROR">8197</Value>
+	<Value name="STEP_TC_ERROR">8198</Value>
+	<Value name="HET1_TC_ERROR">8199</Value>
+	<Value name="HET2_TC_ERROR">8200</Value>
+</Enum>

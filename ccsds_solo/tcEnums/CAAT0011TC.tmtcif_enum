@@ -1,0 +1,4 @@
+<Enum name="CAAT0011TC">
+	<Value name="Not_Selected">0</Value>
+	<Value name="Selected">1</Value>
+</Enum>

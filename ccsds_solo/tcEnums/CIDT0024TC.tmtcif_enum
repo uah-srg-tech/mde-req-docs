@@ -1,0 +1,7 @@
+<Enum name="CIDT0024TC">
+	<Value name="Send IndexBlock">1</Value>
+	<Value name="Power Cycle">2</Value>
+	<Value name="Power OFF">3</Value>
+	<Value name="ICU Reset">4</Value>
+	<Value name="PWRCycleANDIndex">5</Value>
+</Enum>

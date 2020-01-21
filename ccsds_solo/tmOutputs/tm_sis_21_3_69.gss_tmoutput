@@ -5,8 +5,8 @@
 	<level0_filter file="tm_sis_21_3_69_filter_level_0(v1)"/>
 	<OutputPI1 name="SID" val="69" gssField="tm_sis_21_3_69(v1).NID10001"/>
 	<fields>
-		<OutputField name="Global 21" gssField="tm_sis_21_3_69(v1).NIDG1020"/>
 		<OutputField name="Reserved" gssField="tm_sis_21_3_69(v1).NIDD1105"/>
+		<OutputField name="Global 21" gssField="tm_sis_21_3_69(v1).NIDG1020"/>
 		<OutputField name="Burst Trigger" gssField="tm_sis_21_3_69(v1).NIDD1106"/>
 		<OutputField name="Iris Flag" gssField="tm_sis_21_3_69(v1).NIDD1107"/>
 		<OutputField name="Abort Flag" gssField="tm_sis_21_3_69(v1).NIDD1108"/>

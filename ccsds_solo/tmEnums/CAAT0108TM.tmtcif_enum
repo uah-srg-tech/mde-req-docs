@@ -1,0 +1,4 @@
+<Enum name="CAAT0108TM">
+	<Value name="Not_Busy">0</Value>
+	<Value name="Busy">1</Value>
+</Enum>

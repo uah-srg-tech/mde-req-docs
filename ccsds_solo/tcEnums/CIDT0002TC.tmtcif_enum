@@ -1,0 +1,6 @@
+<Enum name="CIDT0002TC">
+	<Value name="STEP">0</Value>
+	<Value name="SIS">1</Value>
+	<Value name="EPT_HET1">2</Value>
+	<Value name="EPT_HET2">3</Value>
+</Enum>

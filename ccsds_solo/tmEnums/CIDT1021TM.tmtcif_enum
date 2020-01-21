@@ -1,0 +1,4 @@
+<Enum name="CIDT1021TM">
+	<Value name="On">0</Value>
+	<Value name="Off">1</Value>
+</Enum>

@@ -1,0 +1,4 @@
+<Enum name="CAAT1007TM">
+	<Value name="Read">0</Value>
+	<Value name="Write">1</Value>
+</Enum>

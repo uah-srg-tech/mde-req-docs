@@ -1,0 +1,5 @@
+<Enum name="CIDT0009TM">
+	<Value name="BAD LENGTH">1</Value>
+	<Value name="BAD BLOCK ADDR">3</Value>
+	<Value name="BAD SEQ ADDR">4</Value>
+</Enum>

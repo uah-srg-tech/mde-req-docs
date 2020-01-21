@@ -6,23 +6,23 @@
 		<InputField name="Monitoring interval" gssField="tc_epd_128_125(v1).PID00013"/>
 		<InputField name="NOL" gssField="tc_epd_128_125(v1).PID00014"/>
 		<InputField name="Low Limit" gssField="tc_epd_128_125(v1).PID00017"/>
-		<InputField name="RID_NOL_LOW" gssField="tc_epd_128_125(v1).PID00025"/>
+		<InputField name="RID_NOL_LOW" gssField="tc_epd_128_125(v1).PID00025" enumRef="CIDT0012TC"/>
 		<InputField name="High Limit" gssField="tc_epd_128_125(v1).PID00026"/>
-		<InputField name="RID_NOL_HIGH" gssField="tc_epd_128_125(v1).PID00041"/>
+		<InputField name="RID_NOL_HIGH" gssField="tc_epd_128_125(v1).PID00041" enumRef="CIDT0012TC"/>
 		<InputField name="NOD" gssField="tc_epd_128_125(v1).PID00015"/>
 		<InputField name="Low Delta Threshold" gssField="tc_epd_128_125(v1).PID00027"/>
-		<InputField name="RID_NOD_LOW" gssField="tc_epd_128_125(v1).PID00042"/>
+		<InputField name="RID_NOD_LOW" gssField="tc_epd_128_125(v1).PID00042" enumRef="CIDT0012TC"/>
 		<InputField name="High Delta Threshold" gssField="tc_epd_128_125(v1).PID00028"/>
-		<InputField name="RID_NOD_HIGH" gssField="tc_epd_128_125(v1).PID00043"/>
+		<InputField name="RID_NOD_HIGH" gssField="tc_epd_128_125(v1).PID00043" enumRef="CIDT0012TC"/>
 		<InputField name="NOE" gssField="tc_epd_128_125(v1).PID00016"/>
 		<InputField name="NOE Exected Value" gssField="tc_epd_128_125(v1).PID00029"/>
-		<InputField name="RID_NOE" gssField="tc_epd_128_125(v1).PID00044"/>
+		<InputField name="RID_NOE" gssField="tc_epd_128_125(v1).PID00044" enumRef="CIDT0012TC"/>
 		<InputField name="NOB" gssField="tc_epd_128_125(v1).PID00035"/>
 		<InputField name="Bit Mask NOB" gssField="tc_epd_128_125(v1).PID00036"/>
 		<InputField name="NOB Expected Value" gssField="tc_epd_128_125(v1).PID00037"/>
-		<InputField name="RID_NOB" gssField="tc_epd_128_125(v1).PID00045"/>
+		<InputField name="RID_NOB" gssField="tc_epd_128_125(v1).PID00045" enumRef="CIDT0012TC"/>
 		<InputField name="NOF" gssField="tc_epd_128_125(v1).PID00038"/>
 		<InputField name="Bit Mask NOF" gssField="tc_epd_128_125(v1).PID00049"/>
-		<InputField name="RID_NOF" gssField="tc_epd_128_125(v1).PID00046"/>
+		<InputField name="RID_NOF" gssField="tc_epd_128_125(v1).PID00046" enumRef="CIDT0012TC"/>
 	</fields>
 </GSSTCInput>

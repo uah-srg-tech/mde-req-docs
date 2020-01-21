@@ -4,12 +4,12 @@
     <size bytes="13" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
   </CSField>
-  <CSField name="NIDD1097" description="Macro?" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="1"/>
+  <CSField name="NIDG1018" description="Global 19" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
   </CSField>
-  <CSField name="NIDG1018" description="Global 19" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
+  <CSField name="NIDD1097" description="Macro?" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
     <globalOffset bytes="0" bits="0"/>
   </CSField>
   <CSField name="NIDD1098" description="Result" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">

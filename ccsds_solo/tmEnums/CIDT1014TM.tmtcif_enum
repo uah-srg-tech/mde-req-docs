@@ -1,0 +1,4 @@
+<Enum name="CIDT1014TM">
+	<Value name="Tick">0</Value>
+	<Value name="Tock">1</Value>
+</Enum>

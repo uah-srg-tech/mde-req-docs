@@ -1,0 +1,4 @@
+<Enum name="CIDT0029TM">
+	<Value name="SUCCESS">0</Value>
+	<Value name="FAILED">1</Value>
+</Enum>

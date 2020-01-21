@@ -1,0 +1,4 @@
+<Enum name="CAAT0103TM">
+	<Value name="No_Error">0</Value>
+	<Value name="Error">1</Value>
+</Enum>

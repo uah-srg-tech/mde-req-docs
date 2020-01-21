@@ -1,0 +1,4 @@
+<Enum name="CAAT0025TM">
+	<Value name="Disarmed">0</Value>
+	<Value name="Armed">1</Value>
+</Enum>

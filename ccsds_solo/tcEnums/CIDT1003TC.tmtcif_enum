@@ -1,0 +1,4 @@
+<Enum name="CIDT1003TC">
+	<Value name="Monitor Limits">0</Value>
+	<Value name="Parameters">1</Value>
+</Enum>

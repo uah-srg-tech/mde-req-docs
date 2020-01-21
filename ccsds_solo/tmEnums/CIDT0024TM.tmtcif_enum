@@ -1,0 +1,6 @@
+<Enum name="CIDT0024TM">
+	<Value name="SID0 ERR DISAB">1</Value>
+	<Value name="BAD PERIOD">2</Value>
+	<Value name="UNKNOWN SID">3</Value>
+	<Value name="BAD TC SIZE">4</Value>
+</Enum>

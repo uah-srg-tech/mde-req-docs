@@ -8,12 +8,12 @@
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
   </CSField>
-  <CSField name="NIDD1089" description="Aliveness" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="1"/>
+  <CSField name="NIDG1017" description="Global 18" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
   </CSField>
-  <CSField name="NIDG1017" description="Global 18" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
+  <CSField name="NIDD1089" description="Aliveness" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="0"/>
   </CSField>
   <CSField name="NIDD1090" description="Power Down" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">

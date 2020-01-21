@@ -52,12 +52,12 @@
     <size bytes="2" bits="0"/>
     <globalOffset bytes="6" bits="0"/>
   </CSField>
-  <CSField name="NIDD1014" description="Reserved" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="1"/>
+  <CSField name="NIDG1003" description="Global 4" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
     <globalOffset bytes="8" bits="0"/>
   </CSField>
-  <CSField name="NIDG1003" description="Global 4" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
+  <CSField name="NIDD1014" description="Reserved" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="1"/>
     <globalOffset bytes="8" bits="0"/>
   </CSField>
   <CSField name="NIDD1015" description="A PW Multi Enb" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
@@ -76,12 +76,12 @@
     <size bytes="0" bits="2"/>
     <globalOffset bytes="9" bits="6"/>
   </CSField>
-  <CSField name="NIDG1004" description="Global 5" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
+  <CSField name="NIDD1019" description="A Coin End" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="5"/>
     <globalOffset bytes="10" bits="0"/>
   </CSField>
-  <CSField name="NIDD1019" description="A Coin End" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="5"/>
+  <CSField name="NIDG1004" description="Global 5" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
     <globalOffset bytes="10" bits="0"/>
   </CSField>
   <CSField name="NIDD1020" description="A Coin Begin" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
@@ -132,12 +132,12 @@
     <size bytes="2" bits="0"/>
     <globalOffset bytes="20" bits="0"/>
   </CSField>
-  <CSField name="NIDG1005" description="Global 6" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
+  <CSField name="NIDD1027" description="Reserved" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="1"/>
     <globalOffset bytes="22" bits="0"/>
   </CSField>
-  <CSField name="NIDD1027" description="Reserved" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="1"/>
+  <CSField name="NIDG1005" description="Global 6" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
     <globalOffset bytes="22" bits="0"/>
   </CSField>
   <CSField name="NIDD1028" description="B PW Multi Enb" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
@@ -200,12 +200,12 @@
     <size bytes="2" bits="0"/>
     <globalOffset bytes="28" bits="0"/>
   </CSField>
-  <CSField name="NIDD1040" description="Reserved" fid="50" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="5"/>
+  <CSField name="NIDG1007" description="Global 8" fid="50" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
     <globalOffset bytes="30" bits="0"/>
   </CSField>
-  <CSField name="NIDG1007" description="Global 8" fid="51" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
+  <CSField name="NIDD1040" description="Reserved" fid="51" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="5"/>
     <globalOffset bytes="30" bits="0"/>
   </CSField>
   <CSField name="NIDD1041" description="Pulse External" fid="52" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
@@ -224,12 +224,12 @@
     <size bytes="0" bits="4"/>
     <globalOffset bytes="31" bits="4"/>
   </CSField>
-  <CSField name="NIDG1008" description="Global 9" fid="56" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
+  <CSField name="NIDD1045" description="Reserved" fid="56" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="4"/>
     <globalOffset bytes="32" bits="0"/>
   </CSField>
-  <CSField name="NIDD1045" description="Reserved" fid="57" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="4"/>
+  <CSField name="NIDG1008" description="Global 9" fid="57" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
     <globalOffset bytes="32" bits="0"/>
   </CSField>
   <CSField name="NIDD1046" description="B Pulse Energy Enb" fid="58" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
@@ -808,12 +808,12 @@
     <size bytes="1" bits="0"/>
     <globalOffset bytes="198" bits="0"/>
   </CSField>
-  <CSField name="NIDD1079" description="A TOFxE Rates TOF" fid="202" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="2"/>
+  <CSField name="NIDG1013" description="Global 14" fid="202" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
     <globalOffset bytes="199" bits="0"/>
   </CSField>
-  <CSField name="NIDG1013" description="Global 14" fid="203" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
+  <CSField name="NIDD1079" description="A TOFxE Rates TOF" fid="203" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="2"/>
     <globalOffset bytes="199" bits="0"/>
   </CSField>
   <CSField name="NIDD1080" description="A He Hist TOF" fid="204" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
@@ -864,12 +864,12 @@
     <size bytes="2" bits="0"/>
     <globalOffset bytes="204" bits="0"/>
   </CSField>
-  <CSField name="NIDD1099" description="Reserved" fid="216" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="3"/>
+  <CSField name="NIDG1019" description="Global 20" fid="216" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
     <globalOffset bytes="206" bits="0"/>
   </CSField>
-  <CSField name="NIDG1019" description="Global 20" fid="217" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
+  <CSField name="NIDD1099" description="Reserved" fid="217" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="3"/>
     <globalOffset bytes="206" bits="0"/>
   </CSField>
   <CSField name="NIDD1100" description="Event Board Heater" fid="218" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">

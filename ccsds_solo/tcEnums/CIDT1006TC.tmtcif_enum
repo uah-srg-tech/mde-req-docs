@@ -1,0 +1,10 @@
+<Enum name="CIDT1006TC">
+	<Value name="Basic Rates,Fast">0</Value>
+	<Value name="Basic Rates, Med">1</Value>
+	<Value name="TOFxE Rates,Fast">2</Value>
+	<Value name="TOFxE Rates, Med">3</Value>
+	<Value name="TOFxE Rates,Slow">4</Value>
+	<Value name="He Histogram">5</Value>
+	<Value name="Test Pulses">6</Value>
+	<Value name="All">7</Value>
+</Enum>

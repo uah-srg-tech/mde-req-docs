@@ -1,0 +1,4 @@
+<Enum name="CAAT0037TC">
+	<Value name="Open">0</Value>
+	<Value name="Closed">1</Value>
+</Enum>

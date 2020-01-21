@@ -2,7 +2,7 @@
 	<level1_format file="tc_epd_128_16(v1)"/>
 	<to_level0_export file="tc_epd_128_16_export_ack(v1)"/>
 	<fields>
-		<InputField name="ASW ID" gssField="tc_epd_128_16(v1).PID00023"/>
+		<InputField name="ASW ID" gssField="tc_epd_128_16(v1).PID00023" enumRef="CIDT0009TC"/>
 		<InputField name="Desc Area Index" gssField="tc_epd_128_16(v1).PID00050"/>
 		<InputField name="N Desc" gssField="tc_epd_128_16(v1).PID00051"/>
 		<InputField name="PID00051_block" gssField="tc_epd_128_16(v1).PID00051_block"/>

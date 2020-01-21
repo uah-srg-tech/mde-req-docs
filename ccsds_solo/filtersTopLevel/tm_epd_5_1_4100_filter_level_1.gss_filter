@@ -15,6 +15,7 @@ GSSFilterMintermFilter tm_epd_5_1_4100_filter_level_1 {
 		GSSFilterConstant {
 			value := 4100;
 		};
+
 	};
 	GSSFilterMinterm { 
 		id := 0;

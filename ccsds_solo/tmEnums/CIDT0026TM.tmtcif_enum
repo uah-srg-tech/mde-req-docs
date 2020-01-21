@@ -1,0 +1,5 @@
+<Enum name="CIDT0026TM">
+	<Value name="WRONG RID">1</Value>
+	<Value name="NO ACT IN EV">2</Value>
+	<Value name="BAD TC SIZE">3</Value>
+</Enum>

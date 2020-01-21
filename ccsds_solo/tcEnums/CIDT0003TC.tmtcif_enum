@@ -1,0 +1,7 @@
+<Enum name="CIDT0003TC">
+	<Value name="SID0">0</Value>
+	<Value name="SID10">10</Value>
+	<Value name="SID100">100</Value>
+	<Value name="SID101">101</Value>
+	<Value name="SID110">110</Value>
+</Enum>

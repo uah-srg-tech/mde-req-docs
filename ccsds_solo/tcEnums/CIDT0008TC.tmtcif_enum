@@ -1,0 +1,4 @@
+<Enum name="CIDT0008TC">
+	<Value name="BOOT_TO_CONF">1</Value>
+	<Value name="BOOT_TO_OPER">2</Value>
+</Enum>

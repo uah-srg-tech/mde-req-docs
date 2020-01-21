@@ -1,0 +1,9 @@
+<Enum name="CIDT0019TM">
+	<Value name="TIME UPDATE">40010</Value>
+	<Value name="MEM SERVICE">40020</Value>
+	<Value name="PRIVATE SERV">40030</Value>
+	<Value name="HK TC ERROR">40040</Value>
+	<Value name="EV TC ERROR">40050</Value>
+	<Value name="ACTION ERROR">40060</Value>
+	<Value name="SCIENCE ERROR">40070</Value>
+</Enum>

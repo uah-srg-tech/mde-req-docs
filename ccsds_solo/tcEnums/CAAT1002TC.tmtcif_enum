@@ -1,0 +1,4 @@
+<Enum name="CAAT1002TC">
+	<Value name="Dont Verify">0</Value>
+	<Value name="Verify">1</Value>
+</Enum>

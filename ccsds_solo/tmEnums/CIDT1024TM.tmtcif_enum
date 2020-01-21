@@ -1,0 +1,4 @@
+<Enum name="CIDT1024TM">
+	<Value name="Ok">0</Value>
+	<Value name="Moved">1</Value>
+</Enum>

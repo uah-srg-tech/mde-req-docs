@@ -1,0 +1,6 @@
+<Enum name="CIDT0004TC">
+	<Value name="BOOT_TABLE">0</Value>
+	<Value name="EH1_TABLE">1</Value>
+	<Value name="EH2_TABLE">2</Value>
+	<Value name="STEP_TABLE">3</Value>
+</Enum>

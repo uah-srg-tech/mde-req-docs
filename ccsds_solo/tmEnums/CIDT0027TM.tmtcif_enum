@@ -1,0 +1,6 @@
+<Enum name="CIDT0027TM">
+	<Value name="RST BUFFER ERR">1</Value>
+	<Value name="ENABLE ERR">2</Value>
+	<Value name="DISABLE ERR">3</Value>
+	<Value name="BAD TC SIZE">4</Value>
+</Enum>

@@ -2,8 +2,8 @@
 	<level1_format file="tc_sis_129_152(v1)"/>
 	<to_level0_export file="tc_sis_129_152_export_ack(v1)"/>
 	<fields>
-		<InputField name="Macro?" gssField="tc_sis_129_152(v1).PID10000"/>
-		<InputField name="Struct. Id" gssField="tc_sis_129_152(v1).PID10018"/>
+		<InputField name="Macro?" gssField="tc_sis_129_152(v1).PID10000" enumRef="CIDT1001TC"/>
+		<InputField name="Struct. Id" gssField="tc_sis_129_152(v1).PID10018" enumRef="CIDT1003TC"/>
 		<InputField name="Legth Struct_ Load" gssField="tc_sis_129_152(v1).Legth Struct_ Load"/>
 		<InputField name="Offset" gssField="tc_sis_129_152(v1).PID10019"/>
 		<InputField name="Data8" gssField="tc_sis_129_152(v1).PID10057"/>

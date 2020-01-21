@@ -1,0 +1,9 @@
+<Enum name="CIDT0022TM">
+	<Value name="WRONG VERSION">1</Value>
+	<Value name="INVALID LENGTH">16</Value>
+	<Value name="WRONG TYPE">2</Value>
+	<Value name="DATA TOO LARGE">32</Value>
+	<Value name="WRONG HEADER">4</Value>
+	<Value name="PKT LENGTH ERR">64</Value>
+	<Value name="WRONG PCAT">8</Value>
+</Enum>

@@ -2,6 +2,6 @@
 	<level1_format file="tc_epd_128_15(v1)"/>
 	<to_level0_export file="tc_epd_128_15_export_ack(v1)"/>
 	<fields>
-		<InputField name="ASW ID" gssField="tc_epd_128_15(v1).PID00023"/>
+		<InputField name="ASW ID" gssField="tc_epd_128_15(v1).PID00023" enumRef="CIDT0009TC"/>
 	</fields>
 </GSSTCInput>

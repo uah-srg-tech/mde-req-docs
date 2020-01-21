@@ -1,0 +1,4 @@
+<Enum name="CAAT0041TM">
+	<Value name="End">0</Value>
+	<Value name="Start">1</Value>
+</Enum>

@@ -1,0 +1,4 @@
+<Enum name="CAAT1004TC">
+	<Value name="No increment">0</Value>
+	<Value name="increment">1</Value>
+</Enum>

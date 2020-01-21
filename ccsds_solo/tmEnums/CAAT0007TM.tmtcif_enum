@@ -1,0 +1,4 @@
+<Enum name="CAAT0007TM">
+	<Value name="Switch_Open">0</Value>
+	<Value name="Switch_Closed">1</Value>
+</Enum>

@@ -1,0 +1,6 @@
+<Enum name="CIDT1004TM">
+	<Value name="10 Hz">0</Value>
+	<Value name="100 Hz">1</Value>
+	<Value name="1 kHz">2</Value>
+	<Value name="10 kHz">3</Value>
+</Enum>

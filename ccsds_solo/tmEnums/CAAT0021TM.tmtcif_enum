@@ -1,0 +1,4 @@
+<Enum name="CAAT0021TM">
+	<Value name="Still">0</Value>
+	<Value name="Moving">1</Value>
+</Enum>

@@ -1,0 +1,5 @@
+<Enum name="CIDT0007TC">
+	<Value name="SAFE">1</Value>
+	<Value name="CONFIGURATION">2</Value>
+	<Value name="OPERATIONAL">3</Value>
+</Enum>

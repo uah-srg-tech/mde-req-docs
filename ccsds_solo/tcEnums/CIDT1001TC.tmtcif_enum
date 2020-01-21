@@ -1,0 +1,4 @@
+<Enum name="CIDT1001TC">
+	<Value name="Execute">0</Value>
+	<Value name="Append to Macro">1</Value>
+</Enum>

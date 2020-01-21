@@ -1,0 +1,4 @@
+<Enum name="CAAT0009TC">
+	<Value name="Failed">0</Value>
+	<Value name="Healthy">1</Value>
+</Enum>

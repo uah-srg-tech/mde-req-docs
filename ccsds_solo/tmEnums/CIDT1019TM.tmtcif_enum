@@ -1,0 +1,4 @@
+<Enum name="CIDT1019TM">
+	<Value name="Not open">0</Value>
+	<Value name="Open">1</Value>
+</Enum>

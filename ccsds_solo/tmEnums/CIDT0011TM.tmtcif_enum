@@ -1,0 +1,5 @@
+<Enum name="CIDT0011TM">
+	<Value name="MSG BLOCK CRC">2</Value>
+	<Value name="MSG BLOCK ADDR">3</Value>
+	<Value name="MSG SEQ ADDR">4</Value>
+</Enum>

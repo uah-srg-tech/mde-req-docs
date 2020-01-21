@@ -1,0 +1,4 @@
+<Enum name="CAAT0043TC">
+	<Value name="Empty">0</Value>
+	<Value name="Full">1</Value>
+</Enum>

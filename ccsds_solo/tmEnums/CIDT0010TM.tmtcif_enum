@@ -1,0 +1,14 @@
+<Enum name="CIDT0010TM">
+	<Value name="BAD_LIMITS">1</Value>
+	<Value name="PATCH ADDRES">10</Value>
+	<Value name="DEPLOY ADDRESS">11</Value>
+	<Value name="PATCHES SIZE">12</Value>
+	<Value name="PATCH_WRONG_LE">2</Value>
+	<Value name="WRONG_DVC">3</Value>
+	<Value name="DUMP_WRONG_LE">4</Value>
+	<Value name="WRONG_SUBTYPE">5</Value>
+	<Value name="CHECK_WRONG_LE">6</Value>
+	<Value name="BAD TC SIZE">7</Value>
+	<Value name="PATCH NUMBER">8</Value>
+	<Value name="PATCHES CRC">9</Value>
+</Enum>

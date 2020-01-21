@@ -1,0 +1,7 @@
+<Enum name="CIDT0001TM">
+	<Value name="PROM">20481</Value>
+	<Value name="EEPROM1">20482</Value>
+	<Value name="EEPROM2">20483</Value>
+	<Value name="RAM">20484</Value>
+	<Value name="SIS MEM">20485</Value>
+</Enum>

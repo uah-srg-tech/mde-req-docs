@@ -1,0 +1,4 @@
+<Enum name="CIDT1015TM">
+	<Value name="No-op">0</Value>
+	<Value name="Request PwrOff">1</Value>
+</Enum>

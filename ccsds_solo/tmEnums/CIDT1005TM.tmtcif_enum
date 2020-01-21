@@ -1,0 +1,6 @@
+<Enum name="CIDT1005TM">
+	<Value name="Off">0</Value>
+	<Value name="Half">1</Value>
+	<Value name="Half">2</Value>
+	<Value name="Full">3</Value>
+</Enum>

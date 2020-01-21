@@ -1,0 +1,9 @@
+<Enum name="CIDT1004TC">
+	<Value name="CommandsExecuted">0</Value>
+	<Value name="CommandsRejected">1</Value>
+	<Value name="MacroCommExecute">2</Value>
+	<Value name="All">255</Value>
+	<Value name="MacroCommReject">3</Value>
+	<Value name="Telemetry Volume">4</Value>
+	<Value name="Alarm Count">5</Value>
+</Enum>

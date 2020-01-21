@@ -2,6 +2,6 @@
 	<level1_format file="tc_epd_19_2(v1)"/>
 	<to_level0_export file="tc_epd_19_2_export_ack(v1)"/>
 	<fields>
-		<InputField name="RID" gssField="tc_epd_19_2(v1).PID00010"/>
+		<InputField name="RID" gssField="tc_epd_19_2(v1).PID00010" enumRef="CIDT0012TC"/>
 	</fields>
 </GSSTCInput>

@@ -1,0 +1,16 @@
+<Enum name="CIDT0023TM">
+	<Value name="POWER_ON_RST">0</Value>
+	<Value name="EXCEPT _IN_BSW">1</Value>
+	<Value name="EXCE_NOM_APPSW">10</Value>
+	<Value name="CRIT_EVENT_NOM">11</Value>
+	<Value name="SPW_NOT_READY">12</Value>
+	<Value name="WDOG_RST_BSW">13</Value>
+	<Value name="WDOG_TRANS_BL">2</Value>
+	<Value name="EXCEP_TRANS_BL">3</Value>
+	<Value name="WDOG_BL_APPSW">4</Value>
+	<Value name="EXCEP_BL_APPSW">5</Value>
+	<Value name="CRIT_EVENT_BL">6</Value>
+	<Value name="WDOG_TRAN_NOM">7</Value>
+	<Value name="EXCEP_TRAN_NOM">8</Value>
+	<Value name="WDOG_NOM_APPSW">9</Value>
+</Enum>

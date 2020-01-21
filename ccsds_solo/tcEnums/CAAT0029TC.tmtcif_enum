@@ -1,0 +1,4 @@
+<Enum name="CAAT0029TC">
+	<Value name="Inhibited">0</Value>
+	<Value name="Enabled">1</Value>
+</Enum>

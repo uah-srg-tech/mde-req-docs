@@ -1,0 +1,5 @@
+<Enum name="CIDT1009TC">
+	<Value name="Start1">0</Value>
+	<Value name="Start2">1</Value>
+	<Value name="Stop">2</Value>
+</Enum>

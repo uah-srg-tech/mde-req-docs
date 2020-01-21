@@ -1,0 +1,11 @@
+<Enum name="CIDT0018TM">
+	<Value name="ILLEGAL APID">40000</Value>
+	<Value name="CCSDS HEADER">40001</Value>
+	<Value name="WRONG CRC">40002</Value>
+	<Value name="WRONG TYPE">40003</Value>
+	<Value name="WRONG SUBTYPE">40004</Value>
+	<Value name="ILLEGALAPPDATA">40005</Value>
+	<Value name="PUS VERSION">40006</Value>
+	<Value name="ILEG SEQ FLAG">40007</Value>
+	<Value name="INVALID ACK">40008</Value>
+</Enum>

@@ -1,0 +1,13 @@
+<Enum name="CIDT0010TC">
+	<Value name="GROUND">0</Value>
+	<Value name="PHI">1</Value>
+	<Value name="RPW">10</Value>
+	<Value name="EUI">2</Value>
+	<Value name="SPICE">3</Value>
+	<Value name="STIX">4</Value>
+	<Value name="METIS">5</Value>
+	<Value name="SolO-HI">6</Value>
+	<Value name="SWA">7</Value>
+	<Value name="EPD">8</Value>
+	<Value name="MAG">9</Value>
+</Enum>

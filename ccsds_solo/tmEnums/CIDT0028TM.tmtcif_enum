@@ -1,0 +1,4 @@
+<Enum name="CIDT0028TM">
+	<Value name="BAD_TIME_VAL">1</Value>
+	<Value name="BAD TC SIZE">2</Value>
+</Enum>

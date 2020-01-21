@@ -2,6 +2,6 @@
 	<level1_format file="tc_epd_128_30(v1)"/>
 	<to_level0_export file="tc_epd_128_30_export_ack(v1)"/>
 	<fields>
-		<InputField name="Unit ID" gssField="tc_epd_128_30(v1).PID00048"/>
+		<InputField name="Unit ID" gssField="tc_epd_128_30(v1).PID00048" enumRef="CIDT0002TC"/>
 	</fields>
 </GSSTCInput>

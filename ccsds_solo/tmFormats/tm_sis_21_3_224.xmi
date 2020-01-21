@@ -8,12 +8,12 @@
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
   </CSField>
-  <CSField name="NIDG1020" description="Global 21" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
+  <CSField name="NIDD1105" description="Reserved" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="5"/>
     <globalOffset bytes="1" bits="0"/>
   </CSField>
-  <CSField name="NIDD1105" description="Reserved" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="5"/>
+  <CSField name="NIDG1020" description="Global 21" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
   </CSField>
   <CSField name="NIDD1106" description="Burst Trigger" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
