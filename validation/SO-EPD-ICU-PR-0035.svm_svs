@@ -2497,7 +2497,11 @@
 				<Step name="Enable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Enable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_5_enable_SID100" />
+							<TelecommandData template="tc_3_5_enable_SID100_no_fields">
+								<Field fieldRef="SID">
+									<FieldValueEnum enumRef="CIDT0003TC" valueRef="SID100"/>
+								</Field>
+							</TelecommandData>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">

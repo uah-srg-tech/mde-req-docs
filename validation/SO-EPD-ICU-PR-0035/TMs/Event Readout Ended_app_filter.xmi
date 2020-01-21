@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MintermFilter name="Event Readout Ended_app_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<MintermFilter name="Event Readout Ended_app_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
     <formatFile href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.xmi#/"/>
     <BoolVar id="0" name="RID_5_1_4364" constantType="decimal">
-      <FieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.xmi#//@CSField.1"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.xmi#//@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="4364"/>
+      <Value xsi:type="gss:GSSFilterConstant" value="4364"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>

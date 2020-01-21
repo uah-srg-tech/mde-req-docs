@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Export name="Enable Event 0x1002_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Export name="Enable Event 0x1002_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
     <to href="../ccsds_solo/tcFormats/tc_epd_5_5.xmi#/"/>
     <settings>
       <settingFromConst value="1">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_5_5.xmi#//@CSField.0"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_5_5.xmi#//@CSField.0"/>
       </settingFromConst>
       <settingAIFromConst value="0x1002" toArrayIndex="0">
         <toFieldRef href="../ccsds_solo/tcFormats/tc_epd_5_5.xmi#//@AIField.0"/>

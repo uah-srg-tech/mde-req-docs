@@ -177,6 +177,16 @@
 						<Telemetry name="TM (1_7) 1" interface="SpW">
 							<TelemetryData template="tm_1_7" />
 						</Telemetry>
+						<Telemetry name="Event Safe Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_safe_mode_entry"/>
+						</Telemetry>
+						<Telemetry name="Event Safe Mode entry no fields" interface="SpW">
+							<TelemetryData template="tm_5_1_safe_mode_entry_no_fields">
+								<Field fieldRef="Target Mode">
+									<FieldValueEnum enumRef="CIDT0006TM" valueRef="OPERATIONAL"/>
+								</Field>
+							</TelemetryData>
+						</Telemetry>
 					</TelemetrySet>
 				</Step>
 				<Step name="Sample Test Connection 1" prev_step="Sample Test connection 0" prev_tm_from_prev_step="TM (1_7) 1">

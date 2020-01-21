@@ -1,4 +1,0 @@
-<Enum name="of_on">
-	<Value name="Off">0</Value>
-	<Value name="On">1</Value>
-</Enum>

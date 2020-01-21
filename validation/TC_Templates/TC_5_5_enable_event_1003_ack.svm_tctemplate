@@ -1,11 +1,9 @@
 <TCTemplate name="tc_5_5_enable_event_1003_ack" tcInput="tc_epd_5_5_ack">
 	<Fields>
-		<Field>
-			<fieldRef name="N RID"/>
+		<Field fieldRef="N RID">
 			<FieldValueRaw value="1"/>
 		</Field>
-		<Field>
-			<fieldRef name="Report ID"/>
+		<Field fieldRef="Report ID">
 			<FieldValueRaw value="0x1003"/>
 		</Field>
 	</Fields>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Export name="Exec exception no ACK_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Export name="Exec exception no ACK_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
     <to href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#/"/>
     <settings>
       <settingFromConst value="0x50000000">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.1"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.1"/>
       </settingFromConst>
       <settingFromConst value="0">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.2"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.2"/>
       </settingFromConst>
       <settingFromConst value="60">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.3"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.3"/>
       </settingFromConst>
       <settingFromConst value="0xf0a5">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.4"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_128_32.xmi#//@CSField.4"/>
       </settingFromConst>
     </settings>
 </Export>

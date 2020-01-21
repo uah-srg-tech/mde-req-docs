@@ -1,6 +1,0 @@
-<Enum name="transition">
-	<Value name="SpW Ready">0x1001</Value>
-	<Value name="Conf">0x1002</Value>
-	<Value name="Oper">0x1003</Value>
-	<Value name="Safe">0x1004</Value>
-</Enum>

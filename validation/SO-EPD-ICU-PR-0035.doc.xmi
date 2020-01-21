@@ -4032,7 +4032,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -4111,7 +4111,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -4190,7 +4190,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;0&quot;"/>
+                      <text content="SID: SID0 (0)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -5966,7 +5966,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -6045,7 +6045,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -6124,7 +6124,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;0&quot;"/>
+                      <text content="SID: SID0 (0)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -7900,7 +7900,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -7979,7 +7979,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -8058,7 +8058,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;0&quot;"/>
+                      <text content="SID: SID0 (0)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -9834,7 +9834,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -9913,7 +9913,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;100&quot;"/>
+                      <text content="SID: SID100 (100)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>
@@ -9992,7 +9992,7 @@
                 <items>
                   <paragraph>
                     <paragraphContent xsi:type="micobs.doctpl:DRun">
-                      <text content="SID: &quot;0&quot;"/>
+                      <text content="SID: SID0 (0)"/>
                     </paragraphContent>
                   </paragraph>
                 </items>

@@ -2306,7 +2306,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2316,7 +2316,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2366,7 +2366,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;1&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;1&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;1&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2416,7 +2416,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;2&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;2&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;2&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2467,7 +2467,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2477,7 +2477,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;4&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;4&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2525,7 +2525,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2535,7 +2535,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;5&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;5&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;5&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2636,7 +2636,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2647,7 +2647,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2657,7 +2657,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2691,7 +2691,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;9&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;9&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;9&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2750,7 +2750,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2760,7 +2760,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;11&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;11&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;11&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2769,7 +2769,7 @@
   <gss_4:GSSExportExport name="Disable HK SID 100_app_export" uri="es.uah.aut.srg.Disable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -2777,7 +2777,7 @@
   <gss_4:GSSExportExport name="Enable HK SID 100_app_export" uri="es.uah.aut.srg.Enable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -2785,7 +2785,7 @@
   <gss_4:GSSExportExport name="Change HK SID 0 period to 5 seconds_app_export" uri="es.uah.aut.srg.Change HK SID 0 period to 5 seconds_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;0&quot;">
+      <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
       <settingFromConst value="&quot;5&quot;">
@@ -2860,7 +2860,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2871,7 +2871,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2882,7 +2882,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2893,7 +2893,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2904,7 +2904,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2915,7 +2915,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2926,7 +2926,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2937,7 +2937,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -2948,7 +2948,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3010,7 +3010,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3021,7 +3021,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3032,7 +3032,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3043,7 +3043,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3054,7 +3054,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4099&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4099.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4099&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4099&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3065,7 +3065,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3076,7 +3076,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3087,7 +3087,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3098,7 +3098,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3109,7 +3109,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3119,7 +3119,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3129,7 +3129,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3179,7 +3179,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;1&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;1&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;1&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3229,7 +3229,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;2&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;2&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;2&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3280,7 +3280,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3290,7 +3290,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;4&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;4&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3338,7 +3338,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3348,7 +3348,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;5&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;5&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;5&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3449,7 +3449,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3460,7 +3460,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3470,7 +3470,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3504,7 +3504,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;9&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;9&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;9&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3563,7 +3563,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3573,7 +3573,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;11&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;11&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;11&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3582,7 +3582,7 @@
   <gss_4:GSSExportExport name="Disable HK SID 100_app_export" uri="es.uah.aut.srg.Disable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -3590,7 +3590,7 @@
   <gss_4:GSSExportExport name="Enable HK SID 100_app_export" uri="es.uah.aut.srg.Enable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -3598,7 +3598,7 @@
   <gss_4:GSSExportExport name="Change HK SID 0 period to 5 seconds_app_export" uri="es.uah.aut.srg.Change HK SID 0 period to 5 seconds_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;0&quot;">
+      <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
       <settingFromConst value="&quot;5&quot;">
@@ -3673,7 +3673,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3684,7 +3684,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3695,7 +3695,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3706,7 +3706,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3717,7 +3717,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3728,7 +3728,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3739,7 +3739,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3750,7 +3750,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3761,7 +3761,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3823,7 +3823,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3834,7 +3834,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3845,7 +3845,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3856,7 +3856,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3867,7 +3867,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4098&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4098.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4098&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4098&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3878,7 +3878,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3889,7 +3889,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3900,7 +3900,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3911,7 +3911,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3922,7 +3922,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3932,7 +3932,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3942,7 +3942,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -3992,7 +3992,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;1&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;1&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;1&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4042,7 +4042,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;2&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;2&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;2&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4093,7 +4093,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4103,7 +4103,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;4&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;4&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4151,7 +4151,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4161,7 +4161,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;5&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;5&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;5&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4262,7 +4262,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4273,7 +4273,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4283,7 +4283,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4317,7 +4317,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;9&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;9&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;9&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4376,7 +4376,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4386,7 +4386,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;11&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;11&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;11&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4395,7 +4395,7 @@
   <gss_4:GSSExportExport name="Disable HK SID 100_app_export" uri="es.uah.aut.srg.Disable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -4403,7 +4403,7 @@
   <gss_4:GSSExportExport name="Enable HK SID 100_app_export" uri="es.uah.aut.srg.Enable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -4411,7 +4411,7 @@
   <gss_4:GSSExportExport name="Change HK SID 0 period to 5 seconds_app_export" uri="es.uah.aut.srg.Change HK SID 0 period to 5 seconds_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;0&quot;">
+      <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
       <settingFromConst value="&quot;5&quot;">
@@ -4486,7 +4486,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4497,7 +4497,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4508,7 +4508,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4519,7 +4519,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4530,7 +4530,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4541,7 +4541,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4552,7 +4552,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4563,7 +4563,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4574,7 +4574,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4636,7 +4636,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4647,7 +4647,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4658,7 +4658,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4669,7 +4669,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4680,7 +4680,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4098&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4098.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4098&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4098&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4691,7 +4691,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4702,7 +4702,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4713,7 +4713,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4724,7 +4724,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4735,7 +4735,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4745,7 +4745,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4755,7 +4755,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;0&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;0&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;0&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4805,7 +4805,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;1&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;1&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;1&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4855,7 +4855,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;2&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;2&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;2&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4906,7 +4906,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4916,7 +4916,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;4&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;4&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4964,7 +4964,7 @@
     <BoolVar id="0" name="TC ID_&quot;40004&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40004&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40004&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -4974,7 +4974,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;5&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;5&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;5&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5075,7 +5075,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5086,7 +5086,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5096,7 +5096,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;8&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;8&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;8&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5130,7 +5130,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;9&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;9&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;9&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5189,7 +5189,7 @@
     <BoolVar id="0" name="TC ID_&quot;40030&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;40030&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;40030&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5199,7 +5199,7 @@
     <BoolVar id="0" name="Source_Sequence_Count_&quot;11&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.gss_format#//@element/@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="&quot;11&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;11&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5208,7 +5208,7 @@
   <gss_4:GSSExportExport name="Disable HK SID 100_app_export" uri="es.uah.aut.srg.Disable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -5216,7 +5216,7 @@
   <gss_4:GSSExportExport name="Enable HK SID 100_app_export" uri="es.uah.aut.srg.Enable HK SID 100_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;100&quot;">
+      <settingFromConst value="100">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
     </settings>
@@ -5224,7 +5224,7 @@
   <gss_4:GSSExportExport name="Change HK SID 0 period to 5 seconds_app_export" uri="es.uah.aut.srg.Change HK SID 0 period to 5 seconds_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
     <settings>
-      <settingFromConst value="&quot;0&quot;">
+      <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element/@CSField.1"/>
       </settingFromConst>
       <settingFromConst value="&quot;5&quot;">
@@ -5299,7 +5299,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5310,7 +5310,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5321,7 +5321,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5332,7 +5332,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5343,7 +5343,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5354,7 +5354,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5365,7 +5365,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5376,7 +5376,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5387,7 +5387,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5449,7 +5449,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4354&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4354&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4354&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5460,7 +5460,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5471,7 +5471,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4097&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4097&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4097&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5482,7 +5482,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4101&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4101&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4101&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5493,7 +5493,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4099&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4099.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4099&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4099&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5504,7 +5504,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4360&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4360&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4360&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5515,7 +5515,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4361&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4361&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4361&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5526,7 +5526,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4362&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4362&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4362&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5537,7 +5537,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4363&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4363&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4363&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
@@ -5548,7 +5548,7 @@
     <BoolVar id="0" name="RID_5_1_&quot;4364&quot;" constantType="decimal">
       <FieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element/@CSField.1"/>
       <Op type="equal"/>
-      <Constant value="&quot;4364&quot;"/>
+      <Value xsi:type="gss_2:GSSFilterConstant" value="&quot;4364&quot;"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>

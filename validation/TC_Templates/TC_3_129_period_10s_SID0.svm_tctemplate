@@ -1,11 +1,9 @@
 <TCTemplate name="tc_3_129_period_10s_SID0" tcInput="tc_epd_3_129_ack">
 	<Fields>
-		<Field>
-			<fieldRef name="SID"/>
+		<Field fieldRef="SID">
 			<FieldValueRaw value="0"/>
 		</Field>
-		<Field>
-			<fieldRef name="Seconds"/>
+		<Field fieldRef="Seconds">
 			<FieldValueRaw value="10"/>
 		</Field>
 	</Fields>

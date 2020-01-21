@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Export name="Change period to 10 seconds HK SID 10_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Export name="Change period to 10 seconds HK SID 10_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
     <to href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
     <settings>
       <settingFromConst value="0">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#//@CSField.1"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#//@CSField.1"/>
       </settingFromConst>
       <settingFromConst value="10">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#//@CSField.2"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#//@CSField.2"/>
       </settingFromConst>
     </settings>
 </Export>

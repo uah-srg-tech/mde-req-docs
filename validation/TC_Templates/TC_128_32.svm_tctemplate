@@ -1,19 +1,15 @@
 <TCTemplate name="tc_128_32" tcInput="tc_epd_128_32_ack">
 	<Fields>
-		<Field>
-			<fieldRef name="Address func"/>
+		<Field fieldRef="Address func">
 			<FieldValueRaw value="0x50000000"/>
 		</Field>
-		<Field>
-			<fieldRef name="Parameter func"/>
+		<Field fieldRef="Parameter func">
 			<FieldValueRaw value="0"/>
 		</Field>
-		<Field>
-			<fieldRef name="Size_func"/>
+		<Field fieldRef="Size_func">
 			<FieldValueRaw value="60"/>
 		</Field>
-		<Field>
-			<fieldRef name="CRC_func"/>
+		<Field fieldRef="CRC_func">
 			<FieldValueRaw value="0xf0a5"/>
 		</Field>
 	</Fields>

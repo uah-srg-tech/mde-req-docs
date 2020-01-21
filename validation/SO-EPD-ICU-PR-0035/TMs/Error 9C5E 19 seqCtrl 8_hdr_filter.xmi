@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MintermFilter name="Error 9C5E 19 seqCtrl 8_hdr_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<MintermFilter name="Error 9C5E 19 seqCtrl 8_hdr_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
     <BoolVar id="0" name="Source_Sequence_Count_8" constantType="decimal">
-      <FieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@CSField.6"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@CSField.6"/>
       <Op type="equal"/>
-      <Constant value="8"/>
+      <Value xsi:type="gss:GSSFilterConstant" value="8"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>

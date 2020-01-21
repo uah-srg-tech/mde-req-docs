@@ -1,0 +1,7 @@
+<TMTemplate name="tm_5_1_safe_mode_entry" tmOutput="tm_epd_5_1_4100">
+	<Fields>
+		<Field fieldRef="Target Mode">
+			<FieldValueEnum enumRef="CIDT0006TM" valueRef="SAFE"/>
+		</Field>
+	</Fields>
+</TMTemplate>

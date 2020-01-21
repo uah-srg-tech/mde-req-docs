@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Export name="Exec exception accept ACK_hdr_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Export name="Exec exception accept ACK_hdr_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
     <settings>
       <settingFromConst value="1">
-        <toFieldRef xsi:type="GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
       </settingFromConst>
     </settings>
 </Export>
