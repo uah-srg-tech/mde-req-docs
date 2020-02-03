@@ -7,7 +7,7 @@ mapping doctpl::DAbstractRelatedDocument::GenerateADRDs() : doc::DDBody {
 	init {
 		result := object DDBody {
 			bodyContent += self.map GenerateADRD();
-		};
+		}
 	}
 }
 
@@ -19,21 +19,27 @@ mapping doctpl::DAbstractRelatedDocument::GenerateADRD() : doctpl::DBodyContent 
 			paragraphContent += object DRun {
 				text := object DText {
 					content := self.name;
-				};
+				}
 			};
 			paragraphContent += object DRun {
 				tab := object DTab {};
+				italics := DRunAttributes::TRUE;
 				text := object DText {
-					content := self.title + ". " + self.id;
+					content := self.title;
+				}
+			};
+			paragraphContent += object DRun {
+				text := object DText {
+					content := ". " + self.id;
 					if(self.issue <> null)
 						content := content + " issue " + self.issue.toString();
 					if(self.revision <> null)
 						content := content + " rev " + self.revision.toString();
 					if(self.date <> null)
 						content := content + ". " + self.date;
-				};
-			};
-		};
+				}
+			}
+		}
 	}
 }
 
@@ -60,7 +66,7 @@ mapping doctpl::DBodyContent::GenerateBodyContent() : doctpl::DBodyContent {
 		}
 		else if(self.metaClassName() = "DItemize") {
 			result := self.oclAsType(DItemize).map GenerateItemize();
-		};
+		}
 	}
 	result.style := self.style;
 	if(self.alignment <> doctpl::DAlignment::left) {
@@ -82,7 +88,7 @@ mapping doctpl::DParagraph::GenerateParagraph() : doctpl::DParagraph {
 			result.paragraphContent += self.paragraphContent->at(i).oclAsType(DHyperlink).map GenerateHyperlink();
 		};
 		i := i + 1;
-	};
+	}
 }
 
 mapping doctpl::DRun::GenerateRun() : doctpl::DRun {
@@ -94,7 +100,7 @@ mapping doctpl::DRun::GenerateRun() : doctpl::DRun {
 	};
 	result.text := object DText {
 		content := self.text.content.substring(7, self.text.content.size()-7);
-	};
+	}
 }
 
 mapping doctpl::DHyperlink::GenerateHyperlink() : doctpl::DHyperlink {
@@ -103,8 +109,8 @@ mapping doctpl::DHyperlink::GenerateHyperlink() : doctpl::DHyperlink {
 		result.run := object DRun {
 			text := object DText {
 				content := self.reference.name;
-			};
-		};
+			}
+		}
 	} else {
 		result.run := self.run.map GenerateRun();
 	};
@@ -152,7 +158,7 @@ mapping doctpl::DCell::GenerateCells() : doctpl::DCell {
 	while(i <= self.bodyContent->size()) {
 		result.bodyContent += self.bodyContent.map GenerateBodyContent();
 		i := i + 1;
-	};
+	}
 }
 
 mapping doctpl::DEnumerate::GenerateEnumerate() : doctpl::DEnumerate {
@@ -190,6 +196,6 @@ mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
 			result.sublist := self.sublist.oclAsType(DEnumerate).map GenerateEnumerate();
 		} else if(self.sublist.metaClassName() = "DItemize") {
 			result.sublist := self.sublist.oclAsType(DItemize).map GenerateItemize();
-		};
-	};
+		}
+	}
 }

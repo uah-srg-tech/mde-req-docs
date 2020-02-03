@@ -103,190 +103,31 @@ mapping svs::VSVSTaskIdentification::GenerateTaskIdentificationSection() : doc::
 
 mapping svs::VSVSTestingSpecificationDesign::GenerateTestingSpecificationDesignSection() : doc::DDSection {
 	result.name := "Testing Specification Design";
-	result.sectionContent += self.general.map GenerateFixedSection("General");
-	result.sectionContent += self.testSetup.map GenerateTestSetupSection();
+	var generalSection := self.general.map GenerateFixedSection("General");
+	generalSection.sectionContent += self.testSetup.map GenerateTestSetupRef();
+	result.sectionContent += generalSection;
 	result.sectionContent += self.testDesigns.map GenerateTestDesign();
 }
 
-mapping testsetup::VTestSetupTestSetup::GenerateTestSetupSection() : doc::DDSection {
-	result.name := "Testing Specification Design";
-	result.sectionContent += self.interfaces.map GenerateInterfacesSection();
-	result.sectionContent += self.configurations.map GenerateConfigurationsSection();
-	result.sectionContent += self.actions.map GenerateActionsSection();
-	result.sectionContent += self.scenarios.map GenerateScenariosSection();
-}
-
-mapping testsetup::VTestSetupInterfacesSection::GenerateInterfacesSection() : doc::DDSection {
-	result.name := "Interfaces";
-	result.sectionContent += self.interfaces.map GenerateInterface();
-}
-	
-mapping testsetup::VTestSetupInterface::GenerateInterface() : doc::DDBody {
-	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
-	result.bodyContent += object DParagraph {
-		paragraphContent += object DRun {
-			bold := DRunAttributes::TRUE;
-			text := object DText {
-				content := self.name;
-			}
-		};
-		paragraphContent += object DRun {
-			text := object DText {
-				content := ". Headers: " + self.tcHeader.name + ", " + self.tmHeader.name;
-			}
-		}
-	};
-	result.bodyContent += object DParagraph {
-		paragraphContent += self.description.map GenerateRun();
-	}
-}
-
-mapping testsetup::VTestSetupPacketConfigurationsSection::GenerateConfigurationsSection() : doc::DDSection {
-	result.name := "Packet Configurations";
-	result.sectionContent += self.packetConfigurations.map GenerateConfiguration();
-}
-	
-mapping testsetup::VTestSetupPacketConfiguration::GenerateConfiguration() : doc::DDBody {
-	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
-	result.bodyContent += object DParagraph {
-		paragraphContent += object DRun {
-			bold := DRunAttributes::TRUE;
-			text := object DText {
-				content := self.name;
-			}
-		}
-	};
-	result.bodyContent += object DParagraph {
-		paragraphContent += self.description.map GenerateRun();
-	}
-}
-
-mapping testsetup::VTestSetupActionsSection::GenerateActionsSection() : doc::DDSection {
-	result.name := "Actions";
-	result.sectionContent += self.action.map GenerateAction();
-}
-	
-mapping testsetup::VTestSetupAction::GenerateAction() : doc::DDBody {
-	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
-	result.bodyContent += object DParagraph {
-		paragraphContent += object DRun {
-			bold := DRunAttributes::TRUE;
-			text := object DText {
-				content := self.name;
-			}
-		};
-		paragraphContent += object DRun {
-			text := object DText {
-				content := ". Type: " + self.type.toString();
-			}
-		}
-	};
-	result.bodyContent += self.description.bodyContent.map GenerateBodyContent();
-}
-
-mapping testsetup::VTestSetupScenariosSection::GenerateScenariosSection() : doc::DDSection {
-	result.name := "Scenarios";
-	result.sectionContent += self.scenarios.map GenerateScenarioSection();
-}
-	
-mapping testsetup::VTestSetupScenarioSection::GenerateScenarioSection() : doc::DDSection {
-	result.name := self.name;
+mapping testsetup::VTestSetupDocument::GenerateTestSetupRef() : doc::DDSection {
+	result.name := "Test setup document";
 	result.sectionContent := object DDBody {
-		bodyContent := object OrderedSet(doctpl::DBodyContent) {};
-		bodyContent += self.body.bodyContent.map GenerateBodyContent();
-		
-		bodyContent += object DParagraph {
+		bodyContent := object DParagraph {
 			paragraphContent += object DRun {
-				bold := DRunAttributes::TRUE;
+				italics := DRunAttributes::TRUE;
 				text := object DText {
-					content := "Interfaces:";
-				}
-			}
-		};
-		bodyContent += object DItemize {
-			items := object OrderedSet(doctpl::DListItem) {};
-			var i : Integer := 1;
-			while(i <= self.supportedInterface->size()) {
-				items += object DListItem {
-					paragraph := object DParagraph {
-						paragraphContent += object DRun {
-							text := object DText {
-								content := self.supportedInterface->at(i).name;
-							}
-						}
-					}
-				};
-				i := i + 1;
-			}
-		};
-		
-		if(self.selectedConfiguration->size() != 0) {
-			bodyContent += object DParagraph {
-				paragraphContent += object DRun {
-					bold := DRunAttributes::TRUE;
-					text := object DText {
-						content := "Selected configurations: ";
-					};
-				};
-			};
-			bodyContent += object DItemize {
-				items := object OrderedSet(doctpl::DListItem) {};
-				var i : Integer := 1;
-				while(i <= self.selectedConfiguration->size()) {
-					items += object DListItem {
-						paragraph := object DParagraph {
-							paragraphContent += object DRun {
-								text := object DText {
-									content := self.selectedConfiguration->at(i)._configuration.name +
-										". Filter Status: ";
-								}
-							};
-							paragraphContent += object DRun {
-								italics := DRunAttributes::TRUE;
-								text := object DText {
-									content := self.selectedConfiguration->at(i).defaultFilterStatus.toString();
-								}
-							};
-							paragraphContent += object DRun {
-								text := object DText {
-									content := ". Print status: ";
-								}
-							};
-							paragraphContent += object DRun {
-								italics := DRunAttributes::TRUE;
-								text := object DText {
-									content := self.selectedConfiguration->at(i).defaultPrintStatus.toString();
-								}
-							}
-						}
-					};
-					i := i + 1;
-				}
-			}
-		};
-		if(self.supportedAction->size() != 0) {
-			bodyContent += object DParagraph {
-				paragraphContent += object DRun {
-					bold := DRunAttributes::TRUE;
-					text := object DText {
-						content := "Supported actions: ";
-					}
+					content := self.name;
 				}
 			};
-			bodyContent += object DItemize {
-				items := object OrderedSet(doctpl::DListItem) {};
-				var i : Integer := 1;
-				while(i <= self.supportedAction->size()) {
-					items += object DListItem {
-						paragraph := object DParagraph {
-							paragraphContent += object DRun {
-								text := object DText {
-									content := self.supportedAction->at(i).name;
-								}
-							}
-						}
-					};
-					i := i + 1;
+			paragraphContent += object DRun {
+				text := object DText {
+					content := ". " + self.id;
+					if(self.issue <> null)
+						content := content + " issue " + self.issue.toString();
+					if(self.revision <> null)
+						content := content + " rev " + self.revision.toString();
+					if(self.date <> null)
+						content := content + ". " + self.date;
 				}
 			}
 		}
@@ -534,8 +375,8 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 					paragraph := object DParagraph {
 						paragraphContent += object DRun {
 							text := object DText {
-								content := "TC(" + tcSeq.telecommand->at(i).tcData.tcTemplate.tcInput.type + "."
-										+ tcSeq.telecommand->at(i).tcData.tcTemplate.tcInput.subtype + ") " +
+								content := "TC(" + tcSeq.telecommand->at(i).tcData.tcTemplate.tc.type + "."
+										+ tcSeq.telecommand->at(i).tcData.tcTemplate.tc.subtype + ") " +
 										tcSeq.telecommand->at(i).name +
 										" via " + tcSeq.telecommand->at(i).interface.name;
 								if(tcSeq.telecommand->at(i).delay_value != null) {
@@ -662,14 +503,14 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 						paragraph := object DParagraph {
 							paragraphContent += object DRun {
 								text := object DText {
-								content := "TM(" + tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.type + "."
-										+ tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.subtype + ") " +
+								content := "TM(" + tmSet.telemetry->at(i).tmData.tmTemplate.tm.type + "."
+										+ tmSet.telemetry->at(i).tmData.tmTemplate.tm.subtype + ") " +
 										tmSet.telemetry->at(i).name +
 										" via " + tmSet.telemetry->at(i).interface.name;
 								}
 							}
 						};
-						if((tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1 != null) or
+						if((tmSet.telemetry->at(i).tmData.tmTemplate.tm.pi1 != null) or
 							(tmSet.telemetry->at(i).tmData.tmTemplate.fields->size() != 0) or 
 								(tmSet.telemetry->at(i).tmData.fields->size() != 0) or
 								(tmSet.telemetry->at(i).tmHeader.fields->size() != 0)) {
@@ -677,13 +518,13 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 								indent := "3.75";
 								items := object OrderedSet(doctpl::DListItem) {};
 								var j : Integer := 1;
-								if(tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1 != null) {
+								if(tmSet.telemetry->at(i).tmData.tmTemplate.tm.pi1 != null) {
 									items += object DListItem {
 										paragraph := object DParagraph {
 											paragraphContent += object DRun {
 												text := object DText {
-													content := tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1.name + ": " +
-															tmSet.telemetry->at(i).tmData.tmTemplate.tmOutput.pi1.val;
+													content := tmSet.telemetry->at(i).tmData.tmTemplate.tm.pi1.name + ": " +
+															tmSet.telemetry->at(i).tmData.tmTemplate.tm.pi1.val;
 												}
 											}
 										}

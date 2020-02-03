@@ -1,0 +1,210 @@
+import docptl2doc;
+
+modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
+modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype testsetup uses "http://srg.aut.uah.es/micobs/svm/testsetup";
+
+transformation generateDoc(in input : testsetup, out output : doc);
+
+main() {
+	input.objects()![testsetup::VTestSetupDocument]->map GenerateTestSetupDoc();
+}
+
+mapping testsetup::VTestSetupDocument::GenerateTestSetupDoc() : doc::DDocument {
+	result.name := "Testing Specification Design";
+	result.section += self.applicableDocumentsSection.map GenerateApplicableDocumentsSection();
+	result.section += self.referenceDocumentsSection.map GenerateReferenceDocumentsSection();
+	result.section += self.interfaces.map GenerateInterfacesSection();
+	result.section += self.configurations.map GenerateConfigurationsSection();
+	result.section += self.actions.map GenerateActionsSection();
+	result.section += self.scenarios.map GenerateScenariosSection();
+}
+
+mapping testsetup::VTestSetupApplicableDocuments::GenerateApplicableDocumentsSection() : doc::DDSection {
+	result.name := "Applicable Documents";
+	
+	result.sectionContent := self.applicableDocuments.map GenerateADRDs();
+}
+
+mapping testsetup::VTestSetupReferenceDocuments::GenerateReferenceDocumentsSection() : doc::DDSection {
+	result.name := "Reference Documents";
+	
+	result.sectionContent := self.referenceDocuments.map GenerateADRDs();
+}
+
+mapping testsetup::VTestSetupInterfacesSection::GenerateInterfacesSection() : doc::DDSection {
+	result.name := "Interfaces";
+	result.sectionContent += self.interfaces.map GenerateInterface();
+}
+	
+mapping testsetup::VTestSetupInterface::GenerateInterface() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			}
+		};
+		paragraphContent += object DRun {
+			text := object DText {
+				content := ". Headers: " + self.tcHeader.name + ", " + self.tmHeader.name;
+			}
+		}
+	};
+	result.bodyContent += object DParagraph {
+		paragraphContent += self.description.map GenerateRun();
+	}
+}
+
+mapping testsetup::VTestSetupPacketConfigurationsSection::GenerateConfigurationsSection() : doc::DDSection {
+	result.name := "Packet Configurations";
+	result.sectionContent += self.packetConfigurations.map GenerateConfiguration();
+}
+	
+mapping testsetup::VTestSetupPacketConfiguration::GenerateConfiguration() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			}
+		}
+	};
+	result.bodyContent += object DParagraph {
+		paragraphContent += self.description.map GenerateRun();
+	}
+}
+
+mapping testsetup::VTestSetupActionsSection::GenerateActionsSection() : doc::DDSection {
+	result.name := "Actions";
+	result.sectionContent += self.action.map GenerateAction();
+}
+	
+mapping testsetup::VTestSetupAction::GenerateAction() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			}
+		};
+		paragraphContent += object DRun {
+			text := object DText {
+				content := ". Type: " + self.type.toString();
+			}
+		}
+	};
+	result.bodyContent += self.description.bodyContent.map GenerateBodyContent();
+}
+
+mapping testsetup::VTestSetupScenariosSection::GenerateScenariosSection() : doc::DDSection {
+	result.name := "Scenarios";
+	result.sectionContent += self.scenarios.map GenerateScenarioSection();
+}
+	
+mapping testsetup::VTestSetupScenarioSection::GenerateScenarioSection() : doc::DDSection {
+	result.name := self.name;
+	result.sectionContent := object DDBody {
+		bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+		bodyContent += self.body.bodyContent.map GenerateBodyContent();
+		
+		bodyContent += object DParagraph {
+			paragraphContent += object DRun {
+				bold := DRunAttributes::TRUE;
+				text := object DText {
+					content := "Interfaces:";
+				}
+			}
+		};
+		bodyContent += object DItemize {
+			items := object OrderedSet(doctpl::DListItem) {};
+			var i : Integer := 1;
+			while(i <= self.supportedInterface->size()) {
+				items += object DListItem {
+					paragraph := object DParagraph {
+						paragraphContent += object DRun {
+							text := object DText {
+								content := self.supportedInterface->at(i).interface.name;
+							}
+						}
+					}
+				};
+				i := i + 1;
+			}
+		};
+		
+		if(self.selectedConfiguration->size() != 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Selected configurations: ";
+					};
+				};
+			};
+			bodyContent += object DItemize {
+				items := object OrderedSet(doctpl::DListItem) {};
+				var i : Integer := 1;
+				while(i <= self.selectedConfiguration->size()) {
+					items += object DListItem {
+						paragraph := object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := self.selectedConfiguration->at(i)._configuration.name +
+										". Filter Status: ";
+								}
+							};
+							paragraphContent += object DRun {
+								italics := DRunAttributes::TRUE;
+								text := object DText {
+									content := self.selectedConfiguration->at(i).defaultFilterStatus.toString();
+								}
+							};
+							paragraphContent += object DRun {
+								text := object DText {
+									content := ". Print status: ";
+								}
+							};
+							paragraphContent += object DRun {
+								italics := DRunAttributes::TRUE;
+								text := object DText {
+									content := self.selectedConfiguration->at(i).defaultPrintStatus.toString();
+								}
+							}
+						}
+					};
+					i := i + 1;
+				}
+			}
+		};
+		if(self.supportedAction->size() != 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Supported actions: ";
+					}
+				}
+			};
+			bodyContent += object DItemize {
+				items := object OrderedSet(doctpl::DListItem) {};
+				var i : Integer := 1;
+				while(i <= self.supportedAction->size()) {
+					items += object DListItem {
+						paragraph := object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := self.supportedAction->at(i).name;
+								}
+							}
+						}
+					};
+					i := i + 1;
+				}
+			}
+		}
+	}
+}
