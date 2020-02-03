@@ -1,4 +1,4 @@
-<TCTemplate name="tc_5_6_disable_event_1002_ack" tcInput="tc_epd_5_6_ack">
+<TCTemplate name="tc_5_6_disable_event_1002_ack" tc="tc_epd_5_6_ack">
 	<Fields>
 		<Field fieldRef="N RID">
 			<FieldValueRaw value="1"/>

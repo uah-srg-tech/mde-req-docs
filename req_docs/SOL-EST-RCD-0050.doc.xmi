@@ -89,9 +89,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="NR-27"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter Operations Requirements Document. SO-ESC-RS-05001 issue &quot;1&quot; rev &quot;8&quot;"/>
+          <text content="Solar Orbiter Operations Requirements Document"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-ESC-RS-05001 issue &quot;1&quot; rev &quot;8&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -100,9 +103,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="NR-28"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter TM/T- and Packet Structure ICD. SOL-S-ASTR-TN-0079 issue &quot;7&quot;"/>
+          <text content="Solar Orbiter TM/T- and Packet Structure ICD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SOL-S-ASTR-TN-0079 issue &quot;7&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -113,9 +119,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="IR-06"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter Science Requirements Document. SOL-EST-RS-1858 issue &quot;2&quot; rev &quot;0&quot;"/>
+          <text content="Solar Orbiter Science Requirements Document"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SOL-EST-RS-1858 issue &quot;2&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -976,7 +985,7 @@
       <sectionContent xsi:type="micobs.doc:DDBody"/>
     </sectionContent>
   </section>
-  <section name="Specific Requirements">
+  <section name="Verification, Validation and Integration Requirements">
     <sectionContent xsi:type="micobs.doc:DDSection" name="Verification and Validation Process">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
     </sectionContent>

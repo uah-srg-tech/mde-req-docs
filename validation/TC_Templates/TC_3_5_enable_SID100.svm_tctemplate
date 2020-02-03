@@ -1,4 +1,4 @@
-<TCTemplate name="tc_3_5_enable_SID100" tcInput="tc_epd_3_5_ack">
+<TCTemplate name="tc_3_5_enable_SID100" tc="tc_epd_3_5_ack">
 	<Fields>
 		 <Field fieldRef="SID">
 			<FieldValueEnum enumRef="CIDT0003TC" valueRef="SID100"/>

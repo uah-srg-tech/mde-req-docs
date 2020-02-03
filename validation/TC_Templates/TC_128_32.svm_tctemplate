@@ -1,4 +1,4 @@
-<TCTemplate name="tc_128_32" tcInput="tc_epd_128_32_ack">
+<TCTemplate name="tc_128_32" tc="tc_epd_128_32_ack">
 	<Fields>
 		<Field fieldRef="Address func">
 			<FieldValueRaw value="0x50000000"/>

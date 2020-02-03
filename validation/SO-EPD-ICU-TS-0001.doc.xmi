@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<micobs.doc:DDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:micobs.doc="http://srg.aut.uah.es/micobs/doc/doc" xmlns:micobs.doctpl="http://srg.aut.uah.es/micobs/doctpl/doctpl" name="Testing Specification Design">
+  <section name="Applicable Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="AD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="AD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <tab/>
+          <text content="EPD Sensors Data Interface Control Document"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-EPD-PO-IF-0005 issue &quot;1&quot; rev &quot;6&quot;"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Reference Documents">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" style="ADRD" name="RD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="RD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <tab/>
+          <text content="SpaceWire - Links, nodes, routers and networks"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-50-12A. 24/01/2003"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Interfaces">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SpW"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: CCSDS_TC, CCSDS_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SpaceWire Interface"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="Manual"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Manual Interface used for manual steps"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SpW TC"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SpaceWire timecodes Interface"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="STEP"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="STEP (sensor 1)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SIS"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="SIS (sensor 2)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HET-EPT1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="HET-EPT1 (sensor 3)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HET-EPT2"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="HET-EPT2 (sensor 4)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Packet Configurations">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HK SID0"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM(3.25) HK SID0 must be filtered during all test campaign unless it is specified. Information must not be logged during all test campaign unless it is specified"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HK SID10"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM(3.25) HK SID10 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HK SID100"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM(3.25) HK SID100 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HK SID101"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM(3.25) HK SID101 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="HK SID110"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TM(3.25) HK SID110 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Actions">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SID100 counter is not increased"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Type: checking"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Check TM(3.25) HK SID 100 counter is not increased"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SID100 counter is increased"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Type: checking"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Check TM(3.25) HK SID 100 counter is increased for 30 seconds"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SID0 period is 5 seconds"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Type: checking"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Check TM(3.25) HK SID 0 period for 5 seconds for 30 seconds"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="SID0 period is 10 seconds"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Type: checking"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Check TM(3.25) HK SID 0 period is 10 seconds for 30 seconds"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Scenarios">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario 1">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Power Supply"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW USB-Brick (compliant with "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                <run italics="true">
+                  <text content="RD1"/>
+                </run>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=") connected to GSS Host Unit "/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW cable connected to ICU and SpW-Brick"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT-2 sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SIS sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="Scenario1" caption="Test Scenario 1" referenceFile="SVS_images/Scenario1.png" width="&quot;919&quot;" height="&quot;535&quot;"/>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW TC"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Manual"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Selected configurations: "/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HK SID0. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HK SID10. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HK SID100. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HK SID101. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HK SID110. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Supported actions: "/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SID100 counter is not increased"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SID100 counter is increased"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SID0 period is 5 seconds"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SID0 period is 10 seconds"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario 2">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Power Supply"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW USB-Brick connected to GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW cable connected to ICU and SpW-Brick"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="4 UART cables to connect the ICU with the GSS Host Unit through the USB-Serial converters. The ICUSW GSS application emulates the sensor units behavior."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="Scenario2" caption="Test Scenario 2" referenceFile="SVS_images/Scenario2.png" width="&quot;964&quot;" height="&quot;567&quot;"/>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW TC"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Manual"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="STEP"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SIS"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT1"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT2"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario 3">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Same as scenario 2 but with different (wrong) configuration of SpW brick writing port."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW TC"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Manual"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="STEP"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SIS"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT1"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT2"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario 4">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Power Supply"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW USB-Brick connected to GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW cable connected to ICU and SpW-Brick"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT-1 sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="HET-EPT-2 sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="STEP sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SIS sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="Scenario4" caption="Test Scenario 4" referenceFile="SVS_images/Scenario4.png" width="&quot;916&quot;" height="&quot;645&quot;"/>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW TC"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Manual"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Scenario 5">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM."/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Power Supply"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW USB-Brick connected to GSS Host Unit"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW cable connected to ICU and SpW-Brick"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SUE"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SIS sensor unit or emulator"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DFigureFromFile" name="Scenario5" caption="Test Scenario 5" referenceFile="SVS_images/Scenario5.png" width="&quot;915&quot;" height="&quot;559&quot;"/>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Note: "/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Tests are only needed to be performed over Scenario 4 or Scenario 5."/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="SpW TC"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Manual"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+</micobs.doc:DDocument>

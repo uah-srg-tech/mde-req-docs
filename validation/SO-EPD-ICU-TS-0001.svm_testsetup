@@ -1,0 +1,401 @@
+<TestSetup name="Test Setup for EPD" id="SO-EPD-ICU-TS-0001" issue="1" revision="0" date="30/01/2020">
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="EPD Sensors Data Interface Control Document" id="SO-EPD-PO-IF-0005" issue="1" revision="6" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="SpaceWire - Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
+	</ReferenceDocuments>
+	<Interfaces>
+		<Interface name="SpW" tcHeader="CCSDS_TC" tmHeader="CCSDS_TM">
+			<run>
+				<text>SpaceWire Interface</text>
+			</run>
+		</Interface>
+		<Interface name="Manual" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+			<run>
+				<text>Manual Interface used for manual steps</text>
+			</run>
+		</Interface>
+		<Interface name="SpW TC" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+			<run>
+				<text>SpaceWire timecodes Interface</text>
+			</run>
+		</Interface>
+		<Interface name="STEP" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+			<run>
+				<text>STEP (sensor 1)</text>
+			</run>
+		</Interface>
+		<Interface name="SIS" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+			<run>
+				<text>SIS (sensor 2)</text>
+			</run>
+		</Interface>
+		<Interface name="HET-EPT1" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+			<run>
+				<text>HET-EPT1 (sensor 3)</text>
+			</run>
+		</Interface>
+		<Interface name="HET-EPT2" tcHeader="DUMMY_TC" tmHeader="DUMMY_TM">
+			<run>
+				<text>HET-EPT2 (sensor 4)</text>
+			</run>
+		</Interface>
+	</Interfaces>
+	<PacketConfigurations>
+		<PacketConfiguration name="HK SID0" id="0">
+			<run>
+				<text>TM(3.25) HK SID0 must be filtered during all test campaign unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+			</run>
+		</PacketConfiguration>
+		<PacketConfiguration name="HK SID10" id="1">
+			<run>
+				<text>TM(3.25) HK SID10 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+			</run>
+		</PacketConfiguration>
+		<PacketConfiguration name="HK SID100" id="2">
+			<run>
+				<text>TM(3.25) HK SID100 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+			</run>
+		</PacketConfiguration>
+		<PacketConfiguration name="HK SID101" id="3">
+			<run>
+				<text>TM(3.25) HK SID101 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+			</run>
+		</PacketConfiguration>
+		<PacketConfiguration name="HK SID110" id="4">
+			<run>
+				<text>TM(3.25) HK SID110 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
+			</run>
+		</PacketConfiguration>
+	</PacketConfigurations>
+	<Actions>
+		<Action name="SID100 counter is not increased" type="checking">
+			<body>
+				<paragraph>
+					<run>
+						<text>Check TM(3.25) HK SID 100 counter is not increased</text>
+					</run>
+				</paragraph>
+			</body>
+		</Action>
+		<Action name="SID100 counter is increased" type="checking">
+			<body>
+				<paragraph>
+					<run>
+						<text>Check TM(3.25) HK SID 100 counter is increased for 30 seconds</text>
+					</run>
+				</paragraph>
+			</body>
+		</Action>
+		<Action name="SID0 period is 5 seconds" type="checking">
+			<body>
+				<paragraph>
+					<run>
+						<text>Check TM(3.25) HK SID 0 period for 5 seconds for 30 seconds</text>
+					</run>
+				</paragraph>
+			</body>
+		</Action>
+		<Action name="SID0 period is 10 seconds" type="checking">
+			<body>
+				<paragraph>
+					<run>
+						<text>Check TM(3.25) HK SID 0 period is 10 seconds for 30 seconds</text>
+					</run>
+				</paragraph>
+			</body>
+		</Action>
+	</Actions>
+	<Scenarios>
+		<Scenario name="Scenario 1" scenario="epd(v1).Scenario 1">
+			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
+			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
+			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
+			<Configuration ref="HK SID0" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration ref="HK SID10" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration ref="HK SID100" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration ref="HK SID101" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration ref="HK SID110" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Action ref="SID100 counter is not increased"/>
+			<Action ref="SID100 counter is increased"/>
+			<Action ref="SID0 period is 5 seconds"/>
+			<Action ref="SID0 period is 10 seconds"/>
+			<body>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Power Supply</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW USB-Brick (compliant with </text>
+							</run>
+							<hyperlink reference="RD1">
+							</hyperlink>
+							<run>
+								<text>) connected to GSS Host Unit </text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW cable connected to ICU and SpW-Brick</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>HET-EPT-2 sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SIS sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<figureFromFile name="Scenario1" referenceFile="SVS_images/Scenario1.png" width="919" height="535" caption="Test Scenario 1"/>
+			</body>
+		</Scenario>
+		<Scenario name="Scenario 2" scenario="epd(v1).Scenario 2">
+			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
+			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
+			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
+			<Interface name="STEP" ref="STEP" scenarioInterface="STEP"/>
+			<Interface name="SIS" ref="SIS" scenarioInterface="SIS"/>
+			<Interface name="HET-EPT1" ref="HET-EPT1" scenarioInterface="EH1"/>
+			<Interface name="HET-EPT2" ref="HET-EPT2" scenarioInterface="EH2"/>
+			<body>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Power Supply</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW USB-Brick connected to GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW cable connected to ICU and SpW-Brick</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>4 UART cables to connect the ICU with the GSS Host Unit through the USB-Serial converters. The ICUSW GSS application emulates the sensor units behavior.</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<figureFromFile name="Scenario2" referenceFile="SVS_images/Scenario2.png" width="964" height="567" caption="Test Scenario 2"/>
+			</body>
+		</Scenario>
+		<Scenario name="Scenario 3" scenario="epd(v1).Scenario 3">
+			<Interface name="SpW Wrong Port" ref="SpW" scenarioInterface="SpW Wrong Write Port"/>
+			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
+			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
+			<Interface name="STEP" ref="STEP" scenarioInterface="STEP"/>
+			<Interface name="SIS" ref="SIS" scenarioInterface="SIS"/>
+			<Interface name="HET-EPT1" ref="HET-EPT1" scenarioInterface="EH1"/>
+			<Interface name="HET-EPT2" ref="HET-EPT2" scenarioInterface="EH2"/>
+			<body>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Same as scenario 2 but with different (wrong) configuration of SpW brick writing port.</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+			</body>
+		</Scenario>
+		<Scenario name="Scenario 4" scenario="epd(v1).Scenario 4">
+			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
+			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
+			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
+			<body>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Power Supply</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW USB-Brick connected to GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW cable connected to ICU and SpW-Brick</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>HET-EPT-1 sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>HET-EPT-2 sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>STEP sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SIS sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<figureFromFile name="Scenario4" referenceFile="SVS_images/Scenario4.png" width="916" height="645" caption="Test Scenario 4"/>
+			</body>
+		</Scenario>
+		<Scenario name="Scenario 5" scenario="epd(v1).Scenario 5">
+			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
+			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
+			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
+			<body>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>ICU with BSW stored in PROM, and both nominal and baseline ASW stored in EEPROM.</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>Power Supply</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW USB-Brick connected to GSS Host Unit</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SpW cable connected to ICU and SpW-Brick</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SUE</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>SIS sensor unit or emulator</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<figureFromFile name="Scenario5" referenceFile="SVS_images/Scenario5.png" width="915" height="559" caption="Test Scenario 5"/>
+				<paragraph>
+					<run bold="true">
+						<text>Note: </text>
+					</run>
+					<run bold="true">
+						<text>Tests are only needed to be performed over Scenario 4 or Scenario 5.</text>
+					</run>
+				</paragraph>							
+			</body>
+		</Scenario>
+	</Scenarios>
+</TestSetup>

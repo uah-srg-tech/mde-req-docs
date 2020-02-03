@@ -62,9 +62,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD1"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="EID-A: Solar Orbiter Experiment Interface Document, Part A. SOL-EST-RCD-0050 issue &quot;5&quot;. 03/2015"/>
+          <text content="EID-A: Solar Orbiter Experiment Interface Document, Part A"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SOL-EST-RCD-0050 issue &quot;5&quot;. 03/2015"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -73,9 +76,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD2"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="EID-B: Solar Orbiter EPD Experiment Interface Document, Part B. SO-EPD-PO-IF-0001 issue &quot;3&quot; rev &quot;3&quot;"/>
+          <text content="EID-B: Solar Orbiter EPD Experiment Interface Document, Part B"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-EPD-PO-IF-0001 issue &quot;3&quot; rev &quot;3&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -84,9 +90,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD3"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Interface Control Document (ICD). SO-EPD-ICU-IF-0001 issue &quot;4&quot; rev &quot;0&quot;"/>
+          <text content="Interface Control Document (ICD)"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-EPD-ICU-IF-0001 issue &quot;4&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -95,9 +104,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD4"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter Operations Requirements Document. SO-ESC-RS-05001 issue &quot;1&quot; rev &quot;8&quot;"/>
+          <text content="Solar Orbiter Operations Requirements Document"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-ESC-RS-05001 issue &quot;1&quot; rev &quot;8&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -106,9 +118,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD5"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Software. ECSS-E-ST-40C. 06/03/2009"/>
+          <text content="Software"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-40C. 06/03/2009"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -117,9 +132,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD6"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter (SOLO) Energetic Particle Detector (EPD) Instrument Control Unit (ICU). SO-EPD-ICU-DD-004 issue &quot;5&quot; rev &quot;0&quot;"/>
+          <text content="Solar Orbiter (SOLO) Energetic Particle Detector (EPD) Instrument Control Unit (ICU)"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-EPD-ICU-DD-004 issue &quot;5&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -128,9 +146,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD7"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="EPD Telemetry and Telecommand ICD. SO-EPD-PO-IF-0003 issue &quot;2&quot; rev &quot;9&quot;"/>
+          <text content="EPD Telemetry and Telecommand ICD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-EPD-PO-IF-0003 issue &quot;2&quot; rev &quot;9&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -139,9 +160,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD11"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Requirements and clarifications on software development and qualification for Solar Orbiter instruments. SOL-EST-RS-3188 issue &quot;1&quot; rev &quot;0&quot;"/>
+          <text content="Requirements and clarifications on software development and qualification for Solar Orbiter instruments"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SOL-EST-RS-3188 issue &quot;1&quot; rev &quot;0&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -150,9 +174,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD12"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="EPD Sensors Data Interface Control Document. SO-EPD-PO-IF-0005 issue &quot;1&quot; rev &quot;6&quot;"/>
+          <text content="EPD Sensors Data Interface Control Document"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-EPD-PO-IF-0005 issue &quot;1&quot; rev &quot;6&quot;"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -163,9 +190,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD1"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book. CCSDS 102.0-B-5. 11/2000"/>
+          <text content="CCSDS Packet Telemetry. CCSDS 102.0-B-5. Blue Book"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". CCSDS 102.0-B-5. 11/2000"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -174,9 +204,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD2"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Ground systems and operations - Telemetry and telecommand packet utilization. ECSS-E-70-41A. 30/01/2003"/>
+          <text content="Ground systems and operations - Telemetry and telecommand packet utilization"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-70-41A. 30/01/2003"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -185,9 +218,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD3"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SpaceWire - Links, nodes, routers and networks. ECSS-E-ST-50-12A. 24/01/2003"/>
+          <text content="SpaceWire - Links, nodes, routers and networks"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-50-12A. 24/01/2003"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>

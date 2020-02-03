@@ -34,9 +34,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD1"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SRG-EPD Software System Specification. SRG-EPD-SSS-0001"/>
+          <text content="SRG-EPD Software System Specification"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SRG-EPD-SSS-0001"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -45,9 +48,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD2"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SRG-EPD TM-TC Interface Control Document. SRG-EPD-ICD-0001"/>
+          <text content="SRG-EPD TM-TC Interface Control Document"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SRG-EPD-ICD-0001"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -56,9 +62,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD3"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Software. ECSS-E-ST-40C. 06/03/2009"/>
+          <text content="Software"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-40C. 06/03/2009"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -67,9 +76,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD4"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Software Product Assurance. ECSS-Q-ST-80C. 06/03/2009"/>
+          <text content="Software Product Assurance"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-Q-ST-80C. 06/03/2009"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -78,9 +90,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD5"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SRG-EPD Software Product Assurance Plan. SRG-EPD-SPA-0001"/>
+          <text content="SRG-EPD Software Product Assurance Plan"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SRG-EPD-SPA-0001"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -89,9 +104,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD5"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SRG-EPD Software Development Plan. SRG-EPD-SDP-0001"/>
+          <text content="SRG-EPD Software Development Plan"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SRG-EPD-SDP-0001"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -102,9 +120,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD1"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SRG-EPD Software System Specification. SRG-EPD-SSS-0001"/>
+          <text content="SRG-EPD Software System Specification"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SRG-EPD-SSS-0001"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -113,9 +134,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD2"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Ground systems and operations - Telemetry and telecommand packet utilization. ECSS-E-ST-70-41C. 15/04/2016"/>
+          <text content="Ground systems and operations - Telemetry and telecommand packet utilization"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-70-41C. 15/04/2016"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -124,9 +148,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD3"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SpaceWire - Links, nodes, routers and networks. ECSS-E-ST-50-12A. 24/01/2003"/>
+          <text content="SpaceWire - Links, nodes, routers and networks"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-50-12A. 24/01/2003"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -135,9 +162,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD4"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="SpaceWire - CCSDS packet transfer protocol. ECSS-E-ST-50-53C"/>
+          <text content="SpaceWire - CCSDS packet transfer protocol"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-50-53C"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -146,9 +176,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD5"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Space engineering. Electric and electronic. ECSS-E-20B issue &quot;8&quot; rev &quot;0&quot;. 03/2007"/>
+          <text content="Space engineering. Electric and electronic"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-20B issue &quot;8&quot; rev &quot;0&quot;. 03/2007"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -157,9 +190,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD6"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Spacecraft discrete interfaces. ECSS-E-ST-50-14C"/>
+          <text content="Spacecraft discrete interfaces"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-ST-50-14C"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>

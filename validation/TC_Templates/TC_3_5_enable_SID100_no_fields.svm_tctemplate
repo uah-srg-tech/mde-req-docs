@@ -1,1 +1,1 @@
-<TCTemplate name="tc_3_5_enable_SID100_no_fields" tcInput="tc_epd_3_5_ack"/>
+<TCTemplate name="tc_3_5_enable_SID100_no_fields" tc="tc_epd_3_5_ack"/>

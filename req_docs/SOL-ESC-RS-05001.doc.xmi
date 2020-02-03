@@ -17,9 +17,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD1"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Telemetry and Telecommand Packet Utilisation Standard. ECSS-E-70-41A. 30/01/2003"/>
+          <text content="Telemetry and Telecommand Packet Utilisation Standard"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". ECSS-E-70-41A. 30/01/2003"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -28,9 +31,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="AD4"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter Statement of Work. SOL-EST-SOW-1718. 01/03/2011"/>
+          <text content="Solar Orbiter Statement of Work"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SOL-EST-SOW-1718. 01/03/2011"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -41,9 +47,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD1"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter Space to Ground Interface Control Document (SGICD). SO-ESC-IF-05002"/>
+          <text content="Solar Orbiter Space to Ground Interface Control Document (SGICD)"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SO-ESC-IF-05002"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -52,9 +61,12 @@
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="RD8"/>
         </paragraphContent>
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
           <tab/>
-          <text content="Solar Orbiter TM/TC and Packet Structure ICD. SOL-S-ASTR-TN-0079"/>
+          <text content="Solar Orbiter TM/TC and Packet Structure ICD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". SOL-S-ASTR-TN-0079"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -323,7 +335,7 @@
       <sectionContent xsi:type="micobs.doc:DDBody"/>
     </sectionContent>
   </section>
-  <section name="Specific Requirements">
+  <section name="Verification, Validation and Integration Requirements">
     <sectionContent xsi:type="micobs.doc:DDSection" name="Verification and Validation Process">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
     </sectionContent>
