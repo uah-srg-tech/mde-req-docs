@@ -1,0 +1,106 @@
+GSSEnvironmentEnvironment dummyEnv {
+	uri := es.uah.aut.srg.dummyEnv;
+	version := v1;
+	GSSScenarioScenario "Dummy Scenario 1" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
+				test_campaign := "dummy_test_campaing";
+				version := 0.0;
+				date := 2020/01/29; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSScenarioInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSScenarioPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSScenarioDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSScenarioProtocols {
+		};
+		GSSScenarioInterfaces {
+			GSSScenarioMainInterface {
+				id := 0;
+				name := "Dummy 0"; 
+				ifType := dummy;
+				ifConfig := dummy_port(v1); 
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "DUMMY";
+					TMformat := DUMMY(v1);
+					TCformat := DUMMY(v1);
+					inputFilter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 1;
+				name := "Dummy 1";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := DUMMY(v1);
+				};
+			};
+		};
+	};
+	GSSScenarioScenario "Dummy Scenario 2" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
+				test_campaign := "dummy_test_campaing";
+				version := 0.0;
+				date := 2020/01/29; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSScenarioInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSScenarioPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSScenarioDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSScenarioProtocols {
+		};
+		GSSScenarioInterfaces {
+			GSSScenarioMainInterface {
+				id := 0;
+				name := "Dummy 2"; 
+				ifType := dummy;
+				ifConfig := dummy_port(v1); 
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "CCSDS";
+					TMformat := DUMMY(v1);
+					TCformat := DUMMY(v1);
+					inputFilter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+		};
+	};
+};

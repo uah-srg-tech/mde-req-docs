@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSEnvironmentEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/environment" xmlns:gss_1="http://srg.aut.uah.es/gss/filter" name="dummyEnv" uri="es.uah.aut.srg.dummyEnv" version="v1">
+  <scenario name="Dummy Scenario 1">
+    <gss_options>
+      <gss_info test_campaign="dummy_test_campaing" version="0.0" date="2020/01/29" version_control_url="http://srg.aut.uah.es/repository/"/>
+      <gss_info_print mainLog="enabled" portLogs="enabled" rawLog="enabled"/>
+      <phy_header_print mainLog="disabled" portLogs="disabled" rawLog="disabled" gssTabs="disabled"/>
+      <discardErrorFlags txErrors="disabled" notExpectedPackets="disabled" filtersKo="disabled" validTimesKo="enabled"/>
+    </gss_options>
+    <Protocols/>
+    <Interfaces>
+      <MainInterface name="Dummy 0" id="0" ifType="dummy" ioType="in_out">
+        <ifConfig href="../../Ifaces/dummy.xmi#/"/>
+        <LevelInOut id="0" name="DUMMY">
+          <TMformat href="../../Ifaces/dummy/DUMMY.xmi#/"/>
+          <TCformat href="../../Ifaces/dummy/DUMMY.xmi#/"/>
+          <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </LevelInOut>
+      </MainInterface>
+      <Interface name="Dummy 1" id="1" ifType="dummy" ioType="in">
+        <ifConfig href="../../Ifaces/dummy.xmi#/"/>
+        <LevelIn id="0" name="dummy">
+          <TCformat href="../../Ifaces/dummy/DUMMY.xmi#/"/>
+        </LevelIn>
+      </Interface>
+    </Interfaces>
+  </scenario>
+  <scenario name="Dummy Scenario 2">
+    <gss_options>
+      <gss_info test_campaign="dummy_test_campaing" version="0.0" date="2020/01/29" version_control_url="http://srg.aut.uah.es/repository/"/>
+      <gss_info_print mainLog="enabled" portLogs="enabled" rawLog="enabled"/>
+      <phy_header_print mainLog="disabled" portLogs="disabled" rawLog="disabled" gssTabs="disabled"/>
+      <discardErrorFlags txErrors="disabled" notExpectedPackets="disabled" filtersKo="disabled" validTimesKo="enabled"/>
+    </gss_options>
+    <Protocols/>
+    <Interfaces>
+      <MainInterface name="Dummy 2" id="0" ifType="dummy" ioType="in_out">
+        <ifConfig href="../../Ifaces/dummy.xmi#/"/>
+        <LevelInOut id="0" name="CCSDS">
+          <TMformat href="../../Ifaces/dummy/DUMMY.xmi#/"/>
+          <TCformat href="../../Ifaces/dummy/DUMMY.xmi#/"/>
+          <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </LevelInOut>
+      </MainInterface>
+    </Interfaces>
+  </scenario>
+</gss:GSSEnvironmentEnvironment>

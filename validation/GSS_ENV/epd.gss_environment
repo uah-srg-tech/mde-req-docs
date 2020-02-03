@@ -1,57 +1,57 @@
 GSSEnvironmentEnvironment epd {
 	uri := es.uah.aut.srg.epd;
 	version := v1;
-	GSSEnvironmentScenario "Scenario 1" {
-		GSSEnvironmentOptions {
-			GSSEnvironmentInfo { 
+	GSSScenarioScenario "Scenario 1" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
 				test_campaign := "epd_any_model";
-				version := 3.4;
-				date := 2019/02/11; 
+				version := 3.5;
+				date := 2020/01/29; 
 				version_control_url := http://srg.aut.uah.es/repository/;
 			};
-			GSSEnvironmentInfoPrint {
+			GSSScenarioInfoPrint {
 				mainLog := enabled;
 				portLogs := enabled;
 				rawLog := enabled;
 			};
-			GSSEnvironmentPhyHeaderPrint {
+			GSSScenarioPhyHeaderPrint {
 				mainLog := disabled;
 				portLogs := disabled;
 				rawLog := disabled;
 				gssTabs := disabled;
 			};
-			GSSEnvironmentDiscardErrorFlags {
+			GSSScenarioDiscardErrorFlags {
 				txErrors := disabled;
 				notExpectedPackets := disabled;
 				filtersKo := disabled;
 				validTimesKo := enabled;
 			};
 		};
-		GSSEnvironmentProtocols {
-			GSSEnvironmentProtocol {
+		GSSScenarioProtocols {
+			GSSScenarioProtocol {
 				id := 0;
 				name := CCSDS;
 				typeLevel := 0;
-				GSSEnvironmentProtocolType {
+				GSSScenarioProtocolType {
 					name := "ServiceType";
 					offset := 7;
 				};
-				GSSEnvironmentProtocolSubtype {
+				GSSScenarioProtocolSubtype {
 					name := "ServiceSubtype";
 					offset := 8;
 				};
 			};
 		};
-		GSSEnvironmentInterfaces {
+		GSSScenarioInterfaces {
 			ProtocolPacketsFile := protocol_packets(v1);
-			GSSEnvironmentMainInterface {
+			GSSScenarioMainInterface {
 				id := 0;
 				name := "SpW"; 
 				ifType := uart;
 				ifConfig := spw_uart_debug(v1); 
 				ioType := in_out;
 				protocolID := CCSDS;
-				GSSEnvironmentLevelInOut {
+				GSSScenarioLevelInOut {
 					id := 0;
 					name := "CCSDS";
 					TMformat := CCSDS_TM(v1);
@@ -59,21 +59,33 @@ GSSEnvironmentEnvironment epd {
 					inputFilter := EPD_CCSDS_TM(v1);
 				};
 			};
-			GSSEnvironmentInterface {
+			GSSScenarioInterface {
 				id := 1;
 				name := "dummy";
 				ifType := dummy;
 				ifConfig := dummy_port(v1);
 				ioType := in;
-				GSSEnvironmentLevelIn {
+				GSSScenarioLevelIn {
 					id := 0;
 					name := "dummy";
 					TCformat := DUMMY(v1);
 				};
 			};
+			GSSScenarioInterface {
+				id := 2;
+				name := "SpW_TC";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := SPW_TC(v1);
+				};
+			};
 		};
-		GSSEnvironmentSpecialPackets {
-			GSSEnvironmentSpecialPacket {
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
 				status := enabled;
 				name := "3.25 SID0";
 				id := 0;
@@ -81,29 +93,29 @@ GSSEnvironmentEnvironment epd {
 				levels := 2;
 				levelRef := 0;
 				inputFilter := tm_epd_3_25_0_filter_level_0(v1);
-				GSSEnvironmentUpperLevels {
-					GSSEnvironmentUpperLevel {
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
 						level := _1;
 						TMformat := tm_epd_3_25_0_formulas(v1);
 						inputFilter := tm_epd_3_25_0_filter_level_1(v1);
 						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
-				GSSEnvironmentPrintingData {
+				GSSScenarioPrintingData {
 					printStatus := disabled;
-					GSSEnvironmentStructuredData {
+					GSSScenarioStructuredData {
 						levelRef := 1;
 						firstField := 1;
 					};
 				};
-				GSSEnvironmentPeriod {
+				GSSScenarioPeriod {
 					min_value := 9900;
 					min_unit := miliseconds;
 					max_value := 10100;
 					max_unit := miliseconds;  
 				};
 			};
-			GSSEnvironmentSpecialPacket {
+			GSSScenarioSpecialPacket {
 				status := enabled;
 				name := "3.25 SID10";
 				id := 1;
@@ -111,29 +123,29 @@ GSSEnvironmentEnvironment epd {
 				levels := 2;
 				levelRef := 0;
 				inputFilter := tm_epd_3_25_10_filter_level_0(v1);
-				GSSEnvironmentUpperLevels {
-					GSSEnvironmentUpperLevel {
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
 						level := _1;
 						TMformat := tm_epd_3_25_10(v1);
 						inputFilter := tm_epd_3_25_10_filter_level_1(v1);
 						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
-				GSSEnvironmentPrintingData {
+				GSSScenarioPrintingData {
 					printStatus := disabled;
-					GSSEnvironmentStructuredData {
+					GSSScenarioStructuredData {
 						levelRef := 1;
 						firstField := 1;
 					};
 				};
-				GSSEnvironmentPeriod {
+				GSSScenarioPeriod {
 					min_value := 3599;
 					min_unit := seconds;
 					max_value := 3600;
 					max_unit := seconds;  
 				};
 			};
-			GSSEnvironmentSpecialPacket {
+			GSSScenarioSpecialPacket {
 				status := enabled;
 				name := "3.25 SID100";
 				id := 2;
@@ -141,29 +153,29 @@ GSSEnvironmentEnvironment epd {
 				levels := 2;
 				levelRef := 0;
 				inputFilter := tm_epd_3_25_100_filter_level_0(v1);
-				GSSEnvironmentUpperLevels {
-					GSSEnvironmentUpperLevel {
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
 						level := _1;
 						TMformat := tm_epd_3_25_100(v1);
 						inputFilter := tm_epd_3_25_100_filter_level_1(v1);
 						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
-				GSSEnvironmentPrintingData {
+				GSSScenarioPrintingData {
 					printStatus := disabled;
-					GSSEnvironmentStructuredData {
+					GSSScenarioStructuredData {
 						levelRef := 1;
 						firstField := 1;
 					};
 				};
-				GSSEnvironmentPeriod {
+				GSSScenarioPeriod {
 					min_value := 900;
 					min_unit := miliseconds;
 					max_value := 1100;
 					max_unit := miliseconds;  
 				};
 			};
-			GSSEnvironmentSpecialPacket {
+			GSSScenarioSpecialPacket {
 				status := enabled;
 				name := "3.25 SID101";
 				id := 3;
@@ -171,29 +183,29 @@ GSSEnvironmentEnvironment epd {
 				levels := 2;
 				levelRef := 0;
 				inputFilter := tm_epd_3_25_101_filter_level_0(v1);
-				GSSEnvironmentUpperLevels {
-					GSSEnvironmentUpperLevel {
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
 						level := _1;
 						TMformat := tm_epd_3_25_101(v1);
 						inputFilter := tm_epd_3_25_101_filter_level_1(v1);
 						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
-				GSSEnvironmentPrintingData {
+				GSSScenarioPrintingData {
 					printStatus := disabled;
-					GSSEnvironmentStructuredData {
+					GSSScenarioStructuredData {
 						levelRef := 1;
 						firstField := 1;
 					};
 				};
-				GSSEnvironmentPeriod {
+				GSSScenarioPeriod {
 					min_value := 59400;
 					min_unit := miliseconds;
 					max_value := 60600;
 					max_unit := miliseconds;  
 				};
 			};
-			GSSEnvironmentSpecialPacket {
+			GSSScenarioSpecialPacket {
 				status := enabled;
 				name := "3.25 SID110";
 				id := 4;
@@ -201,22 +213,22 @@ GSSEnvironmentEnvironment epd {
 				levels := 2;
 				levelRef := 0;
 				inputFilter := tm_epd_3_25_110_filter_level_0(v1);
-				GSSEnvironmentUpperLevels {
-					GSSEnvironmentUpperLevel {
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
 						level := _1;
 						TMformat := tm_epd_3_25_110(v1);
 						inputFilter := tm_epd_3_25_110_filter_level_1(v1);
 						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
 					};
 				};
-				GSSEnvironmentPrintingData {
+				GSSScenarioPrintingData {
 					printStatus := disabled;
-					GSSEnvironmentStructuredData {
+					GSSScenarioStructuredData {
 						levelRef := 1;
 						firstField := 1;
 					};
 				};
-				GSSEnvironmentPeriod {
+				GSSScenarioPeriod {
 					min_value := 59400;
 					min_unit := miliseconds;
 					max_value := 60600;
@@ -224,8 +236,8 @@ GSSEnvironmentEnvironment epd {
 				};
 			};
 		};
-		GSSEnvironmentPeriodicTCs {
-			GSSEnvironmentPeriodicTCLevel0 {
+		GSSScenarioPeriodicTCs {
+			GSSScenarioPeriodicTCLevel0 {
 				name := "periodic_test_connection";
 				id := 0;
 				ifRef := 0;
@@ -234,13 +246,13 @@ GSSEnvironmentEnvironment epd {
 				app_to_level0 := tc_epd_17_1_export_ack(v1);
 			};
 		};
-		GSSEnvironmentGlobalVars { 
-			GSSEnvironmentGlobalVar {
+		GSSScenarioGlobalVars { 
+			GSSScenarioGlobalVar {
 				name := "sequence_number";
 				id := 0;
 				type := uint;
 				initial_value := 0;
-				GSSEnvironmentReferenceField {
+				GSSScenarioReferenceField {
 					type := tc;
 					ifRef := 0;
 					level := 0;
@@ -249,12 +261,12 @@ GSSEnvironmentEnvironment epd {
 					size := 0;
 				};
 			};
-			GSSEnvironmentGlobalVar {
+			GSSScenarioGlobalVar {
 				name := "enter_mode";
 				id := 1;
 				type := uint;
 				initial_value := 0;
-				GSSEnvironmentReferenceField {
+				GSSScenarioReferenceField {
 					type := tm;
 					ifRef := 0;
 					level := 0;
@@ -263,12 +275,12 @@ GSSEnvironmentEnvironment epd {
 					size := 4;
 				};
 			};
-			GSSEnvironmentGlobalVar {
+			GSSScenarioGlobalVar {
 				name := "dummy_field";
 				id := 2;
 				type := uint;
 				initial_value := 0;
-				GSSEnvironmentReferenceField {
+				GSSScenarioReferenceField {
 					type := tc;
 					ifRef := 1;
 					level := 0;
@@ -278,30 +290,1410 @@ GSSEnvironmentEnvironment epd {
 				};
 			};
 		};
-		GSSEnvironmentMonitors {
-			GSSEnvironmentModify {
+		GSSScenarioMonitors {
+			GSSScenarioModify {
 				name := "IncSequenceNumber";
 				type := increment;
 				value := 1;
-				GSSEnvironmentGVFiltered {
+				GSSScenarioGVFiltered {
 					GlobalVarRef := "sequence_number";
 				};
 			};
-			GSSEnvironmentAlarmVal {
+			GSSScenarioAlarmVal {
 				name := "TransTo";
 				type := alarm1;
-				GSSEnvironmentGVFiltered {
+				GSSScenarioGVFiltered {
 					GlobalVarRef := "enter_mode";
 					filter := tm_epd_5_1_transition_to(v1);
 				};
 			};
-			GSSEnvironmentAlarmMsg {
+			GSSScenarioAlarmMsg {
 				name := "DummyMessage1";
 				type := alarm1;
 				text := "Off+On ICU";
-				GSSEnvironmentGVFiltered {
+				GSSScenarioGVFiltered {
 					GlobalVarRef := "dummy_field";
-					filter := dummy_message_1(v1);
+					filter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+		};
+	};
+	GSSScenarioScenario "Scenario 2" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
+				test_campaign := "epd_any_model";
+				version := 3.5;
+				date := 2020/01/29; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSScenarioInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSScenarioPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSScenarioDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSScenarioProtocols {
+			GSSScenarioProtocol {
+				id := 0;
+				name := CCSDS;
+				typeLevel := 0;
+				GSSScenarioProtocolType {
+					name := "ServiceType";
+					offset := 7;
+				};
+				GSSScenarioProtocolSubtype {
+					name := "ServiceSubtype";
+					offset := 8;
+				};
+			};
+		};
+		GSSScenarioInterfaces {
+			ProtocolPacketsFile := protocol_packets(v1);
+			GSSScenarioMainInterface {
+				id := 0;
+				name := "SpW"; 
+				ifType := uart;
+				ifConfig := spw_uart_debug(v1); 
+				ioType := in_out;
+				protocolID := CCSDS;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "CCSDS";
+					TMformat := CCSDS_TM(v1);
+					TCformat := CCSDS_TC(v1);
+					inputFilter := EPD_CCSDS_TM(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 1;
+				name := "dummy";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := DUMMY(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 2;
+				name := "SpW_TC";
+				ifType := SpW_TC;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := SPW_TC(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 3;
+				name := "STEP";
+				ifType := uart;
+				ifConfig := step(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_EHS_TTF_0";
+					TMformat := STF_TM(v1);
+					TCformat := STF_TC(v1);
+					inputFilter := STF_TM_0(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 4;
+				name := "SIS";
+				ifType := uart;
+				ifConfig := sis(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_SIS";
+					TMformat := STF_SIS_TMTC(v1);
+					TCformat := STF_SIS_TMTC(v1);
+					inputFilter := SIS_TM_0(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 5;
+				name := "EH1";
+				ifType := uart;
+				ifConfig := eh1(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_EHS_TTF_0";
+					TMformat := STF_TM(v1);
+					TCformat := STF_TC(v1);
+					inputFilter := STF_TM_0(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 6;
+				name := "EH2";
+				ifType := uart;
+				ifConfig := eh2(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_EHS_TTF_0";
+					TMformat := STF_TM(v1);
+					TCformat := STF_TC(v1);
+					inputFilter := STF_TM_0(v1);
+				};
+			};
+		};
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID0";
+				id := 0;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_0_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_0_formulas(v1);
+						inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 9900;
+					min_unit := miliseconds;
+					max_value := 10100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID10";
+				id := 1;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_10_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_10(v1);
+						inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 3599;
+					min_unit := seconds;
+					max_value := 3600;
+					max_unit := seconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID100";
+				id := 2;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_100_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_100(v1);
+						inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 900;
+					min_unit := miliseconds;
+					max_value := 1100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID101";
+				id := 3;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_101_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_101(v1);
+						inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID110";
+				id := 4;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_110_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_110(v1);
+						inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+		};
+		GSSScenarioPeriodicTCs {
+			GSSScenarioPeriodicTCLevel0 {
+				name := "periodic_test_connection";
+				id := 0;
+				ifRef := 0;
+				period_value := 1500;
+				period_unit := miliseconds;
+				app_to_level0 := tc_epd_17_1_export_ack(v1);
+			};
+		};
+		GSSScenarioGlobalVars { 
+			GSSScenarioGlobalVar {
+				name := "sequence_number";
+				id := 0;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 11; 
+					offset := 0;
+					size := 0;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "enter_mode";
+				id := 1;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tm;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 19; 
+					offset := 0;
+					size := 4;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "dummy_field";
+				id := 2;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 1;
+					level := 0;
+					fieldRef := 0; 
+					offset := 0;
+					size := 0;
+				};
+			};
+		};
+		GSSScenarioMonitors {
+			GSSScenarioModify {
+				name := "IncSequenceNumber";
+				type := increment;
+				value := 1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "sequence_number";
+				};
+			};
+			GSSScenarioAlarmVal {
+				name := "TransTo";
+				type := alarm1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "enter_mode";
+					filter := tm_epd_5_1_transition_to(v1);
+				};
+			};
+			GSSScenarioAlarmMsg {
+				name := "DummyMessage1";
+				type := alarm1;
+				text := "Off+On ICU";
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "dummy_field";
+					filter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+		};
+	};
+	GSSScenarioScenario "Scenario 3" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
+				test_campaign := "epd_any_model";
+				version := 3.5;
+				date := 2020/01/29; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSScenarioInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSScenarioPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSScenarioDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSScenarioProtocols {
+			GSSScenarioProtocol {
+				id := 0;
+				name := CCSDS;
+				typeLevel := 0;
+				GSSScenarioProtocolType {
+					name := "ServiceType";
+					offset := 7;
+				};
+				GSSScenarioProtocolSubtype {
+					name := "ServiceSubtype";
+					offset := 8;
+				};
+			};
+		};
+		GSSScenarioInterfaces {
+			ProtocolPacketsFile := protocol_packets(v1);
+			GSSScenarioMainInterface {
+				id := 0;
+				name := "SpW Wrong Write Port"; 
+				ifType := uart;
+				ifConfig := spw_uart_debug(v1); 
+				ioType := in_out;
+				protocolID := CCSDS;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "CCSDS";
+					TMformat := CCSDS_TM(v1);
+					TCformat := CCSDS_TC(v1);
+					inputFilter := EPD_CCSDS_TM(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 1;
+				name := "dummy";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := DUMMY(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 2;
+				name := "SpW_TC";
+				ifType := SpW_TC;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := SPW_TC(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 3;
+				name := "STEP";
+				ifType := uart;
+				ifConfig := step(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_EHS_TTF_0";
+					TMformat := STF_TM(v1);
+					TCformat := STF_TC(v1);
+					inputFilter := STF_TM_0(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 4;
+				name := "SIS";
+				ifType := uart;
+				ifConfig := sis(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_SIS";
+					TMformat := STF_SIS_TMTC(v1);
+					TCformat := STF_SIS_TMTC(v1);
+					inputFilter := SIS_TM_0(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 5;
+				name := "EH1";
+				ifType := uart;
+				ifConfig := eh1(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_EHS_TTF_0";
+					TMformat := STF_TM(v1);
+					TCformat := STF_TC(v1);
+					inputFilter := STF_TM_0(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 6;
+				name := "EH2";
+				ifType := uart;
+				ifConfig := eh2(v1);
+				ioType := in_out;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "STF_EHS_TTF_0";
+					TMformat := STF_TM(v1);
+					TCformat := STF_TC(v1);
+					inputFilter := STF_TM_0(v1);
+				};
+			};
+		};
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID0";
+				id := 0;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_0_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_0_formulas(v1);
+						inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 9900;
+					min_unit := miliseconds;
+					max_value := 10100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID10";
+				id := 1;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_10_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_10(v1);
+						inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 3599;
+					min_unit := seconds;
+					max_value := 3600;
+					max_unit := seconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID100";
+				id := 2;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_100_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_100(v1);
+						inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 900;
+					min_unit := miliseconds;
+					max_value := 1100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID101";
+				id := 3;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_101_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_101(v1);
+						inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID110";
+				id := 4;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_110_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_110(v1);
+						inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+		};
+		GSSScenarioPeriodicTCs {
+			GSSScenarioPeriodicTCLevel0 {
+				name := "periodic_test_connection";
+				id := 0;
+				ifRef := 0;
+				period_value := 1500;
+				period_unit := miliseconds;
+				app_to_level0 := tc_epd_17_1_export_ack(v1);
+			};
+		};
+		GSSScenarioGlobalVars { 
+			GSSScenarioGlobalVar {
+				name := "sequence_number";
+				id := 0;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 11; 
+					offset := 0;
+					size := 0;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "enter_mode";
+				id := 1;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tm;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 19; 
+					offset := 0;
+					size := 4;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "dummy_field";
+				id := 2;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 1;
+					level := 0;
+					fieldRef := 0; 
+					offset := 0;
+					size := 0;
+				};
+			};
+		};
+		GSSScenarioMonitors {
+			GSSScenarioModify {
+				name := "IncSequenceNumber";
+				type := increment;
+				value := 1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "sequence_number";
+				};
+			};
+			GSSScenarioAlarmVal {
+				name := "TransTo";
+				type := alarm1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "enter_mode";
+					filter := tm_epd_5_1_transition_to(v1);
+				};
+			};
+			GSSScenarioAlarmMsg {
+				name := "DummyMessage1";
+				type := alarm1;
+				text := "Off+On ICU";
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "dummy_field";
+					filter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+		};
+	};
+	GSSScenarioScenario "Scenario 4" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
+				test_campaign := "epd_any_model";
+				version := 3.5;
+				date := 2020/01/29; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSScenarioInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSScenarioPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSScenarioDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSScenarioProtocols {
+			GSSScenarioProtocol {
+				id := 0;
+				name := CCSDS;
+				typeLevel := 0;
+				GSSScenarioProtocolType {
+					name := "ServiceType";
+					offset := 7;
+				};
+				GSSScenarioProtocolSubtype {
+					name := "ServiceSubtype";
+					offset := 8;
+				};
+			};
+		};
+		GSSScenarioInterfaces {
+			ProtocolPacketsFile := protocol_packets(v1);
+			GSSScenarioMainInterface {
+				id := 0;
+				name := "SpW"; 
+				ifType := uart;
+				ifConfig := spw_uart_debug(v1); 
+				ioType := in_out;
+				protocolID := CCSDS;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "CCSDS";
+					TMformat := CCSDS_TM(v1);
+					TCformat := CCSDS_TC(v1);
+					inputFilter := EPD_CCSDS_TM(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 1;
+				name := "dummy";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := DUMMY(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 2;
+				name := "SpW_TC";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := SPW_TC(v1);
+				};
+			};
+		};
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID0";
+				id := 0;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_0_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_0_formulas(v1);
+						inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 9900;
+					min_unit := miliseconds;
+					max_value := 10100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID10";
+				id := 1;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_10_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_10(v1);
+						inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 3599;
+					min_unit := seconds;
+					max_value := 3600;
+					max_unit := seconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID100";
+				id := 2;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_100_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_100(v1);
+						inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 900;
+					min_unit := miliseconds;
+					max_value := 1100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID101";
+				id := 3;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_101_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_101(v1);
+						inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID110";
+				id := 4;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_110_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_110(v1);
+						inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+		};
+		GSSScenarioPeriodicTCs {
+			GSSScenarioPeriodicTCLevel0 {
+				name := "periodic_test_connection";
+				id := 0;
+				ifRef := 0;
+				period_value := 1500;
+				period_unit := miliseconds;
+				app_to_level0 := tc_epd_17_1_export_ack(v1);
+			};
+		};
+		GSSScenarioGlobalVars { 
+			GSSScenarioGlobalVar {
+				name := "sequence_number";
+				id := 0;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 11; 
+					offset := 0;
+					size := 0;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "enter_mode";
+				id := 1;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tm;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 19; 
+					offset := 0;
+					size := 4;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "dummy_field";
+				id := 2;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 1;
+					level := 0;
+					fieldRef := 0; 
+					offset := 0;
+					size := 0;
+				};
+			};
+		};
+		GSSScenarioMonitors {
+			GSSScenarioModify {
+				name := "IncSequenceNumber";
+				type := increment;
+				value := 1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "sequence_number";
+				};
+			};
+			GSSScenarioAlarmVal {
+				name := "TransTo";
+				type := alarm1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "enter_mode";
+					filter := tm_epd_5_1_transition_to(v1);
+				};
+			};
+			GSSScenarioAlarmMsg {
+				name := "DummyMessage1";
+				type := alarm1;
+				text := "Off+On ICU";
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "dummy_field";
+					filter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+		};
+	};
+	GSSScenarioScenario "Scenario 5" {
+		GSSScenarioOptions {
+			GSSScenarioInfo { 
+				test_campaign := "epd_any_model";
+				version := 3.5;
+				date := 2020/01/29; 
+				version_control_url := http://srg.aut.uah.es/repository/;
+			};
+			GSSScenarioInfoPrint {
+				mainLog := enabled;
+				portLogs := enabled;
+				rawLog := enabled;
+			};
+			GSSScenarioPhyHeaderPrint {
+				mainLog := disabled;
+				portLogs := disabled;
+				rawLog := disabled;
+				gssTabs := disabled;
+			};
+			GSSScenarioDiscardErrorFlags {
+				txErrors := disabled;
+				notExpectedPackets := disabled;
+				filtersKo := disabled;
+				validTimesKo := enabled;
+			};
+		};
+		GSSScenarioProtocols {
+			GSSScenarioProtocol {
+				id := 0;
+				name := CCSDS;
+				typeLevel := 0;
+				GSSScenarioProtocolType {
+					name := "ServiceType";
+					offset := 7;
+				};
+				GSSScenarioProtocolSubtype {
+					name := "ServiceSubtype";
+					offset := 8;
+				};
+			};
+		};
+		GSSScenarioInterfaces {
+			ProtocolPacketsFile := protocol_packets(v1);
+			GSSScenarioMainInterface {
+				id := 0;
+				name := "SpW"; 
+				ifType := uart;
+				ifConfig := spw_uart_debug(v1); 
+				ioType := in_out;
+				protocolID := CCSDS;
+				GSSScenarioLevelInOut {
+					id := 0;
+					name := "CCSDS";
+					TMformat := CCSDS_TM(v1);
+					TCformat := CCSDS_TC(v1);
+					inputFilter := EPD_CCSDS_TM(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 1;
+				name := "dummy";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := DUMMY(v1);
+				};
+			};
+			GSSScenarioInterface {
+				id := 2;
+				name := "SpW_TC";
+				ifType := dummy;
+				ifConfig := dummy_port(v1);
+				ioType := in;
+				GSSScenarioLevelIn {
+					id := 0;
+					name := "dummy";
+					TCformat := SPW_TC(v1);
+				};
+			};
+		};
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID0";
+				id := 0;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_0_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_0_formulas(v1);
+						inputFilter := tm_epd_3_25_0_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 9900;
+					min_unit := miliseconds;
+					max_value := 10100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID10";
+				id := 1;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_10_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_10(v1);
+						inputFilter := tm_epd_3_25_10_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 3599;
+					min_unit := seconds;
+					max_value := 3600;
+					max_unit := seconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID100";
+				id := 2;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_100_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_100(v1);
+						inputFilter := tm_epd_3_25_100_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 900;
+					min_unit := miliseconds;
+					max_value := 1100;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID101";
+				id := 3;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_101_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_101(v1);
+						inputFilter := tm_epd_3_25_101_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "3.25 SID110";
+				id := 4;
+				ifRef := 0;
+				levels := 2;
+				levelRef := 0;
+				inputFilter := tm_epd_3_25_110_filter_level_0(v1);
+				GSSScenarioUpperLevels {
+					GSSScenarioUpperLevel {
+						level := _1;
+						TMformat := tm_epd_3_25_110(v1);
+						inputFilter := tm_epd_3_25_110_filter_level_1(v1);
+						import_from_prev_Level := EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1);
+					};
+				};
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+					GSSScenarioStructuredData {
+						levelRef := 1;
+						firstField := 1;
+					};
+				};
+				GSSScenarioPeriod {
+					min_value := 59400;
+					min_unit := miliseconds;
+					max_value := 60600;
+					max_unit := miliseconds;  
+				};
+			};
+		};
+		GSSScenarioPeriodicTCs {
+			GSSScenarioPeriodicTCLevel0 {
+				name := "periodic_test_connection";
+				id := 0;
+				ifRef := 0;
+				period_value := 1500;
+				period_unit := miliseconds;
+				app_to_level0 := tc_epd_17_1_export_ack(v1);
+			};
+		};
+		GSSScenarioGlobalVars { 
+			GSSScenarioGlobalVar {
+				name := "sequence_number";
+				id := 0;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 11; 
+					offset := 0;
+					size := 0;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "enter_mode";
+				id := 1;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tm;
+					ifRef := 0;
+					level := 0;
+					fieldRef := 19; 
+					offset := 0;
+					size := 4;
+				};
+			};
+			GSSScenarioGlobalVar {
+				name := "dummy_field";
+				id := 2;
+				type := uint;
+				initial_value := 0;
+				GSSScenarioReferenceField {
+					type := tc;
+					ifRef := 1;
+					level := 0;
+					fieldRef := 0; 
+					offset := 0;
+					size := 0;
+				};
+			};
+		};
+		GSSScenarioMonitors {
+			GSSScenarioModify {
+				name := "IncSequenceNumber";
+				type := increment;
+				value := 1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "sequence_number";
+				};
+			};
+			GSSScenarioAlarmVal {
+				name := "TransTo";
+				type := alarm1;
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "enter_mode";
+					filter := tm_epd_5_1_transition_to(v1);
+				};
+			};
+			GSSScenarioAlarmMsg {
+				name := "DummyMessage1";
+				type := alarm1;
+				text := "Off+On ICU";
+				GSSScenarioGVFiltered {
+					GlobalVarRef := "dummy_field";
+					filter := DUMMY_MESSAGE_1(v1);
 				};
 			};
 		};

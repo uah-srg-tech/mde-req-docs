@@ -1,8 +1,8 @@
-GSSTestProcTestProc nombre {
-	uri := nombre;
-	version := version1;
+GSSTestProcTestProc sample_proc {
+	uri := sample_proc;
+	version := v1;
 	GSSTestProcStep {
-		name := paso1;
+		name := step1;
 		id := 0;
 		mode := continuous;
 		GSSTestProcInputs {
@@ -48,9 +48,9 @@ GSSTestProcTestProc nombre {
 		};
 	};
 	GSSTestProcStep {
-		name := paso1;
+		name := step2;
 		id := 0;
-		prev_step_idref := paso1;
+		prev_step_idref := step1;
 		output_idref_from_prev_step := tm1_7;
 		mode := continuous;
 		GSSTestProcInputs {
