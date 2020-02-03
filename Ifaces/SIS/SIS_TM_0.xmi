@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="SIS_TM_0" uri="es.uah.aut.srg.SIS_TM_0" version="v1">
+  <formatFile href="STF_SIS_TMTC.xmi#/"/>
+  <BoolVar id="0" name="SyncOK" constantType="hex">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="STF_SIS_TMTC.xmi#//@CSField.0"/>
+    <Op type="equal"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="0xBEBACAFE"/>
+  </BoolVar>
+  <BoolVarFDIC id="1" name="Checksum">
+    <FieldRef href="STF_SIS_TMTC.xmi#//@FDICField.0"/>
+    <Op type="equal"/>
+  </BoolVarFDIC>
+  <Minterm id="0">
+    <BoolVarRef idRef="0"/>
+    <BoolVarRef idRef="1"/>
+  </Minterm>
+</gss:GSSFilterMintermFilter>

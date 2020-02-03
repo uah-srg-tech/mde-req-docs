@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSIfacePortConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/iface" name="spw_timecodes" uri="es.uah.aut.srg.spw_timecodes" version="v1">
+  <portConfig xsi:type="gss:GSSIfaceSpWTCPort" spwPortRef="0"/>
+</gss:GSSIfacePortConfig>

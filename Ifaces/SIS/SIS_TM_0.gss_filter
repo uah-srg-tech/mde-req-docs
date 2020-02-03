@@ -1,0 +1,35 @@
+GSSFilterMintermFilter SIS_TM_0 {
+	uri := es.uah.aut.srg.SIS_TM_0;
+	version := v1;
+	formatFile := STF_SIS_TMTC(v1);
+	
+	GSSFilterBoolVar {
+		id := 0;
+		name := SyncOK;
+		constantType := hex;
+		FieldRef := Sync;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+		GSSFilterConstant {
+			value := 0xBEBACAFE;
+		};
+	};
+	GSSFilterBoolVarFDIC {
+		id := 1;
+		name := Checksum;
+		FieldRef := Checksum;
+		GSSFilterFieldOp {
+			type := equal;
+		};
+	};
+	GSSFilterMinterm { 
+		id := 0;
+		GSSFilterBoolVarRef {
+			idRef := 0;
+		};
+		GSSFilterBoolVarRef {
+			idRef := 1;
+		};
+	};
+};

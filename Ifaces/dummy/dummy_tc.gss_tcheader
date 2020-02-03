@@ -1,0 +1,6 @@
+<GSSTCHeader name="DUMMY_TC">
+	<format file="DUMMY(v1)"/>
+	<fields>
+		<HeaderField name="DUMMY_TC_field" gssHeaderField="DUMMY(v1).dummyField"/>
+	</fields>
+</GSSTCHeader>

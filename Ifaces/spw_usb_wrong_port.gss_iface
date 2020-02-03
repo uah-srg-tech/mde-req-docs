@@ -1,0 +1,15 @@
+portConfig spw {
+	uri := es.uah.aut.srg.spw;
+	version := v1;
+	spwPort {
+		type := usb;
+		link := 1;
+		writingPort := 0x47;
+		readingPort {
+			port := 0x38;
+			};
+		readingPort {
+			port := 0x49;
+		};
+	};
+};

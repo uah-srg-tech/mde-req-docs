@@ -1,0 +1,22 @@
+GSSFormatFormat SPW_TC {
+	uri := es.uah.aut.srg.SPW_TC;
+	version := v1;
+	protocol := spw_tc;
+	type := TC;
+	GSSFormatCSField {
+		fid := 0;
+		pfid := 0;
+		name := "TC_value";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+};

@@ -1,0 +1,29 @@
+portConfig step {
+	uri := es.uah.aut.srg.step;
+	version := v1;
+	uartPort {
+		number := 1;
+		baudRate := 115200bauds;
+		parity := NO;
+		dataBits := 8bits;
+		stopBits := 1bit;
+		inputQueueSize := 512;
+		outputQueueSize := -1;
+		uartProtocol {
+			unit := bytes;
+			power := 2_with_0;
+			constSize {
+				bytes := 6;
+				bits := 0;
+			};
+			sizeFieldOffset {
+				bytes := 2;
+				bits := 0;
+			};
+			sizeFieldTrim {
+				bytes := 0;
+				bits := 2;
+			};
+		};
+	};
+};

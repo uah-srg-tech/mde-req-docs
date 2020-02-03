@@ -1,0 +1,184 @@
+GSSFormatFormat STF_TC {
+	uri := es.uah.aut.srg.STF_TC;
+	version := v1;
+	protocol := STF;
+	type := TC;
+	GSSFormatVSField {
+		fid := 0;
+		pfid := 0;
+		name := "STF_EHS_TTF_TC";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 6;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 4;
+			unit := bytes;
+			power := 2bits_with_0;
+		};
+		GSSFormatMaxSize {
+			bytes := 14;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 1;
+		pfid := 0;
+		name := "Sync";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatVSField {
+		fid := 2;
+		pfid := 0;
+		name := "SizeIDData";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 4;
+			unit := bytes;
+			power := 2bits_with_0;
+		};
+		GSSFormatMaxSize {
+			bytes := 10;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 0;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 3;
+		pfid := 2;
+		name := "SizeIDTag";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 4;
+		pfid := 3;
+		name := "Size";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 2;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 0;
+		};
+	};
+	GSSFormatCSField {
+		fid := 5;
+		pfid := 3;
+		name := "ID";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 0;
+			bits := 6;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 2;
+			bits := 2;
+		};
+	};
+	GSSFormatCSField {
+		fid := 7;
+		pfid := 2;
+		name := "Data";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 1;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 3;
+			bits := 0;
+		};
+	};
+	GSSFormatVSField {
+		fid := 2;
+		pfid := 0;
+		name := "Data";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 0;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 4;
+			unit := bytes;
+			power := 2bits_with_0;
+		};
+		GSSFormatMaxSize {
+			bytes := 8;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 4;
+			bits := 0;
+		};
+	};
+	GSSFormatFDICField {
+		fid := 8;
+		pfid := 0;
+		name := "CRC";
+		checkType := crc16;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatSize {
+			bytes := 2;
+			bits := 0;
+		};
+		GSSFormatFloatingOffset {
+			fidRef := 2;
+		};
+		GSSFormatSortedFieldsToCheck {
+			GSSFormatFieldToCheck {
+				fidRef := 1;
+			};
+			GSSFormatFieldToCheck {
+				fidRef := 2;
+			};
+		};
+	};
+};

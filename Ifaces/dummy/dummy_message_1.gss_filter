@@ -1,5 +1,5 @@
-GSSFilterMintermFilter dummy_message_1 {
-	uri := es.uah.aut.srg.dummy_message_1;
+GSSFilterMintermFilter DUMMY_MESSAGE_1 {
+	uri := es.uah.aut.srg.DUMMY_MESSAGE_1;
 	version := v1;
 	formatFile := DUMMY(v1);
 	
