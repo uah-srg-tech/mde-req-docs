@@ -1,0 +1,49 @@
+<GSSTM name="tm_epd_3_25_110" type="3" subtype="25" levels="2">
+	<level1_format file="tm_epd_3_25_110(v1)"/>
+	<level1_filter file="tm_epd_3_25_110_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_3_25_110_filter_level_0(v1)"/>
+	<PI1 name="Structure ID" val="110" gssField="tm_epd_3_25_110(v1).NID00030"/>
+	<fields>
+		<Field name="EPT-HET1 Status Word 1" gssField="tm_epd_3_25_110(v1).NID00055"/>
+		<Field name="EPT-HET-1 Status Word 2" gssField="tm_epd_3_25_110(v1).NID00119"/>
+		<Field name="EPT-HET-1 Status Word 3" gssField="tm_epd_3_25_110(v1).NID00120"/>
+		<Field name="EPT-HET-1 Status Word 4" gssField="tm_epd_3_25_110(v1).NID00121"/>
+		<Field name="EPT-HET-1 sensor Temp" gssField="tm_epd_3_25_110(v1).NID00086"/>
+		<Field name="EPT-HET-1 Sensor Voltage" gssField="tm_epd_3_25_110(v1).NID00087"/>
+		<Field name="EPT-HET-1 Bias Current" gssField="tm_epd_3_25_110(v1).NID00122"/>
+		<Field name="EH-1 Status reg" gssField="tm_epd_3_25_110(v1).NID00123"/>
+		<Field name="EPT-HET2 Status Word 1" gssField="tm_epd_3_25_110(v1).NID00078"/>
+		<Field name="EPT-HET2 Status Word 2" gssField="tm_epd_3_25_110(v1).NID00124"/>
+		<Field name="EPT-HET2 Status Word 3" gssField="tm_epd_3_25_110(v1).NID00125"/>
+		<Field name="EPT-HET2 Status Word 4" gssField="tm_epd_3_25_110(v1).NID00126"/>
+		<Field name="EPT-HET-2 Sensor Temp" gssField="tm_epd_3_25_110(v1).NID00088"/>
+		<Field name="EPT-HET-2 Sensor Voltage" gssField="tm_epd_3_25_110(v1).NID00089"/>
+		<Field name="EPT-HET-2 Bias Current" gssField="tm_epd_3_25_110(v1).NID00127"/>
+		<Field name="EH-2 Status reg" gssField="tm_epd_3_25_110(v1).NID00128"/>
+		<Field name="STEP Status Word 1" gssField="tm_epd_3_25_110(v1).NID00079"/>
+		<Field name="STEP Status Word 2" gssField="tm_epd_3_25_110(v1).NID00129"/>
+		<Field name="STEP Status Word 3" gssField="tm_epd_3_25_110(v1).NID00130"/>
+		<Field name="STEP Status Word 4" gssField="tm_epd_3_25_110(v1).NID00131"/>
+		<Field name="STEP Sensor Temperature" gssField="tm_epd_3_25_110(v1).NID00090"/>
+		<Field name="STEP Sensor Voltage" gssField="tm_epd_3_25_110(v1).NID00091"/>
+		<Field name="STEP 2 Bias Current" gssField="tm_epd_3_25_110(v1).NID00132"/>
+		<Field name="STEP Status reg" gssField="tm_epd_3_25_110(v1).NID00133"/>
+		<Field name="Params validity flags" gssField="tm_epd_3_25_110(v1).NID00134"/>
+		<Field name="SIS Status Word" gssField="tm_epd_3_25_110(v1).NID00084"/>
+		<Field name="SIS Last Event" gssField="tm_epd_3_25_110(v1).NID00085"/>
+		<Field name="Burst Modes activated" gssField="tm_epd_3_25_110(v1).NID00135"/>
+		<Field name="L1 Burst bits 0-15" gssField="tm_epd_3_25_110(v1).NID00136"/>
+		<Field name="L1 Burst bits 16-31" gssField="tm_epd_3_25_110(v1).NID00167"/>
+		<Field name="L1 Burst bits 32-47" gssField="tm_epd_3_25_110(v1).NID00168"/>
+		<Field name="ICU Status Word 1" gssField="tm_epd_3_25_110(v1).NID00137"/>
+		<Field name="ICU Status Word 2" gssField="tm_epd_3_25_110(v1).NID00138"/>
+		<Field name="ICU LastEvent" gssField="tm_epd_3_25_110(v1).NID00096"/>
+		<Field name="HEP1 CommErrors" gssField="tm_epd_3_25_110(v1).NID00092"/>
+		<Field name="HEP2 CommErrors" gssField="tm_epd_3_25_110(v1).NID00093"/>
+		<Field name="STEP CommErrors" gssField="tm_epd_3_25_110(v1).NID00094"/>
+		<Field name="SIS CommErrors" gssField="tm_epd_3_25_110(v1).NID00095"/>
+		<Field name="FaultMngmtFunc1" gssField="tm_epd_3_25_110(v1).NID00169"/>
+		<Field name="FaultMngmtFunc2" gssField="tm_epd_3_25_110(v1).NID00170"/>
+	</fields>
+</GSSTM>

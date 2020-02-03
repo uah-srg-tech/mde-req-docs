@@ -15,7 +15,6 @@ GSSFilterMintermFilter EPD_CCSDS_TM {
 		GSSFilterConstant {
 			value := 0;
 		};
-
 	};
 	GSSFilterBoolVar {
 		id := 1;
@@ -28,7 +27,6 @@ GSSFilterMintermFilter EPD_CCSDS_TM {
 		GSSFilterConstant {
 			value := 1;
 		};
-
 	};
 	GSSFilterBoolVarFDIC {
 		id := 2;

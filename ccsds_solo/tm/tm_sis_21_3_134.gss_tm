@@ -1,0 +1,19 @@
+<GSSTM name="tm_sis_21_3_134" type="21" subtype="3" levels="2">
+	<level1_format file="tm_sis_21_3_134(v1)"/>
+	<level1_filter file="tm_sis_21_3_134_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_21_3_134_filter_level_0(v1)"/>
+	<PI1 name="SID" val="134" gssField="tm_sis_21_3_134(v1).NID10001"/>
+	<fields>
+		<Field name="Reserved" gssField="tm_sis_21_3_134(v1).NIDD1105"/>
+		<Field name="Global 21" gssField="tm_sis_21_3_134(v1).NIDG1020"/>
+		<Field name="Burst Trigger" gssField="tm_sis_21_3_134(v1).NIDD1106" enumRef="CIDT1009TM"/>
+		<Field name="Iris Flag" gssField="tm_sis_21_3_134(v1).NIDD1107" enumRef="CIDT1024TM"/>
+		<Field name="Abort Flag" gssField="tm_sis_21_3_134(v1).NIDD1108" enumRef="CIDT1025TM"/>
+		<Field name="Global 22" gssField="tm_sis_21_3_134(v1).NIDG1021"/>
+		<Field name="Reserved" gssField="tm_sis_21_3_134(v1).NIDD1109"/>
+		<Field name="Iris Position" gssField="tm_sis_21_3_134(v1).NIDD1110"/>
+		<Field name="Int. Time" gssField="tm_sis_21_3_134(v1).NID10412"/>
+		<Field name="A Test Pulse" gssField="tm_sis_21_3_134(v1).NID10426"/>
+	</fields>
+</GSSTM>

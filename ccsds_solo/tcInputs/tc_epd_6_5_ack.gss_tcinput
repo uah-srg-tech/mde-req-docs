@@ -1,9 +1,0 @@
-<GSSTCInput name="tc_epd_6_5_ack" type="6" subtype="5" levels="2">
-	<level1_format file="tc_epd_6_5(v1)"/>
-	<to_level0_export file="tc_epd_6_5_export_ack(v1)"/>
-	<fields>
-		<InputField name="Mem Id" gssField="tc_epd_6_5(v1).PID00001" enumRef="CIDT0001TC"/>
-		<InputField name="Start Address" gssField="tc_epd_6_5(v1).PID00002"/>
-		<InputField name="Number of Bytes" gssField="tc_epd_6_5(v1).PID00003"/>
-	</fields>
-</GSSTCInput>

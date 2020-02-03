@@ -1,0 +1,11 @@
+<GSSTC name="tc_epd_128_100_ack" type="128" subtype="100" levels="2">
+	<level1_format file="tc_epd_128_100(v1)"/>
+	<to_level0_export file="tc_epd_128_100_export_ack(v1)"/>
+	<fields>
+		<Field name="SensorID" gssField="tc_epd_128_100(v1).PID00069" enumRef="CIDT0021TC"/>
+		<Field name="Address Offset24" gssField="tc_epd_128_100(v1).PID00070"/>
+		<Field name="Flags_100" gssField="tc_epd_128_100(v1).PID00088"/>
+		<Field name="Nmessages" gssField="tc_epd_128_100(v1).PID00072"/>
+		<Field name="CRC" gssField="tc_epd_128_100(v1).PID00073"/>
+	</fields>
+</GSSTC>

@@ -1,7 +1,0 @@
-<GSSTCInput name="tc_epd_128_1_ack" type="128" subtype="1" levels="2">
-	<level1_format file="tc_epd_128_1(v1)"/>
-	<to_level0_export file="tc_epd_128_1_export_ack(v1)"/>
-	<fields>
-		<InputField name="Mode Id" gssField="tc_epd_128_1(v1).PID00018" enumRef="CIDT0007TC"/>
-	</fields>
-</GSSTCInput>

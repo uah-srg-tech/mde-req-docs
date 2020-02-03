@@ -1,7 +1,0 @@
-<GSSTCInput name="tc_epd_19_4_ack" type="19" subtype="4" levels="2">
-	<level1_format file="tc_epd_19_4(v1)"/>
-	<to_level0_export file="tc_epd_19_4_export_ack(v1)"/>
-	<fields>
-		<InputField name="RID" gssField="tc_epd_19_4(v1).PID00010" enumRef="CIDT0012TC"/>
-	</fields>
-</GSSTCInput>

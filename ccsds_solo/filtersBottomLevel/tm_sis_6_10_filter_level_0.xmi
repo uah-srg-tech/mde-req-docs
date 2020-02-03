@@ -4,17 +4,17 @@
   <BoolVar id="0" name="Application_Process_ID_873" constantType="decimal">
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.4"/>
     <Op type="equal"/>
-    <Constant value="873"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="873"/>
   </BoolVar>
   <BoolVar id="1" name="Packet_Type_6" constantType="decimal">
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.11"/>
     <Op type="equal"/>
-    <Constant value="6"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="6"/>
   </BoolVar>
   <BoolVar id="2" name="Packet_Subtype_10" constantType="decimal">
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.12"/>
     <Op type="equal"/>
-    <Constant value="10"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="10"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>

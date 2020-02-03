@@ -1,0 +1,11 @@
+<GSSTM name="tm_sis_6_10" type="6" subtype="10" levels="2">
+	<level1_format file="tm_sis_6_10(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_6_10_filter_level_0(v1)"/>
+	<fields>
+		<Field name="Memory ID" gssField="tm_sis_6_10(v1).NID10234"/>
+		<Field name="Address" gssField="tm_sis_6_10(v1).NID10235"/>
+		<Field name="Length" gssField="tm_sis_6_10(v1).NID10236"/>
+		<Field name="Checksum" gssField="tm_sis_6_10(v1).NID10237"/>
+	</fields>
+</GSSTM>

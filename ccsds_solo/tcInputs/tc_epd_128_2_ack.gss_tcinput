@@ -1,8 +1,0 @@
-<GSSTCInput name="tc_epd_128_2_ack" type="128" subtype="2" levels="2">
-	<level1_format file="tc_epd_128_2(v1)"/>
-	<to_level0_export file="tc_epd_128_2_export_ack(v1)"/>
-	<fields>
-		<InputField name="Transition Id" gssField="tc_epd_128_2(v1).PID00019" enumRef="CIDT0008TC"/>
-		<InputField name="Enable" gssField="tc_epd_128_2(v1).PID00047" enumRef="CIDT0014TC"/>
-	</fields>
-</GSSTCInput>

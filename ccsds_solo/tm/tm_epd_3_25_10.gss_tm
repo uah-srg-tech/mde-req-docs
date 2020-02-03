@@ -1,0 +1,26 @@
+<GSSTM name="tm_epd_3_25_10" type="3" subtype="25" levels="2">
+	<level1_format file="tm_epd_3_25_10(v1)"/>
+	<level1_filter file="tm_epd_3_25_10_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_3_25_10_filter_level_0(v1)"/>
+	<PI1 name="Structure ID" val="10" gssField="tm_epd_3_25_10(v1).NID00030"/>
+	<fields>
+		<Field name="Cpu Usage" gssField="tm_epd_3_25_10(v1).NID00073"/>
+		<Field name="Daily HK Bytes" gssField="tm_epd_3_25_10(v1).NID00074"/>
+		<Field name="DailyScienceBytes" gssField="tm_epd_3_25_10(v1).NID00075"/>
+		<Field name="HK Bytes Avg" gssField="tm_epd_3_25_10(v1).NID00076"/>
+		<Field name="Science Bytes Avg" gssField="tm_epd_3_25_10(v1).NID00077"/>
+		<Field name="AvgSTEPBuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0171"/>
+		<Field name="DescFlagStep" gssField="tm_epd_3_25_10(v1).NIDD0185" enumRef="CIDT0012TM"/>
+		<Field name="BufferUseSTEP" gssField="tm_epd_3_25_10(v1).NIDD0181"/>
+		<Field name="AvgSISBuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0172"/>
+		<Field name="DescFlagSIS" gssField="tm_epd_3_25_10(v1).NIDD0186" enumRef="CIDT0012TM"/>
+		<Field name="BufferUseSIS" gssField="tm_epd_3_25_10(v1).NIDD0182"/>
+		<Field name="AvgHET1BuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0173"/>
+		<Field name="DescFlagHET1" gssField="tm_epd_3_25_10(v1).NIDD0187" enumRef="CIDT0012TM"/>
+		<Field name="BufferUseHET1" gssField="tm_epd_3_25_10(v1).NIDD0183"/>
+		<Field name="DescFlagHET2" gssField="tm_epd_3_25_10(v1).NIDD0188" enumRef="CIDT0012TM"/>
+		<Field name="AvgHET2BuffUsage" gssField="tm_epd_3_25_10(v1).NIDG0174"/>
+		<Field name="BufferUseHET2" gssField="tm_epd_3_25_10(v1).NIDD0184"/>
+	</fields>
+</GSSTM>

@@ -1,0 +1,10 @@
+<GSSTC name="tc_epd_128_32_ack" type="128" subtype="32" levels="2">
+	<level1_format file="tc_epd_128_32(v1)"/>
+	<to_level0_export file="tc_epd_128_32_export_ack(v1)"/>
+	<fields>
+		<Field name="Address func" gssField="tc_epd_128_32(v1).PID00052"/>
+		<Field name="Parameter func" gssField="tc_epd_128_32(v1).PID00053"/>
+		<Field name="Size_func" gssField="tc_epd_128_32(v1).PID00067"/>
+		<Field name="CRC_func" gssField="tc_epd_128_32(v1).PID00068"/>
+	</fields>
+</GSSTC>

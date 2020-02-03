@@ -1,0 +1,18 @@
+<GSSTM name="tm_epd_3_25_101" type="3" subtype="25" levels="2">
+	<level1_format file="tm_epd_3_25_101(v1)"/>
+	<level1_filter file="tm_epd_3_25_101_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_3_25_101_filter_level_0(v1)"/>
+	<PI1 name="Structure ID" val="101" gssField="tm_epd_3_25_101(v1).NID00030"/>
+	<fields>
+		<Field name="OBT" gssField="tm_epd_3_25_101(v1).NID00047"/>
+		<Field name="Validity Flag" gssField="tm_epd_3_25_101(v1).NID00031"/>
+		<Field name="ElecFlux40" gssField="tm_epd_3_25_101(v1).NID00056"/>
+		<Field name="ElecFlux60" gssField="tm_epd_3_25_101(v1).NID00057"/>
+		<Field name="ElecFlux100" gssField="tm_epd_3_25_101(v1).NID00058"/>
+		<Field name="ElecFlux200" gssField="tm_epd_3_25_101(v1).NID00059"/>
+		<Field name="Prot500" gssField="tm_epd_3_25_101(v1).NID00060"/>
+		<Field name="Burst Flags" gssField="tm_epd_3_25_101(v1).NID00061"/>
+		<Field name="SID100_SPARE" gssField="tm_epd_3_25_101(v1).NID00097"/>
+	</fields>
+</GSSTM>

@@ -1,0 +1,8 @@
+<GSSTC name="tc_sis_129_138_ack" type="129" subtype="138" levels="2">
+	<level1_format file="tc_sis_129_138(v1)"/>
+	<to_level0_export file="tc_sis_129_138_export_ack(v1)"/>
+	<fields>
+		<Field name="Macro?" gssField="tc_sis_129_138(v1).PID10000" enumRef="CIDT1001TC"/>
+		<Field name="Pad" gssField="tc_sis_129_138(v1).Pad"/>
+	</fields>
+</GSSTC>

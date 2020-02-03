@@ -1,0 +1,13 @@
+<GSSTM name="tm_epd_6_6_20484" type="6" subtype="6" levels="2">
+	<level1_format file="tm_epd_6_6_20484(v1)"/>
+	<level1_filter file="tm_epd_6_6_20484_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_6_6_20484_filter_level_0(v1)"/>
+	<PI1 name="Mem ID" val="20484" gssField="tm_epd_6_6_20484(v1).NID00006"/>
+	<fields>
+		<Field name="Start Address" gssField="tm_epd_6_6_20484(v1).NID00007"/>
+		<Field name="Number of Bytes" gssField="tm_epd_6_6_20484(v1).NID00008"/>
+		<Field name="NID00008_block" gssField="tm_epd_6_6_20484(v1).NID00008_block"/>
+		<Field name="Data bytes RAM" gssField="tm_epd_6_6_20484(v1).NID00050"/>
+	</fields>
+</GSSTM>

@@ -1,9 +1,0 @@
-<GSSTCInput name="tc_epd_128_5_ack" type="128" subtype="5" levels="2">
-	<level1_format file="tc_epd_128_5(v1)"/>
-	<to_level0_export file="tc_epd_128_5_export_ack(v1)"/>
-	<fields>
-		<InputField name="N" gssField="tc_epd_128_5(v1).PID00020"/>
-		<InputField name="PID00020_block" gssField="tc_epd_128_5(v1).PID00020_block"/>
-		<InputField name="Parameter Identifier" gssField="tc_epd_128_5(v1).PID00022"/>
-	</fields>
-</GSSTCInput>

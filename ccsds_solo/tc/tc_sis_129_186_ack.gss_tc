@@ -1,0 +1,10 @@
+<GSSTC name="tc_sis_129_186_ack" type="129" subtype="186" levels="2">
+	<level1_format file="tc_sis_129_186(v1)"/>
+	<to_level0_export file="tc_sis_129_186_export_ack(v1)"/>
+	<fields>
+		<Field name="Macro?" gssField="tc_sis_129_186(v1).PID10000" enumRef="CIDT1001TC"/>
+		<Field name="Telescope" gssField="tc_sis_129_186(v1).PID10027" enumRef="CIDT1005TC"/>
+		<Field name="Raw Events" gssField="tc_sis_129_186(v1).PID10054"/>
+		<Field name="Pad" gssField="tc_sis_129_186(v1).Pad"/>
+	</fields>
+</GSSTC>

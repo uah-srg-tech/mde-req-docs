@@ -1,9 +1,0 @@
-<GSSTMOutput name="tm_epd_1_7" type="1" subtype="7" levels="2">
-	<level1_format file="tm_epd_1_7(v1)"/>
-	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
-	<level0_filter file="tm_epd_1_7_filter_level_0(v1)"/>
-	<fields>
-		<OutputField name="TC ID" gssField="tm_epd_1_7(v1).NID00001"/>
-		<OutputField name="TC Sequence Control" gssField="tm_epd_1_7(v1).NID00002"/>
-	</fields>
-</GSSTMOutput>

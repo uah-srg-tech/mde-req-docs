@@ -15,7 +15,6 @@ GSSFilterMintermFilter tm_epd_3_25_100_filter_level_0 {
 		GSSFilterConstant {
 			value := 1605;
 		};
-
 	};
 	GSSFilterBoolVar {
 		id := 1;
@@ -28,7 +27,6 @@ GSSFilterMintermFilter tm_epd_3_25_100_filter_level_0 {
 		GSSFilterConstant {
 			value := 3;
 		};
-
 	};
 	GSSFilterBoolVar {
 		id := 2;
@@ -41,7 +39,6 @@ GSSFilterMintermFilter tm_epd_3_25_100_filter_level_0 {
 		GSSFilterConstant {
 			value := 25;
 		};
-
 	};
 	GSSFilterMinterm { 
 		id := 0;

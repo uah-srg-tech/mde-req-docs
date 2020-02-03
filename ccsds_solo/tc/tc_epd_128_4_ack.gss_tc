@@ -1,0 +1,10 @@
+<GSSTC name="tc_epd_128_4_ack" type="128" subtype="4" levels="2">
+	<level1_format file="tc_epd_128_4(v1)"/>
+	<to_level0_export file="tc_epd_128_4_export_ack(v1)"/>
+	<fields>
+		<Field name="N" gssField="tc_epd_128_4(v1).PID00020"/>
+		<Field name="PID00020_block" gssField="tc_epd_128_4(v1).PID00020_block"/>
+		<Field name="ParameterID" gssField="tc_epd_128_4(v1).PID00021"/>
+		<Field name="Expected Value" gssField="tc_epd_128_4(v1).PID00034"/>
+	</fields>
+</GSSTC>

@@ -1,9 +1,0 @@
-<GSSTCInput name="tc_epd_5_5_ack" type="5" subtype="5" levels="2">
-	<level1_format file="tc_epd_5_5(v1)"/>
-	<to_level0_export file="tc_epd_5_5_export_ack(v1)"/>
-	<fields>
-		<InputField name="N RID" gssField="tc_epd_5_5(v1).PID00055"/>
-		<InputField name="PID00055_block" gssField="tc_epd_5_5(v1).PID00055_block"/>
-		<InputField name="Report ID" gssField="tc_epd_5_5(v1).PID00040"/>
-	</fields>
-</GSSTCInput>

@@ -1,0 +1,27 @@
+<GSSTM name="tm_sis_3_25_6" type="3" subtype="25" levels="2">
+	<level1_format file="tm_sis_3_25_6(v1)"/>
+	<level1_filter file="tm_sis_3_25_6_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_3_25_6_filter_level_0(v1)"/>
+	<PI1 name="SID" val="6" gssField="tm_sis_3_25_6(v1).NID10000"/>
+	<fields>
+		<Field name="Sw. Version" gssField="tm_sis_3_25_6(v1).NID10214"/>
+		<Field name="Status Int." gssField="tm_sis_3_25_6(v1).NID10215"/>
+		<Field name="Tlm Vol." gssField="tm_sis_3_25_6(v1).NID10216"/>
+		<Field name="Watch Addr." gssField="tm_sis_3_25_6(v1).NID10217"/>
+		<Field name="Watch Mem" gssField="tm_sis_3_25_6(v1).NID10218"/>
+		<Field name="Watch Data" gssField="tm_sis_3_25_6(v1).NID10219"/>
+		<Field name="Alarm Id" gssField="tm_sis_3_25_6(v1).NID10220"/>
+		<Field name="Global 1" gssField="tm_sis_3_25_6(v1).NIDG1000"/>
+		<Field name="Alarm Type" gssField="tm_sis_3_25_6(v1).NIDD1000" enumRef="CIDT1007TM"/>
+		<Field name="Alarm Count" gssField="tm_sis_3_25_6(v1).NIDD1001"/>
+		<Field name="Cmd Exec" gssField="tm_sis_3_25_6(v1).NID10223"/>
+		<Field name="Cmd Reject" gssField="tm_sis_3_25_6(v1).NID10224"/>
+		<Field name="Global 2" gssField="tm_sis_3_25_6(v1).NIDG1001"/>
+		<Field name="Cause" gssField="tm_sis_3_25_6(v1).NIDD1002" enumRef="CIDT1013TM"/>
+		<Field name="Write Enb" gssField="tm_sis_3_25_6(v1).NIDD1003" enumRef="CIDT1001TM"/>
+		<Field name="Echo Enb" gssField="tm_sis_3_25_6(v1).NIDD1004" enumRef="CIDT1001TM"/>
+		<Field name="Reserved" gssField="tm_sis_3_25_6(v1).NIDD1005" enumRef="CIDT1017TM"/>
+		<Field name="Code Ram" gssField="tm_sis_3_25_6(v1).NIDD1006" enumRef="CIDT1016TM"/>
+	</fields>
+</GSSTM>

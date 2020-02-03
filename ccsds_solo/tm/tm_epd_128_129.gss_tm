@@ -1,0 +1,34 @@
+<GSSTM name="tm_epd_128_129" type="128" subtype="129" levels="2">
+	<level1_format file="tm_epd_128_129(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_128_129_filter_level_0(v1)"/>
+	<fields>
+		<Field name="Overall Monitor Status" gssField="tm_epd_128_129(v1).NID00011" enumRef="CIDT0002TM"/>
+		<Field name="Max Reporting Delay" gssField="tm_epd_128_129(v1).NID00012"/>
+		<Field name="N" gssField="tm_epd_128_129(v1).NID00015"/>
+		<Field name="NID00015_block" gssField="tm_epd_128_129(v1).NID00015_block"/>
+		<Field name="Parameter ID" gssField="tm_epd_128_129(v1).NID00018"/>
+		<Field name="Monitoring Interval" gssField="tm_epd_128_129(v1).NID00019"/>
+		<Field name="Monitoring Status" gssField="tm_epd_128_129(v1).NID00020"/>
+		<Field name="NOL" gssField="tm_epd_128_129(v1).NID00021"/>
+		<Field name="Low Limit" gssField="tm_epd_128_129(v1).NID00025"/>
+		<Field name="RID_NOL_LOW" gssField="tm_epd_128_129(v1).NID00024"/>
+		<Field name="High Limit" gssField="tm_epd_128_129(v1).NID00026"/>
+		<Field name="RID NOL HIGH" gssField="tm_epd_128_129(v1).NID00043"/>
+		<Field name="NOD" gssField="tm_epd_128_129(v1).NID00022"/>
+		<Field name="Low Delta Threshold" gssField="tm_epd_128_129(v1).NID00027"/>
+		<Field name="RID NOD LOW" gssField="tm_epd_128_129(v1).NID00044"/>
+		<Field name="High Delta Threshold" gssField="tm_epd_128_129(v1).NID00028"/>
+		<Field name="RID NOD HIGH" gssField="tm_epd_128_129(v1).NID00045"/>
+		<Field name="NOE" gssField="tm_epd_128_129(v1).NID00023"/>
+		<Field name="Expected Value" gssField="tm_epd_128_129(v1).NID00029"/>
+		<Field name="RID NOE" gssField="tm_epd_128_129(v1).NID00046"/>
+		<Field name="NOB" gssField="tm_epd_128_129(v1).NID00145"/>
+		<Field name="BitMask" gssField="tm_epd_128_129(v1).NID00146"/>
+		<Field name="NOB_ExpectedValue" gssField="tm_epd_128_129(v1).NID00147"/>
+		<Field name="RID_NOB" gssField="tm_epd_128_129(v1).NID00148"/>
+		<Field name="NOF" gssField="tm_epd_128_129(v1).NID00149"/>
+		<Field name="Bit Mask NOF" gssField="tm_epd_128_129(v1).NID00150"/>
+		<Field name="RID_NOF" gssField="tm_epd_128_129(v1).NID00151"/>
+	</fields>
+</GSSTM>

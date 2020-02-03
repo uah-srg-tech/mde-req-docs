@@ -1,0 +1,13 @@
+<GSSTM name="tm_sis_5_2_21828" type="5" subtype="2" levels="2">
+	<level1_format file="tm_sis_5_2_21828(v1)"/>
+	<level1_filter file="tm_sis_5_2_21828_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_5_2_21828_filter_level_0(v1)"/>
+	<PI1 name="Event Id" val="21828" gssField="tm_sis_5_2_21828(v1).NID10245"/>
+	<fields>
+		<Field name="Type" gssField="tm_sis_5_2_21828(v1).NID10246"/>
+		<Field name="Value" gssField="tm_sis_5_2_21828(v1).NID10247"/>
+		<Field name="Auxiliary" gssField="tm_sis_5_2_21828(v1).NID10248"/>
+		<Field name="Reserved" gssField="tm_sis_5_2_21828(v1).NID10249"/>
+	</fields>
+</GSSTM>

@@ -1,0 +1,7 @@
+<GSSTC name="tc_epd_3_6_ack" type="3" subtype="6" levels="2">
+	<level1_format file="tc_epd_3_6(v1)"/>
+	<to_level0_export file="tc_epd_3_6_export_ack(v1)"/>
+	<fields>
+		<Field name="SID" gssField="tc_epd_3_6(v1).PID00007" enumRef="CIDT0003TC"/>
+	</fields>
+</GSSTC>

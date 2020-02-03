@@ -1,0 +1,5 @@
+<GSSTM name="tm_sis_17_2" type="17" subtype="2" levels="1">
+	<level1_format file="tm_sis_17_2(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_17_2_filter_level_0(v1)"/>
+</GSSTM>

@@ -1,0 +1,9 @@
+<GSSTC name="tc_sis_129_133_ack" type="129" subtype="133" levels="2">
+	<level1_format file="tc_sis_129_133(v1)"/>
+	<to_level0_export file="tc_sis_129_133_export_ack(v1)"/>
+	<fields>
+		<Field name="Macro" gssField="tc_sis_129_133(v1).PID10000" enumRef="CIDT1001TC"/>
+		<Field name="Delay" gssField="tc_sis_129_133(v1).PID10005"/>
+		<Field name="Pad" gssField="tc_sis_129_133(v1).Pad"/>
+	</fields>
+</GSSTC>

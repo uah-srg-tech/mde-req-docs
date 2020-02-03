@@ -1,0 +1,13 @@
+<GSSTM name="tm_sis_1_8_40716" type="1" subtype="8" levels="2">
+	<level1_format file="tm_sis_1_8_40716(v1)"/>
+	<level1_filter file="tm_sis_1_8_40716_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_1_8_40716_filter_level_0(v1)"/>
+	<PI1 name="Packet ID" val="40716" gssField="tm_sis_1_8_40716(v1).NID10238"/>
+	<fields>
+		<Field name="Packet Sequence" gssField="tm_sis_1_8_40716(v1).NID10239"/>
+		<Field name="Failure Code" gssField="tm_sis_1_8_40716(v1).NID10240"/>
+		<Field name="Service Type" gssField="tm_sis_1_8_40716(v1).NID10241"/>
+		<Field name="Service Subtype" gssField="tm_sis_1_8_40716(v1).NID10242"/>
+	</fields>
+</GSSTM>

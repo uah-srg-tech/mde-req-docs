@@ -1,0 +1,10 @@
+<GSSTC name="tc_epd_128_101_ack" type="128" subtype="101" levels="2">
+	<level1_format file="tc_epd_128_101(v1)"/>
+	<to_level0_export file="tc_epd_128_101_export_ack(v1)"/>
+	<fields>
+		<Field name="Address Offset32" gssField="tc_epd_128_101(v1).PID00074"/>
+		<Field name="Flags_100" gssField="tc_epd_128_101(v1).PID00071" enumRef="CIDT0006TC"/>
+		<Field name="Nbytes" gssField="tc_epd_128_101(v1).PID00080"/>
+		<Field name="Messages" gssField="tc_epd_128_101(v1).PID00075"/>
+	</fields>
+</GSSTC>

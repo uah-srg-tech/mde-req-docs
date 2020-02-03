@@ -1,0 +1,11 @@
+<GSSTC name="tc_sis_129_152_ack" type="129" subtype="152" levels="2">
+	<level1_format file="tc_sis_129_152(v1)"/>
+	<to_level0_export file="tc_sis_129_152_export_ack(v1)"/>
+	<fields>
+		<Field name="Macro?" gssField="tc_sis_129_152(v1).PID10000" enumRef="CIDT1001TC"/>
+		<Field name="Struct. Id" gssField="tc_sis_129_152(v1).PID10018" enumRef="CIDT1003TC"/>
+		<Field name="Legth Struct_ Load" gssField="tc_sis_129_152(v1).Legth Struct_ Load"/>
+		<Field name="Offset" gssField="tc_sis_129_152(v1).PID10019"/>
+		<Field name="Data8" gssField="tc_sis_129_152(v1).PID10057"/>
+	</fields>
+</GSSTC>

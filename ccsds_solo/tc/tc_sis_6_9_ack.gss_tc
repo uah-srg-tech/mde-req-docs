@@ -1,0 +1,9 @@
+<GSSTC name="tc_sis_6_9_ack" type="6" subtype="9" levels="2">
+	<level1_format file="tc_sis_6_9(v1)"/>
+	<to_level0_export file="tc_sis_6_9_export_ack(v1)"/>
+	<fields>
+		<Field name="Memory ID" gssField="tc_sis_6_9(v1).Memory ID"/>
+		<Field name="Address" gssField="tc_sis_6_9(v1).PID10009"/>
+		<Field name="Length Check" gssField="tc_sis_6_9(v1).PID10016"/>
+	</fields>
+</GSSTC>

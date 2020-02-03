@@ -1,0 +1,13 @@
+<GSSTM name="tm_epd_1_8_40030" type="1" subtype="8" levels="2">
+	<level1_format file="tm_epd_1_8_40030(v1)"/>
+	<level1_filter file="tm_epd_1_8_40030_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_epd_1_8_40030_filter_level_0(v1)"/>
+	<PI1 name="TC ID" val="40030" gssField="tm_epd_1_8_40030(v1).NID00001"/>
+	<fields>
+		<Field name="TC Sequence Control" gssField="tm_epd_1_8_40030(v1).NID00002"/>
+		<Field name="Error code TM 1,8" gssField="tm_epd_1_8_40030(v1).NID00066" enumRef="CIDT0019TM"/>
+		<Field name="EPD Private Error" gssField="tm_epd_1_8_40030(v1).NID00005" enumRef="CIDT0020TM"/>
+		<Field name="Additional Info" gssField="tm_epd_1_8_40030(v1).NID00067"/>
+	</fields>
+</GSSTM>

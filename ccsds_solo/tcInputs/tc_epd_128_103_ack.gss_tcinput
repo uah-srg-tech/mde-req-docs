@@ -1,9 +1,0 @@
-<GSSTCInput name="tc_epd_128_103_ack" type="128" subtype="103" levels="2">
-	<level1_format file="tc_epd_128_103(v1)"/>
-	<to_level0_export file="tc_epd_128_103_export_ack(v1)"/>
-	<fields>
-		<InputField name="AllsensorID" gssField="tc_epd_128_103(v1).PID00083" enumRef="CIDT0002TC"/>
-		<InputField name="IndexTable" gssField="tc_epd_128_103(v1).PID00084" enumRef="CIDT0004TC"/>
-		<InputField name="IndexBlock" gssField="tc_epd_128_103(v1).PID00077"/>
-	</fields>
-</GSSTCInput>

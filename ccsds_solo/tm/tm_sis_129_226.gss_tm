@@ -1,0 +1,12 @@
+<GSSTM name="tm_sis_129_226" type="129" subtype="226" levels="2">
+	<level1_format file="tm_sis_129_226(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_129_226_filter_level_0(v1)"/>
+	<fields>
+		<Field name="First Macro" gssField="tm_sis_129_226(v1).NID10255"/>
+		<Field name="Last macro" gssField="tm_sis_129_226(v1).NID10256"/>
+		<Field name="Checksum 1" gssField="tm_sis_129_226(v1).NID10257"/>
+		<Field name="Checksum Block 1" gssField="tm_sis_129_226(v1).NID10258"/>
+		<Field name="Checksum Block 2" gssField="tm_sis_129_226(v1).NID10259"/>
+	</fields>
+</GSSTM>

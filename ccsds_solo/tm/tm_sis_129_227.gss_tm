@@ -1,0 +1,93 @@
+<GSSTM name="tm_sis_129_227" type="129" subtype="227" levels="2">
+	<level1_format file="tm_sis_129_227(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_129_227_filter_level_0(v1)"/>
+	<fields>
+		<Field name="+1.5V Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10326"/>
+		<Field name="+1.5V Voltage High Limit" gssField="tm_sis_129_227(v1).NID10327"/>
+		<Field name="+1.5V Current Low Limit" gssField="tm_sis_129_227(v1).NID10328"/>
+		<Field name="+1.5V Current High Limit" gssField="tm_sis_129_227(v1).NID10329"/>
+		<Field name="+2.5V Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10330"/>
+		<Field name="+2.5V Voltage High Limit" gssField="tm_sis_129_227(v1).NID10331"/>
+		<Field name="+2.5V Current Low Limit" gssField="tm_sis_129_227(v1).NID10332"/>
+		<Field name="+2.5V Current High Limit" gssField="tm_sis_129_227(v1).NID10333"/>
+		<Field name="+3.3V Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10334"/>
+		<Field name="+3.3V Voltage High Limit" gssField="tm_sis_129_227(v1).NID10335"/>
+		<Field name="+3.3V Current Low Limit" gssField="tm_sis_129_227(v1).NID10336"/>
+		<Field name="+3.3V Current High Limit" gssField="tm_sis_129_227(v1).NID10337"/>
+		<Field name="-6V Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10338"/>
+		<Field name="-6V Voltage High Limit" gssField="tm_sis_129_227(v1).NID10339"/>
+		<Field name="+6V Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10340"/>
+		<Field name="+6V Voltage High Limit" gssField="tm_sis_129_227(v1).NID10341"/>
+		<Field name="A TOF +3.3V V Low Limit" gssField="tm_sis_129_227(v1).NID10342"/>
+		<Field name="A TOF +3.3V V High Limit" gssField="tm_sis_129_227(v1).NID10343"/>
+		<Field name="B TOF +3.3V V Low Limit" gssField="tm_sis_129_227(v1).NID10344"/>
+		<Field name="B TOF +3.3V V High Limit" gssField="tm_sis_129_227(v1).NID10345"/>
+		<Field name="Motor Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10346"/>
+		<Field name="Motor Voltage High Limit" gssField="tm_sis_129_227(v1).NID10347"/>
+		<Field name="Motor Current Low Limit" gssField="tm_sis_129_227(v1).NID10348"/>
+		<Field name="Motor Current High Limit" gssField="tm_sis_129_227(v1).NID10349"/>
+		<Field name="A TOF Temp Low Limit" gssField="tm_sis_129_227(v1).NID10350"/>
+		<Field name="A TOF Temp High Limit" gssField="tm_sis_129_227(v1).NID10351"/>
+		<Field name="B TOF Temp Low Limit" gssField="tm_sis_129_227(v1).NID10352"/>
+		<Field name="B TOF Temp High Limit" gssField="tm_sis_129_227(v1).NID10353"/>
+		<Field name="A Housing Temp Low Limit" gssField="tm_sis_129_227(v1).NID10354"/>
+		<Field name="A Housing Temp Hi Limit" gssField="tm_sis_129_227(v1).NID10355"/>
+		<Field name="A Energy Temp Low Limit" gssField="tm_sis_129_227(v1).NID10356"/>
+		<Field name="A Energy Temp High Limit" gssField="tm_sis_129_227(v1).NID10357"/>
+		<Field name="A Motor Temp Low Limit" gssField="tm_sis_129_227(v1).NID10358"/>
+		<Field name="A Motor Temp High Limit" gssField="tm_sis_129_227(v1).NID10359"/>
+		<Field name="A Baffle Temp Low Limit" gssField="tm_sis_129_227(v1).NID10360"/>
+		<Field name="A Baffle Temp High Limit" gssField="tm_sis_129_227(v1).NID10361"/>
+		<Field name="B Housing Temp Low Limit" gssField="tm_sis_129_227(v1).NID10362"/>
+		<Field name="B Hous Temp High Limit" gssField="tm_sis_129_227(v1).NID10363"/>
+		<Field name="B Energy Temp Low Limit" gssField="tm_sis_129_227(v1).NID10364"/>
+		<Field name="B Energy Temp High Limit" gssField="tm_sis_129_227(v1).NID10365"/>
+		<Field name="B Motor Temp Low Limit" gssField="tm_sis_129_227(v1).NID10366"/>
+		<Field name="B Motor Temp High Limit" gssField="tm_sis_129_227(v1).NID10367"/>
+		<Field name="B Baffle Temp Low Limit" gssField="tm_sis_129_227(v1).NID10368"/>
+		<Field name="B Baffle Temp High Limit" gssField="tm_sis_129_227(v1).NID10369"/>
+		<Field name="-6V Current Low Limit" gssField="tm_sis_129_227(v1).NID10370"/>
+		<Field name="-6V Current High Limit" gssField="tm_sis_129_227(v1).NID10371"/>
+		<Field name="+6V Current Low Limit" gssField="tm_sis_129_227(v1).NID10372"/>
+		<Field name="+6V Current High Limit" gssField="tm_sis_129_227(v1).NID10373"/>
+		<Field name="+13V Current Low Limit" gssField="tm_sis_129_227(v1).NID10374"/>
+		<Field name="+13V Current High Limit" gssField="tm_sis_129_227(v1).NID10375"/>
+		<Field name="+13V Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10376"/>
+		<Field name="+13V Voltage High Limit" gssField="tm_sis_129_227(v1).NID10377"/>
+		<Field name="SSD BV Power Low Limit" gssField="tm_sis_129_227(v1).NID10378"/>
+		<Field name="SSD BV Power High Limit" gssField="tm_sis_129_227(v1).NID10379"/>
+		<Field name="SSD BV Voltage Low Limit" gssField="tm_sis_129_227(v1).NID10380"/>
+		<Field name="SSD BV V High Limit" gssField="tm_sis_129_227(v1).NID10381"/>
+		<Field name="LVPS Temp Low Limit" gssField="tm_sis_129_227(v1).NID10382"/>
+		<Field name="LVPS Temp High Limit" gssField="tm_sis_129_227(v1).NID10383"/>
+		<Field name="Primary I Low Limit" gssField="tm_sis_129_227(v1).NID10384"/>
+		<Field name="Primary I High Limit" gssField="tm_sis_129_227(v1).NID10385"/>
+		<Field name="Common HV V Low Limit" gssField="tm_sis_129_227(v1).NID10386"/>
+		<Field name="Common HV V High Limit" gssField="tm_sis_129_227(v1).NID10387"/>
+		<Field name="B Start1 MCP HV V Low L" gssField="tm_sis_129_227(v1).NID10388"/>
+		<Field name="B Start1 MCP HV V High L" gssField="tm_sis_129_227(v1).NID10389"/>
+		<Field name="A Stop MCP HV V Low Lim" gssField="tm_sis_129_227(v1).NID10390"/>
+		<Field name="A Stop MCP HV V High Lim" gssField="tm_sis_129_227(v1).NID10391"/>
+		<Field name="B Start2 MCP HV V Low L" gssField="tm_sis_129_227(v1).NID10392"/>
+		<Field name="B Start2 MCP HV V High L" gssField="tm_sis_129_227(v1).NID10393"/>
+		<Field name="B Stop MCP HV V Low Lim" gssField="tm_sis_129_227(v1).NID10394"/>
+		<Field name="B Stop MCP HV V High Lim" gssField="tm_sis_129_227(v1).NID10395"/>
+		<Field name="A Start1 MCP HV V Low L" gssField="tm_sis_129_227(v1).NID10396"/>
+		<Field name="A Start1 MCP HV V High L" gssField="tm_sis_129_227(v1).NID10397"/>
+		<Field name="A Start2 MCP HV V Low L" gssField="tm_sis_129_227(v1).NID10398"/>
+		<Field name="A Start2 MCP HV V High L" gssField="tm_sis_129_227(v1).NID10399"/>
+		<Field name="B Start1 MCP HV I Low L" gssField="tm_sis_129_227(v1).NID10400"/>
+		<Field name="B Start1 MCP HV I High L" gssField="tm_sis_129_227(v1).NID10401"/>
+		<Field name="A Stop MCP HV I Low Lim" gssField="tm_sis_129_227(v1).NID10402"/>
+		<Field name="A Stop MCP HV I High Lim" gssField="tm_sis_129_227(v1).NID10403"/>
+		<Field name="B Start2 MCP HV I Low L" gssField="tm_sis_129_227(v1).NID10404"/>
+		<Field name="B Start2 MCP HV I High L" gssField="tm_sis_129_227(v1).NID10405"/>
+		<Field name="B Stop MCP HV I Low Lim" gssField="tm_sis_129_227(v1).NID10406"/>
+		<Field name="B Stop MCP HV I High Lim" gssField="tm_sis_129_227(v1).NID10407"/>
+		<Field name="A Start1 MCP HV I Low L" gssField="tm_sis_129_227(v1).NID10408"/>
+		<Field name="A Start1 MCP HV I High L" gssField="tm_sis_129_227(v1).NID10409"/>
+		<Field name="A Start2 MCP HV I Low L" gssField="tm_sis_129_227(v1).NID10410"/>
+		<Field name="A Start2 MCP HV I High L" gssField="tm_sis_129_227(v1).NID10411"/>
+	</fields>
+</GSSTM>

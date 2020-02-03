@@ -1,7 +1,0 @@
-<GSSTCInput name="tc_epd_6_128_ack" type="6" subtype="128" levels="2">
-	<level1_format file="tc_epd_6_128(v1)"/>
-	<to_level0_export file="tc_epd_6_128_export_ack(v1)"/>
-	<fields>
-		<InputField name="Npatches" gssField="tc_epd_6_128(v1).PID00079"/>
-	</fields>
-</GSSTCInput>

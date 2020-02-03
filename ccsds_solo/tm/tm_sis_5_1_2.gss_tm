@@ -1,0 +1,7 @@
+<GSSTM name="tm_sis_5_1_2" type="5" subtype="1" levels="2">
+	<level1_format file="tm_sis_5_1_2(v1)"/>
+	<level1_filter file="tm_sis_5_1_2_filter_level_1(v1)"/>
+	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
+	<level0_filter file="tm_sis_5_1_2_filter_level_0(v1)"/>
+	<PI1 name="Event Id" val="2" gssField="tm_sis_5_1_2(v1).NID10245"/>
+</GSSTM>

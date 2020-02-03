@@ -4,7 +4,7 @@
   <BoolVar id="0" name="NID10238_40710" constantType="decimal">
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_1_8_40710.xmi#//@CSField.1"/>
     <Op type="equal"/>
-    <Constant value="40710"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="40710"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>

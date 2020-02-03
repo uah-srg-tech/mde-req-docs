@@ -1,9 +1,0 @@
-<GSSTCInput name="tc_sis_6_5_ack" type="6" subtype="5" levels="2">
-	<level1_format file="tc_sis_6_5(v1)"/>
-	<to_level0_export file="tc_sis_6_5_export_ack(v1)"/>
-	<fields>
-		<InputField name="Memory ID" gssField="tc_sis_6_5(v1).Memory ID"/>
-		<InputField name="Address" gssField="tc_sis_6_5(v1).PID10009"/>
-		<InputField name="LengthRead" gssField="tc_sis_6_5(v1).PID10014"/>
-	</fields>
-</GSSTCInput>
