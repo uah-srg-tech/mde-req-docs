@@ -115,7 +115,7 @@
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="11" offset="0" size="0"/>
+        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
         <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
@@ -287,7 +287,7 @@
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="11" offset="0" size="0"/>
+        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
         <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
@@ -459,7 +459,7 @@
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="11" offset="0" size="0"/>
+        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
         <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
@@ -599,7 +599,7 @@
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="11" offset="0" size="0"/>
+        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
         <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
@@ -739,7 +739,7 @@
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="11" offset="0" size="0"/>
+        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
         <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>

@@ -256,7 +256,7 @@ GSSEnvironmentEnvironment epd {
 					type := tc;
 					ifRef := 0;
 					level := 0;
-					fieldRef := 11; 
+					fieldRef := 7; 
 					offset := 0;
 					size := 0;
 				};
@@ -629,7 +629,7 @@ GSSEnvironmentEnvironment epd {
 					type := tc;
 					ifRef := 0;
 					level := 0;
-					fieldRef := 11; 
+					fieldRef := 7; 
 					offset := 0;
 					size := 0;
 				};
@@ -1002,7 +1002,7 @@ GSSEnvironmentEnvironment epd {
 					type := tc;
 					ifRef := 0;
 					level := 0;
-					fieldRef := 11; 
+					fieldRef := 7; 
 					offset := 0;
 					size := 0;
 				};
@@ -1319,7 +1319,7 @@ GSSEnvironmentEnvironment epd {
 					type := tc;
 					ifRef := 0;
 					level := 0;
-					fieldRef := 11; 
+					fieldRef := 7; 
 					offset := 0;
 					size := 0;
 				};
@@ -1636,7 +1636,7 @@ GSSEnvironmentEnvironment epd {
 					type := tc;
 					ifRef := 0;
 					level := 0;
-					fieldRef := 11; 
+					fieldRef := 7; 
 					offset := 0;
 					size := 0;
 				};
