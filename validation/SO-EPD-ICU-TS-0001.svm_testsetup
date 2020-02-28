@@ -1,4 +1,7 @@
 <TestSetup name="Test Setup for EPD" id="SO-EPD-ICU-TS-0001" issue="1" revision="0" date="30/01/2020">
+	<TBCsTBDs>
+		<TBD name="TBD SpWUSBrick" description="Star-Dundee SpaceWire USB Brick"/>
+	</TBCsTBDs>
 	<ApplicableDocuments>
 		<ApplicableDocument name="AD1" title="EPD Sensors Data Interface Control Document" id="SO-EPD-PO-IF-0005" issue="1" revision="6" />
 	</ApplicableDocuments>
@@ -149,11 +152,15 @@
 							<run>
 								<text>SpW USB-Brick (compliant with </text>
 							</run>
-							<hyperlink reference="RD1">
-							</hyperlink>
+							<hyperlink reference="RD1"/>
 							<run>
-								<text>) connected to GSS Host Unit </text>
+								<text>) connected to GSS Host Unit.</text>
 							</run>
+							<hyperlink reference="TBD SpWUSBrick">
+								<run bold="true">
+									<text>Star-Dundee SpaceWire-USB Brick TBD</text>
+								</run>
+							</hyperlink>
 						</paragraph>
 					</listItem>
 					<listItem>

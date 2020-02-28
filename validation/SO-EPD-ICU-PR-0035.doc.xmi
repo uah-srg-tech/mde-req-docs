@@ -607,10 +607,18 @@
               <items>
                 <paragraph>
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="1 SpW-Brick: Star-Dundee SpaceWire-USB Brick Mk2. "/>
+                    <text content="1 SpW USB Brick: "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.12/@sectionContent.4/@bodyContent.0">
+                    <run bold="true" italics="true">
+                      <text content="SpaceWire-USB Brick TBD"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content=". "/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content="Star-Dundee STAR-System v2.0 must be installed in Host Unit"/>
+                    <text content="SpW USB Brick drivers must be installed in Host Unit"/>
                   </paragraphContent>
                 </paragraph>
               </items>
@@ -717,7 +725,23 @@
                     <text content="1 Power Supply with integrated multimeter. "/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content="It must provide at least 26 V and 0.5 A"/>
+                    <text content="It must provide at least "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.12/@sectionContent.1/@bodyContent.0">
+                    <run italics="true">
+                      <text content="26V TBC"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content=" and "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.12/@sectionContent.2/@bodyContent.0">
+                    <run italics="true">
+                      <text content="0.5A TBC"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="."/>
                   </paragraphContent>
                 </paragraph>
               </items>
@@ -734,7 +758,7 @@
                     <text content="1 Power Board. "/>
                   </paragraphContent>
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content="To provide the power-on pulse and the power to the ICU"/>
+                    <text content="To provide the power-on pulse and the power to the ICU."/>
                   </paragraphContent>
                 </paragraph>
               </items>
@@ -11964,6 +11988,70 @@
           </bodyContent>
         </sectionContent>
       </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Annex: TBCs/TBDs">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBCs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="26V TBC">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="26V TBC"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Power Supply Voltage (26V)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="0_5A TBC">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="0_5A TBC"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Power Supply Current (0.5A)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBDs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD TestSetupSpWUSBrick">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD TestSetupSpWUSBrick"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD SpWUSBrick"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=" at "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="Test Setup for EPD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=" (SO-EPD-ICU-TS-0001)"/>
+        </paragraphContent>
+      </bodyContent>
     </sectionContent>
   </section>
 </micobs.doc:DDocument>

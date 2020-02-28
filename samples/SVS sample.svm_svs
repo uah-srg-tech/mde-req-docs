@@ -1,5 +1,10 @@
 <SVS name="SVS Sample" id="SVS-001" issue="1" revision="0" date="06/06/2019">
-	<parent name="SRG-EPD ICUSW Project"/>
+	<parent name="SRG-EPD ICU Software Requirements Specification"/>
+	<TBCsTBDs>
+		<TBC name="SampleSVSTBC1" parentTBC="SampleSRSTBC1"/>
+		<TBC name="SampleSVSTBC2" description="Sample SVS TBC 2"/>
+		<TBD name="SampleSVSTBD1" parentTBD="SampleTestSetupTBD"/>
+	</TBCsTBDs>
 	<Introduction>
 		<subsection name="Purpose">
 			<body>
@@ -27,8 +32,13 @@
 	<SoftwareOverview>
 		<body>
 			<paragraph>
+				<hyperlink reference="SampleSVSTBC2">
+					<run>
+						<text>This is a link to SampleSVSTBC1</text>
+					</run>
+				</hyperlink>
 				<run>
-					<text>Software Overview text</text>
+					<text>, which in turn refers to SampleSRSTBC1 in a parent document</text>
 				</run>
 			</paragraph>
 		</body>
@@ -49,6 +59,18 @@
 	</TaskIdentification>
 	<TestingSpecificationDesign testSetup="Test Setup Sample">
 		<General>
+		<body>
+			<paragraph>
+				<hyperlink reference="SampleSVSTBC2">
+					<run>
+						<text>This is a link to SampleSVSTBC2</text>
+					</run>
+				</hyperlink>
+				<run>
+					<text>, which in turn refers to SampleTestSetupTBC in a parent document</text>
+				</run>
+			</paragraph>
+		</body>
 		</General>
 		<TestDesign name="Sample design 1">
 			<General>
@@ -77,7 +99,7 @@
 			</SpecialConstraints>
 			<InterfaceDependencies>
 			</InterfaceDependencies>
-			<ValidatingItem name="SSS-ICUSW-GE-010" />
+			<ValidatingItem name="SRS-ICUSW-GE-010" />
 		</TestCase>
 	</TestCases>
 	<TestProcedures>

@@ -199,3 +199,110 @@ mapping doctpl::DListItem::GenerateItems() : doctpl::DListItem {
 		}
 	}
 }
+
+mapping doctpl::DTBC::GenerateTBCs() : doc::DDBody {
+	init {
+		result := object DDBody {
+			bodyContent += self.map GenerateTBC();
+		}
+	}
+}
+
+mapping doctpl::DTBC::GenerateTBC() : doctpl::DBodyContent {
+	init {
+		result := object DParagraph {
+			name := self.name;
+			paragraphContent += self.GenerateAbstractPlaceholder();
+			if(self.parentTBC != null) {
+				paragraphContent += object DRun {
+					italics := DRunAttributes::TRUE;
+					text := object DText {
+						content := self.parentTBC.name;
+					}
+				};
+				paragraphContent += object DRun {
+					text := object DText {
+						content := " at ";
+					}
+				};
+				var parentDoc : DDocumentTemplate := self.parentTBC.container().container().oclAsType(DDocumentTemplate);
+				paragraphContent += object DRun {
+					italics := DRunAttributes::TRUE;
+					text := object DText {
+						content := parentDoc.name;
+					}
+				};
+				paragraphContent += object DRun {
+					text := object DText {
+						content := " (" + parentDoc.id + ")" ;
+					}
+				}
+			}
+		}
+	}
+}
+
+mapping doctpl::DTBD::GenerateTBDs() : doc::DDBody {
+	init {
+		result := object DDBody {
+			bodyContent += self.map GenerateTBD();
+		}
+	}
+}
+
+mapping doctpl::DTBD::GenerateTBD() : doctpl::DBodyContent {
+	init {
+		result := object DParagraph {
+			name := self.name;
+			paragraphContent += self.GenerateAbstractPlaceholder();
+			if(self.parentTBD != null) {
+				paragraphContent += object DRun {
+					italics := DRunAttributes::TRUE;
+					text := object DText {
+						content := self.parentTBD.name;
+					}
+				};
+				paragraphContent += object DRun {
+					text := object DText {
+						content := " at ";
+					}
+				};
+				var parentDoc : DDocumentTemplate := self.parentTBD.container().container().oclAsType(DDocumentTemplate);
+				paragraphContent += object DRun {
+					italics := DRunAttributes::TRUE;
+					text := object DText {
+						content := parentDoc.name;
+					}
+				};
+				paragraphContent += object DRun {
+					text := object DText {
+						content := " (" + parentDoc.id + ")" ;
+					}
+				}
+			}
+		}
+	}
+}
+
+helper doctpl::DAbstractPlaceholder::GenerateAbstractPlaceholder() : OrderedSet(DParagraphContent) {
+	var info := object OrderedSet(DParagraphContent) {}; 
+	info += object DRun {
+		text := object DText {
+			italics := DRunAttributes::TRUE;
+			content := self.name;
+		}
+	};
+	info += object DRun {
+		text := object DText {
+			content := ": ";
+		}
+	};
+	if(self.description != null) {
+		info += object DRun {
+			text := object DText {
+				content := self.description;
+			}
+		}
+	};
+	return info;
+}

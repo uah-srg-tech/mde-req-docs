@@ -299,7 +299,12 @@
                 </run>
               </paragraphContent>
               <paragraphContent xsi:type="micobs.doctpl:DRun">
-                <text content=") connected to GSS Host Unit "/>
+                <text content=") connected to GSS Host Unit."/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.6/@sectionContent.1/@bodyContent.0">
+                <run bold="true" italics="true">
+                  <text content="Star-Dundee SpaceWire-USB Brick TBD"/>
+                </run>
               </paragraphContent>
             </paragraph>
           </items>
@@ -841,6 +846,28 @@
           </items>
         </bodyContent>
       </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Annex: TBCs/TBDs">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBDs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD SpWUSBrick">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD SpWUSBrick"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Star-Dundee SpaceWire USB Brick"/>
+        </paragraphContent>
+      </bodyContent>
     </sectionContent>
   </section>
 </micobs.doc:DDocument>

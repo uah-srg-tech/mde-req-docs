@@ -28,7 +28,7 @@
         </outputs>
       </step>
       <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/0@step.0" output_idref_from_prev_step="/0@step.0/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="30" span_unit="seconds"/>
+        <inputs xsi:type="GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="1" span_unit="seconds"/>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
         <inputs xsi:type="GSSTestProcInputs">
@@ -58,7 +58,7 @@
         </outputs>
       </step>
       <step name="Check HK SID 100 is enabled back" id="3" mode="action" prev_step_idref="/0@step.2" output_idref_from_prev_step="/0@step.2/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID100 counter is increased" actionType="checking" span_value="30" span_unit="seconds"/>
+        <inputs xsi:type="GSSTestProcAction" message="SID100 counter is increased" actionType="checking" span_value="1" span_unit="seconds"/>
       </step>
       <step name="Change HK SID 0 period to 5 seconds" id="4" mode="continuous">
         <inputs xsi:type="GSSTestProcInputs">
@@ -88,7 +88,7 @@
         </outputs>
       </step>
       <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/0@step.4" output_idref_from_prev_step="/0@step.4/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
+        <inputs xsi:type="GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="1" span_unit="seconds"/>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
         <inputs xsi:type="GSSTestProcInputs">
@@ -118,6 +118,6 @@
         </outputs>
       </step>
       <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/0@step.6" output_idref_from_prev_step="/0@step.6/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
+        <inputs xsi:type="GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="1" span_unit="seconds"/>
       </step>
 </test_proc>

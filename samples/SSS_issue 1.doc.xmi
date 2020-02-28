@@ -371,7 +371,23 @@
       <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="The SRG Mission has been conceived to study the effect of high energy particles in TBD environment. The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring TBD particles. SRG EPD ICU Software purpose is to provide support to EPD sensors."/>
+            <text content="The SRG Mission has been conceived to study the effect of high energy particles in "/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.3/@bodyContent.0">
+            <run italics="true">
+              <text content="TBD Environment"/>
+            </run>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content=". The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring "/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.4/@bodyContent.0">
+            <run italics="true">
+              <text content="TBD Particles"/>
+            </run>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content=". SRG EPD ICU Software purpose is to provide support to EPD sensors."/>
           </paragraphContent>
         </bodyContent>
       </sectionContent>
@@ -475,17 +491,41 @@
       <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="The read-only memory available for the storage of SRG EPD ICU Boot Software will be TBD MBytes."/>
+            <text content="The read-only memory available for the storage of SRG EPD ICU Boot Software will be."/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.6/@bodyContent.0">
+            <run italics="true">
+              <text content="TBD MBytes"/>
+            </run>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="."/>
           </paragraphContent>
         </bodyContent>
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="The non-volatile memory available for the storage of SRG EPD ICU persistent data and Application Software will be TBD MBytes."/>
+            <text content="The non-volatile memory available for the storage of SRG EPD ICU persistent data and Application Software will be ."/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.5/@bodyContent.0">
+            <run italics="true">
+              <text content="TBD MBytes"/>
+            </run>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="."/>
           </paragraphContent>
         </bodyContent>
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="The memory available to SRG EPD ICU Software for sensor science storage will be limited to TBD MBytes."/>
+            <text content="The memory available to SRG EPD ICU Software for sensor science storage will be limited to ."/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.7/@bodyContent.0">
+            <run italics="true">
+              <text content="TBD MBytes"/>
+            </run>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="."/>
           </paragraphContent>
         </bodyContent>
       </sectionContent>
@@ -1727,4 +1767,98 @@
     </sectionContent>
   </section>
   <section name="Logical Models"/>
+  <section name="Annex: TBCs/TBDs">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBCs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSSSTBC1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="SampleSSSTBC1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Sample SSS TBC 1"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBDs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD Environment">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD Environment"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Environment"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD Particles">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD Particles"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Particles"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD PROMMBytes">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD PROMMBytes"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="MBytes available at PROM"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD EEPROMMBytes">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD EEPROMMBytes"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="MBytes available at EEPROM"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD RAMMBytes">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD RAMMBytes"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="MBytes available at RAM"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
 </micobs.doc:DDocument>

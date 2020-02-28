@@ -18,6 +18,38 @@ mapping testsetup::VTestSetupDocument::GenerateTestSetupDoc() : doc::DDocument {
 	result.section += self.configurations.map GenerateConfigurationsSection();
 	result.section += self.actions.map GenerateActionsSection();
 	result.section += self.scenarios.map GenerateScenariosSection();
+	result.section += self.tbcsTbdsSection.map GenerateTbcsTbdsSection();
+}
+
+mapping testsetup::VTestSetupTBCsTBDs::GenerateTbcsTbdsSection() : doc::DDSection {
+	result.name := "Annex: TBCs/TBDs";
+	
+	if(self.tbcs->isEmpty() = false) {
+		result.sectionContent += object DDBody {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "TBCs";
+					}
+				}
+			}
+		};
+		result.sectionContent += self.tbcs.map GenerateTBCs();
+	};
+	if(self.tbds->isEmpty() = false) {
+		result.sectionContent += object DDBody {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "TBDs";
+					}
+				}
+			}
+		};
+		result.sectionContent += self.tbds.map GenerateTBDs();
+	}
 }
 
 mapping testsetup::VTestSetupApplicableDocuments::GenerateApplicableDocumentsSection() : doc::DDSection {
@@ -142,8 +174,8 @@ mapping testsetup::VTestSetupScenarioSection::GenerateScenarioSection() : doc::D
 					bold := DRunAttributes::TRUE;
 					text := object DText {
 						content := "Selected configurations: ";
-					};
-				};
+					}
+				}
 			};
 			bodyContent += object DItemize {
 				items := object OrderedSet(doctpl::DListItem) {};

@@ -1,5 +1,10 @@
 <SVS name="EPD ICU Application Software Functional Tests" id="SO-EPD-ICU-PR-0035" issue="1" revision="3" date="13/7/2016">
 	<parent name="Flight Software Requirements Document" />
+	<TBCsTBDs>
+		<TBC name="26V TBC" description="Power Supply Voltage (26V)"/>
+		<TBC name="0_5A TBC" description="Power Supply Current (0.5A)"/>
+		<TBD name="TBD TestSetupSpWUSBrick" parentTBD="TBD SpWUSBrick"/>
+	</TBCsTBDs>
 	<Introduction>
 		<subsection name="Purpose">
 			<body>
@@ -407,10 +412,18 @@
 							<listItem>
 								<paragraph>
 									<run bold="true">
-										<text>1 SpW-Brick: Star-Dundee SpaceWire-USB Brick Mk2. </text>
+										<text>1 SpW USB Brick: </text>
+									</run>
+									<hyperlink reference="TBD TestSetupSpWUSBrick">
+										<run bold="true">
+											<text>SpaceWire-USB Brick TBD</text>
+										</run>
+									</hyperlink>
+									<run bold="true">
+										<text>. </text>
 									</run>
 									<run>
-										<text>Star-Dundee STAR-System v2.0 must be installed in Host Unit</text>
+										<text>SpW USB Brick drivers must be installed in Host Unit</text>
 									</run>
 								</paragraph>
 							</listItem>
@@ -517,7 +530,19 @@
 										<text>1 Power Supply with integrated multimeter. </text>
 									</run>
 									<run>
-										<text>It must provide at least 26 V and 0.5 A</text>
+										<text>It must provide at least </text>
+									</run>
+									<hyperlink reference="26V TBC"/>
+									<run>
+										<text> and </text>
+									</run>
+									<hyperlink reference="0_5A TBC">
+										<run>
+											<text>0.5A TBC</text>
+										</run>
+									</hyperlink>
+									<run>
+										<text>.</text>
 									</run>
 								</paragraph>
 							</listItem>
@@ -534,7 +559,7 @@
 										<text>1 Power Board. </text>
 									</run>
 									<run>
-										<text>To provide the power-on pulse and the power to the ICU</text>
+										<text>To provide the power-on pulse and the power to the ICU.</text>
 									</run>
 								</paragraph>
 							</listItem>

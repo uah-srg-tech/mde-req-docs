@@ -1,4 +1,8 @@
 <SSS name="EID-A" id="SOL-EST-RCD-0050" issue="5" revision="0" date="16/03/2015">
+	<TBCsTBDs>
+		<TBC name="TBC Nominal Life" description="Nominal Life (7.1 years)"/>
+		<TBC name="TBC Extended Life" description="Extended Life (10.1 years)"/>
+	</TBCsTBDs>
 	<Introduction>
 		<subsection name="History">
 			<body>
@@ -14,7 +18,7 @@
 				</paragraph>
 				<paragraph>
 					<run>
-						<text>Work continued on the mission and payload definition throughout 2005 and 2006 and at its meeting in February 2007, SPC instructed the Executive to find ways to implement Solar Orbiter within a financial envelope of 300 Mâ‚¬ (at 2006 EC), while keeping a realistic contingency margin. In response to this request, a Joint Science and Technology Definition Team (JSTDT) comprising scientists and engineers appointed by ESA and NASA, studied the benefits to be gained by combining ESA's Solar Orbiter mission and NASA's Solar Sentinels into a joint programme.</text>
+						<text>Work continued on the mission and payload definition throughout 2005 and 2006 and at its meeting in February 2007, SPC instructed the Executive to find ways to implement Solar Orbiter within a financial envelope of 300 M€ (at 2006 EC), while keeping a realistic contingency margin. In response to this request, a Joint Science and Technology Definition Team (JSTDT) comprising scientists and engineers appointed by ESA and NASA, studied the benefits to be gained by combining ESA's Solar Orbiter mission and NASA's Solar Sentinels into a joint programme.</text>
 					</run>
 				</paragraph>
 				<paragraph>
@@ -232,15 +236,14 @@
 					</paragraph>
 					<paragraph>
 						<run>
-							<text>During the out-of-ecliptic part of the orbit, the spacecraft will reach higher solar latitudes (up to 34Âº close to the end of the mission), making detailed studies of the Sun's polar regions possible.</text>
+							<text>During the out-of-ecliptic part of the orbit, the spacecraft will reach higher solar latitudes (up to 34º close to the end of the mission), making detailed studies of the Sun's polar regions possible.</text>
 						</run>
 					</paragraph>
 					<paragraph>
 						<run>
 							<text>The ESA document "Solar Orbiter Science Requirements Document" </text>
 						</run>
-						<hyperlink reference="IR-06">
-						</hyperlink>
+						<hyperlink reference="IR-06"/>
 						<run>
 							<text>, provides a more detailed discussion of the top scientific goals of the Solar Orbiter mission, their translation into specific scientific questions and derived basic scientific requirements. The document addresses also the scientific synergies between Solar Orbiter and NASA's Solar Probe Plus mission.</text>
 						</run>
@@ -265,7 +268,15 @@
 						<body>
 							<paragraph>
 								<run>
-									<text>The PI shall ensure that the instrument HW has a nominal life time of 7.1 years in space.</text>
+									<text>The PI shall ensure that the instrument HW has a nominal life time of </text>
+								</run>
+								<hyperlink reference="TBC Nominal Life">
+									<run>
+										<text>7.1 years TBC</text>
+									</run>
+								</hyperlink>
+								<run>
+									<text> in space.</text>
 								</run>
 							</paragraph>
 						</body>
@@ -304,7 +315,15 @@
 							</paragraph>
 							<paragraph>
 								<run>
-									<text>The PI should ensure that the overall instrument design is compatible with an extended lifetime of 10.2 years. This extended lifetime includes the nominal lifetime and ends after VGAM-6.</text>
+									<text>The PI should ensure that the overall instrument design is compatible with an extended lifetime of </text>
+								</run>
+								<hyperlink reference="TBC Extended Life">
+									<run>
+										<text>10.2 years TBC</text>
+									</run>
+								</hyperlink>
+								<run>
+									<text>. This extended lifetime includes the nominal lifetime and ends after VGAM-6.</text>
 								</run>
 							</paragraph>
 						</body>
@@ -323,8 +342,7 @@
 								<run>
 									<text>The PI shall ensure that the instrument comply to the associated TM-/ TC-Packet Services specified as mandatory for the payload in </text>
 								</run>
-								<hyperlink reference="NR-28">
-								</hyperlink>
+								<hyperlink reference="NR-28"/>
 								<run>
 									<text>.</text>
 								</run>
@@ -342,8 +360,7 @@
 								<run>
 									<text>The TM-/ TC-Packet Services consist of a minimum subsets for each service, which is mandatory, as well as optional generic service-extensions. Global requirements about applicability and use of these subsets for the Solar Orbiter spacecraft are given </text>
 								</run>
-								<hyperlink reference="NR-28">
-								</hyperlink>
+								<hyperlink reference="NR-28"/>
 								<run>
 									<text>.</text>
 								</run>
@@ -425,8 +442,7 @@
 								<run>
 									<text>The PI shall comply with the relevant requirements specified in the Solar Orbiter Operation Requirements Document </text>
 								</run>
-								<hyperlink reference="NR-27">
-								</hyperlink>
+								<hyperlink reference="NR-27"/>
 								<run>
 									<text> on Spacecraft Control (Section 2.1) and referenced documents therein.</text>
 								</run>
@@ -458,8 +474,7 @@
 								<run>
 									<text>The PI shall comply with the requirements regarding FDIR and Onboard Reconfiguration Handling as specified in the section 2.2.2 and section 2.2.3 of </text>
 								</run>
-								<hyperlink reference="NR-27">
-								</hyperlink>
+								<hyperlink reference="NR-27"/>
 								<run>
 									<text>.</text>
 								</run>
@@ -483,8 +498,7 @@
 								<run>
 									<text>The PI shall implement a connection test service (Service 17) according to the specifications given chapter 3 of </text>
 								</run>
-								<hyperlink reference="NR-27">
-								</hyperlink>
+								<hyperlink reference="NR-27"/>
 								<run>
 									<text>.</text>
 								</run>
@@ -538,8 +552,7 @@
 								<run>
 									<text>The PI shall comply with the requirements regarding Onboard Processors, Software and Memory Management as specified in section 2.3.2 of </text>
 								</run>
-								<hyperlink reference="NR-27">
-								</hyperlink>
+								<hyperlink reference="NR-27"/>
 								<run>
 									<text>.</text>
 								</run>

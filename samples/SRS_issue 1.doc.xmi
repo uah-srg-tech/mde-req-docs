@@ -2197,4 +2197,55 @@
       </sectionContent>
     </sectionContent>
   </section>
+  <section name="Annex: TBCs/TBDs">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBCs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSRSTBC1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="SampleSRSTBC1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="SampleSSSTBC1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=" at "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="SRG-EPD ICUSW Project"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=" (SRG-EPD-SSS-001)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBDs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSRSTBD1">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="SampleSRSTBD1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Sample SRS TBD 1"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
 </micobs.doc:DDocument>

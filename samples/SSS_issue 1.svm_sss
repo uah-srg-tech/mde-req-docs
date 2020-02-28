@@ -1,4 +1,12 @@
 <SSS name="SRG-EPD ICUSW Project" id="SRG-EPD-SSS-001" issue="1" revision="0" date="12/04/2019">
+	<TBCsTBDs>
+		<TBC name="SampleSSSTBC1" description="Sample SSS TBC 1"/>
+		<TBD name="TBD Environment" description="Environment"/>
+		<TBD name="TBD Particles" description="Particles"/>
+		<TBD name="TBD PROMMBytes" description="MBytes available at PROM"/>
+		<TBD name="TBD EEPROMMBytes" description="MBytes available at EEPROM"/>
+		<TBD name="TBD RAMMBytes" description="MBytes available at RAM"/>
+	</TBCsTBDs>
 	<Introduction>
 		<subsection name="Purpose">
 			<body>
@@ -150,7 +158,15 @@
 			<body>
 				<paragraph>
 					<run>
-						<text>The SRG Mission has been conceived to study the effect of high energy particles in TBD environment. The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring TBD particles. SRG EPD ICU Software purpose is to provide support to EPD sensors.</text>
+						<text>The SRG Mission has been conceived to study the effect of high energy particles in </text>
+					</run>
+					<hyperlink reference="TBD Environment"/>
+					<run>
+						<text>. The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring </text>
+					</run>
+					<hyperlink reference="TBD Particles"/>
+					<run>
+						<text>. SRG EPD ICU Software purpose is to provide support to EPD sensors.</text>
 					</run>
 				</paragraph>
 			</body>
@@ -254,17 +270,41 @@
 			<body>
 				<paragraph>
 					<run>
-						<text>The read-only memory available for the storage of SRG EPD ICU Boot Software will be TBD MBytes.</text>
+						<text>The read-only memory available for the storage of SRG EPD ICU Boot Software will be.</text>
+					</run>
+					<hyperlink reference="TBD EEPROMMBytes">
+						<run>
+							<text>TBD MBytes</text>
+						</run>
+					</hyperlink>
+					<run>
+						<text>.</text>
 					</run>
 				</paragraph>
 				<paragraph>
 					<run>
-						<text>The non-volatile memory available for the storage of SRG EPD ICU persistent data and Application Software will be TBD MBytes.</text>
+						<text>The non-volatile memory available for the storage of SRG EPD ICU persistent data and Application Software will be .</text>
+					</run>
+					<hyperlink reference="TBD PROMMBytes">
+						<run>
+							<text>TBD MBytes</text>
+						</run>
+					</hyperlink>
+					<run>
+						<text>.</text>
 					</run>
 				</paragraph>
 				<paragraph>
 					<run>
-						<text>The memory available to SRG EPD ICU Software for sensor science storage will be limited to TBD MBytes.</text>
+						<text>The memory available to SRG EPD ICU Software for sensor science storage will be limited to .</text>
+					</run>
+					<hyperlink reference="TBD RAMMBytes">
+						<run>
+							<text>TBD MBytes</text>
+						</run>
+					</hyperlink>
+					<run>
+						<text>.</text>
 					</run>
 				</paragraph>
 			</body>
@@ -308,13 +348,11 @@
 						<run>
 							<text>Transfer of data and command response from CDPU to the S/C shall take place according to the CCSDS recommendations defined in </text>
 						</run>
-						<hyperlink reference="RD1">
-						</hyperlink>
+						<hyperlink reference="RD1"/>
 						<run>
 							<text> and </text>
 						</run>
-						<hyperlink reference="RD2">
-						</hyperlink>
+						<hyperlink reference="RD2"/>
 						<run>
 							<text>.</text>
 						</run>
@@ -653,8 +691,7 @@
 							<run>
 								<text>The ICU SW Development Process shall be compliant to a tailored version of the software standard </text>
 							</run>
-							<hyperlink reference="AD1">
-							</hyperlink>
+							<hyperlink reference="AD1"/>
 							<run>
 								<text>.</text>
 							</run>

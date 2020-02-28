@@ -15,7 +15,7 @@
         </bodyContent>
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="Work continued on the mission and payload definition throughout 2005 and 2006 and at its meeting in February 2007, SPC instructed the Executive to find ways to implement Solar Orbiter within a financial envelope of 300 Mâ‚¬ (at 2006 EC), while keeping a realistic contingency margin. In response to this request, a Joint Science and Technology Definition Team (JSTDT) comprising scientists and engineers appointed by ESA and NASA, studied the benefits to be gained by combining ESA's Solar Orbiter mission and NASA's Solar Sentinels into a joint programme."/>
+            <text content="Work continued on the mission and payload definition throughout 2005 and 2006 and at its meeting in February 2007, SPC instructed the Executive to find ways to implement Solar Orbiter within a financial envelope of 300 M€ (at 2006 EC), while keeping a realistic contingency margin. In response to this request, a Joint Science and Technology Definition Team (JSTDT) comprising scientists and engineers appointed by ESA and NASA, studied the benefits to be gained by combining ESA's Solar Orbiter mission and NASA's Solar Sentinels into a joint programme."/>
           </paragraphContent>
         </bodyContent>
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
@@ -334,7 +334,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="During the out-of-ecliptic part of the orbit, the spacecraft will reach higher solar latitudes (up to 34Âº close to the end of the mission), making detailed studies of the Sun's polar regions possible."/>
+              <text content="During the out-of-ecliptic part of the orbit, the spacecraft will reach higher solar latitudes (up to 34º close to the end of the mission), making detailed studies of the Sun's polar regions possible."/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph">
@@ -391,7 +391,15 @@
               <cells>
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content="The PI shall ensure that the instrument HW has a nominal life time of 7.1 years in space."/>
+                    <text content="The PI shall ensure that the instrument HW has a nominal life time of "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.1/@bodyContent.0">
+                    <run italics="true">
+                      <text content="7.1 years TBC"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content=" in space."/>
                   </paragraphContent>
                 </bodyContent>
               </cells>
@@ -480,7 +488,15 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="The PI should ensure that the overall instrument design is compatible with an extended lifetime of 10.2 years. This extended lifetime includes the nominal lifetime and ends after VGAM-6."/>
+              <text content="The PI should ensure that the overall instrument design is compatible with an extended lifetime of "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.8/@sectionContent.2/@bodyContent.0">
+              <run italics="true">
+                <text content="10.2 years TBC"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content=". This extended lifetime includes the nominal lifetime and ends after VGAM-6."/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
@@ -1000,4 +1016,39 @@
     </sectionContent>
   </section>
   <section name="Logical Models"/>
+  <section name="Annex: TBCs/TBDs">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBCs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBC Nominal Life">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBC Nominal Life"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Nominal Life (7.1 years)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBC Extended Life">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBC Extended Life"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Extended Life (10.1 years)"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
 </micobs.doc:DDocument>

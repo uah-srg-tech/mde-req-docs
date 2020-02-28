@@ -27,7 +27,38 @@ mapping srs::VSRSDocument::GenerateDoc() : doc::DDocument {
 	result.section += self.requirementsSection.map GenerateRequirementsSection();
 	result.section += self.logicalModelsSection.map GenerateLogicalModelsSection();
 	result.section += self.map GenerateTraceabilityMatricesSection();
+	result.section += self.tbcsTbdsSection.map GenerateTbcsTbdsSection();
+}
 
+mapping srs::VSRSTBCsTBDs::GenerateTbcsTbdsSection() : doc::DDSection {
+	result.name := "Annex: TBCs/TBDs";
+	
+	if(self.tbcs->isEmpty() = false) {
+		result.sectionContent += object DDBody {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "TBCs";
+					}
+				}
+			}
+		};
+		result.sectionContent += self.tbcs.map GenerateTBCs();
+	};
+	if(self.tbds->isEmpty() = false) {
+		result.sectionContent += object DDBody {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "TBDs";
+					}
+				}
+			}
+		};
+		result.sectionContent += self.tbds.map GenerateTBDs();
+	}
 }
 
 mapping srs::VSRSIntroduction::GenerateIntroductionSection() : doc::DDSection {
@@ -73,12 +104,12 @@ mapping srs::VSRSTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSe
 }
 
 helper srs::VSRSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
-	return object DParagraph{
+	return object DParagraph {
 		style := "TDA";
 		paragraphContent += object DRun {
 			text := object DText {
 				content := self.name;
-			};
+			}
 		};
 		var description := self.description.map GenerateRun();
 		description.tab := object DTab {};

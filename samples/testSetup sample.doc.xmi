@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<micobs.doc:DDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:micobs.doc="http://srg.aut.uah.es/micobs/doc/doc" xmlns:micobs.doctpl="http://srg.aut.uah.es/micobs/doctpl/doctpl" name="Testing Specification Design">
+  <section name="Applicable Documents"/>
+  <section name="Reference Documents"/>
+  <section name="Interfaces">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="DummyIF 0"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="This is a dummy IF"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="DummyIF 1"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="This is another dummy IF"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="DummyIF 2"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Headers: DUMMY_TC, DUMMY_TM"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="This is another dummy IF"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Packet Configurations">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="DummyConf 0"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="This is a dummy Configuration"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="DummyConf 1"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="This is another dummy Configuration"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Actions">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="DummyAction"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Type: instruction"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="This is a dummy Action."/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.6/@sectionContent.1/@bodyContent.0">
+          <run italics="true">
+            <text content="This is a link to SampleTestSetupTBD"/>
+          </run>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Scenarios">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Dummy Scenario 1">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This is a Dummy Scenario"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="DummyIF 0"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="DummyIF 1"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Selected configurations: "/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="DummyConf 0. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Dummy Scenario 2">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="This is another Dummy Scenario"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Interfaces:"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="DummyIF 2"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Selected configurations: "/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="DummyConf 1. Filter Status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="on"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=". Print status: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="off"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="Annex: TBCs/TBDs">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="TBDs"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleTestSetupTBD">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="SampleTestSetupTBD"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Sample Test Setup TBD"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+</micobs.doc:DDocument>

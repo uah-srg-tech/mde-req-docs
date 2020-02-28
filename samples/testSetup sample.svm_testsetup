@@ -1,4 +1,7 @@
 <TestSetup name="Test Setup Sample" id="TSU-001" issue="1" revision="0" date="30/01/2020">
+	<TBCsTBDs>
+		<TBD name="SampleTestSetupTBD" description="Sample Test Setup TBD"/>
+	</TBCsTBDs>
 	<ApplicableDocuments>
 	</ApplicableDocuments>
 	<ReferenceDocuments>
@@ -37,8 +40,13 @@
 			<body>
 				<paragraph>
 					<run>
-						<text>This is a dummy Action</text>
+						<text>This is a dummy Action.</text>
 					</run>
+					<hyperlink reference="SampleTestSetupTBD">
+						<run>
+							<text>This is a link to SampleTestSetupTBD</text>
+						</run>
+					</hyperlink>
 				</paragraph>
 			</body>
 		</Action>

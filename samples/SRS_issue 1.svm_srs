@@ -1,6 +1,9 @@
 <SRS name="SRG-EPD ICU Software Requirements Specification" id="SRG-EPD-SRS-001" issue="1" revision="0" date="12/04/2019">
-	<parent document="SRG-EPD ICUSW Project">
-	</parent>
+	<parent document="SRG-EPD ICUSW Project"/>
+	<TBCsTBDs>
+		<TBC name="SampleSRSTBC1" parentTBC="SampleSSSTBC1"/>
+		<TBD name="SampleSRSTBD1" description="Sample SRS TBD 1"/>
+	</TBCsTBDs>
 	<Introduction>
 		<subsection name="Purpose">
 			<body>
@@ -8,8 +11,7 @@
 					<run>
 						<text>The Software Requirements Specification defines and describes the requirements of the EPD ICU Software of the SRG Mission. The requirements described in this document are derived from </text>
 					</run>
-					<hyperlink reference="AD1">
-					</hyperlink>
+					<hyperlink reference="AD1"/>
 					<run>
 						<text>.</text>
 					</run>
@@ -344,8 +346,7 @@
 						<run>
 							<text>In </text>
 						</run>
-						<hyperlink reference="ICU_SW_modes"> 
-						</hyperlink>
+						<hyperlink reference="ICU_SW_modes"/>
 						<run>
 							<text> the modes of operation of SRG EPD ICUSW are represented.</text>
 						</run>
@@ -457,8 +458,7 @@
 			<subsection name="General Description">
 				<body>
 					<paragraph>
-						<hyperlink reference="ICU_IF">
-						</hyperlink>
+						<hyperlink reference="ICU_IF"/>
 						<run>
 							<text> illustrates the top-level interfaces that affect the EPD Instrument Control Unit Software.</text>
 						</run>
@@ -477,8 +477,7 @@
 						<run>
 							<text>The EPD ICU is composed by the CDPU and the LVPS. Both units are redundant, working in a cold configuration. Thus we have the CDPU/LVPS nominal unit and the CDPU/LVPS redundant unit. According to the cold redundancy configuration pattern, if one unit is switched ON, the other must be OFF. </text>
 						</run>
-						<hyperlink reference="ICU_HW_schema">
-						</hyperlink>
+						<hyperlink reference="ICU_HW_schema"/>
 						<run>
 							<text> shows the basic HW diagram of the EPD's ICU.</text>
 						</run>
@@ -508,8 +507,7 @@
 						<run>
 							<text>The detailed EPD's ICU hardware to software interfaces are shown in </text>
 						</run>
-						<hyperlink reference="ICU_HW_IFs">
-						</hyperlink>
+						<hyperlink reference="ICU_HW_IFs"/>
 						<run>
 							<text>.</text>
 						</run>
