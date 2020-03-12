@@ -1,0 +1,81 @@
+SRG-GSS 3.5.1.1 configuration error. Config file "../workspace_XML/NEW_BSW_GSS_WORKSPACE/gss_config_bsw.xml". Wed Mar 11 12:21:49 2020
+SRG-GSS 3.5.1.1 opened. Config file "SRG_GSS_DEMO_PACK_3_5_1_1_WIN/GSS_WORKSPACE_DEMO/gss_config_demo.xml". Wed Mar 11 12:22:05 2020
+Test campaign demo version 3.1.6.6. 2018/10/15 (URL)
+Using 0 as SpW port via "\\.\COM5"
+Using 1 as dummy port
+Packet received but not expected (5.1) at SpW port
+	Size: 21
+	Data: 0B27C000000E10050100000000010000100501151E
+	Wed Mar 11 12:22:13 2020
+
+Packet received but not expected (5.1) at SpW port
+	Size: 20
+	Data: 0B27C001000D100501000000000100001001F333
+	Wed Mar 11 12:22:13 2020
+
+Packet received but not expected (5.1) at SpW port
+	Size: 21
+	Data: 0B27C002000E100501000000000100001004016646
+	Wed Mar 11 12:22:13 2020
+
+Test FT_SOLO_EPD_ICU_BSW_SERV_17-0040 loading. Wed Mar 11 12:22:15 2020
+Test FT_SOLO_EPD_ICU_BSW_SERV_17-0040 loaded. Wed Mar 11 12:22:15 2020
+
+Test FT_SOLO_EPD_ICU_BSW_SERV_17-0040 began. Wed Mar 11 12:22:15 2020
+
+STEP 0: test_connection
+Step 0, Input 0 Sent packet (17.1) to SpW port
+	Data: 1B2CC000000519110178E4EC
+	Wed Mar 11 12:22:15 2020
+
+Step 0, Output 0 received at SpW port. Filters:
+	Level 0 default filter 0:
+		VersionNumber (= 0) == 0 ? -> OK
+		Type (= 0) == 0 ? -> OK
+		SequenceFlag (= 0x3) == 0x3? -> OK
+		CRC (= 0xA9F) == 0xA9F? -> OK
+		PID (= 50) == 50 ? -> OK
+	Level 1 default filter 0:
+		PUSVersion (= 1) == 1 ? -> OK
+	Level 1 extra filter 0:
+		ServiceType (= 1) == 1 ? -> OK
+		ServiceSubtype (= 1) == 1 ? -> OK
+	Data: 0B21C004000F100101780000000300001B2CC0000A9F
+	Wed Mar 11 12:22:15 2020
+
+Step 0, Output 1 received at SpW port. Filters:
+	Level 0 default filter 0:
+		VersionNumber (= 0) == 0 ? -> OK
+		Type (= 0) == 0 ? -> OK
+		SequenceFlag (= 0x3) == 0x3? -> OK
+		CRC (= 0x7D4B) == 0x7D4B? -> OK
+		PID (= 50) == 50 ? -> OK
+	Level 1 default filter 0:
+		PUSVersion (= 1) == 1 ? -> OK
+	Level 1 extra filter 0:
+		ServiceType (= 17) == 17 ? -> OK
+		ServiceSubtype (= 2) == 2 ? -> OK
+	Data: 0B27C005000B101102780000000300007D4B
+	Wed Mar 11 12:22:15 2020
+
+Step 0, Output 2 received at SpW port. Filters:
+	Level 0 default filter 0:
+		VersionNumber (= 0) == 0 ? -> OK
+		Type (= 0) == 0 ? -> OK
+		SequenceFlag (= 0x3) == 0x3? -> OK
+		CRC (= 0x2065) == 0x2065? -> OK
+		PID (= 50) == 50 ? -> OK
+	Level 1 default filter 0:
+		PUSVersion (= 1) == 1 ? -> OK
+	Level 1 extra filter 0:
+		ServiceType (= 1) == 1 ? -> OK
+		ServiceSubtype (= 7) == 7 ? -> OK
+	Data: 0B21C006000F100107780000000300001B2CC0002065
+	Wed Mar 11 12:22:15 2020
+
+Test ended. Wed Mar 11 12:22:15 2020
+
+--------------------------------------------------------------------------------
+SRG-GSS 3.5.1.1 closed. Wed Mar 11 12:22:18 2020
+	Received 3 unexpected packets at SpW port
+

@@ -1,0 +1,30 @@
+<TestCampaignReport name="sample" id="TCR-000" issue="1" revision="0" date="11/03/2020">
+	<VTCRTestReport test_procedure="FT_SOLO_EPD_ICU_BSW_SERV_17-0040" status="Pass">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Wed Mar 11 12:22:15 2020</text>
+			</run>
+			<run>
+				<text> (line 24), </text>
+			</run>
+			<run>
+				<text>ended at </text>
+			</run>
+			<run bold="true">
+				<text>Wed Mar 11 12:22:15 2020</text>
+			</run>
+			<run>
+				<text> (line 76).</text>
+			</run>
+		</evidence>
+	</VTCRTestReport>
+</TestCampaignReport>
