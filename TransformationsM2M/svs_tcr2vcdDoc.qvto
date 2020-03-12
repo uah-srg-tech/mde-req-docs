@@ -1,0 +1,124 @@
+import docptl2doc;
+import inverseMatrixVDM;
+import inverseMatrixTDM;
+
+modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
+modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype srs uses "http://srg.aut.uah.es/micobs/svm/srs";
+modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
+modeltype svs uses "http://srg.aut.uah.es/micobs/svm/svs";
+modeltype vdm uses "http://srg.aut.uah.es/micobs/svm/vdm";
+modeltype tcr uses "http://srg.aut.uah.es/micobs/svm/tcr";
+
+transformation generateDoc(in input : svs, in tcr_input : tcr, out output : doc);
+
+main() {
+	input.objects()![svs::VSVSDocument]->map GenerateDoc();
+}
+
+mapping svs::VSVSDocument::GenerateDoc() : doc::DDocument {
+	result.name := "VCD " + self.name;
+	result.id := "VCD " + self.id;
+	result.issue := "VCD " + self.issue;
+	result.revision := "VCD " + self.revision;
+	result.date := "VCD " + self.date;
+	
+	result.section += self.map GenerateTraceabilityMatricesSection();
+	result.section += tcr_input.objectsOfType(tcr::VTCRTestCampaignReport).map GenerateTestReportSection();
+}
+
+mapping svs::VSVSDocument::GenerateTraceabilityMatricesSection() : doc::DDSection {
+	result.name := "SVS / SRS Traceability Matrices";
+	
+	result.sectionContent += object DDSection {
+		name := "SRS Traceability";
+		var i : Integer := 1;
+		while(i <= self.parents->size()) {
+			sectionContent += self.parents->at(i).GenerateInverseTraceabilityMatrix();
+			i := i + 1;
+		}
+	};
+	
+	result.sectionContent += object DDSection {
+		name := "SVS Traceability";
+		sectionContent += self.GenerateInverseTraceabilityMatrix();
+	}
+}
+
+mapping tcr::VTCRTestCampaignReport::GenerateTestReportSection() : doc::DDSection {
+	result.name := "TR Traceability Matrices";
+	
+	result.sectionContent += object DDSection {
+		name := "Report Traceability";
+		
+		sectionContent := object DDBody {
+			bodyContent += object DBasicTable {
+				style := "TableGridFirstRowShadow";
+				width := "100";
+				
+				rows += object DRow {
+					cells += object DCell {
+						width := "50";
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "SVS Test Case";
+								}
+							}
+						}
+					};
+					cells += object DCell {
+						width := "10";
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "Pass/Fail";
+								}
+							}
+						}
+					};
+					cells += object DCell {
+						width := "35";
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "Evidence";
+								}
+							}
+						}
+					}
+				};
+				var i : Integer := 1;
+				while(i <= self.testReports->size()) {
+					rows += object DRow {
+						cells += object DCell {
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := self.testReports->at(i).test_procedure;
+									}
+								}
+							}
+						};
+						cells += object DCell {
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := self.testReports->at(i).status.toString();
+									}
+								}
+							}
+						};
+						cells += object DCell {
+							bodyContent += self.testReports->at(i).evidence.map GenerateParagraph();
+						}
+					};
+					i := i + 1;
+				}
+			}
+		}
+	}
+}

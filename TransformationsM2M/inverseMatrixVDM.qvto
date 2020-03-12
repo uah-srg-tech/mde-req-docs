@@ -20,9 +20,9 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SRS Item";
-							};
-						};
-					};
+							}
+						}
+					}
 				};
 				cells += object DCell {
 					width := "26";
@@ -31,9 +31,9 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SRS document";
-							};
-						};
-					};
+							}
+						}
+					}
 				};
 				cells += object DCell {
 					width := "59";
@@ -42,10 +42,10 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 							bold := DRunAttributes::TRUE;
 							text := object DText {
 								content := "SVS Test Case";
-							};
-						};
-					};
-				};
+							}
+						}
+					}
+				}
 			};
 			var i : Integer := 1;
 			while(i <= self.parents->size()) {
@@ -88,9 +88,9 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 										paragraphContent += object DRun {
 											text := object DText {
 												content := itemName;
-											};
-										};
-									};
+											}
+										}
+									}
 								};
 								cells += object DCell {
 									if(itemRefNum > 1) {
@@ -100,19 +100,19 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 										paragraphContent += object DRun {
 											text := object DText {
 												content := self.parents->at(i).id;
-											};
-										};
-									};
+											}
+										}
+									}
 								};
 								cells += object DCell {
 									bodyContent += object DParagraph {
 										paragraphContent += object DRun {
 											text := object DText {
 												content := itemRefNames->at(1);
-											};
-										};
-									};
-								};
+											}
+										}
+									}
+								}
 							};
 							if(itemRefNum > 1) {
 								x := 2;
@@ -123,21 +123,21 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 												paragraphContent += object DRun {
 													text := object DText {
 														content := itemRefNames->at(x);
-													};
-												};
-											};
-										};
+													}
+												}
+											}
+										}
 									};
 									x := x + 1;
-								};
-							};
+								}
+							}
 						};
 						k := k + 1;
 					};
 					j := j + 1;
 				};
 				i := i + 1;
-			};
+			}
 		};
 		if(notFoundItems->size() <> 0) {
 			bodyContent += object DParagraph {
@@ -145,8 +145,8 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 					bold := DRunAttributes::TRUE;
 					text := object DText {
 						content := "Items Not Found";
-					};
-				};
+					}
+				}
 			};
 			bodyContent += object DBasicTable {
 				style := "TableGridFirstRowShadow";
@@ -160,9 +160,9 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 								bold := DRunAttributes::TRUE;
 								text := object DText {
 									content := "SRS Item";
-								};
-							};
-						};
+								}
+							}
+						}
 					};
 					cells += object DCell {
 						bodyContent += object DParagraph {
@@ -170,10 +170,10 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 								bold := DRunAttributes::TRUE;
 								text := object DText {
 									content := "SRS document";
-								};
-							};
-						};
-					};
+								}
+							}
+						}
+					}
 				};
 				var i : Integer := 1;
 				while(i <= notFoundItems->size()) {
@@ -184,23 +184,23 @@ helper vdm::VValidationDocument::GenerateInverseTraceabilityMatrix() : doc::DDBo
 								paragraphContent += object DRun {
 									text := object DText {
 										content := notFoundItems->at(i).name;
-									};
-								};
-							};
+									}
+								}
+							}
 						};
 						cells += object DCell {
 							bodyContent += object DParagraph {
 								paragraphContent += object DRun {
 									text := object DText {
 										content := notFoundItems->at(i).group.doc.id;
-									};
-								};
-							};
-						};
+									}
+								}
+							}
+						}
 					};
 					i := i + 1; 
-				};
-			};
-		};
-	};
+				}
+			}
+		}
+	}
 }

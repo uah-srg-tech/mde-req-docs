@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <micobs.doc:DDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:micobs.doc="http://srg.aut.uah.es/micobs/doc/doc" xmlns:micobs.doctpl="http://srg.aut.uah.es/micobs/doctpl/doctpl" name="VCD SVS Sample" id="VCD SVS-001" issue="VCD &quot;1&quot;" revision="VCD &quot;0&quot;" date="VCD 06/06/2019">
-  <section name="Traceability Matrices">
+  <section name="SVS / SRS Traceability Matrices">
     <sectionContent xsi:type="micobs.doc:DDSection" name="SRS Traceability">
       <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
@@ -425,6 +425,81 @@
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content="SRG-EPD-SRS-001"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+      </sectionContent>
+    </sectionContent>
+  </section>
+  <section name="TR Traceability Matrices">
+    <sectionContent xsi:type="micobs.doc:DDSection" name="Report Traceability">
+      <sectionContent xsi:type="micobs.doc:DDBody">
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SVS Test Case"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells width="10">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Pass/Fail"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells width="35">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Evidence"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="FT_SOLO_EPD_ICU_BSW_SERV_17-0040"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Pass"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="File: "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                  <text content="_001.txt"/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content=". Test began at "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Wed Mar 11 12:22:15 2020"/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content=" (line 24), "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="ended at "/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Wed Mar 11 12:22:15 2020"/>
+                </paragraphContent>
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content=" (line 76)."/>
                 </paragraphContent>
               </bodyContent>
             </cells>
