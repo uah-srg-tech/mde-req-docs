@@ -8,7 +8,7 @@ GSSExportExport tc_sis_129_148_export_ack {
 		GSSExportSizeInBits {
 			id := 0;
 			from := ApplicationData;
-			addSize := 4;
+			addSize := 5;
 			unit := bytes;
 		};
 	};
