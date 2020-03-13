@@ -1,0 +1,14 @@
+GSSCampaignCampaign dummy {
+	uri := dummy;
+	version := v1;
+	GSSCampaignScenario {
+		environment := dummyEnv(v1);
+		scenarioRef := "dummyEnv(v1)::Dummy Scenario 1";
+	};
+	GSSCampaignTests {
+		GSSCampaignTestCase {
+			name := "dummy";
+			procedure := sample_proc(v1);
+		};
+	};
+};

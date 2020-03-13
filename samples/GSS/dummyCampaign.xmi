@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSCampaignCampaign xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/campaign" name="dummy" uri="dummy" version="v1">
+  <Scenario>
+    <environment href="dummyEnv.xmi#/"/>
+    <scenarioRef href="dummyEnv.xmi#//@scenario.0"/>
+  </Scenario>
+  <Tests>
+    <TestCase name="dummy">
+      <procedure href="sample_proc.xmi#/"/>
+    </TestCase>
+  </Tests>
+</gss:GSSCampaignCampaign>
