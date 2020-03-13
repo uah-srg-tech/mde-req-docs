@@ -9,8 +9,8 @@
     </gss_options>
     <Protocols>
       <Protocol id="0" name="CCSDS" typeLevel="0">
-        <type offset="7" name="ServiceType"/>
-        <subtype offset="8" name="ServiceSubtype"/>
+        <type offset="7" name="Packet_Type"/>
+        <subtype offset="8" name="Packet_Subtype"/>
       </Protocol>
     </Protocols>
     <Interfaces>

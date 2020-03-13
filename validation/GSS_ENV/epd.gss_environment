@@ -33,11 +33,11 @@ GSSEnvironmentEnvironment epd {
 				name := CCSDS;
 				typeLevel := 0;
 				GSSScenarioProtocolType {
-					name := "ServiceType";
+					name := "Packet_Type";
 					offset := 7;
 				};
 				GSSScenarioProtocolSubtype {
-					name := "ServiceSubtype";
+					name := "Packet_Subtype";
 					offset := 8;
 				};
 			};
