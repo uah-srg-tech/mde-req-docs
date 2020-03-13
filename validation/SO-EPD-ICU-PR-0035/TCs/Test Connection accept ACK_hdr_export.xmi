@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSExportExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Test_Connection_accept_ACK_hdr_export">
     <settings>
-      <settingFromConst value="0xC001">
+      <settingFromConst value="1">
         <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
       </settingFromConst>
       <settingFromConst value="0">

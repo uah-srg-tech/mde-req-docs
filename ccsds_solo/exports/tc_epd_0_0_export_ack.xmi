@@ -36,5 +36,11 @@
     <settingFromConst value="9">
       <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
     </settingFromConst>
+    <settingFromConst value="5">
+      <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../tcFormats/CCSDS_TC.xmi#//@CSField.7"/>
+    </settingFromConst>
   </settings>
+  <activateDICs>
+    <DIC id="0" DICRef="CRC"/>
+  </activateDICs>
 </gss:GSSExportExport>

@@ -1869,7 +1869,7 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="0xC001"/>
+									<FieldValueRaw value="1"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
@@ -2407,7 +2407,7 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="0xC001"/>
+									<FieldValueRaw value="1"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
@@ -2945,7 +2945,7 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="0xC001"/>
+									<FieldValueRaw value="1"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
@@ -3483,7 +3483,7 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="0xC001"/>
+									<FieldValueRaw value="1"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>

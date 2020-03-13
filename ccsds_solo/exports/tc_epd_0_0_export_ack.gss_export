@@ -49,5 +49,15 @@ GSSExportExport tc_epd_0_0_export_ack {
 			value := 9;
 			toFieldRef := ACK;
 		};
+		GSSExportSettingFromConst {
+			value := 5;
+			toFieldRef := Packet_Length;
+		};
+	};
+	GSSExportActivateDICs {
+		GSSExportDIC {
+			id := 0;
+			DICRef := CRC;
+		};
 	};
 };

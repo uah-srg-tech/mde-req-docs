@@ -2406,7 +2406,7 @@
   </gss_2:GSSFilterMintermFilter>
   <gss_4:GSSExportExport name="Test Connection accept ACK_hdr_export" uri="es.uah.aut.srg.Test Connection accept ACK_hdr_export" version="v1">
     <settings>
-      <settingFromConst value="&quot;0xC001&quot;">
+      <settingFromConst value="&quot;1&quot;">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.10"/>
       </settingFromConst>
       <settingFromConst value="0">
@@ -2607,7 +2607,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_2:GSSFilterMintermFilter name="Error 9C44 seqCtrl 5_app_filter" uri="es.uah.aut.srg.Error 9C44 seqCtrl 5_app_filter" version="v1">
     <formatFile href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element"/>
@@ -2661,7 +2667,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Wrong TC no ACK_hdr_export" uri="es.uah.aut.srg.Wrong TC no ACK_hdr_export" version="v1">
     <settings>
@@ -2698,7 +2710,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Exec exception both ACK_app_export" uri="es.uah.aut.srg.Exec exception both ACK_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
@@ -3224,7 +3242,7 @@
   </gss_2:GSSFilterMintermFilter>
   <gss_4:GSSExportExport name="Test Connection accept ACK_hdr_export" uri="es.uah.aut.srg.Test Connection accept ACK_hdr_export" version="v1">
     <settings>
-      <settingFromConst value="&quot;0xC001&quot;">
+      <settingFromConst value="&quot;1&quot;">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.10"/>
       </settingFromConst>
       <settingFromConst value="0">
@@ -3425,7 +3443,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_2:GSSFilterMintermFilter name="Error 9C44 seqCtrl 5_app_filter" uri="es.uah.aut.srg.Error 9C44 seqCtrl 5_app_filter" version="v1">
     <formatFile href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element"/>
@@ -3479,7 +3503,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Wrong TC no ACK_hdr_export" uri="es.uah.aut.srg.Wrong TC no ACK_hdr_export" version="v1">
     <settings>
@@ -3516,7 +3546,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Exec exception both ACK_app_export" uri="es.uah.aut.srg.Exec exception both ACK_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
@@ -4042,7 +4078,7 @@
   </gss_2:GSSFilterMintermFilter>
   <gss_4:GSSExportExport name="Test Connection accept ACK_hdr_export" uri="es.uah.aut.srg.Test Connection accept ACK_hdr_export" version="v1">
     <settings>
-      <settingFromConst value="&quot;0xC001&quot;">
+      <settingFromConst value="&quot;1&quot;">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.10"/>
       </settingFromConst>
       <settingFromConst value="0">
@@ -4243,7 +4279,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_2:GSSFilterMintermFilter name="Error 9C44 seqCtrl 5_app_filter" uri="es.uah.aut.srg.Error 9C44 seqCtrl 5_app_filter" version="v1">
     <formatFile href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element"/>
@@ -4297,7 +4339,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Wrong TC no ACK_hdr_export" uri="es.uah.aut.srg.Wrong TC no ACK_hdr_export" version="v1">
     <settings>
@@ -4334,7 +4382,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Exec exception both ACK_app_export" uri="es.uah.aut.srg.Exec exception both ACK_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
@@ -4860,7 +4914,7 @@
   </gss_2:GSSFilterMintermFilter>
   <gss_4:GSSExportExport name="Test Connection accept ACK_hdr_export" uri="es.uah.aut.srg.Test Connection accept ACK_hdr_export" version="v1">
     <settings>
-      <settingFromConst value="&quot;0xC001&quot;">
+      <settingFromConst value="&quot;1&quot;">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.10"/>
       </settingFromConst>
       <settingFromConst value="0">
@@ -5061,7 +5115,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_2:GSSFilterMintermFilter name="Error 9C44 seqCtrl 5_app_filter" uri="es.uah.aut.srg.Error 9C44 seqCtrl 5_app_filter" version="v1">
     <formatFile href="../ccsds_solo/tmFormats/tm_epd_1_2_40004.gss_format#//@element"/>
@@ -5115,7 +5175,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Wrong TC no ACK_hdr_export" uri="es.uah.aut.srg.Wrong TC no ACK_hdr_export" version="v1">
     <settings>
@@ -5152,7 +5218,13 @@
       <settingFromConst value="0">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.12"/>
       </settingFromConst>
+      <settingFromConst value="5">
+        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/CCSDS_TC.gss_format#//@element/@CSField.7"/>
+      </settingFromConst>
     </settings>
+    <activateDICs>
+      <DIC id="0" DICRef="CRC"/>
+    </activateDICs>
   </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Exec exception both ACK_app_export" uri="es.uah.aut.srg.Exec exception both ACK_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
