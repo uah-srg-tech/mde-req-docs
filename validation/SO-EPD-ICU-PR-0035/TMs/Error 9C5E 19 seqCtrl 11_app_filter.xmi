@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSFilterMintermFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Error_9C5E_19_seqCtrl_11_app_filter">
     <formatFile href="../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#/"/>
-    <BoolVar id="0" name="TC ID_40030" constantType="decimal">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@CSField.1"/>
+    <BoolVar id="0" name="Error code TM 1,8_40030" constantType="decimal">
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@CSField.3"/>
       <Op type="equal"/>
       <Value xsi:type="gss:GSSFilterConstant" value="40030"/>
     </BoolVar>

@@ -1935,7 +1935,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 4" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
@@ -1944,7 +1944,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 4">
+				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 4">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -1956,7 +1956,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 5" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
@@ -1965,7 +1965,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 5">
+				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 5">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -2473,7 +2473,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 4" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
@@ -2482,7 +2482,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 4">
+				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 4">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -2494,7 +2494,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 5" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
@@ -2503,7 +2503,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 5">
+				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 5">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -3011,7 +3011,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 4" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
@@ -3020,7 +3020,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 4">
+				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 4">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -3032,7 +3032,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 5" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
@@ -3041,7 +3041,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 5">
+				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 5">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -3549,7 +3549,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 4" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
@@ -3558,7 +3558,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 4">
+				<Step name="Not acceptable TC accept ACK flags" prev_step="Not acceptable TC both ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 4">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC accept ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
@@ -3570,7 +3570,7 @@
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
+						<Telemetry name="Error 9C43 seqCtrl 5" interface="SpW">
 							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
@@ -3579,7 +3579,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C44 seqCtrl 5">
+				<Step name="Not acceptable TC exec ACK flags" prev_step="Not acceptable TC accept ACK flags" prev_tm_from_prev_step="Error 9C43 seqCtrl 5">
 					<TelecommandSequence>
 						<Telecommand name="Wrong TC exec ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_wrong_type_subtype" />
