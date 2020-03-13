@@ -1936,7 +1936,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
 								</Field>
@@ -1957,7 +1957,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
 								</Field>
@@ -2474,7 +2474,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
 								</Field>
@@ -2495,7 +2495,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
 								</Field>
@@ -3012,7 +3012,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
 								</Field>
@@ -3033,7 +3033,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
 								</Field>
@@ -3550,7 +3550,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC004"/>
 								</Field>
@@ -3571,7 +3571,7 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44">
+							<TelemetryData template="tm_1_2_9C43">
 								<Field fieldRef="TC Sequence Control">
 									<FieldValueRaw value="0xC005"/>
 								</Field>
