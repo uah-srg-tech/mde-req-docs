@@ -1845,23 +1845,21 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -1871,19 +1869,18 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="1"/>
+									<FieldValueRaw value="0xC001"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 1" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="1"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC001"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
@@ -1906,12 +1903,11 @@
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 2" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="2"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC002"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -1940,12 +1936,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="4"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC004"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -1962,12 +1957,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="5"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC005"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2003,20 +1997,18 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Error 9C5E 19 seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2033,12 +2025,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 9" interface="SpW" >
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="9"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC009"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2067,12 +2058,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C5E 19 seqCtrl 11" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="11"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC00B"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2393,23 +2383,21 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2419,19 +2407,18 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="1"/>
+									<FieldValueRaw value="0xC001"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 1" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="1"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC001"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
@@ -2454,12 +2441,11 @@
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 2" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="2"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC002"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2488,12 +2474,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="4"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC004"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2510,12 +2495,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="5"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC005"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2551,20 +2535,18 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Error 9C5E 19 seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2581,12 +2563,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 9" interface="SpW" >
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="9"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC009"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2615,12 +2596,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C5E 19 seqCtrl 11" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="11"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC00B"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2646,7 +2626,7 @@
 				<Step name="Disable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Disable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_6_disable_SID100" />
+							<TelecommandData template="tc_3_6_disable_SID100"/>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
@@ -2667,7 +2647,11 @@
 				<Step name="Enable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Enable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_5_enable_SID100" />
+							<TelecommandData template="tc_3_5_enable_SID100_no_fields">
+								<Field fieldRef="SID">
+									<FieldValueEnum enumRef="CIDT0003TC" valueRef="SID100"/>
+								</Field>
+							</TelecommandData>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
@@ -2937,23 +2921,21 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -2963,19 +2945,18 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="1"/>
+									<FieldValueRaw value="0xC001"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 1" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="1"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC001"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
@@ -2998,12 +2979,11 @@
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 2" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="2"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC002"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3032,12 +3012,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="4"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC004"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3054,12 +3033,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="5"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC005"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3095,20 +3073,18 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Error 9C5E 19 seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3125,12 +3101,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 9" interface="SpW" >
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="9"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC009"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3159,12 +3134,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C5E 19 seqCtrl 11" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="11"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC00B"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3190,7 +3164,7 @@
 				<Step name="Disable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Disable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_6_disable_SID100" />
+							<TelecommandData template="tc_3_6_disable_SID100"/>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
@@ -3211,7 +3185,11 @@
 				<Step name="Enable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Enable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_5_enable_SID100" />
+							<TelecommandData template="tc_3_5_enable_SID100_no_fields">
+								<Field fieldRef="SID">
+									<FieldValueEnum enumRef="CIDT0003TC" valueRef="SID100"/>
+								</Field>
+							</TelecommandData>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
@@ -3481,23 +3459,21 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 0" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="0"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC000"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3507,19 +3483,18 @@
 							<TelecommandData template="tc_17_1" />
 							<TelecommandHeader>
 								<HeaderField fieldRef="ACK">
-									<FieldValueRaw value="1"/>
+									<FieldValueRaw value="0xC001"/>
 								</HeaderField>
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 1" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="1"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC001"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Test Connection Report" interface="SpW">
 							<TelemetryData template="tm_17_2" />
@@ -3542,12 +3517,11 @@
 							<TelemetryData template="tm_17_2" />
 						</Telemetry>
 						<Telemetry name="Exec ACK seqCtrl 2" interface="SpW">
-							<TelemetryData template="tm_1_7" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="2"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_7">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC002"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3576,12 +3550,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 4" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="4"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC004"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3598,12 +3571,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C44 seqCtrl 5" interface="SpW">
-							<TelemetryData template="tm_1_2_9C44" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="5"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_2_9C44">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC005"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3639,20 +3611,18 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Error 9C5E 19 seqCtrl 8" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="8"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC008"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3669,12 +3639,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK seqCtrl 9" interface="SpW" >
-							<TelemetryData template="tm_1_1" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="9"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_1">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC009"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3703,12 +3672,11 @@
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Error 9C5E 19 seqCtrl 11" interface="SpW">
-							<TelemetryData template="tm_1_8_9C5E" />
-							<TelemetryHeader>
-								<HeaderField fieldRef="Source_Sequence_Count">
-									<FieldValueRaw value="11"/>
-								</HeaderField>
-							</TelemetryHeader>
+							<TelemetryData template="tm_1_8_9C5E">
+								<Field fieldRef="TC Sequence Control">
+									<FieldValueRaw value="0xC00B"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3734,7 +3702,7 @@
 				<Step name="Disable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Disable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_6_disable_SID100" />
+							<TelecommandData template="tc_3_6_disable_SID100"/>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
@@ -3755,7 +3723,11 @@
 				<Step name="Enable HK SID 100">
 					<TelecommandSequence>
 						<Telecommand name="Enable HK SID 100" interface="SpW" delay_value="120" delay_unit="miliseconds">
-							<TelecommandData template="tc_3_5_enable_SID100" />
+							<TelecommandData template="tc_3_5_enable_SID100_no_fields">
+								<Field fieldRef="SID">
+									<FieldValueEnum enumRef="CIDT0003TC" valueRef="SID100"/>
+								</Field>
+							</TelecommandData>
 						</Telecommand>
 					</TelecommandSequence>
 					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MintermFilter name="Event SIS in Safe state_app_filter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
-    <formatFile href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
+<gss:GSSFilterMintermFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Event_SIS_in_Safe_state_app_filter">
+    <formatFile href="../../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
     <BoolVar id="0" name="RID_5_1_4354" constantType="decimal">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#//@CSField.1"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#//@CSField.1"/>
       <Op type="equal"/>
       <Value xsi:type="gss:GSSFilterConstant" value="4354"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>
     </Minterm>
-</MintermFilter>
+</gss:GSSFilterMintermFilter>

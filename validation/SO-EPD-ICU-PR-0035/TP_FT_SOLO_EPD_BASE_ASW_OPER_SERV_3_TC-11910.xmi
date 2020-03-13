@@ -1,123 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<gss:GSSTestProcTestProc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/test_proc" xmlns:gss_1="http://srg.aut.uah.es/gss/filter">
       <step name="Disable HK SID 100" id="0" mode="continuous">
-        <inputs xsi:type="GSSTestProcInputs">
-          <input xsi:type="GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="120" delay_unit="miliseconds">
+        <inputs xsi:type="gss:GSSTestProcInputs">
+          <input xsi:type="gss:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="TCs/Disable HK SID 100_app_export.xmi#/"/>
-            <level1 href="../ccsds_solo/tcFormats/tc_epd_3_6.xmi#/"/>
-            <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_6_export_ack.xmi#/"/>
+            <level1 href="../../ccsds_solo/tcFormats/tc_epd_3_6.xmi#/"/>
+            <level1_to_level0 href="../../ccsds_solo/exports/tc_epd_3_6_export_ack.xmi#/"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
-          <output xsi:type="GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/04/@step.0" output_idref_from_prev_step="/04/@step.0/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="30" span_unit="seconds"/>
+      <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output.1">
+        <inputs xsi:type="gss:GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="30" span_unit="seconds"/>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
-        <inputs xsi:type="GSSTestProcInputs">
-          <input xsi:type="GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="120" delay_unit="miliseconds">
+        <inputs xsi:type="gss:GSSTestProcInputs">
+          <input xsi:type="gss:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="TCs/Enable HK SID 100_app_export.xmi#/"/>
-            <level1 href="../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
-            <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_5_export_ack.xmi#/"/>
+            <level1 href="../../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
+            <level1_to_level0 href="../../ccsds_solo/exports/tc_epd_3_5_export_ack.xmi#/"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
-          <output xsi:type="GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 100 is enabled back" id="3" mode="action" prev_step_idref="/04/@step.2" output_idref_from_prev_step="/04/@step.2/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID100 counter is increased" actionType="checking" span_value="30" span_unit="seconds"/>
+      <step name="Check HK SID 100 is enabled back" id="3" mode="action" prev_step_idref="//@step.2" output_idref_from_prev_step="//@step.2/@outputs/@output.1">
+        <inputs xsi:type="gss:GSSTestProcAction" message="SID100 counter is increased" actionType="checking" span_value="30" span_unit="seconds"/>
       </step>
       <step name="Change HK SID 0 period to 5 seconds" id="4" mode="continuous">
-        <inputs xsi:type="GSSTestProcInputs">
-          <input xsi:type="GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="120" delay_unit="miliseconds">
+        <inputs xsi:type="gss:GSSTestProcInputs">
+          <input xsi:type="gss:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="TCs/Change HK SID 0 period to 5 seconds_app_export.xmi#/"/>
-            <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
-            <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.xmi#/"/>
+            <level1 href="../../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
+            <level1_to_level0 href="../../ccsds_solo/exports/tc_epd_3_129_export_ack.xmi#/"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
-          <output xsi:type="GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/04/@step.4" output_idref_from_prev_step="/04/@step.4/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
+      <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="//@step.4" output_idref_from_prev_step="//@step.4/@outputs/@output.1">
+        <inputs xsi:type="gss:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
-        <inputs xsi:type="GSSTestProcInputs">
-          <input xsi:type="GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="120" delay_unit="miliseconds">
+        <inputs xsi:type="gss:GSSTestProcInputs">
+          <input xsi:type="gss:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="120" delay_unit="miliseconds">
             <app_to_level1 href="TCs/Change period to 10 seconds HK SID 10_app_export.xmi#/"/>
-            <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
-            <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.xmi#/"/>
+            <level1 href="../../ccsds_solo/tcFormats/tc_epd_3_129.xmi#/"/>
+            <level1_to_level0 href="../../ccsds_solo/exports/tc_epd_3_129_export_ack.xmi#/"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
-          <output xsi:type="GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
-          <output xsi:type="GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
-            <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+          <output xsi:type="gss:GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
+            <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
             <level1_filter apply_def_filter="no"/>
-            <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+            <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
             <level0_filter apply_def_filter="yes">
-              <extra_filter xsi:type="gss:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
+              <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
             </level0_filter>
           </output>
         </outputs>
       </step>
-      <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/04/@step.6" output_idref_from_prev_step="/04/@step.6/@outputs/@output.1">
-        <inputs xsi:type="GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
+      <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="//@step.6" output_idref_from_prev_step="//@step.6/@outputs/@output.1">
+        <inputs xsi:type="gss:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
       </step>
-</test_proc>
+</gss:GSSTestProcTestProc>

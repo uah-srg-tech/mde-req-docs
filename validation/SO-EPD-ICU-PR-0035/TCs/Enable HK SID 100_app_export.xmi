@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Export name="Enable HK SID 100_app_export" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format">
-    <to href="../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
+<gss:GSSExportExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Enable_HK_SID_100_app_export">
+    <to href="../../ccsds_solo/tcFormats/tc_epd_3_5.xmi#/"/>
     <settings>
       <settingFromConst value="100">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_5.xmi#//@CSField.1"/>
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/tc_epd_3_5.xmi#//@CSField.1"/>
       </settingFromConst>
     </settings>
-</Export>
+</gss:GSSExportExport>
