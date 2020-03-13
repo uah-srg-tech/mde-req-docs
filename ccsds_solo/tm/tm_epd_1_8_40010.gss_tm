@@ -3,10 +3,10 @@
 	<level1_filter file="tm_epd_1_8_40010_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_epd_1_8_40010_filter_level_0(v1)"/>
-	<PI1 name="TC ID" val="40010" gssField="tm_epd_1_8_40010(v1).NID00001"/>
+	<PI1 name="Error code TM 1,8" val="40010" gssField="tm_epd_1_8_40010(v1).NID00066"/>
 	<fields>
+		<Field name="TC ID" gssField="tm_epd_1_8_40010(v1).NID00001"/>
 		<Field name="TC Sequence Control" gssField="tm_epd_1_8_40010(v1).NID00002"/>
-		<Field name="Error code TM 1,8" gssField="tm_epd_1_8_40010(v1).NID00066" enumRef="CIDT0019TM"/>
 		<Field name="Time Updt Error" gssField="tm_epd_1_8_40010(v1).NID00118" enumRef="CIDT0028TM"/>
 		<Field name="Additional Info" gssField="tm_epd_1_8_40010(v1).NID00067"/>
 	</fields>

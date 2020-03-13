@@ -3,10 +3,10 @@
 	<level1_filter file="tm_epd_1_2_40002_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_epd_1_2_40002_filter_level_0(v1)"/>
-	<PI1 name="TC ID" val="40002" gssField="tm_epd_1_2_40002(v1).NID00001"/>
+	<PI1 name="Error Code TM 1,2" val="40002" gssField="tm_epd_1_2_40002(v1).NID00003"/>
 	<fields>
+		<Field name="TC ID" gssField="tm_epd_1_2_40002(v1).NID00001"/>
 		<Field name="TC Sequence Control" gssField="tm_epd_1_2_40002(v1).NID00002"/>
-		<Field name="Error Code TM 1,2" gssField="tm_epd_1_2_40002(v1).NID00003" enumRef="CIDT0018TM"/>
 		<Field name="Received CRC" gssField="tm_epd_1_2_40002(v1).NID00063"/>
 		<Field name="Calculated CRC" gssField="tm_epd_1_2_40002(v1).NID00064"/>
 	</fields>

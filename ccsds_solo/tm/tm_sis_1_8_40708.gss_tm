@@ -3,10 +3,10 @@
 	<level1_filter file="tm_sis_1_8_40708_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_1_8_40708_filter_level_0(v1)"/>
-	<PI1 name="Packet ID" val="40708" gssField="tm_sis_1_8_40708(v1).NID10238"/>
+	<PI1 name="Failure Code" val="40708" gssField="tm_sis_1_8_40708(v1).NID10240"/>
 	<fields>
+		<Field name="Packet ID" gssField="tm_sis_1_8_40708(v1).NID10238"/>
 		<Field name="Packet Sequence" gssField="tm_sis_1_8_40708(v1).NID10239"/>
-		<Field name="Failure Code" gssField="tm_sis_1_8_40708(v1).NID10240"/>
 		<Field name="Service Type" gssField="tm_sis_1_8_40708(v1).NID10241"/>
 		<Field name="Service Subtype" gssField="tm_sis_1_8_40708(v1).NID10242"/>
 	</fields>

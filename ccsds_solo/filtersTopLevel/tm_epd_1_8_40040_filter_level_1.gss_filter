@@ -6,9 +6,9 @@ GSSFilterMintermFilter tm_epd_1_8_40040_filter_level_1 {
 	
 	GSSFilterBoolVar {
 		id := 0;
-		name := NID00001_40040;
+		name := NID00066_40040;
 		constantType := decimal;
-		FieldRef := NID00001;
+		FieldRef := NID00066;
 		GSSFilterFieldOp {
 			type := equal;
 		};

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_1_2_0_filter_level_1" uri="es.uah.aut.srg.tm_sis_1_2_0_filter_level_1" version="v1" description="1,2 Bad APID">
   <formatFile href="../tmFormats/tm_sis_1_2_0.xmi#/"/>
-  <BoolVar id="0" name="NID10238_0" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_1_2_0.xmi#//@CSField.1"/>
+  <BoolVar id="0" name="NID10240_0" constantType="decimal">
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_1_2_0.xmi#//@CSField.3"/>
     <Op type="equal"/>
     <Value xsi:type="gss:GSSFilterConstant" value="0"/>
   </BoolVar>
