@@ -255,9 +255,6 @@
       </step>
       <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/0/@test_proc.2/@step.0" output_idref_from_prev_step="/0/@test_proc.2/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
@@ -313,15 +310,9 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/0/@test_proc.2/@step.4" output_idref_from_prev_step="/0/@test_proc.2/@step.4/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
@@ -348,29 +339,15 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/0/@test_proc.2/@step.6" output_idref_from_prev_step="/0/@test_proc.2/@step.6/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
-      </step>
-      <step name="Restore configuration" id="8" mode="continuous">
-        <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/28"/>
-        </inputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
     </test_proc>
     <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320" scenario="Scenario 1">
       <step name="Disable Event 0x1003" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/29">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/28">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_6_export_ack.gss_export#//@element"/>
           </input>
@@ -396,7 +373,7 @@
       </step>
       <step name="Reset to ASW no sensors no 0x1003" id="1" mode="continuous" prev_step_idref="/0/@test_proc.3/@step.0" output_idref_from_prev_step="/0/@test_proc.3/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/30"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/29"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -417,7 +394,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/31"/>
+            <level1_filter apply_def_filter="no" extra_filter="/30"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -425,7 +402,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/32"/>
+            <level1_filter apply_def_filter="no" extra_filter="/31"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -433,7 +410,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/33"/>
+            <level1_filter apply_def_filter="no" extra_filter="/32"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -441,7 +418,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/34"/>
+            <level1_filter apply_def_filter="no" extra_filter="/33"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -449,7 +426,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/35"/>
+            <level1_filter apply_def_filter="no" extra_filter="/34"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -457,7 +434,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/36"/>
+            <level1_filter apply_def_filter="no" extra_filter="/35"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -465,7 +442,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/37"/>
+            <level1_filter apply_def_filter="no" extra_filter="/36"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -473,7 +450,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/38"/>
+            <level1_filter apply_def_filter="no" extra_filter="/37"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -481,7 +458,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/39"/>
+            <level1_filter apply_def_filter="no" extra_filter="/38"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -491,7 +468,7 @@
       </step>
       <step name="Enable Event 0x1003" id="2" mode="continuous" prev_step_idref="/0/@test_proc.3/@step.1" output_idref_from_prev_step="/0/@test_proc.3/@step.1/@outputs/@output.10">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/40">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/39">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_5_export_ack.gss_export#//@element"/>
           </input>
@@ -517,7 +494,7 @@
       </step>
       <step name="Reset to ASW no sensors 0x1003" id="3" mode="continuous" prev_step_idref="/0/@test_proc.3/@step.2" output_idref_from_prev_step="/0/@test_proc.3/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/41"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/40"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -538,7 +515,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/42"/>
+            <level1_filter apply_def_filter="no" extra_filter="/41"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -546,7 +523,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/43"/>
+            <level1_filter apply_def_filter="no" extra_filter="/42"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -554,7 +531,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/44"/>
+            <level1_filter apply_def_filter="no" extra_filter="/43"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -562,7 +539,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/45"/>
+            <level1_filter apply_def_filter="no" extra_filter="/44"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -570,7 +547,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Oper Mode entry" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4099.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/46"/>
+            <level1_filter apply_def_filter="no" extra_filter="/45"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4099_filter_level_0.gss_filter#//@element"/>
@@ -578,7 +555,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/47"/>
+            <level1_filter apply_def_filter="no" extra_filter="/46"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -586,7 +563,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/48"/>
+            <level1_filter apply_def_filter="no" extra_filter="/47"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -594,7 +571,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/49"/>
+            <level1_filter apply_def_filter="no" extra_filter="/48"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -602,7 +579,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/50"/>
+            <level1_filter apply_def_filter="no" extra_filter="/49"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -610,7 +587,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="11" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/51"/>
+            <level1_filter apply_def_filter="no" extra_filter="/50"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -661,7 +638,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 0" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/52"/>
+            <level1_filter apply_def_filter="no" extra_filter="/51"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -674,7 +651,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/53"/>
+            <level1_filter apply_def_filter="no" extra_filter="/52"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.gss_filter#//@element"/>
@@ -684,12 +661,12 @@
       </step>
       <step name="Valid TC accept ACK" id="1" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.0" output_idref_from_prev_step="/0/@test_proc.5/@step.0/@outputs/@output.2">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/54"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/53"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 1" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/55"/>
+            <level1_filter apply_def_filter="no" extra_filter="/54"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -704,7 +681,7 @@
       </step>
       <step name="Valid TC exec ACK flag" id="2" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.1" output_idref_from_prev_step="/0/@test_proc.5/@step.1/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/56"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/55"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
@@ -714,7 +691,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/57"/>
+            <level1_filter apply_def_filter="no" extra_filter="/56"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.gss_filter#//@element"/>
@@ -724,7 +701,7 @@
       </step>
       <step name="Valid TC none ACK flags" id="3" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.2" output_idref_from_prev_step="/0/@test_proc.5/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/58"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/57"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
@@ -743,7 +720,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C43 seqCtrl 4" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40003.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/59"/>
+            <level1_filter apply_def_filter="no" extra_filter="/58"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_2_40003_filter_level_0.gss_filter#//@element"/>
@@ -753,12 +730,12 @@
       </step>
       <step name="Not acceptable TC accept ACK flags" id="5" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.4" output_idref_from_prev_step="/0/@test_proc.5/@step.4/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/60"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/59"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C43 seqCtrl 5" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40003.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/61"/>
+            <level1_filter apply_def_filter="no" extra_filter="/60"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_2_40003_filter_level_0.gss_filter#//@element"/>
@@ -768,17 +745,17 @@
       </step>
       <step name="Not acceptable TC exec ACK flags" id="6" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.5" output_idref_from_prev_step="/0/@test_proc.5/@step.5/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/62"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/61"/>
         </inputs>
       </step>
       <step name="Not acceptable TC none ACK flags" id="7" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/63"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/62"/>
         </inputs>
       </step>
       <step name="Not executable TC both ACK flags" id="8" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/64">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/63">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_128_32_export_ack.gss_export#//@element"/>
           </input>
@@ -786,7 +763,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 8" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/65"/>
+            <level1_filter apply_def_filter="no" extra_filter="/64"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -794,7 +771,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 8" id="1" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/66"/>
+            <level1_filter apply_def_filter="no" extra_filter="/65"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_8_40030_filter_level_0.gss_filter#//@element"/>
@@ -804,14 +781,14 @@
       </step>
       <step name="Not executable TC accept ACK flags" id="9" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.8" output_idref_from_prev_step="/0/@test_proc.5/@step.8/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/67" level1_to_level0="/68">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/66" level1_to_level0="/67">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 9" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/69"/>
+            <level1_filter apply_def_filter="no" extra_filter="/68"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -821,21 +798,21 @@
       </step>
       <step name="Not executable TC none ACK flags" id="10" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.9" output_idref_from_prev_step="/0/@test_proc.5/@step.9/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/70" level1_to_level0="/71">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/69" level1_to_level0="/70">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
       </step>
       <step name="Not executable TC exec ACK flags" id="11" mode="continuous" prev_step_idref="/0/@test_proc.5/@step.8" output_idref_from_prev_step="/0/@test_proc.5/@step.8/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/72" level1_to_level0="/73">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/71" level1_to_level0="/72">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 11" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/74"/>
+            <level1_filter apply_def_filter="no" extra_filter="/73"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_8_40030_filter_level_0.gss_filter#//@element"/>
@@ -847,7 +824,7 @@
     <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910" scenario="Scenario 1">
       <step name="Disable HK SID 100" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/75">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/74">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_6_export_ack.gss_export#//@element"/>
           </input>
@@ -873,13 +850,10 @@
       </step>
       <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/0/@test_proc.6/@step.0" output_idref_from_prev_step="/0/@test_proc.6/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/76">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/75">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_5_export_ack.gss_export#//@element"/>
           </input>
@@ -908,7 +882,7 @@
       </step>
       <step name="Change HK SID 0 period to 5 seconds" id="4" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/77">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/76">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.gss_export#//@element"/>
           </input>
@@ -931,19 +905,13 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/0/@test_proc.6/@step.4" output_idref_from_prev_step="/0/@test_proc.6/@step.4/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/78">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/77">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.gss_export#//@element"/>
           </input>
@@ -966,29 +934,15 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/0/@test_proc.6/@step.6" output_idref_from_prev_step="/0/@test_proc.6/@step.6/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
-      </step>
-      <step name="Restore configuration" id="8" mode="continuous">
-        <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/79"/>
-        </inputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
     </test_proc>
     <test_proc name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920" scenario="Scenario 1">
       <step name="Disable Event 0x1002" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/80">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/78">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_6_export_ack.gss_export#//@element"/>
           </input>
@@ -1014,7 +968,7 @@
       </step>
       <step name="Reset to ASW no sensors no 0x1002" id="1" mode="continuous" prev_step_idref="/0/@test_proc.7/@step.0" output_idref_from_prev_step="/0/@test_proc.7/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/81"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/79"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -1035,7 +989,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/82"/>
+            <level1_filter apply_def_filter="no" extra_filter="/80"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -1043,7 +997,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/83"/>
+            <level1_filter apply_def_filter="no" extra_filter="/81"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1051,7 +1005,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/84"/>
+            <level1_filter apply_def_filter="no" extra_filter="/82"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -1059,7 +1013,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/85"/>
+            <level1_filter apply_def_filter="no" extra_filter="/83"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1067,7 +1021,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/86"/>
+            <level1_filter apply_def_filter="no" extra_filter="/84"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -1075,7 +1029,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/87"/>
+            <level1_filter apply_def_filter="no" extra_filter="/85"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -1083,7 +1037,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/88"/>
+            <level1_filter apply_def_filter="no" extra_filter="/86"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -1091,7 +1045,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/89"/>
+            <level1_filter apply_def_filter="no" extra_filter="/87"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -1099,7 +1053,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/90"/>
+            <level1_filter apply_def_filter="no" extra_filter="/88"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -1109,7 +1063,7 @@
       </step>
       <step name="Enable Event 0x1002" id="2" mode="continuous" prev_step_idref="/0/@test_proc.7/@step.1" output_idref_from_prev_step="/0/@test_proc.7/@step.1/@outputs/@output.10">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/91">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/89">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_5_export_ack.gss_export#//@element"/>
           </input>
@@ -1135,7 +1089,7 @@
       </step>
       <step name="Reset to ASW no sensors 0x1002" id="3" mode="continuous" prev_step_idref="/0/@test_proc.7/@step.2" output_idref_from_prev_step="/0/@test_proc.7/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/92"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/90"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -1156,7 +1110,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/93"/>
+            <level1_filter apply_def_filter="no" extra_filter="/91"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -1164,7 +1118,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/94"/>
+            <level1_filter apply_def_filter="no" extra_filter="/92"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1172,7 +1126,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/95"/>
+            <level1_filter apply_def_filter="no" extra_filter="/93"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -1180,7 +1134,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/96"/>
+            <level1_filter apply_def_filter="no" extra_filter="/94"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1188,7 +1142,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Conf Mode entry" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4098.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/97"/>
+            <level1_filter apply_def_filter="no" extra_filter="/95"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4098_filter_level_0.gss_filter#//@element"/>
@@ -1196,7 +1150,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/98"/>
+            <level1_filter apply_def_filter="no" extra_filter="/96"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -1204,7 +1158,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/99"/>
+            <level1_filter apply_def_filter="no" extra_filter="/97"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -1212,7 +1166,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/100"/>
+            <level1_filter apply_def_filter="no" extra_filter="/98"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -1220,7 +1174,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/101"/>
+            <level1_filter apply_def_filter="no" extra_filter="/99"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -1228,7 +1182,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="11" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/102"/>
+            <level1_filter apply_def_filter="no" extra_filter="/100"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -1279,7 +1233,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 0" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/103"/>
+            <level1_filter apply_def_filter="no" extra_filter="/101"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -1292,7 +1246,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/104"/>
+            <level1_filter apply_def_filter="no" extra_filter="/102"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.gss_filter#//@element"/>
@@ -1302,12 +1256,12 @@
       </step>
       <step name="Valid TC accept ACK" id="1" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.0" output_idref_from_prev_step="/0/@test_proc.9/@step.0/@outputs/@output.2">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/105"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/103"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 1" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/106"/>
+            <level1_filter apply_def_filter="no" extra_filter="/104"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -1322,7 +1276,7 @@
       </step>
       <step name="Valid TC exec ACK flag" id="2" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.1" output_idref_from_prev_step="/0/@test_proc.9/@step.1/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/107"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/105"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
@@ -1332,7 +1286,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/108"/>
+            <level1_filter apply_def_filter="no" extra_filter="/106"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.gss_filter#//@element"/>
@@ -1342,7 +1296,7 @@
       </step>
       <step name="Valid TC none ACK flags" id="3" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.2" output_idref_from_prev_step="/0/@test_proc.9/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/109"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/107"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
@@ -1361,7 +1315,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C43 seqCtrl 4" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40003.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/110"/>
+            <level1_filter apply_def_filter="no" extra_filter="/108"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_2_40003_filter_level_0.gss_filter#//@element"/>
@@ -1371,12 +1325,12 @@
       </step>
       <step name="Not acceptable TC accept ACK flags" id="5" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.4" output_idref_from_prev_step="/0/@test_proc.9/@step.4/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/111"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/109"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C43 seqCtrl 5" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40003.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/112"/>
+            <level1_filter apply_def_filter="no" extra_filter="/110"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_2_40003_filter_level_0.gss_filter#//@element"/>
@@ -1386,17 +1340,17 @@
       </step>
       <step name="Not acceptable TC exec ACK flags" id="6" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.5" output_idref_from_prev_step="/0/@test_proc.9/@step.5/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/113"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/111"/>
         </inputs>
       </step>
       <step name="Not acceptable TC none ACK flags" id="7" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/114"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/112"/>
         </inputs>
       </step>
       <step name="Not executable TC both ACK flags" id="8" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/115">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/113">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_128_32_export_ack.gss_export#//@element"/>
           </input>
@@ -1404,7 +1358,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 8" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/116"/>
+            <level1_filter apply_def_filter="no" extra_filter="/114"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -1412,7 +1366,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 8" id="1" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/117"/>
+            <level1_filter apply_def_filter="no" extra_filter="/115"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_8_40030_filter_level_0.gss_filter#//@element"/>
@@ -1422,14 +1376,14 @@
       </step>
       <step name="Not executable TC accept ACK flags" id="9" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.8" output_idref_from_prev_step="/0/@test_proc.9/@step.8/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/118" level1_to_level0="/119">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/116" level1_to_level0="/117">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 9" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/120"/>
+            <level1_filter apply_def_filter="no" extra_filter="/118"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -1439,21 +1393,21 @@
       </step>
       <step name="Not executable TC none ACK flags" id="10" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.9" output_idref_from_prev_step="/0/@test_proc.9/@step.9/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/121" level1_to_level0="/122">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/119" level1_to_level0="/120">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
       </step>
       <step name="Not executable TC exec ACK flags" id="11" mode="continuous" prev_step_idref="/0/@test_proc.9/@step.8" output_idref_from_prev_step="/0/@test_proc.9/@step.8/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/123" level1_to_level0="/124">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/121" level1_to_level0="/122">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 11" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/125"/>
+            <level1_filter apply_def_filter="no" extra_filter="/123"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_8_40030_filter_level_0.gss_filter#//@element"/>
@@ -1465,7 +1419,7 @@
     <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410" scenario="Scenario 1">
       <step name="Disable HK SID 100" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/126">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/124">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_6_export_ack.gss_export#//@element"/>
           </input>
@@ -1491,13 +1445,10 @@
       </step>
       <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/0/@test_proc.10/@step.0" output_idref_from_prev_step="/0/@test_proc.10/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/127">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/125">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_5_export_ack.gss_export#//@element"/>
           </input>
@@ -1526,7 +1477,7 @@
       </step>
       <step name="Change HK SID 0 period to 5 seconds" id="4" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/128">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/126">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.gss_export#//@element"/>
           </input>
@@ -1549,19 +1500,13 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/0/@test_proc.10/@step.4" output_idref_from_prev_step="/0/@test_proc.10/@step.4/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/129">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/127">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.gss_export#//@element"/>
           </input>
@@ -1584,29 +1529,15 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/0/@test_proc.10/@step.6" output_idref_from_prev_step="/0/@test_proc.10/@step.6/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
-      </step>
-      <step name="Restore configuration" id="8" mode="continuous">
-        <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/130"/>
-        </inputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
     </test_proc>
     <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420" scenario="Scenario 1">
       <step name="Disable Event 0x1002" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/131">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/128">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_6_export_ack.gss_export#//@element"/>
           </input>
@@ -1632,7 +1563,7 @@
       </step>
       <step name="Reset to ASW no sensors no 0x1002" id="1" mode="continuous" prev_step_idref="/0/@test_proc.11/@step.0" output_idref_from_prev_step="/0/@test_proc.11/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/132"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/129"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -1653,7 +1584,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/133"/>
+            <level1_filter apply_def_filter="no" extra_filter="/130"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -1661,7 +1592,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/134"/>
+            <level1_filter apply_def_filter="no" extra_filter="/131"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1669,7 +1600,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/135"/>
+            <level1_filter apply_def_filter="no" extra_filter="/132"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -1677,7 +1608,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/136"/>
+            <level1_filter apply_def_filter="no" extra_filter="/133"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1685,7 +1616,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/137"/>
+            <level1_filter apply_def_filter="no" extra_filter="/134"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -1693,7 +1624,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/138"/>
+            <level1_filter apply_def_filter="no" extra_filter="/135"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -1701,7 +1632,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/139"/>
+            <level1_filter apply_def_filter="no" extra_filter="/136"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -1709,7 +1640,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/140"/>
+            <level1_filter apply_def_filter="no" extra_filter="/137"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -1717,7 +1648,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/141"/>
+            <level1_filter apply_def_filter="no" extra_filter="/138"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -1727,7 +1658,7 @@
       </step>
       <step name="Enable Event 0x1002" id="2" mode="continuous" prev_step_idref="/0/@test_proc.11/@step.1" output_idref_from_prev_step="/0/@test_proc.11/@step.1/@outputs/@output.10">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/142">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1002" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/139">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_5_export_ack.gss_export#//@element"/>
           </input>
@@ -1753,7 +1684,7 @@
       </step>
       <step name="Reset to ASW no sensors 0x1002" id="3" mode="continuous" prev_step_idref="/0/@test_proc.11/@step.2" output_idref_from_prev_step="/0/@test_proc.11/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/143"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/140"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -1774,7 +1705,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/144"/>
+            <level1_filter apply_def_filter="no" extra_filter="/141"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -1782,7 +1713,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/145"/>
+            <level1_filter apply_def_filter="no" extra_filter="/142"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1790,7 +1721,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/146"/>
+            <level1_filter apply_def_filter="no" extra_filter="/143"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -1798,7 +1729,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/147"/>
+            <level1_filter apply_def_filter="no" extra_filter="/144"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -1806,7 +1737,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Conf Mode entry" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4098.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/148"/>
+            <level1_filter apply_def_filter="no" extra_filter="/145"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4098_filter_level_0.gss_filter#//@element"/>
@@ -1814,7 +1745,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/149"/>
+            <level1_filter apply_def_filter="no" extra_filter="/146"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -1822,7 +1753,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/150"/>
+            <level1_filter apply_def_filter="no" extra_filter="/147"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -1830,7 +1761,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/151"/>
+            <level1_filter apply_def_filter="no" extra_filter="/148"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -1838,7 +1769,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/152"/>
+            <level1_filter apply_def_filter="no" extra_filter="/149"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -1846,7 +1777,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="11" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/153"/>
+            <level1_filter apply_def_filter="no" extra_filter="/150"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -1897,7 +1828,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 0" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/154"/>
+            <level1_filter apply_def_filter="no" extra_filter="/151"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -1910,7 +1841,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 0" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/155"/>
+            <level1_filter apply_def_filter="no" extra_filter="/152"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.gss_filter#//@element"/>
@@ -1920,12 +1851,12 @@
       </step>
       <step name="Valid TC accept ACK" id="1" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.0" output_idref_from_prev_step="/0/@test_proc.13/@step.0/@outputs/@output.2">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/156"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/153"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 1" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/157"/>
+            <level1_filter apply_def_filter="no" extra_filter="/154"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -1940,7 +1871,7 @@
       </step>
       <step name="Valid TC exec ACK flag" id="2" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.1" output_idref_from_prev_step="/0/@test_proc.13/@step.1/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/158"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/155"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
@@ -1950,7 +1881,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Exec ACK seqCtrl 2" id="1" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_7.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/159"/>
+            <level1_filter apply_def_filter="no" extra_filter="/156"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.gss_filter#//@element"/>
@@ -1960,7 +1891,7 @@
       </step>
       <step name="Valid TC none ACK flags" id="3" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.2" output_idref_from_prev_step="/0/@test_proc.13/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/160"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Test Connection no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/157"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel0" name="Test Connection Report" id="0" ifRef="0">
@@ -1979,7 +1910,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C43 seqCtrl 4" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40003.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/161"/>
+            <level1_filter apply_def_filter="no" extra_filter="/158"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_2_40003_filter_level_0.gss_filter#//@element"/>
@@ -1989,12 +1920,12 @@
       </step>
       <step name="Not acceptable TC accept ACK flags" id="5" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.4" output_idref_from_prev_step="/0/@test_proc.13/@step.4/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/162"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/159"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C43 seqCtrl 5" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_2_40003.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/163"/>
+            <level1_filter apply_def_filter="no" extra_filter="/160"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_2_40003_filter_level_0.gss_filter#//@element"/>
@@ -2004,17 +1935,17 @@
       </step>
       <step name="Not acceptable TC exec ACK flags" id="6" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.5" output_idref_from_prev_step="/0/@test_proc.13/@step.5/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/164"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/161"/>
         </inputs>
       </step>
       <step name="Not acceptable TC none ACK flags" id="7" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/165"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Wrong TC no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/162"/>
         </inputs>
       </step>
       <step name="Not executable TC both ACK flags" id="8" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/166">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception both ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/163">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_128_32_export_ack.gss_export#//@element"/>
           </input>
@@ -2022,7 +1953,7 @@
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 8" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/167"/>
+            <level1_filter apply_def_filter="no" extra_filter="/164"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -2030,7 +1961,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 8" id="1" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/168"/>
+            <level1_filter apply_def_filter="no" extra_filter="/165"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_8_40030_filter_level_0.gss_filter#//@element"/>
@@ -2040,14 +1971,14 @@
       </step>
       <step name="Not executable TC accept ACK flags" id="9" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.8" output_idref_from_prev_step="/0/@test_proc.13/@step.8/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/169" level1_to_level0="/170">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception accept ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/166" level1_to_level0="/167">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK seqCtrl 9" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_1.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/171"/>
+            <level1_filter apply_def_filter="no" extra_filter="/168"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.gss_filter#//@element"/>
@@ -2057,21 +1988,21 @@
       </step>
       <step name="Not executable TC none ACK flags" id="10" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.9" output_idref_from_prev_step="/0/@test_proc.13/@step.9/@outputs/@output.0">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/172" level1_to_level0="/173">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception no ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/169" level1_to_level0="/170">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
       </step>
       <step name="Not executable TC exec ACK flags" id="11" mode="continuous" prev_step_idref="/0/@test_proc.13/@step.8" output_idref_from_prev_step="/0/@test_proc.13/@step.8/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/174" level1_to_level0="/175">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Exec exception exec ACK" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/171" level1_to_level0="/172">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_128_32.gss_format#//@element"/>
           </input>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Error 9C5E 19 seqCtrl 11" id="0" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_1_8_40030.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/176"/>
+            <level1_filter apply_def_filter="no" extra_filter="/173"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_1_8_40030_filter_level_0.gss_filter#//@element"/>
@@ -2083,7 +2014,7 @@
     <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910" scenario="Scenario 1">
       <step name="Disable HK SID 100" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/177">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/174">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_6_export_ack.gss_export#//@element"/>
           </input>
@@ -2109,13 +2040,10 @@
       </step>
       <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/0/@test_proc.14/@step.0" output_idref_from_prev_step="/0/@test_proc.14/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/178">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable HK SID 100" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/175">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_5_export_ack.gss_export#//@element"/>
           </input>
@@ -2144,7 +2072,7 @@
       </step>
       <step name="Change HK SID 0 period to 5 seconds" id="4" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/179">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change HK SID 0 period to 5 seconds" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/176">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.gss_export#//@element"/>
           </input>
@@ -2167,19 +2095,13 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;2&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/0/@test_proc.14/@step.4" output_idref_from_prev_step="/0/@test_proc.14/@step.4/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/180">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Change period to 10 seconds HK SID 10" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/177">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_3_129_export_ack.gss_export#//@element"/>
           </input>
@@ -2202,29 +2124,15 @@
             </level0_filter>
           </output>
         </outputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/0/@test_proc.14/@step.6" output_idref_from_prev_step="/0/@test_proc.14/@step.6/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="&quot;30&quot;" span_unit="seconds"/>
-        <specialPackets>
-          <enable_print id="&quot;0&quot;"/>
-        </specialPackets>
-      </step>
-      <step name="Restore configuration" id="8" mode="continuous">
-        <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/181"/>
-        </inputs>
-        <specialPackets>
-          <disable_print id="&quot;0&quot;"/>
-        </specialPackets>
       </step>
     </test_proc>
     <test_proc name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920" scenario="Scenario 1">
       <step name="Disable Event 0x1003" id="0" mode="continuous">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/182">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Disable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/178">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_6.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_6_export_ack.gss_export#//@element"/>
           </input>
@@ -2250,7 +2158,7 @@
       </step>
       <step name="Reset to ASW no sensors no 0x1003" id="1" mode="continuous" prev_step_idref="/0/@test_proc.15/@step.0" output_idref_from_prev_step="/0/@test_proc.15/@step.0/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/183"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/179"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -2271,7 +2179,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/184"/>
+            <level1_filter apply_def_filter="no" extra_filter="/180"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -2279,7 +2187,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/185"/>
+            <level1_filter apply_def_filter="no" extra_filter="/181"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -2287,7 +2195,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/186"/>
+            <level1_filter apply_def_filter="no" extra_filter="/182"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -2295,7 +2203,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/187"/>
+            <level1_filter apply_def_filter="no" extra_filter="/183"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -2303,7 +2211,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/188"/>
+            <level1_filter apply_def_filter="no" extra_filter="/184"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -2311,7 +2219,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/189"/>
+            <level1_filter apply_def_filter="no" extra_filter="/185"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -2319,7 +2227,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/190"/>
+            <level1_filter apply_def_filter="no" extra_filter="/186"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -2327,7 +2235,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/191"/>
+            <level1_filter apply_def_filter="no" extra_filter="/187"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -2335,7 +2243,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/192"/>
+            <level1_filter apply_def_filter="no" extra_filter="/188"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -2345,7 +2253,7 @@
       </step>
       <step name="Enable Event 0x1003" id="2" mode="continuous" prev_step_idref="/0/@test_proc.15/@step.1" output_idref_from_prev_step="/0/@test_proc.15/@step.1/@outputs/@output.10">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/193">
+          <input xsi:type="gss_1:GSSTestProcInputLevel1" name="Enable Event 0x1003" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level1="/189">
             <level1 href="../ccsds_solo/tcFormats/tc_epd_5_5.gss_format#//@element"/>
             <level1_to_level0 href="../ccsds_solo/exports/tc_epd_5_5_export_ack.gss_export#//@element"/>
           </input>
@@ -2371,7 +2279,7 @@
       </step>
       <step name="Reset to ASW no sensors 0x1003" id="3" mode="continuous" prev_step_idref="/0/@test_proc.15/@step.2" output_idref_from_prev_step="/0/@test_proc.15/@step.2/@outputs/@output.1">
         <inputs xsi:type="gss_1:GSSTestProcInputs">
-          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/194"/>
+          <input xsi:type="gss_1:GSSTestProcInputLevel0" name="Reset" ifRef="0" delay_value="&quot;120&quot;" delay_unit="miliseconds" app_to_level0="/190"/>
         </inputs>
         <outputs checkmode="all" valid_time_interval_value="&quot;500&quot;" valid_time_interval_unit="miliseconds">
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
@@ -2392,7 +2300,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4354.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/195"/>
+            <level1_filter apply_def_filter="no" extra_filter="/191"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.gss_filter#//@element"/>
@@ -2400,7 +2308,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/196"/>
+            <level1_filter apply_def_filter="no" extra_filter="/192"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -2408,7 +2316,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4097.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/197"/>
+            <level1_filter apply_def_filter="no" extra_filter="/193"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.gss_filter#//@element"/>
@@ -2416,7 +2324,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SpW Ready" id="5" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4101.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/198"/>
+            <level1_filter apply_def_filter="no" extra_filter="/194"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.gss_filter#//@element"/>
@@ -2424,7 +2332,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Oper Mode entry" id="6" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4099.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/199"/>
+            <level1_filter apply_def_filter="no" extra_filter="/195"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4099_filter_level_0.gss_filter#//@element"/>
@@ -2432,7 +2340,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event STEP off" id="7" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4360.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/200"/>
+            <level1_filter apply_def_filter="no" extra_filter="/196"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4360_filter_level_0.gss_filter#//@element"/>
@@ -2440,7 +2348,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event SIS off" id="8" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4361.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/201"/>
+            <level1_filter apply_def_filter="no" extra_filter="/197"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4361_filter_level_0.gss_filter#//@element"/>
@@ -2448,7 +2356,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT1 off" id="9" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4362.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/202"/>
+            <level1_filter apply_def_filter="no" extra_filter="/198"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4362_filter_level_0.gss_filter#//@element"/>
@@ -2456,7 +2364,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event HET-EPT2 off" id="10" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4363.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/203"/>
+            <level1_filter apply_def_filter="no" extra_filter="/199"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4363_filter_level_0.gss_filter#//@element"/>
@@ -2464,7 +2372,7 @@
           </output>
           <output xsi:type="gss_1:GSSTestProcOutputLevel1" name="Event Readout Ended" id="11" ifRef="0">
             <level1 href="../ccsds_solo/tmFormats/tm_epd_5_1_4364.gss_format#//@element"/>
-            <level1_filter apply_def_filter="no" extra_filter="/204"/>
+            <level1_filter apply_def_filter="no" extra_filter="/200"/>
             <level1_from_level0 href="../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.gss_import#//@element"/>
             <level0_filter apply_def_filter="yes">
               <extra_filter xsi:type="gss_2:GSSFilterMintermFilter" href="../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4364_filter_level_0.gss_filter#//@element"/>
@@ -3098,13 +3006,6 @@
       </settingFromConst>
       <settingFromConst value="&quot;10&quot;">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element/@CSField.2"/>
-      </settingFromConst>
-    </settings>
-  </gss_4:GSSExportExport>
-  <gss_4:GSSExportExport name="dummy_app_export" uri="es.uah.aut.srg.dummy_app_export" version="v1">
-    <settings>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../Ifaces/dummy/DUMMY.gss_format#//@element/@CSField.0"/>
       </settingFromConst>
     </settings>
   </gss_4:GSSExportExport>
@@ -4052,13 +3953,6 @@
       </settingFromConst>
     </settings>
   </gss_4:GSSExportExport>
-  <gss_4:GSSExportExport name="dummy_app_export" uri="es.uah.aut.srg.dummy_app_export" version="v1">
-    <settings>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../Ifaces/dummy/DUMMY.gss_format#//@element/@CSField.0"/>
-      </settingFromConst>
-    </settings>
-  </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Disable Event 0x1002_app_export" uri="es.uah.aut.srg.Disable Event 0x1002_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_5_6.gss_format#//@element"/>
     <settings>
@@ -5003,13 +4897,6 @@
       </settingFromConst>
     </settings>
   </gss_4:GSSExportExport>
-  <gss_4:GSSExportExport name="dummy_app_export" uri="es.uah.aut.srg.dummy_app_export" version="v1">
-    <settings>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../Ifaces/dummy/DUMMY.gss_format#//@element/@CSField.0"/>
-      </settingFromConst>
-    </settings>
-  </gss_4:GSSExportExport>
   <gss_4:GSSExportExport name="Disable Event 0x1002_app_export" uri="es.uah.aut.srg.Disable Event 0x1002_app_export" version="v1">
     <to href="../ccsds_solo/tcFormats/tc_epd_5_6.gss_format#//@element"/>
     <settings>
@@ -5951,13 +5838,6 @@
       </settingFromConst>
       <settingFromConst value="&quot;10&quot;">
         <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../ccsds_solo/tcFormats/tc_epd_3_129.gss_format#//@element/@CSField.2"/>
-      </settingFromConst>
-    </settings>
-  </gss_4:GSSExportExport>
-  <gss_4:GSSExportExport name="dummy_app_export" uri="es.uah.aut.srg.dummy_app_export" version="v1">
-    <settings>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_3:GSSFormatCSField" href="../Ifaces/dummy/DUMMY.gss_format#//@element/@CSField.0"/>
       </settingFromConst>
     </settings>
   </gss_4:GSSExportExport>

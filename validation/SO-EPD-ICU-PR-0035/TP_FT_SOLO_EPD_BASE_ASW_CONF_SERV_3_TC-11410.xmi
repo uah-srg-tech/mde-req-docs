@@ -29,6 +29,9 @@
       </step>
       <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="//@step.0" output_idref_from_prev_step="//@step.0/@outputs/@output.1">
         <inputs xsi:type="gss:GSSTestProcAction" message="SID100 counter is not increased" actionType="checking" span_value="30" span_unit="seconds"/>
+        <specialPackets>
+          <enable_print id="2"/>
+        </specialPackets>
       </step>
       <step name="Enable HK SID 100" id="2" mode="continuous">
         <inputs xsi:type="gss:GSSTestProcInputs">
@@ -86,9 +89,15 @@
             </level0_filter>
           </output>
         </outputs>
+        <specialPackets>
+          <disable_print id="2"/>
+        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="//@step.4" output_idref_from_prev_step="//@step.4/@outputs/@output.1">
         <inputs xsi:type="gss:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
+        <specialPackets>
+          <enable_print id="0"/>
+        </specialPackets>
       </step>
       <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
         <inputs xsi:type="gss:GSSTestProcInputs">
@@ -116,8 +125,24 @@
             </level0_filter>
           </output>
         </outputs>
+        <specialPackets>
+          <disable_print id="0"/>
+        </specialPackets>
       </step>
       <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="//@step.6" output_idref_from_prev_step="//@step.6/@outputs/@output.1">
         <inputs xsi:type="gss:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="checking" span_value="30" span_unit="seconds"/>
+        <specialPackets>
+          <enable_print id="0"/>
+        </specialPackets>
+      </step>
+      <step name="Restore configuration" id="8" mode="continuous">
+        <inputs xsi:type="gss:GSSTestProcInputs">
+          <input xsi:type="gss:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds">
+            <app_to_level0 href="TCs/dummy_app_export.xmi#/"/>
+          </input>
+        </inputs>
+        <specialPackets>
+          <disable_print id="0"/>
+        </specialPackets>
       </step>
 </gss:GSSTestProcTestProc>

@@ -12,7 +12,7 @@ GSSFilterMintermFilter DUMMY_MESSAGE_1 {
 			type := equal;
 		};
 		GSSFilterConstant {
-			value := 1;
+			value := 666;
 		};
 	};
 	GSSFilterMinterm { 
