@@ -17,6 +17,7 @@ mapping testsetup::VTestSetupDocument::GenerateTestSetupDoc() : doc::DDocument {
 	result.section += self.interfaces.map GenerateInterfacesSection();
 	result.section += self.configurations.map GenerateConfigurationsSection();
 	result.section += self.actions.map GenerateActionsSection();
+	result.section += self.actionsOverVariables.map GenerateActionsOverVariablesSection();
 	result.section += self.scenarios.map GenerateScenariosSection();
 	result.section += self.tbcsTbdsSection.map GenerateTbcsTbdsSection();
 }
@@ -113,8 +114,36 @@ mapping testsetup::VTestSetupActionsSection::GenerateActionsSection() : doc::DDS
 	result.name := "Actions";
 	result.sectionContent += self.action.map GenerateAction();
 }
-	
+
 mapping testsetup::VTestSetupAction::GenerateAction() : doc::DDBody {
+	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
+	result.bodyContent += object DParagraph {
+		paragraphContent += object DRun {
+			bold := DRunAttributes::TRUE;
+			text := object DText {
+				content := self.name;
+			}
+		};
+		paragraphContent += object DRun {
+			text := object DText {
+				if(self.type = testsetup::VTestSetupActionType::tmtc_checking) {
+					content := ". Type: TMTC checking";
+				} else {
+					content := ". Type: " + self.type.toString();
+				};
+			}
+		}
+	};
+	result.bodyContent += self.description.bodyContent.map GenerateBodyContent();
+}
+
+
+mapping testsetup::VTestSetupActionsOverVariablesSection::GenerateActionsOverVariablesSection() : doc::DDSection {
+	result.name := "Actions over variables";
+	result.sectionContent += self.actionOverVariable.map GenerateActionOverVariable();
+}
+
+mapping testsetup::VTestSetupActionOverVariable::GenerateActionOverVariable() : doc::DDBody {
 	result.bodyContent := object OrderedSet(doctpl::DBodyContent) {};
 	result.bodyContent += object DParagraph {
 		paragraphContent += object DRun {
@@ -230,6 +259,49 @@ mapping testsetup::VTestSetupScenarioSection::GenerateScenarioSection() : doc::D
 							paragraphContent += object DRun {
 								text := object DText {
 									content := self.supportedAction->at(i).name;
+								}
+							}
+						}
+					};
+					i := i + 1;
+				}
+			}
+		};
+		if(self.supportedActionOverVariable->size() != 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Supported actions over variables: ";
+					}
+				}
+			};
+			bodyContent += object DItemize {
+				items := object OrderedSet(doctpl::DListItem) {};
+				var i : Integer := 1;
+				while(i <= self.supportedActionOverVariable->size()) {
+					items += object DListItem {
+						paragraph := object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := self.supportedActionOverVariable->at(i).name + ": ";
+								}
+							};
+							paragraphContent += object DRun {
+								italics := DRunAttributes::TRUE;
+								text := object DText {
+									content := self.supportedActionOverVariable->at(i).actionOverVariable.name;
+								}
+							};
+							paragraphContent += object DRun {
+								text := object DText {
+									content := " over ";
+								}
+							};
+							paragraphContent += object DRun {
+								italics := DRunAttributes::TRUE;
+								text := object DText {
+									content := self.supportedActionOverVariable->at(i).scenarioVariable.name;
 								}
 							}
 						}
