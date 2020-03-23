@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gss:GSSExportExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Set_nominal_resets_0_and_Activate_app_export">
+    <to href="../../ccsds_solo/tcFormats/tc_epd_128_4.xmi#/"/>
+    <settings>
+      <settingFromConst value="2">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/tc_epd_128_4.xmi#//@CSField.0"/>
+      </settingFromConst>
+      <settingAIFromConst value="0x1400" toArrayIndex="0">
+        <toFieldRef href="../../../ccsds_solo/tcFormats/tc_epd_128_4.xmi#//@AIField.0"/>
+      </settingAIFromConst>
+      <settingAIFromConst value="0" toArrayIndex="0">
+        <toFieldRef href="../../../ccsds_solo/tcFormats/tc_epd_128_4.xmi#//@AIField.1"/>
+      </settingAIFromConst>
+      <settingAIFromConst value="0x0500" toArrayIndex="1">
+        <toFieldRef href="../../../ccsds_solo/tcFormats/tc_epd_128_4.xmi#//@AIField.0"/>
+      </settingAIFromConst>
+      <settingAIFromConst value="0x0F" toArrayIndex="1">
+        <toFieldRef href="../../../ccsds_solo/tcFormats/tc_epd_128_4.xmi#//@AIField.1"/>
+      </settingAIFromConst>
+    </settings>
+</gss:GSSExportExport>

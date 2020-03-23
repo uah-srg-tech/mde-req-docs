@@ -330,6 +330,28 @@
 					</extendedDescription>
 				</Item>
 			</subsection>
+			<subsection name="Fault Tolerance">
+				<Item name="R-014" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that recovery from Safe Mode is done through ground telecommand.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-1672</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
 		</GeneralRequirements>
 		<CapabilitiesRequirements>
 		</CapabilitiesRequirements>
@@ -431,6 +453,150 @@
 						</body>
 					</extendedDescription>
 				</Item>
+				<Item name="R-184" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall implement at least the following modes (modes naming only given for illustrative purposes):</text>
+								</run>
+							</paragraph>
+							<itemize>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>OFF</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>STANDBY/SAFE</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>CONFIGURATION</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>OPERATIONAL</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</itemize>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-2774</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>In the OFF mode the instrument is not powered. The Payload will be in OFF mode during launch. Status telemetry ( e.g temperatures measured at the SRPs or at the URPs, as agreed on a case by case basis) will be monitored through the RIU.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The STANDBY/SAFE mode is a safe mode in which the instrument is powered but in a Safe configuration, which can be maintained indefinitely (e.g. main control unit powered but detector assembly off). In this mode the instrument will generate only non-science telemetry. The configuration of the instrument in Safe mode will be unambiguous (i.e. only one defined configuration).</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The CONFIGURATION mode shall be used for required operations to activate the instrument. In this mode science data as well as non-science may be generated, depending on the instrument configuration (e.g. detectors activated or not).</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The OPERATIONAL mode is the mode in which the instrument is fully operative and generates non-science as well as science data</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>For TC packets and TM packets the APID is broken up into a Process ID (PID) [7 bits] and Category ID (Cat) [4 bits]: see </text>
+								</run>
+								<hyperlink reference="NR-28"/>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The ranges and allocations for these will be defined in </text>
+								</run>
+								<hyperlink reference="NR-28"/>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The Process Identifiers (PIDs) are assigned to each instrument in</text>
+								</run>
+								<hyperlink reference="NR-28"/>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-188" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall manage and perform their nominal mode-transitions without needing more than one telecommand.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-2812</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
+			<subsection name="SpaceWire Interface">
+				<Item name="R-225" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall establish a connection on the S/C SpaceWire link after power ON.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3014</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text></text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
 			</subsection>
 		</SystemInterfaceRequirements>
 		<AdaptationMissionizationRequirements>
@@ -453,7 +619,7 @@
 						<body>
 							<paragraph>
 								<run>
-									<text>EIDA-333</text>
+									<text>EIDA-3333</text>
 								</run>
 							</paragraph>
 						</body>
@@ -486,6 +652,26 @@
 							<paragraph>
 								<run>
 									<text>EIDA-3074</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-260" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that internal safety logic are implemented to prevent inadvertent commanding of mode transitions, in case forbidden mode transitions are identified</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3075</text>
 								</run>
 							</paragraph>
 						</body>
@@ -535,6 +721,86 @@
 						</body>
 					</extendedDescription>
 				</Item>
+				<Item name="R-266" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall identify instrument modes in terms of both hardware and software</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3086</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-269" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that telemetry provides unambiguous identification of the modes in periodic HK telemetry and mode transitions in event telemetry.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3089</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-270" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall ensure that after power-up, each instrument have a safe and welldefined initial mode that is fully reproducible.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3090</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="R-278" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall report in instrument HK telemetry all the mode transitions and reason of them</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3106</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
 			</subsection>
 		</SafetyRequirements>
 		<ReliabilityAvailabilityRequirements>
@@ -572,6 +838,32 @@
 			</subsection>
 		</SoftwareOperationsRequirements>
 		<SoftwareMaintenanceRequirements>
+			<subsection name="Payload On-Board Software Maintenance">
+				<Item name="R-375" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The PI shall comply with the requirements specified in the Solar Orbiter Operation Requirements Document </text>
+								</run>
+								<hyperlink reference="NR-27"/>
+								<run>
+									<text> for Onboard Processors and Software (Section 2.3.2); Memory Management Service (Section 3.7) and referenced documents therein.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>EIDA-3406</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+			</subsection>
 		</SoftwareMaintenanceRequirements>
 		<SystemSoftwareObservabilityRequirements>
 		</SystemSoftwareObservabilityRequirements>

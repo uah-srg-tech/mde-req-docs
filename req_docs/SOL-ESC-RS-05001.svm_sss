@@ -89,6 +89,108 @@
 	</GeneralDescription>
 	<SpecificRequirements>
 		<GeneralRequirements>
+			<subsection name="Spacecraft Modes">
+				<Item name="MOD-1" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The spacecraft shall be able to support at least the following modes:</text>
+								</run>
+							</paragraph>
+							<itemize>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>“pre-launch modes” for configuration of the spacecraft for launch and ground testing</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>“operational” modes ensuring the generation of mission products</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>“safe” modes ensuring safety of all spacecraft subsystems and payloads</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</itemize>
+						</body>
+					</description>
+				</Item>
+				<Item name="MOD-2" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The modes of the spacecraft and its payload, subsystems and units shall be clearly identified in terms of both hardware and software.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="MOD-3" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The telemetry shall provide unambiguous identification of the modes and mode transitions.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="MOD-4" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>All modes shall be defined such that, for any logical unit used in this mode, any combination of physical units shall be possible.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="MOD-5" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>Upon starting a mode transition (at spacecraft, subsystem or unit level) the transition shall include configuration of the necessary hardware (e.g. sensors, actuators), activation of a default periodic telemetry configuration, and all the automatic processes (e.g. automatic control of attitude slews) required to achieve the objective of the mode.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="MOD-6" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The spacecraft shall autonomously prevent execution of forbidden mode transitions.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="MOD-7" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>It shall be possible to command the spacecraft or any subsystem or instrument into each of the pre-defined spacecraft modes by means of a single telecommand function (e.g. by initiating a high level OBCP via telecommand).</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+			</subsection>
 		</GeneralRequirements>
 		<CapabilitiesRequirements>
 		</CapabilitiesRequirements>
@@ -109,6 +211,26 @@
 							<paragraph>
 								<run>
 									<text>The level of verification will be specified by the command acknowledgement field.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+				</Item>
+				<Item name="TM-5" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>Telemetry shall always be provided to unambiguously identify the conditions required for execution of all possible configuration dependent telecommands.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>A configuration dependent telecommand is a telecommand, which shall only be executed if a particular subsystem or instrument condition is satisfied.</text>
 								</run>
 							</paragraph>
 						</body>
@@ -144,6 +266,54 @@
 		<DesignRequirements>
 		</DesignRequirements>
 		<SoftwareOperationsRequirements>
+			<subsection name="Onboard Reconfiguration Handling">
+				<Item name="REC-1" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>All onboard reconfigurations shall end with an unambiguously known and observable state of all involved elements (hardware and software).</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="REC-3" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>Telemetry shall be available for the Ground to monitor all stages of an onboard reconfiguration.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+				<Item name="REC-4" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The local reconfiguration of onboard units or the switching between onboard functions shall not affect the status, configuration, or the proper operation of any other unrelated unit or function.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+			</subsection>
+			<subsection name="Onboard Processors and Software">
+				<Item name="PROC-21" validationMethod="Testing">
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The software version shall be reported as part of the event telemetry packet reporting successful boot and in housekeeping telemetry.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+				</Item>
+			</subsection>
 		</SoftwareOperationsRequirements>
 		<SoftwareMaintenanceRequirements>
 		</SoftwareMaintenanceRequirements>

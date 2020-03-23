@@ -1,0 +1,19 @@
+<TCTemplate name="tc_128_4_set_baseline_resets_0_activate" tc="tc_epd_128_4_ack">
+	<Fields>
+		<Field fieldRef="N">
+			<FieldValueRaw value="2"/>
+		</Field>
+		<Field fieldRef="ParameterID">
+			<FieldValueRaw value="0x1300"/>
+		</Field>
+		<Field fieldRef="Expected Value">
+			<FieldValueRaw value="0"/>
+		</Field>
+		<Field fieldRef="ParameterID">
+			<FieldValueRaw value="0x0500"/>
+		</Field>
+		<Field fieldRef="Expected Value">
+			<FieldValueRaw value="0xF0"/>
+		</Field>
+	</Fields>
+</TCTemplate>

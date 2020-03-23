@@ -1,0 +1,7 @@
+<TCTemplate name="tc_128_1_safe" tc="tc_epd_128_1_ack">
+	<Fields>
+		<Field fieldRef="Mode Id">
+			<FieldValueRaw value="1"/>
+		</Field>
+	</Fields>
+</TCTemplate>

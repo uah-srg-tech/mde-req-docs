@@ -1,5 +1,5 @@
 <SVS name="EPD ICU Application Software Functional Tests" id="SO-EPD-ICU-PR-0035" issue="1" revision="3" date="13/7/2016">
-	<parent name="Flight Software Requirements Document" />
+	<parent name="Flight Software Requirements Document"/>
 	<TBCsTBDs>
 		<TBC name="26V TBC" description="Power Supply Voltage (26V)"/>
 		<TBC name="0_5A TBC" description="Power Supply Current (0.5A)"/>
@@ -589,6 +589,86 @@
 	<TestCases>
 		<General>
 		</General>
+		<TestCase name="FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Enable NOMINAL version using a TC (128.4).</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Use a TC (128.1) to force a transition to OPERATIONAL mode.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Check the OPERATIONAL mode is reached in the NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if transition is correctly performed.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<paragraph>
+						<run>
+							<text>ICU is in SAFE mode.</text>
+						</run>
+					</paragraph>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+			</InterfaceDependencies>
+			<ValidatingItem name="DI R-00080"/>
+			<ValidatingItem name="DI R-00140"/>
+			<ValidatingItem name="FU R-00340"/>
+			<ValidatingItem name="IF R-00140"/>
+			<ValidatingItem name="OP R-00010"/>
+			<ValidatingItem name="OP R-00020"/>
+			<ValidatingItem name="OP R-00030"/>
+			<ValidatingItem name="OP R-00040"/>
+			<ValidatingItem name="OP R-00050"/>
+			<ValidatingItem name="OP R-00080"/>
+			<ValidatingItem name="OP R-00160"/>
+		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
 			<Identifier>
 				<body>
@@ -642,6 +722,13 @@
 			<SpecialConstraints>
 			</SpecialConstraints>
 			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200.</text>
+						</run>
+					</paragraph>
+				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="FU R-00390" />
 			<ValidatingItem name="GE R-00010" />
@@ -782,7 +869,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The test is passed if TM (17.2) is received.</text>
+							<text>The test is passed if Service 1 TMs are received.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -887,6 +974,86 @@
 			<ValidatingItem name="IF R-00170" />
 			<ValidatingItem name="IF R-00180" />
 		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Use a TC (128.1) to force a transition to CONFIGURATION mode.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Check the CONFIGURATION mode is reached in the NOMINAL version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if transition is correctly performed.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC-10320.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItem name="DI R-00080"/>
+			<ValidatingItem name="DI R-00140"/>
+			<ValidatingItem name="FU R-00340"/>
+			<ValidatingItem name="IF R-00140"/>
+			<ValidatingItem name="OP R-00010"/>
+			<ValidatingItem name="OP R-00020"/>
+			<ValidatingItem name="OP R-00030"/>
+			<ValidatingItem name="OP R-00040"/>
+			<ValidatingItem name="OP R-00050"/>
+			<ValidatingItem name="OP R-00080"/>
+			<ValidatingItem name="OP R-00160"/>
+		</TestCase>
 		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
 			<Identifier>
 				<body>
@@ -940,6 +1107,13 @@
 			<SpecialConstraints>
 			</SpecialConstraints>
 			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700.</text>
+						</run>
+					</paragraph>
+				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="FU R-00390" />
 			<ValidatingItem name="GE R-00010" />
@@ -1080,7 +1254,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The test is passed if TM (17.2) is received.</text>
+							<text>The test is passed if Service 1 TMs are received.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1185,6 +1359,93 @@
 			<ValidatingItem name="IF R-00170" />
 			<ValidatingItem name="IF R-00180" />
 		</TestCase>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Disable NOMINAL version and enable BASELINE version using a TC (128.4).</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Use a TC (128.3) to reset to CONFIGURATION mode.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Check the CONFIGURATION mode is reached in the BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if transition is correctly performed.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItem name="DI R-00080"/>
+			<ValidatingItem name="DI R-00140"/>
+			<ValidatingItem name="FU R-00340"/>
+			<ValidatingItem name="IF R-00140"/>
+			<ValidatingItem name="OP R-00010"/>
+			<ValidatingItem name="OP R-00020"/>
+			<ValidatingItem name="OP R-00030"/>
+			<ValidatingItem name="OP R-00040"/>
+			<ValidatingItem name="OP R-00050"/>
+			<ValidatingItem name="OP R-00080"/>
+			<ValidatingItem name="OP R-00160"/>
+		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
 			<Identifier>
 				<body>
@@ -1238,6 +1499,13 @@
 			<SpecialConstraints>
 			</SpecialConstraints>
 			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201.</text>
+						</run>
+					</paragraph>
+				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="FU R-00390" />
 			<ValidatingItem name="GE R-00010" />
@@ -1378,7 +1646,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The test is passed if TM (17.2) is received.</text>
+							<text>The test is passed if Service 1 TMs are received.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1483,6 +1751,86 @@
 			<ValidatingItem name="IF R-00170" />
 			<ValidatingItem name="IF R-00180" />
 		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Use a TC (128.1) to force a transition to OPERATIONAL mode.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Check the OPERATIONAL mode is reached in the BASELINE version.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if transition is correctly performed.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in CONFIGURATION mode, BASELINE version.</text>
+						</run>
+					</paragraph>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItem name="DI R-00080"/>
+			<ValidatingItem name="DI R-00140"/>
+			<ValidatingItem name="FU R-00340"/>
+			<ValidatingItem name="IF R-00140"/>
+			<ValidatingItem name="OP R-00010"/>
+			<ValidatingItem name="OP R-00020"/>
+			<ValidatingItem name="OP R-00030"/>
+			<ValidatingItem name="OP R-00040"/>
+			<ValidatingItem name="OP R-00050"/>
+			<ValidatingItem name="OP R-00080"/>
+			<ValidatingItem name="OP R-00160"/>
+		</TestCase>
 		<TestCase name="FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
 			<Identifier>
 				<body>
@@ -1536,6 +1884,13 @@
 			<SpecialConstraints>
 			</SpecialConstraints>
 			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700.</text>
+						</run>
+					</paragraph>
+				</body>
 			</InterfaceDependencies>
 			<ValidatingItem name="FU R-00390" />
 			<ValidatingItem name="GE R-00010" />
@@ -1676,7 +2031,7 @@
 				<body>
 					<paragraph>
 						<run>
-							<text>The test is passed if TM (17.2) is received.</text>
+							<text>The test is passed if Service 1 TMs are received.</text>
 						</run>
 					</paragraph>
 				</body>
@@ -1781,10 +2136,164 @@
 			<ValidatingItem name="IF R-00170" />
 			<ValidatingItem name="IF R-00180" />
 		</TestCase>
+		<TestCase name="FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Use a TC (128.1) to force a transition to SAFE mode.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>Check the SAFE mode is reached.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if transition is correctly performed.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, BASELINE version.</text>
+						</run>
+					</paragraph>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItem name="DI R-00080"/>
+			<ValidatingItem name="DI R-00140"/>
+			<ValidatingItem name="FU R-00340"/>
+			<ValidatingItem name="IF R-00140"/>
+			<ValidatingItem name="OP R-00010"/>
+			<ValidatingItem name="OP R-00020"/>
+			<ValidatingItem name="OP R-00030"/>
+			<ValidatingItem name="OP R-00040"/>
+			<ValidatingItem name="OP R-00050"/>
+			<ValidatingItem name="OP R-00080"/>
+			<ValidatingItem name="OP R-00160"/>
+		</TestCase>
 	</TestCases>
 	<TestProcedures>
 		<General>
 		</General>
+		<TestProcedure name="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<Scenario ref="Scenario 1" />
+			<TestCase ref="FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200"/>
+			<ProcedureSteps>
+				<Step name="Transition Safe to Nominal Operational">
+					<TelecommandSequence>
+						<Telecommand name="Set nominal resets 0 and Activate" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_4_set_nominal_resets_0_activate"/>
+						</Telecommand>
+						<Telecommand name="Transition to Operational" interface="SpW" delay_value="500" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_1_operational"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Boot Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_boot_mode_entry" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Oper Mode entry version 2-2" interface="SpW">
+							<TelemetryData template="tm_5_1_oper_entry">
+								<Field fieldRef="ASW Version">
+									<FieldValueRaw value="2"/>
+								</Field>
+								<Field fieldRef="ASW Subversion">
+									<FieldValueRaw value="2"/>
+								</Field>
+							</TelemetryData>
+						</Telemetry>
+						<Telemetry name="Event STEP off" interface="SpW">
+							<TelemetryData template="tm_5_1_STEP_off" />
+						</Telemetry>
+						<Telemetry name="Event SIS off" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_off" />
+						</Telemetry>
+						<Telemetry name="Event HET-EPT1 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_1_off" />
+						</Telemetry>
+						<Telemetry name="Event HET-EPT2 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_2_off" />
+						</Telemetry>
+						<Telemetry name="Event Readout Ended" interface="SpW">
+							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
 		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
 			<Identifier>
 				<body>
@@ -1837,6 +2346,7 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" />
 			<ProcedureSteps>
+				<PriorActionOverVariable ref="Reset TC counters"/>
 				<Step name="Valid TC both ACK flags">
 					<TelecommandSequence>
 						<Telecommand name="Test Connection both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
@@ -2221,7 +2731,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -2283,7 +2793,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -2304,6 +2814,77 @@
 						</Telemetry>
 						<Telemetry name="Event Oper Mode entry" interface="SpW">
 							<TelemetryData template="tm_5_1_oper_entry" />
+						</Telemetry>
+						<Telemetry name="Event STEP off" interface="SpW">
+							<TelemetryData template="tm_5_1_STEP_off" />
+						</Telemetry>
+						<Telemetry name="Event SIS off" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_off" />
+						</Telemetry>
+						<Telemetry name="Event HET-EPT1 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_1_off" />
+						</Telemetry>
+						<Telemetry name="Event HET-EPT2 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_2_off" />
+						</Telemetry>
+						<Telemetry name="Event Readout Ended" interface="SpW">
+							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<Scenario ref="Scenario 1" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700"/>
+			<ProcedureSteps>
+				<Step name="Transition Nominal Operational to Nominal Configuration">
+					<TelecommandSequence>
+						<Telecommand name="Transition to Configuration" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_1_configuration"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="Event SIS in Safe state" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_in_Safe_state" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Boot Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_boot_mode_entry" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Conf Mode entry version 2-2" interface="SpW">
+							<TelemetryData template="tm_5_1_conf_entry">
+								<Field fieldRef="ASW Version">
+									<FieldValueRaw value="2"/>
+								</Field>
+								<Field fieldRef="ASW Subversion">
+									<FieldValueRaw value="2"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Event STEP off" interface="SpW">
 							<TelemetryData template="tm_5_1_STEP_off" />
@@ -2378,6 +2959,7 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" />
 			<ProcedureSteps>
+				<PriorActionOverVariable ref="Reset TC counters"/>
 				<Step name="Valid TC both ACK flags">
 					<TelecommandSequence>
 						<Telecommand name="Test Connection both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
@@ -2762,7 +3344,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -2824,7 +3406,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -2845,6 +3427,91 @@
 						</Telemetry>
 						<Telemetry name="Event Conf Mode entry" interface="SpW">
 							<TelemetryData template="tm_5_1_conf_entry" />
+						</Telemetry>
+						<Telemetry name="Event STEP off" interface="SpW">
+							<TelemetryData template="tm_5_1_STEP_off" />
+						</Telemetry>
+						<Telemetry name="Event SIS off" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_off" />
+						</Telemetry>
+						<Telemetry name="Event HET-EPT1 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_1_off" />
+						</Telemetry>
+						<Telemetry name="Event HET-EPT2 off" interface="SpW">
+							<TelemetryData template="tm_5_1_HET_EPT_2_off" />
+						</Telemetry>
+						<Telemetry name="Event Readout Ended" interface="SpW">
+							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<Scenario ref="Scenario 1" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201"/>
+			<ProcedureSteps>
+				<Step name="Transition Nominal Configuration to Baseline Configuration">
+					<TelecommandSequence>
+						<Telecommand name="Set baseline resets 0 and Activate" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_4_set_baseline_resets_0_activate"/>
+						</Telecommand>
+						<Telecommand name="Reset" interface="SpW" delay_value="500" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_3" />
+							<TelecommandHeader>
+								<HeaderField fieldRef="ACK">
+									<FieldValueRaw value="9"/>
+								</HeaderField>
+							</TelecommandHeader>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="Event SIS in Safe state" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_in_Safe_state" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Boot Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_boot_mode_entry" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Conf Mode entry version 2-3" interface="SpW">
+							<TelemetryData template="tm_5_1_conf_entry">
+								<Field fieldRef="ASW Version">
+									<FieldValueRaw value="2"/>
+								</Field>
+								<Field fieldRef="ASW Subversion">
+									<FieldValueRaw value="3"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 						<Telemetry name="Event STEP off" interface="SpW">
 							<TelemetryData template="tm_5_1_STEP_off" />
@@ -2919,6 +3586,7 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" />
 			<ProcedureSteps>
+				<PriorActionOverVariable ref="Reset TC counters"/>
 				<Step name="Valid TC both ACK flags">
 					<TelecommandSequence>
 						<Telecommand name="Test Connection both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
@@ -3303,7 +3971,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -3365,7 +4033,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -3401,6 +4069,50 @@
 						</Telemetry>
 						<Telemetry name="Event Readout Ended" interface="SpW">
 							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<Scenario ref="Scenario 1" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700"/>
+			<ProcedureSteps>
+				<Step name="Transition Baseline Configuration to Baseline Operational">
+					<TelecommandSequence>
+						<Telecommand name="Transition to Operational" interface="SpW" delay_value="500" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_1_operational"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="Event Oper Mode entry version 2-3" interface="SpW">
+							<TelemetryData template="tm_5_1_oper_entry">
+								<Field fieldRef="ASW Version">
+									<FieldValueRaw value="2"/>
+								</Field>
+								<Field fieldRef="ASW Subversion">
+									<FieldValueRaw value="3"/>
+								</Field>
+							</TelemetryData>
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
@@ -3460,6 +4172,7 @@
 			<Scenario ref="Scenario 1" />
 			<TestCase ref="FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" />
 			<ProcedureSteps>
+				<PriorActionOverVariable ref="Reset TC counters"/>
 				<Step name="Valid TC both ACK flags">
 					<TelecommandSequence>
 						<Telecommand name="Test Connection both ACK" interface="SpW" delay_value="120" delay_unit="miliseconds">
@@ -3844,7 +4557,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -3906,7 +4619,7 @@
 							</TelecommandHeader>
 						</Telecommand>
 					</TelecommandSequence>
-					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
 						<Telemetry name="Accept ACK" interface="SpW">
 							<TelemetryData template="tm_1_1" />
 						</Telemetry>
@@ -3942,6 +4655,52 @@
 						</Telemetry>
 						<Telemetry name="Event Readout Ended" interface="SpW">
 							<TelemetryData template="tm_5_1_readout_ended" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+		<TestProcedure name="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<Scenario ref="Scenario 1" />
+			<TestCase ref="FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440"/>
+			<ProcedureSteps>
+				<Step name="Transition Baseline Operational to Safe">
+					<TelecommandSequence>
+						<Telecommand name="Transition to Safe" interface="SpW" delay_value="500" delay_unit="miliseconds">
+							<TelecommandData template="tc_128_1_safe"/>
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+						<Telemetry name="Event SIS in Safe state" interface="SpW">
+							<TelemetryData template="tm_5_1_SIS_in_Safe_state" />
+						</Telemetry>
+						<Telemetry name="Event SpW Ready" interface="SpW">
+							<TelemetryData template="tm_5_1_SpW_ready" />
+						</Telemetry>
+						<Telemetry name="Event Boot Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_boot_mode_entry" />
+						</Telemetry>
+						<Telemetry name="Event Safe Mode entry" interface="SpW">
+							<TelemetryData template="tm_5_1_safe_entry" />
 						</Telemetry>
 					</TelemetrySet>
 				</Step>

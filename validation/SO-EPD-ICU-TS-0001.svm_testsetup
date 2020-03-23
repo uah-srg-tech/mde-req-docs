@@ -73,7 +73,7 @@
 		</PacketConfiguration>
 	</PacketConfigurations>
 	<Actions>
-		<Action name="SID100 counter is not increased" type="checking">
+		<Action name="SID100 counter is not increased" type="tmtc_checking">
 			<body>
 				<paragraph>
 					<run>
@@ -82,7 +82,7 @@
 				</paragraph>
 			</body>
 		</Action>
-		<Action name="SID100 counter is increased" type="checking">
+		<Action name="SID100 counter is increased" type="tmtc_checking">
 			<body>
 				<paragraph>
 					<run>
@@ -91,7 +91,7 @@
 				</paragraph>
 			</body>
 		</Action>
-		<Action name="SID0 period is 5 seconds" type="checking">
+		<Action name="SID0 period is 5 seconds" type="tmtc_checking">
 			<body>
 				<paragraph>
 					<run>
@@ -100,7 +100,7 @@
 				</paragraph>
 			</body>
 		</Action>
-		<Action name="SID0 period is 10 seconds" type="checking">
+		<Action name="SID0 period is 10 seconds" type="tmtc_checking">
 			<body>
 				<paragraph>
 					<run>
@@ -110,6 +110,17 @@
 			</body>
 		</Action>
 	</Actions>
+	<ActionsOverVariables>
+		<ActionOverVariable name="Reset variables" type="reset">
+			<body>
+				<paragraph>
+					<run>
+						<text>Reset variables</text>
+					</run>
+				</paragraph>
+			</body>
+		</ActionOverVariable>
+	</ActionsOverVariables>
 	<Scenarios>
 		<Scenario name="Scenario 1" scenario="epd(v1).Scenario 1">
 			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
@@ -124,6 +135,7 @@
 			<Action ref="SID100 counter is increased"/>
 			<Action ref="SID0 period is 5 seconds"/>
 			<Action ref="SID0 period is 10 seconds"/>
+			<ActionOverVariable name="Reset TC counters" ref="Reset variables" scenarioVariable="sequence_number"/>
 			<body>
 				<itemize>
 					<listItem>

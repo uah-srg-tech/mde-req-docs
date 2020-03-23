@@ -501,6 +501,65 @@
           </bodyContent>
         </sectionContent>
       </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Fault Tolerance">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-014"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that recovery from Safe Mode is done through ground telecommand."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-1672"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Capabilities">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
@@ -647,6 +706,269 @@
                 </paragraphContent>
               </paragraph>
             </items>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-184"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall implement at least the following modes (modes naming only given for illustrative purposes):"/>
+                  </paragraphContent>
+                </bodyContent>
+                <bodyContent xsi:type="micobs.doctpl:DItemize">
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="OFF"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="STANDBY/SAFE"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="CONFIGURATION"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="OPERATIONAL"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-2774"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="In the OFF mode the instrument is not powered. The Payload will be in OFF mode during launch. Status telemetry ( e.g temperatures measured at the SRPs or at the URPs, as agreed on a case by case basis) will be monitored through the RIU."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The STANDBY/SAFE mode is a safe mode in which the instrument is powered but in a Safe configuration, which can be maintained indefinitely (e.g. main control unit powered but detector assembly off). In this mode the instrument will generate only non-science telemetry. The configuration of the instrument in Safe mode will be unambiguous (i.e. only one defined configuration)."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The CONFIGURATION mode shall be used for required operations to activate the instrument. In this mode science data as well as non-science may be generated, depending on the instrument configuration (e.g. detectors activated or not)."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The OPERATIONAL mode is the mode in which the instrument is fully operative and generates non-science as well as science data"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="For TC packets and TM packets the APID is broken up into a Process ID (PID) [7 bits] and Category ID (Cat) [4 bits]: see "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.1/@bodyContent.0">
+              <run italics="true">
+                <text content="NR-28"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The ranges and allocations for these will be defined in "/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.1/@bodyContent.0">
+              <run italics="true">
+                <text content="NR-28"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="The Process Identifiers (PIDs) are assigned to each instrument in"/>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.1/@bodyContent.0">
+              <run italics="true">
+                <text content="NR-28"/>
+              </run>
+            </paragraphContent>
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-188"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall manage and perform their nominal mode-transitions without needing more than one telecommand."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-2812"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="SpaceWire Interface">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-225"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall establish a connection on the S/C SpaceWire link after power ON."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3014"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text/>
+            </paragraphContent>
           </bodyContent>
         </sectionContent>
       </sectionContent>
@@ -806,6 +1128,61 @@
               <cells>
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-260"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that internal safety logic are implemented to prevent inadvertent commanding of mode transitions, in case forbidden mode transitions are identified"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3075"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                     <text content="R-261"/>
                   </paragraphContent>
                 </bodyContent>
@@ -912,6 +1289,226 @@
               <text content="EIDA-3038"/>
             </paragraphContent>
           </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-266"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall identify instrument modes in terms of both hardware and software"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3086"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-269"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that telemetry provides unambiguous identification of the modes in periodic HK telemetry and mode transitions in event telemetry."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3089"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-270"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall ensure that after power-up, each instrument have a safe and welldefined initial mode that is fully reproducible."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3090"/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-278"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall report in instrument HK telemetry all the mode transitions and reason of them"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3106"/>
+            </paragraphContent>
+          </bodyContent>
         </sectionContent>
       </sectionContent>
     </sectionContent>
@@ -993,9 +1590,143 @@
           </bodyContent>
         </sectionContent>
       </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Mission Operations">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-3333"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall comply with the relevant requirements specified in the Solar Orbiter Operation Requirements Document "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-27"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content=" on Spacecraft Control (Section 2.1) and referenced documents therein."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintenance">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Payload On-Board Software Maintenance">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="R-188"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The PI shall comply with the requirements specified in the Solar Orbiter Operation Requirements Document "/>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
+                    <run italics="true">
+                      <text content="NR-27"/>
+                    </run>
+                  </paragraphContent>
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content=" for Onboard Processors and Software (Section 2.3.2); Memory Management Service (Section 3.7) and referenced documents therein."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="EIDA-3406"/>
+            </paragraphContent>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="System Software Observability">
       <sectionContent xsi:type="micobs.doc:DDBody"/>

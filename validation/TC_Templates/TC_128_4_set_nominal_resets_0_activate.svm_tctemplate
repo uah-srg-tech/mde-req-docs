@@ -1,0 +1,19 @@
+<TCTemplate name="tc_128_4_set_nominal_resets_0_activate" tc="tc_epd_128_4_ack">
+	<Fields>
+		<Field fieldRef="N">
+			<FieldValueRaw value="2"/>
+		</Field>
+		<Field fieldRef="ParameterID">
+			<FieldValueRaw value="0x1400"/>
+		</Field>
+		<Field fieldRef="Expected Value">
+			<FieldValueRaw value="0"/>
+		</Field>
+		<Field fieldRef="ParameterID">
+			<FieldValueRaw value="0x0500"/>
+		</Field>
+		<Field fieldRef="Expected Value">
+			<FieldValueRaw value="0x0F"/>
+		</Field>
+	</Fields>
+</TCTemplate>

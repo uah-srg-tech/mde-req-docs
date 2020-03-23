@@ -5,10 +5,13 @@
 		<scenarioRef href="GSS_ENV/epd.xmi#//@scenario.0"/>
 	</Scenario>
 	<Tests>
+		<TestCase name="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200.xmi#/"/>
+		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" prevAction="reset" prevActionParam="0">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
@@ -17,10 +20,13 @@
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320.xmi#/"/>
 		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700.xmi#/"/>
+		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" prevAction="reset" prevActionParam="0">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
@@ -29,10 +35,13 @@
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920.xmi#/"/>
 		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201.xmi#/"/>
+		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" prevAction="reset" prevActionParam="0">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
@@ -41,10 +50,13 @@
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420.xmi#/"/>
 		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700.xmi#/"/>
+		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" prevAction="reset" prevActionParam="0">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">
@@ -52,6 +64,9 @@
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920.xmi#/"/>
+		</TestCase>
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440.xmi#/"/>
 		</TestCase>
 	</Tests>
 </gss:GSSCampaignCampaign>

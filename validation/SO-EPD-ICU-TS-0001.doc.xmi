@@ -208,7 +208,7 @@
           <text content="SID100 counter is not increased"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content=". Type: checking"/>
+          <text content=". Type: TMTC checking"/>
         </paragraphContent>
       </bodyContent>
       <bodyContent xsi:type="micobs.doctpl:DParagraph">
@@ -223,7 +223,7 @@
           <text content="SID100 counter is increased"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content=". Type: checking"/>
+          <text content=". Type: TMTC checking"/>
         </paragraphContent>
       </bodyContent>
       <bodyContent xsi:type="micobs.doctpl:DParagraph">
@@ -238,7 +238,7 @@
           <text content="SID0 period is 5 seconds"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content=". Type: checking"/>
+          <text content=". Type: TMTC checking"/>
         </paragraphContent>
       </bodyContent>
       <bodyContent xsi:type="micobs.doctpl:DParagraph">
@@ -253,12 +253,29 @@
           <text content="SID0 period is 10 seconds"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content=". Type: checking"/>
+          <text content=". Type: TMTC checking"/>
         </paragraphContent>
       </bodyContent>
       <bodyContent xsi:type="micobs.doctpl:DParagraph">
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="Check TM(3.25) HK SID 0 period is 10 seconds for 30 seconds"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+  </section>
+  <section name="Actions over variables">
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+          <text content="Reset variables"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=". Type: reset"/>
+        </paragraphContent>
+      </bodyContent>
+      <bodyContent xsi:type="micobs.doctpl:DParagraph">
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="Reset variables"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -301,7 +318,7 @@
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content=") connected to GSS Host Unit."/>
               </paragraphContent>
-              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.6/@sectionContent.1/@bodyContent.0">
+              <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.7/@sectionContent.1/@bodyContent.0">
                 <run bold="true" italics="true">
                   <text content="Star-Dundee SpaceWire-USB Brick TBD"/>
                 </run>
@@ -477,6 +494,29 @@
             <paragraph>
               <paragraphContent xsi:type="micobs.doctpl:DRun">
                 <text content="SID0 period is 10 seconds"/>
+              </paragraphContent>
+            </paragraph>
+          </items>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Supported actions over variables: "/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DItemize">
+          <items>
+            <paragraph>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content="Reset TC counters: "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="Reset variables"/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <text content=" over "/>
+              </paragraphContent>
+              <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+                <text content="sequence_number"/>
               </paragraphContent>
             </paragraph>
           </items>

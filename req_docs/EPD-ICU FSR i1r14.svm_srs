@@ -2,8 +2,11 @@
 	<parent document="EID-A">
 		<notApplicableItem item="R-006"/>
 		<notApplicableItem item="R-007"/>
+		<notApplicableItem item="R-270"/>
 	</parent>
-	<parent document="Solar Orbiter Operations Requirements Document"/>
+	<parent document="Solar Orbiter Operations Requirements Document">
+		<notApplicableItem item="MOD-4"/>
+	</parent>
 	<Introduction>
 		<subsection name="Scope">
 			<body>
@@ -1401,6 +1404,23 @@
 					<parentItem name="TM-4" />
 					<parentItem name="R-366" />
 				</Item>
+				<Item name="FU R-00340" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall establish a connection on the S/C SpaceWire link after power ON.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="R-225" />
+				</Item>
 				<Item name="FU R-00390" validationMethod="Testing">
 					<mode name="Safe" />
 					<mode name="Configuration" />
@@ -1471,6 +1491,24 @@
 		</PerformanceRequirements>
 		<InterfaceRequirements>
 			<subsection name="Common software requirements">
+				<Item name="IF R-00140" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall manage the EPD status in order to ensure that it is possible for the telemetry to provide the unambiguous identification of the conditions required for execution of all possible configuration dependent telecommands. The information included in the EPD status is the current ICUSW mode and the current version and subversion of the application software. </text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="TM-5" />
+					<parentItem name="R-366" />
+				</Item>
 				<Item name="IF R-00150" validationMethod="Testing">
 					<mode name="Safe" />
 					<mode name="Configuration" />
@@ -1648,6 +1686,253 @@
 		<OperationalRequirements>
 		</OperationalRequirements>
 		<ResourcesRequirements>
+			<subsection name="Common requirements">
+				<Item name="OP R-00010" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall be able to support the following modes:</text>
+								</run>
+							</paragraph>
+							<itemize>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>OFF: The ICU is not powered.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>BOOT: The ICU is just switched on. In this mode the ICU hardware and the application software images stored in EEPROM are checked. This mode is in charge of the deployment of the application software image if it is not damaged. If all the application software images are damaged, the ICUSW will go to SAFE mode until the images had been repaired. If any application software image is usable, the control will be passed to it. In BOOT mode the boot software is running on the ICU.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>SAFE: is a mode in which EPD is powered but in a safe configuration, which can be maintained indefinitely (e.g. main control unit powered but sensors are off). In this mode EPD will generate only non-science telemetry. The configuration of the instrument in SAFE mode will be unambiguous (i.e. only one defined configuration). In this mode the boot software is running on the ICU.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>CONFIGURATION: this mode shall be used for required operations to activate the instrument. In this mode only non-science may be generated. In this mode the application software is running on the ICU.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>OPERATIONAL: this mode is the mode in which EPD is fully operative and generates non-science as well as science data. In this mode the application software is running on the ICU. The entry in this mode must be notified to the sensors.</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</itemize>							
+						</body>
+					</description>
+					<parentItem name="R-184" />
+					<parentItem name="R-266" />
+					<parentItem name="MOD-1" />
+					<parentItem name="MOD-2" />
+				</Item>
+				<Item name="OP R-00020" validationMethod="Testing">
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The service 3 telemetry generated by the ICUSW shall provide unambiguous identification of the modes. ICUSW mode transitions will be reported as TM(5.1) events.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="R-269" />
+					<parentItem name="MOD-3" />
+					<parentItem name="R-278" />
+				</Item>
+				<Item name="OP R-00030" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>Upon starting a mode transition, the ICUSW shall manage the configuration of the necessary hardware (e.g. sensors, actuators), the activation of a default periodic telemetry configuration, and all the automatic processes required to achieve the objective of the mode.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>For each mode, the hardware and periodic telemetry configuration, as well as their sets of automatic processes is defined in </text>
+								</run>
+								<hyperlink reference="AD7"/>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The telecommands admitted in each mode are defined in the EPD Telemetry and Telecommand Document </text>
+								</run>
+								<hyperlink reference="AD7"/>
+								<run>
+									<text>.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="MOD-5" />
+				</Item>
+				<Item name="OP R-00040" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall implement and internal safety logic to prevent inadvertent commanding of mode transitions, in case forbidden mode transitions are identified.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The valid mode transitions of the ICUSW are:</text>
+								</run>
+							</paragraph>
+							<itemize>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>BOOT TO SAFE This transition is autonomous and it is enabled when the boot software reports that there is not an application image stored in EEPROM that is usable, or any incoherence in the reset counters of the System Data Pool is detected.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>BOOT TO CONFIGURATION. This transition is autonomous and it is enabled when the target mode is CONFIGURATION and the boot software detects that there is an application image stored in EEPROM and deployed in SDRAM that is usable.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>BOOT TO OPERATIONAL. This transition is autonomous and it is enabled when the target mode is OPERATIONAL and the boot software detects that there is an application image stored in EEPROM and deployed in SDRAM that is usable.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>CONFIGURATION TO OPERATIONAL. This transition is triggered by telecommand.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>SAFE TO BOOT. This transition can be triggered by telecommand or autonomously due to an event. It is done by an ICU soft reset.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>CONFIGURATION TO BOOT. This transition can be triggered by telecommand or autonomously due to an event. It is done by an ICU soft reset.</text>
+										</run>
+									</paragraph>
+								</listItem>
+								<listItem>
+									<paragraph>
+										<run>
+											<text>OPERATION TO BOOT. This transition can be triggered by telecommand or autonomously due to an event. It is done by an ICU soft reset.</text>
+										</run>
+									</paragraph>
+								</listItem>
+							</itemize>
+						</body>
+					</description>
+					<parentItem name="R-260" />
+					<parentItem name="MOD-6" />
+				</Item>
+				<Item name="OP R-00050" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall allow to command the EPD into each of the pre-defined modes by means of a telecommand of service 128.1.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="R-188" />
+					<parentItem name="MOD-7" />
+				</Item>
+				<Item name="OP R-00080" validationMethod="Testing">
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>Telemetry shall be available for the Ground to monitor all stages of an EPD reconfiguration managed by the ICUSW.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The telemetries of the services 3, 5 and 128 will be used for this purpose.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="REC-3" />
+					<parentItem name="R-407" />
+				</Item>
+			</subsection>
+			<subsection name="Boot software requirements">
+				<Item name="OP R-00160" validationMethod="Testing">
+					<mode name="Safe" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The ICUSW shall ensure that recovery from SAFE Mode is done through a 128.1 telecommand sent by the Ground.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<parentItem name="R-014" />
+				</Item>
+			</subsection>
 			<subsection name="Application software requirements">
 				<body>
 					<paragraph>
@@ -1724,6 +2009,63 @@
 						</body>
 					</description>
 					<parentItem name="R-366" />
+				</Item>
+				<Item name="DI R-00080" validationMethod="Testing">
+					<mode name="Off" />
+					<mode name="Boot" />
+					<mode name="Safe" />
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>All EPD reconfigurations managed by the ICUSW shall end with an unambiguously known and observable state of all EPD involved elements (hardware and software). The EPD reconfigurations are the possible mode transitions defined in OP R-00040</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>Status information is provided through service 3. Transitions are notified through service 5 events.</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="REC-1" />
+					<parentItem name="REC-4" />
+					<parentItem name="R-407" />
+				</Item>
+				<Item name="DI R-00140" validationMethod="Testing">
+					<mode name="Configuration" />
+					<mode name="Operational" />
+					<description>
+						<body>
+							<paragraph>
+								<run>
+									<text>The application software version and subversion shall be reported as part of the event telemetry packet reporting successful boot.</text>
+								</run>
+							</paragraph>
+						</body>
+					</description>
+					<extendedDescription>
+						<body>
+							<paragraph>
+								<run>
+									<text>The EPD status will store the application software version and subversion that is currently active.</text>
+								</run>
+							</paragraph>
+							<paragraph>
+								<run>
+									<text>The baseline version will be tagged as version 0 and the nominal version will be tagged with a version >=1. The subversion will be tagged from 0 to 255</text>
+								</run>
+							</paragraph>
+						</body>
+					</extendedDescription>
+					<parentItem name="PROC-21" />
+					<parentItem name="R-375" />
 				</Item>
 			</subsection>
 		</DesignRequirements>

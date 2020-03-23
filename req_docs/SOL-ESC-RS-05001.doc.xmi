@@ -184,6 +184,383 @@
   <section name="Specific Requirements">
     <sectionContent xsi:type="micobs.doc:DDSection" name="General">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Spacecraft Modes">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-1"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The spacecraft shall be able to support at least the following modes:"/>
+                  </paragraphContent>
+                </bodyContent>
+                <bodyContent xsi:type="micobs.doctpl:DItemize">
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="“pre-launch modes” for configuration of the spacecraft for launch and ground testing"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="“operational” modes ensuring the generation of mission products"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                  <items>
+                    <paragraph>
+                      <paragraphContent xsi:type="micobs.doctpl:DRun">
+                        <text content="“safe” modes ensuring safety of all spacecraft subsystems and payloads"/>
+                      </paragraphContent>
+                    </paragraph>
+                  </items>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-2"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The modes of the spacecraft and its payload, subsystems and units shall be clearly identified in terms of both hardware and software."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-3"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The telemetry shall provide unambiguous identification of the modes and mode transitions."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-4"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="All modes shall be defined such that, for any logical unit used in this mode, any combination of physical units shall be possible."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-5"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="Upon starting a mode transition (at spacecraft, subsystem or unit level) the transition shall include configuration of the necessary hardware (e.g. sensors, actuators), activation of a default periodic telemetry configuration, and all the automatic processes (e.g. automatic control of attitude slews) required to achieve the objective of the mode."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-6"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The spacecraft shall autonomously prevent execution of forbidden mode transitions."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="MOD-7"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="It shall be possible to command the spacecraft or any subsystem or instrument into each of the pre-defined spacecraft modes by means of a single telecommand function (e.g. by initiating a high level OBCP via telecommand)."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Capabilities">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
@@ -245,6 +622,61 @@
           <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
               <text content="The level of verification will be specified by the command acknowledgement field."/>
+            </paragraphContent>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="TM-5"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="Telemetry shall always be provided to unambiguously identify the conditions required for execution of all possible configuration dependent telecommands."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DParagraph">
+            <paragraphContent xsi:type="micobs.doctpl:DRun">
+              <text content="A configuration dependent telecommand is a telecommand, which shall only be executed if a particular subsystem or instrument condition is satisfied."/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
@@ -327,6 +759,214 @@
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Software Operations">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Onboard Reconfiguration Handling">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="REC-1"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="All onboard reconfigurations shall end with an unambiguously known and observable state of all involved elements (hardware and software)."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="REC-3"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="Telemetry shall be available for the Ground to monitor all stages of an onboard reconfiguration."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="REC-4"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The local reconfiguration of onboard units or the switching between onboard functions shall not affect the status, configuration, or the proper operation of any other unrelated unit or function."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
+      <sectionContent xsi:type="micobs.doc:DDSection" name="Onboard Processors and Software">
+        <sectionContent xsi:type="micobs.doc:DDBody">
+          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
+            <rows>
+              <cells width="20">
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Name"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="PROC-21"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Description"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun">
+                    <text content="The software version shall be reported as part of the event telemetry packet reporting successful boot and in housekeeping telemetry."/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+            <rows>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="Validation Method"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+              <cells>
+                <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                    <text content="T"/>
+                  </paragraphContent>
+                </bodyContent>
+              </cells>
+            </rows>
+          </bodyContent>
+        </sectionContent>
+      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintenance">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
