@@ -95,6 +95,7 @@ mapping doctpl::DRun::GenerateRun() : doctpl::DRun {
 	result.bold := self.bold;
 	result.italics := self.italics;
 	result.underline := self.underline;
+	result.color := self.color;
 	if(self.tab <> null) {
 		result.tab := object DTab {};
 	};
