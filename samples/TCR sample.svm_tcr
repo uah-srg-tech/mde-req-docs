@@ -1,5 +1,5 @@
 <TestCampaignReport name="sample" id="TCR-000" issue="1" revision="0" date="11/03/2020">
-	<VTCRTestReport test_procedure="FT_SOLO_EPD_ICU_BSW_SERV_17-0040" status="Pass">
+	<VTCRTestReport test_procedure="FT_SOLO_EPD_ICU_BSW_SERV_17-0040">
 		<evidence>
 			<run>
 				<text>File: </text>
@@ -26,5 +26,6 @@
 				<text> (line 76).</text>
 			</run>
 		</evidence>
+		<status>Pass</status>
 	</VTCRTestReport>
 </TestCampaignReport>

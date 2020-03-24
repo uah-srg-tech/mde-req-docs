@@ -1,0 +1,130 @@
+<TestCampaignReport name="epd_any_model" id="epd_any_model_3.5" issue="3" revision="5" date="2020/01/29">
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-16_3_NOM_OPER_OK_no_special_print\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:47:45 2020</text>
+			</run>
+			<run>
+				<text> (line 9), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:47:45 2020</text>
+			</run>
+			<run>
+				<text> (line 52).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-16_3_NOM_OPER_OK_no_special_print\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:47:49 2020</text>
+			</run>
+			<run>
+				<text> (line 58), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:47:50 2020</text>
+			</run>
+			<run>
+				<text> (line 312).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-16_3_NOM_OPER_OK_no_special_print\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:47:53 2020</text>
+			</run>
+			<run>
+				<text> (line 318), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:54:19 2020</text>
+			</run>
+			<run>
+				<text> (line 436).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-16_3_NOM_OPER_OK_no_special_print\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:54:23 2020</text>
+			</run>
+			<run>
+				<text> (line 442), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 16 13:58:20 2020</text>
+			</run>
+			<run>
+				<text> (line 826).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+</TestCampaignReport>

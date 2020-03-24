@@ -438,21 +438,26 @@
       <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
           <rows>
-            <cells width="50">
+            <cells width="45">
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                   <text content="SVS Test Case"/>
                 </paragraphContent>
               </bodyContent>
             </cells>
-            <cells width="10">
+            <cells width="15">
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                  <text content="Pass/Fail"/>
+                  <text content="Pass/"/>
+                </paragraphContent>
+              </bodyContent>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="Fail"/>
                 </paragraphContent>
               </bodyContent>
             </cells>
-            <cells width="35">
+            <cells width="40">
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
                 <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                   <text content="Evidence"/>
@@ -470,7 +475,7 @@
             </cells>
             <cells>
               <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
                   <text content="Pass"/>
                 </paragraphContent>
               </bodyContent>
@@ -500,6 +505,40 @@
                 </paragraphContent>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content=" (line 76)."/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DParagraph">
+          <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+            <text content="Tests Not Found"/>
+          </paragraphContent>
+        </bodyContent>
+        <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
+          <rows>
+            <cells>
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
+                  <text content="SRS Item"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Sample Procedure 1"/>
+                </paragraphContent>
+              </bodyContent>
+            </cells>
+          </rows>
+          <rows>
+            <cells width="50">
+              <bodyContent xsi:type="micobs.doctpl:DParagraph">
+                <paragraphContent xsi:type="micobs.doctpl:DRun">
+                  <text content="Sample Procedure 2"/>
                 </paragraphContent>
               </bodyContent>
             </cells>

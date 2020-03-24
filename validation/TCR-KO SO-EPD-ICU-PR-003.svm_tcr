@@ -1,0 +1,1058 @@
+<TestCampaignReport name="epd_any_model" id="epd_any_model_3.5" issue="3" revision="5" date="2020/01/29">
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 13:57:03 2020</text>
+			</run>
+			<run>
+				<text> (line 9), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>canceled</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 13:57:16 2020</text>
+			</run>
+			<run>
+				<text> (line 66).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 14:03:53 2020</text>
+			</run>
+			<run>
+				<text> (line 137), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>canceled</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 14:10:44 2020</text>
+			</run>
+			<run>
+				<text> (line 312).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 14:10:47 2020</text>
+			</run>
+			<run>
+				<text> (line 318), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>ended with 1 filter errors.</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 14:10:58 2020</text>
+			</run>
+			<run>
+				<text> (line 405).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 14:15:20 2020</text>
+			</run>
+			<run>
+				<text> (line 411), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>ended with 3 filter errors.</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 14:17:16 2020</text>
+			</run>
+			<run>
+				<text> (line 586).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:05:16 2020</text>
+			</run>
+			<run>
+				<text> (line 619), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:05:27 2020</text>
+			</run>
+			<run>
+				<text> (line 706).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:05:40 2020</text>
+			</run>
+			<run>
+				<text> (line 712), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:07:35 2020</text>
+			</run>
+			<run>
+				<text> (line 887).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:08:53 2020</text>
+			</run>
+			<run>
+				<text> (line 893), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:08:53 2020</text>
+			</run>
+			<run>
+				<text> (line 936).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:08:58 2020</text>
+			</run>
+			<run>
+				<text> (line 944), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:09:00 2020</text>
+			</run>
+			<run>
+				<text> (line 1198).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:16:23 2020</text>
+			</run>
+			<run>
+				<text> (line 1214), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:27:41 2020</text>
+			</run>
+			<run>
+				<text> (line 2121).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_5_TC_OPER-10320">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:27:44 2020</text>
+			</run>
+			<run>
+				<text> (line 2127), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:31:44 2020</text>
+			</run>
+			<run>
+				<text> (line 2511).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:32:57 2020</text>
+			</run>
+			<run>
+				<text> (line 2517), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>canceled</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:40:02 2020</text>
+			</run>
+			<run>
+				<text> (line 2548).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:49:12 2020</text>
+			</run>
+			<run>
+				<text> (line 2561), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>ended with 1 filter errors.</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:51:11 2020</text>
+			</run>
+			<run>
+				<text> (line 2734).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 16:59:55 2020</text>
+			</run>
+			<run>
+				<text> (line 2747), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>canceled</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:00:06 2020</text>
+			</run>
+			<run>
+				<text> (line 2754).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:00:31 2020</text>
+			</run>
+			<run>
+				<text> (line 2767), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>canceled</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:00:49 2020</text>
+			</run>
+			<run>
+				<text> (line 2798).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:00:56 2020</text>
+			</run>
+			<run>
+				<text> (line 2804), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:01:08 2020</text>
+			</run>
+			<run>
+				<text> (line 2891).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:08:05 2020</text>
+			</run>
+			<run>
+				<text> (line 2897), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:10:01 2020</text>
+			</run>
+			<run>
+				<text> (line 3072).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_OPER_TO_NOM_ASW_CONF-10700">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:12:34 2020</text>
+			</run>
+			<run>
+				<text> (line 3078), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:14:34 2020</text>
+			</run>
+			<run>
+				<text> (line 3251).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:16:53 2020</text>
+			</run>
+			<run>
+				<text> (line 3257), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:16:53 2020</text>
+			</run>
+			<run>
+				<text> (line 3300).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:16:57 2020</text>
+			</run>
+			<run>
+				<text> (line 3308), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:16:59 2020</text>
+			</run>
+			<run>
+				<text> (line 3562).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:17:01 2020</text>
+			</run>
+			<run>
+				<text> (line 3568), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:32:08 2020</text>
+			</run>
+			<run>
+				<text> (line 5375).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_5_TC-10920">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:32:10 2020</text>
+			</run>
+			<run>
+				<text> (line 5381), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:36:10 2020</text>
+			</run>
+			<run>
+				<text> (line 5765).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:37:06 2020</text>
+			</run>
+			<run>
+				<text> (line 5771), </text>
+			</run>
+			<run italics="true" color="red">
+				<text>canceled</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:37:10 2020</text>
+			</run>
+			<run>
+				<text> (line 5811).</text>
+			</run>
+		</evidence>
+		<status>Fail</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_NOM_ASW_CONF_TO_BASE_ASW_CONF-11201">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:46:33 2020</text>
+			</run>
+			<run>
+				<text> (line 5870), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:48:31 2020</text>
+			</run>
+			<run>
+				<text> (line 6071).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:53:03 2020</text>
+			</run>
+			<run>
+				<text> (line 6077), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:53:03 2020</text>
+			</run>
+			<run>
+				<text> (line 6120).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:53:06 2020</text>
+			</run>
+			<run>
+				<text> (line 6128), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:53:08 2020</text>
+			</run>
+			<run>
+				<text> (line 6382).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 17:53:10 2020</text>
+			</run>
+			<run>
+				<text> (line 6388), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:01:15 2020</text>
+			</run>
+			<run>
+				<text> (line 6951).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_5_TC-11420">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:01:18 2020</text>
+			</run>
+			<run>
+				<text> (line 6957), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:14 2020</text>
+			</run>
+			<run>
+				<text> (line 7341).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_BASE_ASW_OPER-11700">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:21 2020</text>
+			</run>
+			<run>
+				<text> (line 7347), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:23 2020</text>
+			</run>
+			<run>
+				<text> (line 7394).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:25 2020</text>
+			</run>
+			<run>
+				<text> (line 7400), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:25 2020</text>
+			</run>
+			<run>
+				<text> (line 7443).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:28 2020</text>
+			</run>
+			<run>
+				<text> (line 7451), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:30 2020</text>
+			</run>
+			<run>
+				<text> (line 7705).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:05:32 2020</text>
+			</run>
+			<run>
+				<text> (line 7711), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:12:14 2020</text>
+			</run>
+			<run>
+				<text> (line 8262).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_5_TC-11920">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:12:16 2020</text>
+			</run>
+			<run>
+				<text> (line 8268), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:16:13 2020</text>
+			</run>
+			<run>
+				<text> (line 8652).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440">
+		<evidence>
+			<run>
+				<text>File: </text>
+			</run>
+			<run italics="true">
+				<text>..\..\2020-03-23_full_manual_with_errors\_001.txt</text>
+			</run>
+			<run>
+				<text>. Test began at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:17:45 2020</text>
+			</run>
+			<run>
+				<text> (line 8658), </text>
+			</run>
+			<run>
+				<text>ended</text>
+			</run>
+			<run>
+				<text> at </text>
+			</run>
+			<run bold="true">
+				<text>Mon Mar 23 18:17:57 2020</text>
+			</run>
+			<run>
+				<text> (line 8745).</text>
+			</run>
+		</evidence>
+		<status>Pass</status>
+	</VTCRTestReport>
+</TestCampaignReport>
