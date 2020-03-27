@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSFilterMintermFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Event_Oper_Mode_entry_version_2-3_app_filter">
     <formatFile href="../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#/"/>
-    <BoolVar id="0" name="RID_5_1_4099" constantType="decimal">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@CSField.1"/>
+    <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="RID_5_1_4099" constantType="decimal">
       <Op type="equal"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@Field.1"/>
       <Value xsi:type="gss:GSSFilterConstant" value="4099"/>
     </BoolVar>
-    <BoolVar id="1" name="ASW Version_2" constantType="decimal">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@CSField.2"/>
+    <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="ASW Version_2" constantType="decimal">
       <Op type="equal"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@Field.2"/>
       <Value xsi:type="gss:GSSFilterConstant" value="2"/>
     </BoolVar>
-    <BoolVar id="2" name="ASW Subversion_3" constantType="decimal">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@CSField.3"/>
+    <BoolVar xsi:type="gss:GSSFilterBoolVar" id="2" name="ASW Subversion_3" constantType="decimal">
       <Op type="equal"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@Field.3"/>
       <Value xsi:type="gss:GSSFilterConstant" value="3"/>
     </BoolVar>
     <Minterm id="0">

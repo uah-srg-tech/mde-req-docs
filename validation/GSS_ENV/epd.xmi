@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSEnvironmentEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/environment" xmlns:gss_1="http://srg.aut.uah.es/gss/filter" name="epd" uri="es.uah.aut.srg.epd" version="v1">
+<gss:GSSEnvironmentEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/environment" xmlns:gss_1="http://srg.aut.uah.es/gss/filter" xmlns:gss_2="http://srg.aut.uah.es/gss/scenario" name="epd" uri="es.uah.aut.srg.epd" version="v1">
   <scenario name="Scenario 1">
     <gss_options>
       <gss_info test_campaign="epd_any_model" version="3.5" date="2020/01/29" version_control_url="http://srg.aut.uah.es/repository/"/>
@@ -109,35 +109,35 @@
       </SpecialPacket>
     </SpecialPackets>
     <PeriodicTCs>
-      <PeriodicTC_level_0 name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
+      <PeriodicTC xsi:type="gss_2:GSSScenarioPeriodicTCLevel0" name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
         <app_to_level0 href="../../ccsds_solo/exports/tc_epd_17_1_export_ack.xmi#/"/>
-      </PeriodicTC_level_0>
+      </PeriodicTC>
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="7" offset="0" size="0" type="tc" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
-        <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="19" offset="0" size="4" type="tm" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="dummy_field" id="2" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="1" level="0" fieldRef="0" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="0" offset="0" size="0" type="tc" ifRef="1"/>
       </GlobalVar>
     </GlobalVars>
     <Monitors>
-      <alarmMsg name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GVFiltered GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.2">
-          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GVFiltered>
-      </alarmMsg>
-      <modify name="IncSequenceNumber" type="increment" value="1">
-        <GVFiltered GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.0"/>
-      </modify>
-      <alarmVal name="TransTo" type="alarm1">
-        <GVFiltered GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.1">
+      <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.0"/>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GVFiltered>
-      </alarmVal>
+        </GV>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.2">
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </GV>
+      </monitor>
     </Monitors>
   </scenario>
   <scenario name="Scenario 2">
@@ -281,35 +281,35 @@
       </SpecialPacket>
     </SpecialPackets>
     <PeriodicTCs>
-      <PeriodicTC_level_0 name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
+      <PeriodicTC xsi:type="gss_2:GSSScenarioPeriodicTCLevel0" name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
         <app_to_level0 href="../../ccsds_solo/exports/tc_epd_17_1_export_ack.xmi#/"/>
-      </PeriodicTC_level_0>
+      </PeriodicTC>
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="7" offset="0" size="0" type="tc" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
-        <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="19" offset="0" size="4" type="tm" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="dummy_field" id="2" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="1" level="0" fieldRef="0" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="0" offset="0" size="0" type="tc" ifRef="1"/>
       </GlobalVar>
     </GlobalVars>
     <Monitors>
-      <alarmMsg name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GVFiltered GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.2">
-          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GVFiltered>
-      </alarmMsg>
-      <modify name="IncSequenceNumber" type="increment" value="1">
-        <GVFiltered GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.0"/>
-      </modify>
-      <alarmVal name="TransTo" type="alarm1">
-        <GVFiltered GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.1">
+      <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.0"/>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GVFiltered>
-      </alarmVal>
+        </GV>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.2">
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </GV>
+      </monitor>
     </Monitors>
   </scenario>
   <scenario name="Scenario 3">
@@ -453,35 +453,35 @@
       </SpecialPacket>
     </SpecialPackets>
     <PeriodicTCs>
-      <PeriodicTC_level_0 name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
+      <PeriodicTC xsi:type="gss_2:GSSScenarioPeriodicTCLevel0" name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
         <app_to_level0 href="../../ccsds_solo/exports/tc_epd_17_1_export_ack.xmi#/"/>
-      </PeriodicTC_level_0>
+      </PeriodicTC>
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="7" offset="0" size="0" type="tc" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
-        <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="19" offset="0" size="4" type="tm" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="dummy_field" id="2" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="1" level="0" fieldRef="0" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="0" offset="0" size="0" type="tc" ifRef="1"/>
       </GlobalVar>
     </GlobalVars>
     <Monitors>
-      <alarmMsg name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GVFiltered GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.2">
-          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GVFiltered>
-      </alarmMsg>
-      <modify name="IncSequenceNumber" type="increment" value="1">
-        <GVFiltered GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.0"/>
-      </modify>
-      <alarmVal name="TransTo" type="alarm1">
-        <GVFiltered GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.1">
+      <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.0"/>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GVFiltered>
-      </alarmVal>
+        </GV>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.2">
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </GV>
+      </monitor>
     </Monitors>
   </scenario>
   <scenario name="Scenario 4">
@@ -593,35 +593,35 @@
       </SpecialPacket>
     </SpecialPackets>
     <PeriodicTCs>
-      <PeriodicTC_level_0 name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
+      <PeriodicTC xsi:type="gss_2:GSSScenarioPeriodicTCLevel0" name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
         <app_to_level0 href="../../ccsds_solo/exports/tc_epd_17_1_export_ack.xmi#/"/>
-      </PeriodicTC_level_0>
+      </PeriodicTC>
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="7" offset="0" size="0" type="tc" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
-        <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="19" offset="0" size="4" type="tm" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="dummy_field" id="2" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="1" level="0" fieldRef="0" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="0" offset="0" size="0" type="tc" ifRef="1"/>
       </GlobalVar>
     </GlobalVars>
     <Monitors>
-      <alarmMsg name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GVFiltered GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.2">
-          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GVFiltered>
-      </alarmMsg>
-      <modify name="IncSequenceNumber" type="increment" value="1">
-        <GVFiltered GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.0"/>
-      </modify>
-      <alarmVal name="TransTo" type="alarm1">
-        <GVFiltered GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.1">
+      <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.0"/>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GVFiltered>
-      </alarmVal>
+        </GV>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.2">
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </GV>
+      </monitor>
     </Monitors>
   </scenario>
   <scenario name="Scenario 5">
@@ -733,35 +733,35 @@
       </SpecialPacket>
     </SpecialPackets>
     <PeriodicTCs>
-      <PeriodicTC_level_0 name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
+      <PeriodicTC xsi:type="gss_2:GSSScenarioPeriodicTCLevel0" name="periodic_test_connection" id="0" ifRef="0" period_value="1500" period_unit="miliseconds">
         <app_to_level0 href="../../ccsds_solo/exports/tc_epd_17_1_export_ack.xmi#/"/>
-      </PeriodicTC_level_0>
+      </PeriodicTC>
     </PeriodicTCs>
     <GlobalVars>
       <GlobalVar name="sequence_number" id="0" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="0" level="0" fieldRef="7" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="7" offset="0" size="0" type="tc" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="enter_mode" id="1" type="uint" initial_value="0">
-        <referenceField type="tm" ifRef="0" level="0" fieldRef="19" offset="0" size="4"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="19" offset="0" size="4" type="tm" ifRef="0"/>
       </GlobalVar>
       <GlobalVar name="dummy_field" id="2" type="uint" initial_value="0">
-        <referenceField type="tc" ifRef="1" level="0" fieldRef="0" offset="0" size="0"/>
+        <reference xsi:type="gss_2:GSSScenarioReferenceField" level="0" fieldRef="0" offset="0" size="0" type="tc" ifRef="1"/>
       </GlobalVar>
     </GlobalVars>
     <Monitors>
-      <alarmMsg name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GVFiltered GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.2">
-          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GVFiltered>
-      </alarmMsg>
-      <modify name="IncSequenceNumber" type="increment" value="1">
-        <GVFiltered GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.0"/>
-      </modify>
-      <alarmVal name="TransTo" type="alarm1">
-        <GVFiltered GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.1">
+      <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.0"/>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GVFiltered>
-      </alarmVal>
+        </GV>
+      </monitor>
+      <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
+        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.2">
+          <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        </GV>
+      </monitor>
     </Monitors>
   </scenario>
 </gss:GSSEnvironmentEnvironment>

@@ -2,11 +2,11 @@
 <gss:GSSExportExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Disable_Event_0x1003_app_export">
     <to href="../../ccsds_solo/tcFormats/tc_epd_5_6.xmi#/"/>
     <settings>
-      <settingFromConst value="1">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/tc_epd_5_6.xmi#//@CSField.0"/>
-      </settingFromConst>
-      <settingAIFromConst value="0x1003" toArrayIndex="0">
-        <toFieldRef href="../../../ccsds_solo/tcFormats/tc_epd_5_6.xmi#//@AIField.0"/>
-      </settingAIFromConst>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="1">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/tc_epd_5_6.xmi#//@Field.1"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingAIFromConst" value="0x1003" toArrayIndex="0">
+        <toFieldRef xsi:type="gss_1:GSSFormatAIField" href="../../../ccsds_solo/tcFormats/tc_epd_5_6.xmi#//@Field.3"/>
+      </setting>
     </settings>
 </gss:GSSExportExport>

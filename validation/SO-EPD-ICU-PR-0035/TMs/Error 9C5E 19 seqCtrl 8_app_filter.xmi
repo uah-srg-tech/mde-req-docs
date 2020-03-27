@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSFilterMintermFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Error_9C5E_19_seqCtrl_8_app_filter">
     <formatFile href="../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#/"/>
-    <BoolVar id="0" name="Error code TM 1,8_40030" constantType="decimal">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@CSField.3"/>
+    <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="Error code TM 1,8_40030" constantType="decimal">
       <Op type="equal"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@Field.3"/>
       <Value xsi:type="gss:GSSFilterConstant" value="40030"/>
     </BoolVar>
-    <BoolVar id="1" name="TC Sequence Control_0xC008" constantType="hex">
-      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@CSField.2"/>
+    <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="TC Sequence Control_0xC008" constantType="hex">
       <Op type="equal"/>
+      <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@Field.2"/>
       <Value xsi:type="gss:GSSFilterConstant" value="0xC008"/>
     </BoolVar>
     <Minterm id="0">

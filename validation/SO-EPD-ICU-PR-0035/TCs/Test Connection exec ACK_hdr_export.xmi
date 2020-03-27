@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSExportExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Test_Connection_exec_ACK_hdr_export">
     <settings>
-      <settingFromConst value="8">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.10"/>
-      </settingFromConst>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.8"/>
-      </settingFromConst>
-      <settingFromConst value="1">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.9"/>
-      </settingFromConst>
-      <settingFromConst value="1">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.2"/>
-      </settingFromConst>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.1"/>
-      </settingFromConst>
-      <settingFromConst value="3">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.5"/>
-      </settingFromConst>
-      <settingFromConst value="0">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.13"/>
-      </settingFromConst>
-      <settingFromConst value="1">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.3"/>
-      </settingFromConst>
-      <settingFromConst value="812">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.4"/>
-      </settingFromConst>
-      <settingFromConst value="17">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.11"/>
-      </settingFromConst>
-      <settingFromConst value="1">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.12"/>
-      </settingFromConst>
-      <settingFromConst value="5">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@CSField.7"/>
-      </settingFromConst>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="8">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.11"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="5">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.8"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="0">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.9"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="1">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.10"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="1">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.3"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="0">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.2"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="3">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.6"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="0">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.14"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="1">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.4"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="812">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.5"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="17">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.12"/>
+      </setting>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="1">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/CCSDS_TC.xmi#//@Field.13"/>
+      </setting>
     </settings>
     <activateDICs>
       <DIC id="0" DICRef="CRC"/>

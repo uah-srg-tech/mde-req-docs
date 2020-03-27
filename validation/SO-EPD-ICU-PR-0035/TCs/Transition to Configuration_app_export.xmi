@@ -2,8 +2,8 @@
 <gss:GSSExportExport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/export" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="Transition_to_Configuration_app_export">
     <to href="../../ccsds_solo/tcFormats/tc_epd_128_1.xmi#/"/>
     <settings>
-      <settingFromConst value="2">
-        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/tc_epd_128_1.xmi#//@CSField.1"/>
-      </settingFromConst>
+      <setting xsi:type="gss:GSSExportSettingFromConst" value="2">
+        <toFieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tcFormats/tc_epd_128_1.xmi#//@Field.1"/>
+      </setting>
     </settings>
 </gss:GSSExportExport>

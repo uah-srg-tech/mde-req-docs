@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_5_1_transition_to" uri="es.uah.aut.srg.tm_epd_5_1_transition_to" version="v1">
   <formatFile href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#/"/>
-  <BoolVar id="0" name="Packet_Type_5" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@CSField.11"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="Packet_Type_5" constantType="decimal">
     <Op type="equal"/>
-    <Constant value="5"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.12"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="5"/>
   </BoolVar>
-  <BoolVar id="1" name="Packet_Subtype_1" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@CSField.12"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="Packet_Subtype_1" constantType="decimal">
     <Op type="equal"/>
-    <Constant value="1"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.13"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="1"/>
   </BoolVar>
-  <BoolVar id="2" name="Source_Data_Safe" constantType="hex">
-    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@VSField.1"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="2" name="Source_Data_Safe" constantType="hex">
     <Op type="equal"/>
-    <Constant value="0x100400" mask="0xFFFF00"/>
+    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.19"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="0x100400" mask="0xFFFF00"/>
   </BoolVar>
-  <BoolVar id="3" name="Source_Data_Config" constantType="hex">
-    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@VSField.1"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="3" name="Source_Data_Config" constantType="hex">
     <Op type="equal"/>
-    <Constant value="0x10020000" mask="0xFFFF0000"/>
+    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.19"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="0x10020000" mask="0xFFFF0000"/>
   </BoolVar>
-  <BoolVar id="4" name="Source_Data_Oper" constantType="hex">
-    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@VSField.1"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="4" name="Source_Data_Oper" constantType="hex">
     <Op type="equal"/>
-    <Constant value="0x10030000" mask="0xFFFF0000"/>
+    <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.19"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="0x10030000" mask="0xFFFF0000"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>
