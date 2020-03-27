@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="dummy_message_1" uri="es.uah.aut.srg.dummy_message_1" version="v1">
+<gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="DUMMY_MESSAGE_1" uri="es.uah.aut.srg.DUMMY_MESSAGE_1" version="v1">
   <formatFile href="DUMMY.xmi#/"/>
-  <BoolVar id="0" name="dummyField1" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="DUMMY.xmi#//@CSField.0"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="dummyField1" constantType="decimal">
     <Op type="equal"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="1"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="DUMMY.xmi#//@Field.0"/>
+    <Value xsi:type="gss:GSSFilterConstant" value="666"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>

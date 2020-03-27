@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="STF_SIS_TMTC" uri="es.uah.aut.srg.STF_SIS_TMTC" version="v1" protocol="STF" type="TC">
-  <CSField name="Sync" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="4" bits="0"/>
-    <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="Length" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="4" bits="0"/>
-  </CSField>
-  <CSField name="SensorPacketID" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="6" bits="0"/>
-  </CSField>
-  <CSField name="TM_Originator" fid="4" pfid="3" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
-    <globalOffset bytes="6" bits="0"/>
-  </CSField>
-  <CSField name="Tag" fid="5" pfid="3" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
-    <globalOffset bytes="7" bits="0"/>
-  </CSField>
-  <VSField name="STF_SIS_TM_TC" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="STF_SIS_TMTC" uri="es.uah.aut.srg.STF_SIS_TMTC" version="v1" protocol="STF" type="TC">
+  <Field xsi:type="gss:GSSFormatVSField" name="STF_SIS_TM_TC" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <constSize bytes="6" bits="0"/>
     <variableSize fidRef="2" unit="bytes"/>
     <maxSize bytes="4122" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </VSField>
-  <VSField name="CCSDSPacket" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="Sync" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="Length" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="4" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="SensorPacketID" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="6" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="TM_Originator" fid="4" pfid="3" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="6" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="Tag" fid="5" pfid="3" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="7" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatVSField" name="CCSDSPacket" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <constSize bytes="-4" bits="0"/>
     <variableSize fidRef="2" unit="bytes"/>
     <maxSize bytes="4112" bits="0"/>
     <globalOffset bytes="8" bits="0"/>
-  </VSField>
-  <FDICField name="Checksum" fid="7" pfid="0" checkType="checksum16" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatFDICField" name="Checksum" fid="7" pfid="0" checkType="checksum16" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <floatingOffset fidRef="6"/>
     <sortedFieldsToCheck>
@@ -40,5 +40,5 @@
       <fieldToCheck fidRef="3"/>
       <fieldToCheck fidRef="6"/>
     </sortedFieldsToCheck>
-  </FDICField>
+  </Field>
 </gss:GSSFormatFormat>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="SPW_TC" uri="es.uah.aut.srg.SPW_TC" version="v1" protocol="spw_tc" type="TC">
-  <CSField name="TC_value" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="SPW_TC" uri="es.uah.aut.srg.SPW_TC" version="v1" protocol="spw_tc" type="TC">
+  <Field xsi:type="gss:GSSFormatCSField" name="TC_value" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>
