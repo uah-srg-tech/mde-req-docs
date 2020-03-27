@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_5_6" uri="es.uah.aut.srg.tc_epd_5_6" version="v1" description="ZID52532: TC 5,6 Disable Event" protocol="EPD_PUS" type="TC">
-  <CSField name="PID00055" description="N RID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
-    <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <VSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_5_6" uri="es.uah.aut.srg.tc_epd_5_6" version="v1" description="ZID52532: TC 5,6 Disable Event" protocol="EPD_PUS" type="TC">
+  <Field xsi:type="gss:GSSFormatVSField" name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <constSize bytes="1" bits="0"/>
     <variableSize fidRef="1" unit="halfword"/>
     <maxSize bytes="235" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </VSField>
-  <AField name="PID00055_block" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00055" description="N RID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatAField" name="PID00055_block" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <arrayDimension fidRef="1" maxItems="117"/>
     <size bytes="2" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
-  </AField>
-  <AIField name="PID00040" description="REPORT ID" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatAIField" name="PID00040" description="REPORT ID" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <arrayRef fidRef="2"/>
     <size bytes="2" bits="0"/>
     <localOffset bytes="0" bits="0"/>
-  </AIField>
+  </Field>
 </gss:GSSFormatFormat>

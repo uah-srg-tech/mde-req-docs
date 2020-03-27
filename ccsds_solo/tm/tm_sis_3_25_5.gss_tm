@@ -16,14 +16,14 @@
 		<Field name="A Start1 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10008"/>
 		<Field name="A Start2 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10009"/>
 		<Field name="A Stop CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10010"/>
-		<Field name="Global 4" gssField="tm_sis_3_25_5(v1).NIDG1003"/>
 		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1014"/>
+		<Field name="Global 4" gssField="tm_sis_3_25_5(v1).NIDG1003"/>
 		<Field name="A PW Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1015" enumRef="CIDT1001TM"/>
 		<Field name="A CFD Pulse Width" gssField="tm_sis_3_25_5(v1).NIDD1016" enumRef="CIDT1002TM"/>
 		<Field name="A TOF Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1017" enumRef="CIDT1001TM"/>
 		<Field name="A CFD Select" gssField="tm_sis_3_25_5(v1).NIDD1018" enumRef="CIDT1003TM"/>
-		<Field name="A Coin End" gssField="tm_sis_3_25_5(v1).NIDD1019"/>
 		<Field name="Global 5" gssField="tm_sis_3_25_5(v1).NIDG1004"/>
+		<Field name="A Coin End" gssField="tm_sis_3_25_5(v1).NIDD1019"/>
 		<Field name="A Coin Begin" gssField="tm_sis_3_25_5(v1).NIDD1020"/>
 		<Field name="A High-gain Energy Req" gssField="tm_sis_3_25_5(v1).NIDD1021" enumRef="CIDT1001TM"/>
 		<Field name="A Low-gain Energy Req" gssField="tm_sis_3_25_5(v1).NIDD1022" enumRef="CIDT1001TM"/>
@@ -36,8 +36,8 @@
 		<Field name="B Start1 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10026"/>
 		<Field name="B Start2 CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10027"/>
 		<Field name="B Stop CFD Thresh" gssField="tm_sis_3_25_5(v1).NID10028"/>
-		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1027"/>
 		<Field name="Global 6" gssField="tm_sis_3_25_5(v1).NIDG1005"/>
+		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1027"/>
 		<Field name="B PW Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1028" enumRef="CIDT1001TM"/>
 		<Field name="B CFD Pulse Width" gssField="tm_sis_3_25_5(v1).NIDD1029" enumRef="CIDT1002TM"/>
 		<Field name="B TOF Multi Enb" gssField="tm_sis_3_25_5(v1).NIDD1030" enumRef="CIDT1001TM"/>
@@ -53,14 +53,14 @@
 		<Field name="B St1-Sp TOF Req" gssField="tm_sis_3_25_5(v1).NIDD1039" enumRef="CIDT1001TM"/>
 		<Field name="B Low-gain Energy Thresh" gssField="tm_sis_3_25_5(v1).NID10042"/>
 		<Field name="B Highgain Energy Thresh" gssField="tm_sis_3_25_5(v1).NID10043"/>
-		<Field name="Global 8" gssField="tm_sis_3_25_5(v1).NIDG1007"/>
 		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1040"/>
+		<Field name="Global 8" gssField="tm_sis_3_25_5(v1).NIDG1007"/>
 		<Field name="Pulse External" gssField="tm_sis_3_25_5(v1).NIDD1041" enumRef="CIDT1001TM"/>
 		<Field name="Pulse Rate" gssField="tm_sis_3_25_5(v1).NIDD1042" enumRef="CIDT1004TM"/>
 		<Field name="Pulse St2-Sp Delay" gssField="tm_sis_3_25_5(v1).NIDD1043"/>
 		<Field name="Pulse St1-St2 Delay" gssField="tm_sis_3_25_5(v1).NIDD1044"/>
-		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1045"/>
 		<Field name="Global 9" gssField="tm_sis_3_25_5(v1).NIDG1008"/>
+		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1045"/>
 		<Field name="B Pulse Energy Enb" gssField="tm_sis_3_25_5(v1).NIDD1046" enumRef="CIDT1005TM"/>
 		<Field name="B Pulse Stop Enb" gssField="tm_sis_3_25_5(v1).NIDD1047" enumRef="CIDT1006TM"/>
 		<Field name="B Pulse Start2 Enb" gssField="tm_sis_3_25_5(v1).NIDD1048" enumRef="CIDT1006TM"/>
@@ -205,8 +205,8 @@
 		<Field name="Integration Time" gssField="tm_sis_3_25_5(v1).NID10187"/>
 		<Field name="Integration Mult. N1" gssField="tm_sis_3_25_5(v1).NID10188"/>
 		<Field name="Integration Mult. N2" gssField="tm_sis_3_25_5(v1).NID10189"/>
-		<Field name="Global 14" gssField="tm_sis_3_25_5(v1).NIDG1013"/>
 		<Field name="A TOFxE Rates TOF" gssField="tm_sis_3_25_5(v1).NIDD1079" enumRef="CIDT1010TM"/>
+		<Field name="Global 14" gssField="tm_sis_3_25_5(v1).NIDG1013"/>
 		<Field name="A He Hist TOF" gssField="tm_sis_3_25_5(v1).NIDD1080" enumRef="CIDT1010TM"/>
 		<Field name="B TOFxE Rates TOF" gssField="tm_sis_3_25_5(v1).NIDD1081" enumRef="CIDT1010TM"/>
 		<Field name="B He Hist TOF" gssField="tm_sis_3_25_5(v1).NIDD1082" enumRef="CIDT1010TM"/>
@@ -219,8 +219,8 @@
 		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1087"/>
 		<Field name="B Iris Step" gssField="tm_sis_3_25_5(v1).NIDD1088"/>
 		<Field name="LUT Checksum" gssField="tm_sis_3_25_5(v1).NID10200"/>
-		<Field name="Global 20" gssField="tm_sis_3_25_5(v1).NIDG1019"/>
 		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1099" enumRef="CIDT1023TM"/>
+		<Field name="Global 20" gssField="tm_sis_3_25_5(v1).NIDG1019"/>
 		<Field name="Event Board Heater" gssField="tm_sis_3_25_5(v1).NIDD1100" enumRef="CIDT1021TM"/>
 		<Field name="Reserved" gssField="tm_sis_3_25_5(v1).NIDD1101" enumRef="CIDT1017TM"/>
 		<Field name="LVPS Heater 2" gssField="tm_sis_3_25_5(v1).NIDD1102" enumRef="CIDT1022TM"/>

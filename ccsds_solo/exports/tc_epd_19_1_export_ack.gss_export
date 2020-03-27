@@ -10,6 +10,10 @@ GSSExportExport tc_epd_19_1_export_ack {
 			toFieldRef := Application_Data;
 		};
 		GSSExportSettingFromConst {
+			value := 9;
+			toFieldRef := Packet_Length;
+		};
+		GSSExportSettingFromConst {
 			value := 0;
 			toFieldRef := CCSDS_SHF;
 		};
@@ -52,10 +56,6 @@ GSSExportExport tc_epd_19_1_export_ack {
 		GSSExportSettingFromConst {
 			value := 9;
 			toFieldRef := ACK;
-		};
-		GSSExportSettingFromConst {
-			value := 9;
-			toFieldRef := Packet_Length;
 		};
 	};
 	GSSExportActivateDICs {

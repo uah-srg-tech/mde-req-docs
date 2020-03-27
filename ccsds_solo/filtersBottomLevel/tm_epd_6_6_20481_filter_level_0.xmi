@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_6_6_20481_filter_level_0" uri="es.uah.aut.srg.tm_epd_6_6_20481_filter_level_0" version="v1" description="TM 6.6 Dump PROM">
   <formatFile href="../tmFormats/CCSDS_TM.xmi#/"/>
-  <BoolVar id="0" name="Application_Process_ID_889" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.4"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="Application_Process_ID_889" constantType="decimal">
     <Op type="equal"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@Field.5"/>
     <Value xsi:type="gss:GSSFilterConstant" value="889"/>
   </BoolVar>
-  <BoolVar id="1" name="Packet_Type_6" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.11"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="Packet_Type_6" constantType="decimal">
     <Op type="equal"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@Field.12"/>
     <Value xsi:type="gss:GSSFilterConstant" value="6"/>
   </BoolVar>
-  <BoolVar id="2" name="Packet_Subtype_6" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@CSField.12"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="2" name="Packet_Subtype_6" constantType="decimal">
     <Op type="equal"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@Field.13"/>
     <Value xsi:type="gss:GSSFilterConstant" value="6"/>
   </BoolVar>
   <Minterm id="0">

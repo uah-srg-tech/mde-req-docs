@@ -3,8 +3,8 @@
 	<level1_filter file="tm_epd_21_5_132_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_epd_21_5_132_filter_level_0(v1)"/>
-	<PI1 name="SDID" val="132" gssField="tm_epd_21_5_132(v1).NID00142"/>
 	<fields>
+		<Field name="SDID" gssField="tm_epd_21_5_132(v1).NID00142"/>
 		<Field name="N_Data" gssField="tm_epd_21_5_132(v1).NID00143"/>
 		<Field name="NID00143_block" gssField="tm_epd_21_5_132(v1).NID00143_block"/>
 		<Field name="Science_Data" gssField="tm_epd_21_5_132(v1).NID00144"/>

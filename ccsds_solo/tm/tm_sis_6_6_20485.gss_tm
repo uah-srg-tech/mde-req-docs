@@ -3,8 +3,8 @@
 	<level1_filter file="tm_sis_6_6_20485_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_6_6_20485_filter_level_0(v1)"/>
-	<PI1 name="Memory ID" val="20485" gssField="tm_sis_6_6_20485(v1).NID10230"/>
 	<fields>
+		<Field name="Memory ID" gssField="tm_sis_6_6_20485(v1).NID10230"/>
 		<Field name="Address" gssField="tm_sis_6_6_20485(v1).NID10231"/>
 		<Field name="Length" gssField="tm_sis_6_6_20485(v1).NID10232"/>
 		<Field name="NID10232_block" gssField="tm_sis_6_6_20485(v1).NID10232_block"/>

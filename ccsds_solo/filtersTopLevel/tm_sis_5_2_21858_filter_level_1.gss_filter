@@ -3,7 +3,7 @@ GSSFilterMintermFilter tm_sis_5_2_21858_filter_level_1 {
 	uri := es.uah.aut.srg.tm_sis_5_2_21858_filter_level_1;
 	version := v1;
 	formatFile := tm_sis_5_2_21858(v1);
-	
+
 	GSSFilterBoolVar {
 		id := 0;
 		name := NID10245_21858;

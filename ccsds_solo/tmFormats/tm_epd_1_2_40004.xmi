@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_1_2_40004" uri="es.uah.aut.srg.tm_epd_1_2_40004" version="v1" description="YID52033: TM 1,2 Wrong Subtype" protocol="EPD_PUS" type="TM">
-  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_1_2_40004" uri="es.uah.aut.srg.tm_epd_1_2_40004" version="v1" description="YID52033: TM 1,2 Wrong Subtype" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatCSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="6" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00001" description="TC ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00001" description="TC ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00002" description="TC Sequence Control" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00002" description="TC Sequence Control" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="2" bits="0"/>
-  </CSField>
-  <CSField name="NID00003" description="Error Code TM 1,2" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00003" description="Error Code TM 1,2" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="4" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

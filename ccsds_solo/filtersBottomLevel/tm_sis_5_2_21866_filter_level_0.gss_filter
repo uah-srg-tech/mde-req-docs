@@ -3,7 +3,7 @@ GSSFilterMintermFilter tm_sis_5_2_21866_filter_level_0 {
 	uri := es.uah.aut.srg.tm_sis_5_2_21866_filter_level_0;
 	version := v1;
 	formatFile := CCSDS_TM(v1);
-	
+
 	GSSFilterBoolVar {
 		id := 0;
 		name := Application_Process_ID_871;

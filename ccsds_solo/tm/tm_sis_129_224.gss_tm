@@ -3,8 +3,8 @@
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_129_224_filter_level_0(v1)"/>
 	<fields>
-		<Field name="Global 19" gssField="tm_sis_129_224(v1).NIDG1018"/>
 		<Field name="Macro?" gssField="tm_sis_129_224(v1).NIDD1097" enumRef="CIDT1020TM"/>
+		<Field name="Global 19" gssField="tm_sis_129_224(v1).NIDG1018"/>
 		<Field name="Result" gssField="tm_sis_129_224(v1).NIDD1098"/>
 		<Field name="Opcode" gssField="tm_sis_129_224(v1).NID10250"/>
 		<Field name="Arguments" gssField="tm_sis_129_224(v1).NID10251"/>

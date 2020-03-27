@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_6_9" uri="es.uah.aut.srg.tc_epd_6_9" version="v1" description="ZID52502: TC 6,9 memory check" protocol="EPD_PUS" type="TC">
-  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_6_9" uri="es.uah.aut.srg.tc_epd_6_9" version="v1" description="ZID52502: TC 6,9 memory check" protocol="EPD_PUS" type="TC">
+  <Field xsi:type="gss:GSSFormatCSField" name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="10" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="PID00001" description="Mem Id" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00001" description="Mem Id" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="PID00002" description="Start Address" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00002" description="Start Address" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="2" bits="0"/>
-  </CSField>
-  <CSField name="PID00003" description="Number of Bytes" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00003" description="Number of Bytes" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="6" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

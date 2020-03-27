@@ -3,7 +3,7 @@ GSSFilterMintermFilter tm_epd_5_4_17152_filter_level_1 {
 	uri := es.uah.aut.srg.tm_epd_5_4_17152_filter_level_1;
 	version := v1;
 	formatFile := tm_epd_5_4_17152(v1);
-	
+
 	GSSFilterBoolVar {
 		id := 0;
 		name := NID00054_17152;

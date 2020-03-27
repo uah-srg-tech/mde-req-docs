@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_6_6_20485" uri="es.uah.aut.srg.tm_sis_6_6_20485" version="v1" description="YID52853: 6,6 Memory Dump Report" protocol="EPD_PUS" type="TM">
-  <CSField name="NID10230" description="Memory ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID10231" description="Address" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="4" bits="0"/>
-    <globalOffset bytes="2" bits="0"/>
-  </CSField>
-  <CSField name="NID10232" description="Length" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="4" bits="0"/>
-    <globalOffset bytes="6" bits="0"/>
-  </CSField>
-  <VSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_6_6_20485" uri="es.uah.aut.srg.tm_sis_6_6_20485" version="v1" description="YID52853: 6,6 Memory Dump Report" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatVSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <constSize bytes="10" bits="0"/>
     <variableSize fidRef="3" unit="bytes"/>
     <maxSize bytes="4096" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </VSField>
-  <AField name="NID10232_block" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10230" description="Memory ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="0" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10231" description="Address" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="2" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10232" description="Length" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="4" bits="0"/>
+    <globalOffset bytes="6" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatAField" name="NID10232_block" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <arrayDimension fidRef="3" maxItems="4086"/>
     <size bytes="1" bits="0"/>
     <globalOffset bytes="10" bits="0"/>
-  </AField>
-  <AIField name="NID10233" description="Data" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatAIField" name="NID10233" description="Data" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <arrayRef fidRef="4"/>
     <size bytes="1" bits="0"/>
     <localOffset bytes="0" bits="0"/>
-  </AIField>
+  </Field>
 </gss:GSSFormatFormat>

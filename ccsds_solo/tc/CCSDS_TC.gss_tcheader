@@ -28,7 +28,7 @@
 		<HeaderField name="Source_ID" gssHeaderField="CCSDS_TC(v1).Source_ID">
 			<FieldValueRaw value="0"/>
 		</HeaderField>
-		<HeaderField name="Application_Data" gssHeaderField="CCSDS_TC(v1).CCSDS_Packet"/>
+		<HeaderField name="Application_Data" gssHeaderField="CCSDS_TC(v1).Application_Data"/>
 		<HeaderField name="CRC" gssHeaderField="CCSDS_TC(v1).CRC"/>
 	</fields>
 </GSSTCHeader>

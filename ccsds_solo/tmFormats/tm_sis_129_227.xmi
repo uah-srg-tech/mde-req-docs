@@ -1,351 +1,351 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_129_227" uri="es.uah.aut.srg.tm_sis_129_227" version="v1" description="YID52859: 129,227 Monitor Limits" protocol="EPD_PUS" type="TM">
-  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_129_227" uri="es.uah.aut.srg.tm_sis_129_227" version="v1" description="YID52859: 129,227 Monitor Limits" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatCSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="86" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID10326" description="+1.5V Voltage Low Limit" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10326" description="+1.5V Voltage Low Limit" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID10327" description="+1.5V Voltage High Limit" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10327" description="+1.5V Voltage High Limit" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
-  </CSField>
-  <CSField name="NID10328" description="+1.5V Current Low Limit" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10328" description="+1.5V Current Low Limit" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="2" bits="0"/>
-  </CSField>
-  <CSField name="NID10329" description="+1.5V Current High Limit" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10329" description="+1.5V Current High Limit" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="3" bits="0"/>
-  </CSField>
-  <CSField name="NID10330" description="+2.5V Voltage Low Limit" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10330" description="+2.5V Voltage Low Limit" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="4" bits="0"/>
-  </CSField>
-  <CSField name="NID10331" description="+2.5V Voltage High Limit" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10331" description="+2.5V Voltage High Limit" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="5" bits="0"/>
-  </CSField>
-  <CSField name="NID10332" description="+2.5V Current Low Limit" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10332" description="+2.5V Current Low Limit" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="6" bits="0"/>
-  </CSField>
-  <CSField name="NID10333" description="+2.5V Current High Limit" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10333" description="+2.5V Current High Limit" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="7" bits="0"/>
-  </CSField>
-  <CSField name="NID10334" description="+3.3V Voltage Low Limit" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10334" description="+3.3V Voltage Low Limit" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="8" bits="0"/>
-  </CSField>
-  <CSField name="NID10335" description="+3.3V Voltage High Limit" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10335" description="+3.3V Voltage High Limit" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="9" bits="0"/>
-  </CSField>
-  <CSField name="NID10336" description="+3.3V Current Low Limit" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10336" description="+3.3V Current Low Limit" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="10" bits="0"/>
-  </CSField>
-  <CSField name="NID10337" description="+3.3V Current High Limit" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10337" description="+3.3V Current High Limit" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="11" bits="0"/>
-  </CSField>
-  <CSField name="NID10338" description="-6V Voltage Low Limit" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10338" description="-6V Voltage Low Limit" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="12" bits="0"/>
-  </CSField>
-  <CSField name="NID10339" description="-6V Voltage High Limit" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10339" description="-6V Voltage High Limit" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="13" bits="0"/>
-  </CSField>
-  <CSField name="NID10340" description="+6V Voltage Low Limit" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10340" description="+6V Voltage Low Limit" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="14" bits="0"/>
-  </CSField>
-  <CSField name="NID10341" description="+6V Voltage High Limit" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10341" description="+6V Voltage High Limit" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="15" bits="0"/>
-  </CSField>
-  <CSField name="NID10342" description="A TOF +3.3V V Low Limit" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10342" description="A TOF +3.3V V Low Limit" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="16" bits="0"/>
-  </CSField>
-  <CSField name="NID10343" description="A TOF +3.3V V High Limit" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10343" description="A TOF +3.3V V High Limit" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="17" bits="0"/>
-  </CSField>
-  <CSField name="NID10344" description="B TOF +3.3V V Low Limit" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10344" description="B TOF +3.3V V Low Limit" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="18" bits="0"/>
-  </CSField>
-  <CSField name="NID10345" description="B TOF +3.3V V High Limit" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10345" description="B TOF +3.3V V High Limit" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="19" bits="0"/>
-  </CSField>
-  <CSField name="NID10346" description="Motor Voltage Low Limit" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10346" description="Motor Voltage Low Limit" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="20" bits="0"/>
-  </CSField>
-  <CSField name="NID10347" description="Motor Voltage High Limit" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10347" description="Motor Voltage High Limit" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="21" bits="0"/>
-  </CSField>
-  <CSField name="NID10348" description="Motor Current Low Limit" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10348" description="Motor Current Low Limit" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="22" bits="0"/>
-  </CSField>
-  <CSField name="NID10349" description="Motor Current High Limit" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10349" description="Motor Current High Limit" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="23" bits="0"/>
-  </CSField>
-  <CSField name="NID10350" description="A TOF Temp Low Limit" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10350" description="A TOF Temp Low Limit" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="24" bits="0"/>
-  </CSField>
-  <CSField name="NID10351" description="A TOF Temp High Limit" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10351" description="A TOF Temp High Limit" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="25" bits="0"/>
-  </CSField>
-  <CSField name="NID10352" description="B TOF Temp Low Limit" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10352" description="B TOF Temp Low Limit" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="26" bits="0"/>
-  </CSField>
-  <CSField name="NID10353" description="B TOF Temp High Limit" fid="28" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10353" description="B TOF Temp High Limit" fid="28" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="27" bits="0"/>
-  </CSField>
-  <CSField name="NID10354" description="A Housing Temp Low Limit" fid="29" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10354" description="A Housing Temp Low Limit" fid="29" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="28" bits="0"/>
-  </CSField>
-  <CSField name="NID10355" description="A Housing Temp Hi Limit" fid="30" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10355" description="A Housing Temp Hi Limit" fid="30" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="29" bits="0"/>
-  </CSField>
-  <CSField name="NID10356" description="A Energy Temp Low Limit" fid="31" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10356" description="A Energy Temp Low Limit" fid="31" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="30" bits="0"/>
-  </CSField>
-  <CSField name="NID10357" description="A Energy Temp High Limit" fid="32" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10357" description="A Energy Temp High Limit" fid="32" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="31" bits="0"/>
-  </CSField>
-  <CSField name="NID10358" description="A Motor Temp Low Limit" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10358" description="A Motor Temp Low Limit" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="32" bits="0"/>
-  </CSField>
-  <CSField name="NID10359" description="A Motor Temp High Limit" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10359" description="A Motor Temp High Limit" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="33" bits="0"/>
-  </CSField>
-  <CSField name="NID10360" description="A Baffle Temp Low Limit" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10360" description="A Baffle Temp Low Limit" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="34" bits="0"/>
-  </CSField>
-  <CSField name="NID10361" description="A Baffle Temp High Limit" fid="36" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10361" description="A Baffle Temp High Limit" fid="36" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="35" bits="0"/>
-  </CSField>
-  <CSField name="NID10362" description="B Housing Temp Low Limit" fid="37" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10362" description="B Housing Temp Low Limit" fid="37" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="36" bits="0"/>
-  </CSField>
-  <CSField name="NID10363" description="B Hous Temp High Limit" fid="38" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10363" description="B Hous Temp High Limit" fid="38" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="37" bits="0"/>
-  </CSField>
-  <CSField name="NID10364" description="B Energy Temp Low Limit" fid="39" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10364" description="B Energy Temp Low Limit" fid="39" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="38" bits="0"/>
-  </CSField>
-  <CSField name="NID10365" description="B Energy Temp High Limit" fid="40" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10365" description="B Energy Temp High Limit" fid="40" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="39" bits="0"/>
-  </CSField>
-  <CSField name="NID10366" description="B Motor Temp Low Limit" fid="41" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10366" description="B Motor Temp Low Limit" fid="41" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="40" bits="0"/>
-  </CSField>
-  <CSField name="NID10367" description="B Motor Temp High Limit" fid="42" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10367" description="B Motor Temp High Limit" fid="42" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="41" bits="0"/>
-  </CSField>
-  <CSField name="NID10368" description="B Baffle Temp Low Limit" fid="43" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10368" description="B Baffle Temp Low Limit" fid="43" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="42" bits="0"/>
-  </CSField>
-  <CSField name="NID10369" description="B Baffle Temp High Limit" fid="44" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10369" description="B Baffle Temp High Limit" fid="44" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="43" bits="0"/>
-  </CSField>
-  <CSField name="NID10370" description="-6V Current Low Limit" fid="45" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10370" description="-6V Current Low Limit" fid="45" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="44" bits="0"/>
-  </CSField>
-  <CSField name="NID10371" description="-6V Current High Limit" fid="46" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10371" description="-6V Current High Limit" fid="46" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="45" bits="0"/>
-  </CSField>
-  <CSField name="NID10372" description="+6V Current Low Limit" fid="47" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10372" description="+6V Current Low Limit" fid="47" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="46" bits="0"/>
-  </CSField>
-  <CSField name="NID10373" description="+6V Current High Limit" fid="48" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10373" description="+6V Current High Limit" fid="48" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="47" bits="0"/>
-  </CSField>
-  <CSField name="NID10374" description="+13V Current Low Limit" fid="49" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10374" description="+13V Current Low Limit" fid="49" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="48" bits="0"/>
-  </CSField>
-  <CSField name="NID10375" description="+13V Current High Limit" fid="50" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10375" description="+13V Current High Limit" fid="50" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="49" bits="0"/>
-  </CSField>
-  <CSField name="NID10376" description="+13V Voltage Low Limit" fid="51" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10376" description="+13V Voltage Low Limit" fid="51" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="50" bits="0"/>
-  </CSField>
-  <CSField name="NID10377" description="+13V Voltage High Limit" fid="52" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10377" description="+13V Voltage High Limit" fid="52" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="51" bits="0"/>
-  </CSField>
-  <CSField name="NID10378" description="SSD BV Power Low Limit" fid="53" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10378" description="SSD BV Power Low Limit" fid="53" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="52" bits="0"/>
-  </CSField>
-  <CSField name="NID10379" description="SSD BV Power High Limit" fid="54" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10379" description="SSD BV Power High Limit" fid="54" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="53" bits="0"/>
-  </CSField>
-  <CSField name="NID10380" description="SSD BV Voltage Low Limit" fid="55" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10380" description="SSD BV Voltage Low Limit" fid="55" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="54" bits="0"/>
-  </CSField>
-  <CSField name="NID10381" description="SSD BV V High Limit" fid="56" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10381" description="SSD BV V High Limit" fid="56" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="55" bits="0"/>
-  </CSField>
-  <CSField name="NID10382" description="LVPS Temp Low Limit" fid="57" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10382" description="LVPS Temp Low Limit" fid="57" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="56" bits="0"/>
-  </CSField>
-  <CSField name="NID10383" description="LVPS Temp High Limit" fid="58" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10383" description="LVPS Temp High Limit" fid="58" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="57" bits="0"/>
-  </CSField>
-  <CSField name="NID10384" description="Primary I Low Limit" fid="59" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10384" description="Primary I Low Limit" fid="59" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="58" bits="0"/>
-  </CSField>
-  <CSField name="NID10385" description="Primary I High Limit" fid="60" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10385" description="Primary I High Limit" fid="60" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="59" bits="0"/>
-  </CSField>
-  <CSField name="NID10386" description="Common HV V Low Limit" fid="61" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10386" description="Common HV V Low Limit" fid="61" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="60" bits="0"/>
-  </CSField>
-  <CSField name="NID10387" description="Common HV V High Limit" fid="62" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10387" description="Common HV V High Limit" fid="62" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="61" bits="0"/>
-  </CSField>
-  <CSField name="NID10388" description="B Start1 MCP HV V Low L" fid="63" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10388" description="B Start1 MCP HV V Low L" fid="63" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="62" bits="0"/>
-  </CSField>
-  <CSField name="NID10389" description="B Start1 MCP HV V High L" fid="64" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10389" description="B Start1 MCP HV V High L" fid="64" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="63" bits="0"/>
-  </CSField>
-  <CSField name="NID10390" description="A Stop MCP HV V Low Lim" fid="65" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10390" description="A Stop MCP HV V Low Lim" fid="65" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="64" bits="0"/>
-  </CSField>
-  <CSField name="NID10391" description="A Stop MCP HV V High Lim" fid="66" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10391" description="A Stop MCP HV V High Lim" fid="66" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="65" bits="0"/>
-  </CSField>
-  <CSField name="NID10392" description="B Start2 MCP HV V Low L" fid="67" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10392" description="B Start2 MCP HV V Low L" fid="67" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="66" bits="0"/>
-  </CSField>
-  <CSField name="NID10393" description="B Start2 MCP HV V High L" fid="68" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10393" description="B Start2 MCP HV V High L" fid="68" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="67" bits="0"/>
-  </CSField>
-  <CSField name="NID10394" description="B Stop MCP HV V Low Lim" fid="69" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10394" description="B Stop MCP HV V Low Lim" fid="69" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="68" bits="0"/>
-  </CSField>
-  <CSField name="NID10395" description="B Stop MCP HV V High Lim" fid="70" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10395" description="B Stop MCP HV V High Lim" fid="70" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="69" bits="0"/>
-  </CSField>
-  <CSField name="NID10396" description="A Start1 MCP HV V Low L" fid="71" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10396" description="A Start1 MCP HV V Low L" fid="71" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="70" bits="0"/>
-  </CSField>
-  <CSField name="NID10397" description="A Start1 MCP HV V High L" fid="72" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10397" description="A Start1 MCP HV V High L" fid="72" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="71" bits="0"/>
-  </CSField>
-  <CSField name="NID10398" description="A Start2 MCP HV V Low L" fid="73" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10398" description="A Start2 MCP HV V Low L" fid="73" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="72" bits="0"/>
-  </CSField>
-  <CSField name="NID10399" description="A Start2 MCP HV V High L" fid="74" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10399" description="A Start2 MCP HV V High L" fid="74" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="73" bits="0"/>
-  </CSField>
-  <CSField name="NID10400" description="B Start1 MCP HV I Low L" fid="75" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10400" description="B Start1 MCP HV I Low L" fid="75" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="74" bits="0"/>
-  </CSField>
-  <CSField name="NID10401" description="B Start1 MCP HV I High L" fid="76" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10401" description="B Start1 MCP HV I High L" fid="76" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="75" bits="0"/>
-  </CSField>
-  <CSField name="NID10402" description="A Stop MCP HV I Low Lim" fid="77" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10402" description="A Stop MCP HV I Low Lim" fid="77" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="76" bits="0"/>
-  </CSField>
-  <CSField name="NID10403" description="A Stop MCP HV I High Lim" fid="78" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10403" description="A Stop MCP HV I High Lim" fid="78" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="77" bits="0"/>
-  </CSField>
-  <CSField name="NID10404" description="B Start2 MCP HV I Low L" fid="79" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10404" description="B Start2 MCP HV I Low L" fid="79" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="78" bits="0"/>
-  </CSField>
-  <CSField name="NID10405" description="B Start2 MCP HV I High L" fid="80" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10405" description="B Start2 MCP HV I High L" fid="80" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="79" bits="0"/>
-  </CSField>
-  <CSField name="NID10406" description="B Stop MCP HV I Low Lim" fid="81" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10406" description="B Stop MCP HV I Low Lim" fid="81" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="80" bits="0"/>
-  </CSField>
-  <CSField name="NID10407" description="B Stop MCP HV I High Lim" fid="82" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10407" description="B Stop MCP HV I High Lim" fid="82" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="81" bits="0"/>
-  </CSField>
-  <CSField name="NID10408" description="A Start1 MCP HV I Low L" fid="83" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10408" description="A Start1 MCP HV I Low L" fid="83" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="82" bits="0"/>
-  </CSField>
-  <CSField name="NID10409" description="A Start1 MCP HV I High L" fid="84" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10409" description="A Start1 MCP HV I High L" fid="84" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="83" bits="0"/>
-  </CSField>
-  <CSField name="NID10410" description="A Start2 MCP HV I Low L" fid="85" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10410" description="A Start2 MCP HV I Low L" fid="85" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="84" bits="0"/>
-  </CSField>
-  <CSField name="NID10411" description="A Start2 MCP HV I High L" fid="86" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10411" description="A Start2 MCP HV I High L" fid="86" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="85" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

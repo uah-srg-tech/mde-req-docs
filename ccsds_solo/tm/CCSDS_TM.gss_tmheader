@@ -26,7 +26,7 @@
 		<HeaderField name="Sync" gssHeaderField="CCSDS_TM(v1).Sync"/>
 		<HeaderField name="Seconds" gssHeaderField="CCSDS_TM(v1).Seconds"/>
 		<HeaderField name="Subseconds" gssHeaderField="CCSDS_TM(v1).Subseconds"/>
-		<HeaderField name="Source_Data" gssHeaderField="CCSDS_TM(v1).CCSDS_Packet"/>
+		<HeaderField name="Source_Data" gssHeaderField="CCSDS_TM(v1).Source_Data"/>
 		<HeaderField name="CRC" gssHeaderField="CCSDS_TM(v1).CRC"/>
 	</fields>
 </GSSTMHeader>

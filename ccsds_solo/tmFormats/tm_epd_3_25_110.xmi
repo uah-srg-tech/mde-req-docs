@@ -1,171 +1,171 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_110" uri="es.uah.aut.srg.tm_epd_3_25_110" version="v1" description="YID52054: TM 3,25 HK SID110 to OBC" protocol="EPD_PUS" type="TM">
-  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_110" uri="es.uah.aut.srg.tm_epd_3_25_110" version="v1" description="YID52054: TM 3,25 HK SID110 to OBC" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatCSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="93" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00030" description="Structure ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00030" description="Structure ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00055" description="EPT-HET1 Status Word 1" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00055" description="EPT-HET1 Status Word 1" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
-  </CSField>
-  <CSField name="NID00119" description="EPT-HET-1 Status Word 2" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00119" description="EPT-HET-1 Status Word 2" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="3" bits="0"/>
-  </CSField>
-  <CSField name="NID00120" description="EPT-HET-1 Status Word 3" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00120" description="EPT-HET-1 Status Word 3" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="5" bits="0"/>
-  </CSField>
-  <CSField name="NID00121" description="EPT-HET-1 Status Word 4" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00121" description="EPT-HET-1 Status Word 4" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="7" bits="0"/>
-  </CSField>
-  <CSField name="NID00086" description="EPT-HET-1 sensor Temp" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00086" description="EPT-HET-1 sensor Temp" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="9" bits="0"/>
-  </CSField>
-  <CSField name="NID00087" description="EPT-HET-1 Sensor Voltage" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00087" description="EPT-HET-1 Sensor Voltage" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="11" bits="0"/>
-  </CSField>
-  <CSField name="NID00122" description="EPT-HET-1 Bias Current" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00122" description="EPT-HET-1 Bias Current" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="13" bits="0"/>
-  </CSField>
-  <CSField name="NID00123" description="EH-1 Status reg" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00123" description="EH-1 Status reg" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="15" bits="0"/>
-  </CSField>
-  <CSField name="NID00078" description="EPT-HET2 Status Word 1" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00078" description="EPT-HET2 Status Word 1" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="17" bits="0"/>
-  </CSField>
-  <CSField name="NID00124" description="EPT-HET2 Status Word 2" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00124" description="EPT-HET2 Status Word 2" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="19" bits="0"/>
-  </CSField>
-  <CSField name="NID00125" description="EPT-HET2 Status Word 3" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00125" description="EPT-HET2 Status Word 3" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="21" bits="0"/>
-  </CSField>
-  <CSField name="NID00126" description="EPT-HET2 Status Word 4" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00126" description="EPT-HET2 Status Word 4" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="23" bits="0"/>
-  </CSField>
-  <CSField name="NID00088" description="EPT-HET-2 Sensor Temp" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00088" description="EPT-HET-2 Sensor Temp" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="25" bits="0"/>
-  </CSField>
-  <CSField name="NID00089" description="EPT-HET-2 Sensor Voltage" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00089" description="EPT-HET-2 Sensor Voltage" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="27" bits="0"/>
-  </CSField>
-  <CSField name="NID00127" description="EPT-HET-2 Bias Current" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00127" description="EPT-HET-2 Bias Current" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="29" bits="0"/>
-  </CSField>
-  <CSField name="NID00128" description="EH-2 Status reg" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00128" description="EH-2 Status reg" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="31" bits="0"/>
-  </CSField>
-  <CSField name="NID00079" description="STEP Status Word 1" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00079" description="STEP Status Word 1" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="33" bits="0"/>
-  </CSField>
-  <CSField name="NID00129" description="STEP Status Word 2" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00129" description="STEP Status Word 2" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="35" bits="0"/>
-  </CSField>
-  <CSField name="NID00130" description="STEP Status Word 3" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00130" description="STEP Status Word 3" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="37" bits="0"/>
-  </CSField>
-  <CSField name="NID00131" description="STEP Status Word 4" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00131" description="STEP Status Word 4" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="39" bits="0"/>
-  </CSField>
-  <CSField name="NID00090" description="STEP Sensor Temperature" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00090" description="STEP Sensor Temperature" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="41" bits="0"/>
-  </CSField>
-  <CSField name="NID00091" description="STEP Sensor Voltage" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00091" description="STEP Sensor Voltage" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="43" bits="0"/>
-  </CSField>
-  <CSField name="NID00132" description="STEP 2 Bias Current" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00132" description="STEP 2 Bias Current" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="45" bits="0"/>
-  </CSField>
-  <CSField name="NID00133" description="STEP Status reg" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00133" description="STEP Status reg" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="47" bits="0"/>
-  </CSField>
-  <CSField name="NID00134" description="Params validity flags" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00134" description="Params validity flags" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="49" bits="0"/>
-  </CSField>
-  <CSField name="NID00084" description="SIS Status Word" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00084" description="SIS Status Word" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="53" bits="0"/>
-  </CSField>
-  <CSField name="NID00085" description="SIS Last Event" fid="28" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00085" description="SIS Last Event" fid="28" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="57" bits="0"/>
-  </CSField>
-  <CSField name="NID00135" description="Burst Modes activated" fid="29" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00135" description="Burst Modes activated" fid="29" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="59" bits="0"/>
-  </CSField>
-  <CSField name="NID00136" description="L1 Burst bits 0-15" fid="30" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00136" description="L1 Burst bits 0-15" fid="30" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="61" bits="0"/>
-  </CSField>
-  <CSField name="NID00167" description="L1 Burst bits 16-31" fid="31" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00167" description="L1 Burst bits 16-31" fid="31" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="63" bits="0"/>
-  </CSField>
-  <CSField name="NID00168" description="L1 Burst bits 32-47" fid="32" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00168" description="L1 Burst bits 32-47" fid="32" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="65" bits="0"/>
-  </CSField>
-  <CSField name="NID00137" description="ICU Status Word 1" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00137" description="ICU Status Word 1" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="67" bits="0"/>
-  </CSField>
-  <CSField name="NID00138" description="ICU Status Word 2" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00138" description="ICU Status Word 2" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="71" bits="0"/>
-  </CSField>
-  <CSField name="NID00096" description="ICU LastEvent" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00096" description="ICU LastEvent" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="75" bits="0"/>
-  </CSField>
-  <CSField name="NID00092" description="HEP1 CommErrors" fid="36" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00092" description="HEP1 CommErrors" fid="36" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="77" bits="0"/>
-  </CSField>
-  <CSField name="NID00093" description="HEP2 CommErrors" fid="37" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00093" description="HEP2 CommErrors" fid="37" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="79" bits="0"/>
-  </CSField>
-  <CSField name="NID00094" description="STEP CommErrors" fid="38" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00094" description="STEP CommErrors" fid="38" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="81" bits="0"/>
-  </CSField>
-  <CSField name="NID00095" description="SIS CommErrors" fid="39" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00095" description="SIS CommErrors" fid="39" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="83" bits="0"/>
-  </CSField>
-  <CSField name="NID00169" description="FaultMngmtFunc1" fid="40" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00169" description="FaultMngmtFunc1" fid="40" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="85" bits="0"/>
-  </CSField>
-  <CSField name="NID00170" description="FaultMngmtFunc2" fid="41" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00170" description="FaultMngmtFunc2" fid="41" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="89" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

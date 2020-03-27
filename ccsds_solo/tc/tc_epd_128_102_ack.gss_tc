@@ -6,5 +6,6 @@
 		<Field name="Flags102" gssField="tc_epd_128_102(v1).PID00085"/>
 		<Field name="Nmesg102" gssField="tc_epd_128_102(v1).PID00086"/>
 		<Field name="Messages" gssField="tc_epd_128_102(v1).PID00075"/>
+		<Field name="PID00075_length" gssField="tc_epd_128_102(v1).PID00075_length"/>
 	</fields>
 </GSSTC>

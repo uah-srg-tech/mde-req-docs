@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_101_filter_level_1" uri="es.uah.aut.srg.tm_epd_3_25_101_filter_level_1" version="v1" description="TM 3,25 HK SID101 to SSMM">
   <formatFile href="../tmFormats/tm_epd_3_25_101.xmi#/"/>
-  <BoolVar id="0" name="NID00030_101" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_epd_3_25_101.xmi#//@CSField.1"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="NID00030_101" constantType="decimal">
     <Op type="equal"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_epd_3_25_101.xmi#//@Field.1"/>
     <Value xsi:type="gss:GSSFilterConstant" value="101"/>
   </BoolVar>
   <Minterm id="0">

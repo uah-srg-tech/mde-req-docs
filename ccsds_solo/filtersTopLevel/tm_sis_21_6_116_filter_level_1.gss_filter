@@ -3,12 +3,12 @@ GSSFilterMintermFilter tm_sis_21_6_116_filter_level_1 {
 	uri := es.uah.aut.srg.tm_sis_21_6_116_filter_level_1;
 	version := v1;
 	formatFile := tm_sis_21_6_116(v1);
-	
+
 	GSSFilterBoolVar {
 		id := 0;
-		name := NID10001_116;
+		name := SourceData_116;
 		constantType := decimal;
-		FieldRef := NID10001;
+		FieldRef := SourceData;
 		GSSFilterFieldOp {
 			type := equal;
 		};

@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_20_128" uri="es.uah.aut.srg.tc_epd_20_128" version="v1" description="ZID52530: TC 20,128" protocol="EPD_PUS" type="TC">
-  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_20_128" uri="es.uah.aut.srg.tc_epd_20_128" version="v1" description="ZID52530: TC 20,128" protocol="EPD_PUS" type="TC">
+  <Field xsi:type="gss:GSSFormatCSField" name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="236" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="PID00032" description="Platform Data" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00032" description="Platform Data" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="36" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="PID00033" description="EPD Data" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00033" description="EPD Data" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="30" bits="0"/>
     <globalOffset bytes="36" bits="0"/>
-  </CSField>
-  <CSField name="PID00054" description="EUI Data" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00054" description="EUI Data" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="23" bits="0"/>
     <globalOffset bytes="66" bits="0"/>
-  </CSField>
-  <CSField name="PID00056" description="MAG Data" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00056" description="MAG Data" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="20" bits="0"/>
     <globalOffset bytes="89" bits="0"/>
-  </CSField>
-  <CSField name="PID00057" description="METIS Data" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00057" description="METIS Data" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="20" bits="0"/>
     <globalOffset bytes="109" bits="0"/>
-  </CSField>
-  <CSField name="PID00058" description="PHI Data" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00058" description="PHI Data" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="14" bits="0"/>
     <globalOffset bytes="129" bits="0"/>
-  </CSField>
-  <CSField name="PID00059" description="RPW Data" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00059" description="RPW Data" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="33" bits="0"/>
     <globalOffset bytes="143" bits="0"/>
-  </CSField>
-  <CSField name="PID00060" description="SoloHI Data" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00060" description="SoloHI Data" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="14" bits="0"/>
     <globalOffset bytes="176" bits="0"/>
-  </CSField>
-  <CSField name="PID00062" description="STIX Data" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00062" description="STIX Data" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="16" bits="0"/>
     <globalOffset bytes="190" bits="0"/>
-  </CSField>
-  <CSField name="PID00063" description="SWA Data" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00063" description="SWA Data" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="16" bits="0"/>
     <globalOffset bytes="206" bits="0"/>
-  </CSField>
-  <CSField name="PID00061" description="SPICE Data" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00061" description="SPICE Data" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="14" bits="0"/>
     <globalOffset bytes="222" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

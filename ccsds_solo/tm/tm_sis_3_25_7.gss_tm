@@ -5,8 +5,8 @@
 	<level0_filter file="tm_sis_3_25_7_filter_level_0(v1)"/>
 	<PI1 name="SID" val="7" gssField="tm_sis_3_25_7(v1).NID10000"/>
 	<fields>
-		<Field name="Global 18" gssField="tm_sis_3_25_7(v1).NIDG1017"/>
 		<Field name="Aliveness" gssField="tm_sis_3_25_7(v1).NIDD1089" enumRef="CIDT1014TM"/>
+		<Field name="Global 18" gssField="tm_sis_3_25_7(v1).NIDG1017"/>
 		<Field name="Power Down" gssField="tm_sis_3_25_7(v1).NIDD1090" enumRef="CIDT1015TM"/>
 		<Field name="Reserved" gssField="tm_sis_3_25_7(v1).NIDD1091" enumRef="CIDT1017TM"/>
 		<Field name="SIS State" gssField="tm_sis_3_25_7(v1).NIDD1092" enumRef="CIDT1012TM"/>

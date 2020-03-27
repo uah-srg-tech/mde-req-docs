@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_5_1_4358" uri="es.uah.aut.srg.tm_epd_5_1_4358" version="v1" description="YID52058: TM5,1 EPT-HET1 is ON" protocol="EPD_PUS" type="TM">
-  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_5_1_4358" uri="es.uah.aut.srg.tm_epd_5_1_4358" version="v1" description="YID52058: TM5,1 EPT-HET1 is ON" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatCSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00013" description="RID_5_1" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00013" description="RID_5_1" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

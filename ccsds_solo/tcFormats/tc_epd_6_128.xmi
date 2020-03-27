@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_6_128" uri="es.uah.aut.srg.tc_epd_6_128" version="v1" description="ZID52542: TC 6,128 Apply patches to memory" protocol="EPD_PUS" type="TC">
-  <CSField name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tc_epd_6_128" uri="es.uah.aut.srg.tc_epd_6_128" version="v1" description="ZID52542: TC 6,128 Apply patches to memory" protocol="EPD_PUS" type="TC">
+  <Field xsi:type="gss:GSSFormatCSField" name="ApplicationData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="PID00079" description="Npatches" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="PID00079" description="Npatches" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

@@ -3,7 +3,7 @@ GSSFilterMintermFilter EPD_CCSDS_TM {
 	uri := es.uah.aut.srg.EPD_CCSDS_TM;
 	version := v1;
 	formatFile := CCSDS_TM(v1);
-	
+
 	GSSFilterBoolVar {
 		id := 0;
 		name := Version_Number_0;

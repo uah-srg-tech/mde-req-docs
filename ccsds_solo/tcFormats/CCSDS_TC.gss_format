@@ -28,30 +28,6 @@ GSSFormatFormat CCSDS_TC {
 			bits := 0;
 		};
 	};
-	GSSFormatVSField {
-		fid := 15;
-		pfid := 0;
-		name := "Application_Data";
-		type := structured;
-		byteOrder := big_endian;
-		firstBit := MSB;
-		GSSFormatConstSize {
-			bytes := -5;
-			bits := 0;
-		};
-		GSSFormatVariableSize {
-			fidRef := 8;
-			unit := bytes;
-		};
-		GSSFormatMaxSize {
-			bytes := 236;
-			bits := 0;
-		};
-		GSSFormatGlobalOffset {
-			bytes := 10;
-			bits := 0;
-		};
-	};
 	GSSFormatCSField {
 		fid := 1;
 		pfid := 0;
@@ -273,6 +249,30 @@ GSSFormatFormat CCSDS_TC {
 		};
 		GSSFormatGlobalOffset {
 			bytes := 9;
+			bits := 0;
+		};
+	};
+	GSSFormatVSField {
+		fid := 15;
+		pfid := 0;
+		name := "Application_Data";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := -5;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 8;
+			unit := bytes;
+		};
+		GSSFormatMaxSize {
+			bytes := 236;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 10;
 			bits := 0;
 		};
 	};

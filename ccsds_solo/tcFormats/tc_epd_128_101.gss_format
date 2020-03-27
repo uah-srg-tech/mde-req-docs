@@ -28,31 +28,6 @@ GSSFormatFormat tc_epd_128_101 {
 			bits := 0;
 		};
 	};
-	GSSFormatVSField {
-		fid := 4;
-		pfid := 0;
-		name := "PID00075";
-		description := "Messages";
-		type := structured;
-		byteOrder := big_endian;
-		firstBit := MSB;
-		GSSFormatConstSize {
-			bytes := 0;
-			bits := 0;
-		};
-		GSSFormatVariableSize {
-			fidRef := 3;
-			unit := bytes;
-		};
-		GSSFormatMaxSize {
-			bytes := 230;
-			bits := 0;
-		};
-		GSSFormatGlobalOffset {
-			bytes := 6;
-			bits := 0;
-		};
-	};
 	GSSFormatCSField {
 		fid := 1;
 		pfid := 0;
@@ -102,6 +77,31 @@ GSSFormatFormat tc_epd_128_101 {
 		GSSFormatGlobalOffset {
 			bytes := 4;
 			bits := 4;
+		};
+	};
+	GSSFormatVSField {
+		fid := 4;
+		pfid := 0;
+		name := "PID00075";
+		description := "Messages";
+		type := structured;
+		byteOrder := big_endian;
+		firstBit := MSB;
+		GSSFormatConstSize {
+			bytes := 0;
+			bits := 0;
+		};
+		GSSFormatVariableSize {
+			fidRef := 3;
+			unit := bytes;
+		};
+		GSSFormatMaxSize {
+			bytes := 230;
+			bits := 0;
+		};
+		GSSFormatGlobalOffset {
+			bytes := 6;
+			bits := 0;
 		};
 	};
 };

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_5_2_21829_filter_level_1" uri="es.uah.aut.srg.tm_sis_5_2_21829_filter_level_1" version="v1" description="5,2 Alarm Event: B Start1 MCP HV I Too Low">
   <formatFile href="../tmFormats/tm_sis_5_2_21829.xmi#/"/>
-  <BoolVar id="0" name="NID10245_21829" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_5_2_21829.xmi#//@CSField.1"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="NID10245_21829" constantType="decimal">
     <Op type="equal"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_5_2_21829.xmi#//@Field.1"/>
     <Value xsi:type="gss:GSSFilterConstant" value="21829"/>
   </BoolVar>
   <Minterm id="0">

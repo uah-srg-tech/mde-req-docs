@@ -1,895 +1,895 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_3_25_5" uri="es.uah.aut.srg.tm_sis_3_25_5" version="v1" description="YID52718: 3,25 Status" protocol="EPD_PUS" type="TM">
-  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_sis_3_25_5" uri="es.uah.aut.srg.tm_sis_3_25_5" version="v1" description="YID52718: 3,25 Status" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatCSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="232" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID10000" description="SID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10000" description="SID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1002" description="Global 3" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1002" description="Global 3" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1007" description="Reserved" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1007" description="Reserved" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="1" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1008" description="B Iris Closed" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1008" description="B Iris Closed" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1009" description="B Iris Open" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1009" description="B Iris Open" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1010" description="A Iris Closed" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1010" description="A Iris Closed" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1011" description="A Iris Open" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1011" description="A Iris Open" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1012" description="Cover Plug Enb" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1012" description="Cover Plug Enb" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1013" description="HV Plug Enb" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1013" description="HV Plug Enb" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="1" bits="7"/>
-  </CSField>
-  <CSField name="NID10008" description="A Start1 CFD Thresh" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10008" description="A Start1 CFD Thresh" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="2" bits="0"/>
-  </CSField>
-  <CSField name="NID10009" description="A Start2 CFD Thresh" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10009" description="A Start2 CFD Thresh" fid="11" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="4" bits="0"/>
-  </CSField>
-  <CSField name="NID10010" description="A Stop CFD Thresh" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10010" description="A Stop CFD Thresh" fid="12" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="6" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1003" description="Global 4" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="8" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1014" description="Reserved" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1014" description="Reserved" fid="13" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="1"/>
     <globalOffset bytes="8" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1015" description="A PW Multi Enb" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1003" description="Global 4" fid="14" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="8" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1015" description="A PW Multi Enb" fid="15" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="9" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1016" description="A CFD Pulse Width" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1016" description="A CFD Pulse Width" fid="16" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="3"/>
     <globalOffset bytes="9" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1017" description="A TOF Multi Enb" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1017" description="A TOF Multi Enb" fid="17" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="9" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1018" description="A CFD Select" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1018" description="A CFD Select" fid="18" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="9" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1019" description="A Coin End" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="0" bits="5"/>
-    <globalOffset bytes="10" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1004" description="Global 5" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1004" description="Global 5" fid="19" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="10" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1020" description="A Coin Begin" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1019" description="A Coin End" fid="20" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="0" bits="5"/>
+    <globalOffset bytes="10" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1020" description="A Coin Begin" fid="21" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="5"/>
     <globalOffset bytes="10" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1021" description="A High-gain Energy Req" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1021" description="A High-gain Energy Req" fid="22" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="11" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1022" description="A Low-gain Energy Req" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1022" description="A Low-gain Energy Req" fid="23" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="11" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1023" description="A PW Energy Req" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1023" description="A PW Energy Req" fid="24" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="11" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1024" description="A St1-St2 TOF Req" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1024" description="A St1-St2 TOF Req" fid="25" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="11" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1025" description="A St2-Sp TOF Req" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1025" description="A St2-Sp TOF Req" fid="26" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="11" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1026" description="A St1-Sp TOF Req" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1026" description="A St1-Sp TOF Req" fid="27" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="11" bits="7"/>
-  </CSField>
-  <CSField name="NID10024" description="A Low-gain Energy Thresh" fid="28" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10024" description="A Low-gain Energy Thresh" fid="28" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="12" bits="0"/>
-  </CSField>
-  <CSField name="NID10025" description="A Highgain Energy Thresh" fid="29" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10025" description="A Highgain Energy Thresh" fid="29" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="14" bits="0"/>
-  </CSField>
-  <CSField name="NID10026" description="B Start1 CFD Thresh" fid="30" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10026" description="B Start1 CFD Thresh" fid="30" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="16" bits="0"/>
-  </CSField>
-  <CSField name="NID10027" description="B Start2 CFD Thresh" fid="31" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10027" description="B Start2 CFD Thresh" fid="31" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="18" bits="0"/>
-  </CSField>
-  <CSField name="NID10028" description="B Stop CFD Thresh" fid="32" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10028" description="B Stop CFD Thresh" fid="32" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="20" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1027" description="Reserved" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="1"/>
-    <globalOffset bytes="22" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1005" description="Global 6" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1005" description="Global 6" fid="33" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="22" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1028" description="B PW Multi Enb" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1027" description="Reserved" fid="34" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="1"/>
+    <globalOffset bytes="22" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1028" description="B PW Multi Enb" fid="35" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="23" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1029" description="B CFD Pulse Width" fid="36" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1029" description="B CFD Pulse Width" fid="36" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="3"/>
     <globalOffset bytes="23" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1030" description="B TOF Multi Enb" fid="37" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1030" description="B TOF Multi Enb" fid="37" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="23" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1031" description="B CFD Select" fid="38" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1031" description="B CFD Select" fid="38" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="23" bits="6"/>
-  </CSField>
-  <CSField name="NIDG1006" description="Global 7" fid="39" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1006" description="Global 7" fid="39" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="24" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1032" description="B Coin End" fid="40" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1032" description="B Coin End" fid="40" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="5"/>
     <globalOffset bytes="24" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1033" description="B Coin Begin" fid="41" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1033" description="B Coin Begin" fid="41" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="5"/>
     <globalOffset bytes="24" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1034" description="B High-gain Energy Req" fid="42" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1034" description="B High-gain Energy Req" fid="42" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="25" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1035" description="B Low-gain Energy Req" fid="43" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1035" description="B Low-gain Energy Req" fid="43" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="25" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1036" description="B PW Energy Req" fid="44" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1036" description="B PW Energy Req" fid="44" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="25" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1037" description="B St1-St2 TOF Req" fid="45" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1037" description="B St1-St2 TOF Req" fid="45" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="25" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1038" description="B St2-Sp TOF Req" fid="46" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1038" description="B St2-Sp TOF Req" fid="46" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="25" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1039" description="B St1-Sp TOF Req" fid="47" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1039" description="B St1-Sp TOF Req" fid="47" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="25" bits="7"/>
-  </CSField>
-  <CSField name="NID10042" description="B Low-gain Energy Thresh" fid="48" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10042" description="B Low-gain Energy Thresh" fid="48" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="26" bits="0"/>
-  </CSField>
-  <CSField name="NID10043" description="B Highgain Energy Thresh" fid="49" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10043" description="B Highgain Energy Thresh" fid="49" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="28" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1007" description="Global 8" fid="50" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="30" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1040" description="Reserved" fid="51" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1040" description="Reserved" fid="50" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="5"/>
     <globalOffset bytes="30" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1041" description="Pulse External" fid="52" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1007" description="Global 8" fid="51" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="30" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1041" description="Pulse External" fid="52" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="30" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1042" description="Pulse Rate" fid="53" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1042" description="Pulse Rate" fid="53" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="30" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1043" description="Pulse St2-Sp Delay" fid="54" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1043" description="Pulse St2-Sp Delay" fid="54" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="4"/>
     <globalOffset bytes="31" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1044" description="Pulse St1-St2 Delay" fid="55" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1044" description="Pulse St1-St2 Delay" fid="55" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="4"/>
     <globalOffset bytes="31" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1045" description="Reserved" fid="56" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1008" description="Global 9" fid="56" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="32" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1045" description="Reserved" fid="57" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="4"/>
     <globalOffset bytes="32" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1008" description="Global 9" fid="57" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="32" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1046" description="B Pulse Energy Enb" fid="58" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1046" description="B Pulse Energy Enb" fid="58" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="32" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1047" description="B Pulse Stop Enb" fid="59" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1047" description="B Pulse Stop Enb" fid="59" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="32" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1048" description="B Pulse Start2 Enb" fid="60" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1048" description="B Pulse Start2 Enb" fid="60" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="32" bits="7"/>
-  </CSField>
-  <CSField name="NIDD1049" description="B Pulse Start1 Enb" fid="61" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1049" description="B Pulse Start1 Enb" fid="61" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="33" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1050" description="A Pulse Energy Enb" fid="62" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1050" description="A Pulse Energy Enb" fid="62" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="33" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1051" description="A Pulse Stop Enb" fid="63" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1051" description="A Pulse Stop Enb" fid="63" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="33" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1052" description="A Pulse Start2 Enb" fid="64" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1052" description="A Pulse Start2 Enb" fid="64" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="33" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1053" description="A Pulse Start1 Enb" fid="65" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1053" description="A Pulse Start1 Enb" fid="65" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="33" bits="6"/>
-  </CSField>
-  <CSField name="NID10058" description="DAC/0/0" fid="66" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10058" description="DAC/0/0" fid="66" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="34" bits="0"/>
-  </CSField>
-  <CSField name="NID10059" description="DAC/0/1" fid="67" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10059" description="DAC/0/1" fid="67" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="35" bits="0"/>
-  </CSField>
-  <CSField name="NID10060" description="DAC/0/2" fid="68" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10060" description="DAC/0/2" fid="68" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="36" bits="0"/>
-  </CSField>
-  <CSField name="NID10061" description="DAC/0/3" fid="69" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10061" description="DAC/0/3" fid="69" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="37" bits="0"/>
-  </CSField>
-  <CSField name="NID10062" description="DAC/1/0" fid="70" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10062" description="DAC/1/0" fid="70" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="38" bits="0"/>
-  </CSField>
-  <CSField name="NID10063" description="DAC/1/1" fid="71" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10063" description="DAC/1/1" fid="71" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="39" bits="0"/>
-  </CSField>
-  <CSField name="NID10064" description="DAC/1/2" fid="72" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10064" description="DAC/1/2" fid="72" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="40" bits="0"/>
-  </CSField>
-  <CSField name="NID10065" description="DAC/1/3" fid="73" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10065" description="DAC/1/3" fid="73" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="41" bits="0"/>
-  </CSField>
-  <CSField name="NID10066" description="DAC/2/0" fid="74" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10066" description="DAC/2/0" fid="74" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="42" bits="0"/>
-  </CSField>
-  <CSField name="NID10067" description="DAC/2/1" fid="75" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10067" description="DAC/2/1" fid="75" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="43" bits="0"/>
-  </CSField>
-  <CSField name="NID10068" description="DAC/2/2" fid="76" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10068" description="DAC/2/2" fid="76" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="44" bits="0"/>
-  </CSField>
-  <CSField name="NID10069" description="DAC/2/3" fid="77" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10069" description="DAC/2/3" fid="77" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="45" bits="0"/>
-  </CSField>
-  <CSField name="NID10070" description="DAC/3/0" fid="78" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10070" description="DAC/3/0" fid="78" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="46" bits="0"/>
-  </CSField>
-  <CSField name="NID10071" description="DAC/3/1" fid="79" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10071" description="DAC/3/1" fid="79" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="47" bits="0"/>
-  </CSField>
-  <CSField name="NID10072" description="ADC/0/0" fid="80" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10072" description="ADC/0/0" fid="80" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="48" bits="0"/>
-  </CSField>
-  <CSField name="NID10073" description="ADC/0/1" fid="81" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10073" description="ADC/0/1" fid="81" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="50" bits="0"/>
-  </CSField>
-  <CSField name="NID10074" description="ADC/0/2" fid="82" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10074" description="ADC/0/2" fid="82" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="52" bits="0"/>
-  </CSField>
-  <CSField name="NID10075" description="ADC/0/3" fid="83" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10075" description="ADC/0/3" fid="83" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="54" bits="0"/>
-  </CSField>
-  <CSField name="NID10076" description="ADC/0/4" fid="84" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10076" description="ADC/0/4" fid="84" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="56" bits="0"/>
-  </CSField>
-  <CSField name="NID10077" description="ADC/0/5" fid="85" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10077" description="ADC/0/5" fid="85" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="58" bits="0"/>
-  </CSField>
-  <CSField name="NID10078" description="ADC/0/6" fid="86" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10078" description="ADC/0/6" fid="86" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="60" bits="0"/>
-  </CSField>
-  <CSField name="NID10079" description="ADC/0/7" fid="87" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10079" description="ADC/0/7" fid="87" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="62" bits="0"/>
-  </CSField>
-  <CSField name="NID10080" description="ADC/1/0" fid="88" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10080" description="ADC/1/0" fid="88" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="64" bits="0"/>
-  </CSField>
-  <CSField name="NID10081" description="ADC/1/1" fid="89" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10081" description="ADC/1/1" fid="89" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="66" bits="0"/>
-  </CSField>
-  <CSField name="NID10082" description="ADC/1/2" fid="90" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10082" description="ADC/1/2" fid="90" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="68" bits="0"/>
-  </CSField>
-  <CSField name="NID10083" description="ADC/1/3" fid="91" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10083" description="ADC/1/3" fid="91" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="70" bits="0"/>
-  </CSField>
-  <CSField name="NID10084" description="ADC/1/4" fid="92" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10084" description="ADC/1/4" fid="92" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="72" bits="0"/>
-  </CSField>
-  <CSField name="NID10085" description="ADC/1/5" fid="93" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10085" description="ADC/1/5" fid="93" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="74" bits="0"/>
-  </CSField>
-  <CSField name="NID10086" description="ADC/1/6" fid="94" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10086" description="ADC/1/6" fid="94" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="76" bits="0"/>
-  </CSField>
-  <CSField name="NID10087" description="ADC/1/7" fid="95" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10087" description="ADC/1/7" fid="95" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="78" bits="0"/>
-  </CSField>
-  <CSField name="NID10088" description="ADC/2/0" fid="96" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10088" description="ADC/2/0" fid="96" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="80" bits="0"/>
-  </CSField>
-  <CSField name="NID10089" description="ADC/2/1" fid="97" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10089" description="ADC/2/1" fid="97" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="82" bits="0"/>
-  </CSField>
-  <CSField name="NID10090" description="ADC/2/2" fid="98" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10090" description="ADC/2/2" fid="98" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="84" bits="0"/>
-  </CSField>
-  <CSField name="NID10091" description="ADC/2/3" fid="99" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10091" description="ADC/2/3" fid="99" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="86" bits="0"/>
-  </CSField>
-  <CSField name="NID10092" description="ADC/2/4" fid="100" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10092" description="ADC/2/4" fid="100" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="88" bits="0"/>
-  </CSField>
-  <CSField name="NID10093" description="ADC/2/5" fid="101" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10093" description="ADC/2/5" fid="101" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="90" bits="0"/>
-  </CSField>
-  <CSField name="NID10094" description="ADC/2/6" fid="102" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10094" description="ADC/2/6" fid="102" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="92" bits="0"/>
-  </CSField>
-  <CSField name="NID10095" description="ADC/2/7" fid="103" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10095" description="ADC/2/7" fid="103" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="94" bits="0"/>
-  </CSField>
-  <CSField name="NID10096" description="ADC/3/0" fid="104" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10096" description="ADC/3/0" fid="104" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="96" bits="0"/>
-  </CSField>
-  <CSField name="NID10097" description="ADC/3/1" fid="105" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10097" description="ADC/3/1" fid="105" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="98" bits="0"/>
-  </CSField>
-  <CSField name="NID10098" description="ADC/3/2" fid="106" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10098" description="ADC/3/2" fid="106" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="100" bits="0"/>
-  </CSField>
-  <CSField name="NID10099" description="ADC/3/3" fid="107" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10099" description="ADC/3/3" fid="107" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="102" bits="0"/>
-  </CSField>
-  <CSField name="NID10100" description="ADC/3/4" fid="108" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10100" description="ADC/3/4" fid="108" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="104" bits="0"/>
-  </CSField>
-  <CSField name="NID10101" description="ADC/3/5" fid="109" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10101" description="ADC/3/5" fid="109" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="106" bits="0"/>
-  </CSField>
-  <CSField name="NID10102" description="ADC/3/6" fid="110" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10102" description="ADC/3/6" fid="110" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="108" bits="0"/>
-  </CSField>
-  <CSField name="NID10103" description="ADC/3/7" fid="111" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10103" description="ADC/3/7" fid="111" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="110" bits="0"/>
-  </CSField>
-  <CSField name="NID10104" description="ADC/4/0" fid="112" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10104" description="ADC/4/0" fid="112" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="112" bits="0"/>
-  </CSField>
-  <CSField name="NID10105" description="ADC/4/1" fid="113" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10105" description="ADC/4/1" fid="113" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="114" bits="0"/>
-  </CSField>
-  <CSField name="NID10106" description="ADC/4/2" fid="114" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10106" description="ADC/4/2" fid="114" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="116" bits="0"/>
-  </CSField>
-  <CSField name="NID10107" description="ADC/4/3" fid="115" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10107" description="ADC/4/3" fid="115" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="118" bits="0"/>
-  </CSField>
-  <CSField name="NID10108" description="ADC/4/4" fid="116" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10108" description="ADC/4/4" fid="116" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="120" bits="0"/>
-  </CSField>
-  <CSField name="NID10109" description="ADC/4/5" fid="117" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10109" description="ADC/4/5" fid="117" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="122" bits="0"/>
-  </CSField>
-  <CSField name="NID10110" description="ADC/4/6" fid="118" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10110" description="ADC/4/6" fid="118" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="124" bits="0"/>
-  </CSField>
-  <CSField name="NID10111" description="ADC/4/7" fid="119" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10111" description="ADC/4/7" fid="119" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="126" bits="0"/>
-  </CSField>
-  <CSField name="NID10112" description="ADC/5/0" fid="120" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10112" description="ADC/5/0" fid="120" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="128" bits="0"/>
-  </CSField>
-  <CSField name="NID10113" description="ADC/5/1" fid="121" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10113" description="ADC/5/1" fid="121" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="130" bits="0"/>
-  </CSField>
-  <CSField name="NID10114" description="ADC/5/2" fid="122" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10114" description="ADC/5/2" fid="122" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="132" bits="0"/>
-  </CSField>
-  <CSField name="NID10115" description="ADC/5/3" fid="123" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10115" description="ADC/5/3" fid="123" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="134" bits="0"/>
-  </CSField>
-  <CSField name="NID10116" description="ADC/5/4" fid="124" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10116" description="ADC/5/4" fid="124" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="136" bits="0"/>
-  </CSField>
-  <CSField name="NID10117" description="ADC/5/5" fid="125" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10117" description="ADC/5/5" fid="125" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="138" bits="0"/>
-  </CSField>
-  <CSField name="NID10118" description="ADC/5/6" fid="126" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10118" description="ADC/5/6" fid="126" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="140" bits="0"/>
-  </CSField>
-  <CSField name="NID10119" description="ADC/5/7" fid="127" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10119" description="ADC/5/7" fid="127" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="142" bits="0"/>
-  </CSField>
-  <CSField name="NID10120" description="Status Int." fid="128" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10120" description="Status Int." fid="128" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="144" bits="0"/>
-  </CSField>
-  <CSField name="NID10121" description="Macro Blocks" fid="129" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10121" description="Macro Blocks" fid="129" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="146" bits="0"/>
-  </CSField>
-  <CSField name="NID10122" description="Tlm. Vol." fid="130" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10122" description="Tlm. Vol." fid="130" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="148" bits="0"/>
-  </CSField>
-  <CSField name="NID10123" description="Watch Addr" fid="131" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10123" description="Watch Addr" fid="131" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="150" bits="0"/>
-  </CSField>
-  <CSField name="NID10124" description="Watch Mem" fid="132" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10124" description="Watch Mem" fid="132" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="152" bits="0"/>
-  </CSField>
-  <CSField name="NID10125" description="Watch Data" fid="133" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10125" description="Watch Data" fid="133" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="153" bits="0"/>
-  </CSField>
-  <CSField name="NID10126" description="Sw. Version" fid="134" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10126" description="Sw. Version" fid="134" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="155" bits="0"/>
-  </CSField>
-  <CSField name="NID10127" description="Alarm Id" fid="135" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10127" description="Alarm Id" fid="135" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="156" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1054" description="Alarm Type" fid="136" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1054" description="Alarm Type" fid="136" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="157" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1009" description="Global 10" fid="137" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1009" description="Global 10" fid="137" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="157" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1055" description="Alarm Count" fid="138" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1055" description="Alarm Count" fid="138" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="7"/>
     <globalOffset bytes="157" bits="1"/>
-  </CSField>
-  <CSField name="NID10130" description="Cmd Exec" fid="139" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10130" description="Cmd Exec" fid="139" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="158" bits="0"/>
-  </CSField>
-  <CSField name="NID10131" description="Cmd Reject" fid="140" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10131" description="Cmd Reject" fid="140" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="159" bits="0"/>
-  </CSField>
-  <CSField name="NID10132" description="Mac Exec" fid="141" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10132" description="Mac Exec" fid="141" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="160" bits="0"/>
-  </CSField>
-  <CSField name="NID10133" description="Mac Reject" fid="142" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10133" description="Mac Reject" fid="142" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="161" bits="0"/>
-  </CSField>
-  <CSField name="NID10134" description="Macro Id" fid="143" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10134" description="Macro Id" fid="143" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="162" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1056" description="Macro Learn" fid="144" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1056" description="Macro Learn" fid="144" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="163" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1010" description="Global 11" fid="145" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1010" description="Global 11" fid="145" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="163" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1057" description="Monitor Response" fid="146" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1057" description="Monitor Response" fid="146" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="163" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1058" description="Write Enb" fid="147" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1058" description="Write Enb" fid="147" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="163" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1059" description="Echo Enb" fid="148" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1059" description="Echo Enb" fid="148" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="163" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1060" description="A Burst Trigger" fid="149" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1060" description="A Burst Trigger" fid="149" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="163" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1061" description="B Burst Trigger" fid="150" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1061" description="B Burst Trigger" fid="150" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="163" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1062" description="Reserved" fid="151" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1062" description="Reserved" fid="151" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="163" bits="6"/>
-  </CSField>
-  <CSField name="NID10142" description="Safing Time" fid="152" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10142" description="Safing Time" fid="152" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="164" bits="0"/>
-  </CSField>
-  <CSField name="NID10143" description="SSD BV Limit" fid="153" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10143" description="SSD BV Limit" fid="153" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="166" bits="0"/>
-  </CSField>
-  <CSField name="NID10144" description="Common HV Limit" fid="154" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10144" description="Common HV Limit" fid="154" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="167" bits="0"/>
-  </CSField>
-  <CSField name="NID10145" description="A Start1 MCP HV Limit" fid="155" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10145" description="A Start1 MCP HV Limit" fid="155" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="168" bits="0"/>
-  </CSField>
-  <CSField name="NID10146" description="A Start2 MCP HV Limit" fid="156" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10146" description="A Start2 MCP HV Limit" fid="156" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="169" bits="0"/>
-  </CSField>
-  <CSField name="NID10147" description="A Stop MCP HV Limit" fid="157" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10147" description="A Stop MCP HV Limit" fid="157" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="170" bits="0"/>
-  </CSField>
-  <CSField name="NID10148" description="B Start1 MCP HV Limit" fid="158" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10148" description="B Start1 MCP HV Limit" fid="158" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="171" bits="0"/>
-  </CSField>
-  <CSField name="NID10149" description="B Start2 MCP HV Limit" fid="159" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10149" description="B Start2 MCP HV Limit" fid="159" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="172" bits="0"/>
-  </CSField>
-  <CSField name="NID10150" description="B Stop MCP HV Limit" fid="160" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10150" description="B Stop MCP HV Limit" fid="160" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="173" bits="0"/>
-  </CSField>
-  <CSField name="NID10151" description="SSD BV Goal" fid="161" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10151" description="SSD BV Goal" fid="161" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="174" bits="0"/>
-  </CSField>
-  <CSField name="NID10152" description="Common HV Goal" fid="162" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10152" description="Common HV Goal" fid="162" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="175" bits="0"/>
-  </CSField>
-  <CSField name="NID10153" description="A Start1 MCP HV Goal" fid="163" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10153" description="A Start1 MCP HV Goal" fid="163" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="176" bits="0"/>
-  </CSField>
-  <CSField name="NID10154" description="A Start2 MCP HV Goal" fid="164" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10154" description="A Start2 MCP HV Goal" fid="164" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="177" bits="0"/>
-  </CSField>
-  <CSField name="NID10155" description="A Stop MCP HV Goal" fid="165" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10155" description="A Stop MCP HV Goal" fid="165" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="178" bits="0"/>
-  </CSField>
-  <CSField name="NID10156" description="B Start1 MCP HV Goal" fid="166" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10156" description="B Start1 MCP HV Goal" fid="166" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="179" bits="0"/>
-  </CSField>
-  <CSField name="NID10157" description="B Start2 MCP HV goal" fid="167" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10157" description="B Start2 MCP HV goal" fid="167" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="180" bits="0"/>
-  </CSField>
-  <CSField name="NID10158" description="B Stop MCP HV Goal" fid="168" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10158" description="B Stop MCP HV Goal" fid="168" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="181" bits="0"/>
-  </CSField>
-  <CSField name="NID10159" description="A Raw Events" fid="169" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10159" description="A Raw Events" fid="169" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="182" bits="0"/>
-  </CSField>
-  <CSField name="NID10160" description="A Priority Events" fid="170" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10160" description="A Priority Events" fid="170" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="183" bits="0"/>
-  </CSField>
-  <CSField name="NID10161" description="A Priority 0 Events" fid="171" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10161" description="A Priority 0 Events" fid="171" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="184" bits="0"/>
-  </CSField>
-  <CSField name="NID10162" description="A Priority 1 Events" fid="172" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10162" description="A Priority 1 Events" fid="172" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="185" bits="0"/>
-  </CSField>
-  <CSField name="NID10163" description="A Overwrite Events" fid="173" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10163" description="A Overwrite Events" fid="173" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="186" bits="0"/>
-  </CSField>
-  <CSField name="NID10164" description="A UH Events" fid="174" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10164" description="A UH Events" fid="174" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="187" bits="0"/>
-  </CSField>
-  <CSField name="NID10165" description="B Raw Events" fid="175" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10165" description="B Raw Events" fid="175" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="188" bits="0"/>
-  </CSField>
-  <CSField name="NID10166" description="B Priority Events" fid="176" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10166" description="B Priority Events" fid="176" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="189" bits="0"/>
-  </CSField>
-  <CSField name="NID10167" description="B Priority 0 Events" fid="177" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10167" description="B Priority 0 Events" fid="177" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="190" bits="0"/>
-  </CSField>
-  <CSField name="NID10168" description="B Priority 1 Events" fid="178" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10168" description="B Priority 1 Events" fid="178" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="191" bits="0"/>
-  </CSField>
-  <CSField name="NID10169" description="B Overwrite Events" fid="179" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10169" description="B Overwrite Events" fid="179" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="192" bits="0"/>
-  </CSField>
-  <CSField name="NID10170" description="B UH Events" fid="180" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10170" description="B UH Events" fid="180" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="193" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1063" description="Reserved" fid="181" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1063" description="Reserved" fid="181" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1011" description="Global 12" fid="182" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1011" description="Global 12" fid="182" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="194" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1064" description="A Test Pulses" fid="183" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1064" description="A Test Pulses" fid="183" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1065" description="A He Histogram" fid="184" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1065" description="A He Histogram" fid="184" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1066" description="A TOFxE Rates, Slow" fid="185" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1066" description="A TOFxE Rates, Slow" fid="185" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1067" description="A TOFxE Rates, Med." fid="186" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1067" description="A TOFxE Rates, Med." fid="186" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1068" description="A TOFxE Rates, Fast" fid="187" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1068" description="A TOFxE Rates, Fast" fid="187" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1069" description="A Basic Rates, Med." fid="188" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1069" description="A Basic Rates, Med." fid="188" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1070" description="A Basic Rates, Fast" fid="189" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1070" description="A Basic Rates, Fast" fid="189" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="194" bits="7"/>
-  </CSField>
-  <CSField name="NIDD1071" description="Reserved" fid="190" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1071" description="Reserved" fid="190" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1012" description="Global 13" fid="191" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1012" description="Global 13" fid="191" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="195" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1072" description="B Test Pulses" fid="192" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1072" description="B Test Pulses" fid="192" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1073" description="B He Histogram" fid="193" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1073" description="B He Histogram" fid="193" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1074" description="B TOFxE Rates, Slow" fid="194" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1074" description="B TOFxE Rates, Slow" fid="194" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1075" description="B TOFxE Rates, Med." fid="195" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1075" description="B TOFxE Rates, Med." fid="195" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1076" description="B TOFxE Rates, Fast" fid="196" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1076" description="B TOFxE Rates, Fast" fid="196" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="5"/>
-  </CSField>
-  <CSField name="NIDD1077" description="B Basic Rates, Med." fid="197" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1077" description="B Basic Rates, Med." fid="197" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1078" description="B Basic Rates, Fast" fid="198" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1078" description="B Basic Rates, Fast" fid="198" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="195" bits="7"/>
-  </CSField>
-  <CSField name="NID10187" description="Integration Time" fid="199" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10187" description="Integration Time" fid="199" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="196" bits="0"/>
-  </CSField>
-  <CSField name="NID10188" description="Integration Mult. N1" fid="200" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10188" description="Integration Mult. N1" fid="200" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="197" bits="0"/>
-  </CSField>
-  <CSField name="NID10189" description="Integration Mult. N2" fid="201" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10189" description="Integration Mult. N2" fid="201" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="198" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1013" description="Global 14" fid="202" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="1" bits="0"/>
-    <globalOffset bytes="199" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1079" description="A TOFxE Rates TOF" fid="203" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1079" description="A TOFxE Rates TOF" fid="202" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="199" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1080" description="A He Hist TOF" fid="204" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1013" description="Global 14" fid="203" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="1" bits="0"/>
+    <globalOffset bytes="199" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1080" description="A He Hist TOF" fid="204" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="199" bits="2"/>
-  </CSField>
-  <CSField name="NIDD1081" description="B TOFxE Rates TOF" fid="205" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1081" description="B TOFxE Rates TOF" fid="205" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="199" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1082" description="B He Hist TOF" fid="206" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1082" description="B He Hist TOF" fid="206" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="199" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1083" description="A Iris Auto" fid="207" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1083" description="A Iris Auto" fid="207" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="200" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1014" description="Global 15" fid="208" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1014" description="Global 15" fid="208" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="200" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1084" description="Reserved" fid="209" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1084" description="Reserved" fid="209" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="6"/>
     <globalOffset bytes="200" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1085" description="A Iris Step" fid="210" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1085" description="A Iris Step" fid="210" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="1"/>
     <globalOffset bytes="200" bits="7"/>
-  </CSField>
-  <CSField name="NIDD1086" description="B Iris Auto" fid="211" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1086" description="B Iris Auto" fid="211" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="202" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1015" description="Global 16" fid="212" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1015" description="Global 16" fid="212" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="202" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1087" description="Reserved" fid="213" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1087" description="Reserved" fid="213" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="6"/>
     <globalOffset bytes="202" bits="1"/>
-  </CSField>
-  <CSField name="NIDD1088" description="B Iris Step" fid="214" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1088" description="B Iris Step" fid="214" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="1"/>
     <globalOffset bytes="202" bits="7"/>
-  </CSField>
-  <CSField name="NID10200" description="LUT Checksum" fid="215" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID10200" description="LUT Checksum" fid="215" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="204" bits="0"/>
-  </CSField>
-  <CSField name="NIDG1019" description="Global 20" fid="216" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
-    <size bytes="2" bits="0"/>
-    <globalOffset bytes="206" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1099" description="Reserved" fid="217" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1099" description="Reserved" fid="216" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="3"/>
     <globalOffset bytes="206" bits="0"/>
-  </CSField>
-  <CSField name="NIDD1100" description="Event Board Heater" fid="218" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDG1019" description="Global 20" fid="217" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+    <size bytes="2" bits="0"/>
+    <globalOffset bytes="206" bits="0"/>
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1100" description="Event Board Heater" fid="218" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="206" bits="3"/>
-  </CSField>
-  <CSField name="NIDD1101" description="Reserved" fid="219" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1101" description="Reserved" fid="219" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="2"/>
     <globalOffset bytes="206" bits="4"/>
-  </CSField>
-  <CSField name="NIDD1102" description="LVPS Heater 2" fid="220" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1102" description="LVPS Heater 2" fid="220" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="206" bits="6"/>
-  </CSField>
-  <CSField name="NIDD1103" description="LVPS Heater 1" fid="221" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1103" description="LVPS Heater 1" fid="221" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="0" bits="1"/>
     <globalOffset bytes="206" bits="7"/>
-  </CSField>
-  <CSField name="NIDD1104" description="Reserved" fid="222" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NIDD1104" description="Reserved" fid="222" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="207" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>

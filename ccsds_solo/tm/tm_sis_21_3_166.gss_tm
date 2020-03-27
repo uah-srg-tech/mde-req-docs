@@ -5,13 +5,13 @@
 	<level0_filter file="tm_sis_21_3_166_filter_level_0(v1)"/>
 	<PI1 name="SID" val="166" gssField="tm_sis_21_3_166(v1).NID10001"/>
 	<fields>
-		<Field name="Reserved" gssField="tm_sis_21_3_166(v1).NIDD1105"/>
 		<Field name="Global 21" gssField="tm_sis_21_3_166(v1).NIDG1020"/>
+		<Field name="Reserved" gssField="tm_sis_21_3_166(v1).NIDD1105"/>
 		<Field name="Burst Trigger" gssField="tm_sis_21_3_166(v1).NIDD1106" enumRef="CIDT1009TM"/>
 		<Field name="Iris Flag" gssField="tm_sis_21_3_166(v1).NIDD1107" enumRef="CIDT1024TM"/>
 		<Field name="Abort Flag" gssField="tm_sis_21_3_166(v1).NIDD1108" enumRef="CIDT1025TM"/>
-		<Field name="Global 22" gssField="tm_sis_21_3_166(v1).NIDG1021"/>
 		<Field name="Reserved" gssField="tm_sis_21_3_166(v1).NIDD1109"/>
+		<Field name="Global 22" gssField="tm_sis_21_3_166(v1).NIDG1021"/>
 		<Field name="Iris Position" gssField="tm_sis_21_3_166(v1).NIDD1110"/>
 		<Field name="Int. Time" gssField="tm_sis_21_3_166(v1).NID10412"/>
 		<Field name="B Test Pulse" gssField="tm_sis_21_3_166(v1).NID10445"/>

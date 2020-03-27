@@ -40,14 +40,14 @@ GSSFormatFormat tm_epd_5_1_4867 {
 	GSSFormatCSField {
 		fid := 2;
 		pfid := 0;
-		name := "NIDD0193";
-		description := "Index Table";
+		name := "NIDG0192";
+		description := "IndexBlock code";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 0;
-			bits := 2;
+			bytes := 1;
+			bits := 0;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 2;
@@ -57,14 +57,14 @@ GSSFormatFormat tm_epd_5_1_4867 {
 	GSSFormatCSField {
 		fid := 3;
 		pfid := 0;
-		name := "NIDG0192";
-		description := "IndexBlock code";
+		name := "NIDD0193";
+		description := "Index Table";
 		type := structured;
 		byteOrder := big_endian;
 		firstBit := MSB;
 		GSSFormatSize {
-			bytes := 1;
-			bits := 0;
+			bytes := 0;
+			bits := 2;
 		};
 		GSSFormatGlobalOffset {
 			bytes := 2;

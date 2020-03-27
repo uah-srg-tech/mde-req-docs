@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSFilterMintermFilter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/filter" xmlns:gss_1="http://srg.aut.uah.es/gss/format" name="tm_sis_1_8_40702_filter_level_1" uri="es.uah.aut.srg.tm_sis_1_8_40702_filter_level_1" version="v1" description="1,8 Unknown Opcode">
   <formatFile href="../tmFormats/tm_sis_1_8_40702.xmi#/"/>
-  <BoolVar id="0" name="NID10240_40702" constantType="decimal">
-    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_1_8_40702.xmi#//@CSField.3"/>
+  <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="NID10240_40702" constantType="decimal">
     <Op type="equal"/>
+    <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/tm_sis_1_8_40702.xmi#//@Field.3"/>
     <Value xsi:type="gss:GSSFilterConstant" value="40702"/>
   </BoolVar>
   <Minterm id="0">

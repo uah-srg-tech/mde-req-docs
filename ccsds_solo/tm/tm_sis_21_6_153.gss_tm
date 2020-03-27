@@ -3,8 +3,8 @@
 	<level1_filter file="tm_sis_21_6_153_filter_level_1(v1)"/>
 	<from_level0_import file="EPD_PUS_TM_DATA_FROM_CCSDS_TM(v1)"/>
 	<level0_filter file="tm_sis_21_6_153_filter_level_0(v1)"/>
-	<PI1 name="SID" val="153" gssField="tm_sis_21_6_153(v1).NID10001"/>
 	<fields>
+		<Field name="SID" gssField="tm_sis_21_6_153(v1).NID10001"/>
 		<Field name="Global 21" gssField="tm_sis_21_6_153(v1).NIDG1020"/>
 		<Field name="Reserved" gssField="tm_sis_21_6_153(v1).NIDD1105"/>
 		<Field name="Burst Trigger" gssField="tm_sis_21_6_153(v1).NIDD1106" enumRef="CIDT1009TM"/>

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="ASCII"?>
-<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_101" uri="es.uah.aut.srg.tm_epd_3_25_101" version="v1" description="YID52013: TM 3,25 HK SID101 to SSMM" protocol="EPD_PUS" type="TM">
-  <CSField name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+<gss:GSSFormatFormat xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/format" name="tm_epd_3_25_101" uri="es.uah.aut.srg.tm_epd_3_25_101" version="v1" description="YID52013: TM 3,25 HK SID101 to SSMM" protocol="EPD_PUS" type="TM">
+  <Field xsi:type="gss:GSSFormatCSField" name="SourceData" fid="0" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="31" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00030" description="Structure ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00030" description="Structure ID" fid="1" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="0" bits="0"/>
-  </CSField>
-  <CSField name="NID00047" description="OBT" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00047" description="OBT" fid="2" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="6" bits="0"/>
     <globalOffset bytes="1" bits="0"/>
-  </CSField>
-  <CSField name="NID00031" description="Validity Flag" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00031" description="Validity Flag" fid="3" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="5" bits="0"/>
-  </CSField>
-  <CSField name="NID00056" description="ElecFlux40" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00056" description="ElecFlux40" fid="4" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="6" bits="0"/>
-  </CSField>
-  <CSField name="NID00057" description="ElecFlux60" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00057" description="ElecFlux60" fid="5" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="10" bits="0"/>
-  </CSField>
-  <CSField name="NID00058" description="ElecFlux100" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00058" description="ElecFlux100" fid="6" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="14" bits="0"/>
-  </CSField>
-  <CSField name="NID00059" description="ElecFlux200" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00059" description="ElecFlux200" fid="7" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="18" bits="0"/>
-  </CSField>
-  <CSField name="NID00060" description="Prot500" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00060" description="Prot500" fid="8" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="4" bits="0"/>
     <globalOffset bytes="22" bits="0"/>
-  </CSField>
-  <CSField name="NID00061" description="Burst Flags" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00061" description="Burst Flags" fid="9" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="1" bits="0"/>
     <globalOffset bytes="26" bits="0"/>
-  </CSField>
-  <CSField name="NID00097" description="SID100_SPARE" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
+  </Field>
+  <Field xsi:type="gss:GSSFormatCSField" name="NID00097" description="SID100_SPARE" fid="10" pfid="0" type="structured" byteOrder="big_endian" firstBit="MSB">
     <size bytes="2" bits="0"/>
     <globalOffset bytes="27" bits="0"/>
-  </CSField>
+  </Field>
 </gss:GSSFormatFormat>
