@@ -5,8 +5,8 @@ GSSCampaignCampaign dummy {
 		environment := dummyEnv(v1);
 		scenarioRef := "dummyEnv(v1)::Dummy Scenario 1";
 	};
-	GSSCampaignTests {
-		GSSCampaignTestCase {
+	GSSTestListTestList {
+		GSSTestListTestCase {
 			name := "dummy";
 			procedure := sample_proc(v1);
 		};

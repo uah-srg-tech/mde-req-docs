@@ -126,17 +126,17 @@
     </GlobalVars>
     <Monitors>
       <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.0"/>
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.0"/>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.1">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.2">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.0/@GlobalVars/@GlobalVar.2">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
     </Monitors>
   </scenario>
@@ -298,17 +298,17 @@
     </GlobalVars>
     <Monitors>
       <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.0"/>
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.0"/>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.1">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.2">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.1/@GlobalVars/@GlobalVar.2">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
     </Monitors>
   </scenario>
@@ -470,17 +470,17 @@
     </GlobalVars>
     <Monitors>
       <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.0"/>
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.0"/>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.1">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.2">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.2/@GlobalVars/@GlobalVar.2">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
     </Monitors>
   </scenario>
@@ -610,17 +610,17 @@
     </GlobalVars>
     <Monitors>
       <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.0"/>
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.0"/>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.1">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.2">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.3/@GlobalVars/@GlobalVar.2">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
     </Monitors>
   </scenario>
@@ -750,17 +750,17 @@
     </GlobalVars>
     <Monitors>
       <monitor xsi:type="gss_2:GSSScenarioModify" name="IncSequenceNumber" type="increment" value="1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.0"/>
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.0"/>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmVal" name="TransTo" type="alarm1">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.1">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.1">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="tm_epd_5_1_transition_to.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
       <monitor xsi:type="gss_2:GSSScenarioAlarmMsg" name="DummyMessage1" type="alarm1" text="Off+On ICU">
-        <GV xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.2">
+        <GVRef xsi:type="gss_2:GSSScenarioGVFiltered" GlobalVarRef="//@scenario.4/@GlobalVars/@GlobalVar.2">
           <filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
-        </GV>
+        </GVRef>
       </monitor>
     </Monitors>
   </scenario>

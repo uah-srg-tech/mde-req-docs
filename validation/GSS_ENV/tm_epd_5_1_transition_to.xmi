@@ -4,27 +4,27 @@
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="Packet_Type_5" constantType="decimal">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.12"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="5"/>
+    <value xsi:type="gss:GSSFilterConstant" value="5"/>
   </BoolVar>
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="Packet_Subtype_1" constantType="decimal">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.13"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="1"/>
+    <value xsi:type="gss:GSSFilterConstant" value="1"/>
   </BoolVar>
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="2" name="Source_Data_Safe" constantType="hex">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.19"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="0x100400" mask="0xFFFF00"/>
+    <value xsi:type="gss:GSSFilterConstant" mask="0xFFFF00" value="0x100400"/>
   </BoolVar>
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="3" name="Source_Data_Config" constantType="hex">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.19"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="0x10020000" mask="0xFFFF0000"/>
+    <value xsi:type="gss:GSSFilterConstant" mask="0xFFFF0000" value="0x10020000"/>
   </BoolVar>
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="4" name="Source_Data_Oper" constantType="hex">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatVSField" href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#//@Field.19"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="0x10030000" mask="0xFFFF0000"/>
+    <value xsi:type="gss:GSSFilterConstant" mask="0xFFFF0000" value="0x10030000"/>
   </BoolVar>
   <Minterm id="0">
     <BoolVarRef idRef="0"/>
