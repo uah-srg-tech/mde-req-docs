@@ -112,7 +112,7 @@ mapping testsetup::VTestSetupPacketConfiguration::GenerateConfiguration() : doc:
 
 mapping testsetup::VTestSetupActionsSection::GenerateActionsSection() : doc::DDSection {
 	result.name := "Actions";
-	result.sectionContent += self.action.map GenerateAction();
+	result.sectionContent += self.actions.map GenerateAction();
 }
 
 mapping testsetup::VTestSetupAction::GenerateAction() : doc::DDBody {
@@ -140,7 +140,7 @@ mapping testsetup::VTestSetupAction::GenerateAction() : doc::DDBody {
 
 mapping testsetup::VTestSetupActionsOverVariablesSection::GenerateActionsOverVariablesSection() : doc::DDSection {
 	result.name := "Actions over variables";
-	result.sectionContent += self.actionOverVariable.map GenerateActionOverVariable();
+	result.sectionContent += self.actionsOverVariable.map GenerateActionOverVariable();
 }
 
 mapping testsetup::VTestSetupActionOverVariable::GenerateActionOverVariable() : doc::DDBody {
