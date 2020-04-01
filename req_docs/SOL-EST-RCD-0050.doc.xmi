@@ -1037,7 +1037,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="EIDA-333"/>
+              <text content="EIDA-3333"/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
@@ -1590,73 +1590,6 @@
           </bodyContent>
         </sectionContent>
       </sectionContent>
-      <sectionContent xsi:type="micobs.doc:DDSection" name="Mission Operations">
-        <sectionContent xsi:type="micobs.doc:DDBody">
-          <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowColummShadow" width="100">
-            <rows>
-              <cells width="20">
-                <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="Name"/>
-                  </paragraphContent>
-                </bodyContent>
-              </cells>
-              <cells>
-                <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="R-3333"/>
-                  </paragraphContent>
-                </bodyContent>
-              </cells>
-            </rows>
-            <rows>
-              <cells>
-                <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="Description"/>
-                  </paragraphContent>
-                </bodyContent>
-              </cells>
-              <cells>
-                <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                  <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content="The PI shall comply with the relevant requirements specified in the Solar Orbiter Operation Requirements Document "/>
-                  </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DHyperlink" reference="//@section.1/@sectionContent.0/@bodyContent.0">
-                    <run italics="true">
-                      <text content="NR-27"/>
-                    </run>
-                  </paragraphContent>
-                  <paragraphContent xsi:type="micobs.doctpl:DRun">
-                    <text content=" on Spacecraft Control (Section 2.1) and referenced documents therein."/>
-                  </paragraphContent>
-                </bodyContent>
-              </cells>
-            </rows>
-            <rows>
-              <cells>
-                <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="Validation Method"/>
-                  </paragraphContent>
-                </bodyContent>
-              </cells>
-              <cells>
-                <bodyContent xsi:type="micobs.doctpl:DParagraph">
-                  <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="T"/>
-                  </paragraphContent>
-                </bodyContent>
-              </cells>
-            </rows>
-          </bodyContent>
-          <bodyContent xsi:type="micobs.doctpl:DParagraph">
-            <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text content="EIDA-"/>
-            </paragraphContent>
-          </bodyContent>
-        </sectionContent>
-      </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Software Maintenance">
       <sectionContent xsi:type="micobs.doc:DDBody"/>
@@ -1674,7 +1607,7 @@
               <cells>
                 <bodyContent xsi:type="micobs.doctpl:DParagraph">
                   <paragraphContent xsi:type="micobs.doctpl:DRun" bold="true">
-                    <text content="R-188"/>
+                    <text content="R-375"/>
                   </paragraphContent>
                 </bodyContent>
               </cells>

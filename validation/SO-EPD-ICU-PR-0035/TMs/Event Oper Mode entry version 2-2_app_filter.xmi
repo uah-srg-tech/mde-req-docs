@@ -4,17 +4,17 @@
     <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="RID_5_1_4099" constantType="decimal">
       <Op type="equal"/>
       <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@Field.1"/>
-      <Value xsi:type="gss:GSSFilterConstant" value="4099"/>
+      <value xsi:type="gss:GSSFilterConstant" value="4099"/>
     </BoolVar>
     <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="ASW Version_2" constantType="decimal">
       <Op type="equal"/>
       <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@Field.2"/>
-      <Value xsi:type="gss:GSSFilterConstant" value="2"/>
+      <value xsi:type="gss:GSSFilterConstant" value="2"/>
     </BoolVar>
     <BoolVar xsi:type="gss:GSSFilterBoolVar" id="2" name="ASW Subversion_2" constantType="decimal">
       <Op type="equal"/>
       <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_5_1_4099.xmi#//@Field.3"/>
-      <Value xsi:type="gss:GSSFilterConstant" value="2"/>
+      <value xsi:type="gss:GSSFilterConstant" value="2"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>

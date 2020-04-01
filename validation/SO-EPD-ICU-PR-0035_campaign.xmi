@@ -11,7 +11,7 @@
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300" prevAction="reset" prevActionParam="0">
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_1-10300.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_3_TC-10310">
@@ -26,7 +26,7 @@
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_17-10800.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900" prevAction="reset" prevActionParam="0">
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_1-10900.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_CONF_SERV_3_TC-10910">
@@ -41,7 +41,7 @@
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_17-11300.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400" prevAction="reset" prevActionParam="0">
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_1-11400.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_CONF_SERV_3_TC-11410">
@@ -56,7 +56,7 @@
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_17-11800.xmi#/"/>
 		</TestCase>
-		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900" prevAction="reset" prevActionParam="0">
+		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900">
 			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_1-11900.xmi#/"/>
 		</TestCase>
 		<TestCase name="TP_FT_SOLO_EPD_BASE_ASW_OPER_SERV_3_TC-11910">

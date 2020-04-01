@@ -4,12 +4,12 @@
     <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="Error code TM 1,8_40030" constantType="decimal">
       <Op type="equal"/>
       <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@Field.3"/>
-      <Value xsi:type="gss:GSSFilterConstant" value="40030"/>
+      <value xsi:type="gss:GSSFilterConstant" value="40030"/>
     </BoolVar>
     <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="TC Sequence Control_0xC008" constantType="hex">
       <Op type="equal"/>
       <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_8_40030.xmi#//@Field.2"/>
-      <Value xsi:type="gss:GSSFilterConstant" value="0xC008"/>
+      <value xsi:type="gss:GSSFilterConstant" value="0xC008"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>

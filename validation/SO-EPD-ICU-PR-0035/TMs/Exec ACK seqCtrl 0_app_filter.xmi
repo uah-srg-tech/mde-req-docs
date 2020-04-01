@@ -4,7 +4,7 @@
     <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="TC Sequence Control_0xC000" constantType="hex">
       <Op type="equal"/>
       <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#//@Field.2"/>
-      <Value xsi:type="gss:GSSFilterConstant" value="0xC000"/>
+      <value xsi:type="gss:GSSFilterConstant" value="0xC000"/>
     </BoolVar>
     <Minterm id="0">
       <BoolVarRef idRef="0"/>

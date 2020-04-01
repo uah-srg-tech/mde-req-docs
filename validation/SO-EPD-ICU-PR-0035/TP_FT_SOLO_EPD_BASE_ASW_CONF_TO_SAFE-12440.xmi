@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gss:GSSTestProcTestProc name="TP_FT_SOLO_EPD_BASE_ASW_CONF_TO_SAFE-12440" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/test_proc" xmlns:gss_1="http://srg.aut.uah.es/gss/filter">
-        <step name="Transition Baseline Operational to Safe" id="0" mode="continuous">
-          <inputs xsi:type="gss:GSSTestProcInputs">
-            <input xsi:type="gss:GSSTestProcInputLevel1" name="Transition to Safe" ifRef="0" delay_value="500" delay_unit="miliseconds">
-              <app_to_level1 href="TCs/Transition to Safe_app_export.xmi#/"/>
-              <level1 href="../../ccsds_solo/tcFormats/tc_epd_128_1.xmi#/"/>
-              <level1_to_level0 href="../../ccsds_solo/exports/tc_epd_128_1_export_ack.xmi#/"/>
-            </input>
-          </inputs>
-          <outputs checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
-            <output xsi:type="gss:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
-              <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
-              <level1_filter apply_def_filter="no"/>
-              <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
-              <level0_filter apply_def_filter="yes">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
-              </level0_filter>
-            </output>
-            <output xsi:type="gss:GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
-              <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
-              <level1_filter apply_def_filter="no"/>
-              <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
-              <level0_filter apply_def_filter="yes">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
-              </level0_filter>
-            </output>
-            <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
-              <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
-              <level1_filter apply_def_filter="no">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event SIS in Safe state_app_filter.xmi#/"/>
-              </level1_filter>
-              <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
-              <level0_filter apply_def_filter="yes">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.xmi#/"/>
-              </level0_filter>
-            </output>
-            <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
-              <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
-              <level1_filter apply_def_filter="no">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event SpW Ready_app_filter.xmi#/"/>
-              </level1_filter>
-              <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
-              <level0_filter apply_def_filter="yes">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
-              </level0_filter>
-            </output>
-            <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
-              <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4097.xmi#/"/>
-              <level1_filter apply_def_filter="no">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event Boot Mode entry_app_filter.xmi#/"/>
-              </level1_filter>
-              <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
-              <level0_filter apply_def_filter="yes">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.xmi#/"/>
-              </level0_filter>
-            </output>
-            <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event Safe Mode entry" id="5" ifRef="0">
-              <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4100.xmi#/"/>
-              <level1_filter apply_def_filter="no">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event Safe Mode entry_app_filter.xmi#/"/>
-              </level1_filter>
-              <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
-              <level0_filter apply_def_filter="yes">
-                <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4100_filter_level_0.xmi#/"/>
-              </level0_filter>
-            </output>
-          </outputs>
-        </step>
+    <step name="Transition Baseline Operational to Safe" id="0" mode="continuous">
+      <inputs xsi:type="gss:GSSTestProcInputs">
+        <input xsi:type="gss:GSSTestProcInputLevel1" name="Transition to Safe" ifRef="0" delay_value="500" delay_unit="miliseconds">
+          <app_to_level1 href="TCs/Transition to Safe_app_export.xmi#/"/>
+          <level1 href="../../ccsds_solo/tcFormats/tc_epd_128_1.xmi#/"/>
+          <level1_to_level0 href="../../ccsds_solo/exports/tc_epd_128_1_export_ack.xmi#/"/>
+        </input>
+      </inputs>
+      <outputs checkmode="all" valid_time_interval_value="2000" valid_time_interval_unit="miliseconds">
+        <output xsi:type="gss:GSSTestProcOutputLevel1" name="Accept ACK" id="0" ifRef="0">
+          <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_1.xmi#/"/>
+          <level1_filter apply_def_filter="no"/>
+          <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+          <level0_filter apply_def_filter="yes">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_1_filter_level_0.xmi#/"/>
+          </level0_filter>
+        </output>
+        <output xsi:type="gss:GSSTestProcOutputLevel1" name="Exec ACK" id="1" ifRef="0">
+          <level1 href="../../ccsds_solo/tmFormats/tm_epd_1_7.xmi#/"/>
+          <level1_filter apply_def_filter="no"/>
+          <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+          <level0_filter apply_def_filter="yes">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_1_7_filter_level_0.xmi#/"/>
+          </level0_filter>
+        </output>
+        <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event SIS in Safe state" id="2" ifRef="0">
+          <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4354.xmi#/"/>
+          <level1_filter apply_def_filter="no">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event SIS in Safe state_app_filter.xmi#/"/>
+          </level1_filter>
+          <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+          <level0_filter apply_def_filter="yes">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4354_filter_level_0.xmi#/"/>
+          </level0_filter>
+        </output>
+        <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event SpW Ready" id="3" ifRef="0">
+          <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4101.xmi#/"/>
+          <level1_filter apply_def_filter="no">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event SpW Ready_app_filter.xmi#/"/>
+          </level1_filter>
+          <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+          <level0_filter apply_def_filter="yes">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4101_filter_level_0.xmi#/"/>
+          </level0_filter>
+        </output>
+        <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event Boot Mode entry" id="4" ifRef="0">
+          <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4097.xmi#/"/>
+          <level1_filter apply_def_filter="no">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event Boot Mode entry_app_filter.xmi#/"/>
+          </level1_filter>
+          <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+          <level0_filter apply_def_filter="yes">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4097_filter_level_0.xmi#/"/>
+          </level0_filter>
+        </output>
+        <output xsi:type="gss:GSSTestProcOutputLevel1" name="Event Safe Mode entry" id="5" ifRef="0">
+          <level1 href="../../ccsds_solo/tmFormats/tm_epd_5_1_4100.xmi#/"/>
+          <level1_filter apply_def_filter="no">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="TMs/Event Safe Mode entry_app_filter.xmi#/"/>
+          </level1_filter>
+          <level1_from_level0 href="../../ccsds_solo/imports/EPD_PUS_TM_DATA_FROM_CCSDS_TM.xmi#/"/>
+          <level0_filter apply_def_filter="yes">
+            <extra_filter xsi:type="gss_1:GSSFilterMintermFilter" href="../../ccsds_solo/filtersBottomLevel/tm_epd_5_1_4100_filter_level_0.xmi#/"/>
+          </level0_filter>
+        </output>
+      </outputs>
+    </step>
 </gss:GSSTestProcTestProc>
