@@ -4,12 +4,12 @@
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="0" name="Version_Number_0" constantType="decimal">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@Field.2"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="0"/>
+    <value xsi:type="gss:GSSFilterConstant" value="0"/>
   </BoolVar>
   <BoolVar xsi:type="gss:GSSFilterBoolVar" id="1" name="PUS_Version_1" constantType="decimal">
     <Op type="equal"/>
     <FieldRef xsi:type="gss_1:GSSFormatCSField" href="../tmFormats/CCSDS_TM.xmi#//@Field.10"/>
-    <Value xsi:type="gss:GSSFilterConstant" value="1"/>
+    <value xsi:type="gss:GSSFilterConstant" value="1"/>
   </BoolVar>
   <BoolVar xsi:type="gss:GSSFilterBoolVarFDIC" id="2" name="CRC">
     <Op type="equal"/>
