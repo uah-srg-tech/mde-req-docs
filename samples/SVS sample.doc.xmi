@@ -169,7 +169,7 @@
             <items>
               <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="DummyConf 0"/>
+                  <text content="Dummy Conf A"/>
                 </paragraphContent>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content=". Filter Status: "/>
@@ -376,7 +376,7 @@
             <items>
               <paragraph>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
-                  <text content="DummyConf 1"/>
+                  <text content="Dummy Conf B"/>
                 </paragraphContent>
                 <paragraphContent xsi:type="micobs.doctpl:DRun">
                   <text content=". Filter Status: "/>

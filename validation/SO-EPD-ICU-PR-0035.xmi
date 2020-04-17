@@ -1132,7 +1132,7 @@
     <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/38/@step.0" output_idref_from_prev_step="/38/@step.0/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;2&quot;"/>
+        <enable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Enable HK SID 100" id="2" mode="continuous">
@@ -1190,13 +1190,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;2&quot;"/>
+        <disable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/38/@step.4" output_idref_from_prev_step="/38/@step.4/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
@@ -1225,13 +1225,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/38/@step.6" output_idref_from_prev_step="/38/@step.6/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Restore configuration" id="8" mode="continuous">
@@ -1239,7 +1239,7 @@
         <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/43"/>
       </inputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
   </gss_1:GSSTestProcTestProc>
@@ -2951,7 +2951,7 @@
     <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/105/@step.0" output_idref_from_prev_step="/105/@step.0/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;2&quot;"/>
+        <enable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Enable HK SID 100" id="2" mode="continuous">
@@ -3009,13 +3009,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;2&quot;"/>
+        <disable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/105/@step.4" output_idref_from_prev_step="/105/@step.4/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
@@ -3044,13 +3044,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/105/@step.6" output_idref_from_prev_step="/105/@step.6/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Restore configuration" id="8" mode="continuous">
@@ -3058,7 +3058,7 @@
         <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/110"/>
       </inputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
   </gss_1:GSSTestProcTestProc>
@@ -4842,7 +4842,7 @@
     <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/173/@step.0" output_idref_from_prev_step="/173/@step.0/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;2&quot;"/>
+        <enable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Enable HK SID 100" id="2" mode="continuous">
@@ -4900,13 +4900,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;2&quot;"/>
+        <disable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/173/@step.4" output_idref_from_prev_step="/173/@step.4/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
@@ -4935,13 +4935,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/173/@step.6" output_idref_from_prev_step="/173/@step.6/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Restore configuration" id="8" mode="continuous">
@@ -4949,7 +4949,7 @@
         <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/178"/>
       </inputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
   </gss_1:GSSTestProcTestProc>
@@ -6490,7 +6490,7 @@
     <step name="Check HK SID 100 is disabled" id="1" mode="action" prev_step_idref="/231/@step.0" output_idref_from_prev_step="/231/@step.0/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID100 counter is not increased" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;2&quot;"/>
+        <enable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Enable HK SID 100" id="2" mode="continuous">
@@ -6548,13 +6548,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;2&quot;"/>
+        <disable_print id="2"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 5 seconds now" id="5" mode="action" prev_step_idref="/231/@step.4" output_idref_from_prev_step="/231/@step.4/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 5 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Change back HK SID 0 period to 10 seconds" id="6" mode="continuous">
@@ -6583,13 +6583,13 @@
         </output>
       </outputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Check HK SID 0 period is 10 seconds again" id="7" mode="action" prev_step_idref="/231/@step.6" output_idref_from_prev_step="/231/@step.6/@outputs/@output.1">
       <inputs xsi:type="gss_1:GSSTestProcAction" message="SID0 period is 10 seconds" actionType="tmtc_checking" span_value="&quot;30&quot;" span_unit="seconds"/>
       <specialPackets>
-        <enable_print id="&quot;0&quot;"/>
+        <enable_print id="0"/>
       </specialPackets>
     </step>
     <step name="Restore configuration" id="8" mode="continuous">
@@ -6597,7 +6597,7 @@
         <input xsi:type="gss_1:GSSTestProcInputLevel0" name="dummy" ifRef="1" delay_value="0" delay_unit="miliseconds" app_to_level0="/236"/>
       </inputs>
       <specialPackets>
-        <disable_print id="&quot;0&quot;"/>
+        <disable_print id="0"/>
       </specialPackets>
     </step>
   </gss_1:GSSTestProcTestProc>

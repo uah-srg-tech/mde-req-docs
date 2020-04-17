@@ -373,7 +373,7 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 					paragraph := object DParagraph {
 						paragraphContent += object DRun {
 							text := object DText {
-								content := self.configurations._configuration->at(i)._configuration.name;
+								content := self.configurations._configuration->at(i).selectedConfiguration.name;
 							}
 						};
 						if(self.configurations._configuration->at(i).filterStatus != VTestSetupConfigurationStatus::not_set) {
@@ -515,7 +515,8 @@ helper svs::VSVSProcedureStep::GenerateProcedureStep(in id : Integer) : OrderedS
 			paragraphContent += object DRun {
 				text := object DText {
 					content := "Action: ";
-					if(action.selectedAction.type = VTestSetupActionType::checking) {
+					if((action.selectedAction.type = VTestSetupActionType::checking) or 
+						(action.selectedAction.type = VTestSetupActionType::tmtc_checking)) {
 						content := content + "Check ";
 					} else {
 						content := content + "Perform ";

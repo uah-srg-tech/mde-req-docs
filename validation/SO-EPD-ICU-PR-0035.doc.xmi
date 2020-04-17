@@ -3960,7 +3960,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is not increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -4059,7 +4059,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -4145,7 +4145,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 5 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -4231,7 +4231,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 10 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
@@ -6095,7 +6095,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is not increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -6194,7 +6194,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -6280,7 +6280,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 5 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -6366,7 +6366,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 10 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
@@ -8297,7 +8297,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is not increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -8396,7 +8396,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -8482,7 +8482,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 5 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -8568,7 +8568,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 10 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
@@ -10288,7 +10288,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is not increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -10387,7 +10387,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID100 counter is increased for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -10473,7 +10473,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 5 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
@@ -10559,7 +10559,7 @@
           </bodyContent>
           <bodyContent xsi:type="micobs.doctpl:DParagraph" indent="1.25">
             <paragraphContent xsi:type="micobs.doctpl:DRun">
-              <text/>
+              <text content="Action: Check SID0 period is 10 seconds for &quot;30&quot; seconds"/>
             </paragraphContent>
           </bodyContent>
         </sectionContent>
