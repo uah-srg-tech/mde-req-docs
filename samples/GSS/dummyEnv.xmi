@@ -24,6 +24,12 @@
         </LevelIn>
       </Interface>
     </Interfaces>
+    <SpecialPackets>
+      <SpecialPacket name="Dummy Special 1" status="enabled" id="0" ifRef="0" levels="0" levelRef="0">
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        <printingData/>
+      </SpecialPacket>
+    </SpecialPackets>
   </scenario>
   <scenario name="Dummy Scenario 2">
     <gss_options>
@@ -43,5 +49,11 @@
         </LevelInOut>
       </MainInterface>
     </Interfaces>
+    <SpecialPackets>
+      <SpecialPacket name="Dummy Special 2" status="enabled" id="0" ifRef="0" levels="0" levelRef="0">
+        <inputFilter xsi:type="gss_1:GSSFilterMintermFilter" href="../../Ifaces/dummy/dummy_message_1.xmi#/"/>
+        <printingData/>
+      </SpecialPacket>
+    </SpecialPackets>
   </scenario>
 </gss:GSSEnvironmentEnvironment>

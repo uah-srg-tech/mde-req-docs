@@ -57,6 +57,20 @@ GSSEnvironmentEnvironment dummyEnv {
 				};
 			};
 		};
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "Dummy Special 1";
+				id := 0;
+				ifRef := 0;
+				levels := 0;
+				levelRef := 0;
+				inputFilter := DUMMY_MESSAGE_1(v1);
+				GSSScenarioPrintingData {
+					printStatus := disabled;
+				};
+			};
+		};
 	};
 	GSSScenarioScenario "Dummy Scenario 2" {
 		GSSScenarioOptions {
@@ -99,6 +113,20 @@ GSSEnvironmentEnvironment dummyEnv {
 					TMformat := DUMMY(v1);
 					TCformat := DUMMY(v1);
 					inputFilter := DUMMY_MESSAGE_1(v1);
+				};
+			};
+		};
+		GSSScenarioSpecialPackets {
+			GSSScenarioSpecialPacket {
+				status := enabled;
+				name := "Dummy Special 2";
+				id := 0;
+				ifRef := 0;
+				levels := 0;
+				levelRef := 0;
+				inputFilter := DUMMY_MESSAGE_1(v1);
+				GSSScenarioPrintingData {
+					printStatus := disabled;
 				};
 			};
 		};
