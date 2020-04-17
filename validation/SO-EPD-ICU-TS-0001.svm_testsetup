@@ -46,27 +46,27 @@
 		</Interface>
 	</Interfaces>
 	<PacketConfigurations>
-		<PacketConfiguration name="HK SID0" id="0">
+		<PacketConfiguration name="HK SID0">
 			<run>
 				<text>TM(3.25) HK SID0 must be filtered during all test campaign unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
 			</run>
 		</PacketConfiguration>
-		<PacketConfiguration name="HK SID10" id="1">
+		<PacketConfiguration name="HK SID10">
 			<run>
 				<text>TM(3.25) HK SID10 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
 			</run>
 		</PacketConfiguration>
-		<PacketConfiguration name="HK SID100" id="2">
+		<PacketConfiguration name="HK SID100">
 			<run>
 				<text>TM(3.25) HK SID100 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
 			</run>
 		</PacketConfiguration>
-		<PacketConfiguration name="HK SID101" id="3">
+		<PacketConfiguration name="HK SID101">
 			<run>
 				<text>TM(3.25) HK SID101 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
 			</run>
 		</PacketConfiguration>
-		<PacketConfiguration name="HK SID110" id="4">
+		<PacketConfiguration name="HK SID110">
 			<run>
 				<text>TM(3.25) HK SID110 must be filtered when ASW running unless it is specified. Information must not be logged during all test campaign unless it is specified</text>
 			</run>
@@ -122,15 +122,15 @@
 		</ActionOverVariable>
 	</ActionsOverVariables>
 	<Scenarios>
-		<Scenario name="Scenario 1" scenario="epd(v1).Scenario 1">
+		<Scenario name="Scenario 1" scenario="epd(v1)::Scenario 1">
 			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
 			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
 			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
-			<Configuration ref="HK SID0" defaultFilterStatus="on" defaultPrintStatus="off"/>
-			<Configuration ref="HK SID10" defaultFilterStatus="on" defaultPrintStatus="off"/>
-			<Configuration ref="HK SID100" defaultFilterStatus="on" defaultPrintStatus="off"/>
-			<Configuration ref="HK SID101" defaultFilterStatus="on" defaultPrintStatus="off"/>
-			<Configuration ref="HK SID110" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="HK SID0" ref="HK SID0" scenarioPacketConfig="3.25 SID0" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="HK SID10" ref="HK SID10" scenarioPacketConfig="3.25 SID10" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="HK SID100" ref="HK SID100" scenarioPacketConfig="3.25 SID100" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="HK SID101" ref="HK SID101" scenarioPacketConfig="3.25 SID101" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="HK SID110" ref="HK SID110" scenarioPacketConfig="3.25 SID110" defaultFilterStatus="on" defaultPrintStatus="off"/>
 			<Action ref="SID100 counter is not increased"/>
 			<Action ref="SID100 counter is increased"/>
 			<Action ref="SID0 period is 5 seconds"/>
@@ -200,7 +200,7 @@
 				<figureFromFile name="Scenario1" referenceFile="SVS_images/Scenario1.png" width="919" height="535" caption="Test Scenario 1"/>
 			</body>
 		</Scenario>
-		<Scenario name="Scenario 2" scenario="epd(v1).Scenario 2">
+		<Scenario name="Scenario 2" scenario="epd(v1)::Scenario 2">
 			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
 			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
 			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
@@ -256,7 +256,7 @@
 				<figureFromFile name="Scenario2" referenceFile="SVS_images/Scenario2.png" width="964" height="567" caption="Test Scenario 2"/>
 			</body>
 		</Scenario>
-		<Scenario name="Scenario 3" scenario="epd(v1).Scenario 3">
+		<Scenario name="Scenario 3" scenario="epd(v1)::Scenario 3">
 			<Interface name="SpW Wrong Port" ref="SpW" scenarioInterface="SpW Wrong Write Port"/>
 			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
 			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
@@ -276,7 +276,7 @@
 				</itemize>
 			</body>
 		</Scenario>
-		<Scenario name="Scenario 4" scenario="epd(v1).Scenario 4">
+		<Scenario name="Scenario 4" scenario="epd(v1)::Scenario 4">
 			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
 			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
 			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>
@@ -349,7 +349,7 @@
 				<figureFromFile name="Scenario4" referenceFile="SVS_images/Scenario4.png" width="916" height="645" caption="Test Scenario 4"/>
 			</body>
 		</Scenario>
-		<Scenario name="Scenario 5" scenario="epd(v1).Scenario 5">
+		<Scenario name="Scenario 5" scenario="epd(v1)::Scenario 5">
 			<Interface name="SpW" ref="SpW" scenarioInterface="SpW"/>
 			<Interface name="SpW TC" ref="SpW TC" scenarioInterface="SpW_TC"/>
 			<Interface name="Manual" ref="Manual" scenarioInterface="dummy"/>

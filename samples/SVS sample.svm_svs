@@ -115,7 +115,7 @@
 			<ProcedureSteps>
 				<Step name="Sample Test connection 0">
 					<Configurations>
-						<Configuration ref="DummyConf 0" filterStatus="off" />
+						<Configuration ref="Dummy Conf A" filterStatus="off" />
 					</Configurations>
 					<TelecommandSequence>
 						<Telecommand name="Test connection" interface="Dummy IF A" delay_value="120" delay_unit="miliseconds">
@@ -183,7 +183,7 @@
 				</Step>
 				<Step name="Sample Test Connection 3" prev_step="Sample Test Connection 2" prev_tm_from_prev_step="TM (1_7) 2">
 					<Configurations>
-						<Configuration ref="DummyConf 1" filterStatus="off" />
+						<Configuration ref="Dummy Conf B" filterStatus="off" />
 					</Configurations>
 					<TelecommandSequence>
 						<Telecommand name="Test connection" interface="Dummy IF C" delay_value="120" delay_unit="miliseconds">

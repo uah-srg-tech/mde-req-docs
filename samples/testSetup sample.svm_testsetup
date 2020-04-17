@@ -24,12 +24,12 @@
 		</Interface>
 	</Interfaces>
 	<PacketConfigurations>
-		<PacketConfiguration name="DummyConf 0" id="0">
+		<PacketConfiguration name="DummyConf 0">
 			<run>
 				<text>This is a dummy Configuration</text>
 			</run>
 		</PacketConfiguration>
-		<PacketConfiguration name="DummyConf 1" id="1">
+		<PacketConfiguration name="DummyConf 1">
 			<run>
 				<text>This is another dummy Configuration</text>
 			</run>
@@ -52,10 +52,10 @@
 		</Action>
 	</Actions>
 	<Scenarios>
-		<Scenario name="Dummy Scenario 1" scenario="dummyEnv(v1).Dummy Scenario 1">
+		<Scenario name="Dummy Scenario 1" scenario="dummyEnv(v1)::Dummy Scenario 1">
 			<Interface name="Dummy IF A" ref="DummyIF 0" scenarioInterface="Dummy 0"/>
 			<Interface name="Dummy IF B" ref="DummyIF 1" scenarioInterface="Dummy 1"/>
-			<Configuration ref="DummyConf 0" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="Dummy Conf A" ref="DummyConf 0" scenarioPacketConfig="Dummy Special 1" defaultFilterStatus="on" defaultPrintStatus="off"/>
 			<body>
 				<paragraph>
 					<run>
@@ -64,9 +64,9 @@
 				</paragraph>
 			</body>
 		</Scenario>
-		<Scenario name="Dummy Scenario 2" scenario="dummyEnv(v1).Dummy Scenario 2">
+		<Scenario name="Dummy Scenario 2" scenario="dummyEnv(v1)::Dummy Scenario 2">
 			<Interface name="Dummy IF C" ref="DummyIF 2" scenarioInterface="Dummy 2"/>
-			<Configuration ref="DummyConf 1" defaultFilterStatus="on" defaultPrintStatus="off"/>
+			<Configuration name="Dummy Conf B" ref="DummyConf 1" scenarioPacketConfig="Dummy Special 2" defaultFilterStatus="on" defaultPrintStatus="off"/>
 			<body>
 				<paragraph>
 					<run>
