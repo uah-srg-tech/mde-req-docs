@@ -1,4 +1,4 @@
-<SSS name="SRG-EPD ICUSW Project" id="SRG-EPD-SSS-001" issue="1" revision="0" date="12/04/2019">
+<SSS name="SRG-EPD ICUSW Project" id="SRG-EPD-SSS-001" issue="2" revision="0" date="12/04/2019">
 	<TBCsTBDs>
 		<TBC name="SampleSSSTBC1" description="Sample SSS TBC 1"/>
 		<TBD name="TBD Environment" description="Environment"/>
@@ -6,7 +6,7 @@
 		<TBD name="TBD PROMMBytes" description="MBytes available at PROM"/>
 		<TBD name="TBD EEPROMMBytes" description="MBytes available at EEPROM"/>
 		<TBD name="TBD RAMMBytes" description="MBytes available at RAM"/>
-		<TBD name="TBD DBG" description="TBD Debug"/>
+		<TBD name="XXX" description="XXX"/>
 	</TBCsTBDs>
 	<Introduction>
 		<subsection name="Purpose">
@@ -14,9 +14,6 @@
 				<paragraph>
 					<run>
 						<text>The Software System Specification defines and describes the specification of the EPD ICU Software of the SRG Mission.</text>
-					</run>
-					<run>
-						<text>DBG</text>
 					</run>
 				</paragraph>
 			</body>
@@ -26,6 +23,9 @@
 				<paragraph>
 					<run>
 						<text>This document applies to the EPD ICU Software of the SRG Mission. It does not provide information for the Ground Support Software (GSS), which is maintained separately as part of the Electronic Ground Support Equipment (EGSE). This document supplies information applicable to the Software System Specification.</text>
+					</run>
+					<run>
+						<text>DBG</text>
 					</run>
 				</paragraph>
 			</body>
@@ -78,7 +78,7 @@
 		</Abbreviation>
 		<Abbreviation name="EPD">
 			<run>
-				<text>Energetic Particle Detector</text>
+				<text>Energetic Particle Detector Perro</text>
 			</run>
 		</Abbreviation>
 		<Abbreviation name="GSS">
@@ -169,7 +169,7 @@
 						<text>. The SRG Energetic Particle Detector (EPD) suite consists of four sensors measuring </text>
 					</run>
 					<hyperlink reference="TBD Particles"/>
-					<run>
+					<run italics="true">
 						<text>. SRG EPD ICU Software purpose is to provide support to EPD sensors.</text>
 					</run>
 				</paragraph>
@@ -178,7 +178,7 @@
 		<GeneralCapabilities>
 			<body>
 				<paragraph>
-					<run bold="true">
+					<run>
 						<text>The main capabilities of the SRG EPD ICU Software are the following:</text>
 					</run>
 				</paragraph>
@@ -432,7 +432,7 @@
 				</row>
 			</basicTable>
 			<paragraph>
-				<run bold="true">
+				<run bold="false">
 					<text>SSS-ICUSW XX-YYYY: </text>
 				</run>
 				<run>

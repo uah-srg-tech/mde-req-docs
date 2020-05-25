@@ -123,6 +123,34 @@ helper svs::VSVSAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
 	}
 }
 
+mapping svs::VSVSFixedSection::GenerateFixedSection(in sectionName : String) : doc::DDSection {
+	result.name := sectionName;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.svsInstatiableSubsections->size()) {
+		result.sectionContent += self.svsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	}
+}
+
+mapping svs::VSVSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
+	result.name := self.name;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.svsInstatiableSubsections->size()) {
+		result.sectionContent += self.svsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	}
+}
+
+mapping svs::VSVSDocument::GenerateAdditionalInformationSection() : doc::DDSection {
+	result.name := "Additional Information";
+	
+	result.sectionContent += self.map GenerateTraceabilityMatricesSection();
+}
+
 mapping svs::VSVSTaskIdentification::GenerateTaskIdentificationSection() : doc::DDSection {
 	result.name := "Task Identification";
 	result.sectionContent += self.taskCriteria.map GenerateFixedSection("Task Criteria");
@@ -662,34 +690,6 @@ helper TMTCIFFieldValue::GetFieldValue() : String {
 			self.oclAsType(TMTCIFFieldValueEnum).valueRef.raw + ")";
 	};
 	return textContent;
-}
-
-mapping svs::VSVSDocument::GenerateAdditionalInformationSection() : doc::DDSection {
-	result.name := "Additional Information";
-	
-	result.sectionContent += self.map GenerateTraceabilityMatricesSection();
-}
-
-mapping svs::VSVSFixedSection::GenerateFixedSection(in sectionName : String) : doc::DDSection {
-	result.name := sectionName;
-	result.sectionContent += self.body.map GenerateBody();
-	
-	var i : Integer := 1;
-	while(i <= self.svsInstatiableSubsections->size()) {
-	result.sectionContent += self.svsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
-		i := i + 1;
-	}
-}
-
-mapping svs::VSVSInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
-	result.name := self.name;
-	result.sectionContent += self.body.map GenerateBody();
-	
-	var i : Integer := 1;
-	while(i <= self.svsInstatiableSubsections->size()) {
-	result.sectionContent += self.svsInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
-		i := i + 1;
-	}
 }
 
 mapping svs::VSVSDocument::GenerateTraceabilityMatricesSection() : doc::DDSection {

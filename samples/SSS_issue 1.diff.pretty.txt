@@ -1,0 +1,36 @@
+Matched resources :
+Left = platform:/resource/mde-req-docs/samples/SSS_issue%202.svm_sss
+Right = null
+origin = null
+Matched resources :
+Left = null
+Right = platform:/resource/mde-req-docs/samples/SSS_issue%201.svm_sss
+origin = null
+
++----------------------------------------+----------------------------------------+----------------------------------------+
+|                  Left                  |                 Right                  |                 Origin                 |
++----------------------------------------+----------------------------------------+----------------------------------------+
++----------------------------------------+----------------------------------------+----------------------------------------+
+
+REFERENCE CHANGES
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTextImpl@459c4adc (content: <text>SSS-ICUSW XX-YYYY: </text>) has been moved from reference text of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@19283990 (bold: false, italics: false, underline: false, color: null) has been added to reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@21ed7ce (bold: true, italics: false, underline: false, color: null) has been deleted from reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTextImpl@1231a800 (content: <text>The main capabilities of the SRG EPD ICU Software are the following:</text>) has been moved from reference text of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@5de43421 (bold: false, italics: false, underline: false, color: null) has been added to reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@18f871de (bold: true, italics: false, underline: false, color: null) has been deleted from reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTextImpl@207e1269 (content: <text>. SRG EPD ICU Software purpose is to provide support to EPD sensors.</text>) has been moved from reference text of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@2d381e8d (bold: false, italics: true, underline: false, color: null) has been added to reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@3f3444b2 (bold: false, italics: false, underline: false, color: null) has been deleted from reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTextImpl@60febb62 (content: <text>DBG</text>) has been moved from reference text of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@abebd2 (bold: false, italics: false, underline: false, color: null) has been added to reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DRunImpl@78938cbd (bold: false, italics: false, underline: false, color: null) has been deleted from reference paragraphContent of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBDImpl@67332c7c (name: XXX) (description: XXX) has been added to reference tbds of object 
+value es.uah.aut.srg.micobs.doctpl.doctpl.impl.DTBDImpl@3f1e218c (name: TBD DBG) (description: TBD Debug) has been deleted from reference tbds of object 
+
+ATTRIBUTE CHANGES
+value <text>Energetic Particle Detector Perro</text> has been changed from attribute content of object 
+value "2" has been changed from attribute issue of object 
+value "2" has been changed from attribute issue of object 
+
+CONFLICTS

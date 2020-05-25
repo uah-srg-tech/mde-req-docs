@@ -1,4 +1,4 @@
-<TestCampaignReport name="sample" id="TCR-000" issue="1" revision="0" date="11/03/2020">
+<TestCampaignReport name="TCR sample" id="TCR-000" issue="1" revision="0" date="11/03/2020">
 	<VTCRTestReport test_procedure="FT_SOLO_EPD_ICU_BSW_SERV_17-0040">
 		<evidence>
 			<run>
@@ -14,7 +14,7 @@
 				<text>Wed Mar 11 12:22:15 2020</text>
 			</run>
 			<run>
-				<text> (line 24), </text>
+				<text> (line 24), XXXX </text>
 			</run>
 			<run>
 				<text>ended at </text>

@@ -1,0 +1,345 @@
+import docptl2doc;
+import inverseMatrixVDM;
+import inverseMatrixTDM;
+
+modeltype doc uses "http://srg.aut.uah.es/micobs/doc/doc";
+modeltype doctpl uses "http://srg.aut.uah.es/micobs/doctpl/doctpl";
+modeltype svr uses "http://srg.aut.uah.es/micobs/svm/svr";
+modeltype svs uses "http://srg.aut.uah.es/micobs/svm/svs";
+modeltype vdm uses "http://srg.aut.uah.es/micobs/svm/vdm";
+modeltype srs uses "http://srg.aut.uah.es/micobs/svm/srs";
+modeltype tdm uses "http://srg.aut.uah.es/micobs/svm/tdm";
+modeltype tcr uses "http://srg.aut.uah.es/micobs/svm/tcr";
+
+transformation generateDoc(in input : svr, out output : doc);
+
+main() {
+	input.objects()![svr::VSVRDocument]->map GenerateDoc();
+}
+
+mapping svr::VSVRDocument::GenerateDoc() : doc::DDocument {
+	result.name := self.name;
+	result.id := self.id;
+	result.issue := self.issue;
+	result.revision := self.revision;
+	result.date := self.date;
+	
+	result.section += self.introductionSection.map GenerateIntroductionSection();
+	result.section += self.applicableDocumentsSection.map GenerateApplicableDocumentsSection();
+	result.section += self.referenceDocumentsSection.map GenerateReferenceDocumentsSection();
+	result.section += self.termsDefinitionsAbbreviationsSection.map GenerateTDASection();
+	result.section += self.map GenerateSWValProcessVerification("Software Validation Process Verification");
+	result.section += self.tbcsTbdsSection.map GenerateTbcsTbdsSection();
+}
+
+mapping svr::VSVRTBCsTBDs::GenerateTbcsTbdsSection() : doc::DDSection {
+	result.name := "Annex: TBCs/TBDs";
+	
+	if(self.tbcs->isEmpty() = false) {
+		result.sectionContent += object DDBody {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "TBCs";
+					}
+				}
+			}
+		};
+		result.sectionContent += self.tbcs.map GenerateTBCs();
+	};
+	if(self.tbds->isEmpty() = false) {
+		result.sectionContent += object DDBody {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "TBDs";
+					}
+				}
+			}
+		};
+		result.sectionContent += self.tbds.map GenerateTBDs();
+	}
+}
+
+mapping svr::VSVRIntroduction::GenerateIntroductionSection() : doc::DDSection {
+	result.name := "Introduction";
+	
+	result.sectionContent += self.svrInstatiableSubsections.map GenerateInstatiableSubsection();
+}
+
+mapping svr::VSVRApplicableDocuments::GenerateApplicableDocumentsSection() : doc::DDSection {
+	result.name := "Applicable Documents";
+	
+	result.sectionContent := self.applicableDocuments.map GenerateADRDs();
+}
+
+mapping svr::VSVRReferenceDocuments::GenerateReferenceDocumentsSection() : doc::DDSection {
+	result.name := "Reference Documents";
+	
+	result.sectionContent := self.referenceDocuments.map GenerateADRDs();
+}
+
+mapping svr::VSVRTermsDefinitionsAbbreviations::GenerateTDASection() : doc::DDSection {
+	result.name := "Terms, Definitions and Abbreviations";
+	
+	result.sectionContent := object DDBody {
+		var i : Integer := 1;
+		while(i <= self.terms->size()) {
+			bodyContent += self.terms->at(i).GenerateTDA();
+			i := i + 1;
+		};
+		
+		i := 1;
+		while(i <= self.definitions->size()) {
+			bodyContent += self.definitions->at(i).GenerateTDA();
+			i := i + 1;
+		};
+		
+		i := 1;
+		while(i <= self.abbreviations->size()) {
+			bodyContent += self.abbreviations->at(i).GenerateTDA();
+			i := i + 1;
+		}
+	}
+}
+
+helper svr::VSVRAbstractBriefDescription::GenerateTDA() : doctpl::DParagraph {
+	return object DParagraph {
+		style := "TDA";
+		paragraphContent += object DRun {
+			text := object DText {
+				content := self.name;
+			}
+		};
+		var description := self.description.map GenerateRun();
+		description.tab := object DTab {};
+		paragraphContent += description;
+	}
+}
+
+mapping svr::VSVRFixedSection::GenerateFixedSection(in sectionName : String) : doc::DDSection {
+	result.name := sectionName;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.svrInstatiableSubsections->size()) {
+		result.sectionContent += self.svrInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	}
+}
+
+mapping svr::VSVRInstantiableSection::GenerateInstatiableSubsection() : doc::DDSection {
+	result.name := self.name;
+	result.sectionContent += self.body.map GenerateBody();
+	
+	var i : Integer := 1;
+	while(i <= self.svrInstatiableSubsections->size()) {
+		result.sectionContent += self.svrInstatiableSubsections->at(i).map GenerateInstatiableSubsection();
+		i := i + 1;
+	}
+}
+
+mapping svr::VSVRDocument::GenerateSWValProcessVerification(in sectionName : String) : doc::DDSection {
+	result.name := sectionName;
+	result.sectionContent += self.swValProcessVerificationSection.body.map GenerateBody();
+	
+	result.sectionContent += object DDSection {
+		name := "Traceability";
+		sectionContent += self.swValProcessVerificationSection.traceability.body.map GenerateBody();
+		sectionContent += object DDSection {
+			name := "SW validation w.r.t. TS";
+			sectionContent += self.svsParent.GenerateInverseTraceabilityMatrix();
+		};
+		sectionContent += self.swValProcessVerificationSection.traceability.body.map GenerateBody();
+		sectionContent += object DDSection {
+			name := "SW validation w.r.t. RB";
+			var i : Integer := 1;
+			while(i <= self.svsParent.parents->size()) {
+				sectionContent += self.svsParent.parents->at(i).GenerateInverseTraceabilityMatrix();
+				i := i + 1;
+			}
+		}
+	};
+	result.sectionContent += object DDSection {
+		name := "Feasibility";
+		sectionContent += self.swValProcessVerificationSection.feasibility.body.map GenerateBody();
+		
+		var svsTestNames : OrderedSet(String);
+		var i : Integer := 1;
+		while(i <= self.svsParent.testProceduresSection.testProcedures->size()) {
+			svsTestNames += self.svsParent.testProceduresSection.testProcedures->at(i).name;
+			i := i + 1;
+		};
+		sectionContent += object DDSection {
+			name := "Test Report Traceability Matrices";
+			i := 1;
+			while(i <= self.tcrParent->size()) {
+				sectionContent += self.tcrParent->at(i).GenerateTestReportSection(svsTestNames);
+				i := i + 1;
+			}
+		}
+	}
+}
+
+helper tcr::VTCRTestCampaignReport::GenerateTestReportSection(in svsTestNames : OrderedSet(String)) : doc::DDBody {
+	return object DDBody {
+		var tcrTestNames : OrderedSet(String);
+		
+		bodyContent += object DBasicTable {
+			style := "TableGridFirstRowShadow";
+			width := "100";
+			
+			rows += object DRow {
+				cells += object DCell {
+					width := "45";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "SVS Test Case";
+							}
+						}
+					}
+				};
+				cells += object DCell {
+					width := "15";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "Pass/";
+							}
+						}
+					};
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "Fail";
+							}
+						}
+					}
+				};
+				cells += object DCell {
+					width := "40";
+					bodyContent += object DParagraph {
+						paragraphContent += object DRun {
+							bold := DRunAttributes::TRUE;
+							text := object DText {
+								content := "Evidence";
+							}
+						}
+					}
+				}
+			};
+			var i : Integer := 1;
+			while(i <= self.testReports->size()) {
+				
+				// first discard all reports not found in SVS
+				var j : Integer := 1;
+				while(j <= svsTestNames->size()) {
+					if(self.testReports->at(i).test_procedure.equalsIgnoreCase(svsTestNames->at(j))) {
+						tcrTestNames += self.testReports->at(i).test_procedure;
+						break;
+					};
+					j := j + 1;
+				};
+				if(j = (self.testReports->size()+1)) {
+					i := i + 1;
+					continue;
+				};
+				rows += object DRow {
+					cells += object DCell {
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								text := object DText {
+									content := self.testReports->at(i).test_procedure;
+								}
+							}
+						}
+					};
+					cells += object DCell {
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								if(self.testReports->at(i).status != tcr::VTCRTestStatus::Pass) {
+									color := "red";
+								};
+								text := object DText {
+									content := self.testReports->at(i).status.toString();
+								}
+							}
+						}
+					};
+					cells += object DCell {
+						bodyContent += self.testReports->at(i).evidence.map GenerateParagraph();
+					}
+				};
+				i := i + 1;
+			}
+		};
+	
+		//check for procedures not found in SVS
+		var svsTestNamesNotFound : OrderedSet(String);
+		var i : Integer := 1;
+		while(i <= svsTestNames->size()) {
+			var j : Integer := 1;
+			while(j <= tcrTestNames->size()) {
+				if(svsTestNames->at(i).equalsIgnoreCase(tcrTestNames->at(j))) {
+					break;
+				};
+				j := j + 1;
+			};
+			if(j = (tcrTestNames->size()+1)) {
+				svsTestNamesNotFound += svsTestNames->at(i);
+			};
+			i := i + 1;
+		};
+		
+		if(svsTestNamesNotFound->size() <> 0) {
+			bodyContent += object DParagraph {
+				paragraphContent += object DRun {
+					bold := DRunAttributes::TRUE;
+					text := object DText {
+						content := "Tests Not Found";
+					}
+				}
+			};
+			bodyContent += object DBasicTable {
+				style := "TableGridFirstRowShadow";
+				width := "100";
+				
+				rows += object DRow {
+					cells += object DCell {
+						bodyContent += object DParagraph {
+							paragraphContent += object DRun {
+								bold := DRunAttributes::TRUE;
+								text := object DText {
+									content := "SRS Item";
+								}
+							}
+						}
+					}
+				};
+				i := 1;
+				while(i <= svsTestNamesNotFound->size()) {
+					rows += object DRow {
+						cells += object DCell {
+							width := "50";
+							bodyContent += object DParagraph {
+								paragraphContent += object DRun {
+									text := object DText {
+										content := svsTestNamesNotFound->at(i);
+									}
+								}
+							}
+						}
+					};
+					i := i + 1; 
+				}
+			}
+		}
+	}
+}

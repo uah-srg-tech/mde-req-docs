@@ -35,6 +35,7 @@
 		<ApplicableDocument name="AD4" title="Software Product Assurance" id="ECSS-Q-ST-80C" date="06/03/2009" />
 		<ApplicableDocument name="AD5" title="SRG-EPD Software Product Assurance Plan" id="SRG-EPD-SPA-0001" />
 		<ApplicableDocument name="AD5" title="SRG-EPD Software Development Plan" id="SRG-EPD-SDP-0001" />
+		<ApplicableDocument name="AD6" title="DBG" id= "DBG"/>
 	</ApplicableDocuments>
 	<ReferenceDocuments>
 		<ReferenceDocument name="RD1" title="SRG-EPD Software System Specification" id="SRG-EPD-SSS-0001" />

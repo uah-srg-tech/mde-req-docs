@@ -1,4 +1,4 @@
-<TestCampaignReport name="epd_any_model" id="epd_any_model_3.5" issue="3" revision="5" date="2020/01/29">
+<TestCampaignReport name="TCR EPD KO" id="epd_any_model_3.5" issue="3" revision="5" date="2020/01/29">
 	<VTCRTestReport test_procedure="TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200">
 		<evidence>
 			<run>

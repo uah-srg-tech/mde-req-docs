@@ -1,0 +1,60 @@
+<SVR name="SVR Sample" id="SVR-001" issue="1" revision="0" date="15/05/2020">
+	<svsParent name="SVS Sample"/>
+	<tcrParent name="TCR sample"/>
+	<TBCsTBDs>
+		<TBC name="SampleSVRTBC1" parentTBC="SampleSRSTBC1"/>
+		<TBC name="SampleSVRTBC2" description="Sample SVR TBC 2"/>
+		<TBD name="SampleSVRTBD1" parentTBD="SampleTestSetupTBD"/>
+	</TBCsTBDs>
+	<Introduction>
+		<subsection name="Purpose">
+			<body>
+				<paragraph>
+					<run>
+						<text>Introduction Purpose text</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="SRG-EPD Software System Specification" id="SRG-EPD-SSS-0001" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="SRG-EPD Software System Specification" id="SRG-EPD-SSS-0001" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="AD">
+			<run>
+				<text>Applicable Document</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<SWValProcessVerification>
+		<body>
+			<paragraph>
+				<run>
+					<text>SW Validation Process Verification body</text>
+				</run>
+			</paragraph>
+		</body>
+		<Traceability>
+			<body>
+				<paragraph>
+					<run>
+						<text>Traceability body</text>
+					</run>
+				</paragraph>
+			</body>
+		</Traceability>
+		<Feasibility>
+			<body>
+				<paragraph>
+					<run>
+						<text>Feasibility body</text>
+					</run>
+				</paragraph>
+			</body>
+		</Feasibility>
+	</SWValProcessVerification>
+</SVR>

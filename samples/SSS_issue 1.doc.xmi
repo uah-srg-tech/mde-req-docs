@@ -5,6 +5,9 @@
       <sectionContent xsi:type="micobs.doc:DDBody">
         <bodyContent xsi:type="micobs.doctpl:DParagraph">
           <paragraphContent xsi:type="micobs.doctpl:DRun">
+            <text content="DBG"/>
+          </paragraphContent>
+          <paragraphContent xsi:type="micobs.doctpl:DRun">
             <text content="The Software System Specification defines and describes the specification of the EPD ICU Software of the SRG Mission."/>
           </paragraphContent>
         </bodyContent>
@@ -1857,6 +1860,19 @@
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content="MBytes available at RAM"/>
+        </paragraphContent>
+      </bodyContent>
+    </sectionContent>
+    <sectionContent xsi:type="micobs.doc:DDBody">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="TBD DBG">
+        <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
+          <text content="TBD DBG"/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content=": "/>
+        </paragraphContent>
+        <paragraphContent xsi:type="micobs.doctpl:DRun">
+          <text content="TBD Debug"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
