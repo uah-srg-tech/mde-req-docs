@@ -7,8 +7,7 @@ portConfig spw_uart_debug {
 		parity := NO;
 		dataBits := 8bits;
 		stopBits := 1bit;
-		inputQueueSize := 512;
-		outputQueueSize := -1;
+		flowControl := rts_cts;
 		uartProtocol {
 			unit := bytes;
 			power := no;

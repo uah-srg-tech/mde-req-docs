@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <gss:GSSIfacePortConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/iface" name="eh2" uri="es.uah.aut.srg.eh2" version="v1">
-  <portConfig xsi:type="gss:GSSIfaceUartPort" number="4" baudRate="115200" parity="NO" dataBits="8" stopBits="1" inputQueueSize="512" outputQueueSize="-1">
+  <portConfig xsi:type="gss:GSSIfaceUartPort" number="4" baudRate="115200" parity="NO" dataBits="8" stopBits="1" flowControl="rts_cts">
     <uartProtocol unit="bytes" power="2_with_0">
       <constSize bytes="6" bits="0"/>
       <sizeFieldOffset bytes="2" bits="0"/>

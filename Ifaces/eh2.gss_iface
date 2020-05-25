@@ -7,8 +7,7 @@ portConfig eh2 {
 		parity := NO;
 		dataBits := 8bits;
 		stopBits := 1bit;
-		inputQueueSize := 512;
-		outputQueueSize := -1;
+		flowControl := rts_cts;
 		uartProtocol {
 			unit := bytes;
 			power := 2_with_0;
