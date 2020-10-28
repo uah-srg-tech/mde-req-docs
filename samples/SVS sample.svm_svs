@@ -163,7 +163,7 @@
 			<Scenario ref="Dummy Scenario 2" />
 			<TestCase ref="Sample case 1" />
 			<ProcedureSteps>
-				<Step name="Sample Test Connection 2">
+				<Step name="Test Connection A">
 					<TelecommandSequence>
 						<Telecommand name="Test connection" interface="Dummy IF C" delay_value="120" delay_unit="miliseconds">
 							<TelecommandData template="tc_17_1"/>
@@ -181,7 +181,7 @@
 						</Telemetry>
 					</TelemetrySet>
 				</Step>
-				<Step name="Sample Test Connection 3" prev_step="Sample Test Connection 2" prev_tm_from_prev_step="TM (1_7) 2">
+				<Step name="Test Connection B" prev_step="Test Connection A" prev_tm_from_prev_step="TM (1_7) 2">
 					<Configurations>
 						<Configuration ref="Dummy Conf B" filterStatus="off" />
 					</Configurations>
