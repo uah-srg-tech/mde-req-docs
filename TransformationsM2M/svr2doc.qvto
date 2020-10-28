@@ -143,16 +143,13 @@ mapping svr::VSVRInstantiableSection::GenerateInstatiableSubsection() : doc::DDS
 
 mapping svr::VSVRDocument::GenerateSWValProcessVerification(in sectionName : String) : doc::DDSection {
 	result.name := sectionName;
-	result.sectionContent += self.swValProcessVerificationSection.body.map GenerateBody();
 	
 	result.sectionContent += object DDSection {
 		name := "Traceability";
-		sectionContent += self.swValProcessVerificationSection.traceability.body.map GenerateBody();
 		sectionContent += object DDSection {
 			name := "SW validation w.r.t. TS";
 			sectionContent += self.svsParent.GenerateInverseTraceabilityMatrix();
 		};
-		sectionContent += self.swValProcessVerificationSection.traceability.body.map GenerateBody();
 		sectionContent += object DDSection {
 			name := "SW validation w.r.t. RB";
 			var i : Integer := 1;
@@ -164,7 +161,6 @@ mapping svr::VSVRDocument::GenerateSWValProcessVerification(in sectionName : Str
 	};
 	result.sectionContent += object DDSection {
 		name := "Feasibility";
-		sectionContent += self.swValProcessVerificationSection.feasibility.body.map GenerateBody();
 		
 		var svsTestNames : OrderedSet(String);
 		var i : Integer := 1;

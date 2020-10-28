@@ -25,10 +25,4 @@
 			</run>
 		</Abbreviation>
 	</TermsDefinitionsAbbreviations>
-	<SWValProcessVerification>
-		<Traceability>
-		</Traceability>
-		<Feasibility>
-		</Feasibility>
-	</SWValProcessVerification>
 </SVR>

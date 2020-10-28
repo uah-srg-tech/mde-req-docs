@@ -30,31 +30,4 @@
 			</run>
 		</Abbreviation>
 	</TermsDefinitionsAbbreviations>
-	<SWValProcessVerification>
-		<body>
-			<paragraph>
-				<run>
-					<text>SW Validation Process Verification body</text>
-				</run>
-			</paragraph>
-		</body>
-		<Traceability>
-			<body>
-				<paragraph>
-					<run>
-						<text>Traceability body</text>
-					</run>
-				</paragraph>
-			</body>
-		</Traceability>
-		<Feasibility>
-			<body>
-				<paragraph>
-					<run>
-						<text>Feasibility body</text>
-					</run>
-				</paragraph>
-			</body>
-		</Feasibility>
-	</SWValProcessVerification>
 </SVR>
