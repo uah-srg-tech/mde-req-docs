@@ -1,0 +1,30 @@
+<SVR name="Software verification report" id="SO-EPD-ICU-SVR-0001" issue="1" revision="0" date="15/05/2020">
+	<svsParent name="EPD ICU Application Software Functional Tests"/>
+	<tcrParent name="TCR EPD"/>
+	<tcrParent name= "TCR EPD KO"/>
+	<tcrParent name= "TCR EPD MISS"/>
+	<Introduction>
+		<subsection name="Purpose">
+			<body>
+				<paragraph>
+					<run>
+						<text>Introduction Purpose text</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="SRG-EPD Software System Specification" id="SRG-EPD-SSS-0001" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="SRG-EPD Software System Specification" id="SRG-EPD-SSS-0001" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="AD">
+			<run>
+				<text>Applicable Document</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+</SVR>

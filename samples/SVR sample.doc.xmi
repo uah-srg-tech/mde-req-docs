@@ -57,21 +57,7 @@
     </sectionContent>
   </section>
   <section name="Software Validation Process Verification">
-    <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph">
-        <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content="SW Validation Process Verification body"/>
-        </paragraphContent>
-      </bodyContent>
-    </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Traceability">
-      <sectionContent xsi:type="micobs.doc:DDBody">
-        <bodyContent xsi:type="micobs.doctpl:DParagraph">
-          <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="Traceability body"/>
-          </paragraphContent>
-        </bodyContent>
-      </sectionContent>
       <sectionContent xsi:type="micobs.doc:DDSection" name="SW validation w.r.t. TS">
         <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
@@ -505,13 +491,6 @@
       </sectionContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDSection" name="Feasibility">
-      <sectionContent xsi:type="micobs.doc:DDBody">
-        <bodyContent xsi:type="micobs.doctpl:DParagraph">
-          <paragraphContent xsi:type="micobs.doctpl:DRun">
-            <text content="Feasibility body"/>
-          </paragraphContent>
-        </bodyContent>
-      </sectionContent>
       <sectionContent xsi:type="micobs.doc:DDSection" name="Test Report Traceability Matrices">
         <sectionContent xsi:type="micobs.doc:DDBody">
           <bodyContent xsi:type="micobs.doctpl:DBasicTable" style="TableGridFirstRowShadow" width="100">
@@ -635,9 +614,9 @@
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSVSTBC1">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSVRTBC1">
         <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
-          <text content="SampleSVSTBC1"/>
+          <text content="SampleSVRTBC1"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=": "/>
@@ -657,15 +636,15 @@
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSVSTBC2">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSVRTBC2">
         <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
-          <text content="SampleSVSTBC2"/>
+          <text content="SampleSVRTBC2"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=": "/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
-          <text content="Sample SVS TBC 2"/>
+          <text content="Sample SVR TBC 2"/>
         </paragraphContent>
       </bodyContent>
     </sectionContent>
@@ -677,9 +656,9 @@
       </bodyContent>
     </sectionContent>
     <sectionContent xsi:type="micobs.doc:DDBody">
-      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSVSTBD1">
+      <bodyContent xsi:type="micobs.doctpl:DParagraph" name="SampleSVRTBD1">
         <paragraphContent xsi:type="micobs.doctpl:DRun" italics="true">
-          <text content="SampleSVSTBD1"/>
+          <text content="SampleSVRTBD1"/>
         </paragraphContent>
         <paragraphContent xsi:type="micobs.doctpl:DRun">
           <text content=": "/>
