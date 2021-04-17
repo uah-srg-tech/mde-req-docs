@@ -15,8 +15,8 @@
     </Protocols>
     <Interfaces>
       <ProtocolPacketsFile href="protocol_packets.xmi#/"/>
-      <MainInterface name="SpW" id="0" ifType="uart" ioType="in_out" protocolID="//@scenario.0/@Protocols/@Protocol.0">
-        <ifConfig href="../../Ifaces/spw_uart_debug.xmi#/"/>
+      <MainInterface name="SpW" id="0" ifType="socketSrv" ioType="in_out" protocolID="//@scenario.0/@Protocols/@Protocol.0">
+        <ifConfig href="../../Ifaces/socket_srv.xmi#/"/>
         <LevelInOut id="0" name="CCSDS">
           <TMformat href="../../ccsds_solo/tmFormats/CCSDS_TM.xmi#/"/>
           <TCformat href="../../ccsds_solo/tcFormats/CCSDS_TC.xmi#/"/>

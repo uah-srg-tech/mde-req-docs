@@ -47,8 +47,8 @@ GSSEnvironmentEnvironment epd {
 			GSSScenarioMainInterface {
 				id := 0;
 				name := "SpW"; 
-				ifType := uart;
-				ifConfig := spw_uart_debug(v1); 
+				ifType := socketSrv;
+				ifConfig := socket_srv(v1); 
 				ioType := in_out;
 				protocolID := CCSDS;
 				GSSScenarioLevelInOut {

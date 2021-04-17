@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gss:GSSIfacePortConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gss="http://srg.aut.uah.es/gss/iface" name="socket_srv" uri="es.uah.aut.srg.socket_srv" version="v1">
+  <portConfig xsi:type="gss:GSSIfaceSocketSrvPort" portNumber="2000">
+    <portProtocol unit="bytes" power="no">
+      <constSize bytes="6" bits="0"/>
+      <sizeFieldOffset bytes="4" bits="0"/>
+      <sizeFieldTrim bytes="2" bits="0"/>
+      <syncPattern hexValue="0xBEBABEEF"/>
+    </portProtocol>
+  </portConfig>
+</gss:GSSIfacePortConfig>

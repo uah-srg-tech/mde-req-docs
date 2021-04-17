@@ -8,7 +8,7 @@ portConfig eh1 {
 		dataBits := 8bits;
 		stopBits := 1bit;
 		flowControl := rts_cts;
-		uartProtocol {
+		portProtocol {
 			unit := bytes;
 			power := 2_with_0;
 			constSize {

@@ -1,18 +1,13 @@
-portConfig spw_uart_debug {
-	uri := es.uah.aut.srg.spw_uart_debug;
+portConfig socket_srv {
+	uri := es.uah.aut.srg.socket_srv;
 	version := v1;
-	uartPort {
-		number :=  5;
-		baudRate := 115200bauds;
-		parity := NO;
-		dataBits := 8bits;
-		stopBits := 1bit;
-		flowControl := rts_cts;
+	socketSrvPort {
+		portNumber := 2000;
 		portProtocol {
 			unit := bytes;
 			power := no;
 			constSize {
-				bytes := 7;
+				bytes := 6;
 				bits := 0;
 			};
 			sizeFieldOffset {
@@ -22,6 +17,9 @@ portConfig spw_uart_debug {
 			sizeFieldTrim {
 				bytes := 2;
 				bits := 0;
+			};
+			syncPattern {
+				hexValue := 0xBEBABEEF;
 			};
 		};
 	};

@@ -8,7 +8,7 @@ portConfig sis {
 		dataBits := 8bits;
 		stopBits := 1bit;
 		flowControl := rts_cts;
-		uartProtocol {
+		portProtocol {
 			unit := bytes;
 			power := no;
 			constSize {
