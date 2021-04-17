@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gss:GSSCampaignCampaign name="SO-EPD-ICU-PR-0035" xmlns:gss="http://srg.aut.uah.es/gss/campaign">
+	<Scenario>
+		<environment href="GSS_ENV/epd.xmi#/"/>
+		<scenarioRef href="GSS_ENV/epd.xmi#//@scenario.0"/>
+	</Scenario>
+	<Tests>
+		<TestCase name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+			<procedure href="SO-EPD-ICU-PR-0035/TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200.xmi#/"/>
+		</TestCase>
+	</Tests>
+</gss:GSSCampaignCampaign>

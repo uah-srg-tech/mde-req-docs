@@ -1,0 +1,707 @@
+<SVS name="EPD ICU Application Software Functional Tests" id="SO-EPD-ICU-PR-0035" issue="1" revision="3" date="13/7/2016">
+	<parent name="Flight Software Requirements Document"/>
+	<TBCsTBDs>
+		<TBC name="26V TBC" description="Power Supply Voltage (26V)"/>
+		<TBC name="0_5A TBC" description="Power Supply Current (0.5A)"/>
+		<TBD name="TBD TestSetupSpWUSBrick" parentTBD="TBD SpWUSBrick"/>
+	</TBCsTBDs>
+	<Introduction>
+		<subsection name="Purpose">
+			<body>
+				<paragraph>
+					<run>
+						<text>The purpose of this document is to define the tests needed to validate the functionality of the ICU Application Software of the EPD of Solar Orbiter.</text>
+					</run>
+				</paragraph>
+			</body>
+		</subsection>
+	</Introduction>
+	<ApplicableDocuments>
+		<ApplicableDocument name="AD1" title="Flight Software Requirements Document, EPD (Energetic Particle Detector)" id="SO-EPD-ICU-RS-0002" issue="1" revision="15" />
+		<ApplicableDocument name="AD2" title="EPD TM/TC Interface Control Document" id="SO-EPD-PO-IF-0003" issue="2" revision="10" />
+		<ApplicableDocument name="AD3" title="EPD Sensors Data Interface Control Document" id="SO-EPD-PO-IF-0005" issue="1" revision="6" />
+		<ApplicableDocument name="AD4" title="ICU Software Validation &amp; Verification Plan" id="SO-EPD-ICU-PL-0005" issue="1" revision="3" />
+	</ApplicableDocuments>
+	<ReferenceDocuments>
+		<ReferenceDocument name="RD1" title="Space engineering - Software general requirements" id="ECSS-E-ST-40" issue="3" />
+		<ReferenceDocument name="RD2" title="Space product assurance - Software product assurance" id="ECSS-Q-ST-80" issue="3" />
+		<ReferenceDocument name="RD3" title="SpaceWire - Links, nodes, routers and networks" id="ECSS-E-ST-50-12A" date="24/01/2003" />
+	</ReferenceDocuments>
+	<TermsDefinitionsAbbreviations>
+		<Abbreviation name="ACK">
+			<run>
+				<text>Acknowledgement</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="AD">
+			<run>
+				<text>Applicable Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ASW">
+			<run>
+				<text>Application Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="BSW">
+			<run>
+				<text>Boot Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="CDPU">
+			<run>
+				<text>Common Data Processing Unit</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="CRC">
+			<run>
+				<text>Cyclic redundancy check</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EBB">
+			<run>
+				<text>Elegant Bread Board</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EPD">
+			<run>
+				<text>Energetic Particle Detector</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="EM">
+			<run>
+				<text>Engineering Model</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="GSS">
+			<run>
+				<text>Ground Support Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="HW">
+			<run>
+				<text>Hardware</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICOR">
+			<run>
+				<text>Item Configured On Report</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICU">
+			<run>
+				<text>Instrument Control</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="ICUSW">
+			<run>
+				<text>Instrument Control Unit Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OSA">
+			<run>
+				<text>Operating System</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="OSAPI">
+			<run>
+				<text>Operating System API</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="PC">
+			<run>
+				<text>Personal Computer</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="RD">
+			<run>
+				<text>Reference Document</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="S/C">
+			<run>
+				<text>Spacecraft</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SpW">
+			<run>
+				<text>SpaceWire</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SVN">
+			<run>
+				<text>Subversion version control system</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="SW">
+			<run>
+				<text>Software</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBC">
+			<run>
+				<text>To Be Confirmed</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBD">
+			<run>
+				<text>To Be Defined</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TBW">
+			<run>
+				<text>To Be Written</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TC">
+			<run>
+				<text>Telecommand</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="TM">
+			<run>
+				<text>Telemetry</text>
+			</run>
+		</Abbreviation>
+		<Abbreviation name="UART">
+			<run>
+				<text>Universal Asynchronous Receiver-Transmitter</text>
+			</run>
+		</Abbreviation>
+	</TermsDefinitionsAbbreviations>
+	<SoftwareOverview>
+		<body>
+			<paragraph>
+				<run>
+					<text>This document applies to the ICU Software of the EPD of Solar Orbiter. This software consists on a set of items that will be configured on the report according to their version and the specific deployment platform. These elements, and any others that need to be configured during the validation process, will be identified using the acronym ICOR (Item Configured On Report) and numbered in order of appearance in the document.</text>
+				</run>
+			</paragraph>
+		</body>
+	</SoftwareOverview>
+	<TaskIdentification>
+		<TaskCriteria>
+			<body>
+				<paragraph>
+					<run>
+						<text>The elements that form the software are the following:</text>
+					</run>
+				</paragraph>
+				<itemize>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The Baseline ICU-ASW (ICOR-1)</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The Nominal ICU-ASW (ICOR-2).</text>
+							</run>
+						</paragraph>
+					</listItem>
+					<listItem>
+						<paragraph>
+							<run>
+								<text>The ICU-BSW will be also necessary to deploy any of the ASW, so will be also configured during the test as (ICOR-3).</text>
+							</run>
+						</paragraph>
+					</listItem>
+				</itemize>
+				<paragraph>
+					<run>
+						<text>The version and subversion of the Baseline ICU-ASW and the Nominal ICU-ASW must be different, in order to distinguish between both. In the last section of the document will be collected all of them in a table. This table should be used in each of the test reports to specify the particular setting of each of the elements used in each deployment platform.</text>
+					</run>
+				</paragraph>
+			</body>
+		</TaskCriteria>
+		<FeaturesToBeTested>
+			<body>
+				<paragraph>
+					<run>
+						<text>These tests tries to verify the correct functionality of the ICU ASW and the acceptance and correct execution of defined TC.</text>
+					</run>
+				</paragraph>
+			</body>
+		</FeaturesToBeTested>
+		<FeaturesNotToBeTested>
+		</FeaturesNotToBeTested>
+		<TestPassFailCriteria>
+			<subsection name="Acceptance/Rejection Criteria">
+				<body>
+					<paragraph>
+						<run>
+							<text>Every test case shall establish the general acceptance and rejection criteria for this test case. In each step of the associated procedure can be defined own criteria too.</text>
+						</run>
+					</paragraph>
+				</body>
+			</subsection>
+			<subsection name="Reporting Results">
+				<body>
+					<paragraph>
+						<run>
+							<text>In a result report for each test case shall be documented:</text>
+						</run>
+					</paragraph>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run bold="true">
+									<text>Acceptance: </text>
+								</run>
+								<run>
+									<text>The output received is recorded and the acceptance criterion applied shall be registered.</text>
+								</run>
+							</paragraph>
+						</listItem>
+						<listItem>
+							<paragraph>
+								<run bold="true">
+									<text>Rejection: </text>
+								</run>
+								<run>
+									<text>The report is recorded in the step that has failed and the rejection criterion.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</subsection>
+		</TestPassFailCriteria>
+		<ItemsCanNotBeValidated>
+		</ItemsCanNotBeValidated>
+		<ManuallyAutoGeneratedCode>
+		</ManuallyAutoGeneratedCode>
+	</TaskIdentification>
+	<TestingSpecificationDesign testSetup="Test Setup for EPD">
+		<General>
+			<subsection name="Elements required for tests">
+				<subsection name="Required HW for tests">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>Model of the EPD. </text>
+									</run>
+									<run>
+										<text>Developed by Space Research Group from the University of Alcala. This HW element must be configured in the test report (ICOR-4)</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-1 sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-5). Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-2 sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-6). Required only in Scenario 1 and 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>STEP sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-7). Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SIS sensor unit (or equivalent emulator). </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-8). Required only in Scenario 1, 4 and 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SUE: Sensor Unit Emulator. </text>
+									</run>
+									<run>
+										<text>This HW element must be configured in the test report (ICOR-9). Required only in Scenario 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>GSS Host Unit (Windows PC). </text>
+									</run>
+									<run>
+										<text>Computer connected to the ICU which can send telecommands and receive telemetry to/from using the GSS software. Minimum Requirements:</text>
+									</run>
+								</paragraph>
+								<sublist>
+									<itemize>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>Intel Core 2 Quad CPU @2.50 GHz</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>2.00 GB RAM Memory</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>Windows XP Service Pack 3</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>5 USB Ports</text>
+												</run>
+											</paragraph>
+										</listItem>
+										<listItem>
+											<paragraph>
+												<run>
+													<text>Notepad++</text>
+												</run>
+											</paragraph>
+										</listItem>
+									</itemize>
+								</sublist>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 SpW-cable: SpaceWire cable. </text>
+									</run>
+									<run>
+										<text>Wire that connects SpW-Brick to ICU.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 USB cable. </text>
+									</run>
+									<run>
+										<text>Wire that connects GSS Host Unit to SpW-Brick.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 SpW USB Brick: </text>
+									</run>
+									<hyperlink reference="TBD TestSetupSpWUSBrick">
+										<run bold="true">
+											<text>SpaceWire-USB Brick TBD</text>
+										</run>
+									</hyperlink>
+									<run bold="true">
+										<text>. </text>
+									</run>
+									<run>
+										<text>SpW USB Brick drivers must be installed in Host Unit</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>STEP Harness. </text>
+									</run>
+									<run>
+										<text>Wire that connects STEP sensor unit (or equivalent emulator) to ICU. Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-1 Harness. </text>
+									</run>
+									<run>
+										<text>Wire that connects HET-EPT-1 sensor unit (or equivalent emulator) to ICU. Required only in Scenario 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>HET-EPT-2 Harness. </text>
+									</run>
+									<run>
+										<text>Wire that connects HET-EPT-2 sensor unit (or equivalent emulator) to ICU. Required only in Scenario 1 and 4.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SIS Harness. </text>
+									</run>
+									<run>
+										<text>Wire that connects SIS sensor unit (or equivalent emulator) to ICU. Required only in Scenarios 1, 4 and 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>SUE Harness. </text>
+									</run>
+									<run>
+										<text>Wire that connects SUE to 3 ICU sensor unit interfaces (HET-EPT1, HET-EPT2 and STEP). Required only in Scenario 5.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>4 EPD Sensor Harness. </text>
+									</run>
+									<run>
+										<text>Wires (UART-USB converters) that connects 4 GSS Host Unit sensor emulators to 4 ICU sensor unit interfaces. Required only in Scenario 2.</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+				<subsection name="SW items used to check tests rightness">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>ICUSW-GSS. </text>
+									</run>
+									<run>
+										<text>It runs in a Windows PC, and it must be configured in the test report (ICOR-10). It can send telecommands and monitor the telemetry received through SpaceWire or serial ports.</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+			</subsection>
+			<subsection name="Environmental needs">
+				<subsection name="Auxiliary HW">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>N/A</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+				<subsection name="Auxiliary devices used">
+					<body>
+						<itemize>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 Power Supply with integrated multimeter. </text>
+									</run>
+									<run>
+										<text>It must provide at least </text>
+									</run>
+									<hyperlink reference="26V TBC"/>
+									<run>
+										<text> and </text>
+									</run>
+									<hyperlink reference="0_5A TBC">
+										<run>
+											<text>0.5A TBC</text>
+										</run>
+									</hyperlink>
+									<run>
+										<text>.</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>2 Power Supply wires (positive / negative)</text>
+									</run>
+								</paragraph>
+							</listItem>
+							<listItem>
+								<paragraph>
+									<run bold="true">
+										<text>1 Power Board. </text>
+									</run>
+									<run>
+										<text>To provide the power-on pulse and the power to the ICU.</text>
+									</run>
+								</paragraph>
+							</listItem>
+						</itemize>
+					</body>
+				</subsection>
+			</subsection>
+		</General>
+		<TestDesign name="Solar Orbiter EPD Application Software Test Design">
+			<General>
+				<subsection name="Tests Identification">
+					<body>
+						<paragraph>
+							<run>
+								<text>Each test case will identify through the sequence FT_SOLO_EPD_ICU_ASW_XXXX_YYYY-NNN, where XXXX is the test identifier and YYYY is the test case identifier and NNN is a numeric identification field. Test procedures shall be identified with the sequence TP_FT_SOLO_EPD_ASW_XXXX_YYYY, with the same criterion.</text>
+							</run>
+						</paragraph>
+					</body>
+				</subsection>
+			</General>
+			<FeaturesToBeTested>
+			</FeaturesToBeTested>
+			<ApproachRefinements>
+			</ApproachRefinements>
+		</TestDesign>
+	</TestingSpecificationDesign>
+	<TestCases>
+		<General>
+		</General>
+		<TestCase name="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+			<Identifier>
+				<body>
+					<itemize>
+						<listItem>
+							<paragraph>
+								<run>
+									<text>A TC 17.1 is sent and a TM 17.2 is received.</text>
+								</run>
+							</paragraph>
+						</listItem>
+					</itemize>
+				</body>
+			</Identifier>
+			<Inputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Inputs>
+			<Outputs>
+				<body>
+					<paragraph>
+						<run>
+							<text>N/A</text>
+						</run>
+					</paragraph>
+				</body>
+			</Outputs>
+			<PassFailCriteria>
+				<body>
+					<paragraph>
+						<run>
+							<text>The test is passed if TM (17.2) is received.</text>
+						</run>
+					</paragraph>
+				</body>
+			</PassFailCriteria>
+			<EnvironmentalNeeds>
+				<body>
+					<paragraph>
+						<run>
+							<text>ICU ASW is in OPERATIONAL mode, NOMINAL version.</text>
+						</run>
+					</paragraph>
+				</body>
+			</EnvironmentalNeeds>
+			<SpecialConstraints>
+			</SpecialConstraints>
+			<InterfaceDependencies>
+				<body>
+					<paragraph>
+						<run>
+							<text>This test must be executed after the test TP_FT_SOLO_EPD_BSW_GO_NOM_ASW_OPERATIONAL-00200.</text>
+						</run>
+					</paragraph>
+				</body>
+			</InterfaceDependencies>
+			<ValidatingItem name="FU R-00390" />
+			<ValidatingItem name="GE R-00010" />
+			<ValidatingItem name="GE R-00030" />
+			<ValidatingItem name="IF R-00390" />
+		</TestCase>
+	</TestCases>
+	<TestProcedures>
+		<General>
+		</General>
+		<TestProcedure name="TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200">
+			<Identifier>
+				<body>
+					<paragraph>
+						<run>
+							<text>TP_FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200</text>
+						</run>
+					</paragraph>
+				</body>
+			</Identifier>
+			<Purpose>
+			</Purpose>
+			<Scenario ref="Scenario 1" />
+			<TestCase ref="FT_SOLO_EPD_NOM_ASW_OPER_SERV_17-10200" />
+			<ProcedureSteps>
+				<Step name="Test Connection">
+					<TelecommandSequence>
+						<Telecommand name="Test Connection" interface="SpW" delay_value="120" delay_unit="miliseconds">
+							<TelecommandData template="tc_17_1" />
+						</Telecommand>
+					</TelecommandSequence>
+					<TelemetrySet checkmode="all" valid_time_interval_value="500" valid_time_interval_unit="miliseconds">
+						<Telemetry name="Accept ACK" interface="SpW">
+							<TelemetryData template="tm_1_1" />
+						</Telemetry>
+						<Telemetry name="Test Connection Report" interface="SpW">
+							<TelemetryData template="tm_17_2" />
+						</Telemetry>
+						<Telemetry name="Exec ACK" interface="SpW">
+							<TelemetryData template="tm_1_7" />
+						</Telemetry>
+					</TelemetrySet>
+				</Step>
+			</ProcedureSteps>
+			<TestScript>
+			</TestScript>
+		</TestProcedure>
+
+	</TestProcedures>
+	<AnalysisInspectionReview>
+	</AnalysisInspectionReview>
+	<TestPlatformRequirements>
+	</TestPlatformRequirements>
+	<AdditionalInformation>
+	</AdditionalInformation>
+</SVS>
